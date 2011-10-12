@@ -3,16 +3,16 @@
 # ----------------------- #
 
 url: http://jcftang.github.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+title: Jimmy Tang
+subtitle: Yet more random but some what technical mutterings
+author: Jimmy Tang
 simple_search: http://google.com/search
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email: jcftang@gmail.com
 
 # ----------------------- #
 #    Jekyll & Plugins     #
