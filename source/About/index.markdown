@@ -8,4 +8,4 @@ footer: true
 ---
 
 This is more of a technical blog of what I want to rant about
-separate from my [http://www.sgenomics.org/~jtang/](personal blog).
+separate from my [personal blog](http://www.sgenomics.org/~jtang/).
