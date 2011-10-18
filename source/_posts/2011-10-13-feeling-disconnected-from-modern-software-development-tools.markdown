@@ -26,6 +26,8 @@ hack at, develop for is setup differently with its own build system,
 its own way of laying out the code base, code that depends on specific
 compiler bugs. The list of fun things just goes on.
 
+<!--more-->
+
 Having to deal with old codes written in "old" languages really makes
 the user or system administrator really learn about the build system,
 the compliers that are needed, the environment and the dependancy hell
