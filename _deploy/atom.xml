@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Jimmy Tang]]></title>
+  <link href="http://jcftang.github.com/atom.xml" rel="self"/>
+  <link href="http://jcftang.github.com/"/>
+  <updated>2011-10-18T09:24:36+01:00</updated>
+  <id>http://jcftang.github.com/</id>
+  <author>
+    <name><![CDATA[Jimmy Tang]]></name>
+    <email><![CDATA[jcftang@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Feeling Disconnected From Modern Software Development Tools]]></title>
+    <link href="http://jcftang.github.com/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools/"/>
+    <updated>2011-10-13T01:09:00+01:00</updated>
+    <id>http://jcftang.github.com/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve recently started a new role as being a senior software engineer
+for an Irish National Project and I have had to refresh my OOP skills
+with JAVA.</p>
+
+<p>Naturally I gravitated to free and opensource tools to refresh
+myself. This lead me to install Eclipse, which is the the EMACS of the
+modern world. I&#8217;ve never had much luck with IDE&#8217;s nor have I liked
+using IDE&#8217;s much in the past since I mainly dealt with codes written
+in C, Fortran and if I am lucky Perl or C++. This is because my
+background is in Applied Mathematics, Phyiscs and High Performance
+Computing and the codes in this general area are just plain old and
+written by scientists primarily and not engineers. What this means is
+that almost every numerical code out there that I have had the build,
+hack at, develop for is setup differently with its own build system,
+its own way of laying out the code base, code that depends on specific
+compiler bugs. The list of fun things just goes on.</p>
+
+<!--more-->
+
+
+<p>Having to deal with old codes written in &#8220;old&#8221; languages really makes
+the user or system administrator really learn about the build system,
+the compliers that are needed, the environment and the dependancy hell
+that they get into at times. Because of these experiences, I&#8217;ve yet
+again found that JAVA provides lots and lots of support and protection
+for the developer. Other nice things that modern languages like JAVA
+provide is really the tools that standardise the workflow. This seems
+to have had a huge impact on the quality of systems that are produced.</p>
+
+<p>However I really do appreciate the whole TDD concept, but more
+importantly the whole concept of Acceptance Testing Driven Development
+and Behavioural Driven Development concepts. The features of modern
+IDE&#8217;s hinting users scares me to think that fresh graduates from
+university might be too reliant on these modern systems that do too
+many things for the developer. It does however give fast feedback to
+the developer so that they can learn the language much more easily.</p>
+
+<p>Maybe I just feel like a dinosaur for liking vi/vim or emacs for
+writing C programs and shell scripts and liking it. I really do feel
+disconnected from what modern developers are doing these
+days. Developers these days just have it far easier if JAVA or an
+equivalent modern language is used with the appropriate tool. It&#8217;s
+just down to a communication problem of creating the right thing.</p>
+
+<p>By the way this is the first post!</p>
+]]></content>
+  </entry>
+  
+</feed>
