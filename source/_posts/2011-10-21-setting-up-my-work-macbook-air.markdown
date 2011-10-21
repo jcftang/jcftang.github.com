@@ -20,9 +20,13 @@ engineer might want to do.
 I will be trying to automate builds, automate tests, assert that the
 software must function as expected and so on.
 
+<--!more-->
+
 So down to the list of the things that I have initially installed:
 
-Binary packages that I just grabbed from their respective websites
+## Binary packages 
+
+Packages that I just grabbed from their respective websites
 
 * Xcode
 * JDK - apple developer site
@@ -33,13 +37,13 @@ Binary packages that I just grabbed from their respective websites
 * Perian
 * iTerm2
 
-Ruby related packages
+## Ruby related packages
 
 * rvm
 * showoff
 * git-scribe
 
-Macports
+## Macports
 
 * keychain
 * git-core
