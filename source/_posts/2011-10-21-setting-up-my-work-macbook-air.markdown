@@ -31,6 +31,7 @@ Binary packages that I just grabbed from their respective websites
 * Macports
 * Eclipse - classic
 * Perian
+* iTerm2
 
 Ruby related packages
 
@@ -66,11 +67,13 @@ The Macports list isn't exactly complete, but it's pretty close to
 what I had explicitly installed. Sadly I tried to install gcc45 and
 gcc46 because I wanted to play with some codes which needed a fortran
 compiler, this failed to install due to some bootstrapping issue of
-the fortran compilers during the build.
+the fortran compiler during the build.
 
 I've yet to install Haskell and some of the related tools which are
 pretty handy for a lazy user. There is also the need for installing
 Office for OSX. I wish I could just use plain text.
 
 At somepoint I should grab my previous lists and see what I have
-added/removed to my toolbox over the years.
+added/removed to my toolbox over the years. So far Lion hasn't been
+too bad, but I have yet to develop anything or seriously tried to do
+anything too technical on this system so far.
