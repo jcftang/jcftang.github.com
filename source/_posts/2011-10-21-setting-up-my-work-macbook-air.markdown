@@ -9,7 +9,7 @@ categories:
 ---
 
 Everytime when I install, reinstall or setup a mac desktop or laptop I
-always tend to install the same set of software that I was. As time
+always tend to install the same set of software that I was using. As time
 goes on I change what I like to install and what to use. So I've been
 keeping notes and logs of that I usually install first.
 
