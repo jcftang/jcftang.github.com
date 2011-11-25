@@ -4,7 +4,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2011-10-21T08:59:59+01:00</updated>
+  <updated>2011-10-21T09:01:37+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -30,7 +30,8 @@ engineer might want to do.</p>
 <p>I will be trying to automate builds, automate tests, assert that the
 software must function as expected and so on.</p>
 
-<p>&lt;&#8211;!more&#8211;></p>
+<!--more-->
+
 
 <p>So down to the list of the things that I have initially installed:</p>
 
