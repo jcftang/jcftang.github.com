@@ -36,7 +36,7 @@ release it? I will need to look at integrating things with fitnesse
 next. Other benefits from using a CI process or server means that most
 if not all things get automated, this turns into a highly valuable
 source of documentation for incoming developers and
-engineers. Documention often gets left to the end instead of being
+engineers. Documentation often gets left to the end instead of being
 done on a continual basis as the project progresses.
 
 Hopefully the CI server won't be used to name and shame developers in
