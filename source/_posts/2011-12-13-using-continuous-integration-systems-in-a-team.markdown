@@ -6,7 +6,6 @@ comments: true
 categories: 
 - team
 - scm
-published: false
 ---
 
 Apart from the obvious unit testing code which could be fun trying to
