@@ -5,11 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: eclipse - Jimmy Tang</title>
+  <title>Using continuous integration systems in a team - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
 
   
-  <meta name="description" content="Category: eclipse">
+  <meta name="description" content="Apart from the obvious unit testing code which could be fun trying to
+convince a team to use. There are things known as &#8216;Continuous
+Integration &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.comblog/categories/eclipse">
+  <link rel="canonical" href="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -76,36 +78,134 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Eclipse</h1>
+    
+      <h1 class="entry-title">Using Continuous Integration Systems in a Team</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-13T07:37:00+00:00" pubdate data-updated="true">Dec 13<span>th</span>, 2011</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>Apart from the obvious unit testing code which could be fun trying to
+convince a team to use. There are things known as &#8216;Continuous
+Integration&#8217; processes and servers. The basic idea is to continually
+build and test your product automatically and report on successful and
+failed builds.</p>
 
-  
-  <h2>2011</h2>
+<p>I&#8217;ve known about this methodology for long time now but I&#8217;ve never
+bothered to install a CI server since it was always for myself. In the
+past a loop in a shell script running make and or make test usually
+did the trick. Then I discovered gitbuilder which is just a small set
+of scripts for automating the process. Today I have Jenkins installed
+and I&#8217;m somewhat looking at buildbot as well.</p>
 
-<article>
-  
-<h1><a href="/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools/">Feeling Disconnected From Modern Software Development Tools</a></h1>
-<time datetime="2011-10-13T01:09:00+01:00" pubdate><span class='month'>Oct</span> <span class='day'>13</span> <span class='year'>2011</span></time>
+<p>Jenkins appears to be the most responsive and feature rich of the
+three systems that I have played with. Buildbot looks lightweight and
+scalable.  Though I do miss the git bisect and build on a failure that
+gitbuilder provides.</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/eclipse/'>eclipse</a>, <a class='category' href='/blog/categories/java/'>java</a></span>
-</footer>
+<p>Having to work with a team that is geographically distributed
+sometimes makes idea exchanges, organising events and development
+difficult. Any tool that I can get my hands on to encourage
+collaborative work and discussion is going to be used.</p>
 
+<p>Automating the build and test process also means that it is possible
+to automate the release process. If all the &#8216;tests&#8217; pass then why not
+release it? I will need to look at integrating things with fitnesse
+next. Other benefits from using a CI process or server means that most
+if not all things get automated, this turns into a highly valuable
+source of documentation for incoming developers and
+engineers. Documentation often gets left to the end instead of being
+done on a continual basis as the project progresses.</p>
 
-</article>
+<p>Hopefully the CI server won&#8217;t be used to name and shame developers in
+the group, it&#8217;s there to make sure everything is working as expected.</p>
 
+<p>Now to convince the team that building early and continually is
+actually a good idea! Having somewhat successfully kicked off some
+pairing sessions with various team members is good, but being more
+flexible and professional about what we are building is what I&#8217;m
+after.</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Jimmy Tang</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-13T07:37:00+00:00" pubdate data-updated="true">Dec 13<span>th</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/scm/'>scm</a>, <a class='category' href='/blog/categories/team/'>team</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/" data-via="jcftang" data-counturl="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/10/21/setting-up-my-work-macbook-air/" title="Previous Post: Setting up my work Macbook Air">&laquo; Setting up my work Macbook Air</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -207,7 +307,10 @@
       var disqus_shortname = 'jcftang';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/';
+        var disqus_url = 'http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
