@@ -1,9 +1,11 @@
 ---
 layout: post
-title: "Using continuous integration systems in a distributed team"
+title: "Using continuous integration systems in a team"
 date: 2011-12-13 07:37
 comments: true
 categories: 
+- team
+- scm
 published: false
 ---
 
