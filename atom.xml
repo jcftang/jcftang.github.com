@@ -4,7 +4,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-01-16T16:40:38+00:00</updated>
+  <updated>2012-01-16T16:43:08+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -77,9 +77,6 @@ engineer might want to do.</p>
 
 <p>I will be trying to automate builds, automate tests, assert that the
 software must function as expected and so on.</p>
-
-<!--more-->
-
 
 <p>So down to the list of the things that I have initially installed:</p>
 
@@ -164,9 +161,6 @@ seems to be the killer. Parts of the team would seem to not know what
 other parts of the team are doing and thus either deviate from the
 master plan or duplicate work.</p>
 
-<!--more-->
-
-
 <p>Gathering requirements for a project is always fun, translating the
 requirements for a developer to create the end product is even more
 fun, it often can lead to &#8216;chinese whispers&#8217; where things just get
@@ -208,9 +202,6 @@ that almost every numerical code out there that I have had the build,
 hack at, develop for is setup differently with its own build system,
 its own way of laying out the code base, code that depends on specific
 compiler bugs. The list of fun things just goes on.</p>
-
-<!--more-->
-
 
 <p>Having to deal with old codes written in &#8220;old&#8221; languages really makes
 the user or system administrator really learn about the build system,

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: java | Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-01-16T16:40:38+00:00</updated>
+  <updated>2012-01-16T16:43:08+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -34,9 +34,6 @@ that almost every numerical code out there that I have had the build,
 hack at, develop for is setup differently with its own build system,
 its own way of laying out the code base, code that depends on specific
 compiler bugs. The list of fun things just goes on.</p>
-
-<!--more-->
-
 
 <p>Having to deal with old codes written in "old" languages really makes
 the user or system administrator really learn about the build system,
