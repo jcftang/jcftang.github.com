@@ -20,8 +20,6 @@ engineer might want to do.
 I will be trying to automate builds, automate tests, assert that the
 software must function as expected and so on.
 
-<!--more-->
-
 So down to the list of the things that I have initially installed:
 
 ## Binary packages 

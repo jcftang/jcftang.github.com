@@ -13,8 +13,6 @@ seems to be the killer. Parts of the team would seem to not know what
 other parts of the team are doing and thus either deviate from the
 master plan or duplicate work.
 
-<!--more-->
-
 Gathering requirements for a project is always fun, translating the
 requirements for a developer to create the end product is even more
 fun, it often can lead to 'chinese whispers' where things just get
