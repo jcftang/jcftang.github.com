@@ -11,4 +11,18 @@ Waterfall methods seem to work well for smallish projects that are
 well defined and well understood. At least from my own experiences of
 putting things together, but realistically to think of all possible
 scenarios and to write up all the possible solutions to the problem
-seems a little bit wacky.
+seems a little bit wacky. To also assume that the requirements process
+has captured requirements that won't change close the end of the
+project is also a little unreasonable or unrealistic, this would be
+especially true on a project that is planned to run for a few years
+with fairly substantial goals in an ever changing research and
+development environment.
+
+Waterfall styled methods just cause problems with planning and
+adjusting the process to the needs of the stakeholder (no matter what
+the stakeholder thinks they need, they will change their mind). Again
+this is especially true for long running projects.
+
+So why not use agile methods? Simply because there is little or no
+plan and it requires real collaboration, delegation of tasks and
+trust to work towards a common goal.
