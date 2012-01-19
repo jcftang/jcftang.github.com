@@ -25,4 +25,12 @@ this is especially true for long running projects.
 
 So why not use agile methods? Simply because there is little or no
 plan and it requires real collaboration, delegation of tasks and
-trust to work towards a common goal.
+trust to work towards a common goal. People get afraid perhaps?
+
+The trick is communication and trying to introduce agile methods
+slowly and steadily into the system. I've been slowly introducing the
+idea of pairings, sprints and elements of scrum with kanban (yes,
+that's lots of buzz words there already). It's paying off a little for
+now, the team members are beginning to at least talk and exchange
+ideas. In my world that is a huge step already. Next is it try getting
+things done by prioritising tasks and resources.
