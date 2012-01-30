@@ -30,7 +30,11 @@ trust to work towards a common goal. People get afraid perhaps?
 The trick is communication and trying to introduce agile methods
 slowly and steadily into the system. I've been slowly introducing the
 idea of pairings, sprints and elements of scrum with kanban (yes,
-that's lots of buzz words there already). It's paying off a little for
-now, the team members are beginning to at least talk and exchange
-ideas. In my world that is a huge step already. Next is it try getting
-things done by prioritising tasks and resources.
+that's lots of buzz words there already). Getting people to agree to
+talk is probably the hardest thing to do, and it's even harder to try
+and get everyone on the same page without ego's getting in the way.
+
+It's paying off a little for now, the team members are beginning to at
+least talk and exchange ideas. In my world that is a huge step
+already. Next is it try getting things done by prioritising tasks and
+resources.
