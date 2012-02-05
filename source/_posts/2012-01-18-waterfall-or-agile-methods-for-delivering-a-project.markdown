@@ -4,7 +4,7 @@ title: "Waterfall or Agile methods for delivering a project"
 date: 2012-01-18 08:41
 comments: true
 categories: team
-published: false
+published: true
 ---
 
 Waterfall methods seem to work well for smallish projects that are
