@@ -3,7 +3,7 @@ layout: post
 title: "Waterfall or Agile methods for delivering a project"
 date: 2012-01-18 08:41
 comments: true
-categories: 
+categories: team
 published: false
 ---
 
