@@ -4,7 +4,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-02-07T23:53:42+00:00</updated>
+  <updated>2012-02-08T22:32:21+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -14,10 +14,13 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Waterfall or Agile methods for delivering a project]]></title>
-    <link href="http://jcftang.github.com/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/"/>
+    
+	<title type="html"><![CDATA[Waterfall or Agile methods for delivering a project]]></title>
+	<link href="http://jcftang.github.com/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/"/>
+	
     <updated>2012-01-18T08:41:00+00:00</updated>
     <id>http://jcftang.github.com/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project</id>
+    
     <content type="html"><![CDATA[<p>Waterfall methods seem to work well for smallish projects that are
 well defined and well understood. At least from my own experiences of
 putting things together, but realistically to think of all possible
@@ -50,13 +53,17 @@ least talk and exchange ideas. In my world that is a huge step
 already. Next is it try getting things done by prioritising tasks and
 resources.</p>
 ]]></content>
+	
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Using continuous integration systems in a team]]></title>
-    <link href="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/"/>
+    
+	<title type="html"><![CDATA[Using continuous integration systems in a team]]></title>
+	<link href="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/"/>
+	
     <updated>2011-12-13T07:37:00+00:00</updated>
     <id>http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team</id>
+    
     <content type="html"><![CDATA[<p>Apart from the obvious unit testing code which could be fun trying to
 convince a team to use. There are things known as &#8216;Continuous
 Integration&#8217; processes and servers. The basic idea is to continually
@@ -98,13 +105,17 @@ pairing sessions with various team members is good, but being more
 flexible and professional about what we are building is what I&#8217;m
 after.</p>
 ]]></content>
+	
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Setting up my work Macbook Air]]></title>
-    <link href="http://jcftang.github.com/blog/2011/10/21/setting-up-my-work-macbook-air/"/>
+    
+	<title type="html"><![CDATA[Setting up my work Macbook Air]]></title>
+	<link href="http://jcftang.github.com/blog/2011/10/21/setting-up-my-work-macbook-air/"/>
+	
     <updated>2011-10-21T08:21:00+01:00</updated>
     <id>http://jcftang.github.com/blog/2011/10/21/setting-up-my-work-macbook-air</id>
+    
     <content type="html"><![CDATA[<p>Everytime when I install, reinstall or setup a mac desktop or laptop I
 always tend to install the same set of software that I was using. As time
 goes on I change what I like to install and what to use. So I&#8217;ve been
@@ -186,13 +197,17 @@ added/removed to my toolbox over the years. So far Lion hasn&#8217;t been
 too bad, but I have yet to develop anything or seriously tried to do
 anything too technical on this system so far.</p>
 ]]></content>
+	
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[The joys of working with a team across multiple institutions]]></title>
-    <link href="http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions/"/>
+    
+	<title type="html"><![CDATA[The joys of working with a team across multiple institutions]]></title>
+	<link href="http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions/"/>
+	
     <updated>2011-10-19T21:34:00+01:00</updated>
     <id>http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions</id>
+    
     <content type="html"><![CDATA[<p>Having worked in a number of cross institutional projects in the past
 has lead me to always be weary about how to interact with
 people. Often it&#8217;s the lack of co-ordination and communication that
@@ -218,13 +233,17 @@ that we want to create. The worst thing we can do is spend half our
 time developing something based on an early spec only to find out that
 the goal posts have changed.</p>
 ]]></content>
+	
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Feeling Disconnected From Modern Software Development Tools]]></title>
-    <link href="http://jcftang.github.com/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools/"/>
+    
+	<title type="html"><![CDATA[Feeling Disconnected From Modern Software Development Tools]]></title>
+	<link href="http://jcftang.github.com/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools/"/>
+	
     <updated>2011-10-13T01:09:00+01:00</updated>
     <id>http://jcftang.github.com/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools</id>
+    
     <content type="html"><![CDATA[<p>I&#8217;ve recently started a new role as being a senior software engineer
 for an Irish National Project and I have had to refresh my OOP skills
 with JAVA.</p>
@@ -268,6 +287,7 @@ just down to a communication problem of creating the right thing.</p>
 
 <p>By the way this is the first post!</p>
 ]]></content>
+	
   </entry>
   
 </feed>
