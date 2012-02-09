@@ -3,7 +3,7 @@ layout: post
 title: "Red Hat Enterprise Linux Life Cycle Extended to Ten Years"
 date: 2012-02-09 08:16
 comments: true
-categories: 
+categories: linux
 external-url: https://www.redhat.com/archives/rhelv5-announce/2012-January/msg00000.html
 published: false
 ---
