@@ -5,7 +5,6 @@ date: 2012-02-09 08:16
 comments: true
 categories: linux
 external-url: https://www.redhat.com/archives/rhelv5-announce/2012-January/msg00000.html
-published: false
 ---
 
 It's all over the internet that RHEL6 and newer releases will have a
