@@ -4,7 +4,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-02-09T08:55:34+00:00</updated>
+  <updated>2012-02-09T08:58:19+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    
+	<title type="html"><![CDATA[Red Hat Enterprise Linux Life Cycle Extended to Ten Years &#10150;]]></title><!-- add in a glyph or [link-post] here so people know where they're ending up -->
+	<link href="https://www.redhat.com/archives/rhelv5-announce/2012-January/msg00000.html"/>
+	
+    <updated>2012-02-09T08:16:00+00:00</updated>
+    <id>http://jcftang.github.com/blog/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years</id>
+    
+    <content type="html"><![CDATA[<p>It&#8217;s all over the internet that RHEL6 and newer releases will have a
+life cycle of 10yrs. This is pretty good news for projects that are
+deploying systems that have a lifetime of 5yrs or more. Namely Digital
+Preservation projects, not having to worry about migration between
+point releases of an operating system platform reduces time and costs.</p>
+
+<p>I&#8217;m now more likely to target the systems we develop in work towards a
+RHEL system (or a RHEL like clone).</p>
+
+<p>Another side effect of this long term support is that it will probably
+make life easier for those who have lots of virtual machines running
+RHEL. Longer support means less issues with continually migrating
+between point releases. From a practical point of view of a
+operational sysadmin, this is great. From a developers point of view,
+it&#8217;s also not bad either, software written now (assuming the
+requirements haven&#8217;t changed) will probably work long into the future.</p>
+
+<p>Note: I am not a RHEL (Fedora) fanboy, I used to sysadmin a few
+hundred RHEL (scientific linux) based systems. Before that, I used to
+sysadmin a few hundred Debian based systems.</p>
+<a rel="full-article" href="http://jcftang.github.com/blog/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years/">Permalink</a>]]></content><!-- add in a glyph or some way to denote that the permalink goes back to your site -->
+	
+  </entry>
   
   <entry>
     
