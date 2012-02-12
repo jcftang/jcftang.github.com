@@ -3,7 +3,7 @@ layout: post
 title: "cports for building applications and libraries for HPC systems"
 date: 2012-02-12 17:59
 comments: true
-categories: 
+categories: linux scm
 published: false
 external-url: http://thammuz.tchpc.tcd.ie/mirrors/cports/releases/
 ---
@@ -118,3 +118,17 @@ applications.
 Having consistent installs means that the end-user needs to learn less
 about the naming conventions. This in turn reduces the confusion and
 documentation that is needed for the end user.
+
+Sadly, I don't get to play with _cports_ as much as I used to, since I
+do not administrate High Performance Computing systems anymore in my
+new role at my current work place. It is just a hobby to develop this
+build system, I plan on automating more testing of the _cports_ system
+when I get a chance. We currently have _jenkins_ and _gitbuilder_
+running on select machines in work to continually build and test
+specific packages to find regressions and broken download links.
+
+_cports_ isn't quite ready for generaly public usage, but if you are a
+clued in systems administrator at a High Performance Computing
+facility and use environment-module then _cports_ is just about
+usable. This is of course if you are willing to look at the sample
+packages and write _makefiles_.
