@@ -127,7 +127,7 @@ when I get a chance. We currently have _jenkins_ and _gitbuilder_
 running on select machines in work to continually build and test
 specific packages to find regressions and broken download links.
 
-_cports_ isn't quite ready for generaly public usage, but if you are a
+_cports_ isn't quite ready for general public usage, but if you are a
 clued in systems administrator at a High Performance Computing
 facility and use environment-module then _cports_ is just about
 usable. This is of course if you are willing to look at the sample
