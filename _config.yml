@@ -105,4 +105,5 @@ google_analytics_tracking_id: UA-8597777-2
 # Facebook Like
 facebook_like: true
 
+## latent semantic indexing
 lsi: true
