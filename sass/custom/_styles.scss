@@ -4,3 +4,9 @@ $link-color-active: adjust-color($link-color-hover, $lightness: -15) !default;
 a.external-link:after {
   content: " \27A6";
 }
+
+article {
+  ol, ul {
+    padding-left: 3em;
+  }
+}
