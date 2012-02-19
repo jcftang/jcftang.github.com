@@ -20,7 +20,7 @@ have a soft spot for.
 
 I interchange the terms Linux and Distros quite a bit in this post.
 
-Some of the things that didn't like with the Linux's were that not all
+Some of the things that didn't like with the Linux's was that not all
 my hardware would be supported all the time, the distro's sometimes
 think that it's a good idea to completely change how lowlevel systems
 work in favour of _what's hot right now_, sometimes the lack of long
