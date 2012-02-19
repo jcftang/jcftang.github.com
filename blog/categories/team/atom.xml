@@ -4,7 +4,7 @@
   <title><![CDATA[Category: team | Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/blog/categories/team/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-02-15T08:56:49+00:00</updated>
+  <updated>2012-02-19T12:24:31+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -13,12 +13,18 @@
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
-  <entry>
-    <title type="html"><![CDATA[Waterfall or Agile methods for delivering a project]]></title>
-    <link href="http://jcftang.github.com/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/"/>
-    <updated>2012-01-18T08:41:00+00:00</updated>
-    <id>http://jcftang.github.com/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project</id>
-    <content type="html"><![CDATA[<p>Waterfall methods seem to work well for smallish projects that are
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Waterfall or Agile methods for delivering a project]]></title>
+<link href="http://jcftang.github.com/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/"/>
+<updated>2012-01-18T08:41:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project</id>
+
+      <content type="html"><![CDATA[<p>Waterfall methods seem to work well for smallish projects that are
 well defined and well understood. At least from my own experiences of
 putting things together, but realistically to think of all possible
 scenarios and to write up all the possible solutions to the problem
@@ -49,15 +55,24 @@ and get everyone on the same page without ego's getting in the way.</p>
 least talk and exchange ideas. In my world that is a huge step
 already. Next is it try getting things done by prioritising tasks and
 resources.</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/">&infin; Permalink</a></p>
+
 ]]></content>
-  </entry>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[Using continuous integration systems in a team]]></title>
-    <link href="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/"/>
-    <updated>2011-12-13T07:37:00+00:00</updated>
-    <id>http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team</id>
-    <content type="html"><![CDATA[<p>Apart from the obvious unit testing code which could be fun trying to
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Using continuous integration systems in a team]]></title>
+<link href="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/"/>
+<updated>2011-12-13T07:37:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team</id>
+
+      <content type="html"><![CDATA[<p>Apart from the obvious unit testing code which could be fun trying to
 convince a team to use. There are things known as 'Continuous
 Integration' processes and servers. The basic idea is to continually
 build and test your product automatically and report on successful and
@@ -97,15 +112,24 @@ actually a good idea! Having somewhat successfully kicked off some
 pairing sessions with various team members is good, but being more
 flexible and professional about what we are building is what I'm
 after.</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/">&infin; Permalink</a></p>
+
 ]]></content>
-  </entry>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[The joys of working with a team across multiple institutions]]></title>
-    <link href="http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions/"/>
-    <updated>2011-10-19T21:34:00+01:00</updated>
-    <id>http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions</id>
-    <content type="html"><![CDATA[<p>Having worked in a number of cross institutional projects in the past
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[The joys of working with a team across multiple institutions]]></title>
+<link href="http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions/"/>
+<updated>2011-10-19T21:34:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions</id>
+
+      <content type="html"><![CDATA[<p>Having worked in a number of cross institutional projects in the past
 has lead me to always be weary about how to interact with
 people. Often it's the lack of co-ordination and communication that
 seems to be the killer. Parts of the team would seem to not know what
@@ -129,7 +153,11 @@ communicate their concerns and specifications to deliver the product
 that we want to create. The worst thing we can do is spend half our
 time developing something based on an early spec only to find out that
 the goal posts have changed.</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions/">&infin; Permalink</a></p>
+
 ]]></content>
-  </entry>
+    </entry>
   
 </feed>
+

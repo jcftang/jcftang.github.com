@@ -4,7 +4,7 @@
   <title><![CDATA[Category: java | Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-02-15T08:56:49+00:00</updated>
+  <updated>2012-02-19T12:24:31+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -13,12 +13,18 @@
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
-  <entry>
-    <title type="html"><![CDATA[Feeling Disconnected From Modern Software Development Tools]]></title>
-    <link href="http://jcftang.github.com/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools/"/>
-    <updated>2011-10-13T01:09:00+01:00</updated>
-    <id>http://jcftang.github.com/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools</id>
-    <content type="html"><![CDATA[<p>I've recently started a new role as being a senior software engineer
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Feeling Disconnected From Modern Software Development Tools]]></title>
+<link href="http://jcftang.github.com/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools/"/>
+<updated>2011-10-13T01:09:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools</id>
+
+      <content type="html"><![CDATA[<p>I've recently started a new role as being a senior software engineer
 for an Irish National Project and I have had to refresh my OOP skills
 with JAVA.</p>
 
@@ -60,7 +66,11 @@ equivalent modern language is used with the appropriate tool. It's
 just down to a communication problem of creating the right thing.</p>
 
 <p>By the way this is the first post!</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools/">&infin; Permalink</a></p>
+
 ]]></content>
-  </entry>
+    </entry>
   
 </feed>
+

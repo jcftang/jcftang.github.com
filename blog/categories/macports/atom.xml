@@ -4,7 +4,7 @@
   <title><![CDATA[Category: macports | Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/blog/categories/macports/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-02-15T08:56:49+00:00</updated>
+  <updated>2012-02-19T12:24:31+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -13,12 +13,18 @@
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
-  <entry>
-    <title type="html"><![CDATA[Setting up my work Macbook Air]]></title>
-    <link href="http://jcftang.github.com/blog/2011/10/21/setting-up-my-work-macbook-air/"/>
-    <updated>2011-10-21T08:21:00+01:00</updated>
-    <id>http://jcftang.github.com/blog/2011/10/21/setting-up-my-work-macbook-air</id>
-    <content type="html"><![CDATA[<p>Everytime when I install, reinstall or setup a mac desktop or laptop I
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Setting up my work Macbook Air]]></title>
+<link href="http://jcftang.github.com/blog/2011/10/21/setting-up-my-work-macbook-air/"/>
+<updated>2011-10-21T08:21:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2011/10/21/setting-up-my-work-macbook-air</id>
+
+      <content type="html"><![CDATA[<p>Everytime when I install, reinstall or setup a mac desktop or laptop I
 always tend to install the same set of software that I was using. As time
 goes on I change what I like to install and what to use. So I've been
 keeping notes and logs of that I usually install first.</p>
@@ -98,7 +104,11 @@ Office for OSX. I wish I could just use plain text.</p>
 added/removed to my toolbox over the years. So far Lion hasn't been
 too bad, but I have yet to develop anything or seriously tried to do
 anything too technical on this system so far.</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2011/10/21/setting-up-my-work-macbook-air/">&infin; Permalink</a></p>
+
 ]]></content>
-  </entry>
+    </entry>
   
 </feed>
+

@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-02-15T08:56:49+00:00</updated>
+  <updated>2012-02-19T12:24:31+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -12,17 +12,94 @@
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Why Linux isn't the only platform to target when building applications]]></title>
+<link href="http://jcftang.github.com/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/"/>
+<updated>2012-02-16T09:33:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications</id>
+
+      <content type="html"><![CDATA[<p>Why would one want to target other platforms when building applications
+on the server side?</p>
+
+<p>This came out of a conversation with the ex-CTO of Creme software (he
+is also a friend of mine), the conversation started out with why I
+like to use Macs and OSX as my laptop or workstation. I&#8217;ve been a long
+time Linux user of pretty much most of the major distributions ranging
+from RHEL, Debian/Ubuntu, Gentoo, ArchLinux as well as a number of
+other derivatives, not to mention other systems like the BSD&#8217;s which I
+have a soft spot for.</p>
+
+<p>I interchange the terms Linux and Distros quite a bit in this post.</p>
+
+<p>Some of the things that didn&#8217;t like with the Linux&#8217;s were that not all
+my hardware would be supported all the time, the distro&#8217;s sometimes
+think that it&#8217;s a good idea to completely change how lowlevel systems
+work in favour of <em>what&#8217;s hot right now</em>, sometimes the lack of long
+term support for security updates (not package updates to fix security
+problems) does make it more difficult to plan and deploy. The
+perceived flexibility sometimes causes headaches with migration plans
+and maintanence.</p>
+
+<p>Of course there are things that I like, the access to the source code
+and packaging to fix and redeploy packages. The stability and
+reliability that can be achieved is attractive if everything is
+automated and planned out (though too much automation can be bad too).</p>
+
+<p>To get back to the original point of why you wouldn&#8217;t want to target
+Linux specifically when building applications? Unless you have a
+strong motivating reason to write code that <em>specifically</em> requires a
+feature of Linux (or any other operating system), then you really
+ought to be writing code that adheres to at least some POSIX or cross
+platform standard, and pick libraries that are known to have good
+cross platform compatibility. There is nothing to gain from writing
+platform specific codes in the long run, the platform might hide
+issues from the developer if it is too clever. Linux or more
+specifically the distros might change various behaviour of the
+underlying system, and if your code is tied down to particular
+features of the underlying system then you will have lots of fun
+migrating.</p>
+
+<p>It&#8217;s just bad practice to rely on system specific behaviour which
+isn&#8217;t portable (or maintainable) going forward in a project. To
+mitigate some of this, one would want to at least try to use a
+continuous build systems such as <em>gitbuilder</em>, <em>buildbot</em> or <em>jenkins</em>
+on a bunch of <strong>different</strong> architectures and platforms. This will
+reveal portability issues and more often than not, subtle bugs in your
+code which you probably didn&#8217;t see as a result of your development
+system being too smart for you!</p>
+
+<p>There isn&#8217;t much of an excuse not to do continuous builds and testings
+across different Linux, BSD and Solaris distributions these
+days. Diskspace and compute power is cheap, there are free and
+opensource virtualisation technologies out there to provide you with a
+means to run different distributions for testing on a single
+machine. The problem will be the upfront manpower needed to setup such
+a system.</p>
+
+<p>In the long run targetting at least two platforms will make your code
+base far more portable and hopefully more maintainable as you will end
+up making sure you write code once that runs on many systems with
+minimal changes needed when a new platform arises.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">&infin; Permalink</a></p>]]></content>
+    </entry>
   
-  
-  
-  
-  <entry>
-    <title type="html"><![CDATA[cports for building applications and libraries for HPC systems &rarr;]]></title>
-    <link href="http://thammuz.tchpc.tcd.ie/mirrors/cports/releases/"/>
-    <updated>2012-02-12T17:59:00+00:00</updated>
-    <id>http://jcftang.github.com/blog/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems</id>
-    
-    <content type="html"><![CDATA[<p>I&#8217;ve talked about <em>cports</em> in the past, it&#8217;s basically a collection of
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[cports for building applications and libraries for HPC systems &rarr;]]></title>
+<link href="http://thammuz.tchpc.tcd.ie/mirrors/cports/releases/"/>
+<updated>2012-02-12T17:59:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems</id>
+
+      <content type="html"><![CDATA[<p>I&#8217;ve talked about <em>cports</em> in the past, it&#8217;s basically a collection of
 <em>makefiles</em> which mostly automates the process of downloading,
 configuring, building and installing applications and libraries for
 High Performance Computing systems that use environment-modules.</p>
@@ -210,20 +287,21 @@ clued in systems administrator at a High Performance Computing
 facility and use environment-module then <em>cports</em> is just about
 usable. This is of course if you are willing to look at the sample
 packages and write <em>makefiles</em>.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/"></a></p>]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">&infin; Permalink</a></p>]]></content>
+    </entry>
   
-  
-  
-  
-  
-  <entry>
-    <title type="html"><![CDATA[Red Hat Enterprise Linux Life Cycle Extended to Ten Years &rarr;]]></title>
-    <link href="https://www.redhat.com/archives/rhelv5-announce/2012-January/msg00000.html"/>
-    <updated>2012-02-09T08:16:00+00:00</updated>
-    <id>http://jcftang.github.com/blog/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years</id>
-    
-    <content type="html"><![CDATA[<p>It&#8217;s all over the internet that RHEL6 and newer releases will have a
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Red Hat Enterprise Linux Life Cycle Extended to Ten Years &rarr;]]></title>
+<link href="https://www.redhat.com/archives/rhelv5-announce/2012-January/msg00000.html"/>
+<updated>2012-02-09T08:16:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years</id>
+
+      <content type="html"><![CDATA[<p>It&#8217;s all over the internet that RHEL6 and newer releases will have a
 life cycle of 10yrs. This is pretty good news for projects that are
 deploying systems that have a lifetime of 5yrs or more. Namely Digital
 Preservation projects, not having to worry about migration between
@@ -243,20 +321,21 @@ requirements haven&#8217;t changed) will probably work long into the future.</p>
 <p>Note: I am not a RHEL (Fedora) fanboy, I used to sysadmin a few
 hundred RHEL (scientific linux) based systems. Before that, I used to
 sysadmin a few hundred Debian based systems.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years/"></a></p>]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years/">&infin; Permalink</a></p>]]></content>
+    </entry>
   
-  
-  
-  
-  
-  <entry>
-    <title type="html"><![CDATA[Waterfall or Agile methods for delivering a project]]></title>
-    <link href="http://jcftang.github.com/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/"/>
-    <updated>2012-01-18T08:41:00+00:00</updated>
-    <id>http://jcftang.github.com/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project</id>
-    
-    <content type="html"><![CDATA[<p>Waterfall methods seem to work well for smallish projects that are
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Waterfall or Agile methods for delivering a project]]></title>
+<link href="http://jcftang.github.com/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/"/>
+<updated>2012-01-18T08:41:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project</id>
+
+      <content type="html"><![CDATA[<p>Waterfall methods seem to work well for smallish projects that are
 well defined and well understood. At least from my own experiences of
 putting things together, but realistically to think of all possible
 scenarios and to write up all the possible solutions to the problem
@@ -287,20 +366,21 @@ and get everyone on the same page without ego&#8217;s getting in the way.</p>
 least talk and exchange ideas. In my world that is a huge step
 already. Next is it try getting things done by prioritising tasks and
 resources.</p>
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/">&infin; Permalink</a></p>]]></content>
+    </entry>
   
-  
-  
-  
-  
-  <entry>
-    <title type="html"><![CDATA[Using continuous integration systems in a team]]></title>
-    <link href="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/"/>
-    <updated>2011-12-13T07:37:00+00:00</updated>
-    <id>http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team</id>
-    
-    <content type="html"><![CDATA[<p>Apart from the obvious unit testing code which could be fun trying to
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Using continuous integration systems in a team]]></title>
+<link href="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/"/>
+<updated>2011-12-13T07:37:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team</id>
+
+      <content type="html"><![CDATA[<p>Apart from the obvious unit testing code which could be fun trying to
 convince a team to use. There are things known as &#8216;Continuous
 Integration&#8217; processes and servers. The basic idea is to continually
 build and test your product automatically and report on successful and
@@ -340,20 +420,21 @@ actually a good idea! Having somewhat successfully kicked off some
 pairing sessions with various team members is good, but being more
 flexible and professional about what we are building is what I&#8217;m
 after.</p>
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/">&infin; Permalink</a></p>]]></content>
+    </entry>
   
-  
-  
-  
-  
-  <entry>
-    <title type="html"><![CDATA[Setting up my work Macbook Air]]></title>
-    <link href="http://jcftang.github.com/blog/2011/10/21/setting-up-my-work-macbook-air/"/>
-    <updated>2011-10-21T08:21:00+01:00</updated>
-    <id>http://jcftang.github.com/blog/2011/10/21/setting-up-my-work-macbook-air</id>
-    
-    <content type="html"><![CDATA[<p>Everytime when I install, reinstall or setup a mac desktop or laptop I
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Setting up my work Macbook Air]]></title>
+<link href="http://jcftang.github.com/blog/2011/10/21/setting-up-my-work-macbook-air/"/>
+<updated>2011-10-21T08:21:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2011/10/21/setting-up-my-work-macbook-air</id>
+
+      <content type="html"><![CDATA[<p>Everytime when I install, reinstall or setup a mac desktop or laptop I
 always tend to install the same set of software that I was using. As time
 goes on I change what I like to install and what to use. So I&#8217;ve been
 keeping notes and logs of that I usually install first.</p>
@@ -433,20 +514,21 @@ Office for OSX. I wish I could just use plain text.</p>
 added/removed to my toolbox over the years. So far Lion hasn&#8217;t been
 too bad, but I have yet to develop anything or seriously tried to do
 anything too technical on this system so far.</p>
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2011/10/21/setting-up-my-work-macbook-air/">&infin; Permalink</a></p>]]></content>
+    </entry>
   
-  
-  
-  
-  
-  <entry>
-    <title type="html"><![CDATA[The joys of working with a team across multiple institutions]]></title>
-    <link href="http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions/"/>
-    <updated>2011-10-19T21:34:00+01:00</updated>
-    <id>http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions</id>
-    
-    <content type="html"><![CDATA[<p>Having worked in a number of cross institutional projects in the past
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[The joys of working with a team across multiple institutions]]></title>
+<link href="http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions/"/>
+<updated>2011-10-19T21:34:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions</id>
+
+      <content type="html"><![CDATA[<p>Having worked in a number of cross institutional projects in the past
 has lead me to always be weary about how to interact with
 people. Often it&#8217;s the lack of co-ordination and communication that
 seems to be the killer. Parts of the team would seem to not know what
@@ -470,20 +552,21 @@ communicate their concerns and specifications to deliver the product
 that we want to create. The worst thing we can do is spend half our
 time developing something based on an early spec only to find out that
 the goal posts have changed.</p>
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions/">&infin; Permalink</a></p>]]></content>
+    </entry>
   
-  
-  
-  
-  
-  <entry>
-    <title type="html"><![CDATA[Feeling Disconnected From Modern Software Development Tools]]></title>
-    <link href="http://jcftang.github.com/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools/"/>
-    <updated>2011-10-13T01:09:00+01:00</updated>
-    <id>http://jcftang.github.com/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools</id>
-    
-    <content type="html"><![CDATA[<p>I&#8217;ve recently started a new role as being a senior software engineer
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Feeling Disconnected From Modern Software Development Tools]]></title>
+<link href="http://jcftang.github.com/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools/"/>
+<updated>2011-10-13T01:09:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools</id>
+
+      <content type="html"><![CDATA[<p>I&#8217;ve recently started a new role as being a senior software engineer
 for an Irish National Project and I have had to refresh my OOP skills
 with JAVA.</p>
 
@@ -525,7 +608,7 @@ equivalent modern language is used with the appropriate tool. It&#8217;s
 just down to a communication problem of creating the right thing.</p>
 
 <p>By the way this is the first post!</p>
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools/">&infin; Permalink</a></p>]]></content>
+    </entry>
   
 </feed>
