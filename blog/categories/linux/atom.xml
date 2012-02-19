@@ -4,7 +4,7 @@
   <title><![CDATA[Category: linux | Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-02-19T12:24:31+00:00</updated>
+  <updated>2012-02-19T15:03:06+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -12,6 +12,53 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Rasberry Pi - what I would use it for? &rarr;]]></title>
+<link href="http://www.raspberrypi.org/"/>
+<updated>2012-02-19T14:46:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/02/19/rasberry-pi-what-i-would-use-it-for</id>
+
+      <content type="html"><![CDATA[<p>At the time of writing it seems that the Raspberry Pi site is down,
+probably suffering from a slashdot effect. I would imagine almost
+every nerd, sheevaplug developer, OLPC developer, DIY'ers who want to
+build their own home media centres are looking to get a Raspberry Pi
+right now.</p>
+
+<p>So what would I use one of these mini-computers for? I can think up a
+range of cool applications for this device, assuming I can order a few
+of these to play with. I've got ideas such as:</p>
+
+<ul>
+<li>A Tahoe-LAFS storage node, I could attach a few HDD's to one of these
+devices and run Tahoe-LAFS on it, these computers are cheap enough
+and have a low enough power consumption that I could just have them
+on all the time.</li>
+<li>A Babeld node, I could have a few of these devices dotted around my
+house/apartment to build a mesh network.</li>
+<li>A portable computer, not quite a tablet PC with a screen, but it has
+enough connectivity to wire it up to a modern monitor or a TV.</li>
+<li>A penetration testing device, just wire it up with a few DC
+batteries, plug in a wireless card, wrap it up in a water proof
+package. Power on, and see how far you can throw it at your target,
+I can see endless possibilities for this device for pen-testing.</li>
+</ul>
+
+
+<p>I wonder if the device will ever be able to be powered via the USB
+port or the the ethernet port. I can see some interesting uses for
+this device in data centres for monitoring the network, power
+consumption and a host of other things.</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/19/rasberry-pi-what-i-would-use-it-for/">&infin; Permalink</a></p>
+
+]]></content>
+    </entry>
   
     <entry>
       
@@ -37,7 +84,7 @@ have a soft spot for.</p>
 
 <p>I interchange the terms Linux and Distros quite a bit in this post.</p>
 
-<p>Some of the things that didn't like with the Linux's were that not all
+<p>Some of the things that didn't like with the Linux's was that not all
 my hardware would be supported all the time, the distro's sometimes
 think that it's a good idea to completely change how lowlevel systems
 work in favour of <em>what's hot right now</em>, sometimes the lack of long
