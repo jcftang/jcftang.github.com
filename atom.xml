@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-02-23T21:41:10+00:00</updated>
+  <updated>2012-02-27T20:01:47+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Genetic Classification of Populations Using Supervised Learning &rarr;]]></title>
+<link href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0014802"/>
+<updated>2012-02-26T21:08:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/02/26/genetic-classification-of-populations-using-supervised-learning</id>
+
+      <content type="html"><![CDATA[<p>In the past few months, in my spare time whenever I get a chance, I&#8217;ve
+been working on a side project in work. It&#8217;s a research project
+amongst a group of people with a cool idea. The idea is to apply
+neural networks to identifying diseases, populations and traits via
+machine learning/supervised learning. I&#8217;m not entirely sure about the
+application of the technology as to how new or revolutionary it is,
+but it seems sensible that a machine is going to be very good at being
+taught how to recognise patterns so why not do it.</p>
+
+<p>I&#8217;m not directly responsible for the code for this paper, but I did go
+back and refactor most of the code in an attempt to make it a little
+presentable to the world and also much faster as a result. I hope that
+the source code will eventually see the light of day.</p>
+
+<p>There will be a presentation at
+<a href="http://www.genepi.med.uni-goettingen.de/download/EMGM2012_Preliminary_Programme.pdf">EMGM</a>,
+I will be curious as to what people think. Is it a crazy good or a
+crazy bad idea? The data that is being generated is apparently good,
+though personally I would like to see more analysis being done with
+additional ANN&#8217;s or SVM&#8217;s to verify that it really is working as
+expected.</p>
+
+<p>I wonder if I can convince a CS or a Maths summer student to
+re-implement the algorithm with a different ANN or SVM library. There
+are a rake of ideas that I have that I wouldn&#8217;t mind seeing
+implemented. I just need more time!</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/26/genetic-classification-of-populations-using-supervised-learning/">&infin; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
