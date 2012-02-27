@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-02-27T20:01:47+00:00</updated>
+  <updated>2012-02-27T20:07:23+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -36,6 +36,10 @@ taught how to recognise patterns so why not do it.</p>
 back and refactor most of the code in an attempt to make it a little
 presentable to the world and also much faster as a result. I hope that
 the source code will eventually see the light of day.</p>
+
+<p>Note, I am not the primary author of this presentation/paper, I just
+have an interest in the idea, code and enjoy learning and playing with
+this research.</p>
 
 <p>There will be a presentation at
 <a href="http://www.genepi.med.uni-goettingen.de/download/EMGM2012_Preliminary_Programme.pdf">EMGM</a>,
