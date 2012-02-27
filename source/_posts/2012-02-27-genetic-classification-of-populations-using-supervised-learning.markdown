@@ -21,6 +21,10 @@ back and refactor most of the code in an attempt to make it a little
 presentable to the world and also much faster as a result. I hope that
 the source code will eventually see the light of day.
 
+Note, I am not the primary author of this presentation/paper, I just
+have an interest in the idea, code and enjoy learning and playing with
+this research.
+
 There will be a presentation at
 [EMGM](http://www.genepi.med.uni-goettingen.de/download/EMGM2012_Preliminary_Programme.pdf),
 I will be curious as to what people think. Is it a crazy good or a
