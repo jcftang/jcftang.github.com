@@ -3,7 +3,7 @@ layout: post
 title: "cports for building applications and libraries for HPC systems"
 date: 2012-02-12 17:59
 comments: true
-categories: linux scm
+categories: linux scm hpc
 published: true
 external-url: http://thammuz.tchpc.tcd.ie/mirrors/cports/releases/
 ---
