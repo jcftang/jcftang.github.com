@@ -9,9 +9,9 @@
   <meta name="author" content="Jimmy Tang">
 
   
-  <meta name="description" content="Everytime when I install, reinstall or setup a mac desktop or laptop I
-always tend to install the same set of software that I was using. As time
-goes &hellip;">
+  <meta name="description" content="Apart from the obvious unit testing code which could be fun trying to
+convince a team to use. There are things known as &#8216;Continuous
+Integration &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +79,96 @@ goes &hellip;">
   <div id="main">
     <div id="content">
       <div class="blog-index">
+  
+    
+    
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="/blog/2011/12/13/using-continuous-integration-systems-in-a-team/">Using Continuous Integration Systems in a Team</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-13T07:37:00+00:00" pubdate data-updated="true">Dec 13<span>th</span>, 2011</time>
+        
+         &bull; <a href="/blog/2011/12/13/using-continuous-integration-systems-in-a-team/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/blog/2011/12/13/using-continuous-integration-systems-in-a-team/">&infin;</a>
+      </p>
+    
+  </header>
+
+
+
+  <div class="entry-content"><p>Apart from the obvious unit testing code which could be fun trying to
+convince a team to use. There are things known as &#8216;Continuous
+Integration&#8217; processes and servers. The basic idea is to continually
+build and test your product automatically and report on successful and
+failed builds.</p>
+
+<p>I&#8217;ve known about this methodology for long time now but I&#8217;ve never
+bothered to install a CI server since it was always for myself. In the
+past a loop in a shell script running make and or make test usually
+did the trick. Then I discovered gitbuilder which is just a small set
+of scripts for automating the process. Today I have Jenkins installed
+and I&#8217;m somewhat looking at buildbot as well.</p>
+
+<p>Jenkins appears to be the most responsive and feature rich of the
+three systems that I have played with. Buildbot looks lightweight and
+scalable.  Though I do miss the git bisect and build on a failure that
+gitbuilder provides.</p>
+
+<p>Having to work with a team that is geographically distributed
+sometimes makes idea exchanges, organising events and development
+difficult. Any tool that I can get my hands on to encourage
+collaborative work and discussion is going to be used.</p>
+
+<p>Automating the build and test process also means that it is possible
+to automate the release process. If all the &#8216;tests&#8217; pass then why not
+release it? I will need to look at integrating things with fitnesse
+next. Other benefits from using a CI process or server means that most
+if not all things get automated, this turns into a highly valuable
+source of documentation for incoming developers and
+engineers. Documentation often gets left to the end instead of being
+done on a continual basis as the project progresses.</p>
+
+<p>Hopefully the CI server won&#8217;t be used to name and shame developers in
+the group, it&#8217;s there to make sure everything is working as expected.</p>
+
+<p>Now to convince the team that building early and continually is
+actually a good idea! Having somewhat successfully kicked off some
+pairing sessions with various team members is good, but being more
+flexible and professional about what we are building is what I&#8217;m
+after.</p>
+</div>
+
+
+    </article>
   
     
     
@@ -396,6 +486,10 @@ just down to a communication problem of creating the right thing.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/03/08/enabling-latent-semantic-indexing-for-octopress/">Enabling Latent Semantic Indexing for Octopress</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/">Planet DRI - a news aggregator for digital humanities and digital preservation projects in Ireland</a>
       </li>
     
@@ -409,10 +503,6 @@ just down to a communication problem of creating the right thing.</p>
     
       <li class="post">
         <a href="/blog/2012/02/19/scientific-linux-6-dot-2-is-out/">Scientific Linux 6.2 is out</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/02/19/rasberry-pi-what-i-would-use-it-for/">Rasberry Pi - what I would use it for?</a>
       </li>
     
   </ul>

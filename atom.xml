@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-03-05T19:41:45+00:00</updated>
+  <updated>2012-03-08T20:26:33+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Enabling Latent Semantic Indexing for Octopress]]></title>
+<link href="http://jcftang.github.com/blog/2012/03/08/enabling-latent-semantic-indexing-for-octopress/"/>
+<updated>2012-03-08T20:02:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/03/08/enabling-latent-semantic-indexing-for-octopress</id>
+
+      <content type="html"><![CDATA[<p>For those that care about having related posts on their <a href="">Octopress</a>
+blog. It&#8217;s actually quite easy to turn it on, it&#8217;s nice to have and
+useful. But it&#8217;s not enabled by default in Octopress.</p>
+
+<p>This feature already exists in jekyll, enabling this feature in
+Octopress is a trival task.</p>
+
+<p>Firstly add this to your <code>_config.yml</code> file</p>
+
+<pre><code>lsi: true
+</code></pre>
+
+<p>Then create a file such as <code>source/_includes/custom/asides/related.html</code> with the following
+content</p>
+
+<pre><code>&lt;section&gt;
+&lt;h1&gt;Related Posts&lt;/h1&gt;
+&lt;ul class="posts"&gt;
+    {% for post in site.related_posts limit:5 %}
+    &lt;li class="related"&gt;
+        &lt;a href="{{ root_url }}{{ post.url }}"&gt;{{ post.title }}&lt;/a&gt;
+    &lt;/li&gt;
+    {% endfor %}
+    &lt;/ul&gt;
+&lt;/section&gt;
+</code></pre>
+
+<p>It is possible to style the list, but in the above I have chosen to
+keep the same style as the recent posts.</p>
+
+<h2>Probable issues with enabling LSI</h2>
+
+<p>There are some issues with enabling LSI in jekyll/octopress, the
+primary issue will be performance. The default implementation will be
+slow if you have lots of posts to classify. It would be recommended
+that rb-gsl be installed to accelerate the classification process.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/03/08/enabling-latent-semantic-indexing-for-octopress/">&infin; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
