@@ -4,7 +4,7 @@
   <title><![CDATA[Category: scm | Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/blog/categories/scm/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-03-11T11:58:42+00:00</updated>
+  <updated>2012-03-11T14:17:20+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -31,7 +31,7 @@ around for a few years now. It can be turned on globally by doing</p>
 <pre><code>git config --global rerere.enabled 1
 </code></pre>
 
-<p>It pretty much automates of the conflict resolutions in long lived
+<p>It pretty much automates the resolution of conflicts in long lived
 branches. I've been lazy recently and I have just doing merges instead
 rebasing, which lead me to re-discover <em>git rerere</em>.</p>
 
