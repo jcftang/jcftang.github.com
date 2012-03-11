@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-03-08T20:26:33+00:00</updated>
+  <updated>2012-03-11T11:58:42+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[git rerere for long lived feature branches &rarr;]]></title>
+<link href="http://progit.org/2010/03/08/rerere.html"/>
+<updated>2012-03-11T11:45:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/03/11/git-rerere-for-long-lived-feature-branches</id>
+
+      <content type="html"><![CDATA[<p>I turned this feature on for a few of my git repos but I had
+completely forgotten about it. As far as I recall the feature has been
+around for a few years now. It can be turned on globally by doing</p>
+
+<pre><code>git config --global rerere.enabled 1
+</code></pre>
+
+<p>It pretty much automates of the conflict resolutions in long lived
+branches. I&#8217;ve been lazy recently and I have just doing merges instead
+rebasing, which lead me to re-discover <em>git rerere</em>.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/03/11/git-rerere-for-long-lived-feature-branches/">&infin; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
