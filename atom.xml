@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-03-11T14:17:20+00:00</updated>
+  <updated>2012-03-13T22:55:58+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -60,7 +60,7 @@ Octopress is a trival task.</p>
 </code></pre>
 
 <p>Then create a file such as <code>source/_includes/custom/asides/related.html</code> with the following
-content</p>
+content, add it to one of your asides in <code>_config.yml</code></p>
 
 <pre><code>&lt;section&gt;
 &lt;h1&gt;Related Posts&lt;/h1&gt;
