@@ -21,7 +21,7 @@ Firstly add this to your `_config.yml` file
     lsi: true
 
 Then create a file such as `source/_includes/custom/asides/related.html` with the following
-content
+content, add it to one of your asides in `_config.yml`
 
 {% raw %}
 	<section>
