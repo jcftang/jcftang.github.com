@@ -4,7 +4,7 @@
   <title><![CDATA[Category: team | Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/blog/categories/team/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-03-13T22:55:58+00:00</updated>
+  <updated>2012-03-15T20:02:54+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Dogfooding your own project to accelerate development]]></title>
+<link href="http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/"/>
+<updated>2012-03-15T19:31:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development</id>
+
+      <content type="html"><![CDATA[<p>Should you dogfood your own project that you are developing? The
+answer is probably yes, especially if you have no clear cut
+requirements from the stakeholder in a project with a greenfield for
+development. There is a lot to be said about having a working
+implementation that can be presented and refined.</p>
+
+<p>Sometimes the project that you are working on won't have clear
+requirements for implementation, so you should probably take basic
+assumed cases and run with it. Starting early to see what works and
+what doesn't work is a pragmatic approach which the waterfall crowd
+might not like. But hey, an implementation speaks for itself.</p>
+
+<p>If you don't use what you develop, then it is very hard to relate to
+the customer/end-user in the long run. On the note of dogfooding your
+own work, sometimes best-practice might cost too much in terms of time
+and money, sometimes good-enough practice might just be enough to
+deliver a functioning product.</p>
+
+<p>Accelerating development by dogfooding your own work and using
+good-enough practices should increase throughput of development, but
+not necessarily quality. Again in a greenfield project where there
+aren't many requirements due to the schedule, it's worth taking this
+approach until hard requirements get delivered.</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/">&infin; Permalink</a></p>
+
+]]></content>
+    </entry>
   
     <entry>
       
@@ -201,47 +241,6 @@ flexible and professional about what we are building is what I'm
 after.</p>
 
 <p><a rel="bookmark" href="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/">&infin; Permalink</a></p>
-
-]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[The joys of working with a team across multiple institutions]]></title>
-<link href="http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions/"/>
-<updated>2011-10-19T21:34:00+01:00</updated>
-<id>http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions</id>
-
-      <content type="html"><![CDATA[<p>Having worked in a number of cross institutional projects in the past
-has lead me to always be weary about how to interact with
-people. Often it's the lack of co-ordination and communication that
-seems to be the killer. Parts of the team would seem to not know what
-other parts of the team are doing and thus either deviate from the
-master plan or duplicate work.</p>
-
-<p>Gathering requirements for a project is always fun, translating the
-requirements for a developer to create the end product is even more
-fun, it often can lead to 'chinese whispers' where things just get
-miscommunicated and misunderstood.</p>
-
-<p>Agreeing on collaborating in a sense that everyone should talk and
-making sure everyone is on the same page always seems to be a touchy
-subject, everyone is an expert. So many things can be resolved by just
-bridging the communication gap. I will be finding this out very soon
-in how I manage expectations for the latest project that I am working
-on.</p>
-
-<p>Perhaps I should change my approach vector in getting everyone to
-communicate their concerns and specifications to deliver the product
-that we want to create. The worst thing we can do is spend half our
-time developing something based on an early spec only to find out that
-the goal posts have changed.</p>
-
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions/">&infin; Permalink</a></p>
 
 ]]></content>
     </entry>

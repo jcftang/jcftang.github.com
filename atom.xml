@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-03-13T22:55:58+00:00</updated>
+  <updated>2012-03-15T20:02:54+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Dogfooding your own project to accelerate development]]></title>
+<link href="http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/"/>
+<updated>2012-03-15T19:31:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development</id>
+
+      <content type="html"><![CDATA[<p>Should you dogfood your own project that you are developing? The
+answer is probably yes, especially if you have no clear cut
+requirements from the stakeholder in a project with a greenfield for
+development. There is a lot to be said about having a working
+implementation that can be presented and refined.</p>
+
+<p>Sometimes the project that you are working on won&#8217;t have clear
+requirements for implementation, so you should probably take basic
+assumed cases and run with it. Starting early to see what works and
+what doesn&#8217;t work is a pragmatic approach which the waterfall crowd
+might not like. But hey, an implementation speaks for itself.</p>
+
+<p>If you don&#8217;t use what you develop, then it is very hard to relate to
+the customer/end-user in the long run. On the note of dogfooding your
+own work, sometimes best-practice might cost too much in terms of time
+and money, sometimes good-enough practice might just be enough to
+deliver a functioning product.</p>
+
+<p>Accelerating development by dogfooding your own work and using
+good-enough practices should increase throughput of development, but
+not necessarily quality. Again in a greenfield project where there
+aren&#8217;t many requirements due to the schedule, it&#8217;s worth taking this
+approach until hard requirements get delivered.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/">&infin; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
