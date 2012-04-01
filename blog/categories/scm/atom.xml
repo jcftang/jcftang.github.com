@@ -4,7 +4,7 @@
   <title><![CDATA[Category: scm | Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/blog/categories/scm/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-03-17T15:29:59+00:00</updated>
+  <updated>2012-04-01T11:47:19+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Gitbuilder aggregator &rarr;]]></title>
+<link href="https://github.com/jcftang/gitbuilder/tree/develop/contrib/gitbuilder-ajax"/>
+<updated>2012-04-01T11:05:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator</id>
+
+      <content type="html"><![CDATA[<p>We use git and <a href="https://github.com/apenwarr/gitbuilder">gitbuilder</a> in
+work for a large number of projects, we also try and test things as
+much as we can. I first noticed that someone had written an aggregator
+for gitbuilder at <a href="http://ceph.newdream.net/gitbuilder.cgi">ceph
+gitbuilders</a>, this seemed
+like a great idea (and it is) except the aggregator at the time didn't
+quite work very fast and needed some ajax magic.</p>
+
+<p>I had asked for a copy of the aggregator script from the ceph
+developers, this was really just a perl hack as they said, but it
+works. Since we had some students doing an internship here to learn
+new things, I got one of the interns to write an ajax'd up version of
+the aggregator.</p>
+
+<p>After a few weeks worth of usage and minor changes, it's a bit more
+ready to share with everyone, the ajax'd up version of the aggregator
+can be found at my
+<a href="https://github.com/jcftang/gitbuilder/tree/develop/contrib/gitbuilder-ajax">github</a>
+account in the develop branch. For fun I updated the main gitbuilder
+cgi scripts to use twitter bootstrap and add a link to the errcache
+file that gitbuilder generates.</p>
+
+<p>We found that with large builds the logs would just swamp out the
+errors and warnings and having access to the errcache helped a lot in
+narrowing down where to look for problems, hence the linking to the
+errcache.</p>
+
+<p>At somepoint it might be worth re-implementing the gitbuilder scripts
+in a single language in a generic way such that it works with other
+DVCS's that have the bisect feature.<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator/">&infin; Permalink</a></p></p>
+]]></content>
+    </entry>
   
     <entry>
       
@@ -306,63 +350,6 @@ usable. This is of course if you are willing to look at the sample
 packages and write <em>makefiles</em>.</p>
 
 <p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">&infin; Permalink</a></p>
-
-]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Using continuous integration systems in a team]]></title>
-<link href="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/"/>
-<updated>2011-12-13T07:37:00+00:00</updated>
-<id>http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team</id>
-
-      <content type="html"><![CDATA[<p>Apart from the obvious unit testing code which could be fun trying to
-convince a team to use. There are things known as 'Continuous
-Integration' processes and servers. The basic idea is to continually
-build and test your product automatically and report on successful and
-failed builds.</p>
-
-<p>I've known about this methodology for long time now but I've never
-bothered to install a CI server since it was always for myself. In the
-past a loop in a shell script running make and or make test usually
-did the trick. Then I discovered gitbuilder which is just a small set
-of scripts for automating the process. Today I have Jenkins installed
-and I'm somewhat looking at buildbot as well.</p>
-
-<p>Jenkins appears to be the most responsive and feature rich of the
-three systems that I have played with. Buildbot looks lightweight and
-scalable.  Though I do miss the git bisect and build on a failure that
-gitbuilder provides.</p>
-
-<p>Having to work with a team that is geographically distributed
-sometimes makes idea exchanges, organising events and development
-difficult. Any tool that I can get my hands on to encourage
-collaborative work and discussion is going to be used.</p>
-
-<p>Automating the build and test process also means that it is possible
-to automate the release process. If all the 'tests' pass then why not
-release it? I will need to look at integrating things with fitnesse
-next. Other benefits from using a CI process or server means that most
-if not all things get automated, this turns into a highly valuable
-source of documentation for incoming developers and
-engineers. Documentation often gets left to the end instead of being
-done on a continual basis as the project progresses.</p>
-
-<p>Hopefully the CI server won't be used to name and shame developers in
-the group, it's there to make sure everything is working as expected.</p>
-
-<p>Now to convince the team that building early and continually is
-actually a good idea! Having somewhat successfully kicked off some
-pairing sessions with various team members is good, but being more
-flexible and professional about what we are building is what I'm
-after.</p>
-
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/">&infin; Permalink</a></p>
 
 ]]></content>
     </entry>

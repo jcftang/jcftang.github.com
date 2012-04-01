@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-03-17T15:29:59+00:00</updated>
+  <updated>2012-04-01T11:47:19+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Gitbuilder aggregator &rarr;]]></title>
+<link href="https://github.com/jcftang/gitbuilder/tree/develop/contrib/gitbuilder-ajax"/>
+<updated>2012-04-01T11:05:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator</id>
+
+      <content type="html"><![CDATA[<p>We use git and <a href="https://github.com/apenwarr/gitbuilder">gitbuilder</a> in
+work for a large number of projects, we also try and test things as
+much as we can. I first noticed that someone had written an aggregator
+for gitbuilder at <a href="http://ceph.newdream.net/gitbuilder.cgi">ceph
+gitbuilders</a>, this seemed
+like a great idea (and it is) except the aggregator at the time didn&#8217;t
+quite work very fast and needed some ajax magic.</p>
+
+<p>I had asked for a copy of the aggregator script from the ceph
+developers, this was really just a perl hack as they said, but it
+works. Since we had some students doing an internship here to learn
+new things, I got one of the interns to write an ajax&#8217;d up version of
+the aggregator.</p>
+
+<p>After a few weeks worth of usage and minor changes, it&#8217;s a bit more
+ready to share with everyone, the ajax&#8217;d up version of the aggregator
+can be found at my
+<a href="https://github.com/jcftang/gitbuilder/tree/develop/contrib/gitbuilder-ajax">github</a>
+account in the develop branch. For fun I updated the main gitbuilder
+cgi scripts to use twitter bootstrap and add a link to the errcache
+file that gitbuilder generates.</p>
+
+<p>We found that with large builds the logs would just swamp out the
+errors and warnings and having access to the errcache helped a lot in
+narrowing down where to look for problems, hence the linking to the
+errcache.</p>
+
+<p>At somepoint it might be worth re-implementing the gitbuilder scripts
+in a single language in a generic way such that it works with other
+DVCS&#8217;s that have the bisect feature.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator/">&infin; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       

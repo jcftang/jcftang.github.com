@@ -5,13 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Planet DRI - a news aggregator for digital humanities and digital preservation projects in Ireland - Jimmy Tang</title>
+  <title>Gitbuilder aggregator - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
 
   
-  <meta name="description" content="This is just a temporary solution till something better or more
-appropriate comes along. It&#8217;s just an ikiwiki news aggregator for
-websites and &hellip;">
+  <meta name="description" content="We use git and gitbuilder in
+work for a large number of projects, we also try and test things as
+much as we can. I first noticed that someone had &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +20,7 @@ websites and &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/blog/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland">
+  <link rel="canonical" href="http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -96,7 +96,7 @@ websites and &hellip;">
   <header>
     <h1 class="entry-title">
 
-<a href="http://www.tchpc.tcd.ie/dri-planet/">Planet DRI - a News Aggregator for Digital Humanities and Digital Preservation Projects in Ireland</a>
+<a href="https://github.com/jcftang/gitbuilder/tree/develop/contrib/gitbuilder-ajax">Gitbuilder Aggregator</a>
 <span class='linklog-marker'>&rarr;</span>
 </h1>
 
@@ -114,29 +114,47 @@ websites and &hellip;">
   
 
 
-<time datetime="2012-03-04T18:38:00+00:00" pubdate data-updated="true">Mar 4<span>th</span>, 2012</time>
+<time datetime="2012-04-01T11:05:00+01:00" pubdate data-updated="true">Apr 1<span>st</span>, 2012</time>
         
          &bull; <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/blog/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/">&infin;</a>
+         &bull; <a rel="bookmark" href="/blog/2012/04/01/gitbuilder-aggregator/">&infin;</a>
       </p>
     
   </header>
 
 
 
-  <div class="entry-content"><p>This is just a temporary solution till something better or more
-appropriate comes along. It&#8217;s just an ikiwiki news aggregator for
-websites and projects which are related to Digital Preservation,
-Digitial Humanities and other related bits and pieces.</p>
+  <div class="entry-content"><p>We use git and <a href="https://github.com/apenwarr/gitbuilder">gitbuilder</a> in
+work for a large number of projects, we also try and test things as
+much as we can. I first noticed that someone had written an aggregator
+for gitbuilder at <a href="http://ceph.newdream.net/gitbuilder.cgi">ceph
+gitbuilders</a>, this seemed
+like a great idea (and it is) except the aggregator at the time didn&#8217;t
+quite work very fast and needed some ajax magic.</p>
 
-<p>It was pretty much setup for myself to keep up to date with all the
-latest happenings. I found myself falling behind in being
-knowledgeable in all things related to <em>Digital Repositories Ireland</em>.</p>
+<p>I had asked for a copy of the aggregator script from the ceph
+developers, this was really just a perl hack as they said, but it
+works. Since we had some students doing an internship here to learn
+new things, I got one of the interns to write an ajax&#8217;d up version of
+the aggregator.</p>
 
-<p>I hope that my team mates will appreciate and contribute to this
-little effort. I don&#8217;t think I&#8217;ve ever come across a Digital
-Humanities and Digital Preservation aggregator before.</p>
+<p>After a few weeks worth of usage and minor changes, it&#8217;s a bit more
+ready to share with everyone, the ajax&#8217;d up version of the aggregator
+can be found at my
+<a href="https://github.com/jcftang/gitbuilder/tree/develop/contrib/gitbuilder-ajax">github</a>
+account in the develop branch. For fun I updated the main gitbuilder
+cgi scripts to use twitter bootstrap and add a link to the errcache
+file that gitbuilder generates.</p>
+
+<p>We found that with large builds the logs would just swamp out the
+errors and warnings and having access to the errcache helped a lot in
+narrowing down where to look for problems, hence the linking to the
+errcache.</p>
+
+<p>At somepoint it might be worth re-implementing the gitbuilder scripts
+in a single language in a generic way such that it works with other
+DVCS&#8217;s that have the bisect feature.</p>
 </div>
 
 
@@ -159,12 +177,12 @@ Humanities and Digital Preservation aggregator before.</p>
   
 
 
-<time datetime="2012-03-04T18:38:00+00:00" pubdate data-updated="true">Mar 4<span>th</span>, 2012</time>
+<time datetime="2012-04-01T11:05:00+01:00" pubdate data-updated="true">Apr 1<span>st</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/dri/'>dri</a>, <a class='category' href='/blog/categories/team/'>team</a>
+    <a class='category' href='/blog/categories/scm/'>scm</a>, <a class='category' href='/blog/categories/team/'>team</a>
   
 </span>
 
@@ -173,7 +191,7 @@ Humanities and Digital Preservation aggregator before.</p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jcftang.github.com/blog/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/" data-via="jcftang" data-counturl="http://jcftang.github.com/blog/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator/" data-via="jcftang" data-counturl="http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -186,10 +204,8 @@ Humanities and Digital Preservation aggregator before.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/02/26/genetic-classification-of-populations-using-supervised-learning/" title="Previous Post: Genetic Classification of Populations Using Supervised Learning">&laquo; Genetic Classification of Populations Using Supervised Learning</a>
+        <a class="basic-alignment left" href="/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/" title="Previous Post: Dogfooding your own project to accelerate development">&laquo; Dogfooding your own project to accelerate development</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/03/08/enabling-latent-semantic-indexing-for-octopress/" title="Next Post: Enabling Latent Semantic Indexing for Octopress">Enabling Latent Semantic Indexing for Octopress &raquo;</a>
       
     </p>
   </footer>
@@ -215,23 +231,23 @@ Humanities and Digital Preservation aggregator before.</p>
   <ul class="posts">
     
       <li class="related">
-        <a href="/blog/2011/10/21/setting-up-my-work-macbook-air/">Setting up my work Macbook Air</a>
-      </li>
-    
-      <li class="related">
-        <a href="/blog/2012/02/19/scientific-linux-6-dot-2-is-out/">Scientific Linux 6.2 is out</a>
-      </li>
-    
-      <li class="related">
-        <a href="/blog/2012/04/01/gitbuilder-aggregator/">Gitbuilder aggregator</a>
-      </li>
-    
-      <li class="related">
         <a href="/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools/">Feeling Disconnected From Modern Software Development Tools</a>
       </li>
     
       <li class="related">
+        <a href="/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions/">The joys of working with a team across multiple institutions</a>
+      </li>
+    
+      <li class="related">
         <a href="/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux isn't the only platform to target when building applications</a>
+      </li>
+    
+      <li class="related">
+        <a href="/blog/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for HPC systems</a>
+      </li>
+    
+      <li class="related">
+        <a href="/blog/2011/12/13/using-continuous-integration-systems-in-a-team/">Using continuous integration systems in a team</a>
       </li>
     
   </ul>
@@ -323,7 +339,7 @@ Humanities and Digital Preservation aggregator before.</p>
 
 <section>
 <h1>QR-Code<abbr title="The word 'QR Code' is a registered trademark of DENSO WAVE INCORPORATED. It applies only for the word 'QR Code', not for image.">&trade;</abbr></h1>
-<a href="http://jcftang.github.com/blog/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/"><img src="http://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=|0&chco=165B94&chl=http://jcftang.github.com/blog/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/" alt="post-qrcode"></a></section>
+<a href="http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator/"><img src="http://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=|0&chco=165B94&chl=http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator/" alt="post-qrcode"></a></section>
 
   
 </aside>
@@ -345,8 +361,8 @@ Humanities and Digital Preservation aggregator before.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/blog/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/';
-        var disqus_url = 'http://jcftang.github.com/blog/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/';
+        var disqus_identifier = 'http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator/';
+        var disqus_url = 'http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator/';
         var disqus_script = 'embed.js';
       
     (function () {
