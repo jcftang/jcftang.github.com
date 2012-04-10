@@ -4,7 +4,7 @@
   <title><![CDATA[Category: team | Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/blog/categories/team/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-04-01T11:47:19+01:00</updated>
+  <updated>2012-04-10T19:21:48+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -12,6 +12,69 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Prototyping and testing systems]]></title>
+<link href="http://jcftang.github.com/blog/2012/04/09/prototyping-and-testing-systems/"/>
+<updated>2012-04-09T11:12:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2012/04/09/prototyping-and-testing-systems</id>
+
+      <content type="html"><![CDATA[<p>One of the issues with with dogfooding your own projects to accelerate
+development might be the lack of control and feedback from the
+specifications and requirements process. To try and mitigate this
+effect, automated testing should be done, that is specification,
+feature and behavioural testing. Call it what you will, but the basic
+idea is to get a common understanding between the stakeholder, project
+owner and developer to understand what is being built and to write
+automated tests collectively to ensure that it is being
+delivered. This might be a narrow view of the whole area, but I'm just
+taking what works for me and using it to deliver the project.</p>
+
+<p>There are <em>many</em> specification/feature/behavioural testing tools out
+there for almost language that you can think of, so use what works for
+you and your team. The testing process not only ensures that the
+prototype is working the way that you intend, but it is also a process
+where documentation can also be written at the sametime. This
+documentation could be used as an initial proposal to the stakeholder
+to put forward what you think they want if there are no clear
+specifications or requirements in place.</p>
+
+<p>The interns and I have been working on a small prototype system
+for a bigger project and the benefits of writing tests are beginning
+to show. It has become apparent to the interns that have been working
+on this project that <em>testing is a good thing</em>, especially if it can
+be automated. We're not quite doing TDD or BDD, but it's something
+that is in between, we're getting there with a tiered set of tests.</p>
+
+<p>We're finding that (probably) about 50% of the time of the team is
+spent on refactoring, writing tests and documentation. Testing
+combined with the automated builder/tester, the team is writing code
+smarter and better instead of just churning out masses of code which
+isn't well tested or documented. Given the choice and based on
+experience I would prefer to have code that is tested and
+documentated, rather than lots of cool half-working and half-tested
+features.</p>
+
+<p>The testing process has been a fantastic way for me to steer the
+interns, given how little expertise I have with javascript. The tests
+let me learn how the interns have been putting the prototype together,
+but it also lets me fuzz up the tests to make sure things are working
+and to also write new tests to communicate what I think is needed when
+appropriate. We've somewhat combined minimal QA into the development
+and testing process.</p>
+
+<p>In the end we hope to have a functional prototype system which does
+one thing (one set of workflows) well, have lots of documentation,
+have tests to back it up and prove that it works. While having an
+implementation is great for the potential stakeholder, having
+documentation and tests puts us in an even stronger position.<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/04/09/prototyping-and-testing-systems/">&infin; Permalink</a></p></p>
+]]></content>
+    </entry>
   
     <entry>
       
@@ -180,54 +243,6 @@ isn't anything too special that you need to do to succeed at
 communicating.</p>
 
 <p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/">&infin; Permalink</a></p>
-
-]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Waterfall or Agile methods for delivering a project]]></title>
-<link href="http://jcftang.github.com/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/"/>
-<updated>2012-01-18T08:41:00+00:00</updated>
-<id>http://jcftang.github.com/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project</id>
-
-      <content type="html"><![CDATA[<p>Waterfall methods seem to work well for smallish projects that are
-well defined and well understood. At least from my own experiences of
-putting things together, but realistically to think of all possible
-scenarios and to write up all the possible solutions to the problem
-seems a little bit wacky. To also assume that the requirements process
-has captured requirements that won't change close the end of the
-project is also a little unreasonable or unrealistic, this would be
-especially true on a project that is planned to run for a few years
-with fairly substantial goals in an ever changing research and
-development environment.</p>
-
-<p>Waterfall styled methods just cause problems with planning and
-adjusting the process to the needs of the stakeholder (no matter what
-the stakeholder thinks they need, they will change their mind). Again
-this is especially true for long running projects.</p>
-
-<p>So why not use agile methods? Simply because there is little or no
-plan and it requires real collaboration, delegation of tasks and
-trust to work towards a common goal. People get afraid perhaps?</p>
-
-<p>The trick is communication and trying to introduce agile methods
-slowly and steadily into the system. I've been slowly introducing the
-idea of pairings, sprints and elements of scrum with kanban (yes,
-that's lots of buzz words there already). Getting people to agree to
-talk is probably the hardest thing to do, and it's even harder to try
-and get everyone on the same page without ego's getting in the way.</p>
-
-<p>It's paying off a little for now, the team members are beginning to at
-least talk and exchange ideas. In my world that is a huge step
-already. Next is it try getting things done by prioritising tasks and
-resources.</p>
-
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/">&infin; Permalink</a></p>
 
 ]]></content>
     </entry>

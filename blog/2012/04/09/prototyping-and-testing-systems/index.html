@@ -5,13 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Gitbuilder aggregator - Jimmy Tang</title>
+  <title>Prototyping and testing systems - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
 
   
-  <meta name="description" content="We use git and gitbuilder in
-work for a large number of projects, we also try and test things as
-much as we can. I first noticed that someone had &hellip;">
+  <meta name="description" content="One of the issues with with dogfooding your own projects to accelerate
+development might be the lack of control and feedback from the
+specifications &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +20,7 @@ much as we can. I first noticed that someone had &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator">
+  <link rel="canonical" href="http://jcftang.github.com/blog/2012/04/09/prototyping-and-testing-systems">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -83,21 +83,19 @@ much as we can. I first noticed that someone had &hellip;">
 
 
 
-  
 
 
 
 
 
 
-
-<article class="hentry" role="article" data-linklog>
+<article class="hentry" role="article" >
   
   <header>
     <h1 class="entry-title">
 
-<a href="https://github.com/jcftang/gitbuilder/tree/develop/contrib/gitbuilder-ajax">Gitbuilder Aggregator</a>
-<span class='linklog-marker'>&rarr;</span>
+Prototyping and Testing Systems
+
 </h1>
 
     
@@ -114,47 +112,66 @@ much as we can. I first noticed that someone had &hellip;">
   
 
 
-<time datetime="2012-04-01T11:05:00+01:00" pubdate data-updated="true">Apr 1<span>st</span>, 2012</time>
+<time datetime="2012-04-09T11:12:00+01:00" pubdate data-updated="true">Apr 9<span>th</span>, 2012</time>
         
          &bull; <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/blog/2012/04/01/gitbuilder-aggregator/">&infin;</a>
+         &bull; <a rel="bookmark" href="/blog/2012/04/09/prototyping-and-testing-systems/">&infin;</a>
       </p>
     
   </header>
 
 
 
-  <div class="entry-content"><p>We use git and <a href="https://github.com/apenwarr/gitbuilder">gitbuilder</a> in
-work for a large number of projects, we also try and test things as
-much as we can. I first noticed that someone had written an aggregator
-for gitbuilder at <a href="http://ceph.newdream.net/gitbuilder.cgi">ceph
-gitbuilders</a>, this seemed
-like a great idea (and it is) except the aggregator at the time didn&#8217;t
-quite work very fast and needed some ajax magic.</p>
+  <div class="entry-content"><p>One of the issues with with dogfooding your own projects to accelerate
+development might be the lack of control and feedback from the
+specifications and requirements process. To try and mitigate this
+effect, automated testing should be done, that is specification,
+feature and behavioural testing. Call it what you will, but the basic
+idea is to get a common understanding between the stakeholder, project
+owner and developer to understand what is being built and to write
+automated tests collectively to ensure that it is being
+delivered. This might be a narrow view of the whole area, but I&#8217;m just
+taking what works for me and using it to deliver the project.</p>
 
-<p>I had asked for a copy of the aggregator script from the ceph
-developers, this was really just a perl hack as they said, but it
-works. Since we had some students doing an internship here to learn
-new things, I got one of the interns to write an ajax&#8217;d up version of
-the aggregator.</p>
+<p>There are <em>many</em> specification/feature/behavioural testing tools out
+there for almost language that you can think of, so use what works for
+you and your team. The testing process not only ensures that the
+prototype is working the way that you intend, but it is also a process
+where documentation can also be written at the sametime. This
+documentation could be used as an initial proposal to the stakeholder
+to put forward what you think they want if there are no clear
+specifications or requirements in place.</p>
 
-<p>After a few weeks worth of usage and minor changes, it&#8217;s a bit more
-ready to share with everyone, the ajax&#8217;d up version of the aggregator
-can be found at my
-<a href="https://github.com/jcftang/gitbuilder/tree/develop/contrib/gitbuilder-ajax">github</a>
-account in the develop branch. For fun I updated the main gitbuilder
-cgi scripts to use twitter bootstrap and add a link to the errcache
-file that gitbuilder generates.</p>
+<p>The interns and I have been working on a small prototype system
+for a bigger project and the benefits of writing tests are beginning
+to show. It has become apparent to the interns that have been working
+on this project that <em>testing is a good thing</em>, especially if it can
+be automated. We&#8217;re not quite doing TDD or BDD, but it&#8217;s something
+that is in between, we&#8217;re getting there with a tiered set of tests.</p>
 
-<p>We found that with large builds the logs would just swamp out the
-errors and warnings and having access to the errcache helped a lot in
-narrowing down where to look for problems, hence the linking to the
-errcache.</p>
+<p>We&#8217;re finding that (probably) about 50% of the time of the team is
+spent on refactoring, writing tests and documentation. Testing
+combined with the automated builder/tester, the team is writing code
+smarter and better instead of just churning out masses of code which
+isn&#8217;t well tested or documented. Given the choice and based on
+experience I would prefer to have code that is tested and
+documentated, rather than lots of cool half-working and half-tested
+features.</p>
 
-<p>At somepoint it might be worth re-implementing the gitbuilder scripts
-in a single language in a generic way such that it works with other
-DVCS&#8217;s that have the bisect feature.</p>
+<p>The testing process has been a fantastic way for me to steer the
+interns, given how little expertise I have with javascript. The tests
+let me learn how the interns have been putting the prototype together,
+but it also lets me fuzz up the tests to make sure things are working
+and to also write new tests to communicate what I think is needed when
+appropriate. We&#8217;ve somewhat combined minimal QA into the development
+and testing process.</p>
+
+<p>In the end we hope to have a functional prototype system which does
+one thing (one set of workflows) well, have lots of documentation,
+have tests to back it up and prove that it works. While having an
+implementation is great for the potential stakeholder, having
+documentation and tests puts us in an even stronger position.</p>
 </div>
 
 
@@ -177,7 +194,7 @@ DVCS&#8217;s that have the bisect feature.</p>
   
 
 
-<time datetime="2012-04-01T11:05:00+01:00" pubdate data-updated="true">Apr 1<span>st</span>, 2012</time>
+<time datetime="2012-04-09T11:12:00+01:00" pubdate data-updated="true">Apr 9<span>th</span>, 2012</time>
       
 
 <span class="categories">
@@ -191,7 +208,7 @@ DVCS&#8217;s that have the bisect feature.</p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator/" data-via="jcftang" data-counturl="http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jcftang.github.com/blog/2012/04/09/prototyping-and-testing-systems/" data-via="jcftang" data-counturl="http://jcftang.github.com/blog/2012/04/09/prototyping-and-testing-systems/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -204,10 +221,8 @@ DVCS&#8217;s that have the bisect feature.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/" title="Previous Post: Dogfooding your own project to accelerate development">&laquo; Dogfooding your own project to accelerate development</a>
+        <a class="basic-alignment left" href="/blog/2012/04/01/gitbuilder-aggregator/" title="Previous Post: Gitbuilder aggregator">&laquo; Gitbuilder aggregator</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/04/09/prototyping-and-testing-systems/" title="Next Post: Prototyping and testing systems">Prototyping and testing systems &raquo;</a>
       
     </p>
   </footer>
@@ -233,23 +248,23 @@ DVCS&#8217;s that have the bisect feature.</p>
   <ul class="posts">
     
       <li class="related">
-        <a href="/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools/">Feeling Disconnected From Modern Software Development Tools</a>
-      </li>
-    
-      <li class="related">
-        <a href="/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions/">The joys of working with a team across multiple institutions</a>
-      </li>
-    
-      <li class="related">
-        <a href="/blog/2012/04/09/prototyping-and-testing-systems/">Prototyping and testing systems</a>
-      </li>
-    
-      <li class="related">
         <a href="/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux isn't the only platform to target when building applications</a>
       </li>
     
       <li class="related">
+        <a href="/blog/2011/12/13/using-continuous-integration-systems-in-a-team/">Using continuous integration systems in a team</a>
+      </li>
+    
+      <li class="related">
         <a href="/blog/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for HPC systems</a>
+      </li>
+    
+      <li class="related">
+        <a href="/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/">Things not to say and to do in a project meeting</a>
+      </li>
+    
+      <li class="related">
+        <a href="/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools/">Feeling Disconnected From Modern Software Development Tools</a>
       </li>
     
   </ul>
@@ -341,7 +356,7 @@ DVCS&#8217;s that have the bisect feature.</p>
 
 <section>
 <h1>QR-Code<abbr title="The word 'QR Code' is a registered trademark of DENSO WAVE INCORPORATED. It applies only for the word 'QR Code', not for image.">&trade;</abbr></h1>
-<a href="http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator/"><img src="http://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=|0&chco=165B94&chl=http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator/" alt="post-qrcode"></a></section>
+<a href="http://jcftang.github.com/blog/2012/04/09/prototyping-and-testing-systems/"><img src="http://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=|0&chco=165B94&chl=http://jcftang.github.com/blog/2012/04/09/prototyping-and-testing-systems/" alt="post-qrcode"></a></section>
 
   
 </aside>
@@ -363,8 +378,8 @@ DVCS&#8217;s that have the bisect feature.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator/';
-        var disqus_url = 'http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator/';
+        var disqus_identifier = 'http://jcftang.github.com/blog/2012/04/09/prototyping-and-testing-systems/';
+        var disqus_url = 'http://jcftang.github.com/blog/2012/04/09/prototyping-and-testing-systems/';
         var disqus_script = 'embed.js';
       
     (function () {
