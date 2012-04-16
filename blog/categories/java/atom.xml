@@ -4,7 +4,7 @@
   <title><![CDATA[Category: java | Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-04-15T16:58:46+01:00</updated>
+  <updated>2012-04-16T22:28:55+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Arquillian 1.0.0.Final released! Ready for GlassFish and WebLogic! Death to all bugs! &rarr;]]></title>
+<link href="http://www.javacodegeeks.com/2012/04/arquillian-100final-released-ready-for.html"/>
+<updated>2012-04-16T09:25:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2012/04/16/arquillian-1-dot-0-0-dot-final-released-ready-for-glassfish-and-weblogic-death-to-all-bugs</id>
+
+      <content type="html"><![CDATA[<p>Looks like an interesting and useful tool, must take note of this tool
+for later use to kill all bugs that are found in the projects that we
+work on, well java ones at least.</p>
+
+<p>Anything to help squash bugs is good!</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/04/16/arquillian-1-dot-0-0-dot-final-released-ready-for-glassfish-and-weblogic-death-to-all-bugs/">&infin; Permalink</a></p>
+
+]]></content>
+    </entry>
   
     <entry>
       
