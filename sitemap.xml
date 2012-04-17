@@ -105,12 +105,16 @@
         <lastmod>2012-04-16T22:28:08+01:00</lastmod>
     </url>
     <url>
+        <loc>http://jcftang.github.com/blog/2012/04/17/mosh-an-alternative-to-ssh/</loc>
+        <lastmod>2012-04-17T08:48:08+01:00</lastmod>
+    </url>
+    <url>
         <loc>http://jcftang.github.com/about/</loc>
         <lastmod>2012-04-15T16:51:41+01:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/blog/archives/</loc>
-        <lastmod>2012-04-16T22:28:08+01:00</lastmod>
+        <lastmod>2012-04-17T08:48:08+01:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/blog/categories/</loc>
@@ -118,6 +122,6 @@
     </url>
     <url>
         <loc>http://jcftang.github.com/</loc>
-        <lastmod>2012-04-16T22:28:08+01:00</lastmod>
+        <lastmod>2012-04-17T08:48:08+01:00</lastmod>
     </url>
 </urlset>

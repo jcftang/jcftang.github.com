@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Red Hat Enterprise Linux Life Cycle Extended to Ten Years - Jimmy Tang</title>
+  <title>MOSH - An alternative to SSH - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
 
   
-  <meta name="description" content="It&#8217;s all over the internet that RHEL6 and newer releases will have a
-life cycle of 10yrs. This is pretty good news for projects that are &hellip;">
+  <meta name="description" content="This tool hasn&#8217;t been around for too long, but long enough to make it
+into quite a few distros. It looks like it&#8217;s a good alternative to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@ life cycle of 10yrs. This is pretty good news for projects that are &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/blog/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years">
+  <link rel="canonical" href="http://jcftang.github.com/blog/2012/04/17/mosh-an-alternative-to-ssh">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -95,7 +95,7 @@ life cycle of 10yrs. This is pretty good news for projects that are &hellip;">
   <header>
     <h1 class="entry-title">
 
-<a href="https://www.redhat.com/archives/rhelv5-announce/2012-January/msg00000.html">Red Hat Enterprise Linux Life Cycle Extended to Ten Years</a>
+<a href="http://mosh.mit.edu/">MOSH - an Alternative to SSH</a>
 <span class='linklog-marker'>&rarr;</span>
 </h1>
 
@@ -113,37 +113,33 @@ life cycle of 10yrs. This is pretty good news for projects that are &hellip;">
   
 
 
-<time datetime="2012-02-09T08:16:00+00:00" pubdate data-updated="true">Feb 9<span>th</span>, 2012</time>
+<time datetime="2012-04-17T08:31:00+01:00" pubdate data-updated="true">Apr 17<span>th</span>, 2012</time>
         
          &bull; <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/blog/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years/">&infin;</a>
+         &bull; <a rel="bookmark" href="/blog/2012/04/17/mosh-an-alternative-to-ssh/">&infin;</a>
       </p>
     
   </header>
 
 
 
-  <div class="entry-content"><p>It&#8217;s all over the internet that RHEL6 and newer releases will have a
-life cycle of 10yrs. This is pretty good news for projects that are
-deploying systems that have a lifetime of 5yrs or more. Namely Digital
-Preservation projects, not having to worry about migration between
-point releases of an operating system platform reduces time and costs.</p>
+  <div class="entry-content"><p>This tool hasn&#8217;t been around for too long, but long enough to make it
+into quite a few distros. It looks like it&#8217;s a good alternative to
+<em>autossh</em> and <em>tmux</em> which I have been using for the past few
+years. Like many new tools like this, if it&#8217;s not around everywhere
+it&#8217;s not as useful as it could be.</p>
 
-<p>I&#8217;m now more likely to target the systems we develop in work towards a
-RHEL system (or a RHEL like clone).</p>
+<p>The only minor criticism of the application is that the <em>mosh</em> command
+itself is written in perl, it would be nicer if the wrapper command
+would be written in C/C++ like the rest of the application. It would
+certainly make it more <em>portable</em>. I guess I should shut up or write
+my own mosh wrapper replacement.</p>
 
-<p>Another side effect of this long term support is that it will probably
-make life easier for those who have lots of virtual machines running
-RHEL. Longer support means less issues with continually migrating
-between point releases. From a practical point of view of a
-operational sysadmin, this is great. From a developers point of view,
-it&#8217;s also not bad either, software written now (assuming the
-requirements haven&#8217;t changed) will probably work long into the future.</p>
-
-<p>Note: I am not a RHEL (Fedora) fanboy, I used to sysadmin a few
-hundred RHEL (scientific linux) based systems. Before that, I used to
-sysadmin a few hundred Debian based systems.</p>
+<p>Other than that, I&#8217;ve got it installed on one or two machines and it
+seems nice enough so far. I now need to test it out in the field on a
+bad connection when I&#8217;m away at a team meeting. I&#8217;m still not entirely
+sure of how good or bad it is in terms of security compared to <em>SSH</em>.</p>
 </div>
 
 
@@ -166,21 +162,15 @@ sysadmin a few hundred Debian based systems.</p>
   
 
 
-<time datetime="2012-02-09T08:16:00+00:00" pubdate data-updated="true">Feb 9<span>th</span>, 2012</time>
+<time datetime="2012-04-17T08:31:00+01:00" pubdate data-updated="true">Apr 17<span>th</span>, 2012</time>
       
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/linux/'>linux</a>
-  
-</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jcftang.github.com/blog/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years/" data-via="jcftang" data-counturl="http://jcftang.github.com/blog/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jcftang.github.com/blog/2012/04/17/mosh-an-alternative-to-ssh/" data-via="jcftang" data-counturl="http://jcftang.github.com/blog/2012/04/17/mosh-an-alternative-to-ssh/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -193,10 +183,8 @@ sysadmin a few hundred Debian based systems.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/" title="Previous Post: Waterfall or Agile methods for delivering a project">&laquo; Waterfall or Agile methods for delivering a project</a>
+        <a class="basic-alignment left" href="/blog/2012/04/16/arquillian-1-dot-0-0-dot-final-released-ready-for-glassfish-and-weblogic-death-to-all-bugs/" title="Previous Post: Arquillian 1.0.0.Final released! Ready for GlassFish and WebLogic! Death to all bugs!">&laquo; Arquillian 1.0.0.Final released! Ready for GlassFish and WebLogic! Death to all bugs!</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/" title="Next Post: cports for building applications and libraries for HPC systems">cports for building applications and libraries for HPC systems &raquo;</a>
       
     </p>
   </footer>
@@ -222,7 +210,15 @@ sysadmin a few hundred Debian based systems.</p>
   <ul class="posts">
     
       <li class="related">
+        <a href="/blog/2012/02/19/rasberry-pi-what-i-would-use-it-for/">Rasberry Pi - what I would use it for?</a>
+      </li>
+    
+      <li class="related">
         <a href="/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux isn't the only platform to target when building applications</a>
+      </li>
+    
+      <li class="related">
+        <a href="/blog/2012/04/09/prototyping-and-testing-systems/">Prototyping and testing systems</a>
       </li>
     
       <li class="related">
@@ -230,15 +226,7 @@ sysadmin a few hundred Debian based systems.</p>
       </li>
     
       <li class="related">
-        <a href="/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/">Dogfooding your own project to accelerate development</a>
-      </li>
-    
-      <li class="related">
         <a href="/blog/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for HPC systems</a>
-      </li>
-    
-      <li class="related">
-        <a href="/blog/2012/04/09/prototyping-and-testing-systems/">Prototyping and testing systems</a>
       </li>
     
   </ul>
@@ -330,7 +318,7 @@ sysadmin a few hundred Debian based systems.</p>
 
 <section>
 <h1>QR-Code<abbr title="The word 'QR Code' is a registered trademark of DENSO WAVE INCORPORATED. It applies only for the word 'QR Code', not for image.">&trade;</abbr></h1>
-<a href="http://jcftang.github.com/blog/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years/"><img src="http://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=|0&chco=165B94&chl=http://jcftang.github.com/blog/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years/" alt="post-qrcode"></a></section>
+<a href="http://jcftang.github.com/blog/2012/04/17/mosh-an-alternative-to-ssh/"><img src="http://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=|0&chco=165B94&chl=http://jcftang.github.com/blog/2012/04/17/mosh-an-alternative-to-ssh/" alt="post-qrcode"></a></section>
 
   
 </aside>
@@ -352,8 +340,8 @@ sysadmin a few hundred Debian based systems.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/blog/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years/';
-        var disqus_url = 'http://jcftang.github.com/blog/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years/';
+        var disqus_identifier = 'http://jcftang.github.com/blog/2012/04/17/mosh-an-alternative-to-ssh/';
+        var disqus_url = 'http://jcftang.github.com/blog/2012/04/17/mosh-an-alternative-to-ssh/';
         var disqus_script = 'embed.js';
       
     (function () {
