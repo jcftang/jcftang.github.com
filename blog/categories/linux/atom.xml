@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: linux | Jimmy Tang]]></title>
+  <link href="http://jcftang.github.com/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://jcftang.github.com/"/>
+  <updated>2012-04-24T17:46:18+01:00</updated>
+  <id>http://jcftang.github.com/</id>
+  <author>
+    <name><![CDATA[Jimmy Tang]]></name>
+    <email><![CDATA[jcftang@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[git rerere for long lived feature branches &rarr;]]></title>
+<link href="http://progit.org/2010/03/08/rerere.html"/>
+<updated>2012-03-11T11:45:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/03/11/git-rerere-for-long-lived-feature-branches</id>
+
+      <content type="html"><![CDATA[<p>I turned this feature on for a few of my git repos but I had
+completely forgotten about it. As far as I recall the feature has been
+around for a few years now. It can be turned on globally by doing</p>
+
+<pre><code>git config --global rerere.enabled 1
+</code></pre>
+
+<p>It pretty much automates the resolution of conflicts in long lived
+branches. I've been lazy recently and I have just doing merges instead
+rebasing, which lead me to re-discover <em>git rerere</em>.</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/03/11/git-rerere-for-long-lived-feature-branches/">&infin; Permalink</a></p>
+
+]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Enabling Latent Semantic Indexing for Octopress]]></title>
+<link href="http://jcftang.github.com/blog/2012/03/08/enabling-latent-semantic-indexing-for-octopress/"/>
+<updated>2012-03-08T20:02:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/03/08/enabling-latent-semantic-indexing-for-octopress</id>
+
+      <content type="html"><![CDATA[<p>For those that care about having related posts on their <a href="">Octopress</a>
+blog. It's actually quite easy to turn it on, it's nice to have and
+useful. But it's not enabled by default in Octopress.</p>
+
+<p>This feature already exists in jekyll, enabling this feature in
+Octopress is a trival task.</p>
+
+<p>Firstly add this to your <code>_config.yml</code> file</p>
+
+<pre><code>lsi: true
+</code></pre>
+
+<p>Then create a file such as <code>source/_includes/custom/asides/related.html</code> with the following
+content, add it to one of your asides in <code>_config.yml</code></p>
+
+<p></p>
+
+<pre><code>&lt;section&gt;
+&lt;h1&gt;Related Posts&lt;/h1&gt;
+&lt;ul class="posts"&gt;
+    {% for post in site.related_posts limit:5 %}
+    &lt;li class="related"&gt;
+        &lt;a href="{{ root_url }}{{ post.url }}"&gt;{{ post.title }}&lt;/a&gt;
+    &lt;/li&gt;
+    {% endfor %}
+    &lt;/ul&gt;
+&lt;/section&gt;
+</code></pre>
+
+<p></p>
+
+<p>It is possible to style the list, but in the above I have chosen to
+keep the same style as the recent posts.</p>
+
+<h2>Probable issues with enabling LSI</h2>
+
+<p>There are some issues with enabling LSI in jekyll/octopress, the
+primary issue will be performance. The default implementation will be
+slow if you have lots of posts to classify. It would be recommended
+that rb-gsl be installed to accelerate the classification process.</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/03/08/enabling-latent-semantic-indexing-for-octopress/">&infin; Permalink</a></p>
+
+]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Scientific Linux 6.2 is out &rarr;]]></title>
+<link href="http://www.scientificlinux.org/distributions/6x/62/"/>
+<updated>2012-02-19T18:00:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/02/19/scientific-linux-6-dot-2-is-out</id>
+
+      <content type="html"><![CDATA[<p>SL6.2 has been out for a few days now, I haven't had a chance to
+really take a look at it, since the more recent SL6 installs I
+maintain tend to be tracking the 6x releases. Hopefully SL will try
+and keep inline with the upstreams support schedule.</p>
+
+<p>I've a personal preference for deploying SL over CentOS (or any other
+recompiles of RHEL). SL tends to be a bit more polished in terms of
+not breaking older installs, i.e. the upstream doesn't move point
+releases around as CentOS does, SL does not force the end user to run
+the latest stable or continually upgrade to the latest point release
+to get updates (due to the weird convention CentOS seems to have with
+their archives).</p>
+
+<p>It's out, I need to look at it again, especially since ZFS is getting
+closer to being ready for a bit more general usage on the server side
+and the project that I am working will be needing some machines to be
+installed and setup soon.</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/19/scientific-linux-6-dot-2-is-out/">&infin; Permalink</a></p>
+
+]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Rasberry Pi - what I would use it for? &rarr;]]></title>
+<link href="http://www.raspberrypi.org/"/>
+<updated>2012-02-19T14:46:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/02/19/rasberry-pi-what-i-would-use-it-for</id>
+
+      <content type="html"><![CDATA[<p>At the time of writing it seems that the Raspberry Pi site is down,
+probably suffering from a slashdot effect. I would imagine almost
+every nerd, sheevaplug developer, OLPC developer, DIY'ers who want to
+build their own home media centres are looking to get a Raspberry Pi
+right now.</p>
+
+<p>So what would I use one of these mini-computers for? I can think up a
+range of cool applications for this device, assuming I can order a few
+of these to play with. I've got ideas such as:</p>
+
+<ul>
+<li>A Tahoe-LAFS storage node, I could attach a few HDD's to one of these
+devices and run Tahoe-LAFS on it, these computers are cheap enough
+and have a low enough power consumption that I could just have them
+on all the time.</li>
+<li>A Babeld node, I could have a few of these devices dotted around my
+house/apartment to build a mesh network.</li>
+<li>A portable computer, not quite a tablet PC with a screen, but it has
+enough connectivity to wire it up to a modern monitor or a TV.</li>
+<li>A penetration testing device, just wire it up with a few DC
+batteries, plug in a wireless card, wrap it up in a water proof
+package. Power on, and see how far you can throw it at your target,
+I can see endless possibilities for this device for pen-testing.</li>
+</ul>
+
+
+<p>I wonder if the device will ever be able to be powered via the USB
+port or the the ethernet port. I can see some interesting uses for
+this device in data centres for monitoring the network, power
+consumption and a host of other things.</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/19/rasberry-pi-what-i-would-use-it-for/">&infin; Permalink</a></p>
+
+]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Why Linux isn't the only platform to target when building applications]]></title>
+<link href="http://jcftang.github.com/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/"/>
+<updated>2012-02-16T09:33:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications</id>
+
+      <content type="html"><![CDATA[<p>Why would one want to target other platforms when building applications
+on the server side?</p>
+
+<p>This came out of a conversation with the ex-CTO of Creme software (he
+is also a friend of mine), the conversation started out with why I
+like to use Macs and OSX as my laptop or workstation. I've been a long
+time Linux user of pretty much most of the major distributions ranging
+from RHEL, Debian/Ubuntu, Gentoo, ArchLinux as well as a number of
+other derivatives, not to mention other systems like the BSD's which I
+have a soft spot for.</p>
+
+<p>I interchange the terms Linux and Distros quite a bit in this post.</p>
+
+<p>Some of the things that didn't like with the Linux's was that not all
+my hardware would be supported all the time, the distro's sometimes
+think that it's a good idea to completely change how lowlevel systems
+work in favour of <em>what's hot right now</em>, sometimes the lack of long
+term support for security updates (not package updates to fix security
+problems) does make it more difficult to plan and deploy. The
+perceived flexibility sometimes causes headaches with migration plans
+and maintanence.</p>
+
+<p>Of course there are things that I like, the access to the source code
+and packaging to fix and redeploy packages. The stability and
+reliability that can be achieved is attractive if everything is
+automated and planned out (though too much automation can be bad too).</p>
+
+<p>To get back to the original point of why you wouldn't want to target
+Linux specifically when building applications? Unless you have a
+strong motivating reason to write code that <em>specifically</em> requires a
+feature of Linux (or any other operating system), then you really
+ought to be writing code that adheres to at least some POSIX or cross
+platform standard, and pick libraries that are known to have good
+cross platform compatibility. There is nothing to gain from writing
+platform specific codes in the long run, the platform might hide
+issues from the developer if it is too clever. Linux or more
+specifically the distros might change various behaviour of the
+underlying system, and if your code is tied down to particular
+features of the underlying system then you will have lots of fun
+migrating.</p>
+
+<p>It's just bad practice to rely on system specific behaviour which
+isn't portable (or maintainable) going forward in a project. To
+mitigate some of this, one would want to at least try to use a
+continuous build systems such as <em>gitbuilder</em>, <em>buildbot</em> or <em>jenkins</em>
+on a bunch of <strong>different</strong> architectures and platforms. This will
+reveal portability issues and more often than not, subtle bugs in your
+code which you probably didn't see as a result of your development
+system being too smart for you!</p>
+
+<p>There isn't much of an excuse not to do continuous builds and testings
+across different Linux, BSD and Solaris distributions these
+days. Diskspace and compute power is cheap, there are free and
+opensource virtualisation technologies out there to provide you with a
+means to run different distributions for testing on a single
+machine. The problem will be the upfront manpower needed to setup such
+a system.</p>
+
+<p>In the long run targetting at least two platforms will make your code
+base far more portable and hopefully more maintainable as you will end
+up making sure you write code once that runs on many systems with
+minimal changes needed when a new platform arises.</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">&infin; Permalink</a></p>
+
+]]></content>
+    </entry>
+  
+</feed>
+

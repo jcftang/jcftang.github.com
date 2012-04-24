@@ -4,7 +4,7 @@
   <title><![CDATA[Category: team | Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/blog/categories/team/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-01-16T16:43:08+00:00</updated>
+  <updated>2012-04-24T17:46:18+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -13,84 +13,239 @@
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
-  <entry>
-    <title type="html"><![CDATA[Using continuous integration systems in a team]]></title>
-    <link href="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/"/>
-    <updated>2011-12-13T07:37:00+00:00</updated>
-    <id>http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team</id>
-    <content type="html"><![CDATA[<p>Apart from the obvious unit testing code which could be fun trying to
-convince a team to use. There are things known as 'Continuous
-Integration' processes and servers. The basic idea is to continually
-build and test your product automatically and report on successful and
-failed builds.</p>
+    <entry>
+      
 
-<p>I've known about this methodology for long time now but I've never
-bothered to install a CI server since it was always for myself. In the
-past a loop in a shell script running make and or make test usually
-did the trick. Then I discovered gitbuilder which is just a small set
-of scripts for automating the process. Today I have Jenkins installed
-and I'm somewhat looking at buildbot as well.</p>
 
-<p>Jenkins appears to be the most responsive and feature rich of the
-three systems that I have played with. Buildbot looks lightweight and
-scalable.  Though I do miss the git bisect and build on a failure that
-gitbuilder provides.</p>
 
-<p>Having to work with a team that is geographically distributed
-sometimes makes idea exchanges, organising events and development
-difficult. Any tool that I can get my hands on to encourage
-collaborative work and discussion is going to be used.</p>
 
-<p>Automating the build and test process also means that it is possible
-to automate the release process. If all the 'tests' pass then why not
-release it? I will need to look at integrating things with fitnesse
-next. Other benefits from using a CI process or server means that most
-if not all things get automated, this turns into a highly valuable
-source of documentation for incoming developers and
-engineers. Documentation often gets left to the end instead of being
-done on a continual basis as the project progresses.</p>
+<title type="html"><![CDATA[Prototyping and testing systems]]></title>
+<link href="http://jcftang.github.com/blog/2012/04/09/prototyping-and-testing-systems/"/>
+<updated>2012-04-09T11:12:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2012/04/09/prototyping-and-testing-systems</id>
 
-<p>Hopefully the CI server won't be used to name and shame developers in
-the group, it's there to make sure everything is working as expected.</p>
+      <content type="html"><![CDATA[<p>One of the issues with with dogfooding your own projects to accelerate
+development might be the lack of control and feedback from the
+specifications and requirements process. To try and mitigate this
+effect, automated testing should be done, that is specification,
+feature and behavioural testing. Call it what you will, but the basic
+idea is to get a common understanding between the stakeholder, project
+owner and developer to understand what is being built and to write
+automated tests collectively to ensure that it is being
+delivered. This might be a narrow view of the whole area, but I'm just
+taking what works for me and using it to deliver the project.</p>
 
-<p>Now to convince the team that building early and continually is
-actually a good idea! Having somewhat successfully kicked off some
-pairing sessions with various team members is good, but being more
-flexible and professional about what we are building is what I'm
-after.</p>
+<p>There are <em>many</em> specification/feature/behavioural testing tools out
+there for almost language that you can think of, so use what works for
+you and your team. The testing process not only ensures that the
+prototype is working the way that you intend, but it is also a process
+where documentation can also be written at the sametime. This
+documentation could be used as an initial proposal to the stakeholder
+to put forward what you think they want if there are no clear
+specifications or requirements in place.</p>
+
+<p>The interns and I have been working on a small prototype system
+for a bigger project and the benefits of writing tests are beginning
+to show. It has become apparent to the interns that have been working
+on this project that <em>testing is a good thing</em>, especially if it can
+be automated. We're not quite doing TDD or BDD, but it's something
+that is in between, we're getting there with a tiered set of tests.</p>
+
+<p>We're finding that (probably) about 50% of the time of the team is
+spent on refactoring, writing tests and documentation. Testing
+combined with the automated builder/tester, the team is writing code
+smarter and better instead of just churning out masses of code which
+isn't well tested or documented. Given the choice and based on
+experience I would prefer to have code that is tested and
+documentated, rather than lots of cool half-working and half-tested
+features.</p>
+
+<p>The testing process has been a fantastic way for me to steer the
+interns, given how little expertise I have with javascript. The tests
+let me learn how the interns have been putting the prototype together,
+but it also lets me fuzz up the tests to make sure things are working
+and to also write new tests to communicate what I think is needed when
+appropriate. We've somewhat combined minimal QA into the development
+and testing process.</p>
+
+<p>In the end we hope to have a functional prototype system which does
+one thing (one set of workflows) well, have lots of documentation,
+have tests to back it up and prove that it works. While having an
+implementation is great for the potential stakeholder, having
+documentation and tests puts us in an even stronger position.<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/04/09/prototyping-and-testing-systems/">&infin; Permalink</a></p></p>
 ]]></content>
-  </entry>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[The joys of working with a team across multiple institutions]]></title>
-    <link href="http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions/"/>
-    <updated>2011-10-19T21:34:00+01:00</updated>
-    <id>http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions</id>
-    <content type="html"><![CDATA[<p>Having worked in a number of cross institutional projects in the past
-has lead me to always be weary about how to interact with
-people. Often it's the lack of co-ordination and communication that
-seems to be the killer. Parts of the team would seem to not know what
-other parts of the team are doing and thus either deviate from the
-master plan or duplicate work.</p>
+    <entry>
+      
 
-<p>Gathering requirements for a project is always fun, translating the
-requirements for a developer to create the end product is even more
-fun, it often can lead to 'chinese whispers' where things just get
-miscommunicated and misunderstood.</p>
 
-<p>Agreeing on collaborating in a sense that everyone should talk and
-making sure everyone is on the same page always seems to be a touchy
-subject, everyone is an expert. So many things can be resolved by just
-bridging the communication gap. I will be finding this out very soon
-in how I manage expectations for the latest project that I am working
-on.</p>
 
-<p>Perhaps I should change my approach vector in getting everyone to
-communicate their concerns and specifications to deliver the product
-that we want to create. The worst thing we can do is spend half our
-time developing something based on an early spec only to find out that
-the goal posts have changed.</p>
+
+<title type="html"><![CDATA[Gitbuilder aggregator &rarr;]]></title>
+<link href="https://github.com/jcftang/gitbuilder/tree/develop/contrib/gitbuilder-ajax"/>
+<updated>2012-04-01T11:05:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator</id>
+
+      <content type="html"><![CDATA[<p>We use git and <a href="https://github.com/apenwarr/gitbuilder">gitbuilder</a> in
+work for a large number of projects, we also try and test things as
+much as we can. I first noticed that someone had written an aggregator
+for gitbuilder at <a href="http://ceph.newdream.net/gitbuilder.cgi">ceph
+gitbuilders</a>, this seemed
+like a great idea (and it is) except the aggregator at the time didn't
+quite work very fast and needed some ajax magic.</p>
+
+<p>I had asked for a copy of the aggregator script from the ceph
+developers, this was really just a perl hack as they said, but it
+works. Since we had some students doing an internship here to learn
+new things, I got one of the interns to write an ajax'd up version of
+the aggregator.</p>
+
+<p>After a few weeks worth of usage and minor changes, it's a bit more
+ready to share with everyone, the ajax'd up version of the aggregator
+can be found at my
+<a href="https://github.com/jcftang/gitbuilder/tree/develop/contrib/gitbuilder-ajax">github</a>
+account in the develop branch. For fun I updated the main gitbuilder
+cgi scripts to use twitter bootstrap and add a link to the errcache
+file that gitbuilder generates.</p>
+
+<p>We found that with large builds the logs would just swamp out the
+errors and warnings and having access to the errcache helped a lot in
+narrowing down where to look for problems, hence the linking to the
+errcache.</p>
+
+<p>At somepoint it might be worth re-implementing the gitbuilder scripts
+in a single language in a generic way such that it works with other
+DVCS's that have the bisect feature.<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator/">&infin; Permalink</a></p></p>
 ]]></content>
-  </entry>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Dogfooding your own project to accelerate development]]></title>
+<link href="http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/"/>
+<updated>2012-03-15T19:31:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development</id>
+
+      <content type="html"><![CDATA[<p>Should you dogfood your own project that you are developing? The
+answer is probably yes, especially if you have no clear cut
+requirements from the stakeholder in a project with a greenfield for
+development. There is a lot to be said about having a working
+implementation that can be presented and refined.</p>
+
+<p>Sometimes the project that you are working on won't have clear
+requirements for implementation, so you should probably take basic
+assumed cases and run with it. Starting early to see what works and
+what doesn't work is a pragmatic approach which the waterfall crowd
+might not like. But hey, an implementation speaks for itself.</p>
+
+<p>If you don't use what you develop, then it is very hard to relate to
+the customer/end-user in the long run. On the note of dogfooding your
+own work, sometimes best-practice might cost too much in terms of time
+and money, sometimes good-enough practice might just be enough to
+deliver a functioning product.</p>
+
+<p>Accelerating development by dogfooding your own work and using
+good-enough practices should increase throughput of development, but
+not necessarily quality. Again in a greenfield project where there
+aren't many requirements due to the schedule, it's worth taking this
+approach until hard requirements get delivered.</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/">&infin; Permalink</a></p>
+
+]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Planet DRI - a news aggregator for digital humanities and digital preservation projects in Ireland &rarr;]]></title>
+<link href="http://www.tchpc.tcd.ie/dri-planet/"/>
+<updated>2012-03-04T18:38:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland</id>
+
+      <content type="html"><![CDATA[<p>This is just a temporary solution till something better or more
+appropriate comes along. It's just an ikiwiki news aggregator for
+websites and projects which are related to Digital Preservation,
+Digitial Humanities and other related bits and pieces.</p>
+
+<p>It was pretty much setup for myself to keep up to date with all the
+latest happenings. I found myself falling behind in being
+knowledgeable in all things related to <em>Digital Repositories Ireland</em>.</p>
+
+<p>I hope that my team mates will appreciate and contribute to this
+little effort. I don't think I've ever come across a Digital
+Humanities and Digital Preservation aggregator before.<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/">&infin; Permalink</a></p></p>
+]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Things not to say and to do in a project meeting]]></title>
+<link href="http://jcftang.github.com/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/"/>
+<updated>2012-02-23T08:13:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting</id>
+
+      <content type="html"><![CDATA[<p>Team meetings can be both productive and counter productive as most
+people find. If they are well structured with a purpose and goal then
+a lot can be achieved (most of the time).</p>
+
+<p>For explorartory meetings, it's probably okay to have some time set
+aside for some free and open discussions. Once a goal has been agreed
+upon, it's probably a good idea to focus on it more and steer the
+discussion to try and deliver on the goal. Having open ended
+discussions with no set goals sometimes is discouraging and sometimes
+a waste of time.</p>
+
+<p>To the point, I wanted to discuss some things not to say and do in a
+meeting which might cause a collapse in communications, these are just
+some things that I have noticed in the last few months worth of
+meetings and are based on my own experiences,</p>
+
+<ul>
+<li>Don't assume you know everything, there will always be someone
+smarter than you. There's nothing wrong with being an expert in your
+own area, but there are times where you just need to trust others to
+deliver.</li>
+<li>Don't pick on other team members for (possibly) not delivering, this
+is hugely demoralising. It's better to ask why, and if possible does
+that team member or members need help to deliver.</li>
+<li>In real life, does anyone really use waterfall methods to deliver a
+project?</li>
+<li>Don't try and do micro-management if you are clearly middle or even
+senior management, but at least describe tasks in the same language
+as the stakeholder and developer so that things don't get lost in
+translation.</li>
+<li>Do have a plan if the series of meetings are to last a few months if
+there are long term goals to be achieved. If it's not a plan, then
+at least have a list of todo, work in progress and done tasks.</li>
+<li>Don't assign tasks without deadlines (realistic ones).</li>
+<li>Don't assume you are on the same page in discussions unless you are
+confident that everyone at the meeting has common language and
+understands what is being discussed. People come and go, so you just
+have to be aware.</li>
+</ul>
+
+
+<p>Most if not all of the above list of things is common sense, there
+isn't anything too special that you need to do to succeed at
+communicating.</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/">&infin; Permalink</a></p>
+
+]]></content>
+    </entry>
   
 </feed>
+

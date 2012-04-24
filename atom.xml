@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-01-16T16:43:08+00:00</updated>
+  <updated>2012-04-24T17:46:18+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -13,12 +12,845 @@
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
-  <entry>
-    <title type="html"><![CDATA[Using continuous integration systems in a team]]></title>
-    <link href="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/"/>
-    <updated>2011-12-13T07:37:00+00:00</updated>
-    <id>http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team</id>
-    <content type="html"><![CDATA[<p>Apart from the obvious unit testing code which could be fun trying to
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[MOSH - An alternative to SSH &rarr;]]></title>
+<link href="http://mosh.mit.edu/"/>
+<updated>2012-04-17T08:31:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2012/04/17/mosh-an-alternative-to-ssh</id>
+
+      <content type="html"><![CDATA[<p>This tool hasn&#8217;t been around for too long, but long enough to make it
+into quite a few distros. It looks like it&#8217;s a good alternative to
+<em>autossh</em> and <em>tmux</em> which I have been using for the past few
+years. Like many new tools like this, if it&#8217;s not around everywhere
+it&#8217;s not as useful as it could be.</p>
+
+<p>The only minor criticism of the application is that the <em>mosh</em> command
+itself is written in perl, it would be nicer if the wrapper command
+would be written in C/C++ like the rest of the application. It would
+certainly make it more <em>portable</em>. I guess I should shut up or write
+my own mosh wrapper replacement.</p>
+
+<p>Other than that, I&#8217;ve got it installed on one or two machines and it
+seems nice enough so far. I now need to test it out in the field on a
+bad connection when I&#8217;m away at a team meeting. I&#8217;m still not entirely
+sure of how good or bad it is in terms of security compared to <em>SSH</em>.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/04/17/mosh-an-alternative-to-ssh/">&infin; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Arquillian 1.0.0.Final released! Ready for GlassFish and WebLogic! Death to all bugs! &rarr;]]></title>
+<link href="http://www.javacodegeeks.com/2012/04/arquillian-100final-released-ready-for.html"/>
+<updated>2012-04-16T09:25:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2012/04/16/arquillian-1-dot-0-0-dot-final-released-ready-for-glassfish-and-weblogic-death-to-all-bugs</id>
+
+      <content type="html"><![CDATA[<p>Looks like an interesting and useful tool, must take note of this tool
+for later use to kill all bugs that are found in the projects that we
+work on, well java ones at least.</p>
+
+<p>Anything to help squash bugs is good!</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/04/16/arquillian-1-dot-0-0-dot-final-released-ready-for-glassfish-and-weblogic-death-to-all-bugs/">&infin; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Prototyping and testing systems]]></title>
+<link href="http://jcftang.github.com/blog/2012/04/09/prototyping-and-testing-systems/"/>
+<updated>2012-04-09T11:12:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2012/04/09/prototyping-and-testing-systems</id>
+
+      <content type="html"><![CDATA[<p>One of the issues with with dogfooding your own projects to accelerate
+development might be the lack of control and feedback from the
+specifications and requirements process. To try and mitigate this
+effect, automated testing should be done, that is specification,
+feature and behavioural testing. Call it what you will, but the basic
+idea is to get a common understanding between the stakeholder, project
+owner and developer to understand what is being built and to write
+automated tests collectively to ensure that it is being
+delivered. This might be a narrow view of the whole area, but I&#8217;m just
+taking what works for me and using it to deliver the project.</p>
+
+<p>There are <em>many</em> specification/feature/behavioural testing tools out
+there for almost language that you can think of, so use what works for
+you and your team. The testing process not only ensures that the
+prototype is working the way that you intend, but it is also a process
+where documentation can also be written at the sametime. This
+documentation could be used as an initial proposal to the stakeholder
+to put forward what you think they want if there are no clear
+specifications or requirements in place.</p>
+
+<p>The interns and I have been working on a small prototype system
+for a bigger project and the benefits of writing tests are beginning
+to show. It has become apparent to the interns that have been working
+on this project that <em>testing is a good thing</em>, especially if it can
+be automated. We&#8217;re not quite doing TDD or BDD, but it&#8217;s something
+that is in between, we&#8217;re getting there with a tiered set of tests.</p>
+
+<p>We&#8217;re finding that (probably) about 50% of the time of the team is
+spent on refactoring, writing tests and documentation. Testing
+combined with the automated builder/tester, the team is writing code
+smarter and better instead of just churning out masses of code which
+isn&#8217;t well tested or documented. Given the choice and based on
+experience I would prefer to have code that is tested and
+documentated, rather than lots of cool half-working and half-tested
+features.</p>
+
+<p>The testing process has been a fantastic way for me to steer the
+interns, given how little expertise I have with javascript. The tests
+let me learn how the interns have been putting the prototype together,
+but it also lets me fuzz up the tests to make sure things are working
+and to also write new tests to communicate what I think is needed when
+appropriate. We&#8217;ve somewhat combined minimal QA into the development
+and testing process.</p>
+
+<p>In the end we hope to have a functional prototype system which does
+one thing (one set of workflows) well, have lots of documentation,
+have tests to back it up and prove that it works. While having an
+implementation is great for the potential stakeholder, having
+documentation and tests puts us in an even stronger position.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/04/09/prototyping-and-testing-systems/">&infin; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Gitbuilder aggregator &rarr;]]></title>
+<link href="https://github.com/jcftang/gitbuilder/tree/develop/contrib/gitbuilder-ajax"/>
+<updated>2012-04-01T11:05:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator</id>
+
+      <content type="html"><![CDATA[<p>We use git and <a href="https://github.com/apenwarr/gitbuilder">gitbuilder</a> in
+work for a large number of projects, we also try and test things as
+much as we can. I first noticed that someone had written an aggregator
+for gitbuilder at <a href="http://ceph.newdream.net/gitbuilder.cgi">ceph
+gitbuilders</a>, this seemed
+like a great idea (and it is) except the aggregator at the time didn&#8217;t
+quite work very fast and needed some ajax magic.</p>
+
+<p>I had asked for a copy of the aggregator script from the ceph
+developers, this was really just a perl hack as they said, but it
+works. Since we had some students doing an internship here to learn
+new things, I got one of the interns to write an ajax&#8217;d up version of
+the aggregator.</p>
+
+<p>After a few weeks worth of usage and minor changes, it&#8217;s a bit more
+ready to share with everyone, the ajax&#8217;d up version of the aggregator
+can be found at my
+<a href="https://github.com/jcftang/gitbuilder/tree/develop/contrib/gitbuilder-ajax">github</a>
+account in the develop branch. For fun I updated the main gitbuilder
+cgi scripts to use twitter bootstrap and add a link to the errcache
+file that gitbuilder generates.</p>
+
+<p>We found that with large builds the logs would just swamp out the
+errors and warnings and having access to the errcache helped a lot in
+narrowing down where to look for problems, hence the linking to the
+errcache.</p>
+
+<p>At somepoint it might be worth re-implementing the gitbuilder scripts
+in a single language in a generic way such that it works with other
+DVCS&#8217;s that have the bisect feature.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator/">&infin; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Dogfooding your own project to accelerate development]]></title>
+<link href="http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/"/>
+<updated>2012-03-15T19:31:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development</id>
+
+      <content type="html"><![CDATA[<p>Should you dogfood your own project that you are developing? The
+answer is probably yes, especially if you have no clear cut
+requirements from the stakeholder in a project with a greenfield for
+development. There is a lot to be said about having a working
+implementation that can be presented and refined.</p>
+
+<p>Sometimes the project that you are working on won&#8217;t have clear
+requirements for implementation, so you should probably take basic
+assumed cases and run with it. Starting early to see what works and
+what doesn&#8217;t work is a pragmatic approach which the waterfall crowd
+might not like. But hey, an implementation speaks for itself.</p>
+
+<p>If you don&#8217;t use what you develop, then it is very hard to relate to
+the customer/end-user in the long run. On the note of dogfooding your
+own work, sometimes best-practice might cost too much in terms of time
+and money, sometimes good-enough practice might just be enough to
+deliver a functioning product.</p>
+
+<p>Accelerating development by dogfooding your own work and using
+good-enough practices should increase throughput of development, but
+not necessarily quality. Again in a greenfield project where there
+aren&#8217;t many requirements due to the schedule, it&#8217;s worth taking this
+approach until hard requirements get delivered.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/">&infin; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[git rerere for long lived feature branches &rarr;]]></title>
+<link href="http://progit.org/2010/03/08/rerere.html"/>
+<updated>2012-03-11T11:45:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/03/11/git-rerere-for-long-lived-feature-branches</id>
+
+      <content type="html"><![CDATA[<p>I turned this feature on for a few of my git repos but I had
+completely forgotten about it. As far as I recall the feature has been
+around for a few years now. It can be turned on globally by doing</p>
+
+<pre><code>git config --global rerere.enabled 1
+</code></pre>
+
+<p>It pretty much automates the resolution of conflicts in long lived
+branches. I&#8217;ve been lazy recently and I have just doing merges instead
+rebasing, which lead me to re-discover <em>git rerere</em>.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/03/11/git-rerere-for-long-lived-feature-branches/">&infin; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Enabling Latent Semantic Indexing for Octopress]]></title>
+<link href="http://jcftang.github.com/blog/2012/03/08/enabling-latent-semantic-indexing-for-octopress/"/>
+<updated>2012-03-08T20:02:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/03/08/enabling-latent-semantic-indexing-for-octopress</id>
+
+      <content type="html"><![CDATA[<p>For those that care about having related posts on their <a href="">Octopress</a>
+blog. It&#8217;s actually quite easy to turn it on, it&#8217;s nice to have and
+useful. But it&#8217;s not enabled by default in Octopress.</p>
+
+<p>This feature already exists in jekyll, enabling this feature in
+Octopress is a trival task.</p>
+
+<p>Firstly add this to your <code>_config.yml</code> file</p>
+
+<pre><code>lsi: true
+</code></pre>
+
+<p>Then create a file such as <code>source/_includes/custom/asides/related.html</code> with the following
+content, add it to one of your asides in <code>_config.yml</code></p>
+
+<pre><code>&lt;section&gt;
+&lt;h1&gt;Related Posts&lt;/h1&gt;
+&lt;ul class="posts"&gt;
+    {% for post in site.related_posts limit:5 %}
+    &lt;li class="related"&gt;
+        &lt;a href="{{ root_url }}{{ post.url }}"&gt;{{ post.title }}&lt;/a&gt;
+    &lt;/li&gt;
+    {% endfor %}
+    &lt;/ul&gt;
+&lt;/section&gt;
+</code></pre>
+
+<p>It is possible to style the list, but in the above I have chosen to
+keep the same style as the recent posts.</p>
+
+<h2>Probable issues with enabling LSI</h2>
+
+<p>There are some issues with enabling LSI in jekyll/octopress, the
+primary issue will be performance. The default implementation will be
+slow if you have lots of posts to classify. It would be recommended
+that rb-gsl be installed to accelerate the classification process.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/03/08/enabling-latent-semantic-indexing-for-octopress/">&infin; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Planet DRI - a news aggregator for digital humanities and digital preservation projects in Ireland &rarr;]]></title>
+<link href="http://www.tchpc.tcd.ie/dri-planet/"/>
+<updated>2012-03-04T18:38:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland</id>
+
+      <content type="html"><![CDATA[<p>This is just a temporary solution till something better or more
+appropriate comes along. It&#8217;s just an ikiwiki news aggregator for
+websites and projects which are related to Digital Preservation,
+Digitial Humanities and other related bits and pieces.</p>
+
+<p>It was pretty much setup for myself to keep up to date with all the
+latest happenings. I found myself falling behind in being
+knowledgeable in all things related to <em>Digital Repositories Ireland</em>.</p>
+
+<p>I hope that my team mates will appreciate and contribute to this
+little effort. I don&#8217;t think I&#8217;ve ever come across a Digital
+Humanities and Digital Preservation aggregator before.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/">&infin; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Genetic Classification of Populations Using Supervised Learning &rarr;]]></title>
+<link href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0014802"/>
+<updated>2012-02-26T21:08:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/02/26/genetic-classification-of-populations-using-supervised-learning</id>
+
+      <content type="html"><![CDATA[<p>In the past few months, in my spare time whenever I get a chance, I&#8217;ve
+been working on a side project in work. It&#8217;s a research project
+amongst a group of people with a cool idea. The idea is to apply
+neural networks to identifying diseases, populations and traits via
+machine learning/supervised learning. I&#8217;m not entirely sure about the
+application of the technology as to how new or revolutionary it is,
+but it seems sensible that a machine is going to be very good at being
+taught how to recognise patterns so why not do it.</p>
+
+<p>I&#8217;m not directly responsible for the code for this paper, but I did go
+back and refactor most of the code in an attempt to make it a little
+presentable to the world and also much faster as a result. I hope that
+the source code will eventually see the light of day.</p>
+
+<p>Note, I am not the primary author of this presentation/paper, I just
+have an interest in the idea, code and enjoy learning and playing with
+this research.</p>
+
+<p>There will be a presentation at
+<a href="http://www.genepi.med.uni-goettingen.de/download/EMGM2012_Preliminary_Programme.pdf">EMGM</a>,
+I will be curious as to what people think. Is it a crazy good or a
+crazy bad idea? The data that is being generated is apparently good,
+though personally I would like to see more analysis being done with
+additional ANN&#8217;s or SVM&#8217;s to verify that it really is working as
+expected.</p>
+
+<p>I wonder if I can convince a CS or a Maths summer student to
+re-implement the algorithm with a different ANN or SVM library. There
+are a rake of ideas that I have that I wouldn&#8217;t mind seeing
+implemented. I just need more time!</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/26/genetic-classification-of-populations-using-supervised-learning/">&infin; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Things not to say and to do in a project meeting]]></title>
+<link href="http://jcftang.github.com/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/"/>
+<updated>2012-02-23T08:13:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting</id>
+
+      <content type="html"><![CDATA[<p>Team meetings can be both productive and counter productive as most
+people find. If they are well structured with a purpose and goal then
+a lot can be achieved (most of the time).</p>
+
+<p>For explorartory meetings, it&#8217;s probably okay to have some time set
+aside for some free and open discussions. Once a goal has been agreed
+upon, it&#8217;s probably a good idea to focus on it more and steer the
+discussion to try and deliver on the goal. Having open ended
+discussions with no set goals sometimes is discouraging and sometimes
+a waste of time.</p>
+
+<p>To the point, I wanted to discuss some things not to say and do in a
+meeting which might cause a collapse in communications, these are just
+some things that I have noticed in the last few months worth of
+meetings and are based on my own experiences,</p>
+
+<ul>
+<li>Don&#8217;t assume you know everything, there will always be someone
+smarter than you. There&#8217;s nothing wrong with being an expert in your
+own area, but there are times where you just need to trust others to
+deliver.</li>
+<li>Don&#8217;t pick on other team members for (possibly) not delivering, this
+is hugely demoralising. It&#8217;s better to ask why, and if possible does
+that team member or members need help to deliver.</li>
+<li>In real life, does anyone really use waterfall methods to deliver a
+project?</li>
+<li>Don&#8217;t try and do micro-management if you are clearly middle or even
+senior management, but at least describe tasks in the same language
+as the stakeholder and developer so that things don&#8217;t get lost in
+translation.</li>
+<li>Do have a plan if the series of meetings are to last a few months if
+there are long term goals to be achieved. If it&#8217;s not a plan, then
+at least have a list of todo, work in progress and done tasks.</li>
+<li>Don&#8217;t assign tasks without deadlines (realistic ones).</li>
+<li>Don&#8217;t assume you are on the same page in discussions unless you are
+confident that everyone at the meeting has common language and
+understands what is being discussed. People come and go, so you just
+have to be aware.</li>
+</ul>
+
+
+<p>Most if not all of the above list of things is common sense, there
+isn&#8217;t anything too special that you need to do to succeed at
+communicating.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/">&infin; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Scientific Linux 6.2 is out &rarr;]]></title>
+<link href="http://www.scientificlinux.org/distributions/6x/62/"/>
+<updated>2012-02-19T18:00:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/02/19/scientific-linux-6-dot-2-is-out</id>
+
+      <content type="html"><![CDATA[<p>SL6.2 has been out for a few days now, I haven&#8217;t had a chance to
+really take a look at it, since the more recent SL6 installs I
+maintain tend to be tracking the 6x releases. Hopefully SL will try
+and keep inline with the upstreams support schedule.</p>
+
+<p>I&#8217;ve a personal preference for deploying SL over CentOS (or any other
+recompiles of RHEL). SL tends to be a bit more polished in terms of
+not breaking older installs, i.e. the upstream doesn&#8217;t move point
+releases around as CentOS does, SL does not force the end user to run
+the latest stable or continually upgrade to the latest point release
+to get updates (due to the weird convention CentOS seems to have with
+their archives).</p>
+
+<p>It&#8217;s out, I need to look at it again, especially since ZFS is getting
+closer to being ready for a bit more general usage on the server side
+and the project that I am working will be needing some machines to be
+installed and setup soon.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/19/scientific-linux-6-dot-2-is-out/">&infin; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Rasberry Pi - what I would use it for? &rarr;]]></title>
+<link href="http://www.raspberrypi.org/"/>
+<updated>2012-02-19T14:46:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/02/19/rasberry-pi-what-i-would-use-it-for</id>
+
+      <content type="html"><![CDATA[<p>At the time of writing it seems that the Raspberry Pi site is down,
+probably suffering from a slashdot effect. I would imagine almost
+every nerd, sheevaplug developer, OLPC developer, DIY&#8217;ers who want to
+build their own home media centres are looking to get a Raspberry Pi
+right now.</p>
+
+<p>So what would I use one of these mini-computers for? I can think up a
+range of cool applications for this device, assuming I can order a few
+of these to play with. I&#8217;ve got ideas such as:</p>
+
+<ul>
+<li>A Tahoe-LAFS storage node, I could attach a few HDD&#8217;s to one of these
+devices and run Tahoe-LAFS on it, these computers are cheap enough
+and have a low enough power consumption that I could just have them
+on all the time.</li>
+<li>A Babeld node, I could have a few of these devices dotted around my
+house/apartment to build a mesh network.</li>
+<li>A portable computer, not quite a tablet PC with a screen, but it has
+enough connectivity to wire it up to a modern monitor or a TV.</li>
+<li>A penetration testing device, just wire it up with a few DC
+batteries, plug in a wireless card, wrap it up in a water proof
+package. Power on, and see how far you can throw it at your target,
+I can see endless possibilities for this device for pen-testing.</li>
+</ul>
+
+
+<p>I wonder if the device will ever be able to be powered via the USB
+port or the the ethernet port. I can see some interesting uses for
+this device in data centres for monitoring the network, power
+consumption and a host of other things.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/19/rasberry-pi-what-i-would-use-it-for/">&infin; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Why Linux isn't the only platform to target when building applications]]></title>
+<link href="http://jcftang.github.com/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/"/>
+<updated>2012-02-16T09:33:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications</id>
+
+      <content type="html"><![CDATA[<p>Why would one want to target other platforms when building applications
+on the server side?</p>
+
+<p>This came out of a conversation with the ex-CTO of Creme software (he
+is also a friend of mine), the conversation started out with why I
+like to use Macs and OSX as my laptop or workstation. I&#8217;ve been a long
+time Linux user of pretty much most of the major distributions ranging
+from RHEL, Debian/Ubuntu, Gentoo, ArchLinux as well as a number of
+other derivatives, not to mention other systems like the BSD&#8217;s which I
+have a soft spot for.</p>
+
+<p>I interchange the terms Linux and Distros quite a bit in this post.</p>
+
+<p>Some of the things that didn&#8217;t like with the Linux&#8217;s was that not all
+my hardware would be supported all the time, the distro&#8217;s sometimes
+think that it&#8217;s a good idea to completely change how lowlevel systems
+work in favour of <em>what&#8217;s hot right now</em>, sometimes the lack of long
+term support for security updates (not package updates to fix security
+problems) does make it more difficult to plan and deploy. The
+perceived flexibility sometimes causes headaches with migration plans
+and maintanence.</p>
+
+<p>Of course there are things that I like, the access to the source code
+and packaging to fix and redeploy packages. The stability and
+reliability that can be achieved is attractive if everything is
+automated and planned out (though too much automation can be bad too).</p>
+
+<p>To get back to the original point of why you wouldn&#8217;t want to target
+Linux specifically when building applications? Unless you have a
+strong motivating reason to write code that <em>specifically</em> requires a
+feature of Linux (or any other operating system), then you really
+ought to be writing code that adheres to at least some POSIX or cross
+platform standard, and pick libraries that are known to have good
+cross platform compatibility. There is nothing to gain from writing
+platform specific codes in the long run, the platform might hide
+issues from the developer if it is too clever. Linux or more
+specifically the distros might change various behaviour of the
+underlying system, and if your code is tied down to particular
+features of the underlying system then you will have lots of fun
+migrating.</p>
+
+<p>It&#8217;s just bad practice to rely on system specific behaviour which
+isn&#8217;t portable (or maintainable) going forward in a project. To
+mitigate some of this, one would want to at least try to use a
+continuous build systems such as <em>gitbuilder</em>, <em>buildbot</em> or <em>jenkins</em>
+on a bunch of <strong>different</strong> architectures and platforms. This will
+reveal portability issues and more often than not, subtle bugs in your
+code which you probably didn&#8217;t see as a result of your development
+system being too smart for you!</p>
+
+<p>There isn&#8217;t much of an excuse not to do continuous builds and testings
+across different Linux, BSD and Solaris distributions these
+days. Diskspace and compute power is cheap, there are free and
+opensource virtualisation technologies out there to provide you with a
+means to run different distributions for testing on a single
+machine. The problem will be the upfront manpower needed to setup such
+a system.</p>
+
+<p>In the long run targetting at least two platforms will make your code
+base far more portable and hopefully more maintainable as you will end
+up making sure you write code once that runs on many systems with
+minimal changes needed when a new platform arises.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">&infin; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[cports for building applications and libraries for HPC systems &rarr;]]></title>
+<link href="http://thammuz.tchpc.tcd.ie/mirrors/cports/releases/"/>
+<updated>2012-02-12T17:59:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems</id>
+
+      <content type="html"><![CDATA[<p>I&#8217;ve talked about <em>cports</em> in the past, it&#8217;s basically a collection of
+<em>makefiles</em> which mostly automates the process of downloading,
+configuring, building and installing applications and libraries for
+High Performance Computing systems that use environment-modules.</p>
+
+<p>One of the key-features that <em>cports</em> offers is the automated
+modulefile generation, and the fact that the <em>makefiles</em> acts as
+documentation to how software is configured, built and installed. It&#8217;s
+currently being used on the clusters at my work place, it has been a
+boost to the productivity of the systems admin team. It&#8217;s a nice
+alternative to trying to create RPM&#8217;s or DEB&#8217;s (pick your custom
+package manager of choice here), as <em>makefiles</em> tend to be a little
+more flexible than traditional package managers.</p>
+
+<p>One main drawback of the <em>cports</em> system right now is the lack of good
+dependancy management and checking, it is all currently up to the
+packager to resolve these dependancy issues. It&#8217;s also <em>cports</em>
+strongest point that there is no dependancy management, as the
+packager can build many unique trees of packages.</p>
+
+<p>For example, we have Tahoe-LAFS in the following sample makefile</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>include ../../../mk/gnu.pre.mk
+</span><span class='line'>
+</span><span class='line'>DISTNAME= allmydata-tahoe
+</span><span class='line'>VERSION=  1.9.0-SUMO
+</span><span class='line'>CATEGORIES=   system
+</span><span class='line'>HOMEPAGE= http://tahoe-lafs.org/
+</span><span class='line'>MASTER_SITES= http://tahoe-lafs.org/source/tahoe-lafs/releases/
+</span><span class='line'>MAINTAINER=   jtang@tchpc.tcd.ie
+</span><span class='line'>HAS_CONFIGURE=    no
+</span><span class='line'>DISTFILES = $(DISTNAME)-$(VERSION).tar.bz2
+</span><span class='line'>
+</span><span class='line'>DEPENDS="Python/2.6.5 --build-env Python/2.6.5 --run-env"
+</span><span class='line'>DEPENDS+="openssl/0.9.8o --lib --build-env"
+</span><span class='line'>DEPENDS+="gmp/4.3.2 --lib --build-env"
+</span><span class='line'>
+</span><span class='line'>DESCRIPTION=    "Tahoe-LAFS (Least Authority File System) is a Free Software/Open Source"
+</span><span class='line'>DESCRIPTION+=    "decentralized data store. It distributes your filesystem across multiple"
+</span><span class='line'>DESCRIPTION+=    "servers, and even if some of the servers fail or are taken over by"
+</span><span class='line'>DESCRIPTION+=    "an attacker, the entire filesystem continues to work correctly and to"
+</span><span class='line'>DESCRIPTION+=    "preserve your privacy and security."
+</span><span class='line'>
+</span><span class='line'>CONFIGURE_ARGS +=
+</span><span class='line'>
+</span><span class='line'>MODULEFILE_LINES+=      PYTHONPATH
+</span><span class='line'>MODULEFILE_CMD_PYTHONPATH?= \
+</span><span class='line'>        $(ECHO) "prepend-path   PYTHONPATH $(PROGRAM_PREFIX)/lib/python2.6/site-packages";
+</span><span class='line'>
+</span><span class='line'>do-build:
+</span><span class='line'>  $(MODULE_ADD) $(BUILD_DEPENDS); \
+</span><span class='line'>  cd $(WRKSRC); \
+</span><span class='line'>
+</span><span class='line'>do-install:
+</span><span class='line'>  $(MODULE_ADD) $(BUILD_DEPENDS); \
+</span><span class='line'>  cd $(WRKSRC); \
+</span><span class='line'>  $(MKDIR) $(PROGRAM_PREFIX) ;\
+</span><span class='line'>  tar -cpf - . | (cd $(PROGRAM_PREFIX)/ && tar -xpf - ) ;\
+</span><span class='line'>  cd $(PROGRAM_PREFIX) ;\
+</span><span class='line'>  cp -a tahoe-deps ../ ;\
+</span><span class='line'>  python setup.py build ;
+</span><span class='line'>
+</span><span class='line'>do-test:
+</span><span class='line'>  $(MODULE_ADD) $(RUN_DEPENDS) $(DISTNAME)/$(VERSION)$(EXTRAVERSION)$(COMPILER_TAG) ; \
+</span><span class='line'>  cd $(WRKSRC); \
+</span><span class='line'>  python setup.py test
+</span><span class='line'>
+</span><span class='line'>include ../../../mk/gnu.post.mk</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In this example, as Tahoe-LAFS (upstream project) gets updated, the
+cports packager just needs to copy this makefile to a new directory,
+update the version numbers, then do a <em>make install</em>. This assumes
+that the dependancies haven&#8217;t changed much, if they have it is trivial
+to update the dependancies. The above example generates a modulefile
+similar to like this,</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#%Module1.0
+</span><span class='line'>module-whatis "allmydata-tahoe version 1.9.0-SUMO (compiled with a gnu compiler)"
+</span><span class='line'>conflict allmydata-tahoe
+</span><span class='line'>prepend-path   PYTHONPATH /home/support/apps/cports/rhel-5.x86_64/gnu/allmydata-tahoe/1.9.0-SUMO/lib
+</span><span class='line'>/python2.6/site-packages
+</span><span class='line'>prepend-path PATH /home/support/apps/cports/rhel-5.x86_64/gnu/allmydata-tahoe/1.9.0-SUMO/bin
+</span><span class='line'>module add Python/2.6.5-gnu
+</span><span class='line'>proc ModulesHelp { } {
+</span><span class='line'>puts stderr "Tahoe-LAFS (Least Authority File System) is a Free Software/Open Source"
+</span><span class='line'>puts stderr "decentralized data store. It distributes your filesystem across multiple"
+</span><span class='line'>puts stderr "servers, and even if some of the servers fail or are taken over by"
+</span><span class='line'>puts stderr "an attacker, the entire filesystem continues to work correctly and to"
+</span><span class='line'>puts stderr "preserve your privacy and security."
+</span><span class='line'>puts stderr {build depends: gmp/4.3.2-gnu openssl/0.9.8o-gnu Python/2.6.5-gnu}
+</span><span class='line'>puts stderr {run depends: Python/2.6.5-gnu}
+</span><span class='line'>puts stderr {module depends: gmp/4.3.2 openssl/0.9.8o Python/2.6.5}
+</span><span class='line'>puts stderr {link depends: gmp/4.3.2-gnu openssl/0.9.8o-gnu}
+</span><span class='line'>}
+</span><span class='line'>prepend-path   PYTHONPATH /home/support/apps/cports/rhel-5.x86_64/gnu/allmydata-tahoe/1.9.0-SUMO/lib
+</span><span class='line'>/python2.6/site-packages</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Once the package has been built and tested on a development system, we
+can take the package and replicate the installation in fairly
+automated fashion. This type of scripting and automation means that
+the clusters that we run in work have consistent installations of
+applications.</p>
+
+<p>Having consistent installs means that the end-user needs to learn less
+about the naming conventions. This in turn reduces the confusion and
+documentation that is needed for the end user.</p>
+
+<p>Sadly, I don&#8217;t get to play with <em>cports</em> as much as I used to, since I
+do not administrate High Performance Computing systems anymore in my
+new role at my current work place. It is just a hobby to develop this
+build system, I plan on automating more testing of the <em>cports</em> system
+when I get a chance. We currently have <em>jenkins</em> and <em>gitbuilder</em>
+running on select machines in work to continually build and test
+specific packages to find regressions and broken download links.</p>
+
+<p><em>cports</em> isn&#8217;t quite ready for general public usage, but if you are a
+clued in systems administrator at a High Performance Computing
+facility and use environment-module then <em>cports</em> is just about
+usable. This is of course if you are willing to look at the sample
+packages and write <em>makefiles</em>.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">&infin; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Red Hat Enterprise Linux Life Cycle Extended to Ten Years &rarr;]]></title>
+<link href="https://www.redhat.com/archives/rhelv5-announce/2012-January/msg00000.html"/>
+<updated>2012-02-09T08:16:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years</id>
+
+      <content type="html"><![CDATA[<p>It&#8217;s all over the internet that RHEL6 and newer releases will have a
+life cycle of 10yrs. This is pretty good news for projects that are
+deploying systems that have a lifetime of 5yrs or more. Namely Digital
+Preservation projects, not having to worry about migration between
+point releases of an operating system platform reduces time and costs.</p>
+
+<p>I&#8217;m now more likely to target the systems we develop in work towards a
+RHEL system (or a RHEL like clone).</p>
+
+<p>Another side effect of this long term support is that it will probably
+make life easier for those who have lots of virtual machines running
+RHEL. Longer support means less issues with continually migrating
+between point releases. From a practical point of view of a
+operational sysadmin, this is great. From a developers point of view,
+it&#8217;s also not bad either, software written now (assuming the
+requirements haven&#8217;t changed) will probably work long into the future.</p>
+
+<p>Note: I am not a RHEL (Fedora) fanboy, I used to sysadmin a few
+hundred RHEL (scientific linux) based systems. Before that, I used to
+sysadmin a few hundred Debian based systems.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years/">&infin; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Waterfall or Agile methods for delivering a project]]></title>
+<link href="http://jcftang.github.com/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/"/>
+<updated>2012-01-18T08:41:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project</id>
+
+      <content type="html"><![CDATA[<p>Waterfall methods seem to work well for smallish projects that are
+well defined and well understood. At least from my own experiences of
+putting things together, but realistically to think of all possible
+scenarios and to write up all the possible solutions to the problem
+seems a little bit wacky. To also assume that the requirements process
+has captured requirements that won&#8217;t change close the end of the
+project is also a little unreasonable or unrealistic, this would be
+especially true on a project that is planned to run for a few years
+with fairly substantial goals in an ever changing research and
+development environment.</p>
+
+<p>Waterfall styled methods just cause problems with planning and
+adjusting the process to the needs of the stakeholder (no matter what
+the stakeholder thinks they need, they will change their mind). Again
+this is especially true for long running projects.</p>
+
+<p>So why not use agile methods? Simply because there is little or no
+plan and it requires real collaboration, delegation of tasks and
+trust to work towards a common goal. People get afraid perhaps?</p>
+
+<p>The trick is communication and trying to introduce agile methods
+slowly and steadily into the system. I&#8217;ve been slowly introducing the
+idea of pairings, sprints and elements of scrum with kanban (yes,
+that&#8217;s lots of buzz words there already). Getting people to agree to
+talk is probably the hardest thing to do, and it&#8217;s even harder to try
+and get everyone on the same page without ego&#8217;s getting in the way.</p>
+
+<p>It&#8217;s paying off a little for now, the team members are beginning to at
+least talk and exchange ideas. In my world that is a huge step
+already. Next is it try getting things done by prioritising tasks and
+resources.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/">&infin; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Using continuous integration systems in a team]]></title>
+<link href="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/"/>
+<updated>2011-12-13T07:37:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team</id>
+
+      <content type="html"><![CDATA[<p>Apart from the obvious unit testing code which could be fun trying to
 convince a team to use. There are things known as &#8216;Continuous
 Integration&#8217; processes and servers. The basic idea is to continually
 build and test your product automatically and report on successful and
@@ -58,15 +890,21 @@ actually a good idea! Having somewhat successfully kicked off some
 pairing sessions with various team members is good, but being more
 flexible and professional about what we are building is what I&#8217;m
 after.</p>
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/">&infin; Permalink</a></p>]]></content>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[Setting up my work Macbook Air]]></title>
-    <link href="http://jcftang.github.com/blog/2011/10/21/setting-up-my-work-macbook-air/"/>
-    <updated>2011-10-21T08:21:00+01:00</updated>
-    <id>http://jcftang.github.com/blog/2011/10/21/setting-up-my-work-macbook-air</id>
-    <content type="html"><![CDATA[<p>Everytime when I install, reinstall or setup a mac desktop or laptop I
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Setting up my work Macbook Air]]></title>
+<link href="http://jcftang.github.com/blog/2011/10/21/setting-up-my-work-macbook-air/"/>
+<updated>2011-10-21T08:21:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2011/10/21/setting-up-my-work-macbook-air</id>
+
+      <content type="html"><![CDATA[<p>Everytime when I install, reinstall or setup a mac desktop or laptop I
 always tend to install the same set of software that I was using. As time
 goes on I change what I like to install and what to use. So I&#8217;ve been
 keeping notes and logs of that I usually install first.</p>
@@ -146,15 +984,21 @@ Office for OSX. I wish I could just use plain text.</p>
 added/removed to my toolbox over the years. So far Lion hasn&#8217;t been
 too bad, but I have yet to develop anything or seriously tried to do
 anything too technical on this system so far.</p>
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2011/10/21/setting-up-my-work-macbook-air/">&infin; Permalink</a></p>]]></content>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[The joys of working with a team across multiple institutions]]></title>
-    <link href="http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions/"/>
-    <updated>2011-10-19T21:34:00+01:00</updated>
-    <id>http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions</id>
-    <content type="html"><![CDATA[<p>Having worked in a number of cross institutional projects in the past
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[The joys of working with a team across multiple institutions]]></title>
+<link href="http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions/"/>
+<updated>2011-10-19T21:34:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions</id>
+
+      <content type="html"><![CDATA[<p>Having worked in a number of cross institutional projects in the past
 has lead me to always be weary about how to interact with
 people. Often it&#8217;s the lack of co-ordination and communication that
 seems to be the killer. Parts of the team would seem to not know what
@@ -178,15 +1022,21 @@ communicate their concerns and specifications to deliver the product
 that we want to create. The worst thing we can do is spend half our
 time developing something based on an early spec only to find out that
 the goal posts have changed.</p>
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions/">&infin; Permalink</a></p>]]></content>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[Feeling Disconnected From Modern Software Development Tools]]></title>
-    <link href="http://jcftang.github.com/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools/"/>
-    <updated>2011-10-13T01:09:00+01:00</updated>
-    <id>http://jcftang.github.com/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools</id>
-    <content type="html"><![CDATA[<p>I&#8217;ve recently started a new role as being a senior software engineer
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Feeling Disconnected From Modern Software Development Tools]]></title>
+<link href="http://jcftang.github.com/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools/"/>
+<updated>2011-10-13T01:09:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools</id>
+
+      <content type="html"><![CDATA[<p>I&#8217;ve recently started a new role as being a senior software engineer
 for an Irish National Project and I have had to refresh my OOP skills
 with JAVA.</p>
 
@@ -228,7 +1078,7 @@ equivalent modern language is used with the appropriate tool. It&#8217;s
 just down to a communication problem of creating the right thing.</p>
 
 <p>By the way this is the first post!</p>
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools/">&infin; Permalink</a></p>]]></content>
+    </entry>
   
 </feed>

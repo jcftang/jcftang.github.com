@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: hpc | Jimmy Tang]]></title>
+  <link href="http://jcftang.github.com/blog/categories/hpc/atom.xml" rel="self"/>
+  <link href="http://jcftang.github.com/"/>
+  <updated>2012-04-24T17:46:18+01:00</updated>
+  <id>http://jcftang.github.com/</id>
+  <author>
+    <name><![CDATA[Jimmy Tang]]></name>
+    <email><![CDATA[jcftang@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[cports for building applications and libraries for HPC systems &rarr;]]></title>
+<link href="http://thammuz.tchpc.tcd.ie/mirrors/cports/releases/"/>
+<updated>2012-02-12T17:59:00+00:00</updated>
+<id>http://jcftang.github.com/blog/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems</id>
+
+      <content type="html"><![CDATA[<p>I've talked about <em>cports</em> in the past, it's basically a collection of
+<em>makefiles</em> which mostly automates the process of downloading,
+configuring, building and installing applications and libraries for
+High Performance Computing systems that use environment-modules.</p>
+
+<p>One of the key-features that <em>cports</em> offers is the automated
+modulefile generation, and the fact that the <em>makefiles</em> acts as
+documentation to how software is configured, built and installed. It's
+currently being used on the clusters at my work place, it has been a
+boost to the productivity of the systems admin team. It's a nice
+alternative to trying to create RPM's or DEB's (pick your custom
+package manager of choice here), as <em>makefiles</em> tend to be a little
+more flexible than traditional package managers.</p>
+
+<p>One main drawback of the <em>cports</em> system right now is the lack of good
+dependancy management and checking, it is all currently up to the
+packager to resolve these dependancy issues. It's also <em>cports</em>
+strongest point that there is no dependancy management, as the
+packager can build many unique trees of packages.</p>
+
+<p>For example, we have Tahoe-LAFS in the following sample makefile</p>
+
+<p>```
+include ../../../mk/gnu.pre.mk</p>
+
+<p>DISTNAME=   allmydata-tahoe
+VERSION=    1.9.0-SUMO
+CATEGORIES= system
+HOMEPAGE=   http://tahoe-lafs.org/
+MASTER_SITES=   http://tahoe-lafs.org/source/tahoe-lafs/releases/
+MAINTAINER= jtang@tchpc.tcd.ie
+HAS_CONFIGURE=  no
+DISTFILES = $(DISTNAME)-$(VERSION).tar.bz2</p>
+
+<p>DEPENDS="Python/2.6.5 --build-env Python/2.6.5 --run-env"
+DEPENDS+="openssl/0.9.8o --lib --build-env"
+DEPENDS+="gmp/4.3.2 --lib --build-env"</p>
+
+<p>DESCRIPTION=    "Tahoe-LAFS (Least Authority File System) is a Free Software/Open Source"
+DESCRIPTION+=    "decentralized data store. It distributes your filesystem across multiple"
+DESCRIPTION+=    "servers, and even if some of the servers fail or are taken over by"
+DESCRIPTION+=    "an attacker, the entire filesystem continues to work correctly and to"
+DESCRIPTION+=    "preserve your privacy and security."</p>
+
+<p>CONFIGURE_ARGS +=</p>
+
+<p>MODULEFILE_LINES+=      PYTHONPATH
+MODULEFILE_CMD_PYTHONPATH?= \</p>
+
+<pre><code>    $(ECHO) "prepend-path   PYTHONPATH $(PROGRAM_PREFIX)/lib/python2.6/site-packages";
+</code></pre>
+
+<p>do-build:</p>
+
+<pre><code>$(MODULE_ADD) $(BUILD_DEPENDS); \
+cd $(WRKSRC); \
+</code></pre>
+
+<p>do-install:</p>
+
+<pre><code>$(MODULE_ADD) $(BUILD_DEPENDS); \
+cd $(WRKSRC); \
+$(MKDIR) $(PROGRAM_PREFIX) ;\
+tar -cpf - . | (cd $(PROGRAM_PREFIX)/ &amp;&amp; tar -xpf - ) ;\
+cd $(PROGRAM_PREFIX) ;\
+cp -a tahoe-deps ../ ;\
+python setup.py build ;
+</code></pre>
+
+<p>do-test:</p>
+
+<pre><code>$(MODULE_ADD) $(RUN_DEPENDS) $(DISTNAME)/$(VERSION)$(EXTRAVERSION)$(COMPILER_TAG) ; \
+cd $(WRKSRC); \
+python setup.py test
+</code></pre>
+
+<p>include ../../../mk/gnu.post.mk
+```</p>
+
+<p>In this example, as Tahoe-LAFS (upstream project) gets updated, the
+cports packager just needs to copy this makefile to a new directory,
+update the version numbers, then do a <em>make install</em>. This assumes
+that the dependancies haven't changed much, if they have it is trivial
+to update the dependancies. The above example generates a modulefile
+similar to like this,</p>
+
+<p>```</p>
+
+<h1>%Module1.0</h1>
+
+<p>module-whatis "allmydata-tahoe version 1.9.0-SUMO (compiled with a gnu compiler)"
+conflict allmydata-tahoe
+prepend-path   PYTHONPATH /home/support/apps/cports/rhel-5.x86_64/gnu/allmydata-tahoe/1.9.0-SUMO/lib
+/python2.6/site-packages
+prepend-path PATH /home/support/apps/cports/rhel-5.x86_64/gnu/allmydata-tahoe/1.9.0-SUMO/bin
+module add Python/2.6.5-gnu
+proc ModulesHelp { } {
+puts stderr "Tahoe-LAFS (Least Authority File System) is a Free Software/Open Source"
+puts stderr "decentralized data store. It distributes your filesystem across multiple"
+puts stderr "servers, and even if some of the servers fail or are taken over by"
+puts stderr "an attacker, the entire filesystem continues to work correctly and to"
+puts stderr "preserve your privacy and security."
+puts stderr {build depends: gmp/4.3.2-gnu openssl/0.9.8o-gnu Python/2.6.5-gnu}
+puts stderr {run depends: Python/2.6.5-gnu}
+puts stderr {module depends: gmp/4.3.2 openssl/0.9.8o Python/2.6.5}
+puts stderr {link depends: gmp/4.3.2-gnu openssl/0.9.8o-gnu}
+}
+prepend-path   PYTHONPATH /home/support/apps/cports/rhel-5.x86_64/gnu/allmydata-tahoe/1.9.0-SUMO/lib
+/python2.6/site-packages
+```</p>
+
+<p>Once the package has been built and tested on a development system, we
+can take the package and replicate the installation in fairly
+automated fashion. This type of scripting and automation means that
+the clusters that we run in work have consistent installations of
+applications.</p>
+
+<p>Having consistent installs means that the end-user needs to learn less
+about the naming conventions. This in turn reduces the confusion and
+documentation that is needed for the end user.</p>
+
+<p>Sadly, I don't get to play with <em>cports</em> as much as I used to, since I
+do not administrate High Performance Computing systems anymore in my
+new role at my current work place. It is just a hobby to develop this
+build system, I plan on automating more testing of the <em>cports</em> system
+when I get a chance. We currently have <em>jenkins</em> and <em>gitbuilder</em>
+running on select machines in work to continually build and test
+specific packages to find regressions and broken download links.</p>
+
+<p><em>cports</em> isn't quite ready for general public usage, but if you are a
+clued in systems administrator at a High Performance Computing
+facility and use environment-module then <em>cports</em> is just about
+usable. This is of course if you are willing to look at the sample
+packages and write <em>makefiles</em>.</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">&infin; Permalink</a></p>
+
+]]></content>
+    </entry>
+  
+</feed>
+
