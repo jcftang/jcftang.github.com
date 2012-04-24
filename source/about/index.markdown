@@ -16,12 +16,6 @@ separate from my [personal blog](http://www.sgenomics.org/~jtang/).
 
 The following is an incomplete resume, it is work in progress.
 
-### Education
-
-* MSc in High Performance Computing at Trinity College Dublin
-* BSc in Applied Sciences at Dublin Institute of Technology
-* Oatlands College Christian Brothers School, Stillorgan, Dublin
-
 ### Special Skills
 
 #### Programming
@@ -68,13 +62,69 @@ The following is an incomplete resume, it is work in progress.
 
 ### Current Employment
 
-* Senior Software Engineer, Digital Repository Ireland, Trinity
-  Centrefor High Performance Computing.
+#### Senior Software Engineer, Digital Repository Ireland, Trinity Centre for High Performance Computing.
+
+Responsibilities include
+
+* Overall architecture and design
+* Leading a team of developers
 
 ### Past Employment
 
 #### Research Assistant and Systems Administrator, Trinity Centre for High Performance Computing.
 
+Responsibilities included
+
+* Software developement for various researchers and users of the TCHPC
+  facilities.
+* Software development and administration on iRODS which is a part the
+  HPC Europa 2 project. Development of workflows and microservices.
+* Evaluation of various distributed and/or parallel filesystems suchas
+  GPFS, Glusterfs,
+* PVFS2, Lustre, Tahoe-lafs and Sector for possible future
+  deployments.  Development and implementation of policies for
+  allocating resources for accounting usage.
+* Development of cports for automated software builds, documentation
+  and environment con- figurations for end users.
+* Package creation and administration for the software repositories
+  that is used to deploy and maintain the compute clusters. Automation
+  of installation processes of compute nodes. Building the software
+  stacks from source. Writing .rpm and .deb packages for automated
+  software deployment.
+* Development and deployment of various medium sized clusters such as
+  Kelvin, Parsons, Lonsdale and the tools for administering computer
+  systems.
+* Administation of the virtualised machines and floor wide network
+  services for the different research groups from neuroscience,
+  chemistry, physics, genetics, biochemistry and maths.
+
+Notable responsibilities
+
+* Deployment of Irish African Partnership services which included the
+  setup of DSPACE, OracleDB, Oracle Application Server, LDAP and
+  Handle.net. This project involved taking the existing college RSS
+  and TARA systems and working with a small team to deploy a working
+  system as a demonstrator for the Irish African Partnership. Lead TCD
+  academic for this project was Prof. Jane Grimson.
+* Evaluation of QCDGrid and SRB, deployment of data grid for HPC
+  Europa for research and as a networking activity.
+* GPFS administration for our compute clusters which was one of the
+  largest ipoib enabled GPFS installations at the time of the
+  installation of IITAC 2.0.
+* Systems administration on the Bluegene/P, IITAC (1.0, 1.5 and 2.0),
+  Lonsdale and parsons compute clusters.
+
 #### Technical support for residential customers
 
+* Technical support for residential customers
+
 #### Technical consulting and web applications development
+
+* Technical consulting and web applications development
+
+### Education
+
+* MSc in High Performance Computing at Trinity College Dublin
+* BSc in Applied Sciences at Dublin Institute of Technology
+* Oatlands College Christian Brothers School, Stillorgan, Dublin
+
