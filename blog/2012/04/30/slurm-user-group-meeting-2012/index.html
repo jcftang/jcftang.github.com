@@ -5,13 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Using continuous integration systems in a team - Jimmy Tang</title>
+  <title>Slurm User Group Meeting 2012 - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
 
   
-  <meta name="description" content="Apart from the obvious unit testing code which could be fun trying to
-convince a team to use. There are things known as &#8216;Continuous
-Integration &hellip;">
+  <meta name="description" content="This time the usergroup meeting is in BSC in Spain (this place is
+cool, I&#8217;ve been at BSC for a few conferences and meetings before). I
+wish I &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +20,7 @@ Integration &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team">
+  <link rel="canonical" href="http://jcftang.github.com/blog/2012/04/30/slurm-user-group-meeting-2012">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -83,19 +83,21 @@ Integration &hellip;">
 
 
 
+  
 
 
 
 
 
 
-<article class="hentry" role="article" >
+
+<article class="hentry" role="article" data-linklog>
   
   <header>
     <h1 class="entry-title">
 
-Using Continuous Integration Systems in a Team
-
+<a href="http://www.bsc.es/marenostrum-support-services/hpc-events-trainings/others/slurm-user-group-meeting-2012">Slurm User Group Meeting 2012</a>
+<span class='linklog-marker'>&rarr;</span>
 </h1>
 
     
@@ -112,57 +114,28 @@ Using Continuous Integration Systems in a Team
   
 
 
-<time datetime="2011-12-13T07:37:00+00:00" pubdate data-updated="true">Dec 13<span>th</span>, 2011</time>
+<time datetime="2012-04-30T20:19:00+01:00" pubdate data-updated="true">Apr 30<span>th</span>, 2012</time>
         
          &bull; <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/blog/2011/12/13/using-continuous-integration-systems-in-a-team/">&infin;</a>
+         &bull; <a rel="bookmark" href="/blog/2012/04/30/slurm-user-group-meeting-2012/">&infin;</a>
       </p>
     
   </header>
 
 
 
-  <div class="entry-content"><p>Apart from the obvious unit testing code which could be fun trying to
-convince a team to use. There are things known as &#8216;Continuous
-Integration&#8217; processes and servers. The basic idea is to continually
-build and test your product automatically and report on successful and
-failed builds.</p>
+  <div class="entry-content"><p>This time the usergroup meeting is in BSC in Spain (this place is
+cool, I&#8217;ve been at BSC for a few conferences and meetings before). I
+wish I was doing some HPC right now, I&#8217;m very tempted to submit an
+abstract or two on the last two things with slurm that I was involved
+with.</p>
 
-<p>I&#8217;ve known about this methodology for long time now but I&#8217;ve never
-bothered to install a CI server since it was always for myself. In the
-past a loop in a shell script running make and or make test usually
-did the trick. Then I discovered gitbuilder which is just a small set
-of scripts for automating the process. Today I have Jenkins installed
-and I&#8217;m somewhat looking at buildbot as well.</p>
-
-<p>Jenkins appears to be the most responsive and feature rich of the
-three systems that I have played with. Buildbot looks lightweight and
-scalable.  Though I do miss the git bisect and build on a failure that
-gitbuilder provides.</p>
-
-<p>Having to work with a team that is geographically distributed
-sometimes makes idea exchanges, organising events and development
-difficult. Any tool that I can get my hands on to encourage
-collaborative work and discussion is going to be used.</p>
-
-<p>Automating the build and test process also means that it is possible
-to automate the release process. If all the &#8216;tests&#8217; pass then why not
-release it? I will need to look at integrating things with fitnesse
-next. Other benefits from using a CI process or server means that most
-if not all things get automated, this turns into a highly valuable
-source of documentation for incoming developers and
-engineers. Documentation often gets left to the end instead of being
-done on a continual basis as the project progresses.</p>
-
-<p>Hopefully the CI server won&#8217;t be used to name and shame developers in
-the group, it&#8217;s there to make sure everything is working as expected.</p>
-
-<p>Now to convince the team that building early and continually is
-actually a good idea! Having somewhat successfully kicked off some
-pairing sessions with various team members is good, but being more
-flexible and professional about what we are building is what I&#8217;m
-after.</p>
+<p>The <a href="https://github.com/jcftang/php-slurm">php-slurm</a> package needs
+some love, its somewhat in use at work. I just wish I had more time to
+fix the memory leaks. There is also
+<a href="https://github.com/jcftang/slurm-bank">slurm-bank</a> which is seeing
+some good use in work, though it could do with a rewrite in C.</p>
 </div>
 
 
@@ -185,12 +158,12 @@ after.</p>
   
 
 
-<time datetime="2011-12-13T07:37:00+00:00" pubdate data-updated="true">Dec 13<span>th</span>, 2011</time>
+<time datetime="2012-04-30T20:19:00+01:00" pubdate data-updated="true">Apr 30<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/scm/'>scm</a>, <a class='category' href='/blog/categories/team/'>team</a>
+    <a class='category' href='/blog/categories/hpc/'>hpc</a>, <a class='category' href='/blog/categories/linux/'>linux</a>
   
 </span>
 
@@ -199,7 +172,7 @@ after.</p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/" data-via="jcftang" data-counturl="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jcftang.github.com/blog/2012/04/30/slurm-user-group-meeting-2012/" data-via="jcftang" data-counturl="http://jcftang.github.com/blog/2012/04/30/slurm-user-group-meeting-2012/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -212,10 +185,8 @@ after.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2011/10/21/setting-up-my-work-macbook-air/" title="Previous Post: Setting up my work Macbook Air">&laquo; Setting up my work Macbook Air</a>
+        <a class="basic-alignment left" href="/blog/2012/04/17/mosh-an-alternative-to-ssh/" title="Previous Post: MOSH - An alternative to SSH">&laquo; MOSH - An alternative to SSH</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/" title="Next Post: Waterfall or Agile methods for delivering a project">Waterfall or Agile methods for delivering a project &raquo;</a>
       
     </p>
   </footer>
@@ -241,7 +212,7 @@ after.</p>
   <ul class="posts">
     
       <li class="related">
-        <a href="/blog/2012/04/09/prototyping-and-testing-systems/">Prototyping and testing systems</a>
+        <a href="/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/">Things not to say and to do in a project meeting</a>
       </li>
     
       <li class="related">
@@ -249,15 +220,15 @@ after.</p>
       </li>
     
       <li class="related">
-        <a href="/blog/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for HPC systems</a>
+        <a href="/blog/2012/04/17/mosh-an-alternative-to-ssh/">MOSH - An alternative to SSH</a>
       </li>
     
       <li class="related">
-        <a href="/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools/">Feeling Disconnected From Modern Software Development Tools</a>
+        <a href="/blog/2012/04/01/gitbuilder-aggregator/">Gitbuilder aggregator</a>
       </li>
     
       <li class="related">
-        <a href="/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/">Things not to say and to do in a project meeting</a>
+        <a href="/blog/2012/02/26/genetic-classification-of-populations-using-supervised-learning/">Genetic Classification of Populations Using Supervised Learning</a>
       </li>
     
   </ul>
@@ -349,7 +320,7 @@ after.</p>
 
 <section>
 <h1>QR-Code<abbr title="The word 'QR Code' is a registered trademark of DENSO WAVE INCORPORATED. It applies only for the word 'QR Code', not for image.">&trade;</abbr></h1>
-<a href="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/"><img src="http://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=|0&chco=165B94&chl=http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/" alt="post-qrcode"></a></section>
+<a href="http://jcftang.github.com/blog/2012/04/30/slurm-user-group-meeting-2012/"><img src="http://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=|0&chco=165B94&chl=http://jcftang.github.com/blog/2012/04/30/slurm-user-group-meeting-2012/" alt="post-qrcode"></a></section>
 
   
 </aside>
@@ -371,8 +342,8 @@ after.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/';
-        var disqus_url = 'http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/';
+        var disqus_identifier = 'http://jcftang.github.com/blog/2012/04/30/slurm-user-group-meeting-2012/';
+        var disqus_url = 'http://jcftang.github.com/blog/2012/04/30/slurm-user-group-meeting-2012/';
         var disqus_script = 'embed.js';
       
     (function () {
