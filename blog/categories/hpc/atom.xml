@@ -4,7 +4,7 @@
   <title><![CDATA[Category: hpc | Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/blog/categories/hpc/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-04-24T17:52:38+01:00</updated>
+  <updated>2012-05-08T15:47:11+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Slurm User Group Meeting 2012 &rarr;]]></title>
+<link href="http://www.bsc.es/marenostrum-support-services/hpc-events-trainings/others/slurm-user-group-meeting-2012"/>
+<updated>2012-04-30T20:19:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2012/04/30/slurm-user-group-meeting-2012</id>
+
+      <content type="html"><![CDATA[<p>This time the usergroup meeting is in BSC in Spain (this place is
+cool, I've been at BSC for a few conferences and meetings before). I
+wish I was doing some HPC right now, I'm very tempted to submit an
+abstract or two on the last two things with slurm that I was involved
+with.</p>
+
+<p>The <a href="https://github.com/jcftang/php-slurm">php-slurm</a> package needs
+some love, its somewhat in use at work. I just wish I had more time to
+fix the memory leaks. There is also
+<a href="https://github.com/jcftang/slurm-bank">slurm-bank</a> which is seeing
+some good use in work, though it could do with a rewrite in C.</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/04/30/slurm-user-group-meeting-2012/">&infin; Permalink</a></p>
+
+]]></content>
+    </entry>
   
     <entry>
       

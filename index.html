@@ -9,8 +9,9 @@
   <meta name="author" content="Jimmy Tang">
 
   
-  <meta name="description" content="This tool hasn&#8217;t been around for too long, but long enough to make it
-into quite a few distros. It looks like it&#8217;s a good alternative to &hellip;">
+  <meta name="description" content="It seems that git-subtree
+has been merged into the mainline git project. git-subtree is one of
+those really useful wrappers for manipulating git &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -78,6 +79,129 @@ into quite a few distros. It looks like it&#8217;s a good alternative to &hellip
   <div id="main">
     <div id="content">
       <div class="blog-index">
+  
+    
+    
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="/blog/2012/05/02/git-subtree-is-now-in-mainline-git/">Git-subtree Is Now in Mainline Git</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-02T09:27:00+01:00" pubdate data-updated="true">May 2<span>nd</span>, 2012</time>
+        
+         &bull; <a href="/blog/2012/05/02/git-subtree-is-now-in-mainline-git/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/blog/2012/05/02/git-subtree-is-now-in-mainline-git/">&infin;</a>
+      </p>
+    
+  </header>
+
+
+
+  <div class="entry-content"><p>It seems that <a href="git://github.com/apenwarr/git-subtree.git">git-subtree</a>
+has been merged into the mainline git project. <em>git-subtree</em> is one of
+those really useful wrappers for manipulating git repositories if you
+are an integrator or don&#8217;t really like git-submodule. It certainly is
+a nicer alternative to git-submodule. There is less chance of the
+person cloning a git-subtree repository messing up the checkout because
+they forgot to initialise the submodules. There is also the added
+advantage of not needing to fiddle around scripting up the git-archive
+commands for exporting the source tree for a release if you use
+git-subtree; actually git-subtree is just plain useful.</p>
+</div>
+
+
+    </article>
+  
+    
+    
+
+
+
+  
+
+
+
+
+
+
+
+    <article data-linklog>
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="http://www.bsc.es/marenostrum-support-services/hpc-events-trainings/others/slurm-user-group-meeting-2012">Slurm User Group Meeting 2012</a>
+<span class='linklog-marker'>&rarr;</span>
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-30T20:19:00+01:00" pubdate data-updated="true">Apr 30<span>th</span>, 2012</time>
+        
+         &bull; <a href="/blog/2012/04/30/slurm-user-group-meeting-2012/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/blog/2012/04/30/slurm-user-group-meeting-2012/">&infin;</a>
+      </p>
+    
+  </header>
+
+
+
+  <div class="entry-content"><p>This time the usergroup meeting is in BSC in Spain (this place is
+cool, I&#8217;ve been at BSC for a few conferences and meetings before). I
+wish I was doing some HPC right now, I&#8217;m very tempted to submit an
+abstract or two on the last two things with slurm that I was involved
+with.</p>
+
+<p>The <a href="https://github.com/jcftang/php-slurm">php-slurm</a> package needs
+some love, its somewhat in use at work. I just wish I had more time to
+fix the memory leaks. There is also
+<a href="https://github.com/jcftang/slurm-bank">slurm-bank</a> which is seeing
+some good use in work, though it could do with a rewrite in C.</p>
+</div>
+
+
+    </article>
   
     
     
@@ -670,182 +794,6 @@ Humanities and Digital Preservation aggregator before.</p>
 
     </article>
   
-    
-    
-
-
-
-  
-
-
-
-
-
-
-
-    <article data-linklog>
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0014802">Genetic Classification of Populations Using Supervised Learning</a>
-<span class='linklog-marker'>&rarr;</span>
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-02-26T21:08:00+00:00" pubdate data-updated="true">Feb 26<span>th</span>, 2012</time>
-        
-         &bull; <a href="/blog/2012/02/26/genetic-classification-of-populations-using-supervised-learning/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/blog/2012/02/26/genetic-classification-of-populations-using-supervised-learning/">&infin;</a>
-      </p>
-    
-  </header>
-
-
-
-  <div class="entry-content"><p>In the past few months, in my spare time whenever I get a chance, I&#8217;ve
-been working on a side project in work. It&#8217;s a research project
-amongst a group of people with a cool idea. The idea is to apply
-neural networks to identifying diseases, populations and traits via
-machine learning/supervised learning. I&#8217;m not entirely sure about the
-application of the technology as to how new or revolutionary it is,
-but it seems sensible that a machine is going to be very good at being
-taught how to recognise patterns so why not do it.</p>
-
-<p>I&#8217;m not directly responsible for the code for this paper, but I did go
-back and refactor most of the code in an attempt to make it a little
-presentable to the world and also much faster as a result. I hope that
-the source code will eventually see the light of day.</p>
-
-<p>Note, I am not the primary author of this presentation/paper, I just
-have an interest in the idea, code and enjoy learning and playing with
-this research.</p>
-
-<p>There will be a presentation at
-<a href="http://www.genepi.med.uni-goettingen.de/download/EMGM2012_Preliminary_Programme.pdf">EMGM</a>,
-I will be curious as to what people think. Is it a crazy good or a
-crazy bad idea? The data that is being generated is apparently good,
-though personally I would like to see more analysis being done with
-additional ANN&#8217;s or SVM&#8217;s to verify that it really is working as
-expected.</p>
-
-<p>I wonder if I can convince a CS or a Maths summer student to
-re-implement the algorithm with a different ANN or SVM library. There
-are a rake of ideas that I have that I wouldn&#8217;t mind seeing
-implemented. I just need more time!</p>
-</div>
-
-
-    </article>
-  
-    
-    
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/">Things Not to Say and to Do in a Project Meeting</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-02-23T08:13:00+00:00" pubdate data-updated="true">Feb 23<span>rd</span>, 2012</time>
-        
-         &bull; <a href="/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/">&infin;</a>
-      </p>
-    
-  </header>
-
-
-
-  <div class="entry-content"><p>Team meetings can be both productive and counter productive as most
-people find. If they are well structured with a purpose and goal then
-a lot can be achieved (most of the time).</p>
-
-<p>For explorartory meetings, it&#8217;s probably okay to have some time set
-aside for some free and open discussions. Once a goal has been agreed
-upon, it&#8217;s probably a good idea to focus on it more and steer the
-discussion to try and deliver on the goal. Having open ended
-discussions with no set goals sometimes is discouraging and sometimes
-a waste of time.</p>
-
-<p>To the point, I wanted to discuss some things not to say and do in a
-meeting which might cause a collapse in communications, these are just
-some things that I have noticed in the last few months worth of
-meetings and are based on my own experiences,</p>
-
-<ul>
-<li>Don&#8217;t assume you know everything, there will always be someone
-smarter than you. There&#8217;s nothing wrong with being an expert in your
-own area, but there are times where you just need to trust others to
-deliver.</li>
-<li>Don&#8217;t pick on other team members for (possibly) not delivering, this
-is hugely demoralising. It&#8217;s better to ask why, and if possible does
-that team member or members need help to deliver.</li>
-<li>In real life, does anyone really use waterfall methods to deliver a
-project?</li>
-<li>Don&#8217;t try and do micro-management if you are clearly middle or even
-senior management, but at least describe tasks in the same language
-as the stakeholder and developer so that things don&#8217;t get lost in
-translation.</li>
-<li>Do have a plan if the series of meetings are to last a few months if
-there are long term goals to be achieved. If it&#8217;s not a plan, then
-at least have a list of todo, work in progress and done tasks.</li>
-<li>Don&#8217;t assign tasks without deadlines (realistic ones).</li>
-<li>Don&#8217;t assume you are on the same page in discussions unless you are
-confident that everyone at the meeting has common language and
-understands what is being discussed. People come and go, so you just
-have to be aware.</li>
-</ul>
-
-
-<p>Most if not all of the above list of things is common sense, there
-isn&#8217;t anything too special that you need to do to succeed at
-communicating.</p>
-</div>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -866,6 +814,14 @@ communicating.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/05/02/git-subtree-is-now-in-mainline-git/">git-subtree is now in mainline git</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/04/30/slurm-user-group-meeting-2012/">Slurm User Group Meeting 2012</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/04/17/mosh-an-alternative-to-ssh/">MOSH - An alternative to SSH</a>
       </li>
     
@@ -875,14 +831,6 @@ communicating.</p>
     
       <li class="post">
         <a href="/blog/2012/04/09/prototyping-and-testing-systems/">Prototyping and testing systems</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/04/01/gitbuilder-aggregator/">Gitbuilder aggregator</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/">Dogfooding your own project to accelerate development</a>
       </li>
     
   </ul>
