@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-05-08T15:47:11+01:00</updated>
+  <updated>2012-05-16T18:47:18+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,53 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Is JAVA really the only game in town for building Digital Preservation Systems?]]></title>
+<link href="http://jcftang.github.com/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/"/>
+<updated>2012-05-16T18:24:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems</id>
+
+      <content type="html"><![CDATA[<p>In the world of digital preservation and repositories it seems that
+there is primarily fedora-commons, dspace, eprints and one or two
+other solutions out there for building up digital preservation
+systems. The one that really stands out as a framework and toolkit for
+building bigger and more complex systems is fedora-commons.</p>
+
+<p>It also happens to be written in JAVA and is a fairly big and complex
+system which implements best-practices for storing digital objects
+with the sole purpose of preservation. In one of the projects that I
+have been working with some interns at work; we have treated
+fedora-commons as just storage system where we interface to the
+preservation repository via the available REST api.</p>
+
+<p>By using the API it was possible to use node.js to implement the
+servers which contained all the business logic. Project Hydra does
+something similar or rather we are doing something similar to Project
+Hydra, by accident much to my suprise. Hydra uses Ruby on Rails for
+its middleware implementation, there doesn&#8217;t seem to be much JAVA
+there either.</p>
+
+<p>I get the feeling that this decoupled approach with REST servers and
+clients to be pretty attractive to anyone who wishes to implement
+these types systems. It is interesting to see that the applications
+aren&#8217;t being written in JAVA. At least that is what I can see with the
+projects that use Hydra (which is sort of the point). Maybe good
+enough practice is fine for most use cases.</p>
+
+<p>This makes me wonder how many digital preservation projects out there
+really use 100% JAVA up to delivery to the client? How many projects
+out there are really just mashups of different types of technology
+(well planned mashups). Is it because of &#8220;best practice&#8221; for
+implementing enterprise applications that JAVA gets so much focus and
+attention?</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/">&infin; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -940,100 +987,6 @@ pairing sessions with various team members is good, but being more
 flexible and professional about what we are building is what I&#8217;m
 after.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/blog/2011/12/13/using-continuous-integration-systems-in-a-team/">&infin; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Setting up my work Macbook Air]]></title>
-<link href="http://jcftang.github.com/blog/2011/10/21/setting-up-my-work-macbook-air/"/>
-<updated>2011-10-21T08:21:00+01:00</updated>
-<id>http://jcftang.github.com/blog/2011/10/21/setting-up-my-work-macbook-air</id>
-
-      <content type="html"><![CDATA[<p>Everytime when I install, reinstall or setup a mac desktop or laptop I
-always tend to install the same set of software that I was using. As time
-goes on I change what I like to install and what to use. So I&#8217;ve been
-keeping notes and logs of that I usually install first.</p>
-
-<p>For my new job I will mainly be writing documents, writing/modify JAVA
-code and other bits and pieces that an integrator/architect or release
-engineer might want to do.</p>
-
-<p>I will be trying to automate builds, automate tests, assert that the
-software must function as expected and so on.</p>
-
-<p>So down to the list of the things that I have initially installed:</p>
-
-<h2>Binary packages</h2>
-
-<p>Packages that I just grabbed from their respective websites</p>
-
-<ul>
-<li>Xcode</li>
-<li>JDK - apple developer site</li>
-<li>Google Chrome</li>
-<li>GitHub Mac</li>
-<li>Macports</li>
-<li>Eclipse - classic</li>
-<li>Perian</li>
-<li>iTerm2</li>
-</ul>
-
-
-<h2>Ruby related packages</h2>
-
-<ul>
-<li>rvm</li>
-<li>showoff</li>
-<li>git-scribe</li>
-</ul>
-
-
-<h2>Macports</h2>
-
-<ul>
-<li>keychain</li>
-<li>git-core</li>
-<li>ikiwiki</li>
-<li>shiftit</li>
-<li>emacs-app</li>
-<li>bash-completion</li>
-<li>mercurial</li>
-<li>mr</li>
-<li>ffmpeg</li>
-<li>mplayer-devel</li>
-<li>dcraw</li>
-<li>detox</li>
-<li>dos2unix</li>
-<li>asciidoc</li>
-<li>fossil</li>
-<li>zsync</li>
-<li>macvim</li>
-<li>aria2</li>
-<li>openssh</li>
-<li>org-mode</li>
-<li>tmux</li>
-</ul>
-
-
-<p>The Macports list isn&#8217;t exactly complete, but it&#8217;s pretty close to
-what I had explicitly installed. Sadly I tried to install gcc45 and
-gcc46 because I wanted to play with some codes which needed a fortran
-compiler, this failed to install due to some bootstrapping issue of
-the fortran compiler during the build.</p>
-
-<p>I&#8217;ve yet to install Haskell and some of the related tools which are
-pretty handy for a lazy user. There is also the need for installing
-Office for OSX. I wish I could just use plain text.</p>
-
-<p>At somepoint I should grab my previous lists and see what I have
-added/removed to my toolbox over the years. So far Lion hasn&#8217;t been
-too bad, but I have yet to develop anything or seriously tried to do
-anything too technical on this system so far.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2011/10/21/setting-up-my-work-macbook-air/">&infin; Permalink</a></p>]]></content>
     </entry>
   
 </feed>

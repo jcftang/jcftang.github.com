@@ -117,12 +117,18 @@
         <lastmod>2012-05-08T15:45:28+01:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://jcftang.github.com/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/
+        </loc>
+        <lastmod>2012-05-16T18:46:34+01:00</lastmod>
+    </url>
+    <url>
         <loc>http://jcftang.github.com/about/</loc>
         <lastmod>2012-04-24T17:52:23+01:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/blog/archives/</loc>
-        <lastmod>2012-05-08T15:45:28+01:00</lastmod>
+        <lastmod>2012-05-16T18:46:34+01:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/blog/categories/</loc>
@@ -130,6 +136,6 @@
     </url>
     <url>
         <loc>http://jcftang.github.com/</loc>
-        <lastmod>2012-05-08T15:45:28+01:00</lastmod>
+        <lastmod>2012-05-16T18:46:34+01:00</lastmod>
     </url>
 </urlset>
