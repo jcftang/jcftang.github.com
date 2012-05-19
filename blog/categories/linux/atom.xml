@@ -4,7 +4,7 @@
   <title><![CDATA[Category: linux | Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-04-30T20:30:47+01:00</updated>
+  <updated>2012-05-19T13:28:53+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -12,6 +12,63 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[ceph gets a refresh &rarr;]]></title>
+<link href="http://ceph.com/community/announcing-the-ceph-com-refresh/"/>
+<updated>2012-05-19T13:08:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2012/05/19/ceph-gets-a-refresh</id>
+
+      <content type="html"><![CDATA[<p>I've been keeping an eye on <em>ceph</em> for quite sometime now. It looks
+like <em>ceph</em> is almost ready for production usage. There is now a
+support infrastructure and a commercial company backing the
+product. So far the OSD, MDS and MON components all run on Linux since
+most of the implementation appears to be in the user land I wonder if
+it will be ported to non-linux platforms. It's be quite nifty if one
+could have a heterogeneous network of servers providing storage.</p>
+
+<p>From first glance at shadowing one of the guys in work with this
+filesystem, it looks good. It's missing some documentation right now
+apart from that it's going to be a great competitor in the distributed
+filesystems arena. It will shake up GPFS and Lustre for sure, it might
+even give glusterfs a run for its money in the near future.</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/05/19/ceph-gets-a-refresh/">&infin; Permalink</a></p>
+
+]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[git-subtree is now in mainline git]]></title>
+<link href="http://jcftang.github.com/blog/2012/05/02/git-subtree-is-now-in-mainline-git/"/>
+<updated>2012-05-02T09:27:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2012/05/02/git-subtree-is-now-in-mainline-git</id>
+
+      <content type="html"><![CDATA[<p>It seems that <a href="git://github.com/apenwarr/git-subtree.git">git-subtree</a>
+has been merged into the mainline git project. <em>git-subtree</em> is one of
+those really useful wrappers for manipulating git repositories if you
+are an integrator or don't really like git-submodule. It certainly is
+a nicer alternative to git-submodule. There is less chance of the
+person cloning a git-subtree repository messing up the checkout because
+they forgot to initialise the submodules. There is also the added
+advantage of not needing to fiddle around scripting up the git-archive
+commands for exporting the source tree for a release if you use
+git-subtree; actually git-subtree is just plain useful.</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/05/02/git-subtree-is-now-in-mainline-git/">&infin; Permalink</a></p>
+
+]]></content>
+    </entry>
   
     <entry>
       
@@ -121,87 +178,6 @@ slow if you have lots of posts to classify. It would be recommended
 that rb-gsl be installed to accelerate the classification process.</p>
 
 <p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/03/08/enabling-latent-semantic-indexing-for-octopress/">&infin; Permalink</a></p>
-
-]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Scientific Linux 6.2 is out &rarr;]]></title>
-<link href="http://www.scientificlinux.org/distributions/6x/62/"/>
-<updated>2012-02-19T18:00:00+00:00</updated>
-<id>http://jcftang.github.com/blog/2012/02/19/scientific-linux-6-dot-2-is-out</id>
-
-      <content type="html"><![CDATA[<p>SL6.2 has been out for a few days now, I haven't had a chance to
-really take a look at it, since the more recent SL6 installs I
-maintain tend to be tracking the 6x releases. Hopefully SL will try
-and keep inline with the upstreams support schedule.</p>
-
-<p>I've a personal preference for deploying SL over CentOS (or any other
-recompiles of RHEL). SL tends to be a bit more polished in terms of
-not breaking older installs, i.e. the upstream doesn't move point
-releases around as CentOS does, SL does not force the end user to run
-the latest stable or continually upgrade to the latest point release
-to get updates (due to the weird convention CentOS seems to have with
-their archives).</p>
-
-<p>It's out, I need to look at it again, especially since ZFS is getting
-closer to being ready for a bit more general usage on the server side
-and the project that I am working will be needing some machines to be
-installed and setup soon.</p>
-
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/19/scientific-linux-6-dot-2-is-out/">&infin; Permalink</a></p>
-
-]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Rasberry Pi - what I would use it for? &rarr;]]></title>
-<link href="http://www.raspberrypi.org/"/>
-<updated>2012-02-19T14:46:00+00:00</updated>
-<id>http://jcftang.github.com/blog/2012/02/19/rasberry-pi-what-i-would-use-it-for</id>
-
-      <content type="html"><![CDATA[<p>At the time of writing it seems that the Raspberry Pi site is down,
-probably suffering from a slashdot effect. I would imagine almost
-every nerd, sheevaplug developer, OLPC developer, DIY'ers who want to
-build their own home media centres are looking to get a Raspberry Pi
-right now.</p>
-
-<p>So what would I use one of these mini-computers for? I can think up a
-range of cool applications for this device, assuming I can order a few
-of these to play with. I've got ideas such as:</p>
-
-<ul>
-<li>A Tahoe-LAFS storage node, I could attach a few HDD's to one of these
-devices and run Tahoe-LAFS on it, these computers are cheap enough
-and have a low enough power consumption that I could just have them
-on all the time.</li>
-<li>A Babeld node, I could have a few of these devices dotted around my
-house/apartment to build a mesh network.</li>
-<li>A portable computer, not quite a tablet PC with a screen, but it has
-enough connectivity to wire it up to a modern monitor or a TV.</li>
-<li>A penetration testing device, just wire it up with a few DC
-batteries, plug in a wireless card, wrap it up in a water proof
-package. Power on, and see how far you can throw it at your target,
-I can see endless possibilities for this device for pen-testing.</li>
-</ul>
-
-
-<p>I wonder if the device will ever be able to be powered via the USB
-port or the the ethernet port. I can see some interesting uses for
-this device in data centres for monitoring the network, power
-consumption and a host of other things.</p>
-
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/19/rasberry-pi-what-i-would-use-it-for/">&infin; Permalink</a></p>
 
 ]]></content>
     </entry>

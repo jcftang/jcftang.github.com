@@ -5,12 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Why Linux isn't the only platform to target when building applications - Jimmy Tang</title>
+  <title>Is JAVA really the only game in town for building Digital Preservation Systems? - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
 
   
-  <meta name="description" content="Why would one want to target other platforms when building applications
-on the server side? This came out of a conversation with the ex-CTO of Creme &hellip;">
+  <meta name="description" content="In the world of digital preservation and repositories it seems that
+there is primarily fedora-commons, dspace, eprints and one or two
+other solutions &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +20,7 @@ on the server side? This came out of a conversation with the ex-CTO of Creme &he
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications">
+  <link rel="canonical" href="http://jcftang.github.com/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -93,7 +94,7 @@ on the server side? This came out of a conversation with the ex-CTO of Creme &he
   <header>
     <h1 class="entry-title">
 
-Why Linux Isn't the Only Platform to Target When Building Applications
+Is JAVA Really the Only Game in Town for Building Digital Preservation Systems?
 
 </h1>
 
@@ -111,79 +112,50 @@ Why Linux Isn't the Only Platform to Target When Building Applications
   
 
 
-<time datetime="2012-02-16T09:33:00+00:00" pubdate data-updated="true">Feb 16<span>th</span>, 2012</time>
+<time datetime="2012-05-16T18:24:00+01:00" pubdate data-updated="true">May 16<span>th</span>, 2012</time>
         
          &bull; <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">&infin;</a>
+         &bull; <a rel="bookmark" href="/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/">&infin;</a>
       </p>
     
   </header>
 
 
 
-  <div class="entry-content"><p>Why would one want to target other platforms when building applications
-on the server side?</p>
+  <div class="entry-content"><p>In the world of digital preservation and repositories it seems that
+there is primarily fedora-commons, dspace, eprints and one or two
+other solutions out there for building up digital preservation
+systems. The one that really stands out as a framework and toolkit for
+building bigger and more complex systems is fedora-commons.</p>
 
-<p>This came out of a conversation with the ex-CTO of Creme software (he
-is also a friend of mine), the conversation started out with why I
-like to use Macs and OSX as my laptop or workstation. I&#8217;ve been a long
-time Linux user of pretty much most of the major distributions ranging
-from RHEL, Debian/Ubuntu, Gentoo, ArchLinux as well as a number of
-other derivatives, not to mention other systems like the BSD&#8217;s which I
-have a soft spot for.</p>
+<p>It also happens to be written in JAVA and is a fairly big and complex
+system which implements best-practices for storing digital objects
+with the sole purpose of preservation. In one of the projects that I
+have been working with some interns at work; we have treated
+fedora-commons as just storage system where we interface to the
+preservation repository via the available REST api.</p>
 
-<p>I interchange the terms Linux and Distros quite a bit in this post.</p>
+<p>By using the API it was possible to use node.js to implement the
+servers which contained all the business logic. Project Hydra does
+something similar or rather we are doing something similar to Project
+Hydra, by accident much to my suprise. Hydra uses Ruby on Rails for
+its middleware implementation, there doesn&#8217;t seem to be much JAVA
+there either.</p>
 
-<p>Some of the things that didn&#8217;t like with the Linux&#8217;s was that not all
-my hardware would be supported all the time, the distro&#8217;s sometimes
-think that it&#8217;s a good idea to completely change how lowlevel systems
-work in favour of <em>what&#8217;s hot right now</em>, sometimes the lack of long
-term support for security updates (not package updates to fix security
-problems) does make it more difficult to plan and deploy. The
-perceived flexibility sometimes causes headaches with migration plans
-and maintanence.</p>
+<p>I get the feeling that this decoupled approach with REST servers and
+clients to be pretty attractive to anyone who wishes to implement
+these types systems. It is interesting to see that the applications
+aren&#8217;t being written in JAVA. At least that is what I can see with the
+projects that use Hydra (which is sort of the point). Maybe good
+enough practice is fine for most use cases.</p>
 
-<p>Of course there are things that I like, the access to the source code
-and packaging to fix and redeploy packages. The stability and
-reliability that can be achieved is attractive if everything is
-automated and planned out (though too much automation can be bad too).</p>
-
-<p>To get back to the original point of why you wouldn&#8217;t want to target
-Linux specifically when building applications? Unless you have a
-strong motivating reason to write code that <em>specifically</em> requires a
-feature of Linux (or any other operating system), then you really
-ought to be writing code that adheres to at least some POSIX or cross
-platform standard, and pick libraries that are known to have good
-cross platform compatibility. There is nothing to gain from writing
-platform specific codes in the long run, the platform might hide
-issues from the developer if it is too clever. Linux or more
-specifically the distros might change various behaviour of the
-underlying system, and if your code is tied down to particular
-features of the underlying system then you will have lots of fun
-migrating.</p>
-
-<p>It&#8217;s just bad practice to rely on system specific behaviour which
-isn&#8217;t portable (or maintainable) going forward in a project. To
-mitigate some of this, one would want to at least try to use a
-continuous build systems such as <em>gitbuilder</em>, <em>buildbot</em> or <em>jenkins</em>
-on a bunch of <strong>different</strong> architectures and platforms. This will
-reveal portability issues and more often than not, subtle bugs in your
-code which you probably didn&#8217;t see as a result of your development
-system being too smart for you!</p>
-
-<p>There isn&#8217;t much of an excuse not to do continuous builds and testings
-across different Linux, BSD and Solaris distributions these
-days. Diskspace and compute power is cheap, there are free and
-opensource virtualisation technologies out there to provide you with a
-means to run different distributions for testing on a single
-machine. The problem will be the upfront manpower needed to setup such
-a system.</p>
-
-<p>In the long run targetting at least two platforms will make your code
-base far more portable and hopefully more maintainable as you will end
-up making sure you write code once that runs on many systems with
-minimal changes needed when a new platform arises.</p>
+<p>This makes me wonder how many digital preservation projects out there
+really use 100% JAVA up to delivery to the client? How many projects
+out there are really just mashups of different types of technology
+(well planned mashups). Is it because of &#8220;best practice&#8221; for
+implementing enterprise applications that JAVA gets so much focus and
+attention?</p>
 </div>
 
 
@@ -206,12 +178,12 @@ minimal changes needed when a new platform arises.</p>
   
 
 
-<time datetime="2012-02-16T09:33:00+00:00" pubdate data-updated="true">Feb 16<span>th</span>, 2012</time>
+<time datetime="2012-05-16T18:24:00+01:00" pubdate data-updated="true">May 16<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/osx/'>osx</a>, <a class='category' href='/blog/categories/scm/'>scm</a>
+    <a class='category' href='/blog/categories/java/'>java</a>, <a class='category' href='/blog/categories/scm/'>scm</a>
   
 </span>
 
@@ -220,7 +192,7 @@ minimal changes needed when a new platform arises.</p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jcftang.github.com/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/" data-via="jcftang" data-counturl="http://jcftang.github.com/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jcftang.github.com/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/" data-via="jcftang" data-counturl="http://jcftang.github.com/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -233,10 +205,10 @@ minimal changes needed when a new platform arises.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/" title="Previous Post: cports for building applications and libraries for HPC systems">&laquo; cports for building applications and libraries for HPC systems</a>
+        <a class="basic-alignment left" href="/blog/2012/05/02/git-subtree-is-now-in-mainline-git/" title="Previous Post: git-subtree is now in mainline git">&laquo; git-subtree is now in mainline git</a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/02/19/rasberry-pi-what-i-would-use-it-for/" title="Next Post: Rasberry Pi - what I would use it for?">Rasberry Pi - what I would use it for? &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2012/05/19/ceph-gets-a-refresh/" title="Next Post: ceph gets a refresh">ceph gets a refresh &raquo;</a>
       
     </p>
   </footer>
@@ -262,11 +234,7 @@ minimal changes needed when a new platform arises.</p>
   <ul class="posts">
     
       <li class="related">
-        <a href="/blog/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for HPC systems</a>
-      </li>
-    
-      <li class="related">
-        <a href="/blog/2012/04/09/prototyping-and-testing-systems/">Prototyping and testing systems</a>
+        <a href="/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux isn't the only platform to target when building applications</a>
       </li>
     
       <li class="related">
@@ -274,11 +242,15 @@ minimal changes needed when a new platform arises.</p>
       </li>
     
       <li class="related">
-        <a href="/blog/2011/12/13/using-continuous-integration-systems-in-a-team/">Using continuous integration systems in a team</a>
+        <a href="/blog/2012/04/09/prototyping-and-testing-systems/">Prototyping and testing systems</a>
       </li>
     
       <li class="related">
-        <a href="/blog/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years/">Red Hat Enterprise Linux Life Cycle Extended to Ten Years</a>
+        <a href="/blog/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for HPC systems</a>
+      </li>
+    
+      <li class="related">
+        <a href="/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/">Dogfooding your own project to accelerate development</a>
       </li>
     
   </ul>
@@ -370,7 +342,7 @@ minimal changes needed when a new platform arises.</p>
 
 <section>
 <h1>QR-Code<abbr title="The word 'QR Code' is a registered trademark of DENSO WAVE INCORPORATED. It applies only for the word 'QR Code', not for image.">&trade;</abbr></h1>
-<a href="http://jcftang.github.com/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/"><img src="http://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=|0&chco=165B94&chl=http://jcftang.github.com/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/" alt="post-qrcode"></a></section>
+<a href="http://jcftang.github.com/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/"><img src="http://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=|0&chco=165B94&chl=http://jcftang.github.com/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/" alt="post-qrcode"></a></section>
 
   
 </aside>
@@ -392,8 +364,8 @@ minimal changes needed when a new platform arises.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/';
-        var disqus_url = 'http://jcftang.github.com/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/';
+        var disqus_identifier = 'http://jcftang.github.com/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/';
+        var disqus_url = 'http://jcftang.github.com/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/';
         var disqus_script = 'embed.js';
       
     (function () {

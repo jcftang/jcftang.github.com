@@ -4,7 +4,7 @@
   <title><![CDATA[Category: java | Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-04-30T20:30:47+01:00</updated>
+  <updated>2012-05-19T13:28:53+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Is JAVA really the only game in town for building Digital Preservation Systems?]]></title>
+<link href="http://jcftang.github.com/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/"/>
+<updated>2012-05-16T18:24:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems</id>
+
+      <content type="html"><![CDATA[<p>In the world of digital preservation and repositories it seems that
+there is primarily fedora-commons, dspace, eprints and one or two
+other solutions out there for building up digital preservation
+systems. The one that really stands out as a framework and toolkit for
+building bigger and more complex systems is fedora-commons.</p>
+
+<p>It also happens to be written in JAVA and is a fairly big and complex
+system which implements best-practices for storing digital objects
+with the sole purpose of preservation. In one of the projects that I
+have been working with some interns at work; we have treated
+fedora-commons as just storage system where we interface to the
+preservation repository via the available REST api.</p>
+
+<p>By using the API it was possible to use node.js to implement the
+servers which contained all the business logic. Project Hydra does
+something similar or rather we are doing something similar to Project
+Hydra, by accident much to my suprise. Hydra uses Ruby on Rails for
+its middleware implementation, there doesn't seem to be much JAVA
+there either.</p>
+
+<p>I get the feeling that this decoupled approach with REST servers and
+clients to be pretty attractive to anyone who wishes to implement
+these types systems. It is interesting to see that the applications
+aren't being written in JAVA. At least that is what I can see with the
+projects that use Hydra (which is sort of the point). Maybe good
+enough practice is fine for most use cases.</p>
+
+<p>This makes me wonder how many digital preservation projects out there
+really use 100% JAVA up to delivery to the client? How many projects
+out there are really just mashups of different types of technology
+(well planned mashups). Is it because of "best practice" for
+implementing enterprise applications that JAVA gets so much focus and
+attention?</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/">&infin; Permalink</a></p>
+
+]]></content>
+    </entry>
   
     <entry>
       

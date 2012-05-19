@@ -4,7 +4,7 @@
   <title><![CDATA[Category: scm | Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/blog/categories/scm/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-04-30T20:30:47+01:00</updated>
+  <updated>2012-05-19T13:28:53+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -12,6 +12,83 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Is JAVA really the only game in town for building Digital Preservation Systems?]]></title>
+<link href="http://jcftang.github.com/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/"/>
+<updated>2012-05-16T18:24:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems</id>
+
+      <content type="html"><![CDATA[<p>In the world of digital preservation and repositories it seems that
+there is primarily fedora-commons, dspace, eprints and one or two
+other solutions out there for building up digital preservation
+systems. The one that really stands out as a framework and toolkit for
+building bigger and more complex systems is fedora-commons.</p>
+
+<p>It also happens to be written in JAVA and is a fairly big and complex
+system which implements best-practices for storing digital objects
+with the sole purpose of preservation. In one of the projects that I
+have been working with some interns at work; we have treated
+fedora-commons as just storage system where we interface to the
+preservation repository via the available REST api.</p>
+
+<p>By using the API it was possible to use node.js to implement the
+servers which contained all the business logic. Project Hydra does
+something similar or rather we are doing something similar to Project
+Hydra, by accident much to my suprise. Hydra uses Ruby on Rails for
+its middleware implementation, there doesn't seem to be much JAVA
+there either.</p>
+
+<p>I get the feeling that this decoupled approach with REST servers and
+clients to be pretty attractive to anyone who wishes to implement
+these types systems. It is interesting to see that the applications
+aren't being written in JAVA. At least that is what I can see with the
+projects that use Hydra (which is sort of the point). Maybe good
+enough practice is fine for most use cases.</p>
+
+<p>This makes me wonder how many digital preservation projects out there
+really use 100% JAVA up to delivery to the client? How many projects
+out there are really just mashups of different types of technology
+(well planned mashups). Is it because of "best practice" for
+implementing enterprise applications that JAVA gets so much focus and
+attention?</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/">&infin; Permalink</a></p>
+
+]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[git-subtree is now in mainline git]]></title>
+<link href="http://jcftang.github.com/blog/2012/05/02/git-subtree-is-now-in-mainline-git/"/>
+<updated>2012-05-02T09:27:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2012/05/02/git-subtree-is-now-in-mainline-git</id>
+
+      <content type="html"><![CDATA[<p>It seems that <a href="git://github.com/apenwarr/git-subtree.git">git-subtree</a>
+has been merged into the mainline git project. <em>git-subtree</em> is one of
+those really useful wrappers for manipulating git repositories if you
+are an integrator or don't really like git-submodule. It certainly is
+a nicer alternative to git-submodule. There is less chance of the
+person cloning a git-subtree repository messing up the checkout because
+they forgot to initialise the submodules. There is also the added
+advantage of not needing to fiddle around scripting up the git-archive
+commands for exporting the source tree for a release if you use
+git-subtree; actually git-subtree is just plain useful.</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/05/02/git-subtree-is-now-in-mainline-git/">&infin; Permalink</a></p>
+
+]]></content>
+    </entry>
   
     <entry>
       
@@ -156,112 +233,6 @@ aren't many requirements due to the schedule, it's worth taking this
 approach until hard requirements get delivered.</p>
 
 <p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/">&infin; Permalink</a></p>
-
-]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[git rerere for long lived feature branches &rarr;]]></title>
-<link href="http://progit.org/2010/03/08/rerere.html"/>
-<updated>2012-03-11T11:45:00+00:00</updated>
-<id>http://jcftang.github.com/blog/2012/03/11/git-rerere-for-long-lived-feature-branches</id>
-
-      <content type="html"><![CDATA[<p>I turned this feature on for a few of my git repos but I had
-completely forgotten about it. As far as I recall the feature has been
-around for a few years now. It can be turned on globally by doing</p>
-
-<pre><code>git config --global rerere.enabled 1
-</code></pre>
-
-<p>It pretty much automates the resolution of conflicts in long lived
-branches. I've been lazy recently and I have just doing merges instead
-rebasing, which lead me to re-discover <em>git rerere</em>.</p>
-
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/03/11/git-rerere-for-long-lived-feature-branches/">&infin; Permalink</a></p>
-
-]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Why Linux isn't the only platform to target when building applications]]></title>
-<link href="http://jcftang.github.com/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/"/>
-<updated>2012-02-16T09:33:00+00:00</updated>
-<id>http://jcftang.github.com/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications</id>
-
-      <content type="html"><![CDATA[<p>Why would one want to target other platforms when building applications
-on the server side?</p>
-
-<p>This came out of a conversation with the ex-CTO of Creme software (he
-is also a friend of mine), the conversation started out with why I
-like to use Macs and OSX as my laptop or workstation. I've been a long
-time Linux user of pretty much most of the major distributions ranging
-from RHEL, Debian/Ubuntu, Gentoo, ArchLinux as well as a number of
-other derivatives, not to mention other systems like the BSD's which I
-have a soft spot for.</p>
-
-<p>I interchange the terms Linux and Distros quite a bit in this post.</p>
-
-<p>Some of the things that didn't like with the Linux's was that not all
-my hardware would be supported all the time, the distro's sometimes
-think that it's a good idea to completely change how lowlevel systems
-work in favour of <em>what's hot right now</em>, sometimes the lack of long
-term support for security updates (not package updates to fix security
-problems) does make it more difficult to plan and deploy. The
-perceived flexibility sometimes causes headaches with migration plans
-and maintanence.</p>
-
-<p>Of course there are things that I like, the access to the source code
-and packaging to fix and redeploy packages. The stability and
-reliability that can be achieved is attractive if everything is
-automated and planned out (though too much automation can be bad too).</p>
-
-<p>To get back to the original point of why you wouldn't want to target
-Linux specifically when building applications? Unless you have a
-strong motivating reason to write code that <em>specifically</em> requires a
-feature of Linux (or any other operating system), then you really
-ought to be writing code that adheres to at least some POSIX or cross
-platform standard, and pick libraries that are known to have good
-cross platform compatibility. There is nothing to gain from writing
-platform specific codes in the long run, the platform might hide
-issues from the developer if it is too clever. Linux or more
-specifically the distros might change various behaviour of the
-underlying system, and if your code is tied down to particular
-features of the underlying system then you will have lots of fun
-migrating.</p>
-
-<p>It's just bad practice to rely on system specific behaviour which
-isn't portable (or maintainable) going forward in a project. To
-mitigate some of this, one would want to at least try to use a
-continuous build systems such as <em>gitbuilder</em>, <em>buildbot</em> or <em>jenkins</em>
-on a bunch of <strong>different</strong> architectures and platforms. This will
-reveal portability issues and more often than not, subtle bugs in your
-code which you probably didn't see as a result of your development
-system being too smart for you!</p>
-
-<p>There isn't much of an excuse not to do continuous builds and testings
-across different Linux, BSD and Solaris distributions these
-days. Diskspace and compute power is cheap, there are free and
-opensource virtualisation technologies out there to provide you with a
-means to run different distributions for testing on a single
-machine. The problem will be the upfront manpower needed to setup such
-a system.</p>
-
-<p>In the long run targetting at least two platforms will make your code
-base far more portable and hopefully more maintainable as you will end
-up making sure you write code once that runs on many systems with
-minimal changes needed when a new platform arises.</p>
-
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">&infin; Permalink</a></p>
 
 ]]></content>
     </entry>
