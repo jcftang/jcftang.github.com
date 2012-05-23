@@ -5,13 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Dogfooding your own project to accelerate development - Jimmy Tang</title>
+  <title>DRIS Workflows just got uploaded to github - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
 
   
-  <meta name="description" content="Should you dogfood your own project that you are developing? The
-answer is probably yes, especially if you have no clear cut
-requirements from the &hellip;">
+  <meta name="description" content="After almost 3 months supervising and working with two interns I&#8217;ve
+finally uploaded their work under the GPLv2 License. https://github.com/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +19,7 @@ requirements from the &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development">
+  <link rel="canonical" href="http://jcftang.github.com/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -94,7 +93,7 @@ requirements from the &hellip;">
   <header>
     <h1 class="entry-title">
 
-Dogfooding Your Own Project to Accelerate Development
+DRIS Workflows Just Got Uploaded to Github
 
 </h1>
 
@@ -112,40 +111,53 @@ Dogfooding Your Own Project to Accelerate Development
   
 
 
-<time datetime="2012-03-15T19:31:00+00:00" pubdate data-updated="true">Mar 15<span>th</span>, 2012</time>
+<time datetime="2012-05-21T21:19:00+01:00" pubdate data-updated="true">May 21<span>st</span>, 2012</time>
         
          &bull; <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/">&infin;</a>
+         &bull; <a rel="bookmark" href="/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github/">&infin;</a>
       </p>
     
   </header>
 
 
 
-  <div class="entry-content"><p>Should you dogfood your own project that you are developing? The
-answer is probably yes, especially if you have no clear cut
-requirements from the stakeholder in a project with a greenfield for
-development. There is a lot to be said about having a working
-implementation that can be presented and refined.</p>
+  <div class="entry-content"><p>After almost 3 months supervising and working with two interns I&#8217;ve
+finally uploaded their work under the GPLv2 License.</p>
 
-<p>Sometimes the project that you are working on won&#8217;t have clear
-requirements for implementation, so you should probably take basic
-assumed cases and run with it. Starting early to see what works and
-what doesn&#8217;t work is a pragmatic approach which the waterfall crowd
-might not like. But hey, an implementation speaks for itself.</p>
+<ul>
+<li><a href="https://github.com/jcftang/dri-api">https://github.com/jcftang/dri-api</a></li>
+<li><a href="https://github.com/jcftang/dris-workflows">https://github.com/jcftang/dris-workflows</a></li>
+<li><a href="https://github.com/jcftang/dris-workflows-site">https://github.com/jcftang/dris-workflows-site</a></li>
+<li><a href="https://github.com/jcftang/node-dri">https://github.com/jcftang/node-dri</a></li>
+<li><a href="https://github.com/jcftang/node-fedora">https://github.com/jcftang/node-fedora</a></li>
+</ul>
 
-<p>If you don&#8217;t use what you develop, then it is very hard to relate to
-the customer/end-user in the long run. On the note of dogfooding your
-own work, sometimes best-practice might cost too much in terms of time
-and money, sometimes good-enough practice might just be enough to
-deliver a functioning product.</p>
 
-<p>Accelerating development by dogfooding your own work and using
-good-enough practices should increase throughput of development, but
-not necessarily quality. Again in a greenfield project where there
-aren&#8217;t many requirements due to the schedule, it&#8217;s worth taking this
-approach until hard requirements get delivered.</p>
+<p>Please note that the packages above do not represent DRI at all, they
+just ended up getting labelled that way for whatever reason.</p>
+
+<p>So what are the above packages? Well they are an attempt at creating a
+workflow for the DRIS team in TCD who work on digital preservation,
+digitisation, cataloging and a host of other tasks which I probably
+don&#8217;t know about.</p>
+
+<p>The prototype system consists of the DRIS Workflows package and the
+API server. The system currently target the problem of ingesting
+objects. It tries to map what the librarians/archivists at TCD are
+doing to a single interface to increase throughput and quality of the
+work (amongst other things).</p>
+
+<p>It&#8217;s also able to export the internal meta-data as Dublin-Core, it&#8217;s
+not great right now and requires more work and there is a small start
+made on MODS as well. It does demonstrate what the interns managed to
+achieve in 3 months time with a loose spec on what needed to be
+done. The basic design and architecture of the system isn&#8217;t too
+different from Hydra, it was very much by accident that we ended up
+some similar ideas.</p>
+
+<p>The primary purpose of this post is to share the code! and as per
+usual, hope someone finds it useful.</p>
 </div>
 
 
@@ -168,12 +180,12 @@ approach until hard requirements get delivered.</p>
   
 
 
-<time datetime="2012-03-15T19:31:00+00:00" pubdate data-updated="true">Mar 15<span>th</span>, 2012</time>
+<time datetime="2012-05-21T21:19:00+01:00" pubdate data-updated="true">May 21<span>st</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/scm/'>scm</a>, <a class='category' href='/blog/categories/team/'>team</a>
+    <a class='category' href='/blog/categories/team/'>team</a>
   
 </span>
 
@@ -182,7 +194,7 @@ approach until hard requirements get delivered.</p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/" data-via="jcftang" data-counturl="http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jcftang.github.com/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github/" data-via="jcftang" data-counturl="http://jcftang.github.com/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -195,10 +207,8 @@ approach until hard requirements get delivered.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/03/11/git-rerere-for-long-lived-feature-branches/" title="Previous Post: git rerere for long lived feature branches">&laquo; git rerere for long lived feature branches</a>
+        <a class="basic-alignment left" href="/blog/2012/05/19/ceph-gets-a-refresh/" title="Previous Post: ceph gets a refresh">&laquo; ceph gets a refresh</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/04/01/gitbuilder-aggregator/" title="Next Post: Gitbuilder aggregator">Gitbuilder aggregator &raquo;</a>
       
     </p>
   </footer>
@@ -228,19 +238,19 @@ approach until hard requirements get delivered.</p>
       </li>
     
       <li class="related">
-        <a href="/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/">Is JAVA really the only game in town for building Digital Preservation Systems?</a>
-      </li>
-    
-      <li class="related">
-        <a href="/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/">Things not to say and to do in a project meeting</a>
-      </li>
-    
-      <li class="related">
         <a href="/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux isn't the only platform to target when building applications</a>
       </li>
     
       <li class="related">
-        <a href="/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/">Waterfall or Agile methods for delivering a project</a>
+        <a href="/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/">Is JAVA really the only game in town for building Digital Preservation Systems?</a>
+      </li>
+    
+      <li class="related">
+        <a href="/blog/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for HPC systems</a>
+      </li>
+    
+      <li class="related">
+        <a href="/blog/2011/10/13/feeling-disconnected-from-modern-software-development-tools/">Feeling Disconnected From Modern Software Development Tools</a>
       </li>
     
   </ul>
@@ -332,7 +342,7 @@ approach until hard requirements get delivered.</p>
 
 <section>
 <h1>QR-Code<abbr title="The word 'QR Code' is a registered trademark of DENSO WAVE INCORPORATED. It applies only for the word 'QR Code', not for image.">&trade;</abbr></h1>
-<a href="http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/"><img src="http://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=|0&chco=165B94&chl=http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/" alt="post-qrcode"></a></section>
+<a href="http://jcftang.github.com/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github/"><img src="http://chart.apis.google.com/chart?chs=150x150&cht=qr&chld=|0&chco=165B94&chl=http://jcftang.github.com/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github/" alt="post-qrcode"></a></section>
 
   
 </aside>
@@ -354,8 +364,8 @@ approach until hard requirements get delivered.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/';
-        var disqus_url = 'http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/';
+        var disqus_identifier = 'http://jcftang.github.com/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github/';
+        var disqus_url = 'http://jcftang.github.com/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github/';
         var disqus_script = 'embed.js';
       
     (function () {

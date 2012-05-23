@@ -4,7 +4,7 @@
   <title><![CDATA[Category: team | Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/blog/categories/team/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-05-19T13:28:53+01:00</updated>
+  <updated>2012-05-23T19:15:28+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -12,6 +12,59 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[DRIS Workflows just got uploaded to github]]></title>
+<link href="http://jcftang.github.com/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github/"/>
+<updated>2012-05-21T21:19:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github</id>
+
+      <content type="html"><![CDATA[<p>After almost 3 months supervising and working with two interns I've
+finally uploaded their work under the GPLv2 License.</p>
+
+<ul>
+<li><a href="https://github.com/jcftang/dri-api">https://github.com/jcftang/dri-api</a></li>
+<li><a href="https://github.com/jcftang/dris-workflows">https://github.com/jcftang/dris-workflows</a></li>
+<li><a href="https://github.com/jcftang/dris-workflows-site">https://github.com/jcftang/dris-workflows-site</a></li>
+<li><a href="https://github.com/jcftang/node-dri">https://github.com/jcftang/node-dri</a></li>
+<li><a href="https://github.com/jcftang/node-fedora">https://github.com/jcftang/node-fedora</a></li>
+</ul>
+
+
+<p>Please note that the packages above do not represent DRI at all, they
+just ended up getting labelled that way for whatever reason.</p>
+
+<p>So what are the above packages? Well they are an attempt at creating a
+workflow for the DRIS team in TCD who work on digital preservation,
+digitisation, cataloging and a host of other tasks which I probably
+don't know about.</p>
+
+<p>The prototype system consists of the DRIS Workflows package and the
+API server. The system currently target the problem of ingesting
+objects. It tries to map what the librarians/archivists at TCD are
+doing to a single interface to increase throughput and quality of the
+work (amongst other things).</p>
+
+<p>It's also able to export the internal meta-data as Dublin-Core, it's
+not great right now and requires more work and there is a small start
+made on MODS as well. It does demonstrate what the interns managed to
+achieve in 3 months time with a loose spec on what needed to be
+done. The basic design and architecture of the system isn't too
+different from Hydra, it was very much by accident that we ended up
+some similar ideas.</p>
+
+<p>The primary purpose of this post is to share the code! and as per
+usual, hope someone finds it useful.</p>
+
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github/">&infin; Permalink</a></p>
+
+]]></content>
+    </entry>
   
     <entry>
       
@@ -183,67 +236,6 @@ knowledgeable in all things related to <em>Digital Repositories Ireland</em>.</p
 <p>I hope that my team mates will appreciate and contribute to this
 little effort. I don't think I've ever come across a Digital
 Humanities and Digital Preservation aggregator before.<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/">&infin; Permalink</a></p></p>
-]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Things not to say and to do in a project meeting]]></title>
-<link href="http://jcftang.github.com/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/"/>
-<updated>2012-02-23T08:13:00+00:00</updated>
-<id>http://jcftang.github.com/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting</id>
-
-      <content type="html"><![CDATA[<p>Team meetings can be both productive and counter productive as most
-people find. If they are well structured with a purpose and goal then
-a lot can be achieved (most of the time).</p>
-
-<p>For explorartory meetings, it's probably okay to have some time set
-aside for some free and open discussions. Once a goal has been agreed
-upon, it's probably a good idea to focus on it more and steer the
-discussion to try and deliver on the goal. Having open ended
-discussions with no set goals sometimes is discouraging and sometimes
-a waste of time.</p>
-
-<p>To the point, I wanted to discuss some things not to say and do in a
-meeting which might cause a collapse in communications, these are just
-some things that I have noticed in the last few months worth of
-meetings and are based on my own experiences,</p>
-
-<ul>
-<li>Don't assume you know everything, there will always be someone
-smarter than you. There's nothing wrong with being an expert in your
-own area, but there are times where you just need to trust others to
-deliver.</li>
-<li>Don't pick on other team members for (possibly) not delivering, this
-is hugely demoralising. It's better to ask why, and if possible does
-that team member or members need help to deliver.</li>
-<li>In real life, does anyone really use waterfall methods to deliver a
-project?</li>
-<li>Don't try and do micro-management if you are clearly middle or even
-senior management, but at least describe tasks in the same language
-as the stakeholder and developer so that things don't get lost in
-translation.</li>
-<li>Do have a plan if the series of meetings are to last a few months if
-there are long term goals to be achieved. If it's not a plan, then
-at least have a list of todo, work in progress and done tasks.</li>
-<li>Don't assign tasks without deadlines (realistic ones).</li>
-<li>Don't assume you are on the same page in discussions unless you are
-confident that everyone at the meeting has common language and
-understands what is being discussed. People come and go, so you just
-have to be aware.</li>
-</ul>
-
-
-<p>Most if not all of the above list of things is common sense, there
-isn't anything too special that you need to do to succeed at
-communicating.</p>
-
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/">&infin; Permalink</a></p>
-
 ]]></content>
     </entry>
   

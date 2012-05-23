@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-05-19T13:28:53+01:00</updated>
+  <updated>2012-05-23T19:15:28+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[DRIS Workflows just got uploaded to github]]></title>
+<link href="http://jcftang.github.com/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github/"/>
+<updated>2012-05-21T21:19:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github</id>
+
+      <content type="html"><![CDATA[<p>After almost 3 months supervising and working with two interns I&#8217;ve
+finally uploaded their work under the GPLv2 License.</p>
+
+<ul>
+<li><a href="https://github.com/jcftang/dri-api">https://github.com/jcftang/dri-api</a></li>
+<li><a href="https://github.com/jcftang/dris-workflows">https://github.com/jcftang/dris-workflows</a></li>
+<li><a href="https://github.com/jcftang/dris-workflows-site">https://github.com/jcftang/dris-workflows-site</a></li>
+<li><a href="https://github.com/jcftang/node-dri">https://github.com/jcftang/node-dri</a></li>
+<li><a href="https://github.com/jcftang/node-fedora">https://github.com/jcftang/node-fedora</a></li>
+</ul>
+
+
+<p>Please note that the packages above do not represent DRI at all, they
+just ended up getting labelled that way for whatever reason.</p>
+
+<p>So what are the above packages? Well they are an attempt at creating a
+workflow for the DRIS team in TCD who work on digital preservation,
+digitisation, cataloging and a host of other tasks which I probably
+don&#8217;t know about.</p>
+
+<p>The prototype system consists of the DRIS Workflows package and the
+API server. The system currently target the problem of ingesting
+objects. It tries to map what the librarians/archivists at TCD are
+doing to a single interface to increase throughput and quality of the
+work (amongst other things).</p>
+
+<p>It&#8217;s also able to export the internal meta-data as Dublin-Core, it&#8217;s
+not great right now and requires more work and there is a small start
+made on MODS as well. It does demonstrate what the interns managed to
+achieve in 3 months time with a loose spec on what needed to be
+done. The basic design and architecture of the system isn&#8217;t too
+different from Hydra, it was very much by accident that we ended up
+some similar ideas.</p>
+
+<p>The primary purpose of this post is to share the code! and as per
+usual, hope someone finds it useful.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github/">&infin; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -915,51 +965,6 @@ requirements haven&#8217;t changed) will probably work long into the future.</p>
 hundred RHEL (scientific linux) based systems. Before that, I used to
 sysadmin a few hundred Debian based systems.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years/">&infin; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Waterfall or Agile methods for delivering a project]]></title>
-<link href="http://jcftang.github.com/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/"/>
-<updated>2012-01-18T08:41:00+00:00</updated>
-<id>http://jcftang.github.com/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project</id>
-
-      <content type="html"><![CDATA[<p>Waterfall methods seem to work well for smallish projects that are
-well defined and well understood. At least from my own experiences of
-putting things together, but realistically to think of all possible
-scenarios and to write up all the possible solutions to the problem
-seems a little bit wacky. To also assume that the requirements process
-has captured requirements that won&#8217;t change close the end of the
-project is also a little unreasonable or unrealistic, this would be
-especially true on a project that is planned to run for a few years
-with fairly substantial goals in an ever changing research and
-development environment.</p>
-
-<p>Waterfall styled methods just cause problems with planning and
-adjusting the process to the needs of the stakeholder (no matter what
-the stakeholder thinks they need, they will change their mind). Again
-this is especially true for long running projects.</p>
-
-<p>So why not use agile methods? Simply because there is little or no
-plan and it requires real collaboration, delegation of tasks and
-trust to work towards a common goal. People get afraid perhaps?</p>
-
-<p>The trick is communication and trying to introduce agile methods
-slowly and steadily into the system. I&#8217;ve been slowly introducing the
-idea of pairings, sprints and elements of scrum with kanban (yes,
-that&#8217;s lots of buzz words there already). Getting people to agree to
-talk is probably the hardest thing to do, and it&#8217;s even harder to try
-and get everyone on the same page without ego&#8217;s getting in the way.</p>
-
-<p>It&#8217;s paying off a little for now, the team members are beginning to at
-least talk and exchange ideas. In my world that is a huge step
-already. Next is it try getting things done by prioritising tasks and
-resources.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/">&infin; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
