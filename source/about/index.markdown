@@ -22,9 +22,9 @@ The following is an incomplete resume, it is work in progress.
 
 * C programming, MPI programming. Expert with Perl, Fortran,
   Matlab. Experience with Labview, C++, Java, Haskell.
-* Development of iRODs microservices for storage and processing
+* Developed of iRODs microservices for storage and processing
   of simulation data, mixture of C, C++ and shell scripting.
-* Development of wrappers to numerical libraries.
+* Developed of wrappers to numerical libraries.
 * SCM of codebases (automation, testing, documentation etc...)
 
 #### Administration and Configuration
@@ -54,7 +54,7 @@ The following is an incomplete resume, it is work in progress.
   repeatable deployment of systems.
 * Interacting with opensource community to develop and test code,
   e.g. bup, wvtest, slurm, git-annex.
-* Developing training material for researchers and students.
+* Developed training material for researchers and students.
 * Infiniband and Myrinet interconnects, setup and administration.
 * Experience with administering and tuning storage systems, e.g. IBM
   DS3000 and DS4000 systems, Dell MD1000 and MD3000 storage systems,
