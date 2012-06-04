@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-05-31T08:29:18+01:00</updated>
+  <updated>2012-06-04T12:05:52+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[git-annex assistant is being crowd funded on Kickstarter &rarr;]]></title>
+<link href="http://git-annex.branchable.com/design/assistant/"/>
+<updated>2012-06-04T11:50:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter</id>
+
+      <content type="html"><![CDATA[<p>It seems <a href="http://kitenet.net/~joey/">Joey Hess</a> is in the process of
+getting <strong>git-annex assistant</strong> crowd funded. I had not been keeping
+up to date too much in the last year with git-annex partly because it
+met my needs and I never needed to upgrade to the latest tip.</p>
+
+<p>There are a number of really cool features now which is making
+git-annex more accessible. I particularly like how the merge and sync
+workflows have now been pretty much <em>scripted</em> so there is less to go
+wrong!</p>
+
+<p>Once the <strong>Dropbox</strong> like features get implemented git-annex will be
+pretty interesting, it won&#8217;t be a complete <em>clone</em> of Dropbox due to
+the way that git-annex deals with files (using symlinks), it will be a
+pretty good alternative to Dropbox. I wish <em>smudge filters</em> were on
+the roadmap as well.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter/">&infin; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -931,40 +960,6 @@ facility and use environment-module then <em>cports</em> is just about
 usable. This is of course if you are willing to look at the sample
 packages and write <em>makefiles</em>.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">&infin; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Red Hat Enterprise Linux Life Cycle Extended to Ten Years &rarr;]]></title>
-<link href="https://www.redhat.com/archives/rhelv5-announce/2012-January/msg00000.html"/>
-<updated>2012-02-09T08:16:00+00:00</updated>
-<id>http://jcftang.github.com/blog/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years</id>
-
-      <content type="html"><![CDATA[<p>It&#8217;s all over the internet that RHEL6 and newer releases will have a
-life cycle of 10yrs. This is pretty good news for projects that are
-deploying systems that have a lifetime of 5yrs or more. Namely Digital
-Preservation projects, not having to worry about migration between
-point releases of an operating system platform reduces time and costs.</p>
-
-<p>I&#8217;m now more likely to target the systems we develop in work towards a
-RHEL system (or a RHEL like clone).</p>
-
-<p>Another side effect of this long term support is that it will probably
-make life easier for those who have lots of virtual machines running
-RHEL. Longer support means less issues with continually migrating
-between point releases. From a practical point of view of a
-operational sysadmin, this is great. From a developers point of view,
-it&#8217;s also not bad either, software written now (assuming the
-requirements haven&#8217;t changed) will probably work long into the future.</p>
-
-<p>Note: I am not a RHEL (Fedora) fanboy, I used to sysadmin a few
-hundred RHEL (scientific linux) based systems. Before that, I used to
-sysadmin a few hundred Debian based systems.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years/">&infin; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
