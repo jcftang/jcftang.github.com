@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-06-04T12:05:52+01:00</updated>
+  <updated>2012-06-06T14:23:14+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[DCC Roadshow N. Ireland &rarr;]]></title>
+<link href="http://www.dcc.ac.uk/events/data-management-roadshows/dcc-roadshow-n-ireland"/>
+<updated>2012-06-06T14:16:00+01:00</updated>
+<id>http://jcftang.github.com/blog/2012/06/06/dcc-roadshow-n-ireland</id>
+
+      <content type="html"><![CDATA[<p>The 12th DCC regional roadshow will take place on 6th and 7th June at
+the McClay library, Queen&#8217;s University Belfast.</p>
+
+<p>The roadshow is being organised in conjunction with Queen&#8217;s University
+Belfast.</p>
+
+<p>Turns out to be far more informative than I originally thought. Lot&#8217;s
+of real life examples of what people are doing and what&#8217;s
+relavent. It&#8217;s not the usual workshop, conference or meeting that I
+would attend.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/06/06/dcc-roadshow-n-ireland/">&infin; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -758,208 +782,6 @@ base far more portable and hopefully more maintainable as you will end
 up making sure you write code once that runs on many systems with
 minimal changes needed when a new platform arises.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">&infin; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[cports for building applications and libraries for HPC systems &rarr;]]></title>
-<link href="http://thammuz.tchpc.tcd.ie/mirrors/cports/releases/"/>
-<updated>2012-02-12T17:59:00+00:00</updated>
-<id>http://jcftang.github.com/blog/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems</id>
-
-      <content type="html"><![CDATA[<p>I&#8217;ve talked about <em>cports</em> in the past, it&#8217;s basically a collection of
-<em>makefiles</em> which mostly automates the process of downloading,
-configuring, building and installing applications and libraries for
-High Performance Computing systems that use environment-modules.</p>
-
-<p>One of the key-features that <em>cports</em> offers is the automated
-modulefile generation, and the fact that the <em>makefiles</em> acts as
-documentation to how software is configured, built and installed. It&#8217;s
-currently being used on the clusters at my work place, it has been a
-boost to the productivity of the systems admin team. It&#8217;s a nice
-alternative to trying to create RPM&#8217;s or DEB&#8217;s (pick your custom
-package manager of choice here), as <em>makefiles</em> tend to be a little
-more flexible than traditional package managers.</p>
-
-<p>One main drawback of the <em>cports</em> system right now is the lack of good
-dependancy management and checking, it is all currently up to the
-packager to resolve these dependancy issues. It&#8217;s also <em>cports</em>
-strongest point that there is no dependancy management, as the
-packager can build many unique trees of packages.</p>
-
-<p>For example, we have Tahoe-LAFS in the following sample makefile</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>include ../../../mk/gnu.pre.mk
-</span><span class='line'>
-</span><span class='line'>DISTNAME= allmydata-tahoe
-</span><span class='line'>VERSION=  1.9.0-SUMO
-</span><span class='line'>CATEGORIES=   system
-</span><span class='line'>HOMEPAGE= http://tahoe-lafs.org/
-</span><span class='line'>MASTER_SITES= http://tahoe-lafs.org/source/tahoe-lafs/releases/
-</span><span class='line'>MAINTAINER=   jtang@tchpc.tcd.ie
-</span><span class='line'>HAS_CONFIGURE=    no
-</span><span class='line'>DISTFILES = $(DISTNAME)-$(VERSION).tar.bz2
-</span><span class='line'>
-</span><span class='line'>DEPENDS="Python/2.6.5 --build-env Python/2.6.5 --run-env"
-</span><span class='line'>DEPENDS+="openssl/0.9.8o --lib --build-env"
-</span><span class='line'>DEPENDS+="gmp/4.3.2 --lib --build-env"
-</span><span class='line'>
-</span><span class='line'>DESCRIPTION=    "Tahoe-LAFS (Least Authority File System) is a Free Software/Open Source"
-</span><span class='line'>DESCRIPTION+=    "decentralized data store. It distributes your filesystem across multiple"
-</span><span class='line'>DESCRIPTION+=    "servers, and even if some of the servers fail or are taken over by"
-</span><span class='line'>DESCRIPTION+=    "an attacker, the entire filesystem continues to work correctly and to"
-</span><span class='line'>DESCRIPTION+=    "preserve your privacy and security."
-</span><span class='line'>
-</span><span class='line'>CONFIGURE_ARGS +=
-</span><span class='line'>
-</span><span class='line'>MODULEFILE_LINES+=      PYTHONPATH
-</span><span class='line'>MODULEFILE_CMD_PYTHONPATH?= \
-</span><span class='line'>        $(ECHO) "prepend-path   PYTHONPATH $(PROGRAM_PREFIX)/lib/python2.6/site-packages";
-</span><span class='line'>
-</span><span class='line'>do-build:
-</span><span class='line'>  $(MODULE_ADD) $(BUILD_DEPENDS); \
-</span><span class='line'>  cd $(WRKSRC); \
-</span><span class='line'>
-</span><span class='line'>do-install:
-</span><span class='line'>  $(MODULE_ADD) $(BUILD_DEPENDS); \
-</span><span class='line'>  cd $(WRKSRC); \
-</span><span class='line'>  $(MKDIR) $(PROGRAM_PREFIX) ;\
-</span><span class='line'>  tar -cpf - . | (cd $(PROGRAM_PREFIX)/ && tar -xpf - ) ;\
-</span><span class='line'>  cd $(PROGRAM_PREFIX) ;\
-</span><span class='line'>  cp -a tahoe-deps ../ ;\
-</span><span class='line'>  python setup.py build ;
-</span><span class='line'>
-</span><span class='line'>do-test:
-</span><span class='line'>  $(MODULE_ADD) $(RUN_DEPENDS) $(DISTNAME)/$(VERSION)$(EXTRAVERSION)$(COMPILER_TAG) ; \
-</span><span class='line'>  cd $(WRKSRC); \
-</span><span class='line'>  python setup.py test
-</span><span class='line'>
-</span><span class='line'>include ../../../mk/gnu.post.mk</span></code></pre></td></tr></table></div></figure>
-
-
-<p>In this example, as Tahoe-LAFS (upstream project) gets updated, the
-cports packager just needs to copy this makefile to a new directory,
-update the version numbers, then do a <em>make install</em>. This assumes
-that the dependancies haven&#8217;t changed much, if they have it is trivial
-to update the dependancies. The above example generates a modulefile
-similar to like this,</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#%Module1.0
-</span><span class='line'>module-whatis "allmydata-tahoe version 1.9.0-SUMO (compiled with a gnu compiler)"
-</span><span class='line'>conflict allmydata-tahoe
-</span><span class='line'>prepend-path   PYTHONPATH /home/support/apps/cports/rhel-5.x86_64/gnu/allmydata-tahoe/1.9.0-SUMO/lib
-</span><span class='line'>/python2.6/site-packages
-</span><span class='line'>prepend-path PATH /home/support/apps/cports/rhel-5.x86_64/gnu/allmydata-tahoe/1.9.0-SUMO/bin
-</span><span class='line'>module add Python/2.6.5-gnu
-</span><span class='line'>proc ModulesHelp { } {
-</span><span class='line'>puts stderr "Tahoe-LAFS (Least Authority File System) is a Free Software/Open Source"
-</span><span class='line'>puts stderr "decentralized data store. It distributes your filesystem across multiple"
-</span><span class='line'>puts stderr "servers, and even if some of the servers fail or are taken over by"
-</span><span class='line'>puts stderr "an attacker, the entire filesystem continues to work correctly and to"
-</span><span class='line'>puts stderr "preserve your privacy and security."
-</span><span class='line'>puts stderr {build depends: gmp/4.3.2-gnu openssl/0.9.8o-gnu Python/2.6.5-gnu}
-</span><span class='line'>puts stderr {run depends: Python/2.6.5-gnu}
-</span><span class='line'>puts stderr {module depends: gmp/4.3.2 openssl/0.9.8o Python/2.6.5}
-</span><span class='line'>puts stderr {link depends: gmp/4.3.2-gnu openssl/0.9.8o-gnu}
-</span><span class='line'>}
-</span><span class='line'>prepend-path   PYTHONPATH /home/support/apps/cports/rhel-5.x86_64/gnu/allmydata-tahoe/1.9.0-SUMO/lib
-</span><span class='line'>/python2.6/site-packages</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Once the package has been built and tested on a development system, we
-can take the package and replicate the installation in fairly
-automated fashion. This type of scripting and automation means that
-the clusters that we run in work have consistent installations of
-applications.</p>
-
-<p>Having consistent installs means that the end-user needs to learn less
-about the naming conventions. This in turn reduces the confusion and
-documentation that is needed for the end user.</p>
-
-<p>Sadly, I don&#8217;t get to play with <em>cports</em> as much as I used to, since I
-do not administrate High Performance Computing systems anymore in my
-new role at my current work place. It is just a hobby to develop this
-build system, I plan on automating more testing of the <em>cports</em> system
-when I get a chance. We currently have <em>jenkins</em> and <em>gitbuilder</em>
-running on select machines in work to continually build and test
-specific packages to find regressions and broken download links.</p>
-
-<p><em>cports</em> isn&#8217;t quite ready for general public usage, but if you are a
-clued in systems administrator at a High Performance Computing
-facility and use environment-module then <em>cports</em> is just about
-usable. This is of course if you are willing to look at the sample
-packages and write <em>makefiles</em>.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">&infin; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
