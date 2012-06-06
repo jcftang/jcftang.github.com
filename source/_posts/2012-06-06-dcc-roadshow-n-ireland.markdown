@@ -4,7 +4,7 @@ title: "DCC Roadshow N. Ireland"
 date: 2012-06-06 14:16
 comments: true
 external-url: http://www.dcc.ac.uk/events/data-management-roadshows/dcc-roadshow-n-ireland
-categories: 
+categories: dri
 ---
 
 The 12th DCC regional roadshow will take place on 6th and 7th June at
