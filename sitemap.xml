@@ -123,12 +123,42 @@
         <lastmod>2012-05-16T18:46:34+01:00</lastmod>
     </url>
     <url>
+        <loc>http://jcftang.github.com/blog/2012/05/19/ceph-gets-a-refresh/</loc>
+        <lastmod>2012-06-11T12:10:35+01:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://jcftang.github.com/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github/
+        </loc>
+        <lastmod>2012-06-11T12:10:35+01:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://jcftang.github.com/blog/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter/
+        </loc>
+        <lastmod>2012-06-11T12:10:35+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://jcftang.github.com/blog/2012/06/06/dcc-roadshow-n-ireland/</loc>
+        <lastmod>2012-06-11T16:28:46+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://jcftang.github.com/blog/2012/06/07/facebook-open-house/</loc>
+        <lastmod>2012-06-11T16:28:46+01:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://jcftang.github.com/blog/2012/06/13/dris-workflows-is-now-available-via-npm/
+        </loc>
+        <lastmod>2012-06-13T14:04:38+01:00</lastmod>
+    </url>
+    <url>
         <loc>http://jcftang.github.com/about/</loc>
-        <lastmod>2012-05-29T17:33:55+01:00</lastmod>
+        <lastmod>2012-06-11T12:10:40+01:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/blog/archives/</loc>
-        <lastmod>2012-05-16T18:46:34+01:00</lastmod>
+        <lastmod>2012-06-13T14:04:38+01:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/blog/categories/</loc>
@@ -136,6 +166,6 @@
     </url>
     <url>
         <loc>http://jcftang.github.com/</loc>
-        <lastmod>2012-05-16T18:46:34+01:00</lastmod>
+        <lastmod>2012-06-13T14:04:38+01:00</lastmod>
     </url>
 </urlset>
