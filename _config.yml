@@ -18,6 +18,7 @@ date_format: "ordinal"
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss: /atom.xml
 subscribe_email:
+category_feeds: false
 # RSS feeds can list your email address if you like
 email: jcftang@gmail.com
 
@@ -27,7 +28,7 @@ email: jcftang@gmail.com
 
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
 root: /
-permalink: /blog/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
 source: source
 destination: public
 plugins: plugins
@@ -41,8 +42,8 @@ pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
 recent_posts: 5       # Posts in the sidebar Recent Posts section
 excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
 excerpt_in_feed: false # Truncate excerpted articles in the atom feed
-permalink_label: "&infin;"
-permalink_label_feed: "&infin; Permalink"
+permalink_label: "Permalink"
+permalink_label_feed: "&#9875; Permalink"
 linklog_marker: "&rarr;"
 linklog_marker_position: after
 linklog_marker_position_feed: after
@@ -64,6 +65,10 @@ post_asides: [custom/asides/about.html, custom/asides/related.html, asides/recen
 # ----------------------- #
 #   3rd Party Settings    #
 # ----------------------- #
+
+# Javascript social buttons often generate lots of http requests and may track your viewer's browsing history
+# Show respect for privacy and bandwidth with simple links for Twitter, Facebook and Google Plus.
+respectfully_social: true
 
 # Github repositories
 github_user: jcftang
@@ -99,6 +104,7 @@ delicious_count: 3
 # Disqus Comments
 disqus_short_name: jcftang
 disqus_show_comment_count: true
+disqus_developer: 0
 
 # Google Analytics
 google_analytics_tracking_id: UA-8597777-2
