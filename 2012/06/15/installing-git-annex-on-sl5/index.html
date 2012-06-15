@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Facebook - Open House - Jimmy Tang</title>
+  <title>Installing git-annex on SL5 - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/2012/06/07/facebook-open-house/">
+  <link rel="canonical" href="http://jcftang.github.com/2012/06/15/installing-git-annex-on-sl5/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/jquery.min.js"></script>
@@ -94,7 +94,7 @@
   <header>
     <h1 class="entry-title">
 
-Facebook - Open House
+Installing Git-annex on SL5
 
 </h1>
 
@@ -112,31 +112,96 @@ Facebook - Open House
   
 
 
-<time datetime="2012-06-07T09:12:00+01:00" pubdate data-updated="true">Jun 7<span>th</span>, 2012</time>
+<time datetime="2012-06-15T12:55:00+01:00" pubdate data-updated="true">Jun 15<span>th</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/2012/06/07/facebook-open-house/">Permalink</a>
+         &bull; <a rel="bookmark" href="/2012/06/15/installing-git-annex-on-sl5/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p>The event was actually on 2012-06-06 and it was invite only. The event
-was mostly about the infrastructure of Facebook. It was actually done
-quite tastefully with a main speaker giving an overview of the whole
-system. Luckily they did not turn the event into a recruitment event
-which was quite pleasant.</p>
+<div class="entry-content"><p>I was waiting for my backups to be done hence this post as I was using
+<em>git-annex</em> to manage my files and I decided I needed to have
+git-annex on a SL5 based machine. SL5 is just an opensource
+clone/recompile of RHEL5.</p>
 
-<p>Unfortunately one of the posters that I had actually want to see and
-chat to the engineers involved wasn&#8217;t there, there were enough
-engineers around for me to harass with questions.</p>
+<p>I haven&#8217;t tried to install the newer versions of Haskell Platform and
+GHC in a while on SL5 to instal git-annex. But the last time I checked
+when GHC7 was out, it was a pain to install GHC on SL5.</p>
 
-<p>This event was also the first event that I have been to in Dublin
-which required an NDA, that was sort of strange. Some people that I
-know didn&#8217;t attend as a result of the NDA.</p>
+<p>However I have discovered that someone has gone through the trouble of
+packaging up GHC and Haskell Platform for RHEL based distros.</p>
 
-<p>All in all Facebook does have some pretty cool tech internally (like
-all the other big dotcom companies). Some of it is even opensource!</p>
+<ul>
+<li><a href="http://justhub.org/download">http://justhub.org/download</a> - Packaged GHC and Haskell Platform
+RPM&#8217;s for RHEL based systems.</li>
+</ul>
+
+
+<p>I&#8217;m primarily interested in installing <em>git-annex</em> on SL5 based
+systems. The installation process goes as such&#8230;</p>
+
+<p>First install GHC and Haskell Platform (you need root for these
+following steps)</p>
+
+<pre><code>$ wget http://sherkin.justhub.org/el5/RPMS/x86_64/justhub-release-2.0-4.0.el5.x86_64.rpm
+$ rpm -ivh justhub-release-2.0-4.0.el5.x86_64.rpm
+$ yum install haskell
+</code></pre>
+
+<p>The RPM&#8217;s don&#8217;t place the files in /usr/bin, so you must add the
+following to your .bashrc (from here on you don&#8217;t need root if you
+don&#8217;t want things to be system wide)</p>
+
+<pre><code>$ export PATH=/usr/hs/bin:$PATH
+</code></pre>
+
+<p>On SL5 pcre is at version 6.6 which is far too old for one of the
+dependancies that git-annex requires. Therefore the user must install
+an updated version of <em>pcre</em> either from source or another method, I
+chose to install it from source and by hand into /usr/local</p>
+
+<pre><code>$ wget http://sourceforge.net/projects/pcre/files/pcre/8.30/pcre-8.30.tar.gz/download
+$ tar zxvf pcre-8.30.tar.gz
+$ cd pcre-8.30
+$ ./configure
+$ make &amp;&amp; make install
+</code></pre>
+
+<p>Once the packages are installed and are in your execution path, using
+cabal to configure and build git-annex just makes life easier, it
+should install all the needed dependancies.</p>
+
+<pre><code>$ cabal update
+$ cabal install pcre-light --extra-include-dirs=/usr/local/include
+$ git clone git://git.kitenet.net/git-annex
+$ cd git-annex
+$ make git-annex.1
+$ cabal configure
+$ cabal build
+$ cabal install
+</code></pre>
+
+<p>Or if you want to install it globallly for everyone (otherwise it will
+get installed into $HOME/.cabal/bin)</p>
+
+<pre><code>$ cabal install --global
+</code></pre>
+
+<p>The above will take a while to compile and install the needed
+dependancies. I would suggest any user who does should run the tests
+that comes with git-annex to make sure everything is functioning as
+expected.</p>
+
+<p>I wonder if it&#8217;s possible to get git-annex as a back-end driver for
+some of the digital preservation systems out there. Or more
+interestingly can fedora-commons be used a special remote or back-end
+for git-annex.</p>
+
+<p>I haven&#8217;t had a chance or need to install git-annex on a SL6 based
+system yet, but I would assume something similar to the above steps
+would be required to do so.</p>
 </div>
 
 
@@ -159,8 +224,14 @@ all the other big dotcom companies). Some of it is even opensource!</p>
   
 
 
-<time datetime="2012-06-07T09:12:00+01:00" pubdate data-updated="true">Jun 7<span>th</span>, 2012</time>
+<time datetime="2012-06-15T12:55:00+01:00" pubdate data-updated="true">Jun 15<span>th</span>, 2012</time>
 
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/linux/'>linux</a>
+  
+</span>
 
 
 
@@ -176,12 +247,12 @@ all the other big dotcom companies). Some of it is even opensource!</p>
   
   
     
-      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/06/07/facebook-open-house/" target="_blank">+1</a>
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/06/15/installing-git-annex-on-sl5/" target="_blank">+1</a>
     
   
   
     
-    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/06/07/facebook-open-house/" target="_blank">Share</a>
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/06/15/installing-git-annex-on-sl5/" target="_blank">Share</a>
     
   
   
@@ -191,10 +262,8 @@ all the other big dotcom companies). Some of it is even opensource!</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2012/06/06/dcc-roadshow-n-ireland/" title="Previous Post: DCC Roadshow N. Ireland">&laquo; DCC Roadshow N. Ireland</a>
+        <a class="basic-alignment left" href="/2012/06/13/dris-workflows-is-now-available-via-npm/" title="Previous Post: DRIS Workflows is now available via npm">&laquo; DRIS Workflows is now available via npm</a>
       
-      
-        <a class="basic-alignment right" href="/2012/06/13/dris-workflows-is-now-available-via-npm/" title="Next Post: DRIS Workflows is now available via npm">DRIS Workflows is now available via npm &raquo;</a>
       
     </p>
   </footer>
@@ -224,11 +293,7 @@ all the other big dotcom companies). Some of it is even opensource!</p>
   <ul class="posts">
     
       <li class="related">
-        <a href="/2012/04/09/prototyping-and-testing-systems/">Prototyping and testing systems</a>
-      </li>
-    
-      <li class="related">
-        <a href="/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/">Is JAVA really the only game in town for building Digital Preservation Systems?</a>
+        <a href="/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for HPC systems</a>
       </li>
     
       <li class="related">
@@ -236,11 +301,15 @@ all the other big dotcom companies). Some of it is even opensource!</p>
       </li>
     
       <li class="related">
-        <a href="/2012/06/15/installing-git-annex-on-sl5/">Installing git-annex on SL5</a>
+        <a href="/2011/10/21/setting-up-my-work-macbook-air/">Setting up my work Macbook Air</a>
       </li>
     
       <li class="related">
-        <a href="/2012/04/30/slurm-user-group-meeting-2012/">Slurm User Group Meeting 2012</a>
+        <a href="/2011/10/13/feeling-disconnected-from-modern-software-development-tools/">Feeling Disconnected From Modern Software Development Tools</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2011/12/13/using-continuous-integration-systems-in-a-team/">Using continuous integration systems in a team</a>
       </li>
     
   </ul>
@@ -327,8 +396,8 @@ all the other big dotcom companies). Some of it is even opensource!</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/2012/06/07/facebook-open-house/';
-        var disqus_url = 'http://jcftang.github.com/2012/06/07/facebook-open-house/';
+        var disqus_identifier = 'http://jcftang.github.com/2012/06/15/installing-git-annex-on-sl5/';
+        var disqus_url = 'http://jcftang.github.com/2012/06/15/installing-git-annex-on-sl5/';
         var disqus_script = 'embed.js';
       
     (function () {
