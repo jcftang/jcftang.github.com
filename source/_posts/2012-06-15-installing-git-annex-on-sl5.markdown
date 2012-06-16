@@ -7,7 +7,7 @@ external-url:
 categories: linux
 ---
 
-I was waiting for my backups to be done hence this post as I was using
+I was waiting for my backups to be done hence this post, as I was using
 _git-annex_ to manage my files and I decided I needed to have
 git-annex on a SL5 based machine. SL5 is just an opensource
 clone/recompile of RHEL5.
