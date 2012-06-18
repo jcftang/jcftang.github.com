@@ -16,6 +16,15 @@ separate from my [personal blog](http://www.sgenomics.org/~jtang/).
 
 The following is an incomplete resume, it is work in progress.
 
+## Research Interests
+
+Parallel/distributed file systems, automated systems for software and
+systems deployment, systems administration of large scale systems, SCM,
+systems programming, beowulf cluster architecture, high performance
+computing, numerical computing.
+
+## Profile
+
 Jimmy Tang is a senior software engineer in the TCHPC. He has
 worked on a number of grid storage systems in the HPC Europa 1 and
 2 programs developing management and storage solutions for numerical
