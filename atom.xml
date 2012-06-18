@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-06-18T22:23:22+01:00</updated>
+  <updated>2012-06-18T22:38:29+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Octopress 2.1, taking a sneak peek &rarr;]]></title>
+<link href="https://github.com/imathis/octopress/tree/2.1"/>
+<updated>2012-06-18T22:27:00+01:00</updated>
+<id>http://jcftang.github.com/2012/06/18/octopress-2-dot-1-taking-a-sneak-peek</id>
+
+      <content type="html"><![CDATA[<p>I feel lucky and living on the edge and I&#8217;ve recently decided to take
+a preview of the 2.1 branch of octopress. So far Octopress has been
+pretty good, it&#8217;s been a refreshing change to the usual ikiwiki system
+that I prefer. This experiment has worked out not too bad for me given
+how much I like ikiwiki for most of if not all of my other little
+websites and documentation sites.</p>
+
+<p>It&#8217;s not quite there yet, there a few theme issues which are probably
+to be fixed. At least if I adopt it now there will be less conflicts
+for me to resolve later on. Out of all the features that 2.1 will
+bring that I like the most is the linklog feature. I&#8217;ve been using the
+linklog feature for a few months now and it works pretty well.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/06/18/octopress-2-dot-1-taking-a-sneak-peek/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -710,50 +736,6 @@ knowledgeable in all things related to <em>Digital Repositories Ireland</em>.</p
 little effort. I don&#8217;t think I&#8217;ve ever come across a Digital
 Humanities and Digital Preservation aggregator before.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Genetic Classification of Populations Using Supervised Learning &rarr;]]></title>
-<link href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0014802"/>
-<updated>2012-02-26T21:08:00+00:00</updated>
-<id>http://jcftang.github.com/2012/02/26/genetic-classification-of-populations-using-supervised-learning</id>
-
-      <content type="html"><![CDATA[<p>In the past few months, in my spare time whenever I get a chance, I&#8217;ve
-been working on a side project in work. It&#8217;s a research project
-amongst a group of people with a cool idea. The idea is to apply
-neural networks to identifying diseases, populations and traits via
-machine learning/supervised learning. I&#8217;m not entirely sure about the
-application of the technology as to how new or revolutionary it is,
-but it seems sensible that a machine is going to be very good at being
-taught how to recognise patterns so why not do it.</p>
-
-<p>I&#8217;m not directly responsible for the code for this paper, but I did go
-back and refactor most of the code in an attempt to make it a little
-presentable to the world and also much faster as a result. I hope that
-the source code will eventually see the light of day.</p>
-
-<p>Note, I am not the primary author of this presentation/paper, I just
-have an interest in the idea, code and enjoy learning and playing with
-this research.</p>
-
-<p>There will be a presentation at
-<a href="http://www.genepi.med.uni-goettingen.de/download/EMGM2012_Preliminary_Programme.pdf">EMGM</a>,
-I will be curious as to what people think. Is it a crazy good or a
-crazy bad idea? The data that is being generated is apparently good,
-though personally I would like to see more analysis being done with
-additional ANN&#8217;s or SVM&#8217;s to verify that it really is working as
-expected.</p>
-
-<p>I wonder if I can convince a CS or a Maths summer student to
-re-implement the algorithm with a different ANN or SVM library. There
-are a rake of ideas that I have that I wouldn&#8217;t mind seeing
-implemented. I just need more time!</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/2012/02/26/genetic-classification-of-populations-using-supervised-learning/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
