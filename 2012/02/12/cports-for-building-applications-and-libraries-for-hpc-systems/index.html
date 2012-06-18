@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>cports for building applications and libraries for HPC systems - Jimmy Tang</title>
+  <meta name="author" content="Jimmy Tang">
+  <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
+
+  
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://jcftang.github.com/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/jquery.min.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Jimmy Tang" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8597777-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+   
+  <link href="/octopress-favicon.png" rel="icon">
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Jimmy Tang</a></h1>
+  
+    <h2>Yet more random mutterings</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:jcftang.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="/blog/categories">Categories</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+<article class="hentry linklog" role="article">
+  
+  <header>
+    <h1 class="entry-title">
+
+<a href="http://thammuz.tchpc.tcd.ie/mirrors/cports/releases/">Cports for Building Applications and Libraries for HPC Systems</a>
+<span class='linklog-marker'>&rarr;</span>
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-12T17:59:00+00:00" pubdate data-updated="true">Feb 12<span>th</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>I&#8217;ve talked about <em>cports</em> in the past, it&#8217;s basically a collection of
+<em>makefiles</em> which mostly automates the process of downloading,
+configuring, building and installing applications and libraries for
+High Performance Computing systems that use environment-modules.</p>
+
+<p>One of the key-features that <em>cports</em> offers is the automated
+modulefile generation, and the fact that the <em>makefiles</em> acts as
+documentation to how software is configured, built and installed. It&#8217;s
+currently being used on the clusters at my work place, it has been a
+boost to the productivity of the systems admin team. It&#8217;s a nice
+alternative to trying to create RPM&#8217;s or DEB&#8217;s (pick your custom
+package manager of choice here), as <em>makefiles</em> tend to be a little
+more flexible than traditional package managers.</p>
+
+<p>One main drawback of the <em>cports</em> system right now is the lack of good
+dependancy management and checking, it is all currently up to the
+packager to resolve these dependancy issues. It&#8217;s also <em>cports</em>
+strongest point that there is no dependancy management, as the
+packager can build many unique trees of packages.</p>
+
+<p>For example, we have Tahoe-LAFS in the following sample makefile</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>include ../../../mk/gnu.pre.mk
+</span><span class='line'>
+</span><span class='line'>DISTNAME= allmydata-tahoe
+</span><span class='line'>VERSION=  1.9.0-SUMO
+</span><span class='line'>CATEGORIES=   system
+</span><span class='line'>HOMEPAGE= http://tahoe-lafs.org/
+</span><span class='line'>MASTER_SITES= http://tahoe-lafs.org/source/tahoe-lafs/releases/
+</span><span class='line'>MAINTAINER=   jtang@tchpc.tcd.ie
+</span><span class='line'>HAS_CONFIGURE=    no
+</span><span class='line'>DISTFILES = $(DISTNAME)-$(VERSION).tar.bz2
+</span><span class='line'>
+</span><span class='line'>DEPENDS="Python/2.6.5 --build-env Python/2.6.5 --run-env"
+</span><span class='line'>DEPENDS+="openssl/0.9.8o --lib --build-env"
+</span><span class='line'>DEPENDS+="gmp/4.3.2 --lib --build-env"
+</span><span class='line'>
+</span><span class='line'>DESCRIPTION=    "Tahoe-LAFS (Least Authority File System) is a Free Software/Open Source"
+</span><span class='line'>DESCRIPTION+=    "decentralized data store. It distributes your filesystem across multiple"
+</span><span class='line'>DESCRIPTION+=    "servers, and even if some of the servers fail or are taken over by"
+</span><span class='line'>DESCRIPTION+=    "an attacker, the entire filesystem continues to work correctly and to"
+</span><span class='line'>DESCRIPTION+=    "preserve your privacy and security."
+</span><span class='line'>
+</span><span class='line'>CONFIGURE_ARGS +=
+</span><span class='line'>
+</span><span class='line'>MODULEFILE_LINES+=      PYTHONPATH
+</span><span class='line'>MODULEFILE_CMD_PYTHONPATH?= \
+</span><span class='line'>        $(ECHO) "prepend-path   PYTHONPATH $(PROGRAM_PREFIX)/lib/python2.6/site-packages";
+</span><span class='line'>
+</span><span class='line'>do-build:
+</span><span class='line'>  $(MODULE_ADD) $(BUILD_DEPENDS); \
+</span><span class='line'>  cd $(WRKSRC); \
+</span><span class='line'>
+</span><span class='line'>do-install:
+</span><span class='line'>  $(MODULE_ADD) $(BUILD_DEPENDS); \
+</span><span class='line'>  cd $(WRKSRC); \
+</span><span class='line'>  $(MKDIR) $(PROGRAM_PREFIX) ;\
+</span><span class='line'>  tar -cpf - . | (cd $(PROGRAM_PREFIX)/ && tar -xpf - ) ;\
+</span><span class='line'>  cd $(PROGRAM_PREFIX) ;\
+</span><span class='line'>  cp -a tahoe-deps ../ ;\
+</span><span class='line'>  python setup.py build ;
+</span><span class='line'>
+</span><span class='line'>do-test:
+</span><span class='line'>  $(MODULE_ADD) $(RUN_DEPENDS) $(DISTNAME)/$(VERSION)$(EXTRAVERSION)$(COMPILER_TAG) ; \
+</span><span class='line'>  cd $(WRKSRC); \
+</span><span class='line'>  python setup.py test
+</span><span class='line'>
+</span><span class='line'>include ../../../mk/gnu.post.mk</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In this example, as Tahoe-LAFS (upstream project) gets updated, the
+cports packager just needs to copy this makefile to a new directory,
+update the version numbers, then do a <em>make install</em>. This assumes
+that the dependancies haven&#8217;t changed much, if they have it is trivial
+to update the dependancies. The above example generates a modulefile
+similar to like this,</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>#%Module1.0
+</span><span class='line'>module-whatis "allmydata-tahoe version 1.9.0-SUMO (compiled with a gnu compiler)"
+</span><span class='line'>conflict allmydata-tahoe
+</span><span class='line'>prepend-path   PYTHONPATH /home/support/apps/cports/rhel-5.x86_64/gnu/allmydata-tahoe/1.9.0-SUMO/lib
+</span><span class='line'>/python2.6/site-packages
+</span><span class='line'>prepend-path PATH /home/support/apps/cports/rhel-5.x86_64/gnu/allmydata-tahoe/1.9.0-SUMO/bin
+</span><span class='line'>module add Python/2.6.5-gnu
+</span><span class='line'>proc ModulesHelp { } {
+</span><span class='line'>puts stderr "Tahoe-LAFS (Least Authority File System) is a Free Software/Open Source"
+</span><span class='line'>puts stderr "decentralized data store. It distributes your filesystem across multiple"
+</span><span class='line'>puts stderr "servers, and even if some of the servers fail or are taken over by"
+</span><span class='line'>puts stderr "an attacker, the entire filesystem continues to work correctly and to"
+</span><span class='line'>puts stderr "preserve your privacy and security."
+</span><span class='line'>puts stderr {build depends: gmp/4.3.2-gnu openssl/0.9.8o-gnu Python/2.6.5-gnu}
+</span><span class='line'>puts stderr {run depends: Python/2.6.5-gnu}
+</span><span class='line'>puts stderr {module depends: gmp/4.3.2 openssl/0.9.8o Python/2.6.5}
+</span><span class='line'>puts stderr {link depends: gmp/4.3.2-gnu openssl/0.9.8o-gnu}
+</span><span class='line'>}
+</span><span class='line'>prepend-path   PYTHONPATH /home/support/apps/cports/rhel-5.x86_64/gnu/allmydata-tahoe/1.9.0-SUMO/lib
+</span><span class='line'>/python2.6/site-packages</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Once the package has been built and tested on a development system, we
+can take the package and replicate the installation in fairly
+automated fashion. This type of scripting and automation means that
+the clusters that we run in work have consistent installations of
+applications.</p>
+
+<p>Having consistent installs means that the end-user needs to learn less
+about the naming conventions. This in turn reduces the confusion and
+documentation that is needed for the end user.</p>
+
+<p>Sadly, I don&#8217;t get to play with <em>cports</em> as much as I used to, since I
+do not administrate High Performance Computing systems anymore in my
+new role at my current work place. It is just a hobby to develop this
+build system, I plan on automating more testing of the <em>cports</em> system
+when I get a chance. We currently have <em>jenkins</em> and <em>gitbuilder</em>
+running on select machines in work to continually build and test
+specific packages to find regressions and broken download links.</p>
+
+<p><em>cports</em> isn&#8217;t quite ready for general public usage, but if you are a
+clued in systems administrator at a High Performance Computing
+facility and use environment-module then <em>cports</em> is just about
+usable. This is of course if you are willing to look at the sample
+packages and write <em>makefiles</em>.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Jimmy Tang</span></span>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-12T17:59:00+00:00" pubdate data-updated="true">Feb 12<span>th</span>, 2012</time>
+
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/hpc/'>hpc</a>, <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/scm/'>scm</a>
+  
+</span>
+
+
+
+      
+
+    </p>
+    
+      <div class="sharing">
+  
+    
+      <a href="http://twitter.com/share" title="Tweet this" class="twitter-share" target="_blank">Tweet</a>
+    
+  
+  
+    
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/" target="_blank">+1</a>
+    
+  
+  
+    
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/" target="_blank">Share</a>
+    
+  
+  
+
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years/" title="Previous Post: Red Hat Enterprise Linux Life Cycle Extended to Ten Years">&laquo; Red Hat Enterprise Linux Life Cycle Extended to Ten Years</a>
+      
+      
+        <a class="basic-alignment right" href="/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/" title="Next Post: Why Linux isn't the only platform to target when building applications">Why Linux isn't the only platform to target when building applications &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+<section>
+  <h1>Comments</h1>
+  
+
+  
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  
+</section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+  <p>This is more of a technical blog of what I want to rant about
+  separate from my <a href="http://www.sgenomics.org/~jtang/">personal blog</a>.</p>
+</section>
+<section>
+  <h1>Related Posts</h1>
+  <ul class="posts">
+    
+      <li class="related">
+        <a href="/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux isn't the only platform to target when building applications</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/06/15/installing-git-annex-on-sl5/">Installing git-annex on SL5</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/04/09/prototyping-and-testing-systems/">Prototyping and testing systems</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2011/12/13/using-continuous-integration-systems-in-a-team/">Using continuous integration systems in a team</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2011/10/13/feeling-disconnected-from-modern-software-development-tools/">Feeling Disconnected From Modern Software Development Tools</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/06/18/top500-supercomputers-for-summer-2012/">Top500 Supercomputers for Summer 2012</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/06/15/installing-git-annex-on-sl5/">Installing git-annex on SL5</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/06/13/dris-workflows-is-now-available-via-npm/">DRIS Workflows is now available via npm</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/06/07/facebook-open-house/">Facebook - Open House</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/06/06/dcc-roadshow-n-ireland/">DCC Roadshow N. Ireland</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>On GitHub</h1>
+  <ul id="gh_repos" data-user="jcftang" data-count="0" data-skip="true">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a class="github-follow" href="https://github.com/jcftang">Follow @jcftang</a>
+  
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets" data-user="jcftang" data-count="4" data-replies="false">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+    <a href="http://twitter.com/jcftang" class="twitter-follow-button" data-show-count="false">Follow @jcftang</a>
+  
+</section>
+
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/115375964029787125148?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Jimmy Tang -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'jcftang';
+			var disqus_developer = '0';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://jcftang.github.com/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/';
+        var disqus_url = 'http://jcftang.github.com/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+</body>
+</html>

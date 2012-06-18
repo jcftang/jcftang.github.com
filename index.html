@@ -7,11 +7,9 @@
   <meta charset="utf-8">
   <title>Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
+  <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
   
-  <meta name="description" content="The event was actually on 2012-06-06 and it was invite only. The event
-was mostly about the infrastructure of Facebook. It was actually done
-quite &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,11 +18,10 @@ quite &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com">
-  <link href="/favicon.png" rel="icon">
+  <link rel="canonical" href="http://jcftang.github.com/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/jquery.min.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Jimmy Tang" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
@@ -45,6 +42,8 @@ quite &hellip;">
   </script>
 
 
+   
+  <link href="/octopress-favicon.png" rel="icon">
 </head>
 
 <body   >
@@ -70,7 +69,7 @@ quite &hellip;">
   
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/archives">Archives</a></li>
   <li><a href="/blog/categories">Categories</a></li>
   <li><a href="/about">About</a></li>
 </ul>
@@ -81,7 +80,72 @@ quite &hellip;">
       <div class="blog-index">
   
     
+
+
+
+  
+
+
+
+
+
+
+
+
+    <article class="linklog">
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="http://top500.org/lists/2012/06/press-release">Top500 Supercomputers for Summer 2012</a>
+<span class='linklog-marker'>&rarr;</span>
+</h1>
+
     
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-18T20:26:00+01:00" pubdate data-updated="true">Jun 18<span>th</span>, 2012</time>
+        
+         | <a href="/2012/06/18/top500-supercomputers-for-summer-2012/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/06/18/top500-supercomputers-for-summer-2012/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>The Top 500 List is out! It&#8217;s been no surprise that LLNL and IBM has
+reclaimed the top spot. There is some pretty cool tech that&#8217;s going to
+come out of these systems which the HPC community should be rubbing
+their hands over.</p>
+
+<p><a href="http://www.schedmd.com">Slurm</a> will be moving along development for
+these big systems as well as <a href="http://www.whamcloud.com">Lustre</a> and
+<a href="http://zfsonlinux.org/">zfs on linux</a>.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/06/18/top500-supercomputers-for-summer-2012/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
 
 
 
@@ -96,7 +160,218 @@ quite &hellip;">
   <header>
     <h1 class="entry-title">
 
-<a href="/blog/2012/06/07/facebook-open-house/">Facebook - Open House</a>
+<a href="/2012/06/15/installing-git-annex-on-sl5/">Installing Git-annex on SL5</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-15T12:55:00+01:00" pubdate data-updated="true">Jun 15<span>th</span>, 2012</time>
+        
+         | <a href="/2012/06/15/installing-git-annex-on-sl5/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/06/15/installing-git-annex-on-sl5/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>I was waiting for my backups to be done hence this post, as I was using
+<em>git-annex</em> to manage my files and I decided I needed to have
+git-annex on a SL5 based machine. SL5 is just an opensource
+clone/recompile of RHEL5.</p>
+
+<p>I haven&#8217;t tried to install the newer versions of Haskell Platform and
+GHC in a while on SL5 to instal git-annex. But the last time I checked
+when GHC7 was out, it was a pain to install GHC on SL5.</p>
+
+<p>However I have discovered that someone has gone through the trouble of
+packaging up GHC and Haskell Platform for RHEL based distros.</p>
+
+<ul>
+<li><a href="http://justhub.org/download">http://justhub.org/download</a> - Packaged GHC and Haskell Platform
+RPM&#8217;s for RHEL based systems.</li>
+</ul>
+
+
+<p>I&#8217;m primarily interested in installing <em>git-annex</em> on SL5 based
+systems. The installation process goes as such&#8230;</p>
+
+<p>First install GHC and Haskell Platform (you need root for these
+following steps)</p>
+
+<pre><code>$ wget http://sherkin.justhub.org/el5/RPMS/x86_64/justhub-release-2.0-4.0.el5.x86_64.rpm
+$ rpm -ivh justhub-release-2.0-4.0.el5.x86_64.rpm
+$ yum install haskell
+</code></pre>
+
+<p>The RPM&#8217;s don&#8217;t place the files in /usr/bin, so you must add the
+following to your .bashrc (from here on you don&#8217;t need root if you
+don&#8217;t want things to be system wide)</p>
+
+<pre><code>$ export PATH=/usr/hs/bin:$PATH
+</code></pre>
+
+<p>On SL5 pcre is at version 6.6 which is far too old for one of the
+dependancies that git-annex requires. Therefore the user must install
+an updated version of <em>pcre</em> either from source or another method, I
+chose to install it from source and by hand into /usr/local</p>
+
+<pre><code>$ wget http://sourceforge.net/projects/pcre/files/pcre/8.30/pcre-8.30.tar.gz/download
+$ tar zxvf pcre-8.30.tar.gz
+$ cd pcre-8.30
+$ ./configure
+$ make &amp;&amp; make install
+</code></pre>
+
+<p>Once the packages are installed and are in your execution path, using
+cabal to configure and build git-annex just makes life easier, it
+should install all the needed dependancies.</p>
+
+<pre><code>$ cabal update
+$ cabal install pcre-light --extra-include-dirs=/usr/local/include
+$ git clone git://git.kitenet.net/git-annex
+$ cd git-annex
+$ make git-annex.1
+$ cabal configure
+$ cabal build
+$ cabal install
+</code></pre>
+
+<p>Or if you want to install it globallly for everyone (otherwise it will
+get installed into $HOME/.cabal/bin)</p>
+
+<pre><code>$ cabal install --global
+</code></pre>
+
+<p>The above will take a while to compile and install the needed
+dependancies. I would suggest any user who does should run the tests
+that comes with git-annex to make sure everything is functioning as
+expected.</p>
+
+<p>I wonder if it&#8217;s possible to get git-annex as a back-end driver for
+some of the digital preservation systems out there. Or more
+interestingly can fedora-commons be used a special remote or back-end
+for git-annex.</p>
+
+<p>I haven&#8217;t had a chance or need to install git-annex on a SL6 based
+system yet, but I would assume something similar to the above steps
+would be required to do so.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/06/15/installing-git-annex-on-sl5/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="/2012/06/13/dris-workflows-is-now-available-via-npm/">DRIS Workflows Is Now Available via Npm</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-13T13:59:00+01:00" pubdate data-updated="true">Jun 13<span>th</span>, 2012</time>
+        
+         | <a href="/2012/06/13/dris-workflows-is-now-available-via-npm/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/06/13/dris-workflows-is-now-available-via-npm/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>I&#8217;ve just uploaded the work that Matthias and Quirijn did over the
+past few months to the npm registry</p>
+
+<ul>
+<li><a href="http://search.npmjs.org/#/dri-api">http://search.npmjs.org/#/dri-api</a></li>
+<li><a href="http://search.npmjs.org/#/dris-workflows">http://search.npmjs.org/#/dris-workflows</a></li>
+<li><a href="http://search.npmjs.org/#/dri">http://search.npmjs.org/#/dri</a></li>
+<li><a href="http://search.npmjs.org/#/fedora">http://search.npmjs.org/#/fedora</a></li>
+</ul>
+
+
+<p>I haven&#8217;t tried installing it from the npm repository yet, I assume
+that they will work. There&#8217;s still some cosmetic work (needs to be
+branded correctly) that needs to be done as well as lots of error
+checking, validation and testing. It&#8217;s not a bad place to be starting
+to look for ideas if you are interested in building your own system to
+interface with Fedora Commons.</p>
+
+<p>Just remember the above is just a prototype that we thought would be
+good to share with the world!.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/06/13/dris-workflows-is-now-available-via-npm/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="/2012/06/07/facebook-open-house/">Facebook - Open House</a>
 
 </h1>
 
@@ -116,16 +391,14 @@ quite &hellip;">
 
 <time datetime="2012-06-07T09:12:00+01:00" pubdate data-updated="true">Jun 7<span>th</span>, 2012</time>
         
-         &bull; <a href="/blog/2012/06/07/facebook-open-house/#disqus_thread">Comments</a>
+         | <a href="/2012/06/07/facebook-open-house/#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/blog/2012/06/07/facebook-open-house/">&infin;</a>
+         &bull; <a rel="bookmark" href="/2012/06/07/facebook-open-house/">Permalink</a>
       </p>
     
   </header>
 
-
-
-  <div class="entry-content"><p>The event was actually on 2012-06-06 and it was invite only. The event
+<div class="entry-content"><p>The event was actually on 2012-06-06 and it was invite only. The event
 was mostly about the infrastructure of Facebook. It was actually done
 quite tastefully with a main speaker giving an overview of the whole
 system. Luckily they did not turn the event into a recruitment event
@@ -143,11 +416,17 @@ know didn&#8217;t attend as a result of the NDA.</p>
 all the other big dotcom companies). Some of it is even opensource!</p>
 </div>
 
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/06/07/facebook-open-house/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
 
     </article>
   
     
-    
 
 
 
@@ -159,7 +438,8 @@ all the other big dotcom companies). Some of it is even opensource!</p>
 
 
 
-    <article data-linklog>
+
+    <article class="linklog">
       
   <header>
     <h1 class="entry-title">
@@ -184,16 +464,14 @@ all the other big dotcom companies). Some of it is even opensource!</p>
 
 <time datetime="2012-06-06T14:16:00+01:00" pubdate data-updated="true">Jun 6<span>th</span>, 2012</time>
         
-         &bull; <a href="/blog/2012/06/06/dcc-roadshow-n-ireland/#disqus_thread">Comments</a>
+         | <a href="/2012/06/06/dcc-roadshow-n-ireland/#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/blog/2012/06/06/dcc-roadshow-n-ireland/">&infin;</a>
+         &bull; <a rel="bookmark" href="/2012/06/06/dcc-roadshow-n-ireland/">Permalink</a>
       </p>
     
   </header>
 
-
-
-  <div class="entry-content"><p>The 12th DCC regional roadshow will take place on 6th and 7th June at
+<div class="entry-content"><p>The 12th DCC regional roadshow will take place on 6th and 7th June at
 the McClay library, Queen&#8217;s University Belfast.</p>
 
 <p>The roadshow is being organised in conjunction with Queen&#8217;s University
@@ -205,11 +483,17 @@ relavent. It&#8217;s not the usual workshop, conference or meeting that I
 would attend.</p>
 </div>
 
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/06/06/dcc-roadshow-n-ireland/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
 
     </article>
   
     
-    
 
 
 
@@ -221,7 +505,8 @@ would attend.</p>
 
 
 
-    <article data-linklog>
+
+    <article class="linklog">
       
   <header>
     <h1 class="entry-title">
@@ -246,16 +531,14 @@ would attend.</p>
 
 <time datetime="2012-06-04T11:50:00+01:00" pubdate data-updated="true">Jun 4<span>th</span>, 2012</time>
         
-         &bull; <a href="/blog/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter/#disqus_thread">Comments</a>
+         | <a href="/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter/#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/blog/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter/">&infin;</a>
+         &bull; <a rel="bookmark" href="/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter/">Permalink</a>
       </p>
     
   </header>
 
-
-
-  <div class="entry-content"><p>It seems <a href="http://kitenet.net/~joey/">Joey Hess</a> is in the process of
+<div class="entry-content"><p>It seems <a href="http://kitenet.net/~joey/">Joey Hess</a> is in the process of
 getting <strong>git-annex assistant</strong> crowd funded. I had not been keeping
 up to date too much in the last year with git-annex partly because it
 met my needs and I never needed to upgrade to the latest tip.</p>
@@ -272,11 +555,18 @@ pretty good alternative to Dropbox. I wish <em>smudge filters</em> were on
 the roadmap as well.</p>
 </div>
 
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
 
     </article>
   
     
-    
+
 
 
 
@@ -291,7 +581,7 @@ the roadmap as well.</p>
   <header>
     <h1 class="entry-title">
 
-<a href="/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github/">DRIS Workflows Just Got Uploaded to Github</a>
+<a href="/2012/05/21/dris-workflows-just-got-uploaded-to-github/">DRIS Workflows Just Got Uploaded to Github</a>
 
 </h1>
 
@@ -311,16 +601,14 @@ the roadmap as well.</p>
 
 <time datetime="2012-05-21T21:19:00+01:00" pubdate data-updated="true">May 21<span>st</span>, 2012</time>
         
-         &bull; <a href="/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github/#disqus_thread">Comments</a>
+         | <a href="/2012/05/21/dris-workflows-just-got-uploaded-to-github/#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github/">&infin;</a>
+         &bull; <a rel="bookmark" href="/2012/05/21/dris-workflows-just-got-uploaded-to-github/">Permalink</a>
       </p>
     
   </header>
 
-
-
-  <div class="entry-content"><p>After almost 3 months supervising and working with two interns I&#8217;ve
+<div class="entry-content"><p>After almost 3 months supervising and working with two interns I&#8217;ve
 finally uploaded their work under the GPLv2 License.</p>
 
 <ul>
@@ -358,11 +646,17 @@ some similar ideas.</p>
 usual, hope someone finds it useful.</p>
 </div>
 
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/05/21/dris-workflows-just-got-uploaded-to-github/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
 
     </article>
   
     
-    
 
 
 
@@ -374,7 +668,8 @@ usual, hope someone finds it useful.</p>
 
 
 
-    <article data-linklog>
+
+    <article class="linklog">
       
   <header>
     <h1 class="entry-title">
@@ -399,16 +694,14 @@ usual, hope someone finds it useful.</p>
 
 <time datetime="2012-05-19T13:08:00+01:00" pubdate data-updated="true">May 19<span>th</span>, 2012</time>
         
-         &bull; <a href="/blog/2012/05/19/ceph-gets-a-refresh/#disqus_thread">Comments</a>
+         | <a href="/2012/05/19/ceph-gets-a-refresh/#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/blog/2012/05/19/ceph-gets-a-refresh/">&infin;</a>
+         &bull; <a rel="bookmark" href="/2012/05/19/ceph-gets-a-refresh/">Permalink</a>
       </p>
     
   </header>
 
-
-
-  <div class="entry-content"><p>I&#8217;ve been keeping an eye on <em>ceph</em> for quite sometime now. It looks
+<div class="entry-content"><p>I&#8217;ve been keeping an eye on <em>ceph</em> for quite sometime now. It looks
 like <em>ceph</em> is almost ready for production usage. There is now a
 support infrastructure and a commercial company backing the
 product. So far the OSD, MDS and MON components all run on Linux since
@@ -423,11 +716,18 @@ filesystems arena. It will shake up GPFS and Lustre for sure, it might
 even give glusterfs a run for its money in the near future.</p>
 </div>
 
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/05/19/ceph-gets-a-refresh/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
 
     </article>
   
     
-    
+
 
 
 
@@ -442,7 +742,7 @@ even give glusterfs a run for its money in the near future.</p>
   <header>
     <h1 class="entry-title">
 
-<a href="/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/">Is JAVA Really the Only Game in Town for Building Digital Preservation Systems?</a>
+<a href="/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/">Is JAVA Really the Only Game in Town for Building Digital Preservation Systems?</a>
 
 </h1>
 
@@ -462,16 +762,14 @@ even give glusterfs a run for its money in the near future.</p>
 
 <time datetime="2012-05-16T18:24:00+01:00" pubdate data-updated="true">May 16<span>th</span>, 2012</time>
         
-         &bull; <a href="/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/#disqus_thread">Comments</a>
+         | <a href="/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/">&infin;</a>
+         &bull; <a rel="bookmark" href="/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/">Permalink</a>
       </p>
     
   </header>
 
-
-
-  <div class="entry-content"><p>In the world of digital preservation and repositories it seems that
+<div class="entry-content"><p>In the world of digital preservation and repositories it seems that
 there is primarily fedora-commons, dspace, eprints and one or two
 other solutions out there for building up digital preservation
 systems. The one that really stands out as a framework and toolkit for
@@ -506,11 +804,18 @@ implementing enterprise applications that JAVA gets so much focus and
 attention?</p>
 </div>
 
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
 
     </article>
   
     
-    
+
 
 
 
@@ -525,7 +830,7 @@ attention?</p>
   <header>
     <h1 class="entry-title">
 
-<a href="/blog/2012/05/02/git-subtree-is-now-in-mainline-git/">Git-subtree Is Now in Mainline Git</a>
+<a href="/2012/05/02/git-subtree-is-now-in-mainline-git/">Git-subtree Is Now in Mainline Git</a>
 
 </h1>
 
@@ -545,16 +850,14 @@ attention?</p>
 
 <time datetime="2012-05-02T09:27:00+01:00" pubdate data-updated="true">May 2<span>nd</span>, 2012</time>
         
-         &bull; <a href="/blog/2012/05/02/git-subtree-is-now-in-mainline-git/#disqus_thread">Comments</a>
+         | <a href="/2012/05/02/git-subtree-is-now-in-mainline-git/#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/blog/2012/05/02/git-subtree-is-now-in-mainline-git/">&infin;</a>
+         &bull; <a rel="bookmark" href="/2012/05/02/git-subtree-is-now-in-mainline-git/">Permalink</a>
       </p>
     
   </header>
 
-
-
-  <div class="entry-content"><p>It seems that <a href="git://github.com/apenwarr/git-subtree.git">git-subtree</a>
+<div class="entry-content"><p>It seems that <a href="git://github.com/apenwarr/git-subtree.git">git-subtree</a>
 has been merged into the mainline git project. <em>git-subtree</em> is one of
 those really useful wrappers for manipulating git repositories if you
 are an integrator or don&#8217;t really like git-submodule. It certainly is
@@ -566,193 +869,12 @@ commands for exporting the source tree for a release if you use
 git-subtree; actually git-subtree is just plain useful.</p>
 </div>
 
-
-    </article>
-  
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/05/02/git-subtree-is-now-in-mainline-git/#disqus_thread">View comments &raquo;</a></p>
     
     
-
-
-
-  
-
-
-
-
-
-
-
-    <article data-linklog>
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="http://www.bsc.es/marenostrum-support-services/hpc-events-trainings/others/slurm-user-group-meeting-2012">Slurm User Group Meeting 2012</a>
-<span class='linklog-marker'>&rarr;</span>
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-30T20:19:00+01:00" pubdate data-updated="true">Apr 30<span>th</span>, 2012</time>
-        
-         &bull; <a href="/blog/2012/04/30/slurm-user-group-meeting-2012/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/blog/2012/04/30/slurm-user-group-meeting-2012/">&infin;</a>
-      </p>
-    
-  </header>
-
-
-
-  <div class="entry-content"><p>This time the usergroup meeting is in BSC in Spain (this place is
-cool, I&#8217;ve been at BSC for a few conferences and meetings before). I
-wish I was doing some HPC right now, I&#8217;m very tempted to submit an
-abstract or two on the last two things with slurm that I was involved
-with.</p>
-
-<p>The <a href="https://github.com/jcftang/php-slurm">php-slurm</a> package needs
-some love, its somewhat in use at work. I just wish I had more time to
-fix the memory leaks. There is also
-<a href="https://github.com/jcftang/slurm-bank">slurm-bank</a> which is seeing
-some good use in work, though it could do with a rewrite in C.</p>
-</div>
-
-
-    </article>
-  
-    
-    
-
-
-
-  
-
-
-
-
-
-
-
-    <article data-linklog>
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="http://mosh.mit.edu/">MOSH - an Alternative to SSH</a>
-<span class='linklog-marker'>&rarr;</span>
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-17T08:31:00+01:00" pubdate data-updated="true">Apr 17<span>th</span>, 2012</time>
-        
-         &bull; <a href="/blog/2012/04/17/mosh-an-alternative-to-ssh/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/blog/2012/04/17/mosh-an-alternative-to-ssh/">&infin;</a>
-      </p>
-    
-  </header>
-
-
-
-  <div class="entry-content"><p>This tool hasn&#8217;t been around for too long, but long enough to make it
-into quite a few distros. It looks like it&#8217;s a good alternative to
-<em>autossh</em> and <em>tmux</em> which I have been using for the past few
-years. Like many new tools like this, if it&#8217;s not around everywhere
-it&#8217;s not as useful as it could be.</p>
-
-<p>The only minor criticism of the application is that the <em>mosh</em> command
-itself is written in perl, it would be nicer if the wrapper command
-would be written in C/C++ like the rest of the application. It would
-certainly make it more <em>portable</em>. I guess I should shut up or write
-my own mosh wrapper replacement.</p>
-
-<p>Other than that, I&#8217;ve got it installed on one or two machines and it
-seems nice enough so far. I now need to test it out in the field on a
-bad connection when I&#8217;m away at a team meeting. I&#8217;m still not entirely
-sure of how good or bad it is in terms of security compared to <em>SSH</em>.</p>
-</div>
-
-
-    </article>
-  
-    
-    
-
-
-
-  
-
-
-
-
-
-
-
-    <article data-linklog>
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="http://www.javacodegeeks.com/2012/04/arquillian-100final-released-ready-for.html">Arquillian 1.0.0.Final Released! Ready for GlassFish and WebLogic! Death to All Bugs!</a>
-<span class='linklog-marker'>&rarr;</span>
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-16T09:25:00+01:00" pubdate data-updated="true">Apr 16<span>th</span>, 2012</time>
-        
-         &bull; <a href="/blog/2012/04/16/arquillian-1-dot-0-0-dot-final-released-ready-for-glassfish-and-weblogic-death-to-all-bugs/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/blog/2012/04/16/arquillian-1-dot-0-0-dot-final-released-ready-for-glassfish-and-weblogic-death-to-all-bugs/">&infin;</a>
-      </p>
-    
-  </header>
-
-
-
-  <div class="entry-content"><p>Looks like an interesting and useful tool, must take note of this tool
-for later use to kill all bugs that are found in the projects that we
-work on, well java ones at least.</p>
-
-<p>Anything to help squash bugs is good!</p>
-</div>
+  </footer>
 
 
     </article>
@@ -761,7 +883,7 @@ work on, well java ones at least.</p>
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
     
-    <a href="/blog/archives">Blog Archives</a>
+    <a href="/archives">Blog Archives</a>
     
   </div>
 </div>
@@ -777,73 +899,49 @@ work on, well java ones at least.</p>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/06/07/facebook-open-house/">Facebook - Open House</a>
+        <a href="/2012/06/18/top500-supercomputers-for-summer-2012/">Top500 Supercomputers for Summer 2012</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/06/06/dcc-roadshow-n-ireland/">DCC Roadshow N. Ireland</a>
+        <a href="/2012/06/15/installing-git-annex-on-sl5/">Installing git-annex on SL5</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter/">git-annex assistant is being crowd funded on Kickstarter</a>
+        <a href="/2012/06/13/dris-workflows-is-now-available-via-npm/">DRIS Workflows is now available via npm</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github/">DRIS Workflows just got uploaded to github</a>
+        <a href="/2012/06/07/facebook-open-house/">Facebook - Open House</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/05/19/ceph-gets-a-refresh/">ceph gets a refresh</a>
+        <a href="/2012/06/06/dcc-roadshow-n-ireland/">DCC Roadshow N. Ireland</a>
       </li>
     
   </ul>
 </section>
 
 <section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
+  <h1>On GitHub</h1>
+  <ul id="gh_repos" data-user="jcftang" data-count="0" data-skip="true">
     <li class="loading">Status updating&#8230;</li>
   </ul>
   
-  <a href="https://github.com/jcftang">@jcftang</a> on GitHub
+  <a class="github-follow" href="https://github.com/jcftang">Follow @jcftang</a>
   
-  <script type="text/javascript">
-    $.domReady(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'jcftang',
-            count: 0,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
 </section>
 
 
 <section>
   <h1>Latest Tweets</h1>
-  <ul id="tweets">
+  <ul id="tweets" data-user="jcftang" data-count="4" data-replies="false">
     <li class="loading">Status updating&#8230;</li>
   </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("jcftang", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
   
     <a href="http://twitter.com/jcftang" class="twitter-follow-button" data-show-count="false">Follow @jcftang</a>
   
 </section>
+
 
 
 
@@ -873,6 +971,7 @@ work on, well java ones at least.</p>
 
 <script type="text/javascript">
       var disqus_shortname = 'jcftang';
+			var disqus_developer = '0';
       
         
         var disqus_script = 'count.js';
@@ -884,38 +983,6 @@ work on, well java ones at least.</p>
     }());
 </script>
 
-
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-
-
-  <script type="text/javascript">
-    (function() {
-      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
-      script.src = 'https://apis.google.com/js/plusone.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
-    })();
-  </script>
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
 
 
 

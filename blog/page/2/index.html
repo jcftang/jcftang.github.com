@@ -7,11 +7,9 @@
   <meta charset="utf-8">
   <title>Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
+  <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
   
-  <meta name="description" content="One of the issues with with dogfooding your own projects to accelerate
-development might be the lack of control and feedback from the
-specifications &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,11 +18,10 @@ specifications &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/blog/page/2">
-  <link href="/favicon.png" rel="icon">
+  <link rel="canonical" href="http://jcftang.github.com/blog/page/2/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/jquery.min.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Jimmy Tang" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
@@ -45,6 +42,8 @@ specifications &hellip;">
   </script>
 
 
+   
+  <link href="/octopress-favicon.png" rel="icon">
 </head>
 
 <body   >
@@ -70,7 +69,7 @@ specifications &hellip;">
   
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/archives">Archives</a></li>
   <li><a href="/blog/categories">Categories</a></li>
   <li><a href="/about">About</a></li>
 </ul>
@@ -81,7 +80,210 @@ specifications &hellip;">
       <div class="blog-index">
   
     
+
+
+
+  
+
+
+
+
+
+
+
+
+    <article class="linklog">
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="http://www.bsc.es/marenostrum-support-services/hpc-events-trainings/others/slurm-user-group-meeting-2012">Slurm User Group Meeting 2012</a>
+<span class='linklog-marker'>&rarr;</span>
+</h1>
+
     
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-30T20:19:00+01:00" pubdate data-updated="true">Apr 30<span>th</span>, 2012</time>
+        
+         | <a href="/2012/04/30/slurm-user-group-meeting-2012/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/04/30/slurm-user-group-meeting-2012/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>This time the usergroup meeting is in BSC in Spain (this place is
+cool, I&#8217;ve been at BSC for a few conferences and meetings before). I
+wish I was doing some HPC right now, I&#8217;m very tempted to submit an
+abstract or two on the last two things with slurm that I was involved
+with.</p>
+
+<p>The <a href="https://github.com/jcftang/php-slurm">php-slurm</a> package needs
+some love, its somewhat in use at work. I just wish I had more time to
+fix the memory leaks. There is also
+<a href="https://github.com/jcftang/slurm-bank">slurm-bank</a> which is seeing
+some good use in work, though it could do with a rewrite in C.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/04/30/slurm-user-group-meeting-2012/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+  
+
+
+
+
+
+
+
+
+    <article class="linklog">
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="http://mosh.mit.edu/">MOSH - an Alternative to SSH</a>
+<span class='linklog-marker'>&rarr;</span>
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-17T08:31:00+01:00" pubdate data-updated="true">Apr 17<span>th</span>, 2012</time>
+        
+         | <a href="/2012/04/17/mosh-an-alternative-to-ssh/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/04/17/mosh-an-alternative-to-ssh/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>This tool hasn&#8217;t been around for too long, but long enough to make it
+into quite a few distros. It looks like it&#8217;s a good alternative to
+<em>autossh</em> and <em>tmux</em> which I have been using for the past few
+years. Like many new tools like this, if it&#8217;s not around everywhere
+it&#8217;s not as useful as it could be.</p>
+
+<p>The only minor criticism of the application is that the <em>mosh</em> command
+itself is written in perl, it would be nicer if the wrapper command
+would be written in C/C++ like the rest of the application. It would
+certainly make it more <em>portable</em>. I guess I should shut up or write
+my own mosh wrapper replacement.</p>
+
+<p>Other than that, I&#8217;ve got it installed on one or two machines and it
+seems nice enough so far. I now need to test it out in the field on a
+bad connection when I&#8217;m away at a team meeting. I&#8217;m still not entirely
+sure of how good or bad it is in terms of security compared to <em>SSH</em>.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/04/17/mosh-an-alternative-to-ssh/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+  
+
+
+
+
+
+
+
+
+    <article class="linklog">
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="http://www.javacodegeeks.com/2012/04/arquillian-100final-released-ready-for.html">Arquillian 1.0.0.Final Released! Ready for GlassFish and WebLogic! Death to All Bugs!</a>
+<span class='linklog-marker'>&rarr;</span>
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-16T09:25:00+01:00" pubdate data-updated="true">Apr 16<span>th</span>, 2012</time>
+        
+         | <a href="/2012/04/16/arquillian-1-dot-0-0-dot-final-released-ready-for-glassfish-and-weblogic-death-to-all-bugs/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/04/16/arquillian-1-dot-0-0-dot-final-released-ready-for-glassfish-and-weblogic-death-to-all-bugs/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>Looks like an interesting and useful tool, must take note of this tool
+for later use to kill all bugs that are found in the projects that we
+work on, well java ones at least.</p>
+
+<p>Anything to help squash bugs is good!</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/04/16/arquillian-1-dot-0-0-dot-final-released-ready-for-glassfish-and-weblogic-death-to-all-bugs/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
 
 
 
@@ -96,7 +298,7 @@ specifications &hellip;">
   <header>
     <h1 class="entry-title">
 
-<a href="/blog/2012/04/09/prototyping-and-testing-systems/">Prototyping and Testing Systems</a>
+<a href="/2012/04/09/prototyping-and-testing-systems/">Prototyping and Testing Systems</a>
 
 </h1>
 
@@ -116,16 +318,14 @@ specifications &hellip;">
 
 <time datetime="2012-04-09T11:12:00+01:00" pubdate data-updated="true">Apr 9<span>th</span>, 2012</time>
         
-         &bull; <a href="/blog/2012/04/09/prototyping-and-testing-systems/#disqus_thread">Comments</a>
+         | <a href="/2012/04/09/prototyping-and-testing-systems/#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/blog/2012/04/09/prototyping-and-testing-systems/">&infin;</a>
+         &bull; <a rel="bookmark" href="/2012/04/09/prototyping-and-testing-systems/">Permalink</a>
       </p>
     
   </header>
 
-
-
-  <div class="entry-content"><p>One of the issues with with dogfooding your own projects to accelerate
+<div class="entry-content"><p>One of the issues with with dogfooding your own projects to accelerate
 development might be the lack of control and feedback from the
 specifications and requirements process. To try and mitigate this
 effect, automated testing should be done, that is specification,
@@ -176,11 +376,17 @@ implementation is great for the potential stakeholder, having
 documentation and tests puts us in an even stronger position.</p>
 </div>
 
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/04/09/prototyping-and-testing-systems/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
 
     </article>
   
     
-    
 
 
 
@@ -192,7 +398,8 @@ documentation and tests puts us in an even stronger position.</p>
 
 
 
-    <article data-linklog>
+
+    <article class="linklog">
       
   <header>
     <h1 class="entry-title">
@@ -217,16 +424,14 @@ documentation and tests puts us in an even stronger position.</p>
 
 <time datetime="2012-04-01T11:05:00+01:00" pubdate data-updated="true">Apr 1<span>st</span>, 2012</time>
         
-         &bull; <a href="/blog/2012/04/01/gitbuilder-aggregator/#disqus_thread">Comments</a>
+         | <a href="/2012/04/01/gitbuilder-aggregator/#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/blog/2012/04/01/gitbuilder-aggregator/">&infin;</a>
+         &bull; <a rel="bookmark" href="/2012/04/01/gitbuilder-aggregator/">Permalink</a>
       </p>
     
   </header>
 
-
-
-  <div class="entry-content"><p>We use git and <a href="https://github.com/apenwarr/gitbuilder">gitbuilder</a> in
+<div class="entry-content"><p>We use git and <a href="https://github.com/apenwarr/gitbuilder">gitbuilder</a> in
 work for a large number of projects, we also try and test things as
 much as we can. I first noticed that someone had written an aggregator
 for gitbuilder at <a href="http://ceph.newdream.net/gitbuilder.cgi">ceph
@@ -258,11 +463,18 @@ in a single language in a generic way such that it works with other
 DVCS&#8217;s that have the bisect feature.</p>
 </div>
 
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/04/01/gitbuilder-aggregator/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
 
     </article>
   
     
-    
+
 
 
 
@@ -277,7 +489,7 @@ DVCS&#8217;s that have the bisect feature.</p>
   <header>
     <h1 class="entry-title">
 
-<a href="/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/">Dogfooding Your Own Project to Accelerate Development</a>
+<a href="/2012/03/15/dogfooding-your-own-project-to-accelerate-development/">Dogfooding Your Own Project to Accelerate Development</a>
 
 </h1>
 
@@ -297,16 +509,14 @@ DVCS&#8217;s that have the bisect feature.</p>
 
 <time datetime="2012-03-15T19:31:00+00:00" pubdate data-updated="true">Mar 15<span>th</span>, 2012</time>
         
-         &bull; <a href="/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/#disqus_thread">Comments</a>
+         | <a href="/2012/03/15/dogfooding-your-own-project-to-accelerate-development/#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/">&infin;</a>
+         &bull; <a rel="bookmark" href="/2012/03/15/dogfooding-your-own-project-to-accelerate-development/">Permalink</a>
       </p>
     
   </header>
 
-
-
-  <div class="entry-content"><p>Should you dogfood your own project that you are developing? The
+<div class="entry-content"><p>Should you dogfood your own project that you are developing? The
 answer is probably yes, especially if you have no clear cut
 requirements from the stakeholder in a project with a greenfield for
 development. There is a lot to be said about having a working
@@ -331,11 +541,17 @@ aren&#8217;t many requirements due to the schedule, it&#8217;s worth taking this
 approach until hard requirements get delivered.</p>
 </div>
 
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/03/15/dogfooding-your-own-project-to-accelerate-development/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
 
     </article>
   
     
-    
 
 
 
@@ -347,7 +563,8 @@ approach until hard requirements get delivered.</p>
 
 
 
-    <article data-linklog>
+
+    <article class="linklog">
       
   <header>
     <h1 class="entry-title">
@@ -372,16 +589,14 @@ approach until hard requirements get delivered.</p>
 
 <time datetime="2012-03-11T11:45:00+00:00" pubdate data-updated="true">Mar 11<span>th</span>, 2012</time>
         
-         &bull; <a href="/blog/2012/03/11/git-rerere-for-long-lived-feature-branches/#disqus_thread">Comments</a>
+         | <a href="/2012/03/11/git-rerere-for-long-lived-feature-branches/#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/blog/2012/03/11/git-rerere-for-long-lived-feature-branches/">&infin;</a>
+         &bull; <a rel="bookmark" href="/2012/03/11/git-rerere-for-long-lived-feature-branches/">Permalink</a>
       </p>
     
   </header>
 
-
-
-  <div class="entry-content"><p>I turned this feature on for a few of my git repos but I had
+<div class="entry-content"><p>I turned this feature on for a few of my git repos but I had
 completely forgotten about it. As far as I recall the feature has been
 around for a few years now. It can be turned on globally by doing</p>
 
@@ -393,11 +608,18 @@ branches. I&#8217;ve been lazy recently and I have just doing merges instead
 rebasing, which lead me to re-discover <em>git rerere</em>.</p>
 </div>
 
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/03/11/git-rerere-for-long-lived-feature-branches/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
 
     </article>
   
     
-    
+
 
 
 
@@ -412,7 +634,7 @@ rebasing, which lead me to re-discover <em>git rerere</em>.</p>
   <header>
     <h1 class="entry-title">
 
-<a href="/blog/2012/03/08/enabling-latent-semantic-indexing-for-octopress/">Enabling Latent Semantic Indexing for Octopress</a>
+<a href="/2012/03/08/enabling-latent-semantic-indexing-for-octopress/">Enabling Latent Semantic Indexing for Octopress</a>
 
 </h1>
 
@@ -432,16 +654,14 @@ rebasing, which lead me to re-discover <em>git rerere</em>.</p>
 
 <time datetime="2012-03-08T20:02:00+00:00" pubdate data-updated="true">Mar 8<span>th</span>, 2012</time>
         
-         &bull; <a href="/blog/2012/03/08/enabling-latent-semantic-indexing-for-octopress/#disqus_thread">Comments</a>
+         | <a href="/2012/03/08/enabling-latent-semantic-indexing-for-octopress/#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/blog/2012/03/08/enabling-latent-semantic-indexing-for-octopress/">&infin;</a>
+         &bull; <a rel="bookmark" href="/2012/03/08/enabling-latent-semantic-indexing-for-octopress/">Permalink</a>
       </p>
     
   </header>
 
-
-
-  <div class="entry-content"><p>For those that care about having related posts on their <a href="">Octopress</a>
+<div class="entry-content"><p>For those that care about having related posts on their <a href="">Octopress</a>
 blog. It&#8217;s actually quite easy to turn it on, it&#8217;s nice to have and
 useful. But it&#8217;s not enabled by default in Octopress.</p>
 
@@ -479,11 +699,17 @@ slow if you have lots of posts to classify. It would be recommended
 that rb-gsl be installed to accelerate the classification process.</p>
 </div>
 
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/03/08/enabling-latent-semantic-indexing-for-octopress/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
 
     </article>
   
     
-    
 
 
 
@@ -495,7 +721,8 @@ that rb-gsl be installed to accelerate the classification process.</p>
 
 
 
-    <article data-linklog>
+
+    <article class="linklog">
       
   <header>
     <h1 class="entry-title">
@@ -520,16 +747,14 @@ that rb-gsl be installed to accelerate the classification process.</p>
 
 <time datetime="2012-03-04T18:38:00+00:00" pubdate data-updated="true">Mar 4<span>th</span>, 2012</time>
         
-         &bull; <a href="/blog/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/#disqus_thread">Comments</a>
+         | <a href="/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/blog/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/">&infin;</a>
+         &bull; <a rel="bookmark" href="/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/">Permalink</a>
       </p>
     
   </header>
 
-
-
-  <div class="entry-content"><p>This is just a temporary solution till something better or more
+<div class="entry-content"><p>This is just a temporary solution till something better or more
 appropriate comes along. It&#8217;s just an ikiwiki news aggregator for
 websites and projects which are related to Digital Preservation,
 Digitial Humanities and other related bits and pieces.</p>
@@ -543,11 +768,17 @@ little effort. I don&#8217;t think I&#8217;ve ever come across a Digital
 Humanities and Digital Preservation aggregator before.</p>
 </div>
 
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
 
     </article>
   
     
-    
 
 
 
@@ -559,7 +790,8 @@ Humanities and Digital Preservation aggregator before.</p>
 
 
 
-    <article data-linklog>
+
+    <article class="linklog">
       
   <header>
     <h1 class="entry-title">
@@ -584,16 +816,14 @@ Humanities and Digital Preservation aggregator before.</p>
 
 <time datetime="2012-02-26T21:08:00+00:00" pubdate data-updated="true">Feb 26<span>th</span>, 2012</time>
         
-         &bull; <a href="/blog/2012/02/26/genetic-classification-of-populations-using-supervised-learning/#disqus_thread">Comments</a>
+         | <a href="/2012/02/26/genetic-classification-of-populations-using-supervised-learning/#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/blog/2012/02/26/genetic-classification-of-populations-using-supervised-learning/">&infin;</a>
+         &bull; <a rel="bookmark" href="/2012/02/26/genetic-classification-of-populations-using-supervised-learning/">Permalink</a>
       </p>
     
   </header>
 
-
-
-  <div class="entry-content"><p>In the past few months, in my spare time whenever I get a chance, I&#8217;ve
+<div class="entry-content"><p>In the past few months, in my spare time whenever I get a chance, I&#8217;ve
 been working on a side project in work. It&#8217;s a research project
 amongst a group of people with a cool idea. The idea is to apply
 neural networks to identifying diseases, populations and traits via
@@ -625,250 +855,12 @@ are a rake of ideas that I have that I wouldn&#8217;t mind seeing
 implemented. I just need more time!</p>
 </div>
 
-
-    </article>
-  
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/02/26/genetic-classification-of-populations-using-supervised-learning/#disqus_thread">View comments &raquo;</a></p>
     
     
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/">Things Not to Say and to Do in a Project Meeting</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-02-23T08:13:00+00:00" pubdate data-updated="true">Feb 23<span>rd</span>, 2012</time>
-        
-         &bull; <a href="/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/">&infin;</a>
-      </p>
-    
-  </header>
-
-
-
-  <div class="entry-content"><p>Team meetings can be both productive and counter productive as most
-people find. If they are well structured with a purpose and goal then
-a lot can be achieved (most of the time).</p>
-
-<p>For explorartory meetings, it&#8217;s probably okay to have some time set
-aside for some free and open discussions. Once a goal has been agreed
-upon, it&#8217;s probably a good idea to focus on it more and steer the
-discussion to try and deliver on the goal. Having open ended
-discussions with no set goals sometimes is discouraging and sometimes
-a waste of time.</p>
-
-<p>To the point, I wanted to discuss some things not to say and do in a
-meeting which might cause a collapse in communications, these are just
-some things that I have noticed in the last few months worth of
-meetings and are based on my own experiences,</p>
-
-<ul>
-<li>Don&#8217;t assume you know everything, there will always be someone
-smarter than you. There&#8217;s nothing wrong with being an expert in your
-own area, but there are times where you just need to trust others to
-deliver.</li>
-<li>Don&#8217;t pick on other team members for (possibly) not delivering, this
-is hugely demoralising. It&#8217;s better to ask why, and if possible does
-that team member or members need help to deliver.</li>
-<li>In real life, does anyone really use waterfall methods to deliver a
-project?</li>
-<li>Don&#8217;t try and do micro-management if you are clearly middle or even
-senior management, but at least describe tasks in the same language
-as the stakeholder and developer so that things don&#8217;t get lost in
-translation.</li>
-<li>Do have a plan if the series of meetings are to last a few months if
-there are long term goals to be achieved. If it&#8217;s not a plan, then
-at least have a list of todo, work in progress and done tasks.</li>
-<li>Don&#8217;t assign tasks without deadlines (realistic ones).</li>
-<li>Don&#8217;t assume you are on the same page in discussions unless you are
-confident that everyone at the meeting has common language and
-understands what is being discussed. People come and go, so you just
-have to be aware.</li>
-</ul>
-
-
-<p>Most if not all of the above list of things is common sense, there
-isn&#8217;t anything too special that you need to do to succeed at
-communicating.</p>
-</div>
-
-
-    </article>
-  
-    
-    
-
-
-
-  
-
-
-
-
-
-
-
-    <article data-linklog>
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="http://www.scientificlinux.org/distributions/6x/62/">Scientific Linux 6.2 Is Out</a>
-<span class='linklog-marker'>&rarr;</span>
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-02-19T18:00:00+00:00" pubdate data-updated="true">Feb 19<span>th</span>, 2012</time>
-        
-         &bull; <a href="/blog/2012/02/19/scientific-linux-6-dot-2-is-out/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/blog/2012/02/19/scientific-linux-6-dot-2-is-out/">&infin;</a>
-      </p>
-    
-  </header>
-
-
-
-  <div class="entry-content"><p>SL6.2 has been out for a few days now, I haven&#8217;t had a chance to
-really take a look at it, since the more recent SL6 installs I
-maintain tend to be tracking the 6x releases. Hopefully SL will try
-and keep inline with the upstreams support schedule.</p>
-
-<p>I&#8217;ve a personal preference for deploying SL over CentOS (or any other
-recompiles of RHEL). SL tends to be a bit more polished in terms of
-not breaking older installs, i.e. the upstream doesn&#8217;t move point
-releases around as CentOS does, SL does not force the end user to run
-the latest stable or continually upgrade to the latest point release
-to get updates (due to the weird convention CentOS seems to have with
-their archives).</p>
-
-<p>It&#8217;s out, I need to look at it again, especially since ZFS is getting
-closer to being ready for a bit more general usage on the server side
-and the project that I am working will be needing some machines to be
-installed and setup soon.</p>
-</div>
-
-
-    </article>
-  
-    
-    
-
-
-
-  
-
-
-
-
-
-
-
-    <article data-linklog>
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="http://www.raspberrypi.org/">Rasberry Pi - What I Would Use It For?</a>
-<span class='linklog-marker'>&rarr;</span>
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-02-19T14:46:00+00:00" pubdate data-updated="true">Feb 19<span>th</span>, 2012</time>
-        
-         &bull; <a href="/blog/2012/02/19/rasberry-pi-what-i-would-use-it-for/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/blog/2012/02/19/rasberry-pi-what-i-would-use-it-for/">&infin;</a>
-      </p>
-    
-  </header>
-
-
-
-  <div class="entry-content"><p>At the time of writing it seems that the Raspberry Pi site is down,
-probably suffering from a slashdot effect. I would imagine almost
-every nerd, sheevaplug developer, OLPC developer, DIY&#8217;ers who want to
-build their own home media centres are looking to get a Raspberry Pi
-right now.</p>
-
-<p>So what would I use one of these mini-computers for? I can think up a
-range of cool applications for this device, assuming I can order a few
-of these to play with. I&#8217;ve got ideas such as:</p>
-
-<ul>
-<li>A Tahoe-LAFS storage node, I could attach a few HDD&#8217;s to one of these
-devices and run Tahoe-LAFS on it, these computers are cheap enough
-and have a low enough power consumption that I could just have them
-on all the time.</li>
-<li>A Babeld node, I could have a few of these devices dotted around my
-house/apartment to build a mesh network.</li>
-<li>A portable computer, not quite a tablet PC with a screen, but it has
-enough connectivity to wire it up to a modern monitor or a TV.</li>
-<li>A penetration testing device, just wire it up with a few DC
-batteries, plug in a wireless card, wrap it up in a water proof
-package. Power on, and see how far you can throw it at your target,
-I can see endless possibilities for this device for pen-testing.</li>
-</ul>
-
-
-<p>I wonder if the device will ever be able to be powered via the USB
-port or the the ethernet port. I can see some interesting uses for
-this device in data centres for monitoring the network, power
-consumption and a host of other things.</p>
-</div>
+  </footer>
 
 
     </article>
@@ -877,7 +869,7 @@ consumption and a host of other things.</p>
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
     
-    <a href="/blog/archives">Blog Archives</a>
+    <a href="/archives">Blog Archives</a>
     
     <a class="next" href="/">Newer &rarr;</a>
     
@@ -895,73 +887,49 @@ consumption and a host of other things.</p>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/06/07/facebook-open-house/">Facebook - Open House</a>
+        <a href="/2012/06/18/top500-supercomputers-for-summer-2012/">Top500 Supercomputers for Summer 2012</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/06/06/dcc-roadshow-n-ireland/">DCC Roadshow N. Ireland</a>
+        <a href="/2012/06/15/installing-git-annex-on-sl5/">Installing git-annex on SL5</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter/">git-annex assistant is being crowd funded on Kickstarter</a>
+        <a href="/2012/06/13/dris-workflows-is-now-available-via-npm/">DRIS Workflows is now available via npm</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github/">DRIS Workflows just got uploaded to github</a>
+        <a href="/2012/06/07/facebook-open-house/">Facebook - Open House</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/05/19/ceph-gets-a-refresh/">ceph gets a refresh</a>
+        <a href="/2012/06/06/dcc-roadshow-n-ireland/">DCC Roadshow N. Ireland</a>
       </li>
     
   </ul>
 </section>
 
 <section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
+  <h1>On GitHub</h1>
+  <ul id="gh_repos" data-user="jcftang" data-count="0" data-skip="true">
     <li class="loading">Status updating&#8230;</li>
   </ul>
   
-  <a href="https://github.com/jcftang">@jcftang</a> on GitHub
+  <a class="github-follow" href="https://github.com/jcftang">Follow @jcftang</a>
   
-  <script type="text/javascript">
-    $.domReady(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'jcftang',
-            count: 0,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
 </section>
 
 
 <section>
   <h1>Latest Tweets</h1>
-  <ul id="tweets">
+  <ul id="tweets" data-user="jcftang" data-count="4" data-replies="false">
     <li class="loading">Status updating&#8230;</li>
   </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("jcftang", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
   
     <a href="http://twitter.com/jcftang" class="twitter-follow-button" data-show-count="false">Follow @jcftang</a>
   
 </section>
+
 
 
 
@@ -991,6 +959,7 @@ consumption and a host of other things.</p>
 
 <script type="text/javascript">
       var disqus_shortname = 'jcftang';
+			var disqus_developer = '0';
       
         
         var disqus_script = 'count.js';
@@ -1002,38 +971,6 @@ consumption and a host of other things.</p>
     }());
 </script>
 
-
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-
-
-  <script type="text/javascript">
-    (function() {
-      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
-      script.src = 'https://apis.google.com/js/plusone.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
-    })();
-  </script>
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
 
 
 

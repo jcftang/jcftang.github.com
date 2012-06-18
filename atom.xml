@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-06-11T16:24:23+01:00</updated>
+  <updated>2012-06-18T21:20:52+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -18,10 +18,161 @@
 
 
 
+<title type="html"><![CDATA[Top500 Supercomputers for Summer 2012 &rarr;]]></title>
+<link href="http://top500.org/lists/2012/06/press-release"/>
+<updated>2012-06-18T20:26:00+01:00</updated>
+<id>http://jcftang.github.com/2012/06/18/top500-supercomputers-for-summer-2012</id>
+
+      <content type="html"><![CDATA[<p>The Top 500 List is out! It&#8217;s been no surprise that LLNL and IBM has
+reclaimed the top spot. There is some pretty cool tech that&#8217;s going to
+come out of these systems which the HPC community should be rubbing
+their hands over.</p>
+
+<p><a href="http://www.schedmd.com">Slurm</a> will be moving along development for
+these big systems as well as <a href="http://www.whamcloud.com">Lustre</a> and
+<a href="http://zfsonlinux.org/">zfs on linux</a>.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/06/18/top500-supercomputers-for-summer-2012/">&#9875; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Installing git-annex on SL5]]></title>
+<link href="http://jcftang.github.com/2012/06/15/installing-git-annex-on-sl5/"/>
+<updated>2012-06-15T12:55:00+01:00</updated>
+<id>http://jcftang.github.com/2012/06/15/installing-git-annex-on-sl5</id>
+
+      <content type="html"><![CDATA[<p>I was waiting for my backups to be done hence this post, as I was using
+<em>git-annex</em> to manage my files and I decided I needed to have
+git-annex on a SL5 based machine. SL5 is just an opensource
+clone/recompile of RHEL5.</p>
+
+<p>I haven&#8217;t tried to install the newer versions of Haskell Platform and
+GHC in a while on SL5 to instal git-annex. But the last time I checked
+when GHC7 was out, it was a pain to install GHC on SL5.</p>
+
+<p>However I have discovered that someone has gone through the trouble of
+packaging up GHC and Haskell Platform for RHEL based distros.</p>
+
+<ul>
+<li><a href="http://justhub.org/download">http://justhub.org/download</a> - Packaged GHC and Haskell Platform
+RPM&#8217;s for RHEL based systems.</li>
+</ul>
+
+
+<p>I&#8217;m primarily interested in installing <em>git-annex</em> on SL5 based
+systems. The installation process goes as such&#8230;</p>
+
+<p>First install GHC and Haskell Platform (you need root for these
+following steps)</p>
+
+<pre><code>$ wget http://sherkin.justhub.org/el5/RPMS/x86_64/justhub-release-2.0-4.0.el5.x86_64.rpm
+$ rpm -ivh justhub-release-2.0-4.0.el5.x86_64.rpm
+$ yum install haskell
+</code></pre>
+
+<p>The RPM&#8217;s don&#8217;t place the files in /usr/bin, so you must add the
+following to your .bashrc (from here on you don&#8217;t need root if you
+don&#8217;t want things to be system wide)</p>
+
+<pre><code>$ export PATH=/usr/hs/bin:$PATH
+</code></pre>
+
+<p>On SL5 pcre is at version 6.6 which is far too old for one of the
+dependancies that git-annex requires. Therefore the user must install
+an updated version of <em>pcre</em> either from source or another method, I
+chose to install it from source and by hand into /usr/local</p>
+
+<pre><code>$ wget http://sourceforge.net/projects/pcre/files/pcre/8.30/pcre-8.30.tar.gz/download
+$ tar zxvf pcre-8.30.tar.gz
+$ cd pcre-8.30
+$ ./configure
+$ make &amp;&amp; make install
+</code></pre>
+
+<p>Once the packages are installed and are in your execution path, using
+cabal to configure and build git-annex just makes life easier, it
+should install all the needed dependancies.</p>
+
+<pre><code>$ cabal update
+$ cabal install pcre-light --extra-include-dirs=/usr/local/include
+$ git clone git://git.kitenet.net/git-annex
+$ cd git-annex
+$ make git-annex.1
+$ cabal configure
+$ cabal build
+$ cabal install
+</code></pre>
+
+<p>Or if you want to install it globallly for everyone (otherwise it will
+get installed into $HOME/.cabal/bin)</p>
+
+<pre><code>$ cabal install --global
+</code></pre>
+
+<p>The above will take a while to compile and install the needed
+dependancies. I would suggest any user who does should run the tests
+that comes with git-annex to make sure everything is functioning as
+expected.</p>
+
+<p>I wonder if it&#8217;s possible to get git-annex as a back-end driver for
+some of the digital preservation systems out there. Or more
+interestingly can fedora-commons be used a special remote or back-end
+for git-annex.</p>
+
+<p>I haven&#8217;t had a chance or need to install git-annex on a SL6 based
+system yet, but I would assume something similar to the above steps
+would be required to do so.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/06/15/installing-git-annex-on-sl5/">&#9875; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[DRIS Workflows is now available via npm]]></title>
+<link href="http://jcftang.github.com/2012/06/13/dris-workflows-is-now-available-via-npm/"/>
+<updated>2012-06-13T13:59:00+01:00</updated>
+<id>http://jcftang.github.com/2012/06/13/dris-workflows-is-now-available-via-npm</id>
+
+      <content type="html"><![CDATA[<p>I&#8217;ve just uploaded the work that Matthias and Quirijn did over the
+past few months to the npm registry</p>
+
+<ul>
+<li><a href="http://search.npmjs.org/#/dri-api">http://search.npmjs.org/#/dri-api</a></li>
+<li><a href="http://search.npmjs.org/#/dris-workflows">http://search.npmjs.org/#/dris-workflows</a></li>
+<li><a href="http://search.npmjs.org/#/dri">http://search.npmjs.org/#/dri</a></li>
+<li><a href="http://search.npmjs.org/#/fedora">http://search.npmjs.org/#/fedora</a></li>
+</ul>
+
+
+<p>I haven&#8217;t tried installing it from the npm repository yet, I assume
+that they will work. There&#8217;s still some cosmetic work (needs to be
+branded correctly) that needs to be done as well as lots of error
+checking, validation and testing. It&#8217;s not a bad place to be starting
+to look for ideas if you are interested in building your own system to
+interface with Fedora Commons.</p>
+
+<p>Just remember the above is just a prototype that we thought would be
+good to share with the world!.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/06/13/dris-workflows-is-now-available-via-npm/">&#9875; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
 <title type="html"><![CDATA[Facebook - Open House]]></title>
-<link href="http://jcftang.github.com/blog/2012/06/07/facebook-open-house/"/>
+<link href="http://jcftang.github.com/2012/06/07/facebook-open-house/"/>
 <updated>2012-06-07T09:12:00+01:00</updated>
-<id>http://jcftang.github.com/blog/2012/06/07/facebook-open-house</id>
+<id>http://jcftang.github.com/2012/06/07/facebook-open-house</id>
 
       <content type="html"><![CDATA[<p>The event was actually on 2012-06-06 and it was invite only. The event
 was mostly about the infrastructure of Facebook. It was actually done
@@ -39,7 +190,7 @@ know didn&#8217;t attend as a result of the NDA.</p>
 
 <p>All in all Facebook does have some pretty cool tech internally (like
 all the other big dotcom companies). Some of it is even opensource!</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/06/07/facebook-open-house/">&infin; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/06/07/facebook-open-house/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -51,7 +202,7 @@ all the other big dotcom companies). Some of it is even opensource!</p>
 <title type="html"><![CDATA[DCC Roadshow N. Ireland &rarr;]]></title>
 <link href="http://www.dcc.ac.uk/events/data-management-roadshows/dcc-roadshow-n-ireland"/>
 <updated>2012-06-06T14:16:00+01:00</updated>
-<id>http://jcftang.github.com/blog/2012/06/06/dcc-roadshow-n-ireland</id>
+<id>http://jcftang.github.com/2012/06/06/dcc-roadshow-n-ireland</id>
 
       <content type="html"><![CDATA[<p>The 12th DCC regional roadshow will take place on 6th and 7th June at
 the McClay library, Queen&#8217;s University Belfast.</p>
@@ -63,7 +214,7 @@ Belfast.</p>
 of real life examples of what people are doing and what&#8217;s
 relavent. It&#8217;s not the usual workshop, conference or meeting that I
 would attend.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/06/06/dcc-roadshow-n-ireland/">&infin; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/06/06/dcc-roadshow-n-ireland/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -75,7 +226,7 @@ would attend.</p>
 <title type="html"><![CDATA[git-annex assistant is being crowd funded on Kickstarter &rarr;]]></title>
 <link href="http://git-annex.branchable.com/design/assistant/"/>
 <updated>2012-06-04T11:50:00+01:00</updated>
-<id>http://jcftang.github.com/blog/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter</id>
+<id>http://jcftang.github.com/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter</id>
 
       <content type="html"><![CDATA[<p>It seems <a href="http://kitenet.net/~joey/">Joey Hess</a> is in the process of
 getting <strong>git-annex assistant</strong> crowd funded. I had not been keeping
@@ -92,7 +243,7 @@ pretty interesting, it won&#8217;t be a complete <em>clone</em> of Dropbox due t
 the way that git-annex deals with files (using symlinks), it will be a
 pretty good alternative to Dropbox. I wish <em>smudge filters</em> were on
 the roadmap as well.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter/">&infin; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -102,9 +253,9 @@ the roadmap as well.</p>
 
 
 <title type="html"><![CDATA[DRIS Workflows just got uploaded to github]]></title>
-<link href="http://jcftang.github.com/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github/"/>
+<link href="http://jcftang.github.com/2012/05/21/dris-workflows-just-got-uploaded-to-github/"/>
 <updated>2012-05-21T21:19:00+01:00</updated>
-<id>http://jcftang.github.com/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github</id>
+<id>http://jcftang.github.com/2012/05/21/dris-workflows-just-got-uploaded-to-github</id>
 
       <content type="html"><![CDATA[<p>After almost 3 months supervising and working with two interns I&#8217;ve
 finally uploaded their work under the GPLv2 License.</p>
@@ -142,7 +293,7 @@ some similar ideas.</p>
 
 <p>The primary purpose of this post is to share the code! and as per
 usual, hope someone finds it useful.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/05/21/dris-workflows-just-got-uploaded-to-github/">&infin; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/05/21/dris-workflows-just-got-uploaded-to-github/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -154,7 +305,7 @@ usual, hope someone finds it useful.</p>
 <title type="html"><![CDATA[ceph gets a refresh &rarr;]]></title>
 <link href="http://ceph.com/community/announcing-the-ceph-com-refresh/"/>
 <updated>2012-05-19T13:08:00+01:00</updated>
-<id>http://jcftang.github.com/blog/2012/05/19/ceph-gets-a-refresh</id>
+<id>http://jcftang.github.com/2012/05/19/ceph-gets-a-refresh</id>
 
       <content type="html"><![CDATA[<p>I&#8217;ve been keeping an eye on <em>ceph</em> for quite sometime now. It looks
 like <em>ceph</em> is almost ready for production usage. There is now a
@@ -169,7 +320,7 @@ filesystem, it looks good. It&#8217;s missing some documentation right now
 apart from that it&#8217;s going to be a great competitor in the distributed
 filesystems arena. It will shake up GPFS and Lustre for sure, it might
 even give glusterfs a run for its money in the near future.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/05/19/ceph-gets-a-refresh/">&infin; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/05/19/ceph-gets-a-refresh/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -179,9 +330,9 @@ even give glusterfs a run for its money in the near future.</p>
 
 
 <title type="html"><![CDATA[Is JAVA really the only game in town for building Digital Preservation Systems?]]></title>
-<link href="http://jcftang.github.com/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/"/>
+<link href="http://jcftang.github.com/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/"/>
 <updated>2012-05-16T18:24:00+01:00</updated>
-<id>http://jcftang.github.com/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems</id>
+<id>http://jcftang.github.com/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems</id>
 
       <content type="html"><![CDATA[<p>In the world of digital preservation and repositories it seems that
 there is primarily fedora-commons, dspace, eprints and one or two
@@ -216,7 +367,7 @@ out there are really just mashups of different types of technology
 (well planned mashups). Is it because of &#8220;best practice&#8221; for
 implementing enterprise applications that JAVA gets so much focus and
 attention?</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/">&infin; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -226,9 +377,9 @@ attention?</p>
 
 
 <title type="html"><![CDATA[git-subtree is now in mainline git]]></title>
-<link href="http://jcftang.github.com/blog/2012/05/02/git-subtree-is-now-in-mainline-git/"/>
+<link href="http://jcftang.github.com/2012/05/02/git-subtree-is-now-in-mainline-git/"/>
 <updated>2012-05-02T09:27:00+01:00</updated>
-<id>http://jcftang.github.com/blog/2012/05/02/git-subtree-is-now-in-mainline-git</id>
+<id>http://jcftang.github.com/2012/05/02/git-subtree-is-now-in-mainline-git</id>
 
       <content type="html"><![CDATA[<p>It seems that <a href="git://github.com/apenwarr/git-subtree.git">git-subtree</a>
 has been merged into the mainline git project. <em>git-subtree</em> is one of
@@ -240,7 +391,7 @@ they forgot to initialise the submodules. There is also the added
 advantage of not needing to fiddle around scripting up the git-archive
 commands for exporting the source tree for a release if you use
 git-subtree; actually git-subtree is just plain useful.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/05/02/git-subtree-is-now-in-mainline-git/">&infin; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/05/02/git-subtree-is-now-in-mainline-git/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -252,7 +403,7 @@ git-subtree; actually git-subtree is just plain useful.</p>
 <title type="html"><![CDATA[Slurm User Group Meeting 2012 &rarr;]]></title>
 <link href="http://www.bsc.es/marenostrum-support-services/hpc-events-trainings/others/slurm-user-group-meeting-2012"/>
 <updated>2012-04-30T20:19:00+01:00</updated>
-<id>http://jcftang.github.com/blog/2012/04/30/slurm-user-group-meeting-2012</id>
+<id>http://jcftang.github.com/2012/04/30/slurm-user-group-meeting-2012</id>
 
       <content type="html"><![CDATA[<p>This time the usergroup meeting is in BSC in Spain (this place is
 cool, I&#8217;ve been at BSC for a few conferences and meetings before). I
@@ -265,7 +416,7 @@ some love, its somewhat in use at work. I just wish I had more time to
 fix the memory leaks. There is also
 <a href="https://github.com/jcftang/slurm-bank">slurm-bank</a> which is seeing
 some good use in work, though it could do with a rewrite in C.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/04/30/slurm-user-group-meeting-2012/">&infin; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/04/30/slurm-user-group-meeting-2012/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -277,7 +428,7 @@ some good use in work, though it could do with a rewrite in C.</p>
 <title type="html"><![CDATA[MOSH - An alternative to SSH &rarr;]]></title>
 <link href="http://mosh.mit.edu/"/>
 <updated>2012-04-17T08:31:00+01:00</updated>
-<id>http://jcftang.github.com/blog/2012/04/17/mosh-an-alternative-to-ssh</id>
+<id>http://jcftang.github.com/2012/04/17/mosh-an-alternative-to-ssh</id>
 
       <content type="html"><![CDATA[<p>This tool hasn&#8217;t been around for too long, but long enough to make it
 into quite a few distros. It looks like it&#8217;s a good alternative to
@@ -295,7 +446,7 @@ my own mosh wrapper replacement.</p>
 seems nice enough so far. I now need to test it out in the field on a
 bad connection when I&#8217;m away at a team meeting. I&#8217;m still not entirely
 sure of how good or bad it is in terms of security compared to <em>SSH</em>.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/04/17/mosh-an-alternative-to-ssh/">&infin; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/04/17/mosh-an-alternative-to-ssh/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -307,14 +458,14 @@ sure of how good or bad it is in terms of security compared to <em>SSH</em>.</p>
 <title type="html"><![CDATA[Arquillian 1.0.0.Final released! Ready for GlassFish and WebLogic! Death to all bugs! &rarr;]]></title>
 <link href="http://www.javacodegeeks.com/2012/04/arquillian-100final-released-ready-for.html"/>
 <updated>2012-04-16T09:25:00+01:00</updated>
-<id>http://jcftang.github.com/blog/2012/04/16/arquillian-1-dot-0-0-dot-final-released-ready-for-glassfish-and-weblogic-death-to-all-bugs</id>
+<id>http://jcftang.github.com/2012/04/16/arquillian-1-dot-0-0-dot-final-released-ready-for-glassfish-and-weblogic-death-to-all-bugs</id>
 
       <content type="html"><![CDATA[<p>Looks like an interesting and useful tool, must take note of this tool
 for later use to kill all bugs that are found in the projects that we
 work on, well java ones at least.</p>
 
 <p>Anything to help squash bugs is good!</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/04/16/arquillian-1-dot-0-0-dot-final-released-ready-for-glassfish-and-weblogic-death-to-all-bugs/">&infin; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/04/16/arquillian-1-dot-0-0-dot-final-released-ready-for-glassfish-and-weblogic-death-to-all-bugs/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -324,9 +475,9 @@ work on, well java ones at least.</p>
 
 
 <title type="html"><![CDATA[Prototyping and testing systems]]></title>
-<link href="http://jcftang.github.com/blog/2012/04/09/prototyping-and-testing-systems/"/>
+<link href="http://jcftang.github.com/2012/04/09/prototyping-and-testing-systems/"/>
 <updated>2012-04-09T11:12:00+01:00</updated>
-<id>http://jcftang.github.com/blog/2012/04/09/prototyping-and-testing-systems</id>
+<id>http://jcftang.github.com/2012/04/09/prototyping-and-testing-systems</id>
 
       <content type="html"><![CDATA[<p>One of the issues with with dogfooding your own projects to accelerate
 development might be the lack of control and feedback from the
@@ -377,7 +528,7 @@ one thing (one set of workflows) well, have lots of documentation,
 have tests to back it up and prove that it works. While having an
 implementation is great for the potential stakeholder, having
 documentation and tests puts us in an even stronger position.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/04/09/prototyping-and-testing-systems/">&infin; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/04/09/prototyping-and-testing-systems/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -389,7 +540,7 @@ documentation and tests puts us in an even stronger position.</p>
 <title type="html"><![CDATA[Gitbuilder aggregator &rarr;]]></title>
 <link href="https://github.com/jcftang/gitbuilder/tree/develop/contrib/gitbuilder-ajax"/>
 <updated>2012-04-01T11:05:00+01:00</updated>
-<id>http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator</id>
+<id>http://jcftang.github.com/2012/04/01/gitbuilder-aggregator</id>
 
       <content type="html"><![CDATA[<p>We use git and <a href="https://github.com/apenwarr/gitbuilder">gitbuilder</a> in
 work for a large number of projects, we also try and test things as
@@ -421,7 +572,7 @@ errcache.</p>
 <p>At somepoint it might be worth re-implementing the gitbuilder scripts
 in a single language in a generic way such that it works with other
 DVCS&#8217;s that have the bisect feature.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/04/01/gitbuilder-aggregator/">&infin; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/04/01/gitbuilder-aggregator/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -431,9 +582,9 @@ DVCS&#8217;s that have the bisect feature.</p>
 
 
 <title type="html"><![CDATA[Dogfooding your own project to accelerate development]]></title>
-<link href="http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/"/>
+<link href="http://jcftang.github.com/2012/03/15/dogfooding-your-own-project-to-accelerate-development/"/>
 <updated>2012-03-15T19:31:00+00:00</updated>
-<id>http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development</id>
+<id>http://jcftang.github.com/2012/03/15/dogfooding-your-own-project-to-accelerate-development</id>
 
       <content type="html"><![CDATA[<p>Should you dogfood your own project that you are developing? The
 answer is probably yes, especially if you have no clear cut
@@ -458,7 +609,7 @@ good-enough practices should increase throughput of development, but
 not necessarily quality. Again in a greenfield project where there
 aren&#8217;t many requirements due to the schedule, it&#8217;s worth taking this
 approach until hard requirements get delivered.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/03/15/dogfooding-your-own-project-to-accelerate-development/">&infin; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/03/15/dogfooding-your-own-project-to-accelerate-development/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -470,7 +621,7 @@ approach until hard requirements get delivered.</p>
 <title type="html"><![CDATA[git rerere for long lived feature branches &rarr;]]></title>
 <link href="http://progit.org/2010/03/08/rerere.html"/>
 <updated>2012-03-11T11:45:00+00:00</updated>
-<id>http://jcftang.github.com/blog/2012/03/11/git-rerere-for-long-lived-feature-branches</id>
+<id>http://jcftang.github.com/2012/03/11/git-rerere-for-long-lived-feature-branches</id>
 
       <content type="html"><![CDATA[<p>I turned this feature on for a few of my git repos but I had
 completely forgotten about it. As far as I recall the feature has been
@@ -482,7 +633,7 @@ around for a few years now. It can be turned on globally by doing</p>
 <p>It pretty much automates the resolution of conflicts in long lived
 branches. I&#8217;ve been lazy recently and I have just doing merges instead
 rebasing, which lead me to re-discover <em>git rerere</em>.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/03/11/git-rerere-for-long-lived-feature-branches/">&infin; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/03/11/git-rerere-for-long-lived-feature-branches/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -492,9 +643,9 @@ rebasing, which lead me to re-discover <em>git rerere</em>.</p>
 
 
 <title type="html"><![CDATA[Enabling Latent Semantic Indexing for Octopress]]></title>
-<link href="http://jcftang.github.com/blog/2012/03/08/enabling-latent-semantic-indexing-for-octopress/"/>
+<link href="http://jcftang.github.com/2012/03/08/enabling-latent-semantic-indexing-for-octopress/"/>
 <updated>2012-03-08T20:02:00+00:00</updated>
-<id>http://jcftang.github.com/blog/2012/03/08/enabling-latent-semantic-indexing-for-octopress</id>
+<id>http://jcftang.github.com/2012/03/08/enabling-latent-semantic-indexing-for-octopress</id>
 
       <content type="html"><![CDATA[<p>For those that care about having related posts on their <a href="">Octopress</a>
 blog. It&#8217;s actually quite easy to turn it on, it&#8217;s nice to have and
@@ -532,7 +683,7 @@ keep the same style as the recent posts.</p>
 primary issue will be performance. The default implementation will be
 slow if you have lots of posts to classify. It would be recommended
 that rb-gsl be installed to accelerate the classification process.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/03/08/enabling-latent-semantic-indexing-for-octopress/">&infin; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/03/08/enabling-latent-semantic-indexing-for-octopress/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -544,7 +695,7 @@ that rb-gsl be installed to accelerate the classification process.</p>
 <title type="html"><![CDATA[Planet DRI - a news aggregator for digital humanities and digital preservation projects in Ireland &rarr;]]></title>
 <link href="http://www.tchpc.tcd.ie/dri-planet/"/>
 <updated>2012-03-04T18:38:00+00:00</updated>
-<id>http://jcftang.github.com/blog/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland</id>
+<id>http://jcftang.github.com/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland</id>
 
       <content type="html"><![CDATA[<p>This is just a temporary solution till something better or more
 appropriate comes along. It&#8217;s just an ikiwiki news aggregator for
@@ -558,7 +709,7 @@ knowledgeable in all things related to <em>Digital Repositories Ireland</em>.</p
 <p>I hope that my team mates will appreciate and contribute to this
 little effort. I don&#8217;t think I&#8217;ve ever come across a Digital
 Humanities and Digital Preservation aggregator before.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/">&infin; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -570,7 +721,7 @@ Humanities and Digital Preservation aggregator before.</p>
 <title type="html"><![CDATA[Genetic Classification of Populations Using Supervised Learning &rarr;]]></title>
 <link href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0014802"/>
 <updated>2012-02-26T21:08:00+00:00</updated>
-<id>http://jcftang.github.com/blog/2012/02/26/genetic-classification-of-populations-using-supervised-learning</id>
+<id>http://jcftang.github.com/2012/02/26/genetic-classification-of-populations-using-supervised-learning</id>
 
       <content type="html"><![CDATA[<p>In the past few months, in my spare time whenever I get a chance, I&#8217;ve
 been working on a side project in work. It&#8217;s a research project
@@ -602,140 +753,7 @@ expected.</p>
 re-implement the algorithm with a different ANN or SVM library. There
 are a rake of ideas that I have that I wouldn&#8217;t mind seeing
 implemented. I just need more time!</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/26/genetic-classification-of-populations-using-supervised-learning/">&infin; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Things not to say and to do in a project meeting]]></title>
-<link href="http://jcftang.github.com/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/"/>
-<updated>2012-02-23T08:13:00+00:00</updated>
-<id>http://jcftang.github.com/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting</id>
-
-      <content type="html"><![CDATA[<p>Team meetings can be both productive and counter productive as most
-people find. If they are well structured with a purpose and goal then
-a lot can be achieved (most of the time).</p>
-
-<p>For explorartory meetings, it&#8217;s probably okay to have some time set
-aside for some free and open discussions. Once a goal has been agreed
-upon, it&#8217;s probably a good idea to focus on it more and steer the
-discussion to try and deliver on the goal. Having open ended
-discussions with no set goals sometimes is discouraging and sometimes
-a waste of time.</p>
-
-<p>To the point, I wanted to discuss some things not to say and do in a
-meeting which might cause a collapse in communications, these are just
-some things that I have noticed in the last few months worth of
-meetings and are based on my own experiences,</p>
-
-<ul>
-<li>Don&#8217;t assume you know everything, there will always be someone
-smarter than you. There&#8217;s nothing wrong with being an expert in your
-own area, but there are times where you just need to trust others to
-deliver.</li>
-<li>Don&#8217;t pick on other team members for (possibly) not delivering, this
-is hugely demoralising. It&#8217;s better to ask why, and if possible does
-that team member or members need help to deliver.</li>
-<li>In real life, does anyone really use waterfall methods to deliver a
-project?</li>
-<li>Don&#8217;t try and do micro-management if you are clearly middle or even
-senior management, but at least describe tasks in the same language
-as the stakeholder and developer so that things don&#8217;t get lost in
-translation.</li>
-<li>Do have a plan if the series of meetings are to last a few months if
-there are long term goals to be achieved. If it&#8217;s not a plan, then
-at least have a list of todo, work in progress and done tasks.</li>
-<li>Don&#8217;t assign tasks without deadlines (realistic ones).</li>
-<li>Don&#8217;t assume you are on the same page in discussions unless you are
-confident that everyone at the meeting has common language and
-understands what is being discussed. People come and go, so you just
-have to be aware.</li>
-</ul>
-
-
-<p>Most if not all of the above list of things is common sense, there
-isn&#8217;t anything too special that you need to do to succeed at
-communicating.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/">&infin; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Scientific Linux 6.2 is out &rarr;]]></title>
-<link href="http://www.scientificlinux.org/distributions/6x/62/"/>
-<updated>2012-02-19T18:00:00+00:00</updated>
-<id>http://jcftang.github.com/blog/2012/02/19/scientific-linux-6-dot-2-is-out</id>
-
-      <content type="html"><![CDATA[<p>SL6.2 has been out for a few days now, I haven&#8217;t had a chance to
-really take a look at it, since the more recent SL6 installs I
-maintain tend to be tracking the 6x releases. Hopefully SL will try
-and keep inline with the upstreams support schedule.</p>
-
-<p>I&#8217;ve a personal preference for deploying SL over CentOS (or any other
-recompiles of RHEL). SL tends to be a bit more polished in terms of
-not breaking older installs, i.e. the upstream doesn&#8217;t move point
-releases around as CentOS does, SL does not force the end user to run
-the latest stable or continually upgrade to the latest point release
-to get updates (due to the weird convention CentOS seems to have with
-their archives).</p>
-
-<p>It&#8217;s out, I need to look at it again, especially since ZFS is getting
-closer to being ready for a bit more general usage on the server side
-and the project that I am working will be needing some machines to be
-installed and setup soon.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/19/scientific-linux-6-dot-2-is-out/">&infin; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Rasberry Pi - what I would use it for? &rarr;]]></title>
-<link href="http://www.raspberrypi.org/"/>
-<updated>2012-02-19T14:46:00+00:00</updated>
-<id>http://jcftang.github.com/blog/2012/02/19/rasberry-pi-what-i-would-use-it-for</id>
-
-      <content type="html"><![CDATA[<p>At the time of writing it seems that the Raspberry Pi site is down,
-probably suffering from a slashdot effect. I would imagine almost
-every nerd, sheevaplug developer, OLPC developer, DIY&#8217;ers who want to
-build their own home media centres are looking to get a Raspberry Pi
-right now.</p>
-
-<p>So what would I use one of these mini-computers for? I can think up a
-range of cool applications for this device, assuming I can order a few
-of these to play with. I&#8217;ve got ideas such as:</p>
-
-<ul>
-<li>A Tahoe-LAFS storage node, I could attach a few HDD&#8217;s to one of these
-devices and run Tahoe-LAFS on it, these computers are cheap enough
-and have a low enough power consumption that I could just have them
-on all the time.</li>
-<li>A Babeld node, I could have a few of these devices dotted around my
-house/apartment to build a mesh network.</li>
-<li>A portable computer, not quite a tablet PC with a screen, but it has
-enough connectivity to wire it up to a modern monitor or a TV.</li>
-<li>A penetration testing device, just wire it up with a few DC
-batteries, plug in a wireless card, wrap it up in a water proof
-package. Power on, and see how far you can throw it at your target,
-I can see endless possibilities for this device for pen-testing.</li>
-</ul>
-
-
-<p>I wonder if the device will ever be able to be powered via the USB
-port or the the ethernet port. I can see some interesting uses for
-this device in data centres for monitoring the network, power
-consumption and a host of other things.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/blog/2012/02/19/rasberry-pi-what-i-would-use-it-for/">&infin; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/02/26/genetic-classification-of-populations-using-supervised-learning/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
