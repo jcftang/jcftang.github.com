@@ -1,6 +1,7 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
+require 'rake/minify'
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
@@ -21,7 +22,7 @@ deploy_branch  = "master"
 public_dir      = "public"    # compiled site directory
 source_dir      = "source"    # source file directory
 blog_index_dir  = 'source'    # directory for your blog's index page (if you put your index in source/blog/index.html, set this to 'source/blog')
-deploy_dir      = "_deploy"   # deploy directory (for Github pages deployment)
+deploy_dir      = "_deploy"   # deploy directory (for GitHub pages deployment)
 stash_dir       = "_stash"    # directory to stash posts for speedy generation
 posts_dir       = "_posts"    # directory for blog files
 themes_dir      = ".themes"   # directory for blog files
@@ -55,7 +56,27 @@ task :generate do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Generating Site with Jekyll"
   system "compass compile --css-dir #{source_dir}/stylesheets"
+  Rake::Task['minify_and_combine'].execute
   system "jekyll"
+end
+
+Rake::Minify.new(:minify_and_combine) do
+  files = FileList.new("#{source_dir}/javascripts/group/*.*")
+
+  output_file =  "#{source_dir}/javascripts/octopress.min.js"
+
+  puts "BEGIN Minifying #{output_file}"
+  group(output_file) do
+    files.each do |filename|
+      puts "Minifying- #{filename} into #{output_file}"
+      if filename.include? '.min.js'
+        add(filename, :minify => false)
+      else
+        add(filename)
+      end
+    end
+  end
+  puts "END Minifying #{output_file}"
 end
 
 # usage rake generate_only[my-post]
@@ -78,6 +99,7 @@ task :watch do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "Starting to watch source with Jekyll and Compass."
   system "compass compile --css-dir #{source_dir}/stylesheets"
+  Rake::Task['minify_and_combine'].execute
   jekyllPid = Process.spawn("jekyll --auto")
   compassPid = Process.spawn("compass watch")
   trap("INT") {
@@ -286,7 +308,7 @@ end
 desc "deploy public directory to github pages"
 multitask :push do
   if File.directory?(deploy_dir)
-    puts "## Deploying branch to Github Pages "
+    puts "## Deploying branch to GitHub Pages "
     (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }
     Rake::Task[:copydot].invoke(public_dir, deploy_dir)
     puts "Attempting pull, to sync local deployment repository"
@@ -304,10 +326,10 @@ multitask :push do
       system "git commit -m \"#{message}\""
       puts "\n## Pushing generated #{deploy_dir} website"
       system "git push origin #{deploy_branch}"
-      puts "\n## Github Pages deploy complete"
+      puts "\n## GitHub Pages deploy complete"
     end
   else
-    puts "This project isn't configured for deploying to Github Pages\nPlease run `rake setup_github_pages[your-deployment-repo-url]`." 
+    puts "This project isn't configured for deploying to GitHub Pages\nPlease run `rake setup_github_pages[your-deployment-repo-url]`." 
   end
 end
 
@@ -353,7 +375,7 @@ task :set_root_dir, :dir do |t, args|
   end
 end
 
-desc "Set up _deploy folder and deploy branch for Github Pages deployment"
+desc "Set up _deploy folder and deploy branch for GitHub Pages deployment"
 task :setup_github_pages, :repo do |t, args|
   if args.repo
     repo_url = args.repo
@@ -428,13 +450,13 @@ task :setup_github_pages, :repo do |t, args|
       puts "!! WARNING: Your CNAME points to #{cname} but your _config.yml url is set to #{current_short_url} !!"
       puts "For help with setting up a CNAME follow the guide at http://help.github.com/pages/#custom_domains"
     else
-      puts "Github Pages will host your site at http://#{cname}"
+      puts "GitHub Pages will host your site at http://#{cname}"
     end
   else
-    puts "Github Pages will host your site at #{url}."
+    puts "GitHub Pages will host your site at #{url}."
     puts "To host at \"your-site.com\", configure a CNAME: `echo \"your-domain.com\" > #{source_dir}/CNAME`"
     puts "Then change the url in _config.yml from #{current_url} to http://your-domain.com"
-    puts "Finally, follow the guide at http://help.github.com/pages/#custom_domains for help pointing your domain to Github Pages"
+    puts "Finally, follow the guide at http://help.github.com/pages/#custom_domains for help pointing your domain to GitHub Pages"
   end
   puts "Deploy to #{repo_url} with `rake deploy`"
   puts "Note: generated content is copied into _deploy/ which is not in version control."
