@@ -163,12 +163,18 @@
         <lastmod>2012-06-18T22:36:23+01:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://jcftang.github.com/2012/06/26/git-annex-assistant-is-making-leaps-and-bounds/
+        </loc>
+        <lastmod>2012-06-26T19:26:51+01:00</lastmod>
+    </url>
+    <url>
         <loc>http://jcftang.github.com/about/</loc>
         <lastmod>2012-06-18T22:00:43+01:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/archives/</loc>
-        <lastmod>2012-06-18T22:36:23+01:00</lastmod>
+        <lastmod>2012-06-26T19:26:51+01:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/blog/categories/</loc>
@@ -176,6 +182,6 @@
     </url>
     <url>
         <loc>http://jcftang.github.com/</loc>
-        <lastmod>2012-06-18T22:36:23+01:00</lastmod>
+        <lastmod>2012-06-26T19:26:51+01:00</lastmod>
     </url>
 </urlset>

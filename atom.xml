@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-06-18T22:38:29+01:00</updated>
+  <updated>2012-06-27T21:14:29+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[git-annex assistant is making leaps and bounds &rarr;]]></title>
+<link href="http://git-annex.branchable.com/design/assistant/"/>
+<updated>2012-06-26T19:10:00+01:00</updated>
+<id>http://jcftang.github.com/2012/06/26/git-annex-assistant-is-making-leaps-and-bounds</id>
+
+      <content type="html"><![CDATA[<p>I&#8217;ve been following the development of the new <em>git-annex assistant</em>
+work that Joey Hess has been working on over the past few weeks. Even
+in this early state of development, it is slowly becoming more usable
+and accessible for less technical users.</p>
+
+<p>As soon as as the
+<a href="http://git-annex.branchable.com/bugs/Issue_on_OSX_with_some_system_limits/">issues with the limitations of <em>kqueue</em> and OSX&#8217;s silly limits</a>
+are resolved (without the need for a user to do a <em>sysctl -w
+WHATEVER</em>) it will be pretty cool.</p>
+
+<p>I&#8217;ve been throwing small batches of data at a newly setup <em>annex</em>&#8216;d
+repository and it&#8217;s been handling it well enough for me to constantly
+test the various development branch. Kudos to Joey for being so
+responsive to fixing bugs during development.</p>
+
+<p>For those that care go to
+<a href="http://git-annex.branchable.com/design/assistant/blog/">http://git-annex.branchable.com/design/assistant/blog/</a> and follow
+the development of this cool tool</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/06/26/git-annex-assistant-is-making-leaps-and-bounds/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -710,32 +742,6 @@ primary issue will be performance. The default implementation will be
 slow if you have lots of posts to classify. It would be recommended
 that rb-gsl be installed to accelerate the classification process.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/03/08/enabling-latent-semantic-indexing-for-octopress/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Planet DRI - a news aggregator for digital humanities and digital preservation projects in Ireland &rarr;]]></title>
-<link href="http://www.tchpc.tcd.ie/dri-planet/"/>
-<updated>2012-03-04T18:38:00+00:00</updated>
-<id>http://jcftang.github.com/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland</id>
-
-      <content type="html"><![CDATA[<p>This is just a temporary solution till something better or more
-appropriate comes along. It&#8217;s just an ikiwiki news aggregator for
-websites and projects which are related to Digital Preservation,
-Digitial Humanities and other related bits and pieces.</p>
-
-<p>It was pretty much setup for myself to keep up to date with all the
-latest happenings. I found myself falling behind in being
-knowledgeable in all things related to <em>Digital Repositories Ireland</em>.</p>
-
-<p>I hope that my team mates will appreciate and contribute to this
-little effort. I don&#8217;t think I&#8217;ve ever come across a Digital
-Humanities and Digital Preservation aggregator before.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
