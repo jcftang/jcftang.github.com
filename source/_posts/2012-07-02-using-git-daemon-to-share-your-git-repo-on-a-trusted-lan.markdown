@@ -4,7 +4,7 @@ title: "Using git-daemon to share your git repo on a trusted LAN"
 date: 2012-07-02 12:05
 comments: true
 external-url: 
-categories: linux scm
+categories: linux scm team
 ---
 
 One of the things that I don't like about [git](http://git-scm.com/) is
