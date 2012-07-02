@@ -81,6 +81,87 @@
 
 
 
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/">Using Git-daemon to Share Your Git Repo on a Trusted LAN</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-02T12:05:00+01:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2012</time>
+        
+         | <a href="/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>One of the things that I don&#8217;t like about <a href="http://git-scm.com/">git</a> is
+the interface at times can be too geared towards power users. One command
+that I particularly like in <a href="http://mercurial.selenic.com/">mercurial</a>
+is the <em>hg serve</em> command, which is incredibly easy to use.</p>
+
+<p>To do the equivalent of the <em>hg serve</em> in <em>git</em> you can do the following&#8230;</p>
+
+<pre><code>user$ cd my-repo
+user$ git daemon --export-all --base-path=$(pwd)
+</code></pre>
+
+<p>The above assumes you are on a trusted network and you want to share
+your repo with people on your LAN and you are in the toplevel directory
+of the repository that you want to temporarily share. If you&#8217;re lazy
+you could do&#8230;</p>
+
+<pre><code>user$ git config --global alias.serve 'daemon --reuseaddr --verbose  --base-path=. --export-all ./.git'
+</code></pre>
+
+<p>Which would place the following (or similar) in your ~/.gitconfig file</p>
+
+<pre><code>[alias]
+    serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
+</code></pre>
+
+<p>The above was taken from <a href="https://git.wiki.kernel.org/index.php/Aliases">https://git.wiki.kernel.org/index.php/Aliases</a></p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
   
 
 
@@ -791,76 +872,6 @@ usual, hope someone finds it useful.</p>
   <footer>
     
     <p><a class="comments-link" href="/2012/05/21/dris-workflows-just-got-uploaded-to-github/#disqus_thread">View comments &raquo;</a></p>
-    
-    
-  </footer>
-
-
-    </article>
-  
-    
-
-
-
-  
-
-
-
-
-
-
-
-
-    <article class="linklog">
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="http://ceph.com/community/announcing-the-ceph-com-refresh/">Ceph Gets a Refresh</a>
-<span class='linklog-marker'>&rarr;</span>
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-19T13:08:00+01:00" pubdate data-updated="true">May 19<span>th</span>, 2012</time>
-        
-         | <a href="/2012/05/19/ceph-gets-a-refresh/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/05/19/ceph-gets-a-refresh/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>I&#8217;ve been keeping an eye on <em>ceph</em> for quite sometime now. It looks
-like <em>ceph</em> is almost ready for production usage. There is now a
-support infrastructure and a commercial company backing the
-product. So far the OSD, MDS and MON components all run on Linux since
-most of the implementation appears to be in the user land I wonder if
-it will be ported to non-linux platforms. It&#8217;s be quite nifty if one
-could have a heterogeneous network of servers providing storage.</p>
-
-<p>From first glance at shadowing one of the guys in work with this
-filesystem, it looks good. It&#8217;s missing some documentation right now
-apart from that it&#8217;s going to be a great competitor in the distributed
-filesystems arena. It will shake up GPFS and Lustre for sure, it might
-even give glusterfs a run for its money in the near future.</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/05/19/ceph-gets-a-refresh/#disqus_thread">View comments &raquo;</a></p>
     
     
   </footer>

@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>DRIS Workflows is now available via npm - Jimmy Tang</title>
+  <title>Using git-daemon to share your git repo on a trusted LAN - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/2012/06/13/dris-workflows-is-now-available-via-npm/">
+  <link rel="canonical" href="http://jcftang.github.com/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Jimmy Tang" type="application/atom+xml">
@@ -92,7 +92,7 @@
   <header>
     <h1 class="entry-title">
 
-DRIS Workflows Is Now Available via Npm
+Using Git-daemon to Share Your Git Repo on a Trusted LAN
 
 </h1>
 
@@ -110,35 +110,41 @@ DRIS Workflows Is Now Available via Npm
   
 
 
-<time datetime="2012-06-13T13:59:00+01:00" pubdate data-updated="true">Jun 13<span>th</span>, 2012</time>
+<time datetime="2012-07-02T12:05:00+01:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/2012/06/13/dris-workflows-is-now-available-via-npm/">Permalink</a>
+         &bull; <a rel="bookmark" href="/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p>I&#8217;ve just uploaded the work that Matthias and Quirijn did over the
-past few months to the npm registry</p>
+<div class="entry-content"><p>One of the things that I don&#8217;t like about <a href="http://git-scm.com/">git</a> is
+the interface at times can be too geared towards power users. One command
+that I particularly like in <a href="http://mercurial.selenic.com/">mercurial</a>
+is the <em>hg serve</em> command, which is incredibly easy to use.</p>
 
-<ul>
-<li><a href="http://search.npmjs.org/#/dri-api">http://search.npmjs.org/#/dri-api</a></li>
-<li><a href="http://search.npmjs.org/#/dris-workflows">http://search.npmjs.org/#/dris-workflows</a></li>
-<li><a href="http://search.npmjs.org/#/dri">http://search.npmjs.org/#/dri</a></li>
-<li><a href="http://search.npmjs.org/#/fedora">http://search.npmjs.org/#/fedora</a></li>
-</ul>
+<p>To do the equivalent of the <em>hg serve</em> in <em>git</em> you can do the following&#8230;</p>
 
+<pre><code>user$ cd my-repo
+user$ git daemon --export-all --base-path=$(pwd)
+</code></pre>
 
-<p>I haven&#8217;t tried installing it from the npm repository yet, I assume
-that they will work. There&#8217;s still some cosmetic work (needs to be
-branded correctly) that needs to be done as well as lots of error
-checking, validation and testing. It&#8217;s not a bad place to be starting
-to look for ideas if you are interested in building your own system to
-interface with Fedora Commons.</p>
+<p>The above assumes you are on a trusted network and you want to share
+your repo with people on your LAN and you are in the toplevel directory
+of the repository that you want to temporarily share. If you&#8217;re lazy
+you could do&#8230;</p>
 
-<p>Just remember the above is just a prototype that we thought would be
-good to share with the world!.</p>
+<pre><code>user$ git config --global alias.serve 'daemon --reuseaddr --verbose  --base-path=. --export-all ./.git'
+</code></pre>
+
+<p>Which would place the following (or similar) in your ~/.gitconfig file</p>
+
+<pre><code>[alias]
+    serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
+</code></pre>
+
+<p>The above was taken from <a href="https://git.wiki.kernel.org/index.php/Aliases">https://git.wiki.kernel.org/index.php/Aliases</a></p>
 </div>
 
 
@@ -161,12 +167,12 @@ good to share with the world!.</p>
   
 
 
-<time datetime="2012-06-13T13:59:00+01:00" pubdate data-updated="true">Jun 13<span>th</span>, 2012</time>
+<time datetime="2012-07-02T12:05:00+01:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2012</time>
 
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/dri/'>dri</a>, <a class='category' href='/blog/categories/team/'>team</a>
+    <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/scm/'>scm</a>
   
 </span>
 
@@ -184,12 +190,12 @@ good to share with the world!.</p>
   
   
     
-      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/06/13/dris-workflows-is-now-available-via-npm/" target="_blank">+1</a>
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/" target="_blank">+1</a>
     
   
   
     
-    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/06/13/dris-workflows-is-now-available-via-npm/" target="_blank">Share</a>
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/" target="_blank">Share</a>
     
   
   
@@ -199,10 +205,8 @@ good to share with the world!.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2012/06/07/facebook-open-house/" title="Previous Post: Facebook - Open House">&laquo; Facebook - Open House</a>
+        <a class="basic-alignment left" href="/2012/06/26/git-annex-assistant-is-making-leaps-and-bounds/" title="Previous Post: git-annex assistant is making leaps and bounds">&laquo; git-annex assistant is making leaps and bounds</a>
       
-      
-        <a class="basic-alignment right" href="/2012/06/15/installing-git-annex-on-sl5/" title="Next Post: Installing git-annex on SL5">Installing git-annex on SL5 &raquo;</a>
       
     </p>
   </footer>
@@ -227,23 +231,23 @@ good to share with the world!.</p>
   <ul class="posts">
     
       <li class="related">
-        <a href="/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for HPC systems</a>
-      </li>
-    
-      <li class="related">
         <a href="/2012/06/15/installing-git-annex-on-sl5/">Installing git-annex on SL5</a>
       </li>
     
       <li class="related">
-        <a href="/2012/05/21/dris-workflows-just-got-uploaded-to-github/">DRIS Workflows just got uploaded to github</a>
+        <a href="/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for HPC systems</a>
       </li>
     
       <li class="related">
-        <a href="/2012/04/09/prototyping-and-testing-systems/">Prototyping and testing systems</a>
+        <a href="/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux isn't the only platform to target when building applications</a>
       </li>
     
       <li class="related">
-        <a href="/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/">Waterfall or Agile methods for delivering a project</a>
+        <a href="/2012/03/11/git-rerere-for-long-lived-feature-branches/">git rerere for long lived feature branches</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/02/19/rasberry-pi-what-i-would-use-it-for/">Rasberry Pi - what I would use it for?</a>
       </li>
     
   </ul>
@@ -320,8 +324,8 @@ good to share with the world!.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/2012/06/13/dris-workflows-is-now-available-via-npm/';
-        var disqus_url = 'http://jcftang.github.com/2012/06/13/dris-workflows-is-now-available-via-npm/';
+        var disqus_identifier = 'http://jcftang.github.com/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/';
+        var disqus_url = 'http://jcftang.github.com/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/';
         var disqus_script = 'embed.js';
       
     (function () {
