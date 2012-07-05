@@ -4,7 +4,7 @@ title: "git-annex assistant is making leaps and bounds"
 date: 2012-06-26 19:10
 comments: true
 external-url: http://git-annex.branchable.com/design/assistant/
-categories: linux osx
+categories: linux osx storage
 ---
 
 I've been following the development of the new _git-annex assistant_
