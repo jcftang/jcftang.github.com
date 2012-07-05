@@ -183,12 +183,18 @@
         <lastmod>2012-07-05T09:59:14+01:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://jcftang.github.com/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/
+        </loc>
+        <lastmod>2012-07-05T16:06:48+01:00</lastmod>
+    </url>
+    <url>
         <loc>http://jcftang.github.com/about/</loc>
         <lastmod>2012-06-22T15:17:57+01:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/archives/</loc>
-        <lastmod>2012-07-05T10:01:15+01:00</lastmod>
+        <lastmod>2012-07-05T16:06:48+01:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/blog/categories/</loc>
@@ -196,6 +202,6 @@
     </url>
     <url>
         <loc>http://jcftang.github.com/</loc>
-        <lastmod>2012-07-05T10:01:15+01:00</lastmod>
+        <lastmod>2012-07-05T16:06:48+01:00</lastmod>
     </url>
 </urlset>
