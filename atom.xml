@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-07-02T19:49:16+01:00</updated>
+  <updated>2012-07-05T12:14:17+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Ceph V0.48 “ARGONAUT” RELEASED &rarr;]]></title>
+<link href="http://ceph.com/releases/v0-48-argonaut-released/"/>
+<updated>2012-07-05T09:54:00+01:00</updated>
+<id>http://jcftang.github.com/2012/07/05/ceph-v0-dot-48-argonaut-released</id>
+
+      <content type="html"><![CDATA[<p>I&#8217;ve been eyeing this Ceph storage system for a while for a number of
+potential uses, it looks like its finally ready for production usage.</p>
+
+<p>It is a pitty that the cephfs component isn&#8217;t recommended for
+production usage yet. Still, Ceph is really going to shake up the
+distributed storage industry. Having used GPFS, Lustre and a few other
+systems in production in the past, Ceph certainly looks attractive.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/07/05/ceph-v0-dot-48-argonaut-released/">&#9875; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[tahoe-lafs 1.9.2 is released &rarr;]]></title>
+<link href="https://tahoe-lafs.org/trac/tahoe-lafs/wiki/Installation"/>
+<updated>2012-07-05T09:47:00+01:00</updated>
+<id>http://jcftang.github.com/2012/07/05/tahoe-lafs-1-dot-9-2-is-released</id>
+
+      <content type="html"><![CDATA[<p>I&#8217;ve been happily using <a href="http://www.tahoe-lafs.org">tahoe-lafs</a> for my
+backup needs for a while now in work. It&#8217;s not a huge cluster, but just
+a small hive cache from workstations dotted around the lab.</p>
+
+<p>The project recently did a release which fixes a number of bugs and
+issues which has made this software much more pleasant to use. I&#8217;ve
+also been happily using git-annex to manage my files which reside in
+tahoe-lafs.</p>
+
+<p>At somepoint I need to write a tahoe-lafs backend/remote for git-annex,
+or at least convince the git-annex author to write one!</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/07/05/tahoe-lafs-1-dot-9-2-is-released/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -671,67 +717,6 @@ errcache.</p>
 in a single language in a generic way such that it works with other
 DVCS&#8217;s that have the bisect feature.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/04/01/gitbuilder-aggregator/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Dogfooding your own project to accelerate development]]></title>
-<link href="http://jcftang.github.com/2012/03/15/dogfooding-your-own-project-to-accelerate-development/"/>
-<updated>2012-03-15T19:31:00+00:00</updated>
-<id>http://jcftang.github.com/2012/03/15/dogfooding-your-own-project-to-accelerate-development</id>
-
-      <content type="html"><![CDATA[<p>Should you dogfood your own project that you are developing? The
-answer is probably yes, especially if you have no clear cut
-requirements from the stakeholder in a project with a greenfield for
-development. There is a lot to be said about having a working
-implementation that can be presented and refined.</p>
-
-<p>Sometimes the project that you are working on won&#8217;t have clear
-requirements for implementation, so you should probably take basic
-assumed cases and run with it. Starting early to see what works and
-what doesn&#8217;t work is a pragmatic approach which the waterfall crowd
-might not like. But hey, an implementation speaks for itself.</p>
-
-<p>If you don&#8217;t use what you develop, then it is very hard to relate to
-the customer/end-user in the long run. On the note of dogfooding your
-own work, sometimes best-practice might cost too much in terms of time
-and money, sometimes good-enough practice might just be enough to
-deliver a functioning product.</p>
-
-<p>Accelerating development by dogfooding your own work and using
-good-enough practices should increase throughput of development, but
-not necessarily quality. Again in a greenfield project where there
-aren&#8217;t many requirements due to the schedule, it&#8217;s worth taking this
-approach until hard requirements get delivered.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/2012/03/15/dogfooding-your-own-project-to-accelerate-development/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[git rerere for long lived feature branches &rarr;]]></title>
-<link href="http://progit.org/2010/03/08/rerere.html"/>
-<updated>2012-03-11T11:45:00+00:00</updated>
-<id>http://jcftang.github.com/2012/03/11/git-rerere-for-long-lived-feature-branches</id>
-
-      <content type="html"><![CDATA[<p>I turned this feature on for a few of my git repos but I had
-completely forgotten about it. As far as I recall the feature has been
-around for a few years now. It can be turned on globally by doing</p>
-
-<pre><code>git config --global rerere.enabled 1
-</code></pre>
-
-<p>It pretty much automates the resolution of conflicts in long lived
-branches. I&#8217;ve been lazy recently and I have just doing merges instead
-rebasing, which lead me to re-discover <em>git rerere</em>.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/2012/03/11/git-rerere-for-long-lived-feature-branches/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
