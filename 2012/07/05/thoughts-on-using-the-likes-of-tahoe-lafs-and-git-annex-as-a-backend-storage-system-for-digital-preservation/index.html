@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>DCC Roadshow N. Ireland - Jimmy Tang</title>
+  <title>Thoughts on using the likes of tahoe-lafs and git-annex as a backend storage system for Digital Preservation - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/2012/06/06/dcc-roadshow-n-ireland/">
+  <link rel="canonical" href="http://jcftang.github.com/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Jimmy Tang" type="application/atom+xml">
@@ -80,7 +80,6 @@
 
 
 
-  
 
 
 
@@ -88,14 +87,13 @@
 
 
 
-
-<article class="hentry linklog" role="article">
+<article class="hentry " role="article">
   
   <header>
     <h1 class="entry-title">
 
-<a href="http://www.dcc.ac.uk/events/data-management-roadshows/dcc-roadshow-n-ireland">DCC Roadshow N. Ireland</a>
-<span class='linklog-marker'>&rarr;</span>
+Thoughts on Using the Likes of Tahoe-lafs and Git-annex as a Backend Storage System for Digital Preservation
+
 </h1>
 
     
@@ -112,25 +110,62 @@
   
 
 
-<time datetime="2012-06-06T14:16:00+01:00" pubdate data-updated="true">Jun 6<span>th</span>, 2012</time>
+<time datetime="2012-07-05T15:29:00+01:00" pubdate data-updated="true">Jul 5<span>th</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/2012/06/06/dcc-roadshow-n-ireland/">Permalink</a>
+         &bull; <a rel="bookmark" href="/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p>The 12th DCC regional roadshow will take place on 6th and 7th June at
-the McClay library, Queen&#8217;s University Belfast.</p>
+<div class="entry-content"><p>Having happily running and using both git-annex and tahoe-lafs in the
+past year or so to manage my files and backups. I&#8217;ve been thinking
+about plugging in tahoe-lafs as a backend driver for iRODS. I never
+quite got around to doing it properly, I had only gotten the universal
+mass storage driver to talk to tahoe-lafs. I was planning on writing
+an MSO driver for iRODS to talk to tahoe-lafs&#8217;s web-api, but alas I
+never got around to it. I need to get some interns to do it next year!</p>
 
-<p>The roadshow is being organised in conjunction with Queen&#8217;s University
-Belfast.</p>
+<p>It&#8217;s still highly attractive to have tahoe-lafs at the storage backend
+due to its erasure coding capabilities to maximise a return on
+investment in the storage infrastructure. I&#8217;m not sure if anyone has
+really tried to use something like tahoe-lafs as a backend for digital
+preservation.</p>
 
-<p>Turns out to be far more informative than I originally thought. Lot&#8217;s
-of real life examples of what people are doing and what&#8217;s
-relavent. It&#8217;s not the usual workshop, conference or meeting that I
-would attend.</p>
+<p>There are a few niggling issues with tahoe-lafs which may prevent one
+from using it in digital preservation, one is the lack of
+precedence. Someone needs to take a first step at trying to see if it
+works or not. Personally I would like to see the multi-introducer work
+to be production ready and released, this would hugely increase the
+availability of a tahoe-lafs grid and would mitigate the need for
+trying make one introducer node highly available and redundant and of
+course local network performance could be better. I&#8217;ve never really
+been able to get more than 10-20mbit/s out of a download/upload. If my
+transfers are queued up and running in the background it&#8217;s not a major
+issue.</p>
+
+<p>Which brings me to git-annex, all the new fancy features that the
+author of git-annex has been adding has been fantastic. I&#8217;ve setup a
+&#8220;target&#8221; which is a tahoe-lafs grid which I use a replica set for one
+of my annex&#8217;d collection of files. It&#8217;s not the fastest thing in the
+world for transfers but at least I know my data is safe in at least
+two places.</p>
+
+<p>Having used git-annex happily for the past while and being interested
+in the S3 and SWIFT interfaces that git-annex is able to talk to has
+made me wonder if it&#8217;s a good idea to try and create a fedora-commons
+backend/remote for git-annex or a real tahoe-lafs backend/remote that
+doesn&#8217;t rely on the general hook system that git-annex already
+has. Also the Internet Archive provides an S3/SWIFT like interface.</p>
+
+<p>Or would it be better to go the other way around and try using
+git-annex as a type of interface to other backend storage systems for
+fedora-commons, I wish I had more time to poke the akubra
+interface/package in fedora-commons.</p>
+
+<p>The above is just a rant and my brain spewing randome stuff out in the
+afternoon after thinking about the OR2012 developer challenge.</p>
 </div>
 
 
@@ -153,12 +188,12 @@ would attend.</p>
   
 
 
-<time datetime="2012-06-06T14:16:00+01:00" pubdate data-updated="true">Jun 6<span>th</span>, 2012</time>
+<time datetime="2012-07-05T15:29:00+01:00" pubdate data-updated="true">Jul 5<span>th</span>, 2012</time>
 
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/dri/'>dri</a>
+    <a class='category' href='/blog/categories/preservation/'>preservation</a>, <a class='category' href='/blog/categories/storage/'>storage</a>
   
 </span>
 
@@ -176,12 +211,12 @@ would attend.</p>
   
   
     
-      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/06/06/dcc-roadshow-n-ireland/" target="_blank">+1</a>
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/" target="_blank">+1</a>
     
   
   
     
-    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/06/06/dcc-roadshow-n-ireland/" target="_blank">Share</a>
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/" target="_blank">Share</a>
     
   
   
@@ -191,10 +226,8 @@ would attend.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter/" title="Previous Post: git-annex assistant is being crowd funded on Kickstarter">&laquo; git-annex assistant is being crowd funded on Kickstarter</a>
+        <a class="basic-alignment left" href="/2012/07/05/ceph-v0-dot-48-argonaut-released/" title="Previous Post: Ceph V0.48 “ARGONAUT” RELEASED">&laquo; Ceph V0.48 “ARGONAUT” RELEASED</a>
       
-      
-        <a class="basic-alignment right" href="/2012/06/07/facebook-open-house/" title="Next Post: Facebook - Open House">Facebook - Open House &raquo;</a>
       
     </p>
   </footer>
@@ -219,23 +252,23 @@ would attend.</p>
   <ul class="posts">
     
       <li class="related">
-        <a href="/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/">Thoughts on using the likes of tahoe-lafs and git-annex as a backend storage system for Digital Preservation</a>
-      </li>
-    
-      <li class="related">
-        <a href="/2012/04/17/mosh-an-alternative-to-ssh/">MOSH - An alternative to SSH</a>
-      </li>
-    
-      <li class="related">
-        <a href="/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/">Things not to say and to do in a project meeting</a>
-      </li>
-    
-      <li class="related">
-        <a href="/2012/06/18/octopress-2-dot-1-taking-a-sneak-peek/">Octopress 2.1, taking a sneak peek</a>
+        <a href="/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for HPC systems</a>
       </li>
     
       <li class="related">
         <a href="/2012/04/09/prototyping-and-testing-systems/">Prototyping and testing systems</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/">Is JAVA really the only game in town for building Digital Preservation Systems?</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/07/05/tahoe-lafs-1-dot-9-2-is-released/">tahoe-lafs 1.9.2 is released</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/06/15/installing-git-annex-on-sl5/">Installing git-annex on SL5</a>
       </li>
     
   </ul>
@@ -312,8 +345,8 @@ would attend.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/2012/06/06/dcc-roadshow-n-ireland/';
-        var disqus_url = 'http://jcftang.github.com/2012/06/06/dcc-roadshow-n-ireland/';
+        var disqus_identifier = 'http://jcftang.github.com/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/';
+        var disqus_url = 'http://jcftang.github.com/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/';
         var disqus_script = 'embed.js';
       
     (function () {
