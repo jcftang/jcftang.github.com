@@ -51,3 +51,6 @@ Or would it be better to go the other way around and try using
 git-annex as a type of interface to other backend storage systems for
 fedora-commons, I wish I had more time to poke the akubra
 interface/package in fedora-commons.
+
+The above is just a rant and my brain spewing randome stuff out in the
+afternoon after thinking about the OR2012 developer challenge.
