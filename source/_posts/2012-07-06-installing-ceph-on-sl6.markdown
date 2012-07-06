@@ -80,4 +80,5 @@ sorted out for me), from the *rpmbuild/RPMS/x86_64* directory
 I then simply followed the 5 minute quick start guide at
 <http://ceph.com/docs/master/start/quick-start/> to see if ceph would
 start up. There is more documentation at <http://ceph.com/docs/master>
-that I have yet to go through.
+that I have yet to go through. Perhaps the configuration of ceph can go
+into another post.
