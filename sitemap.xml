@@ -189,12 +189,16 @@
         <lastmod>2012-07-05T16:06:48+01:00</lastmod>
     </url>
     <url>
+        <loc>http://jcftang.github.com/2012/07/06/installing-ceph-on-sl6/</loc>
+        <lastmod>2012-07-06T16:52:08+01:00</lastmod>
+    </url>
+    <url>
         <loc>http://jcftang.github.com/about/</loc>
         <lastmod>2012-06-22T15:17:57+01:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/archives/</loc>
-        <lastmod>2012-07-05T16:06:48+01:00</lastmod>
+        <lastmod>2012-07-06T16:52:08+01:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/blog/categories/</loc>
@@ -202,6 +206,6 @@
     </url>
     <url>
         <loc>http://jcftang.github.com/</loc>
-        <lastmod>2012-07-05T16:06:48+01:00</lastmod>
+        <lastmod>2012-07-06T16:52:08+01:00</lastmod>
     </url>
 </urlset>

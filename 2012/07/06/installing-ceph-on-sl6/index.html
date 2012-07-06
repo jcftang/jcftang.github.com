@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Installing Ceph on SL6 - Jimmy Tang</title>
+  <meta name="author" content="Jimmy Tang">
+  <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
+
+  
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://jcftang.github.com/2012/07/06/installing-ceph-on-sl6/">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Jimmy Tang" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8597777-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+   
+  <link href="/octopress-favicon.png" rel="icon">
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Jimmy Tang</a></h1>
+  
+    <h2>Yet more random mutterings</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:jcftang.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="/blog/categories">Categories</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+
+
+
+
+
+
+
+
+
+
+
+<article class="hentry " role="article">
+  
+  <header>
+    <h1 class="entry-title">
+
+Installing Ceph on SL6
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-06T14:43:00+01:00" pubdate data-updated="true">Jul 6<span>th</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/07/06/installing-ceph-on-sl6/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>As an exercise of a Friday afternoon of not starting something big before
+heading off to a conference. I&#8217;ve decided to spend an hour or two at
+seeing how ceph is installed and configured on an SL6 based machine
+(RHEL6 clone).</p>
+
+<p>The install target is just an old desktop running a 64bit install of SL6x,
+so it&#8217;s nothing too fancy.</p>
+
+<p>Following the instructions at <a href="http://ceph.com/wiki/Installing_on_RedHat_or_CentOS">http://ceph.com/wiki/Installing_on_RedHat_or_CentOS</a>, I ended up doing this</p>
+
+<pre><code>yum install yum-conf-epel
+yum update
+yum gcc gcc-c++ automake libtool expat expat-devel boost-devel nss-devel cryptopp cryptopp-devel libatomic_ops-devel fuse-devel
+yum install libedit-devel libedit
+</code></pre>
+
+<p>It seems that the packages <em>cryptopp-devel</em>, <em>cryptopp</em> and <em>expat-devel</em>,
+<em>expat</em> are the only packages pulled in from the epel repository.</p>
+
+<p>Additional libraries and tools include these weren&#8217;t mentioned in the
+upstream wiki, the upstream wiki probably needs to be updated.</p>
+
+<pre><code>yum install rpm-build
+yum install libaio-devel libcurl-devel libxml2-devel libuuid-devel keyutils-libs-devel fcgi-devel
+</code></pre>
+
+<p>I chose to install the newly designated stable branch of ceph 0.48argonaut</p>
+
+<pre><code>wget http://ceph.com/download/ceph-0.48argonaut.tar.bz2
+</code></pre>
+
+<p>I also chose to build it in RPM form, in the tarball there is a RPM spec
+file which can be used to create an installable RPM, the following is
+a transcript of what I did to build an installable RPM.</p>
+
+<pre><code>tar xjvf ceph-0.48argonaut.tar.bz2
+cp ceph-0.48argonaut.tar.bz2 ~/rpmbuild/SOURCES
+rpmbuild -ba ceph-0.48argonaut/ceph.spec
+</code></pre>
+
+<p>The build will take <em>some</em> time, especially if you are using old
+hardware. I ran into some minor packaging issues,</p>
+
+<pre><code>diff -u ceph.spec.in.orig ceph.spec.in
+--- ceph.spec.in.orig   2012-07-06 15:38:59.298497719 +0100
++++ ceph.spec.in    2012-07-06 15:39:45.423560177 +0100
+@@ -326,6 +326,8 @@
+/usr/sbin/rcceph
+%{_libdir}/rados-classes/libcls_rbd.so*
+%{_libdir}/rados-classes/libcls_rgw.so*
++/sbin/ceph-disk-activate
++/sbin/ceph-disk-prepare
+
+#################################################################################
+%files fuse
+</code></pre>
+
+<p>The above change need&#8217;s to be applied to the <em>ceph</em> spec file for the
+RPM(s) to build successfully.</p>
+
+<pre><code>ceph-0.48argonaut-6.el6.x86_64.rpm
+ceph-devel-0.48argonaut-6.el6.x86_64.rpm
+python-ceph-0.48argonaut-6.el6.x86_64.rpm
+librbd1-0.48argonaut-6.el6.x86_64.rpm
+librados2-0.48argonaut-6.el6.x86_64.rpm
+ceph-radosgw-0.48argonaut-6.el6.x86_64.rpm
+libcephfs1-0.48argonaut-6.el6.x86_64.rpm
+ceph-fuse-0.48argonaut-6.el6.x86_64.rpm
+</code></pre>
+
+<p>I chose to install <em>all</em> the RPM&#8217;s that were generated for educational
+purposes (used yum instead of the rpm commands so the dependancies are
+sorted out for me), from the <em>rpmbuild/RPMS/x86_64</em> directory</p>
+
+<pre><code>yum install ceph-0.48argonaut-6.el6.x86_64.rpm ceph-devel-0.48argonaut-6.el6.x86_64.rpm ceph-fuse-0.48argonaut-6.el6.x86_64.rpm ceph-radosgw-0.48argonaut-6.el6.x86_64.rpm libcephfs1-0.48argonaut-6.el6.x86_64.rpm librados2-0.48argonaut-6.el6.x86_64.rpm librbd1-0.48argonaut-6.el6.x86_64.rpm python-ceph-0.48argonaut-6.el6.x86_64.rpm
+</code></pre>
+
+<p>I then simply followed the 5 minute quick start guide at
+<a href="http://ceph.com/docs/master/start/quick-start/">http://ceph.com/docs/master/start/quick-start/</a> to see if ceph would
+start up. There is more documentation at <a href="http://ceph.com/docs/master">http://ceph.com/docs/master</a>
+that I have yet to go through. Perhaps the configuration of ceph can go
+into another post.</p>
+
+<p>To start the cluster after it&#8217;s configured</p>
+
+<pre><code>service ceph -a start
+</code></pre>
+
+<p>However on my test system it&#8217;s currently crashing out with the mds server giving the followin errors</p>
+
+<pre><code>2012-07-06 16:38:17.838055 7f2d6828d700 -1 mds.-1.0 *** got signal Terminated ***
+2012-07-06 16:38:17.838139 7f2d6828d700  1 mds.-1.0 suicide.  wanted down:dne, now up:boot
+2012-07-06 16:38:17.839020 7f2d6828d700 -1 osdc/Objecter.cc: In function 'void Objecter::shutdown()' thread 7f2d6828d700 time 2012-07-06 16:38:17.838156
+osdc/Objecter.cc: 221: FAILED assert(initialized)
+
+ ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
+ 1: (Objecter::shutdown()+0x170) [0x6e2e20]
+ 2: (MDS::suicide()+0xc9) [0x4ad829]
+ 3: (MDS::handle_signal(int)+0x1bb) [0x4b447b]
+ 4: (SignalHandler::entry()+0x283) [0x803d53]
+ 5: /lib64/libpthread.so.0() [0x3b3ea077f1]
+ 6: (clone()+0x6d) [0x3b3e6e5ccd]
+ NOTE: a copy of the executable, or `objdump -rdS &lt;executable&gt;` is needed to interpret this.
+
+--- begin dump of recent events ---
+    -3&gt; 2012-07-06 16:37:57.786954 7f2d6b496760  0 ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030), process ceph-mds, pid 12537
+    -2&gt; 2012-07-06 16:38:17.838055 7f2d6828d700 -1 mds.-1.0 *** got signal Terminated ***
+    -1&gt; 2012-07-06 16:38:17.838139 7f2d6828d700  1 mds.-1.0 suicide.  wanted down:dne, now up:boot
+     0&gt; 2012-07-06 16:38:17.839020 7f2d6828d700 -1 osdc/Objecter.cc: In function 'void Objecter::shutdown()' thread 7f2d6828d700 time 2012-07-06 16:38:17.838156
+osdc/Objecter.cc: 221: FAILED assert(initialized)
+
+ ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
+ 1: (Objecter::shutdown()+0x170) [0x6e2e20]
+ 2: (MDS::suicide()+0xc9) [0x4ad829]
+ 3: (MDS::handle_signal(int)+0x1bb) [0x4b447b]
+ 4: (SignalHandler::entry()+0x283) [0x803d53]
+ 5: /lib64/libpthread.so.0() [0x3b3ea077f1]
+ 6: (clone()+0x6d) [0x3b3e6e5ccd]
+ NOTE: a copy of the executable, or `objdump -rdS &lt;executable&gt;` is needed to interpret this.
+
+--- end dump of recent events ---
+2012-07-06 16:38:17.840237 7f2d6828d700 -1 *** Caught signal (Aborted) **
+ in thread 7f2d6828d700
+
+ ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
+ 1: /usr/bin/ceph-mds() [0x803309]
+ 2: /lib64/libpthread.so.0() [0x3b3ea0f4a0]
+ 3: (gsignal()+0x35) [0x3b3e632885]
+ 4: (abort()+0x175) [0x3b3e634065]
+ 5: (__gnu_cxx::__verbose_terminate_handler()+0x12d) [0x3b432bea7d]
+ NOTE: a copy of the executable, or `objdump -rdS &lt;executable&gt;` is needed to interpret this.
+
+--- begin dump of recent events ---
+     0&gt; 2012-07-06 16:38:17.840237 7f2d6828d700 -1 *** Caught signal (Aborted) **
+ in thread 7f2d6828d700
+
+ ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
+ 1: /usr/bin/ceph-mds() [0x803309]
+ 2: /lib64/libpthread.so.0() [0x3b3ea0f4a0]
+ 3: (gsignal()+0x35) [0x3b3e632885]
+ 4: (abort()+0x175) [0x3b3e634065]
+ 5: (__gnu_cxx::__verbose_terminate_handler()+0x12d) [0x3b432bea7d]
+ NOTE: a copy of the executable, or `objdump -rdS &lt;executable&gt;` is needed to interpret this.
+
+--- end dump of recent events ---
+</code></pre>
+
+<p>I&#8217;ve logged the error message on the ceph-devel mailing list, I don&#8217;t
+have time to poke at this problem right now. I need to recreate this
+scenario in a VM on my laptop so I can play with this on the plane when
+I&#8217;m going to Open Repositories 2012 this weekend.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Jimmy Tang</span></span>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-06T14:43:00+01:00" pubdate data-updated="true">Jul 6<span>th</span>, 2012</time>
+
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/storage/'>storage</a>
+  
+</span>
+
+
+
+      
+
+    </p>
+    
+      <div class="sharing">
+  
+    
+      <a href="http://twitter.com/share" title="Tweet this" class="twitter-share" target="_blank">Tweet</a>
+    
+  
+  
+    
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/07/06/installing-ceph-on-sl6/" target="_blank">+1</a>
+    
+  
+  
+    
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/07/06/installing-ceph-on-sl6/" target="_blank">Share</a>
+    
+  
+  
+
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/" title="Previous Post: Thoughts on using the likes of tahoe-lafs and git-annex as a backend storage system for Digital Preservation">&laquo; Thoughts on using the likes of tahoe-lafs and git-annex as a backend storage system for Digital Preservation</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+<section>
+  <h1>Comments</h1>
+  
+
+  
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  
+</section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Related Posts</h1>
+  <ul class="posts">
+    
+      <li class="related">
+        <a href="/2012/06/15/installing-git-annex-on-sl5/">Installing git-annex on SL5</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for HPC systems</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux isn't the only platform to target when building applications</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2011/10/21/setting-up-my-work-macbook-air/">Setting up my work Macbook Air</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2011/10/13/feeling-disconnected-from-modern-software-development-tools/">Feeling Disconnected From Modern Software Development Tools</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/07/06/installing-ceph-on-sl6/">Installing Ceph on SL6</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/">Thoughts on using the likes of tahoe-lafs and git-annex as a backend storage system for Digital Preservation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/07/05/ceph-v0-dot-48-argonaut-released/">Ceph V0.48 “ARGONAUT” RELEASED</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/07/05/tahoe-lafs-1-dot-9-2-is-released/">tahoe-lafs 1.9.2 is released</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/">Using git-daemon to share your git repo on a trusted LAN</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets" data-user="jcftang" data-count="4" data-replies="false">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+    <a href="http://twitter.com/jcftang" class="twitter-follow-button" data-show-count="false">Follow @jcftang</a>
+  
+</section>
+
+
+
+
+
+
+
+<a href="https://plus.google.com/115375964029787125148?rel=author">
+<img src="https://ssl.gstatic.com/images/icons/gplus-32.png" alt="Google Plus icon">
+</a>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Jimmy Tang -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'jcftang';
+			var disqus_developer = '0';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://jcftang.github.com/2012/07/06/installing-ceph-on-sl6/';
+        var disqus_url = 'http://jcftang.github.com/2012/07/06/installing-ceph-on-sl6/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+</body>
+</html>
