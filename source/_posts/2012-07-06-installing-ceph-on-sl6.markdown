@@ -144,3 +144,8 @@ However on my test system it's currently crashing out with the mds server giving
 	 NOTE: a copy of the executable, or `objdump -rdS <executable>` is needed to interpret this.
 
 	--- end dump of recent events ---
+
+I've logged the error message on the ceph-devel mailing list, I don't
+have time to poke at this problem right now. I need to recreate this
+scenario in a VM on my laptop so I can play with this on the plane when
+I'm going to Open Repositories 2012 this weekend.
