@@ -82,3 +82,65 @@ I then simply followed the 5 minute quick start guide at
 start up. There is more documentation at <http://ceph.com/docs/master>
 that I have yet to go through. Perhaps the configuration of ceph can go
 into another post.
+
+To start the cluster after it's configured
+
+	service ceph -a start
+
+However on my test system it's currently crashing out with the mds server giving the followin errors
+
+	2012-07-06 16:38:17.838055 7f2d6828d700 -1 mds.-1.0 *** got signal Terminated ***
+	2012-07-06 16:38:17.838139 7f2d6828d700  1 mds.-1.0 suicide.  wanted down:dne, now up:boot
+	2012-07-06 16:38:17.839020 7f2d6828d700 -1 osdc/Objecter.cc: In function 'void Objecter::shutdown()' thread 7f2d6828d700 time 2012-07-06 16:38:17.838156
+	osdc/Objecter.cc: 221: FAILED assert(initialized)
+
+	 ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
+	 1: (Objecter::shutdown()+0x170) [0x6e2e20]
+	 2: (MDS::suicide()+0xc9) [0x4ad829]
+	 3: (MDS::handle_signal(int)+0x1bb) [0x4b447b]
+	 4: (SignalHandler::entry()+0x283) [0x803d53]
+	 5: /lib64/libpthread.so.0() [0x3b3ea077f1]
+	 6: (clone()+0x6d) [0x3b3e6e5ccd]
+	 NOTE: a copy of the executable, or `objdump -rdS <executable>` is needed to interpret this.
+
+	--- begin dump of recent events ---
+	    -3> 2012-07-06 16:37:57.786954 7f2d6b496760  0 ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030), process ceph-mds, pid 12537
+	    -2> 2012-07-06 16:38:17.838055 7f2d6828d700 -1 mds.-1.0 *** got signal Terminated ***
+	    -1> 2012-07-06 16:38:17.838139 7f2d6828d700  1 mds.-1.0 suicide.  wanted down:dne, now up:boot
+	     0> 2012-07-06 16:38:17.839020 7f2d6828d700 -1 osdc/Objecter.cc: In function 'void Objecter::shutdown()' thread 7f2d6828d700 time 2012-07-06 16:38:17.838156
+	osdc/Objecter.cc: 221: FAILED assert(initialized)
+
+	 ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
+	 1: (Objecter::shutdown()+0x170) [0x6e2e20]
+	 2: (MDS::suicide()+0xc9) [0x4ad829]
+	 3: (MDS::handle_signal(int)+0x1bb) [0x4b447b]
+	 4: (SignalHandler::entry()+0x283) [0x803d53]
+	 5: /lib64/libpthread.so.0() [0x3b3ea077f1]
+	 6: (clone()+0x6d) [0x3b3e6e5ccd]
+	 NOTE: a copy of the executable, or `objdump -rdS <executable>` is needed to interpret this.
+
+	--- end dump of recent events ---
+	2012-07-06 16:38:17.840237 7f2d6828d700 -1 *** Caught signal (Aborted) **
+	 in thread 7f2d6828d700
+
+	 ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
+	 1: /usr/bin/ceph-mds() [0x803309]
+	 2: /lib64/libpthread.so.0() [0x3b3ea0f4a0]
+	 3: (gsignal()+0x35) [0x3b3e632885]
+	 4: (abort()+0x175) [0x3b3e634065]
+	 5: (__gnu_cxx::__verbose_terminate_handler()+0x12d) [0x3b432bea7d]
+	 NOTE: a copy of the executable, or `objdump -rdS <executable>` is needed to interpret this.
+
+	--- begin dump of recent events ---
+	     0> 2012-07-06 16:38:17.840237 7f2d6828d700 -1 *** Caught signal (Aborted) **
+	 in thread 7f2d6828d700
+
+	 ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
+	 1: /usr/bin/ceph-mds() [0x803309]
+	 2: /lib64/libpthread.so.0() [0x3b3ea0f4a0]
+	 3: (gsignal()+0x35) [0x3b3e632885]
+	 4: (abort()+0x175) [0x3b3e634065]
+	 5: (__gnu_cxx::__verbose_terminate_handler()+0x12d) [0x3b432bea7d]
+	 NOTE: a copy of the executable, or `objdump -rdS <executable>` is needed to interpret this.
+
+	--- end dump of recent events ---
