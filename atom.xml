@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-07-07T12:30:35+01:00</updated>
+  <updated>2012-07-09T20:24:12+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Open Repositories 2012 - Day 1 &rarr;]]></title>
+<link href="http://or2012.ed.ac.uk/"/>
+<updated>2012-07-09T20:04:00+01:00</updated>
+<id>http://jcftang.github.com/2012/07/09/open-repositories-2012-day-1</id>
+
+      <content type="html"><![CDATA[<p>I only been here for a day and Edinburgh is as nice as I recall it
+was. This time my attendance to Open Repositories 2012 brought me and
+some co-workers of the DRI team to this city. It&#8217;s my first time at
+this event and there seems to be lots of people, so far it&#8217;s been
+pleasant enough apart from the weather.</p>
+
+<p>For those interested in whats happening you should follow the hashtag
+<strong><em>#or2012</em></strong> on twitter to see what people are saying. One of the cool
+thing was they gave out 8gb USB memory sticks (built into the name
+cards), I thought that was a nice touch.</p>
+
+<p>So far it&#8217;s two thumbs up for the organisers. It&#8217;s only workshops for
+far, I look forward to the poster sessions and other talks which will
+be on. Day 2 will be more workshops and poster sessions, plus a
+keynote.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/07/09/open-repositories-2012-day-1/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -812,25 +841,6 @@ seems nice enough so far. I now need to test it out in the field on a
 bad connection when I&#8217;m away at a team meeting. I&#8217;m still not entirely
 sure of how good or bad it is in terms of security compared to <em>SSH</em>.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/04/17/mosh-an-alternative-to-ssh/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Arquillian 1.0.0.Final released! Ready for GlassFish and WebLogic! Death to all bugs! &rarr;]]></title>
-<link href="http://www.javacodegeeks.com/2012/04/arquillian-100final-released-ready-for.html"/>
-<updated>2012-04-16T09:25:00+01:00</updated>
-<id>http://jcftang.github.com/2012/04/16/arquillian-1-dot-0-0-dot-final-released-ready-for-glassfish-and-weblogic-death-to-all-bugs</id>
-
-      <content type="html"><![CDATA[<p>Looks like an interesting and useful tool, must take note of this tool
-for later use to kill all bugs that are found in the projects that we
-work on, well java ones at least.</p>
-
-<p>Anything to help squash bugs is good!</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/2012/04/16/arquillian-1-dot-0-0-dot-final-released-ready-for-glassfish-and-weblogic-death-to-all-bugs/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>

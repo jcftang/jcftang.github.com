@@ -193,12 +193,16 @@
         <lastmod>2012-07-07T12:00:36+01:00</lastmod>
     </url>
     <url>
+        <loc>http://jcftang.github.com/2012/07/09/open-repositories-2012-day-1/</loc>
+        <lastmod>2012-07-09T20:23:00+01:00</lastmod>
+    </url>
+    <url>
         <loc>http://jcftang.github.com/about/</loc>
         <lastmod>2012-06-18T22:00:43+01:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/archives/</loc>
-        <lastmod>2012-07-07T12:30:02+01:00</lastmod>
+        <lastmod>2012-07-09T20:23:00+01:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/blog/categories/</loc>
@@ -206,6 +210,6 @@
     </url>
     <url>
         <loc>http://jcftang.github.com/</loc>
-        <lastmod>2012-07-07T12:30:02+01:00</lastmod>
+        <lastmod>2012-07-09T20:23:00+01:00</lastmod>
     </url>
 </urlset>
