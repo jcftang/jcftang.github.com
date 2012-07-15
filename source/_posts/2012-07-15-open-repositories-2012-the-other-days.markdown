@@ -25,7 +25,8 @@ there are alternatives to just copying files around en-mass and
 storing replicas left right and centre.
 
 I promised I would post some photos, but it seems my photos aren't as
-interesting as the ones that other people took.
+interesting as the ones that other people took. See
+<http://www.flickr.com/groups/or2012/>.
 
 Next year Open Repositories will be held in Prince Edward Island,
 Canada. I will need to be better prepared next year (assuming I go).
