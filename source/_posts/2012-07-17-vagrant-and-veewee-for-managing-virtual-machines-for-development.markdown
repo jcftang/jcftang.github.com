@@ -24,6 +24,6 @@ Vagrant. If you're interested in the updated SL6.2 definitions they
 can be found at my
 [fork of veewee](https://github.com/jcftang/veewee/tree/scientificlinux-6.2).
 
-All that is left now is setup [puppet](http://puppetlabs.com/) and
+All that is left now is to setup [puppet](http://puppetlabs.com/) and
 have it automatically provision my development/test environment. I'm
 not a huge fan of puppet, but I guess it's better than rolling my own.
