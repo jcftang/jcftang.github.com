@@ -27,3 +27,7 @@ can be found at my
 All that is left now is to setup [puppet](http://puppetlabs.com/) and
 have it automatically provision my development/test environment. I'm
 not a huge fan of puppet, but I guess it's better than rolling my own.
+
+I look forward to have the capability of having easy access to
+disposable VM's for prototyping and testing! I will need to at
+somepoint setup a test system for cports with this tool.
