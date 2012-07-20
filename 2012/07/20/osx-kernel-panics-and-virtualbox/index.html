@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Using git-daemon to share your git repo on a trusted LAN - Jimmy Tang</title>
+  <title>OSX Kernel panics and VirtualBox - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/">
+  <link rel="canonical" href="http://jcftang.github.com/2012/07/20/osx-kernel-panics-and-virtualbox/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Jimmy Tang" type="application/atom+xml">
@@ -92,7 +92,7 @@
   <header>
     <h1 class="entry-title">
 
-Using Git-daemon to Share Your Git Repo on a Trusted LAN
+OSX Kernel Panics and VirtualBox
 
 </h1>
 
@@ -110,41 +110,30 @@ Using Git-daemon to Share Your Git Repo on a Trusted LAN
   
 
 
-<time datetime="2012-07-02T12:05:00+01:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2012</time>
+<time datetime="2012-07-20T20:49:00+01:00" pubdate data-updated="true">Jul 20<span>th</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/">Permalink</a>
+         &bull; <a rel="bookmark" href="/2012/07/20/osx-kernel-panics-and-virtualbox/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p>One of the things that I don&#8217;t like about <a href="http://git-scm.com/">git</a> is
-the interface at times can be too geared towards power users. One command
-that I particularly like in <a href="http://mercurial.selenic.com/">mercurial</a>
-is the <em>hg serve</em> command, which is incredibly easy to use.</p>
+<div class="entry-content"><p>Having discovered <a href="http://vagrantup.com/">vagrant</a> and
+<a href="https://github.com/jedi4ever/veewee">veewee</a> recently at OR2012 I&#8217;ve
+been building a few <em>boxes</em> for our site for testing purposes. I&#8217;ve
+had to relearn puppet to provision machines, but it&#8217;s paying off. I&#8217;ve
+been able to deploy 3-4 virtual machines with relative ease.</p>
 
-<p>To do the equivalent of the <em>hg serve</em> in <em>git</em> you can do the following&#8230;</p>
+<p>The only disappointment is the seemingly frequent and semi-random
+kernel panics and crashes that I get on OSX (which is probably caused
+by VirtualBox when I do lots of IO). It&#8217;s making me rethink if I
+really want to stick with OSX as my primary desktop OS in work. I may
+have to revert back to using Linux at somepoint.</p>
 
-<pre><code>user$ cd my-repo
-user$ git daemon --export-all --base-path=$(pwd)
-</code></pre>
-
-<p>The above assumes you are on a trusted network and you want to share
-your repo with people on your LAN and you are in the toplevel directory
-of the repository that you want to temporarily share. If you&#8217;re lazy
-you could do&#8230;</p>
-
-<pre><code>user$ git config --global alias.serve 'daemon --reuseaddr --verbose  --base-path=. --export-all ./.git'
-</code></pre>
-
-<p>Which would place the following (or similar) in your ~/.gitconfig file</p>
-
-<pre><code>[alias]
-    serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
-</code></pre>
-
-<p>The above was taken from <a href="https://git.wiki.kernel.org/index.php/Aliases">https://git.wiki.kernel.org/index.php/Aliases</a></p>
+<p>At least in Linux I know how to get a kdump out and debug the issue
+but with OSX I&#8217;m not sure where I should begin to figure out what&#8217;s
+broken.</p>
 </div>
 
 
@@ -167,12 +156,12 @@ you could do&#8230;</p>
   
 
 
-<time datetime="2012-07-02T12:05:00+01:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2012</time>
+<time datetime="2012-07-20T20:49:00+01:00" pubdate data-updated="true">Jul 20<span>th</span>, 2012</time>
 
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/scm/'>scm</a>, <a class='category' href='/blog/categories/team/'>team</a>
+    <a class='category' href='/blog/categories/osx/'>osx</a>, <a class='category' href='/blog/categories/team/'>team</a>
   
 </span>
 
@@ -190,12 +179,12 @@ you could do&#8230;</p>
   
   
     
-      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/" target="_blank">+1</a>
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/07/20/osx-kernel-panics-and-virtualbox/" target="_blank">+1</a>
     
   
   
     
-    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/" target="_blank">Share</a>
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/07/20/osx-kernel-panics-and-virtualbox/" target="_blank">Share</a>
     
   
   
@@ -205,10 +194,8 @@ you could do&#8230;</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2012/06/26/git-annex-assistant-is-making-leaps-and-bounds/" title="Previous Post: git-annex assistant is making leaps and bounds">&laquo; git-annex assistant is making leaps and bounds</a>
+        <a class="basic-alignment left" href="/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development/" title="Previous Post: Vagrant and Veewee for managing virtual machines for development">&laquo; Vagrant and Veewee for managing virtual machines for development</a>
       
-      
-        <a class="basic-alignment right" href="/2012/07/05/tahoe-lafs-1-dot-9-2-is-released/" title="Next Post: tahoe-lafs 1.9.2 is released">tahoe-lafs 1.9.2 is released &raquo;</a>
       
     </p>
   </footer>
@@ -233,15 +220,7 @@ you could do&#8230;</p>
   <ul class="posts">
     
       <li class="related">
-        <a href="/2012/06/15/installing-git-annex-on-sl5/">Installing git-annex on SL5</a>
-      </li>
-    
-      <li class="related">
         <a href="/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/">Thoughts on using the likes of tahoe-lafs and git-annex as a backend storage system for Digital Preservation</a>
-      </li>
-    
-      <li class="related">
-        <a href="/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for HPC systems</a>
       </li>
     
       <li class="related">
@@ -249,7 +228,15 @@ you could do&#8230;</p>
       </li>
     
       <li class="related">
-        <a href="/2012/03/11/git-rerere-for-long-lived-feature-branches/">git rerere for long lived feature branches</a>
+        <a href="/2012/04/09/prototyping-and-testing-systems/">Prototyping and testing systems</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development/">Vagrant and Veewee for managing virtual machines for development</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/06/18/octopress-2-dot-1-taking-a-sneak-peek/">Octopress 2.1, taking a sneak peek</a>
       </li>
     
   </ul>
@@ -326,8 +313,8 @@ you could do&#8230;</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/';
-        var disqus_url = 'http://jcftang.github.com/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/';
+        var disqus_identifier = 'http://jcftang.github.com/2012/07/20/osx-kernel-panics-and-virtualbox/';
+        var disqus_url = 'http://jcftang.github.com/2012/07/20/osx-kernel-panics-and-virtualbox/';
         var disqus_script = 'embed.js';
       
     (function () {

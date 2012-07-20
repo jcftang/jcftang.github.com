@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-07-17T12:50:45+01:00</updated>
+  <updated>2012-07-20T21:20:31+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[OSX Kernel panics and VirtualBox]]></title>
+<link href="http://jcftang.github.com/2012/07/20/osx-kernel-panics-and-virtualbox/"/>
+<updated>2012-07-20T20:49:00+01:00</updated>
+<id>http://jcftang.github.com/2012/07/20/osx-kernel-panics-and-virtualbox</id>
+
+      <content type="html"><![CDATA[<p>Having discovered <a href="http://vagrantup.com/">vagrant</a> and
+<a href="https://github.com/jedi4ever/veewee">veewee</a> recently at OR2012 I&#8217;ve
+been building a few <em>boxes</em> for our site for testing purposes. I&#8217;ve
+had to relearn puppet to provision machines, but it&#8217;s paying off. I&#8217;ve
+been able to deploy 3-4 virtual machines with relative ease.</p>
+
+<p>The only disappointment is the seemingly frequent and semi-random
+kernel panics and crashes that I get on OSX (which is probably caused
+by VirtualBox when I do lots of IO). It&#8217;s making me rethink if I
+really want to stick with OSX as my primary desktop OS in work. I may
+have to revert back to using Linux at somepoint.</p>
+
+<p>At least in Linux I know how to get a kdump out and debug the issue
+but with OSX I&#8217;m not sure where I should begin to figure out what&#8217;s
+broken.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/07/20/osx-kernel-panics-and-virtualbox/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -43,10 +72,6 @@ can be found at my
 <p>All that is left now is to setup <a href="http://puppetlabs.com/">puppet</a> and
 have it automatically provision my development/test environment. I&#8217;m
 not a huge fan of puppet, but I guess it&#8217;s better than rolling my own.</p>
-
-<p>I look forward to have the capability of having easy access to
-disposable VM&#8217;s for prototyping and testing! I will need to at
-somepoint setup a test system for cports with this tool.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
@@ -842,30 +867,6 @@ out there are really just mashups of different types of technology
 implementing enterprise applications that JAVA gets so much focus and
 attention?</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[git-subtree is now in mainline git]]></title>
-<link href="http://jcftang.github.com/2012/05/02/git-subtree-is-now-in-mainline-git/"/>
-<updated>2012-05-02T09:27:00+01:00</updated>
-<id>http://jcftang.github.com/2012/05/02/git-subtree-is-now-in-mainline-git</id>
-
-      <content type="html"><![CDATA[<p>It seems that <a href="git://github.com/apenwarr/git-subtree.git">git-subtree</a>
-has been merged into the mainline git project. <em>git-subtree</em> is one of
-those really useful wrappers for manipulating git repositories if you
-are an integrator or don&#8217;t really like git-submodule. It certainly is
-a nicer alternative to git-submodule. There is less chance of the
-person cloning a git-subtree repository messing up the checkout because
-they forgot to initialise the submodules. There is also the added
-advantage of not needing to fiddle around scripting up the git-archive
-commands for exporting the source tree for a release if you use
-git-subtree; actually git-subtree is just plain useful.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/2012/05/02/git-subtree-is-now-in-mainline-git/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
