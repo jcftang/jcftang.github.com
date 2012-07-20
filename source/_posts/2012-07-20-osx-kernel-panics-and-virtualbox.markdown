@@ -8,10 +8,10 @@ categories: osx team
 ---
 
 Having discovered [vagrant](http://vagrantup.com/) and
-[veewee](https://github.com/jedi4ever/veewee) recently I've been
-building a few _boxes_ for our site for testing purposes. I've had to
-relearn puppet to provision machines, but it's paying off. I've been
-able to deploy 3-4 virtual machines with relative ease.
+[veewee](https://github.com/jedi4ever/veewee) recently at OR2012 I've
+been building a few _boxes_ for our site for testing purposes. I've
+had to relearn puppet to provision machines, but it's paying off. I've
+been able to deploy 3-4 virtual machines with relative ease.
 
 The only disappointment is the seemingly frequent and semi-random
 kernel panics and crashes that I get on OSX (which is probably caused
