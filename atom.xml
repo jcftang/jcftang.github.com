@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-07-20T21:20:31+01:00</updated>
+  <updated>2012-08-03T15:51:47+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,82 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[An excuse to learn Ruby and Ruby on Rails]]></title>
+<link href="http://jcftang.github.com/2012/08/02/an-excuse-to-learn-ruby-and-ruby-on-rails/"/>
+<updated>2012-08-02T18:15:00+01:00</updated>
+<id>http://jcftang.github.com/2012/08/02/an-excuse-to-learn-ruby-and-ruby-on-rails</id>
+
+      <content type="html"><![CDATA[<p>I&#8217;ve been a long time consumer of ruby applications but never quite
+got around to learning the language and the frameworks that are
+available to developers. Within the team that I have been working
+with, we&#8217;ve been evaluating <a href="http://projecthydra.org">hydra</a> as a
+possible framework for our project.</p>
+
+<p>I&#8217;ve been spending the last few days reading
+<a href="http://pragprog.com/book/achbd/the-rspec-book">The RSpec Book</a>, I&#8217;ve
+been able to pick up some of the basic syntax of the language from the
+BDD book. As soon as I finish this book I will be moving on to a more
+real world book relating to ruby with the goal of being able to
+develop Ruby and Ruby on Rails applications.</p>
+
+<p>Well, I didn&#8217;t get as far as finishing the RSpec book and I&#8217;ve started
+creating a rubygem. I&#8217;m attempting to expose the insides of
+<a href="https://tahoe-lafs.org/trac/zfec/">zfec</a>, specifically the
+functionality in <em>fec.c</em>. So far I&#8217;ve been lazy and I am using swig to
+automatically generate the C to ruby bindings with something like this</p>
+
+<figure class='code'><figcaption><span>fec.i </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='C'><span class='line'><span class="o">%</span><span class="n">module</span> <span class="n">fec</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">%</span><span class="p">{</span>
+</span><span class='line'><span class="cp">#include &quot;fec.h&quot;</span>
+</span><span class='line'><span class="o">%</span><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">fec_t</span><span class="o">*</span> <span class="n">fec_new</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">k</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">m</span><span class="p">);</span>
+</span><span class='line'><span class="kt">void</span> <span class="n">fec_free</span><span class="p">(</span><span class="n">fec_t</span><span class="o">*</span> <span class="n">p</span><span class="p">);</span>
+</span><span class='line'><span class="kt">void</span> <span class="n">fec_decode</span><span class="p">(</span><span class="k">const</span> <span class="n">fec_t</span><span class="o">*</span> <span class="n">code</span><span class="p">,</span> <span class="k">const</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">inpkts</span><span class="p">,</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">outpkts</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">index</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">sz</span><span class="p">);</span>
+</span><span class='line'><span class="kt">void</span> <span class="n">fec_encode</span><span class="p">(</span><span class="k">const</span> <span class="n">fec_t</span><span class="o">*</span> <span class="n">code</span><span class="p">,</span> <span class="k">const</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">src</span><span class="p">,</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">fecs</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">block_nums</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">num_block_nums</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">sz</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Swig does it&#8217;s thing,</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>swig -ruby fec.i
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Amazingly after some fiddling I got ruby to load up the module. It
+doesn&#8217;t mean that it&#8217;s going to do much though as I need to learn
+about the typemaps in the ruby C interface do the correct mappings.</p>
+
+<p>I&#8217;m so far taking inspiration from the zfec python module to take a
+stab at building a ruby equivalent package for the sake of learning
+ruby and maybe even end up with something useful for the project that
+I am working on in work.</p>
+
+<p>After playing with extending ruby, I&#8217;m thinking I may need to take a
+step back and evaluate if this is the best way for me to learn ruby or
+not. I should probably not mess too much extending the language with a
+C library.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/08/02/an-excuse-to-learn-ruby-and-ruby-on-rails/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -72,6 +148,10 @@ can be found at my
 <p>All that is left now is to setup <a href="http://puppetlabs.com/">puppet</a> and
 have it automatically provision my development/test environment. I&#8217;m
 not a huge fan of puppet, but I guess it&#8217;s better than rolling my own.</p>
+
+<p>I look forward to have the capability of having easy access to
+disposable VM&#8217;s for prototyping and testing! I will need to at
+somepoint setup a test system for cports with this tool.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
@@ -820,53 +900,6 @@ apart from that it&#8217;s going to be a great competitor in the distributed
 filesystems arena. It will shake up GPFS and Lustre for sure, it might
 even give glusterfs a run for its money in the near future.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/05/19/ceph-gets-a-refresh/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Is JAVA really the only game in town for building Digital Preservation Systems?]]></title>
-<link href="http://jcftang.github.com/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/"/>
-<updated>2012-05-16T18:24:00+01:00</updated>
-<id>http://jcftang.github.com/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems</id>
-
-      <content type="html"><![CDATA[<p>In the world of digital preservation and repositories it seems that
-there is primarily fedora-commons, dspace, eprints and one or two
-other solutions out there for building up digital preservation
-systems. The one that really stands out as a framework and toolkit for
-building bigger and more complex systems is fedora-commons.</p>
-
-<p>It also happens to be written in JAVA and is a fairly big and complex
-system which implements best-practices for storing digital objects
-with the sole purpose of preservation. In one of the projects that I
-have been working with some interns at work; we have treated
-fedora-commons as just storage system where we interface to the
-preservation repository via the available REST api.</p>
-
-<p>By using the API it was possible to use node.js to implement the
-servers which contained all the business logic. Project Hydra does
-something similar or rather we are doing something similar to Project
-Hydra, by accident much to my suprise. Hydra uses Ruby on Rails for
-its middleware implementation, there doesn&#8217;t seem to be much JAVA
-there either.</p>
-
-<p>I get the feeling that this decoupled approach with REST servers and
-clients to be pretty attractive to anyone who wishes to implement
-these types systems. It is interesting to see that the applications
-aren&#8217;t being written in JAVA. At least that is what I can see with the
-projects that use Hydra (which is sort of the point). Maybe good
-enough practice is fine for most use cases.</p>
-
-<p>This makes me wonder how many digital preservation projects out there
-really use 100% JAVA up to delivery to the client? How many projects
-out there are really just mashups of different types of technology
-(well planned mashups). Is it because of &#8220;best practice&#8221; for
-implementing enterprise applications that JAVA gets so much focus and
-attention?</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>

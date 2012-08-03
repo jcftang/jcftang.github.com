@@ -93,6 +93,123 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2012/08/02/an-excuse-to-learn-ruby-and-ruby-on-rails/">An Excuse to Learn Ruby and Ruby on Rails</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-02T18:15:00+01:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2012</time>
+        
+         | <a href="/2012/08/02/an-excuse-to-learn-ruby-and-ruby-on-rails/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/08/02/an-excuse-to-learn-ruby-and-ruby-on-rails/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>I&#8217;ve been a long time consumer of ruby applications but never quite
+got around to learning the language and the frameworks that are
+available to developers. Within the team that I have been working
+with, we&#8217;ve been evaluating <a href="http://projecthydra.org">hydra</a> as a
+possible framework for our project.</p>
+
+<p>I&#8217;ve been spending the last few days reading
+<a href="http://pragprog.com/book/achbd/the-rspec-book">The RSpec Book</a>, I&#8217;ve
+been able to pick up some of the basic syntax of the language from the
+BDD book. As soon as I finish this book I will be moving on to a more
+real world book relating to ruby with the goal of being able to
+develop Ruby and Ruby on Rails applications.</p>
+
+<p>Well, I didn&#8217;t get as far as finishing the RSpec book and I&#8217;ve started
+creating a rubygem. I&#8217;m attempting to expose the insides of
+<a href="https://tahoe-lafs.org/trac/zfec/">zfec</a>, specifically the
+functionality in <em>fec.c</em>. So far I&#8217;ve been lazy and I am using swig to
+automatically generate the C to ruby bindings with something like this</p>
+
+<figure class='code'><figcaption><span>fec.i </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='C'><span class='line'><span class="o">%</span><span class="n">module</span> <span class="n">fec</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">%</span><span class="p">{</span>
+</span><span class='line'><span class="cp">#include &quot;fec.h&quot;</span>
+</span><span class='line'><span class="o">%</span><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">fec_t</span><span class="o">*</span> <span class="n">fec_new</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">k</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">m</span><span class="p">);</span>
+</span><span class='line'><span class="kt">void</span> <span class="n">fec_free</span><span class="p">(</span><span class="n">fec_t</span><span class="o">*</span> <span class="n">p</span><span class="p">);</span>
+</span><span class='line'><span class="kt">void</span> <span class="n">fec_decode</span><span class="p">(</span><span class="k">const</span> <span class="n">fec_t</span><span class="o">*</span> <span class="n">code</span><span class="p">,</span> <span class="k">const</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">inpkts</span><span class="p">,</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">outpkts</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">index</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">sz</span><span class="p">);</span>
+</span><span class='line'><span class="kt">void</span> <span class="n">fec_encode</span><span class="p">(</span><span class="k">const</span> <span class="n">fec_t</span><span class="o">*</span> <span class="n">code</span><span class="p">,</span> <span class="k">const</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">src</span><span class="p">,</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">fecs</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">block_nums</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">num_block_nums</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">sz</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Swig does it&#8217;s thing,</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>swig -ruby fec.i
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Amazingly after some fiddling I got ruby to load up the module. It
+doesn&#8217;t mean that it&#8217;s going to do much though as I need to learn
+about the typemaps in the ruby C interface do the correct mappings.</p>
+
+<p>I&#8217;m so far taking inspiration from the zfec python module to take a
+stab at building a ruby equivalent package for the sake of learning
+ruby and maybe even end up with something useful for the project that
+I am working on in work.</p>
+
+<p>After playing with extending ruby, I&#8217;m thinking I may need to take a
+step back and evaluate if this is the best way for me to learn ruby or
+not. I should probably not mess too much extending the language with a
+C library.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/08/02/an-excuse-to-learn-ruby-and-ruby-on-rails/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2012/07/20/osx-kernel-panics-and-virtualbox/">OSX Kernel Panics and VirtualBox</a>
 
 </h1>
@@ -210,6 +327,10 @@ can be found at my
 <p>All that is left now is to setup <a href="http://puppetlabs.com/">puppet</a> and
 have it automatically provision my development/test environment. I&#8217;m
 not a huge fan of puppet, but I guess it&#8217;s better than rolling my own.</p>
+
+<p>I look forward to have the capability of having easy access to
+disposable VM&#8217;s for prototyping and testing! I will need to at
+somepoint setup a test system for cports with this tool.</p>
 </div>
 
   <footer>
@@ -886,81 +1007,6 @@ you could do&#8230;</p>
   <footer>
     
     <p><a class="comments-link" href="/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/#disqus_thread">View comments &raquo;</a></p>
-    
-    
-  </footer>
-
-
-    </article>
-  
-    
-
-
-
-  
-
-
-
-
-
-
-
-
-    <article class="linklog">
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="http://git-annex.branchable.com/design/assistant/">Git-annex Assistant Is Making Leaps and Bounds</a>
-<span class='linklog-marker'>&rarr;</span>
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-26T19:10:00+01:00" pubdate data-updated="true">Jun 26<span>th</span>, 2012</time>
-        
-         | <a href="/2012/06/26/git-annex-assistant-is-making-leaps-and-bounds/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/06/26/git-annex-assistant-is-making-leaps-and-bounds/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>I&#8217;ve been following the development of the new <em>git-annex assistant</em>
-work that Joey Hess has been working on over the past few weeks. Even
-in this early state of development, it is slowly becoming more usable
-and accessible for less technical users.</p>
-
-<p>As soon as as the
-<a href="http://git-annex.branchable.com/bugs/Issue_on_OSX_with_some_system_limits/">issues with the limitations of <em>kqueue</em> and OSX&#8217;s silly limits</a>
-are resolved (without the need for a user to do a <em>sysctl -w
-WHATEVER</em>) it will be pretty cool.</p>
-
-<p>I&#8217;ve been throwing small batches of data at a newly setup <em>annex</em>&#8216;d
-repository and it&#8217;s been handling it well enough for me to constantly
-test the various development branch. Kudos to Joey for being so
-responsive to fixing bugs during development.</p>
-
-<p>For those that care go to
-<a href="http://git-annex.branchable.com/design/assistant/blog/">http://git-annex.branchable.com/design/assistant/blog/</a> and follow
-the development of this cool tool</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/06/26/git-annex-assistant-is-making-leaps-and-bounds/#disqus_thread">View comments &raquo;</a></p>
     
     
   </footer>
