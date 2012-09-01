@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-09-01T19:48:05+01:00</updated>
+  <updated>2012-09-01T19:49:25+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -25,6 +25,8 @@
 
       <content type="html"><![CDATA[<p>It&#8217;s somewhat interesting to listen to, we&#8217;ve been looking at
 <a href="http://www.ceph.com/">ceph</a> for a few things in work.</p>
+
+<p>Just jotting this down so I remember to share this with the guys in work.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/09/01/rce-62-ceph-petabyte-scale-storage/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
