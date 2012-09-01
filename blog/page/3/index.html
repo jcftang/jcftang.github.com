@@ -81,6 +81,76 @@
 
 
 
+  
+
+
+
+
+
+
+
+
+    <article class="linklog">
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="http://ceph.com/community/announcing-the-ceph-com-refresh/">Ceph Gets a Refresh</a>
+<span class='linklog-marker'>&rarr;</span>
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-19T13:08:00+01:00" pubdate data-updated="true">May 19<span>th</span>, 2012</time>
+        
+         | <a href="/2012/05/19/ceph-gets-a-refresh/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/05/19/ceph-gets-a-refresh/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>I&#8217;ve been keeping an eye on <em>ceph</em> for quite sometime now. It looks
+like <em>ceph</em> is almost ready for production usage. There is now a
+support infrastructure and a commercial company backing the
+product. So far the OSD, MDS and MON components all run on Linux since
+most of the implementation appears to be in the user land I wonder if
+it will be ported to non-linux platforms. It&#8217;s be quite nifty if one
+could have a heterogeneous network of servers providing storage.</p>
+
+<p>From first glance at shadowing one of the guys in work with this
+filesystem, it looks good. It&#8217;s missing some documentation right now
+apart from that it&#8217;s going to be a great competitor in the distributed
+filesystems arena. It will shake up GPFS and Lustre for sure, it might
+even give glusterfs a run for its money in the near future.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/05/19/ceph-gets-a-refresh/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
 
 
 
@@ -762,97 +832,6 @@ rebasing, which lead me to re-discover <em>git rerere</em>.</p>
   <footer>
     
     <p><a class="comments-link" href="/2012/03/11/git-rerere-for-long-lived-feature-branches/#disqus_thread">View comments &raquo;</a></p>
-    
-    
-  </footer>
-
-
-    </article>
-  
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/03/08/enabling-latent-semantic-indexing-for-octopress/">Enabling Latent Semantic Indexing for Octopress</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-08T20:02:00+00:00" pubdate data-updated="true">Mar 8<span>th</span>, 2012</time>
-        
-         | <a href="/2012/03/08/enabling-latent-semantic-indexing-for-octopress/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/03/08/enabling-latent-semantic-indexing-for-octopress/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>For those that care about having related posts on their <a href="">Octopress</a>
-blog. It&#8217;s actually quite easy to turn it on, it&#8217;s nice to have and
-useful. But it&#8217;s not enabled by default in Octopress.</p>
-
-<p>This feature already exists in jekyll, enabling this feature in
-Octopress is a trival task.</p>
-
-<p>Firstly add this to your <code>_config.yml</code> file</p>
-
-<pre><code>lsi: true
-</code></pre>
-
-<p>Then create a file such as <code>source/_includes/custom/asides/related.html</code> with the following
-content, add it to one of your asides in <code>_config.yml</code></p>
-
-<pre><code>&lt;section&gt;
-&lt;h1&gt;Related Posts&lt;/h1&gt;
-&lt;ul class="posts"&gt;
-    {% for post in site.related_posts limit:5 %}
-    &lt;li class="related"&gt;
-        &lt;a href="{{ root_url }}{{ post.url }}"&gt;{{ post.title }}&lt;/a&gt;
-    &lt;/li&gt;
-    {% endfor %}
-    &lt;/ul&gt;
-&lt;/section&gt;
-</code></pre>
-
-<p>It is possible to style the list, but in the above I have chosen to
-keep the same style as the recent posts.</p>
-
-<h2>Probable issues with enabling LSI</h2>
-
-<p>There are some issues with enabling LSI in jekyll/octopress, the
-primary issue will be performance. The default implementation will be
-slow if you have lots of posts to classify. It would be recommended
-that rb-gsl be installed to accelerate the classification process.</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/03/08/enabling-latent-semantic-indexing-for-octopress/#disqus_thread">View comments &raquo;</a></p>
     
     
   </footer>

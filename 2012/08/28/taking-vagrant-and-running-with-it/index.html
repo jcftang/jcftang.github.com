@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Feeling Disconnected From Modern Software Development Tools - Jimmy Tang</title>
+  <title>Taking Vagrant and running with it - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/2011/10/13/feeling-disconnected-from-modern-software-development-tools/">
+  <link rel="canonical" href="http://jcftang.github.com/2012/08/28/taking-vagrant-and-running-with-it/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Jimmy Tang" type="application/atom+xml">
@@ -92,7 +92,7 @@
   <header>
     <h1 class="entry-title">
 
-Feeling Disconnected From Modern Software Development Tools
+Taking Vagrant and Running With It
 
 </h1>
 
@@ -110,57 +110,57 @@ Feeling Disconnected From Modern Software Development Tools
   
 
 
-<time datetime="2011-10-13T01:09:00+01:00" pubdate data-updated="true">Oct 13<span>th</span>, 2011</time>
+<time datetime="2012-08-28T18:49:00+01:00" pubdate data-updated="true">Aug 28<span>th</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/2011/10/13/feeling-disconnected-from-modern-software-development-tools/">Permalink</a>
+         &bull; <a rel="bookmark" href="/2012/08/28/taking-vagrant-and-running-with-it/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p>I&#8217;ve recently started a new role as being a senior software engineer
-for an Irish National Project and I have had to refresh my OOP skills
-with JAVA.</p>
+<div class="entry-content"><p>Over past few weeks I&#8217;ve been working on doing some integration and
+testing work to try and deliver a prototype system. I&#8217;ve taken the
+<a href="http://vagrantup.com/">Vagrant</a> tool and puppet to try and deliver
+systems for testing and development. Although the systems that I am
+currently working with aren&#8217;t fully automated, they are automated
+enough for them to be easily started up by a developer who reads the
+documentation (I hope).</p>
 
-<p>Naturally I gravitated to free and opensource tools to refresh
-myself. This lead me to install Eclipse, which is the the EMACS of the
-modern world. I&#8217;ve never had much luck with IDE&#8217;s nor have I liked
-using IDE&#8217;s much in the past since I mainly dealt with codes written
-in C, Fortran and if I am lucky Perl or C++. This is because my
-background is in Applied Mathematics, Phyiscs and High Performance
-Computing and the codes in this general area are just plain old and
-written by scientists primarily and not engineers. What this means is
-that almost every numerical code out there that I have had the build,
-hack at, develop for is setup differently with its own build system,
-its own way of laying out the code base, code that depends on specific
-compiler bugs. The list of fun things just goes on.</p>
+<p>I&#8217;m hoping that by providing these disposable systems that the various
+members in the team that I am working with will be more free to experiment
+and less fearful of breaking the system. At best everyone will take the
+idea on board and run with it as it does provide a common environment
+for all members in the team and it encourages reproducibility of issues
+and features.</p>
 
-<p>Having to deal with old codes written in &#8220;old&#8221; languages really makes
-the user or system administrator really learn about the build system,
-the compliers that are needed, the environment and the dependancy hell
-that they get into at times. Because of these experiences, I&#8217;ve yet
-again found that JAVA provides lots and lots of support and protection
-for the developer. Other nice things that modern languages like JAVA
-provide is really the tools that standardise the workflow. This seems
-to have had a huge impact on the quality of systems that are produced.</p>
+<p>One of the next steps of building up the development framework that I
+now have is to introduce some of these concepts and the whole Vagrant
+environment to the more front facing part of the team who need to deal
+with stakeholders in the project. If our requirements and policy team have
+constant up to date access to our development, testing and QA environment
+along with the executable specifications (in the form of cucumber tests)
+I hope to push forward communications between the stakeholders and the
+team that I&#8217;m working with.</p>
 
-<p>However I really do appreciate the whole TDD concept, but more
-importantly the whole concept of Acceptance Testing Driven Development
-and Behavioural Driven Development concepts. The features of modern
-IDE&#8217;s hinting users scares me to think that fresh graduates from
-university might be too reliant on these modern systems that do too
-many things for the developer. It does however give fast feedback to
-the developer so that they can learn the language much more easily.</p>
+<p>For now I have one VM for the application itself and a number of
+&#8220;clusters&#8221; of VM&#8217;s which I had used for reviewing some technical
+documentation, they are partially automated for others to
+play with. Currently these scripts are internal to the project
+only, but it&#8217;s not hard to setup if you know how to configure
+<a href="http://puppetlabs.com/">puppet</a>. Some of the scripts and ideas can
+be found at <a href="https://github.com/jcftang/tchpc-vagrant">tchpc-vagrant</a>,
+they&#8217;re not great, but not bad either. I need more of the developers in
+the team to use what I&#8217;ve setup to evolve the system more for our use.</p>
 
-<p>Maybe I just feel like a dinosaur for liking vi/vim or emacs for
-writing C programs and shell scripts and liking it. I really do feel
-disconnected from what modern developers are doing these
-days. Developers these days just have it far easier if JAVA or an
-equivalent modern language is used with the appropriate tool. It&#8217;s
-just down to a communication problem of creating the right thing.</p>
-
-<p>By the way this is the first post!</p>
+<p>In parallel to using this for my day job, I&#8217;ve
+also setup a Vagrantfile for one of my pet projects
+<a href="https://github.com/jcftang/cports">cports</a>. Using Vagrant for testing
+builds and deployments of a packaging system has been great. I&#8217;ve been
+able to do clean rebuilds of various packages without fear of completely
+polluting the enviroment, as its just a few commands away from being
+redeployed and provisioned. I&#8217;ll need to play more and then release it
+to the HPC community (or those that care).</p>
 </div>
 
 
@@ -183,12 +183,12 @@ just down to a communication problem of creating the right thing.</p>
   
 
 
-<time datetime="2011-10-13T01:09:00+01:00" pubdate data-updated="true">Oct 13<span>th</span>, 2011</time>
+<time datetime="2012-08-28T18:49:00+01:00" pubdate data-updated="true">Aug 28<span>th</span>, 2012</time>
 
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/eclipse/'>eclipse</a>, <a class='category' href='/blog/categories/java/'>java</a>
+    <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/osx/'>osx</a>, <a class='category' href='/blog/categories/scm/'>scm</a>, <a class='category' href='/blog/categories/team/'>team</a>
   
 </span>
 
@@ -206,12 +206,12 @@ just down to a communication problem of creating the right thing.</p>
   
   
     
-      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2011/10/13/feeling-disconnected-from-modern-software-development-tools/" target="_blank">+1</a>
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/08/28/taking-vagrant-and-running-with-it/" target="_blank">+1</a>
     
   
   
     
-    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2011/10/13/feeling-disconnected-from-modern-software-development-tools/" target="_blank">Share</a>
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/08/28/taking-vagrant-and-running-with-it/" target="_blank">Share</a>
     
   
   
@@ -221,8 +221,8 @@ just down to a communication problem of creating the right thing.</p>
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/2012/08/02/an-excuse-to-learn-ruby-and-ruby-on-rails/" title="Previous Post: An excuse to learn Ruby and Ruby on Rails">&laquo; An excuse to learn Ruby and Ruby on Rails</a>
       
-        <a class="basic-alignment right" href="/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions/" title="Next Post: The joys of working with a team across multiple institutions">The joys of working with a team across multiple institutions &raquo;</a>
       
     </p>
   </footer>
@@ -247,15 +247,7 @@ just down to a communication problem of creating the right thing.</p>
   <ul class="posts">
     
       <li class="related">
-        <a href="/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux isn't the only platform to target when building applications</a>
-      </li>
-    
-      <li class="related">
         <a href="/2012/04/09/prototyping-and-testing-systems/">Prototyping and testing systems</a>
-      </li>
-    
-      <li class="related">
-        <a href="/2012/08/28/taking-vagrant-and-running-with-it/">Taking Vagrant and running with it</a>
       </li>
     
       <li class="related">
@@ -263,7 +255,15 @@ just down to a communication problem of creating the right thing.</p>
       </li>
     
       <li class="related">
-        <a href="/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/">Is JAVA really the only game in town for building Digital Preservation Systems?</a>
+        <a href="/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux isn't the only platform to target when building applications</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2011/12/13/using-continuous-integration-systems-in-a-team/">Using continuous integration systems in a team</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2011/10/13/feeling-disconnected-from-modern-software-development-tools/">Feeling Disconnected From Modern Software Development Tools</a>
       </li>
     
   </ul>
@@ -340,8 +340,8 @@ just down to a communication problem of creating the right thing.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/2011/10/13/feeling-disconnected-from-modern-software-development-tools/';
-        var disqus_url = 'http://jcftang.github.com/2011/10/13/feeling-disconnected-from-modern-software-development-tools/';
+        var disqus_identifier = 'http://jcftang.github.com/2012/08/28/taking-vagrant-and-running-with-it/';
+        var disqus_url = 'http://jcftang.github.com/2012/08/28/taking-vagrant-and-running-with-it/';
         var disqus_script = 'embed.js';
       
     (function () {

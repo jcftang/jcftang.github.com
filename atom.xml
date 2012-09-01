@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-08-03T15:51:47+01:00</updated>
+  <updated>2012-09-01T19:40:17+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,62 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Taking Vagrant and running with it]]></title>
+<link href="http://jcftang.github.com/2012/08/28/taking-vagrant-and-running-with-it/"/>
+<updated>2012-08-28T18:49:00+01:00</updated>
+<id>http://jcftang.github.com/2012/08/28/taking-vagrant-and-running-with-it</id>
+
+      <content type="html"><![CDATA[<p>Over past few weeks I&#8217;ve been working on doing some integration and
+testing work to try and deliver a prototype system. I&#8217;ve taken the
+<a href="http://vagrantup.com/">Vagrant</a> tool and puppet to try and deliver
+systems for testing and development. Although the systems that I am
+currently working with aren&#8217;t fully automated, they are automated
+enough for them to be easily started up by a developer who reads the
+documentation (I hope).</p>
+
+<p>I&#8217;m hoping that by providing these disposable systems that the various
+members in the team that I am working with will be more free to experiment
+and less fearful of breaking the system. At best everyone will take the
+idea on board and run with it as it does provide a common environment
+for all members in the team and it encourages reproducibility of issues
+and features.</p>
+
+<p>One of the next steps of building up the development framework that I
+now have is to introduce some of these concepts and the whole Vagrant
+environment to the more front facing part of the team who need to deal
+with stakeholders in the project. If our requirements and policy team have
+constant up to date access to our development, testing and QA environment
+along with the executable specifications (in the form of cucumber tests)
+I hope to push forward communications between the stakeholders and the
+team that I&#8217;m working with.</p>
+
+<p>For now I have one VM for the application itself and a number of
+&#8220;clusters&#8221; of VM&#8217;s which I had used for reviewing some technical
+documentation, they are partially automated for others to
+play with. Currently these scripts are internal to the project
+only, but it&#8217;s not hard to setup if you know how to configure
+<a href="http://puppetlabs.com/">puppet</a>. Some of the scripts and ideas can
+be found at <a href="https://github.com/jcftang/tchpc-vagrant">tchpc-vagrant</a>,
+they&#8217;re not great, but not bad either. I need more of the developers in
+the team to use what I&#8217;ve setup to evolve the system more for our use.</p>
+
+<p>In parallel to using this for my day job, I&#8217;ve
+also setup a Vagrantfile for one of my pet projects
+<a href="https://github.com/jcftang/cports">cports</a>. Using Vagrant for testing
+builds and deployments of a packaging system has been great. I&#8217;ve been
+able to do clean rebuilds of various packages without fear of completely
+polluting the enviroment, as its just a few commands away from being
+redeployed and provisioned. I&#8217;ll need to play more and then release it
+to the HPC community (or those that care).</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/08/28/taking-vagrant-and-running-with-it/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -42,28 +98,7 @@ creating a rubygem. I&#8217;m attempting to expose the insides of
 functionality in <em>fec.c</em>. So far I&#8217;ve been lazy and I am using swig to
 automatically generate the C to ruby bindings with something like this</p>
 
-<figure class='code'><figcaption><span>fec.i </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='C'><span class='line'><span class="o">%</span><span class="n">module</span> <span class="n">fec</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">%</span><span class="p">{</span>
-</span><span class='line'><span class="cp">#include &quot;fec.h&quot;</span>
-</span><span class='line'><span class="o">%</span><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">fec_t</span><span class="o">*</span> <span class="n">fec_new</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">k</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">m</span><span class="p">);</span>
-</span><span class='line'><span class="kt">void</span> <span class="n">fec_free</span><span class="p">(</span><span class="n">fec_t</span><span class="o">*</span> <span class="n">p</span><span class="p">);</span>
-</span><span class='line'><span class="kt">void</span> <span class="n">fec_decode</span><span class="p">(</span><span class="k">const</span> <span class="n">fec_t</span><span class="o">*</span> <span class="n">code</span><span class="p">,</span> <span class="k">const</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">inpkts</span><span class="p">,</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">outpkts</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">index</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">sz</span><span class="p">);</span>
-</span><span class='line'><span class="kt">void</span> <span class="n">fec_encode</span><span class="p">(</span><span class="k">const</span> <span class="n">fec_t</span><span class="o">*</span> <span class="n">code</span><span class="p">,</span> <span class="k">const</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">src</span><span class="p">,</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">fecs</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">block_nums</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">num_block_nums</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">sz</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<p>Liquid error: undefined method `[]&#8217; for nil:NilClass</p>
 
 <p>Swig does it&#8217;s thing,</p>
 
@@ -873,33 +908,6 @@ some similar ideas.</p>
 <p>The primary purpose of this post is to share the code! and as per
 usual, hope someone finds it useful.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/05/21/dris-workflows-just-got-uploaded-to-github/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[ceph gets a refresh &rarr;]]></title>
-<link href="http://ceph.com/community/announcing-the-ceph-com-refresh/"/>
-<updated>2012-05-19T13:08:00+01:00</updated>
-<id>http://jcftang.github.com/2012/05/19/ceph-gets-a-refresh</id>
-
-      <content type="html"><![CDATA[<p>I&#8217;ve been keeping an eye on <em>ceph</em> for quite sometime now. It looks
-like <em>ceph</em> is almost ready for production usage. There is now a
-support infrastructure and a commercial company backing the
-product. So far the OSD, MDS and MON components all run on Linux since
-most of the implementation appears to be in the user land I wonder if
-it will be ported to non-linux platforms. It&#8217;s be quite nifty if one
-could have a heterogeneous network of servers providing storage.</p>
-
-<p>From first glance at shadowing one of the guys in work with this
-filesystem, it looks good. It&#8217;s missing some documentation right now
-apart from that it&#8217;s going to be a great competitor in the distributed
-filesystems arena. It will shake up GPFS and Lustre for sure, it might
-even give glusterfs a run for its money in the near future.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/2012/05/19/ceph-gets-a-refresh/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
