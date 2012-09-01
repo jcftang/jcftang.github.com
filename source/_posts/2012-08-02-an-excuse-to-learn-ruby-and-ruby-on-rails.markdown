@@ -41,9 +41,9 @@ void fec_encode(const fec_t* code, const gf*restrict const*restrict const src, g
 
 Swig does it's thing,
 
-``` bash
+{% codeblock lang:bash %}
 swig -ruby fec.i
-```
+{% endcodeblock %}
 
 Amazingly after some fiddling I got ruby to load up the module. It
 doesn't mean that it's going to do much though as I need to learn
