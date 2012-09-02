@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-09-02T10:27:42+01:00</updated>
+  <updated>2012-09-02T17:41:17+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,319 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Scientific Linux 6 build environment for Ceph]]></title>
+<link href="http://jcftang.github.com/2012/09/02/scientific-linux-6-build-environment-for-ceph/"/>
+<updated>2012-09-02T10:50:00+01:00</updated>
+<id>http://jcftang.github.com/2012/09/02/scientific-linux-6-build-environment-for-ceph</id>
+
+      <content type="html"><![CDATA[<p>After my last failed attempt at <a href="http://jcftang.github.com/2012/07/06/installing-ceph-on-sl6/">Installing Ceph on
+SL6</a> or rather my attempt at
+configuring Ceph for a test failed miserably.</p>
+
+<p>It hasn&#8217;t deterred me to test more. As a result I setup a number of
+Vagrant Virtual machines and got together a few puppet scripts to
+provision machines.</p>
+
+<p>Here&#8217;s a sample manifest for puppet to automate the deployment of a
+machine to build Ceph. It requires that you SL6 environment to have at
+least the epel repository enabled.</p>
+
+<figure class='code'><figcaption><span>ceph.pp</span><a href='http://jcftang.github.com/downloads/code/puppet/manifests/nodes/ceph.pp' title='Download code'> download</a></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1"># -*- mode: ruby -*-</span>
+</span><span class='line'><span class="c1"># vi: set ft=ruby :</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">#</span>
+</span><span class='line'><span class="c1"># template for tchpc site, there are dependancy issues with proxies</span>
+</span><span class='line'><span class="c1">#</span>
+</span><span class='line'><span class="n">node</span> <span class="sr">/ceph.*\.localhost/</span> <span class="n">inherits</span> <span class="n">default</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1"># install needed packages</span>
+</span><span class='line'>        <span class="c1"># generic devel tools and libraries</span>
+</span><span class='line'>        <span class="k">if</span> <span class="o">!</span> <span class="n">defined</span><span class="p">(</span><span class="no">Package</span><span class="o">[</span><span class="s1">&#39;nfs-utils&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="n">package</span> <span class="p">{</span> <span class="s1">&#39;nfs-utils&#39;</span><span class="p">:</span> <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="n">installed</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">!</span> <span class="n">defined</span><span class="p">(</span><span class="no">Package</span><span class="o">[</span><span class="s1">&#39;boost-devel&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="n">package</span> <span class="p">{</span> <span class="s1">&#39;boost-devel&#39;</span><span class="p">:</span> <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="n">installed</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">!</span> <span class="n">defined</span><span class="p">(</span><span class="no">Package</span><span class="o">[</span><span class="s1">&#39;epel-release&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="n">package</span> <span class="p">{</span> <span class="s1">&#39;epel-release&#39;</span><span class="p">:</span> <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="n">installed</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">!</span> <span class="n">defined</span><span class="p">(</span><span class="no">Package</span><span class="o">[</span><span class="s1">&#39;expat-devel&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="n">package</span> <span class="p">{</span> <span class="s1">&#39;expat-devel&#39;</span><span class="p">:</span> <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="n">installed</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">!</span> <span class="n">defined</span><span class="p">(</span><span class="no">Package</span><span class="o">[</span><span class="s1">&#39;fuse&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="n">package</span> <span class="p">{</span> <span class="s1">&#39;fuse&#39;</span><span class="p">:</span> <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="n">installed</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">!</span> <span class="n">defined</span><span class="p">(</span><span class="no">Package</span><span class="o">[</span><span class="s1">&#39;fuse-devel&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="n">package</span> <span class="p">{</span> <span class="s1">&#39;fuse-devel&#39;</span><span class="p">:</span> <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="n">installed</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">!</span> <span class="n">defined</span><span class="p">(</span><span class="no">Package</span><span class="o">[</span><span class="s1">&#39;gcc&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="n">package</span> <span class="p">{</span> <span class="s1">&#39;gcc&#39;</span><span class="p">:</span> <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="n">installed</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">!</span> <span class="n">defined</span><span class="p">(</span><span class="no">Package</span><span class="o">[</span><span class="s1">&#39;gcc-c++&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="n">package</span> <span class="p">{</span> <span class="s1">&#39;gcc-c++&#39;</span><span class="p">:</span> <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="n">installed</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">!</span> <span class="n">defined</span><span class="p">(</span><span class="no">Package</span><span class="o">[</span><span class="s1">&#39;keyutils-libs-devel&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="n">package</span> <span class="p">{</span> <span class="s1">&#39;keyutils-libs-devel&#39;</span><span class="p">:</span> <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="n">installed</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">!</span> <span class="n">defined</span><span class="p">(</span><span class="no">Package</span><span class="o">[</span><span class="s1">&#39;libaio-devel&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="n">package</span> <span class="p">{</span> <span class="s1">&#39;libaio-devel&#39;</span><span class="p">:</span> <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="n">installed</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">!</span> <span class="n">defined</span><span class="p">(</span><span class="no">Package</span><span class="o">[</span><span class="s1">&#39;libatomic_ops-devel&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="n">package</span> <span class="p">{</span> <span class="s1">&#39;libatomic_ops-devel&#39;</span><span class="p">:</span> <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="n">installed</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">!</span> <span class="n">defined</span><span class="p">(</span><span class="no">Package</span><span class="o">[</span><span class="s1">&#39;libcurl-devel&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="n">package</span> <span class="p">{</span> <span class="s1">&#39;libcurl-devel&#39;</span><span class="p">:</span> <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="n">installed</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">!</span> <span class="n">defined</span><span class="p">(</span><span class="no">Package</span><span class="o">[</span><span class="s1">&#39;libedit-devel&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="n">package</span> <span class="p">{</span> <span class="s1">&#39;libedit-devel&#39;</span><span class="p">:</span> <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="n">installed</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">!</span> <span class="n">defined</span><span class="p">(</span><span class="no">Package</span><span class="o">[</span><span class="s1">&#39;libtool&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="n">package</span> <span class="p">{</span> <span class="s1">&#39;libtool&#39;</span><span class="p">:</span> <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="n">installed</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">!</span> <span class="n">defined</span><span class="p">(</span><span class="no">Package</span><span class="o">[</span><span class="s1">&#39;libuuid-devel&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="n">package</span> <span class="p">{</span> <span class="s1">&#39;libuuid-devel&#39;</span><span class="p">:</span> <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="n">installed</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">!</span> <span class="n">defined</span><span class="p">(</span><span class="no">Package</span><span class="o">[</span><span class="s1">&#39;libxml2-devel&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="n">package</span> <span class="p">{</span> <span class="s1">&#39;libxml2-devel&#39;</span><span class="p">:</span> <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="n">installed</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">!</span> <span class="n">defined</span><span class="p">(</span><span class="no">Package</span><span class="o">[</span><span class="s1">&#39;nss&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="n">package</span> <span class="p">{</span> <span class="s1">&#39;nss&#39;</span><span class="p">:</span> <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="n">installed</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">!</span> <span class="n">defined</span><span class="p">(</span><span class="no">Package</span><span class="o">[</span><span class="s1">&#39;nss-devel&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="n">package</span> <span class="p">{</span> <span class="s1">&#39;nss-devel&#39;</span><span class="p">:</span> <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="n">installed</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">!</span> <span class="n">defined</span><span class="p">(</span><span class="no">Package</span><span class="o">[</span><span class="s1">&#39;rpmdevtools&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="n">package</span> <span class="p">{</span> <span class="s1">&#39;rpmdevtools&#39;</span><span class="p">:</span> <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="n">installed</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>        <span class="k">if</span> <span class="o">!</span> <span class="n">defined</span><span class="p">(</span><span class="no">Package</span><span class="o">[</span><span class="s1">&#39;git&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="n">package</span> <span class="p">{</span> <span class="s1">&#39;git&#39;</span><span class="p">:</span> <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="n">installed</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># these two are form EPEL</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">!</span> <span class="n">defined</span><span class="p">(</span><span class="no">Package</span><span class="o">[</span><span class="s1">&#39;gperftools-devel&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="n">package</span> <span class="p">{</span> <span class="s1">&#39;gperftools-devel&#39;</span><span class="p">:</span> <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="n">installed</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">!</span> <span class="n">defined</span><span class="p">(</span><span class="no">Package</span><span class="o">[</span><span class="s1">&#39;fcgi-devel&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="n">package</span> <span class="p">{</span> <span class="s1">&#39;fcgi-devel&#39;</span><span class="p">:</span> <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="n">installed</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># turn on avahi so we can do things like  &quot;ssh ceph00.local&quot; between the vm&#39;s</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="n">avahi</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># take the vagrant key for now and use it for passwordless ssh configs</span>
+</span><span class='line'>        <span class="n">ssh_authorized_key</span> <span class="p">{</span> <span class="s2">&quot;root&quot;</span><span class="p">:</span>
+</span><span class='line'>                <span class="k">ensure</span> <span class="o">=&gt;</span> <span class="s2">&quot;present&quot;</span><span class="p">,</span>
+</span><span class='line'>                <span class="n">type</span> <span class="o">=&gt;</span> <span class="s2">&quot;ssh-rsa&quot;</span><span class="p">,</span>
+</span><span class='line'>                <span class="n">key</span> <span class="o">=&gt;</span> <span class="s2">&quot;AAAAB3NzaC1yc2EAAAABIwAAAQEA6NF8iallvQVp22WDkTkyrtvp9eWW6A8YVr+kz4TjGYe7gHzIw+niNltGEFHzD8+v1I2YJ6oXevct1YeS0o9HZyN1Q9qgCgzUFtdOKLv6IedplqoPkcmF0aYet2PkEDo3MlTBckFXPITAMzF8dJSIFo9D8HfdOV0IAdx4O7PtixWKn5y2hMNG0zQPyUecp4pzC6kivAIhyfHilFR61RGL+GPXQ2MWZWFYbAGjyiYJnAmCP3NOTd0jMZEnDkbUvxhMmBYSdETk1rRgm+R4LOzFUGaHqHDLKLX+FIPKcF96hrucXzcWyLbIbEgE98OHlnVYCzRdK8jlqm8tehUc9c9WhQ==&quot;</span><span class="p">,</span>
+</span><span class='line'>                <span class="nb">name</span> <span class="o">=&gt;</span> <span class="s2">&quot;vagrant insecure public key&quot;</span><span class="p">,</span>
+</span><span class='line'>                <span class="n">user</span> <span class="o">=&gt;</span> <span class="s2">&quot;root&quot;</span><span class="p">,</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">file</span> <span class="p">{</span> <span class="s2">&quot;/root/.ssh/id_rsa&quot;</span><span class="p">:</span>
+</span><span class='line'>                <span class="n">mode</span> <span class="o">=&gt;</span> <span class="s2">&quot;0600&quot;</span><span class="p">,</span>
+</span><span class='line'>                <span class="n">owner</span> <span class="o">=&gt;</span> <span class="s2">&quot;root&quot;</span><span class="p">,</span>
+</span><span class='line'>                <span class="n">group</span> <span class="o">=&gt;</span> <span class="s2">&quot;root&quot;</span><span class="p">,</span>
+</span><span class='line'>                <span class="n">source</span> <span class="o">=&gt;</span> <span class="s2">&quot;puppet:///modules/insecure-keys/insecure_private_key&quot;</span> <span class="p">,</span>
+</span><span class='line'>                <span class="nb">require</span> <span class="o">=&gt;</span> <span class="no">Ssh_authorized_key</span><span class="o">[</span><span class="s2">&quot;root&quot;</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">file</span> <span class="p">{</span> <span class="s2">&quot;/root/.ssh/config&quot;</span><span class="p">:</span>
+</span><span class='line'>                <span class="n">mode</span> <span class="o">=&gt;</span> <span class="s2">&quot;0600&quot;</span><span class="p">,</span>
+</span><span class='line'>                <span class="n">owner</span> <span class="o">=&gt;</span> <span class="s2">&quot;root&quot;</span><span class="p">,</span>
+</span><span class='line'>                <span class="n">group</span> <span class="o">=&gt;</span> <span class="s2">&quot;root&quot;</span><span class="p">,</span>
+</span><span class='line'>                <span class="n">source</span> <span class="o">=&gt;</span> <span class="s2">&quot;puppet:///modules/insecure-keys/insecure_config&quot;</span><span class="p">,</span>
+</span><span class='line'>                <span class="nb">require</span> <span class="o">=&gt;</span> <span class="no">Ssh_authorized_key</span><span class="o">[</span><span class="s2">&quot;root&quot;</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># the follow is done so the vagrant user can be used for testing and development without needing to su to the cephuser account</span>
+</span><span class='line'>  <span class="n">file</span> <span class="p">{</span> <span class="s2">&quot;/home/vagrant/.ssh/id_rsa&quot;</span><span class="p">:</span>
+</span><span class='line'>      <span class="n">mode</span> <span class="o">=&gt;</span> <span class="s2">&quot;0600&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="n">owner</span> <span class="o">=&gt;</span> <span class="s2">&quot;vagrant&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="n">group</span> <span class="o">=&gt;</span> <span class="s2">&quot;vagrant&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="n">source</span> <span class="o">=&gt;</span> <span class="s2">&quot;puppet:///modules/insecure-keys/insecure_private_key&quot;</span> <span class="p">,</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">file</span> <span class="p">{</span> <span class="s2">&quot;/home/vagrant/.ssh/config&quot;</span><span class="p">:</span>
+</span><span class='line'>      <span class="n">mode</span> <span class="o">=&gt;</span> <span class="s2">&quot;0600&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="n">owner</span> <span class="o">=&gt;</span> <span class="s2">&quot;vagrant&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="n">group</span> <span class="o">=&gt;</span> <span class="s2">&quot;vagrant&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="n">source</span> <span class="o">=&gt;</span> <span class="s2">&quot;puppet:///modules/insecure-keys/insecure_config&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># define the hosts in /etc/hosts</span>
+</span><span class='line'>  <span class="n">host</span> <span class="p">{</span> <span class="s1">&#39;ceph00&#39;</span><span class="p">:</span> <span class="n">ip</span> <span class="o">=&gt;</span> <span class="s1">&#39;10.0.1.130&#39;</span><span class="p">,</span> <span class="n">host_aliases</span> <span class="o">=&gt;</span> <span class="s1">&#39;ceph00&#39;</span><span class="p">,</span> <span class="p">}</span>
+</span><span class='line'>  <span class="n">host</span> <span class="p">{</span> <span class="s1">&#39;ceph01&#39;</span><span class="p">:</span> <span class="n">ip</span> <span class="o">=&gt;</span> <span class="s1">&#39;10.0.1.131&#39;</span><span class="p">,</span> <span class="n">host_aliases</span> <span class="o">=&gt;</span> <span class="s1">&#39;ceph01&#39;</span><span class="p">,</span> <span class="p">}</span>
+</span><span class='line'>  <span class="n">host</span> <span class="p">{</span> <span class="s1">&#39;ceph02&#39;</span><span class="p">:</span> <span class="n">ip</span> <span class="o">=&gt;</span> <span class="s1">&#39;10.0.1.132&#39;</span><span class="p">,</span> <span class="n">host_aliases</span> <span class="o">=&gt;</span> <span class="s1">&#39;ceph02&#39;</span><span class="p">,</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># disable selinux</span>
+</span><span class='line'>  <span class="k">class</span> <span class="p">{</span> <span class="s1">&#39;selinux&#39;</span><span class="p">:</span>
+</span><span class='line'>      <span class="n">mode</span> <span class="o">=&gt;</span> <span class="s1">&#39;disabled&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&#8217;s also a sample <em>Vagrantfile</em> to get one started</p>
+
+<figure class='code'><figcaption><span>Vagrantfile </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1"># -*- mode: ruby -*-</span>
+</span><span class='line'><span class="c1"># vi: set ft=ruby :</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">#</span>
+</span><span class='line'><span class="c1"># For vagrant configuration options please go to http://vagrantup.com/v1/docs/index.html</span>
+</span><span class='line'><span class="c1">#</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">Vagrant</span><span class="o">::</span><span class="no">Config</span><span class="o">.</span><span class="n">run</span> <span class="k">do</span> <span class="o">|</span><span class="n">global_config</span><span class="o">|</span>
+</span><span class='line'>  <span class="c1"># All Vagrant configuration is done here. The most common configuration</span>
+</span><span class='line'>  <span class="c1"># options are documented and commented below. For a complete reference,</span>
+</span><span class='line'>  <span class="c1"># please see the online documentation at vagrantup.com.</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># Every Vagrant virtual environment requires a box to build off of.</span>
+</span><span class='line'>  <span class="c1"># We default to using SL which is a RHEL clone</span>
+</span><span class='line'>  <span class="n">global_config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">box</span> <span class="o">=</span> <span class="s2">&quot;sl63-x86_64&quot;</span>
+</span><span class='line'>  <span class="n">global_config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">box_url</span> <span class="o">=</span> <span class="s2">&quot;http://thammuz.tchpc.tcd.ie/mirrors/boxes/scientificlinux-6.3-x86_64-netboot-devops.box&quot;</span>
+</span><span class='line'>  <span class="n">cephServers</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="p">,</span> <span class="n">opts</span><span class="o">|</span>
+</span><span class='line'>    <span class="n">global_config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">define</span> <span class="nb">name</span> <span class="k">do</span> <span class="o">|</span><span class="n">ceph</span><span class="o">|</span>
+</span><span class='line'>      <span class="c1"># uncomment the following line if you want the basebox to start in gui mode</span>
+</span><span class='line'>      <span class="c1">#ceph.vm.boot_mode = :gui</span>
+</span><span class='line'>      <span class="n">ceph</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">network</span> <span class="ss">:hostonly</span><span class="p">,</span> <span class="n">opts</span><span class="o">[</span><span class="ss">:network</span><span class="o">]</span>
+</span><span class='line'>      <span class="n">ceph</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">host_name</span> <span class="o">=</span> <span class="n">opts</span><span class="o">[</span><span class="ss">:host_name</span><span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">ceph</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">provision</span> <span class="ss">:puppet</span><span class="p">,</span> <span class="ss">:facter</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="s2">&quot;ceph_node_name&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;ceph@</span><span class="si">#{</span><span class="n">opts</span><span class="o">[</span><span class="ss">:network</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span> <span class="k">do</span> <span class="o">|</span><span class="n">puppet</span><span class="o">|</span>
+</span><span class='line'>        <span class="n">puppet</span><span class="o">.</span><span class="n">manifest_file</span> <span class="o">=</span> <span class="s2">&quot;site.pp&quot;</span>
+</span><span class='line'>        <span class="n">puppet</span><span class="o">.</span><span class="n">manifests_path</span> <span class="o">=</span> <span class="s1">&#39;puppet/manifests&#39;</span>
+</span><span class='line'>        <span class="n">puppet</span><span class="o">.</span><span class="n">module_path</span> <span class="o">=</span> <span class="o">[</span><span class="s1">&#39;puppet/modules&#39;</span><span class="p">,</span> <span class="s1">&#39;puppet/services&#39;</span><span class="o">]</span>
+</span><span class='line'>        <span class="c1">#puppet.options = &quot;--verbose --debug&quot;</span>
+</span><span class='line'>      <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">ceph</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">customize</span> <span class="o">[</span>
+</span><span class='line'>      <span class="s2">&quot;modifyvm&quot;</span><span class="p">,</span> <span class="ss">:id</span><span class="p">,</span>
+</span><span class='line'>      <span class="s2">&quot;--name&quot;</span><span class="p">,</span> <span class="n">opts</span><span class="o">[</span><span class="ss">:host_name</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>      <span class="s2">&quot;--memory&quot;</span><span class="p">,</span> <span class="s2">&quot;1024&quot;</span>
+</span><span class='line'>    <span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>With the Virtual Machines I was able to download the latest <a href="http://www.ceph.com/download/ceph-0.51.tar.bz2">Ceph
+0.51</a> and do at least
+the following</p>
+
+<ul>
+<li>unpack the tarball</li>
+<li>do a <em>./configure</em> to generate the <em>ceph.spec</em> file</li>
+<li>copy (or move) the ceph tarball into ~/rpmbuild/SOURCES</li>
+<li>execute a <em>rpmbuild -ba ceph.spec</em> to build the source and binary rpm packages for installation</li>
+</ul>
+
+
+<p>After the RPM&#8217;s were built and installed, I again followed the quick
+guide at <a href="http://ceph.com/docs/master/start/quick-start/">http://ceph.com/docs/master/start/quick-start/</a> and was able
+to setup a small 3 node cluster for playing around with.</p>
+
+<p>So to note, I tried out the cephfs feature (via the fuse module) and
+creating(destroying and resizing) RBD&#8217;s. I haven&#8217;t had a chance to
+experiment with the kernel modules to actually do something useful with
+the POSIX filesystem or RBD&#8217;s that Ceph provides.</p>
+
+<p>It would be worth nothing that the Ceph project are working on providing
+prebuilt RPM&#8217;s soon, there is already a <a href="http://ceph.com/gitbuilder-centos6-rpm-amd64/">gitbuilder instance for the rpm
+build</a> or just go to their
+<a href="http://ceph.com/gitbuilder.cgi">gitbuilder aggregator</a></p>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/09/02/scientific-linux-6-build-environment-for-ceph/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -868,35 +1181,6 @@ of real life examples of what people are doing and what&#8217;s
 relavent. It&#8217;s not the usual workshop, conference or meeting that I
 would attend.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/06/06/dcc-roadshow-n-ireland/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[git-annex assistant is being crowd funded on Kickstarter &rarr;]]></title>
-<link href="http://git-annex.branchable.com/design/assistant/"/>
-<updated>2012-06-04T11:50:00+01:00</updated>
-<id>http://jcftang.github.com/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter</id>
-
-      <content type="html"><![CDATA[<p>It seems <a href="http://kitenet.net/~joey/">Joey Hess</a> is in the process of
-getting <strong>git-annex assistant</strong> crowd funded. I had not been keeping
-up to date too much in the last year with git-annex partly because it
-met my needs and I never needed to upgrade to the latest tip.</p>
-
-<p>There are a number of really cool features now which is making
-git-annex more accessible. I particularly like how the merge and sync
-workflows have now been pretty much <em>scripted</em> so there is less to go
-wrong!</p>
-
-<p>Once the <strong>Dropbox</strong> like features get implemented git-annex will be
-pretty interesting, it won&#8217;t be a complete <em>clone</em> of Dropbox due to
-the way that git-annex deals with files (using symlinks), it will be a
-pretty good alternative to Dropbox. I wish <em>smudge filters</em> were on
-the roadmap as well.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>

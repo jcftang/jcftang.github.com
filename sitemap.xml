@@ -220,7 +220,13 @@
     </url>
     <url>
         <loc>http://jcftang.github.com/2012/09/01/rce-62-ceph-petabyte-scale-storage/</loc>
-        <lastmod>2012-09-01T19:49:07+01:00</lastmod>
+        <lastmod>2012-09-02T10:50:27+01:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://jcftang.github.com/2012/09/02/scientific-linux-6-build-environment-for-ceph/
+        </loc>
+        <lastmod>2012-09-02T11:35:28+01:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/about/</loc>
@@ -228,7 +234,7 @@
     </url>
     <url>
         <loc>http://jcftang.github.com/archives/</loc>
-        <lastmod>2012-09-02T10:27:06+01:00</lastmod>
+        <lastmod>2012-09-02T11:35:28+01:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/blog/categories/</loc>
@@ -236,6 +242,6 @@
     </url>
     <url>
         <loc>http://jcftang.github.com/</loc>
-        <lastmod>2012-09-02T10:27:06+01:00</lastmod>
+        <lastmod>2012-09-02T11:35:28+01:00</lastmod>
     </url>
 </urlset>
