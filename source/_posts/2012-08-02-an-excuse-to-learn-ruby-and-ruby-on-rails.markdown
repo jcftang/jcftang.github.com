@@ -26,7 +26,7 @@ creating a rubygem. I'm attempting to expose the insides of
 functionality in _fec.c_. So far I've been lazy and I am using swig to
 automatically generate the C to ruby bindings with something like this
 
-{% codeblock fec.i lang:C %}
+{% codeblock fec.i lang:c %}
 %module fec
 
 %{
