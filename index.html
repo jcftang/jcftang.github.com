@@ -297,7 +297,28 @@ creating a rubygem. I&#8217;m attempting to expose the insides of
 functionality in <em>fec.c</em>. So far I&#8217;ve been lazy and I am using swig to
 automatically generate the C to ruby bindings with something like this</p>
 
-<p>Liquid error: undefined method `[]&#8217; for nil:NilClass</p>
+<figure class='code'><figcaption><span>fec.i </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="o">%</span><span class="n">module</span> <span class="n">fec</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">%</span><span class="p">{</span>
+</span><span class='line'><span class="cp">#include &quot;fec.h&quot;</span>
+</span><span class='line'><span class="o">%</span><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">fec_t</span><span class="o">*</span> <span class="n">fec_new</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">k</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">m</span><span class="p">);</span>
+</span><span class='line'><span class="kt">void</span> <span class="n">fec_free</span><span class="p">(</span><span class="n">fec_t</span><span class="o">*</span> <span class="n">p</span><span class="p">);</span>
+</span><span class='line'><span class="kt">void</span> <span class="n">fec_decode</span><span class="p">(</span><span class="k">const</span> <span class="n">fec_t</span><span class="o">*</span> <span class="n">code</span><span class="p">,</span> <span class="k">const</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">inpkts</span><span class="p">,</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">outpkts</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">index</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">sz</span><span class="p">);</span>
+</span><span class='line'><span class="kt">void</span> <span class="n">fec_encode</span><span class="p">(</span><span class="k">const</span> <span class="n">fec_t</span><span class="o">*</span> <span class="n">code</span><span class="p">,</span> <span class="k">const</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">src</span><span class="p">,</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">fecs</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">block_nums</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">num_block_nums</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">sz</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Swig does it&#8217;s thing,</p>
 
