@@ -93,6 +93,243 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster/">Going From Replicating Across OSD&#8217;s to Replicating Across Hosts in a Ceph Cluster</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-06T21:44:00+01:00" pubdate data-updated="true">Sep 6<span>th</span>, 2012</time>
+        
+         | <a href="/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>Having learnt how to remove and add monitor&#8217;s, meta-data and data servers (mon&#8217;s, mds&#8217;s
+and osd&#8217;s) for my small two node Ceph cluster. I want to say that it wasn&#8217;t too hard to
+do, the ceph website does have documentation for this.</p>
+
+<p>As the default CRUSH map replicates across OSD&#8217;s I wanted to try replicating data across
+hosts just to see what would happen. In a real world scenario I would probably treat
+individual hosts in a rack as a failure unit and if I had more than one rack of storage,
+I would want to treat each rack as the minimum unit.</p>
+
+<p>One of the coolest features of ceph is that it allows me to play with different mappings
+and configurations of where my data gets allocated. There aren&#8217;t many (if any) storage
+systems that I know of which provides this type of capability.</p>
+
+<p>So the steps that I went through to get to what I wanted&#8230;</p>
+
+<p>First I had to dump the CRUSH map from my cluster of two nodes and three (very unbalanced OSD&#8217;s so I can play with the weights).</p>
+
+<pre><code>ceph osd getcrushmap -o /tmp/mycrushmap
+</code></pre>
+
+<p>The CRUSH map that is created is a binary file it must be decoded to plain text before
+you can edit it.</p>
+
+<pre><code>crushtool -d /tmp/mycrushmap &gt; /tmp/mycrushmap.txt
+</code></pre>
+
+<p>Here&#8217;s the map that is decoded from the binary file</p>
+
+<pre><code># begin crush map
+
+# devices
+device 0 osd.0
+device 1 osd.1
+device 2 osd.2
+
+# types
+type 0 osd
+type 1 host
+type 2 rack
+type 3 row
+type 4 room
+type 5 datacenter
+type 6 pool
+
+# buckets
+host x.y.z.194 {
+        id -2           # do not change unnecessarily
+        # weight 2.000
+        alg straw
+        hash 0  # rjenkins1
+        item osd.1 weight 1.000
+        item osd.0 weight 1.000
+}
+host x.y.z.138 {
+        id -4           # do not change unnecessarily
+        # weight 1.000
+        alg straw
+        hash 0  # rjenkins1
+        item osd.2 weight 1.000
+}
+rack rack-1 {
+        id -3           # do not change unnecessarily
+        # weight 3.000
+        alg straw
+        hash 0  # rjenkins1
+        item x.y.z.194 weight 2.000
+        item x.y.z.138 weight 1.000
+}
+pool default {
+        id -1           # do not change unnecessarily
+        # weight 2.000
+        alg straw
+        hash 0  # rjenkins1
+        item rack-1 weight 2.000
+}
+
+# rules
+rule data {
+        ruleset 0
+        type replicated
+        min_size 1
+        max_size 10
+        step take default
+        step choose firstn 0 type osd
+        step emit
+}
+rule metadata {
+        ruleset 1
+        type replicated
+        min_size 1
+        max_size 10
+        step take default
+        step choose firstn 0 type osd
+        step emit
+}
+rule rbd {
+        ruleset 2
+        type replicated
+        min_size 1
+        max_size 10
+        step take default
+        step choose firstn 0 type osd
+        step emit
+}
+
+# end crush map
+</code></pre>
+
+<p>The relevant chunks of the config that I&#8217;m interested in is the <strong>rule NAME {}</strong> blocks.
+As I&#8217;m interested in making my data, meta-data and probably my rbd rule replicate across hosts, I naturally made the rule look like this</p>
+
+<pre><code>rule data {
+        ruleset 0
+        type replicated
+        min_size 1
+        max_size 10
+        step take default
+        step choose firstn 0 type host
+        step emit
+}
+</code></pre>
+
+<p>The above change is apparently incorrect as the last step before the <em>step emit</em> needs
+to be a device of some sort. I had found this out after posting the ceph-devel mailing
+list. There were two proposed solutions (thanks to Greg from inktank), the first
+proposed rule was</p>
+
+<pre><code>rule data {
+        ruleset 0
+        type replicated
+        min_size 1
+        max_size 10
+        step take default
+        step choose firstn 0 type host
+        step choose firstn 1 osd
+        step emit
+}
+</code></pre>
+
+<p>Which selects <em>n</em> hosts then the first osd from each host, but it can&#8217;t deal with an entire hosts failed OSD&#8217;s. The second proposed rule was</p>
+
+<pre><code>rule data {
+        ruleset 0
+        type replicated
+        min_size 1
+        max_size 10
+        step take default
+        step chooseleaf firstn 0 type host
+        step emit
+}
+</code></pre>
+
+<p>The above rule will select <em>n</em> hosts and an OSD from the host. It&#8217;s pretty obvious that
+the second rule is the one that I want. I would expect that if I had more machines in
+racks and rows I could probably just replace host with rack, row or even data-center.</p>
+
+<p>With the second proposed rule, I made the changes to <em>mycrushmap.txt</em>. Once the changes
+are made, I had to compile the map into a binary format that the ceph cluster
+understands, this can be done by</p>
+
+<pre><code>crushtool -c /tmp/mycrushmap.txt -o /tmp/mycrushmap.new
+</code></pre>
+
+<p>Once the map is compiled it must then be applied to the cluster</p>
+
+<pre><code>ceph osd setcrushmap -i /tmp/mycrushmap.new
+</code></pre>
+
+<p>The above is documented on the ceph website. Once I applied the new CRUSH map I ran a <em>ceph -w</em> to see that
+the system had detected the changes and it then started to move data around on its own. I&#8217;ll need to play
+with pulling out the network cable or SATA cables to see how the system behaves from me causing catastrophic
+failures in the test system.</p>
+
+<p>I&#8217;m pretty sure I took the long way around to making the changes, there must be a more dynamic way of
+changing the system.</p>
+
+<p>To recap and review the above operation, it&#8217;s again no harder than my reference system that I know, which is
+GPFS. GPFS doesn&#8217;t allow me to do what ceph allows me to do. I would however like to see some more visible
+documentation relating to the CRUSH configuration parameters and tuneables.</p>
+
+<p>So far this has been a distraction from my main day job, but this will certainly help
+with the project that I am working on in the long run.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2012/09/04/adding-an-osd-to-a-ceph-cluster/">Adding an OSD to a Ceph Cluster</a>
 
 </h1>
@@ -1248,212 +1485,6 @@ keynote.</p>
   <footer>
     
     <p><a class="comments-link" href="/2012/07/09/open-repositories-2012-day-1/#disqus_thread">View comments &raquo;</a></p>
-    
-    
-  </footer>
-
-
-    </article>
-  
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/07/06/installing-ceph-on-sl6/">Installing Ceph on SL6</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-06T14:43:00+01:00" pubdate data-updated="true">Jul 6<span>th</span>, 2012</time>
-        
-         | <a href="/2012/07/06/installing-ceph-on-sl6/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/07/06/installing-ceph-on-sl6/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>As an exercise of a Friday afternoon of not starting something big before
-heading off to a conference. I&#8217;ve decided to spend an hour or two at
-seeing how ceph is installed and configured on an SL6 based machine
-(RHEL6 clone).</p>
-
-<p>The install target is just an old desktop running a 64bit install of SL6x,
-so it&#8217;s nothing too fancy.</p>
-
-<p>Following the instructions at <a href="http://ceph.com/wiki/Installing_on_RedHat_or_CentOS">http://ceph.com/wiki/Installing_on_RedHat_or_CentOS</a>, I ended up doing this</p>
-
-<pre><code>yum install yum-conf-epel
-yum update
-yum gcc gcc-c++ automake libtool expat expat-devel boost-devel nss-devel cryptopp cryptopp-devel libatomic_ops-devel fuse-devel
-yum install libedit-devel libedit
-</code></pre>
-
-<p>It seems that the packages <em>cryptopp-devel</em>, <em>cryptopp</em> and <em>expat-devel</em>,
-<em>expat</em> are the only packages pulled in from the epel repository.</p>
-
-<p>Additional libraries and tools include these weren&#8217;t mentioned in the
-upstream wiki, the upstream wiki probably needs to be updated.</p>
-
-<pre><code>yum install rpm-build
-yum install libaio-devel libcurl-devel libxml2-devel libuuid-devel keyutils-libs-devel fcgi-devel
-</code></pre>
-
-<p>I chose to install the newly designated stable branch of ceph 0.48argonaut</p>
-
-<pre><code>wget http://ceph.com/download/ceph-0.48argonaut.tar.bz2
-</code></pre>
-
-<p>I also chose to build it in RPM form, in the tarball there is a RPM spec
-file which can be used to create an installable RPM, the following is
-a transcript of what I did to build an installable RPM.</p>
-
-<pre><code>tar xjvf ceph-0.48argonaut.tar.bz2
-cp ceph-0.48argonaut.tar.bz2 ~/rpmbuild/SOURCES
-rpmbuild -ba ceph-0.48argonaut/ceph.spec
-</code></pre>
-
-<p>The build will take <em>some</em> time, especially if you are using old
-hardware. I ran into some minor packaging issues,</p>
-
-<pre><code>diff -u ceph.spec.in.orig ceph.spec.in
---- ceph.spec.in.orig   2012-07-06 15:38:59.298497719 +0100
-+++ ceph.spec.in    2012-07-06 15:39:45.423560177 +0100
-@@ -326,6 +326,8 @@
-/usr/sbin/rcceph
-%{_libdir}/rados-classes/libcls_rbd.so*
-%{_libdir}/rados-classes/libcls_rgw.so*
-+/sbin/ceph-disk-activate
-+/sbin/ceph-disk-prepare
-
-#################################################################################
-%files fuse
-</code></pre>
-
-<p>The above change need&#8217;s to be applied to the <em>ceph</em> spec file for the
-RPM(s) to build successfully.</p>
-
-<pre><code>ceph-0.48argonaut-6.el6.x86_64.rpm
-ceph-devel-0.48argonaut-6.el6.x86_64.rpm
-python-ceph-0.48argonaut-6.el6.x86_64.rpm
-librbd1-0.48argonaut-6.el6.x86_64.rpm
-librados2-0.48argonaut-6.el6.x86_64.rpm
-ceph-radosgw-0.48argonaut-6.el6.x86_64.rpm
-libcephfs1-0.48argonaut-6.el6.x86_64.rpm
-ceph-fuse-0.48argonaut-6.el6.x86_64.rpm
-</code></pre>
-
-<p>I chose to install <em>all</em> the RPM&#8217;s that were generated for educational
-purposes (used yum instead of the rpm commands so the dependancies are
-sorted out for me), from the <em>rpmbuild/RPMS/x86_64</em> directory</p>
-
-<pre><code>yum install ceph-0.48argonaut-6.el6.x86_64.rpm ceph-devel-0.48argonaut-6.el6.x86_64.rpm ceph-fuse-0.48argonaut-6.el6.x86_64.rpm ceph-radosgw-0.48argonaut-6.el6.x86_64.rpm libcephfs1-0.48argonaut-6.el6.x86_64.rpm librados2-0.48argonaut-6.el6.x86_64.rpm librbd1-0.48argonaut-6.el6.x86_64.rpm python-ceph-0.48argonaut-6.el6.x86_64.rpm
-</code></pre>
-
-<p>I then simply followed the 5 minute quick start guide at
-<a href="http://ceph.com/docs/master/start/quick-start/">http://ceph.com/docs/master/start/quick-start/</a> to see if ceph would
-start up. There is more documentation at <a href="http://ceph.com/docs/master">http://ceph.com/docs/master</a>
-that I have yet to go through. Perhaps the configuration of ceph can go
-into another post.</p>
-
-<p>To start the cluster after it&#8217;s configured</p>
-
-<pre><code>service ceph -a start
-</code></pre>
-
-<p>However on my test system it&#8217;s currently crashing out with the mds server giving the followin errors</p>
-
-<pre><code>2012-07-06 16:38:17.838055 7f2d6828d700 -1 mds.-1.0 *** got signal Terminated ***
-2012-07-06 16:38:17.838139 7f2d6828d700  1 mds.-1.0 suicide.  wanted down:dne, now up:boot
-2012-07-06 16:38:17.839020 7f2d6828d700 -1 osdc/Objecter.cc: In function 'void Objecter::shutdown()' thread 7f2d6828d700 time 2012-07-06 16:38:17.838156
-osdc/Objecter.cc: 221: FAILED assert(initialized)
-
- ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
- 1: (Objecter::shutdown()+0x170) [0x6e2e20]
- 2: (MDS::suicide()+0xc9) [0x4ad829]
- 3: (MDS::handle_signal(int)+0x1bb) [0x4b447b]
- 4: (SignalHandler::entry()+0x283) [0x803d53]
- 5: /lib64/libpthread.so.0() [0x3b3ea077f1]
- 6: (clone()+0x6d) [0x3b3e6e5ccd]
- NOTE: a copy of the executable, or `objdump -rdS &lt;executable&gt;` is needed to interpret this.
-
---- begin dump of recent events ---
-    -3&gt; 2012-07-06 16:37:57.786954 7f2d6b496760  0 ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030), process ceph-mds, pid 12537
-    -2&gt; 2012-07-06 16:38:17.838055 7f2d6828d700 -1 mds.-1.0 *** got signal Terminated ***
-    -1&gt; 2012-07-06 16:38:17.838139 7f2d6828d700  1 mds.-1.0 suicide.  wanted down:dne, now up:boot
-     0&gt; 2012-07-06 16:38:17.839020 7f2d6828d700 -1 osdc/Objecter.cc: In function 'void Objecter::shutdown()' thread 7f2d6828d700 time 2012-07-06 16:38:17.838156
-osdc/Objecter.cc: 221: FAILED assert(initialized)
-
- ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
- 1: (Objecter::shutdown()+0x170) [0x6e2e20]
- 2: (MDS::suicide()+0xc9) [0x4ad829]
- 3: (MDS::handle_signal(int)+0x1bb) [0x4b447b]
- 4: (SignalHandler::entry()+0x283) [0x803d53]
- 5: /lib64/libpthread.so.0() [0x3b3ea077f1]
- 6: (clone()+0x6d) [0x3b3e6e5ccd]
- NOTE: a copy of the executable, or `objdump -rdS &lt;executable&gt;` is needed to interpret this.
-
---- end dump of recent events ---
-2012-07-06 16:38:17.840237 7f2d6828d700 -1 *** Caught signal (Aborted) **
- in thread 7f2d6828d700
-
- ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
- 1: /usr/bin/ceph-mds() [0x803309]
- 2: /lib64/libpthread.so.0() [0x3b3ea0f4a0]
- 3: (gsignal()+0x35) [0x3b3e632885]
- 4: (abort()+0x175) [0x3b3e634065]
- 5: (__gnu_cxx::__verbose_terminate_handler()+0x12d) [0x3b432bea7d]
- NOTE: a copy of the executable, or `objdump -rdS &lt;executable&gt;` is needed to interpret this.
-
---- begin dump of recent events ---
-     0&gt; 2012-07-06 16:38:17.840237 7f2d6828d700 -1 *** Caught signal (Aborted) **
- in thread 7f2d6828d700
-
- ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
- 1: /usr/bin/ceph-mds() [0x803309]
- 2: /lib64/libpthread.so.0() [0x3b3ea0f4a0]
- 3: (gsignal()+0x35) [0x3b3e632885]
- 4: (abort()+0x175) [0x3b3e634065]
- 5: (__gnu_cxx::__verbose_terminate_handler()+0x12d) [0x3b432bea7d]
- NOTE: a copy of the executable, or `objdump -rdS &lt;executable&gt;` is needed to interpret this.
-
---- end dump of recent events ---
-</code></pre>
-
-<p>I&#8217;ve logged the error message on the ceph-devel mailing list, I don&#8217;t
-have time to poke at this problem right now. I need to recreate this
-scenario in a VM on my laptop so I can play with this on the plane when
-I&#8217;m going to Open Repositories 2012 this weekend.</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/07/06/installing-ceph-on-sl6/#disqus_thread">View comments &raquo;</a></p>
     
     
   </footer>

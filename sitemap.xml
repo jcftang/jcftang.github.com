@@ -233,12 +233,18 @@
         <lastmod>2012-09-04T19:48:57+01:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://jcftang.github.com/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster/
+        </loc>
+        <lastmod>2012-09-06T22:24:58+01:00</lastmod>
+    </url>
+    <url>
         <loc>http://jcftang.github.com/about/</loc>
         <lastmod>2012-07-15T15:05:39+01:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/archives/</loc>
-        <lastmod>2012-09-04T19:48:57+01:00</lastmod>
+        <lastmod>2012-09-06T22:24:58+01:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/blog/categories/</loc>
@@ -246,6 +252,6 @@
     </url>
     <url>
         <loc>http://jcftang.github.com/</loc>
-        <lastmod>2012-09-04T19:48:57+01:00</lastmod>
+        <lastmod>2012-09-06T22:24:58+01:00</lastmod>
     </url>
 </urlset>
