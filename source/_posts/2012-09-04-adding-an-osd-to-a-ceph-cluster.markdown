@@ -60,15 +60,15 @@ Here's my current Ceph configuration (before I add a new OSD)
 		filestore xattr use omap = true
 
 	[mon.a]
-		host = 134.226.112.194
-		mon addr = 134.226.112.194:6789
+		host = x.y.z.194
+		mon addr = x.y.z.194:6789
 		mon data = /data/mon.$id
 	[mds.a]
-		host = 134.226.112.194
+		host = x.y.z.194
 		mon data = /data/mds.$id
 
 	[osd.0]
-		host = 134.226.112.194
+		host = x.y.z.194
 		osd data = /data/osd.$id
 		osd journal = /data/osd.$id.journal
 
@@ -87,7 +87,7 @@ I then added these lines to my ceph.conf file (as this is my test system,
 I've ignored all sensible naming conventions)
 
 	[osd.1]
-		host = 134.226.112.194
+		host = x.y.z.194
 		osd data = /data$id/osd.$id
 		osd journal = /data$id/osd.$id.journal
 
@@ -175,5 +175,18 @@ admin of Ceph.
 
 Now that I've gone through the process of adding an OSD to my small test
 cluster, I think the next thing to try is to play with the CRUSH map to
-see if I can get Ceph replicate data between my OSD's even though they
-are on the one machine.
+see if I can get Ceph replicate data between my OSD's even though
+they are on the one machine. I guess the place to look at next is
+<http://ceph.com/wiki/Adjusting_replication_level>
+
+Without getting into the finer details of all this, in GPFS you can only
+have a replica size of 1 or 2 and you can only play with failure groups
+of NSD's and nodes. GPFS does a lot to hide things from the admin, this
+is probably a good thing. Lustre doesn't allow replicas at all (or
+raid1). As powerful as Ceph is, I would imagine at some point someone
+will ask "can I just have a tool to set the replica count assuming I
+have configured my machines and OSD lists accordingly"
+
+However the sysadmin in me just wants documentation as Ceph seems to
+be almost ready for competing against GPFS and Lustre (as well as the
+other parallel and distributed file systems).
