@@ -4,7 +4,7 @@ title: "Scientific Linux 6 build environment for Ceph"
 date: 2012-09-02 10:50
 comments: true
 external-url: 
-categories: linux storage
+categories: linux storage ceph
 ---
 
 After my last failed attempt at [Installing Ceph on

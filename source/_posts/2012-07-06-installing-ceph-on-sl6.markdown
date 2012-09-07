@@ -4,7 +4,7 @@ title: "Installing Ceph on SL6"
 date: 2012-07-06 14:43
 comments: true
 external-url: 
-categories: linux storage
+categories: linux storage ceph
 ---
 
 As an exercise of a Friday afternoon of not starting something big before

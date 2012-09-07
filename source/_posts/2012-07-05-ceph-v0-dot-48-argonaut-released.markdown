@@ -4,7 +4,7 @@ title: "Ceph V0.48 “ARGONAUT” RELEASED"
 date: 2012-07-05 09:54
 comments: true
 external-url: http://ceph.com/releases/v0-48-argonaut-released/
-categories: storage linux
+categories: storage linux ceph
 ---
 
 I've been eyeing this Ceph storage system for a while for a number of

@@ -4,7 +4,7 @@ title: "Adding an OSD to a Ceph Cluster"
 date: 2012-09-04 18:42
 comments: true
 external-url: 
-categories: linux storage
+categories: linux storage ceph
 ---
 
 Having created a small single node Ceph cluster with following the [5 minute quickstart](http://ceph.com/docs/master/start/quick-start/) guide I was able to create a single node cluster with one OSD.

@@ -4,7 +4,7 @@ title: "Going from replicating across OSD's to replicating across hosts in a Cep
 date: 2012-09-06 21:44
 comments: true
 external-url: 
-categories: linux storage
+categories: linux storage ceph
 ---
 
 Having learnt how to remove and add monitor's, meta-data and data servers (mon's, mds's
