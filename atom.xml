@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-09-07T16:22:58+01:00</updated>
+  <updated>2012-09-21T11:00:08+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Ceph V0.48.2 ARGONAUT RELEASED &rarr;]]></title>
+<link href="http://ceph.com/releases/v0-48-2-argonaut-stable-update-released/"/>
+<updated>2012-09-21T10:38:00+01:00</updated>
+<id>http://jcftang.github.com/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released</id>
+
+      <content type="html"><![CDATA[<p>There&#8217;s a new stable release of Ceph Argonaut, I seem to be having better
+luck with playing with the development releases of Ceph.</p>
+
+<p>Oh how I wish that there was a backport of the kernel ceph and rbd drivers,
+I have a dodgy repo and some reverts that one of the guys in work
+told me about. It seems to run but it isn&#8217;t great, it can be found at
+<a href="https://github.com/jcftang/ceph-client-standalone">https://github.com/jcftang/ceph-client-standalone</a>.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -1498,40 +1519,6 @@ for git-annex.</p>
 system yet, but I would assume something similar to the above steps
 would be required to do so.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/06/15/installing-git-annex-on-sl5/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[DRIS Workflows is now available via npm]]></title>
-<link href="http://jcftang.github.com/2012/06/13/dris-workflows-is-now-available-via-npm/"/>
-<updated>2012-06-13T13:59:00+01:00</updated>
-<id>http://jcftang.github.com/2012/06/13/dris-workflows-is-now-available-via-npm</id>
-
-      <content type="html"><![CDATA[<p>I&#8217;ve just uploaded the work that Matthias and Quirijn did over the
-past few months to the npm registry</p>
-
-<ul>
-<li><a href="http://search.npmjs.org/#/dri-api">http://search.npmjs.org/#/dri-api</a></li>
-<li><a href="http://search.npmjs.org/#/dris-workflows">http://search.npmjs.org/#/dris-workflows</a></li>
-<li><a href="http://search.npmjs.org/#/dri">http://search.npmjs.org/#/dri</a></li>
-<li><a href="http://search.npmjs.org/#/fedora">http://search.npmjs.org/#/fedora</a></li>
-</ul>
-
-
-<p>I haven&#8217;t tried installing it from the npm repository yet, I assume
-that they will work. There&#8217;s still some cosmetic work (needs to be
-branded correctly) that needs to be done as well as lots of error
-checking, validation and testing. It&#8217;s not a bad place to be starting
-to look for ideas if you are interested in building your own system to
-interface with Fedora Commons.</p>
-
-<p>Just remember the above is just a prototype that we thought would be
-good to share with the world!.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/2012/06/13/dris-workflows-is-now-available-via-npm/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
