@@ -44,9 +44,9 @@ research groups and projects in the area of High Performance Computing.
 
 * C programming, MPI programming. Expert with Perl, Fortran,
   Matlab. Experience with Labview, C++, Java, Haskell.
-* Developed of iRODs microservices for storage and processing
+* Developed iRODs microservices for storage and processing
   of simulation data, mixture of C, C++ and shell scripting.
-* Developed of wrappers to numerical libraries.
+* Developed wrappers to numerical libraries.
 * SCM of codebases (automation, testing, documentation etc...)
 
 #### Administration and Configuration
