@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-09-21T11:01:17+01:00</updated>
+  <updated>2012-09-21T11:36:36+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -26,10 +26,10 @@
       <content type="html"><![CDATA[<p>There&#8217;s a new stable release of Ceph Argonaut, I seem to be having better
 luck with playing with the development releases of Ceph.</p>
 
-<p>Oh how I wish that there was a backport of the kernel ceph and rbd drivers,
-I have a dodgy repo and some reverts that one of the guys in work
-told me about. It seems to run but it isn&#8217;t great, it can be found at
-<a href="https://github.com/jcftang/ceph-client-standalone">https://github.com/jcftang/ceph-client-standalone</a>.</p>
+<p>Oh how I wish that there was a backport of the kernel ceph and rbd drivers
+for RHEL6, I have a dodgy repo and some reverted commits that one of
+the guys in work told me about. It seems to run but it isn&#8217;t great,
+it can be found at <a href="https://github.com/jcftang/ceph-client-standalone">https://github.com/jcftang/ceph-client-standalone</a>.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
