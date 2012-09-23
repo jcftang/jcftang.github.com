@@ -243,12 +243,16 @@
         <lastmod>2012-09-21T11:36:22+01:00</lastmod>
     </url>
     <url>
+        <loc>http://jcftang.github.com/2012/09/23/a-poor-mans-nas-device-with-ceph/</loc>
+        <lastmod>2012-09-23T09:35:39+01:00</lastmod>
+    </url>
+    <url>
         <loc>http://jcftang.github.com/about/</loc>
         <lastmod>2012-09-21T11:01:03+01:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/archives/</loc>
-        <lastmod>2012-09-21T11:36:22+01:00</lastmod>
+        <lastmod>2012-09-23T09:35:39+01:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/blog/categories/</loc>
@@ -256,6 +260,6 @@
     </url>
     <url>
         <loc>http://jcftang.github.com/</loc>
-        <lastmod>2012-09-21T11:36:22+01:00</lastmod>
+        <lastmod>2012-09-23T09:35:39+01:00</lastmod>
     </url>
 </urlset>

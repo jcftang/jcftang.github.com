@@ -81,6 +81,108 @@
 
 
 
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="/2012/09/23/a-poor-mans-nas-device-with-ceph/">A Poor Man&#8217;s NAS Device With Ceph</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-23T08:59:00+01:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2012</time>
+        
+         | <a href="/2012/09/23/a-poor-mans-nas-device-with-ceph/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/09/23/a-poor-mans-nas-device-with-ceph/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>Given that I have a number of old 64bit capable desktop machines and a
+collection of hard drives at home, I could have run
+<a href="https://tahoe-lafs.org/trac/tahoe-lafs">Tahoe-LAFS</a> like I do in work
+for backup purposes. In fact Tahoe works quite well for the
+technically capable user.</p>
+
+<p>Recently I&#8217;ve decided that I need a more central location at home to
+store my photo collection (I love to take photos with my Canon DSLR
+and Panasonic LX5). Traditionally I would have just fired up
+<a href="http://git-annex.branchable.com/">git-annex</a> to track the data and
+then setup a number of remotes to store the data, where one of them
+might be Tahoe-LAFS and the rest might be portable hard drives, remote
+machines etc&#8230;</p>
+
+<p>I could have gone with any number of distributed storage solutions
+such as <a href="http://www.gluster.org/">GlusterFS</a>,
+<a href="http://www.irods.org">iRODS</a>,
+<a href="http://xrootd.slac.stanford.edu/">xrootd</a>,
+<a href="http://wiki.lustre.org/index.php/Main_Page">Lustre</a> or
+<a href="http://www.xtreemfs.org/">xtreemfs</a>. I&#8217;ve worked with some of these
+systems in production and toyed with others. Since this is for a home
+system I can pick what I want and change it at will.</p>
+
+<p>I probably have 2-3tb&#8217;s of data to archive and store, I also want easy
+access to my data so NFS or CIFS exports are required. It wouldn&#8217;t be
+unfeasible to acquire a few 2 or 3 terabyte drives for my old desktop
+machine which would effectively provide me with a 2 or 3 terabyte
+replicated data store. Given the amount of toying around and learning
+about Ceph in my spare time I would expect that Ceph would provide me
+with a pretty good &#8220;backend&#8221; system for storing my files and the
+option of &#8220;migrating my data from one machine to another machine&#8221; by
+adding and removing OSD&#8217;s. The handiest feature for me will be the
+capability of expanding and shrinking the system as I need.</p>
+
+<p>There probably aren&#8217;t many people who would want to setup something
+like this for a home system, but it is an alternative to the usual
+RAID or LVM setup.</p>
+
+<p>Here&#8217;s my proposed setup which I&#8217;m going to setup in the next few
+spare weekends that I will have.</p>
+
+<p><img class="" src="/downloads/images/ceph-home.png"></p>
+
+<p>It would be great if Ceph offered some of of parity/erasure coding
+instead of plain replication. I&#8217;m greedy and I want to maximise my
+disks that I have, I wonder how low I can go on hardware with the Ceph
+software.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/09/23/a-poor-mans-nas-device-with-ceph/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
   
 
 
@@ -1406,84 +1508,6 @@ somepoint setup a test system for cports with this tool.</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/07/15/open-repositories-2012-the-other-days/">Open Repositories 2012 - the Other Days</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-15T14:46:00+01:00" pubdate data-updated="true">Jul 15<span>th</span>, 2012</time>
-        
-         | <a href="/2012/07/15/open-repositories-2012-the-other-days/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/07/15/open-repositories-2012-the-other-days/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>I finally had gotten back from the conference late in the evening on
-Friday, airport security was not fun at all. It was the first Open
-Repositories conference that I had attended, the community seems to be
-pretty tightly knit. There were two or three software stacks which
-were presented that looked useful.  Things such as Fedora-Commons,
-Hydra and a few other sub-components which were talked about are going
-to be likely building blocks that we will be using for our Digital
-Repository.</p>
-
-<p>There was also a developer challenge which I decided to enter at the
-last minute, it was both a new and interesting experience at
-presenting something that wasn&#8217;t well prepared to an audience that I
-had no experience with either. By the way, I was a team of one! I had
-proposed the idea that replicating data can be expensive and bad,
-there are alternatives to just copying files around en-mass and
-storing replicas left right and centre.</p>
-
-<p>I promised I would post some photos, but it seems my photos aren&#8217;t as
-interesting as the ones that other people took. See
-<a href="http://www.flickr.com/groups/or2012/">http://www.flickr.com/groups/or2012/</a>.</p>
-
-<p>Next year Open Repositories will be held in Prince Edward Island,
-Canada. I will need to be better prepared next year (assuming I go).</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/07/15/open-repositories-2012-the-other-days/#disqus_thread">View comments &raquo;</a></p>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1506,6 +1530,10 @@ Canada. I will need to be better prepared next year (assuming I go).</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/09/23/a-poor-mans-nas-device-with-ceph/">A poor man&#8217;s NAS device with Ceph</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released/">Ceph V0.48.2 ARGONAUT RELEASED</a>
       </li>
     
@@ -1519,10 +1547,6 @@ Canada. I will need to be better prepared next year (assuming I go).</p>
     
       <li class="post">
         <a href="/2012/09/02/scientific-linux-6-build-environment-for-ceph/">Scientific Linux 6 build environment for Ceph</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/09/01/rce-62-ceph-petabyte-scale-storage/">RCE 62: Ceph Petabyte Scale Storage</a>
       </li>
     
   </ul>

@@ -81,6 +81,84 @@
 
 
 
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="/2012/07/15/open-repositories-2012-the-other-days/">Open Repositories 2012 - the Other Days</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-15T14:46:00+01:00" pubdate data-updated="true">Jul 15<span>th</span>, 2012</time>
+        
+         | <a href="/2012/07/15/open-repositories-2012-the-other-days/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/07/15/open-repositories-2012-the-other-days/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>I finally had gotten back from the conference late in the evening on
+Friday, airport security was not fun at all. It was the first Open
+Repositories conference that I had attended, the community seems to be
+pretty tightly knit. There were two or three software stacks which
+were presented that looked useful.  Things such as Fedora-Commons,
+Hydra and a few other sub-components which were talked about are going
+to be likely building blocks that we will be using for our Digital
+Repository.</p>
+
+<p>There was also a developer challenge which I decided to enter at the
+last minute, it was both a new and interesting experience at
+presenting something that wasn&#8217;t well prepared to an audience that I
+had no experience with either. By the way, I was a team of one! I had
+proposed the idea that replicating data can be expensive and bad,
+there are alternatives to just copying files around en-mass and
+storing replicas left right and centre.</p>
+
+<p>I promised I would post some photos, but it seems my photos aren&#8217;t as
+interesting as the ones that other people took. See
+<a href="http://www.flickr.com/groups/or2012/">http://www.flickr.com/groups/or2012/</a>.</p>
+
+<p>Next year Open Repositories will be held in Prince Edward Island,
+Canada. I will need to be better prepared next year (assuming I go).</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/07/15/open-repositories-2012-the-other-days/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
   
 
 
@@ -879,142 +957,6 @@ these big systems as well as <a href="http://www.whamcloud.com">Lustre</a> and
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/06/15/installing-git-annex-on-sl5/">Installing Git-annex on SL5</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-15T12:55:00+01:00" pubdate data-updated="true">Jun 15<span>th</span>, 2012</time>
-        
-         | <a href="/2012/06/15/installing-git-annex-on-sl5/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/06/15/installing-git-annex-on-sl5/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>I was waiting for my backups to be done hence this post, as I was using
-<em>git-annex</em> to manage my files and I decided I needed to have
-git-annex on a SL5 based machine. SL5 is just an opensource
-clone/recompile of RHEL5.</p>
-
-<p>I haven&#8217;t tried to install the newer versions of Haskell Platform and
-GHC in a while on SL5 to instal git-annex. But the last time I checked
-when GHC7 was out, it was a pain to install GHC on SL5.</p>
-
-<p>However I have discovered that someone has gone through the trouble of
-packaging up GHC and Haskell Platform for RHEL based distros.</p>
-
-<ul>
-<li><a href="http://justhub.org/download">http://justhub.org/download</a> - Packaged GHC and Haskell Platform
-RPM&#8217;s for RHEL based systems.</li>
-</ul>
-
-
-<p>I&#8217;m primarily interested in installing <em>git-annex</em> on SL5 based
-systems. The installation process goes as such&#8230;</p>
-
-<p>First install GHC and Haskell Platform (you need root for these
-following steps)</p>
-
-<pre><code>$ wget http://sherkin.justhub.org/el5/RPMS/x86_64/justhub-release-2.0-4.0.el5.x86_64.rpm
-$ rpm -ivh justhub-release-2.0-4.0.el5.x86_64.rpm
-$ yum install haskell
-</code></pre>
-
-<p>The RPM&#8217;s don&#8217;t place the files in /usr/bin, so you must add the
-following to your .bashrc (from here on you don&#8217;t need root if you
-don&#8217;t want things to be system wide)</p>
-
-<pre><code>$ export PATH=/usr/hs/bin:$PATH
-</code></pre>
-
-<p>On SL5 pcre is at version 6.6 which is far too old for one of the
-dependancies that git-annex requires. Therefore the user must install
-an updated version of <em>pcre</em> either from source or another method, I
-chose to install it from source and by hand into /usr/local</p>
-
-<pre><code>$ wget http://sourceforge.net/projects/pcre/files/pcre/8.30/pcre-8.30.tar.gz/download
-$ tar zxvf pcre-8.30.tar.gz
-$ cd pcre-8.30
-$ ./configure
-$ make &amp;&amp; make install
-</code></pre>
-
-<p>Once the packages are installed and are in your execution path, using
-cabal to configure and build git-annex just makes life easier, it
-should install all the needed dependancies.</p>
-
-<pre><code>$ cabal update
-$ cabal install pcre-light --extra-include-dirs=/usr/local/include
-$ git clone git://git.kitenet.net/git-annex
-$ cd git-annex
-$ make git-annex.1
-$ cabal configure
-$ cabal build
-$ cabal install
-</code></pre>
-
-<p>Or if you want to install it globallly for everyone (otherwise it will
-get installed into $HOME/.cabal/bin)</p>
-
-<pre><code>$ cabal install --global
-</code></pre>
-
-<p>The above will take a while to compile and install the needed
-dependancies. I would suggest any user who does should run the tests
-that comes with git-annex to make sure everything is functioning as
-expected.</p>
-
-<p>I wonder if it&#8217;s possible to get git-annex as a back-end driver for
-some of the digital preservation systems out there. Or more
-interestingly can fedora-commons be used a special remote or back-end
-for git-annex.</p>
-
-<p>I haven&#8217;t had a chance or need to install git-annex on a SL6 based
-system yet, but I would assume something similar to the above steps
-would be required to do so.</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/06/15/installing-git-annex-on-sl5/#disqus_thread">View comments &raquo;</a></p>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -1039,6 +981,10 @@ would be required to do so.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/09/23/a-poor-mans-nas-device-with-ceph/">A poor man&#8217;s NAS device with Ceph</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released/">Ceph V0.48.2 ARGONAUT RELEASED</a>
       </li>
     
@@ -1052,10 +998,6 @@ would be required to do so.</p>
     
       <li class="post">
         <a href="/2012/09/02/scientific-linux-6-build-environment-for-ceph/">Scientific Linux 6 build environment for Ceph</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/09/01/rce-62-ceph-petabyte-scale-storage/">RCE 62: Ceph Petabyte Scale Storage</a>
       </li>
     
   </ul>
