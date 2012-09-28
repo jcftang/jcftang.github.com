@@ -93,6 +93,85 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development/">Vagrant and Veewee for Managing Virtual Machines for Development</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-17T12:06:00+01:00" pubdate data-updated="true">Jul 17<span>th</span>, 2012</time>
+        
+         | <a href="/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>I only discovered <a href="https://github.com/mitchellh/vagrant">Vagrant</a> last
+week at OR2012 when one of the presentations had Vagrant as a part of
+the testing component in the project. I was pleasantly surprised that
+it was leaveraging lots of free and opensource technology to provide
+repeatable environments for development and testing. I was even more
+impressed by the <a href="https://github.com/jedi4ever/veewee">Veewee</a> project
+which provides some additional wrappers for building custom
+&#8216;boxes&#8217;. Veewee certainly saved me lots of time in setting up some
+updated <a href="http://www.scientificlinux.org/">Scientific Linux</a> boxes
+(it&#8217;s my preferred distro for deployments).</p>
+
+<p>In summary Vagrant is a set of scripts to manage virtual machines and
+Veewee is a set of scripts for creating base images for use in
+Vagrant. If you&#8217;re interested in the updated SL6.2 definitions they
+can be found at my
+<a href="https://github.com/jcftang/veewee/tree/scientificlinux-6.2">fork of veewee</a>.</p>
+
+<p>All that is left now is to setup <a href="http://puppetlabs.com/">puppet</a> and
+have it automatically provision my development/test environment. I&#8217;m
+not a huge fan of puppet, but I guess it&#8217;s better than rolling my own.</p>
+
+<p>I look forward to have the capability of having easy access to
+disposable VM&#8217;s for prototyping and testing! I will need to at
+somepoint setup a test system for cports with this tool.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2012/07/15/open-repositories-2012-the-other-days/">Open Repositories 2012 - the Other Days</a>
 
 </h1>
@@ -892,71 +971,6 @@ linklog feature for a few months now and it works pretty well.</p>
 
     </article>
   
-    
-
-
-
-  
-
-
-
-
-
-
-
-
-    <article class="linklog">
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="http://top500.org/lists/2012/06/press-release">Top500 Supercomputers for Summer 2012</a>
-<span class='linklog-marker'>&rarr;</span>
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-18T20:26:00+01:00" pubdate data-updated="true">Jun 18<span>th</span>, 2012</time>
-        
-         | <a href="/2012/06/18/top500-supercomputers-for-summer-2012/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/06/18/top500-supercomputers-for-summer-2012/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>The Top 500 List is out! It&#8217;s been no surprise that LLNL and IBM has
-reclaimed the top spot. There is some pretty cool tech that&#8217;s going to
-come out of these systems which the HPC community should be rubbing
-their hands over.</p>
-
-<p><a href="http://www.schedmd.com">Slurm</a> will be moving along development for
-these big systems as well as <a href="http://www.whamcloud.com">Lustre</a> and
-<a href="http://zfsonlinux.org/">zfs on linux</a>.</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/06/18/top500-supercomputers-for-summer-2012/#disqus_thread">View comments &raquo;</a></p>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -981,6 +995,10 @@ these big systems as well as <a href="http://www.whamcloud.com">Lustre</a> and
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/09/28/ceph-v0-dot-52-released/">Ceph V0.52 RELEASED</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/09/23/a-poor-mans-nas-device-with-ceph/">A poor man&#8217;s NAS device with Ceph</a>
       </li>
     
@@ -994,10 +1012,6 @@ these big systems as well as <a href="http://www.whamcloud.com">Lustre</a> and
     
       <li class="post">
         <a href="/2012/09/04/adding-an-osd-to-a-ceph-cluster/">Adding an OSD to a Ceph Cluster</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/09/02/scientific-linux-6-build-environment-for-ceph/">Scientific Linux 6 build environment for Ceph</a>
       </li>
     
   </ul>

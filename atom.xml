@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-09-23T09:39:57+01:00</updated>
+  <updated>2012-09-28T15:59:47+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Ceph V0.52 RELEASED &rarr;]]></title>
+<link href="http://ceph.com/releases/v0-52-released/"/>
+<updated>2012-09-28T15:52:00+01:00</updated>
+<id>http://jcftang.github.com/2012/09/28/ceph-v0-dot-52-released</id>
+
+      <content type="html"><![CDATA[<p>The latest development branch of Ceph is out with some rather nice
+looking features, what&#8217;s probably the most useful are the RPM builds
+for those that run RHEL6 like systems.</p>
+
+<p>Still no real sight of backported kernel modules :P Also some of the
+guys in work here just deployed a ~200tb Ceph installation which I&#8217;ve
+access to a 10tb RBD for doing backups on.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/09/28/ceph-v0-dot-52-released/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -1463,28 +1484,6 @@ for me to resolve later on. Out of all the features that 2.1 will
 bring that I like the most is the linklog feature. I&#8217;ve been using the
 linklog feature for a few months now and it works pretty well.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/06/18/octopress-2-dot-1-taking-a-sneak-peek/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Top500 Supercomputers for Summer 2012 &rarr;]]></title>
-<link href="http://top500.org/lists/2012/06/press-release"/>
-<updated>2012-06-18T20:26:00+01:00</updated>
-<id>http://jcftang.github.com/2012/06/18/top500-supercomputers-for-summer-2012</id>
-
-      <content type="html"><![CDATA[<p>The Top 500 List is out! It&#8217;s been no surprise that LLNL and IBM has
-reclaimed the top spot. There is some pretty cool tech that&#8217;s going to
-come out of these systems which the HPC community should be rubbing
-their hands over.</p>
-
-<p><a href="http://www.schedmd.com">Slurm</a> will be moving along development for
-these big systems as well as <a href="http://www.whamcloud.com">Lustre</a> and
-<a href="http://zfsonlinux.org/">zfs on linux</a>.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/2012/06/18/top500-supercomputers-for-summer-2012/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>

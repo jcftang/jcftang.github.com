@@ -81,6 +81,70 @@
 
 
 
+  
+
+
+
+
+
+
+
+
+    <article class="linklog">
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="http://ceph.com/releases/v0-52-released/">Ceph V0.52 RELEASED</a>
+<span class='linklog-marker'>&rarr;</span>
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-28T15:52:00+01:00" pubdate data-updated="true">Sep 28<span>th</span>, 2012</time>
+        
+         | <a href="/2012/09/28/ceph-v0-dot-52-released/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/09/28/ceph-v0-dot-52-released/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>The latest development branch of Ceph is out with some rather nice
+looking features, what&#8217;s probably the most useful are the RPM builds
+for those that run RHEL6 like systems.</p>
+
+<p>Still no real sight of backported kernel modules :P Also some of the
+guys in work here just deployed a ~200tb Ceph installation which I&#8217;ve
+access to a 10tb RBD for doing backups on.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/09/28/ceph-v0-dot-52-released/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
 
 
 
@@ -1429,85 +1493,6 @@ broken.</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development/">Vagrant and Veewee for Managing Virtual Machines for Development</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-17T12:06:00+01:00" pubdate data-updated="true">Jul 17<span>th</span>, 2012</time>
-        
-         | <a href="/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>I only discovered <a href="https://github.com/mitchellh/vagrant">Vagrant</a> last
-week at OR2012 when one of the presentations had Vagrant as a part of
-the testing component in the project. I was pleasantly surprised that
-it was leaveraging lots of free and opensource technology to provide
-repeatable environments for development and testing. I was even more
-impressed by the <a href="https://github.com/jedi4ever/veewee">Veewee</a> project
-which provides some additional wrappers for building custom
-&#8216;boxes&#8217;. Veewee certainly saved me lots of time in setting up some
-updated <a href="http://www.scientificlinux.org/">Scientific Linux</a> boxes
-(it&#8217;s my preferred distro for deployments).</p>
-
-<p>In summary Vagrant is a set of scripts to manage virtual machines and
-Veewee is a set of scripts for creating base images for use in
-Vagrant. If you&#8217;re interested in the updated SL6.2 definitions they
-can be found at my
-<a href="https://github.com/jcftang/veewee/tree/scientificlinux-6.2">fork of veewee</a>.</p>
-
-<p>All that is left now is to setup <a href="http://puppetlabs.com/">puppet</a> and
-have it automatically provision my development/test environment. I&#8217;m
-not a huge fan of puppet, but I guess it&#8217;s better than rolling my own.</p>
-
-<p>I look forward to have the capability of having easy access to
-disposable VM&#8217;s for prototyping and testing! I will need to at
-somepoint setup a test system for cports with this tool.</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development/#disqus_thread">View comments &raquo;</a></p>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1530,6 +1515,10 @@ somepoint setup a test system for cports with this tool.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/09/28/ceph-v0-dot-52-released/">Ceph V0.52 RELEASED</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/09/23/a-poor-mans-nas-device-with-ceph/">A poor man&#8217;s NAS device with Ceph</a>
       </li>
     
@@ -1543,10 +1532,6 @@ somepoint setup a test system for cports with this tool.</p>
     
       <li class="post">
         <a href="/2012/09/04/adding-an-osd-to-a-ceph-cluster/">Adding an OSD to a Ceph Cluster</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/09/02/scientific-linux-6-build-environment-for-ceph/">Scientific Linux 6 build environment for Ceph</a>
       </li>
     
   </ul>
