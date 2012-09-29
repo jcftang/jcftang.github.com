@@ -81,6 +81,71 @@
 
 
 
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="/2012/05/02/git-subtree-is-now-in-mainline-git/">Git-subtree Is Now in Mainline Git</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-02T09:27:00+01:00" pubdate data-updated="true">May 2<span>nd</span>, 2012</time>
+        
+         | <a href="/2012/05/02/git-subtree-is-now-in-mainline-git/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/05/02/git-subtree-is-now-in-mainline-git/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>It seems that <a href="git://github.com/apenwarr/git-subtree.git">git-subtree</a>
+has been merged into the mainline git project. <em>git-subtree</em> is one of
+those really useful wrappers for manipulating git repositories if you
+are an integrator or don&#8217;t really like git-submodule. It certainly is
+a nicer alternative to git-submodule. There is less chance of the
+person cloning a git-subtree repository messing up the checkout because
+they forgot to initialise the submodules. There is also the added
+advantage of not needing to fiddle around scripting up the git-archive
+commands for exporting the source tree for a release if you use
+git-subtree; actually git-subtree is just plain useful.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/05/02/git-subtree-is-now-in-mainline-git/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
   
 
 
@@ -776,93 +841,6 @@ Humanities and Digital Preservation aggregator before.</p>
 
     </article>
   
-    
-
-
-
-  
-
-
-
-
-
-
-
-
-    <article class="linklog">
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0014802">Genetic Classification of Populations Using Supervised Learning</a>
-<span class='linklog-marker'>&rarr;</span>
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-02-26T21:08:00+00:00" pubdate data-updated="true">Feb 26<span>th</span>, 2012</time>
-        
-         | <a href="/2012/02/26/genetic-classification-of-populations-using-supervised-learning/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/02/26/genetic-classification-of-populations-using-supervised-learning/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>In the past few months, in my spare time whenever I get a chance, I&#8217;ve
-been working on a side project in work. It&#8217;s a research project
-amongst a group of people with a cool idea. The idea is to apply
-neural networks to identifying diseases, populations and traits via
-machine learning/supervised learning. I&#8217;m not entirely sure about the
-application of the technology as to how new or revolutionary it is,
-but it seems sensible that a machine is going to be very good at being
-taught how to recognise patterns so why not do it.</p>
-
-<p>I&#8217;m not directly responsible for the code for this paper, but I did go
-back and refactor most of the code in an attempt to make it a little
-presentable to the world and also much faster as a result. I hope that
-the source code will eventually see the light of day.</p>
-
-<p>Note, I am not the primary author of this presentation/paper, I just
-have an interest in the idea, code and enjoy learning and playing with
-this research.</p>
-
-<p>There will be a presentation at
-<a href="http://www.genepi.med.uni-goettingen.de/download/EMGM2012_Preliminary_Programme.pdf">EMGM</a>,
-I will be curious as to what people think. Is it a crazy good or a
-crazy bad idea? The data that is being generated is apparently good,
-though personally I would like to see more analysis being done with
-additional ANN&#8217;s or SVM&#8217;s to verify that it really is working as
-expected.</p>
-
-<p>I wonder if I can convince a CS or a Maths summer student to
-re-implement the algorithm with a different ANN or SVM library. There
-are a rake of ideas that I have that I wouldn&#8217;t mind seeing
-implemented. I just need more time!</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/02/26/genetic-classification-of-populations-using-supervised-learning/#disqus_thread">View comments &raquo;</a></p>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/5/">&larr; Older</a>
@@ -887,6 +865,10 @@ implemented. I just need more time!</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/">SLURM-Bank that big script for banking in SLURM</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/09/28/ceph-v0-dot-52-released/">Ceph V0.52 RELEASED</a>
       </li>
     
@@ -900,10 +882,6 @@ implemented. I just need more time!</p>
     
       <li class="post">
         <a href="/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster/">Going from replicating across OSD&#8217;s to replicating across hosts in a Ceph cluster</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/09/04/adding-an-osd-to-a-ceph-cluster/">Adding an OSD to a Ceph Cluster</a>
       </li>
     
   </ul>

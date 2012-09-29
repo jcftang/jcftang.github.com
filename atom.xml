@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-09-28T15:59:47+01:00</updated>
+  <updated>2012-09-29T20:18:23+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,53 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[SLURM-Bank that big script for banking in SLURM &rarr;]]></title>
+<link href="https://github.com/jcftang/slurm-bank"/>
+<updated>2012-09-29T19:52:00+01:00</updated>
+<id>http://jcftang.github.com/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm</id>
+
+      <content type="html"><![CDATA[<p>A co-worker of mine (Paddy Doyle) had originally hacked at a perl script
+for reporting balances from SLURM&#8217;s accounting system a year or two ago
+and he had figured out that it might be possible to do some minimalistic
+&#8216;configuration&#8217; and scripting to get a system that&#8217;s very basic but
+functional.</p>
+
+<p>It was just one of those things that funding agencies wanted to justify
+how the system was being used, GOLD was clunky and obtrusive and
+complicated for what we wanted. Most of all we liked SLURM but not GOLD
+and Maui which was needed to get full accounting and banking (most of
+the features weren&#8217;t used).</p>
+
+<p>Being good and lazy engineers we got excited with the prospect of having
+the option of replacing SLURM, Maui and GOLD with just plain old SLURM
+we set out to write down the workflows for what we wanted to do and what
+the user and funding agencies actually wanted. With those ideas in mind
+we set out to implement as much as we could and needed in just plain
+old sh/bash scripting with a splash of perl. Replacing two components
+with one meant that we would have less work to do in the long run ;)</p>
+
+<p>After a whole year of running with these scripts and just putting it
+online, I&#8217;ve noticed that there may be a few sites out there that might
+be using our scripts and workflows. It would be nice to find out how
+many people are using our implementation of a banking system in SLURM
+and if it&#8217;s driven by sysadmins looking to account for usage or is it
+funding agencies looking for justification of the usage of a system.</p>
+
+<p>I was going to be at the SLURM User Group Meeting 2012 to give a
+short talk on our experiences with the SLURM-Bank scripts and workflow,
+but sadly I have to be in the US during this meeting and my colleague
+&#8220;Paddy Doyle&#8221; will there instead of me.  I would have liked to go and chat
+with the developers of SLURM to push for more advanced banking/accounting
+facilities in SLURM itself. Visiting BSC again would have been fun.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -1458,32 +1505,6 @@ responsive to fixing bugs during development.</p>
 <a href="http://git-annex.branchable.com/design/assistant/blog/">http://git-annex.branchable.com/design/assistant/blog/</a> and follow
 the development of this cool tool</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/06/26/git-annex-assistant-is-making-leaps-and-bounds/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Octopress 2.1, taking a sneak peek &rarr;]]></title>
-<link href="https://github.com/imathis/octopress/tree/2.1"/>
-<updated>2012-06-18T22:27:00+01:00</updated>
-<id>http://jcftang.github.com/2012/06/18/octopress-2-dot-1-taking-a-sneak-peek</id>
-
-      <content type="html"><![CDATA[<p>I feel lucky and living on the edge and I&#8217;ve recently decided to take
-a preview of the 2.1 branch of octopress. So far Octopress has been
-pretty good, it&#8217;s been a refreshing change to the usual ikiwiki system
-that I prefer. This experiment has worked out not too bad for me given
-how much I like ikiwiki for most of if not all of my other little
-websites and documentation sites.</p>
-
-<p>It&#8217;s not quite there yet, there a few theme issues which are probably
-to be fixed. At least if I adopt it now there will be less conflicts
-for me to resolve later on. Out of all the features that 2.1 will
-bring that I like the most is the linklog feature. I&#8217;ve been using the
-linklog feature for a few months now and it works pretty well.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/2012/06/18/octopress-2-dot-1-taking-a-sneak-peek/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>

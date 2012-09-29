@@ -95,6 +95,96 @@
   <header>
     <h1 class="entry-title">
 
+<a href="https://github.com/jcftang/slurm-bank">SLURM-Bank That Big Script for Banking in SLURM</a>
+<span class='linklog-marker'>&rarr;</span>
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-29T19:52:00+01:00" pubdate data-updated="true">Sep 29<span>th</span>, 2012</time>
+        
+         | <a href="/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>A co-worker of mine (Paddy Doyle) had originally hacked at a perl script
+for reporting balances from SLURM&#8217;s accounting system a year or two ago
+and he had figured out that it might be possible to do some minimalistic
+&#8216;configuration&#8217; and scripting to get a system that&#8217;s very basic but
+functional.</p>
+
+<p>It was just one of those things that funding agencies wanted to justify
+how the system was being used, GOLD was clunky and obtrusive and
+complicated for what we wanted. Most of all we liked SLURM but not GOLD
+and Maui which was needed to get full accounting and banking (most of
+the features weren&#8217;t used).</p>
+
+<p>Being good and lazy engineers we got excited with the prospect of having
+the option of replacing SLURM, Maui and GOLD with just plain old SLURM
+we set out to write down the workflows for what we wanted to do and what
+the user and funding agencies actually wanted. With those ideas in mind
+we set out to implement as much as we could and needed in just plain
+old sh/bash scripting with a splash of perl. Replacing two components
+with one meant that we would have less work to do in the long run ;)</p>
+
+<p>After a whole year of running with these scripts and just putting it
+online, I&#8217;ve noticed that there may be a few sites out there that might
+be using our scripts and workflows. It would be nice to find out how
+many people are using our implementation of a banking system in SLURM
+and if it&#8217;s driven by sysadmins looking to account for usage or is it
+funding agencies looking for justification of the usage of a system.</p>
+
+<p>I was going to be at the SLURM User Group Meeting 2012 to give a
+short talk on our experiences with the SLURM-Bank scripts and workflow,
+but sadly I have to be in the US during this meeting and my colleague
+&#8220;Paddy Doyle&#8221; will there instead of me.  I would have liked to go and chat
+with the developers of SLURM to push for more advanced banking/accounting
+facilities in SLURM itself. Visiting BSC again would have been fun.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+  
+
+
+
+
+
+
+
+
+    <article class="linklog">
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="http://ceph.com/releases/v0-52-released/">Ceph V0.52 RELEASED</a>
 <span class='linklog-marker'>&rarr;</span>
 </h1>
@@ -1423,76 +1513,6 @@ C library.</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/07/20/osx-kernel-panics-and-virtualbox/">OSX Kernel Panics and VirtualBox</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-20T20:49:00+01:00" pubdate data-updated="true">Jul 20<span>th</span>, 2012</time>
-        
-         | <a href="/2012/07/20/osx-kernel-panics-and-virtualbox/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/07/20/osx-kernel-panics-and-virtualbox/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>Having discovered <a href="http://vagrantup.com/">vagrant</a> and
-<a href="https://github.com/jedi4ever/veewee">veewee</a> recently at OR2012 I&#8217;ve
-been building a few <em>boxes</em> for our site for testing purposes. I&#8217;ve
-had to relearn puppet to provision machines, but it&#8217;s paying off. I&#8217;ve
-been able to deploy 3-4 virtual machines with relative ease.</p>
-
-<p>The only disappointment is the seemingly frequent and semi-random
-kernel panics and crashes that I get on OSX (which is probably caused
-by VirtualBox when I do lots of IO). It&#8217;s making me rethink if I
-really want to stick with OSX as my primary desktop OS in work. I may
-have to revert back to using Linux at somepoint.</p>
-
-<p>At least in Linux I know how to get a kdump out and debug the issue
-but with OSX I&#8217;m not sure where I should begin to figure out what&#8217;s
-broken.</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/07/20/osx-kernel-panics-and-virtualbox/#disqus_thread">View comments &raquo;</a></p>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1515,6 +1535,10 @@ broken.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/">SLURM-Bank that big script for banking in SLURM</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/09/28/ceph-v0-dot-52-released/">Ceph V0.52 RELEASED</a>
       </li>
     
@@ -1528,10 +1552,6 @@ broken.</p>
     
       <li class="post">
         <a href="/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster/">Going from replicating across OSD&#8217;s to replicating across hosts in a Ceph cluster</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/09/04/adding-an-osd-to-a-ceph-cluster/">Adding an OSD to a Ceph Cluster</a>
       </li>
     
   </ul>
