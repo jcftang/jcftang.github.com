@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Slurm User Group Meeting 2012 - Jimmy Tang</title>
+  <title>Digital Preservation and Archiving is a HPC problem? - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/2012/04/30/slurm-user-group-meeting-2012/">
+  <link rel="canonical" href="http://jcftang.github.com/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Jimmy Tang" type="application/atom+xml">
@@ -80,7 +80,6 @@
 
 
 
-  
 
 
 
@@ -88,14 +87,13 @@
 
 
 
-
-<article class="hentry linklog" role="article">
+<article class="hentry " role="article">
   
   <header>
     <h1 class="entry-title">
 
-<a href="http://www.bsc.es/marenostrum-support-services/hpc-events-trainings/others/slurm-user-group-meeting-2012">Slurm User Group Meeting 2012</a>
-<span class='linklog-marker'>&rarr;</span>
+Digital Preservation and Archiving Is a HPC Problem?
+
 </h1>
 
     
@@ -112,26 +110,57 @@
   
 
 
-<time datetime="2012-04-30T20:19:00-04:00" pubdate data-updated="true">Apr 30<span>th</span>, 2012</time>
+<time datetime="2012-10-07T13:42:00-04:00" pubdate data-updated="true">Oct 7<span>th</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/2012/04/30/slurm-user-group-meeting-2012/">Permalink</a>
+         &bull; <a rel="bookmark" href="/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p>This time the usergroup meeting is in BSC in Spain (this place is
-cool, I&#8217;ve been at BSC for a few conferences and meetings before). I
-wish I was doing some HPC right now, I&#8217;m very tempted to submit an
-abstract or two on the last two things with slurm that I was involved
-with.</p>
+<div class="entry-content"><p>I shall be going to SC2012 next month, I plan on hitting a few of the
+storage vendors for possible collaborations and flagging to them that
+we&#8217;re on the look out for storage systems. One of the first
+observation that the reader will note is &#8220;where is that link between
+HPC and Digital Preservation and Archiving&#8221;. It&#8217;s probably not obvious
+to most people, one of the big problems in the area of preservation
+and archiving is the the amount of data involved and the varied types
+of data. This is not taking into account of the issues with data
+access patterns.</p>
 
-<p>The <a href="https://github.com/jcftang/php-slurm">php-slurm</a> package needs
-some love, its somewhat in use at work. I just wish I had more time to
-fix the memory leaks. There is also
-<a href="https://github.com/jcftang/slurm-bank">slurm-bank</a> which is seeing
-some good use in work, though it could do with a rewrite in C.</p>
+<p>Given that a preservation and archiving project will want to provide a
+trusted system, the system will want to read out every single byte
+that was put in to verify that the data is correct at somepoint
+(usually with some form of hashing).</p>
+
+<p>Reading data out and checking that it&#8217;s correct serially probably
+isn&#8217;t the smartest solution. Nor is copying the data into 2-3
+locations (where each site is maintaining 2-3 copies for backups and
+redundancy). The current and seemingly most popular solutions is to
+dump the data to a few offsite locations (such as S3 or SWIFT)
+compatible storage systems, then just hoping for the best that if
+anyone of the sites is down or corrupted there site can be restored
+from the other sites or from a backup. I need to delve deeper into the
+storage and data-distribution strategies that some of the bigger
+projects are taking. There has to be a smarter way of storing and
+preserving data without having to make copies of things.</p>
+
+<p>I&#8217;ve often wondered how projects manage to copy/move data across
+storage providers in a reasonable amount of time without needing to
+wheel a few racks of disks around. It would also be interesting to see
+the error rates of these systems and how often errors are
+corrected. If they are corrected what is the computational cost of
+doing this.</p>
+
+<p>If you have a multi-terabyte archive the problem isn&#8217;t too bad, the
+more typical case these days might be in the order of the low hundreds
+of terabytes. I could only imagine what lager scale sites must deal
+with. I&#8217;m still not a fan of moving a problem from a local site to a
+remote site as it often shows that there is a lack of understanding to
+the problem. Storage in the preservation and archiving domain will
+probably turn into an IO and compute intensive operation at some
+point, especially if you want to do something with the data.</p>
 </div>
 
 
@@ -154,12 +183,12 @@ some good use in work, though it could do with a rewrite in C.</p>
   
 
 
-<time datetime="2012-04-30T20:19:00-04:00" pubdate data-updated="true">Apr 30<span>th</span>, 2012</time>
+<time datetime="2012-10-07T13:42:00-04:00" pubdate data-updated="true">Oct 7<span>th</span>, 2012</time>
 
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/hpc/'>hpc</a>, <a class='category' href='/blog/categories/linux/'>linux</a>
+    <a class='category' href='/blog/categories/hpc/'>hpc</a>, <a class='category' href='/blog/categories/storage/'>storage</a>
   
 </span>
 
@@ -177,12 +206,12 @@ some good use in work, though it could do with a rewrite in C.</p>
   
   
     
-      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/04/30/slurm-user-group-meeting-2012/" target="_blank">+1</a>
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/" target="_blank">+1</a>
     
   
   
     
-    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/04/30/slurm-user-group-meeting-2012/" target="_blank">Share</a>
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/" target="_blank">Share</a>
     
   
   
@@ -192,10 +221,8 @@ some good use in work, though it could do with a rewrite in C.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2012/04/17/mosh-an-alternative-to-ssh/" title="Previous Post: MOSH - An alternative to SSH">&laquo; MOSH - An alternative to SSH</a>
+        <a class="basic-alignment left" href="/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/" title="Previous Post: SLURM-Bank that big script for banking in SLURM">&laquo; SLURM-Bank that big script for banking in SLURM</a>
       
-      
-        <a class="basic-alignment right" href="/2012/05/02/git-subtree-is-now-in-mainline-git/" title="Next Post: git-subtree is now in mainline git">git-subtree is now in mainline git &raquo;</a>
       
     </p>
   </footer>
@@ -220,7 +247,15 @@ some good use in work, though it could do with a rewrite in C.</p>
   <ul class="posts">
     
       <li class="related">
-        <a href="/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/">SLURM-Bank that big script for banking in SLURM</a>
+        <a href="/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster/">Going from replicating across OSD's to replicating across hosts in a Ceph cluster</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/09/23/a-poor-mans-nas-device-with-ceph/">A poor man's NAS device with Ceph</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/09/04/adding-an-osd-to-a-ceph-cluster/">Adding an OSD to a Ceph Cluster</a>
       </li>
     
       <li class="related">
@@ -228,15 +263,7 @@ some good use in work, though it could do with a rewrite in C.</p>
       </li>
     
       <li class="related">
-        <a href="/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/">Things not to say and to do in a project meeting</a>
-      </li>
-    
-      <li class="related">
         <a href="/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux isn't the only platform to target when building applications</a>
-      </li>
-    
-      <li class="related">
-        <a href="/2012/09/04/adding-an-osd-to-a-ceph-cluster/">Adding an OSD to a Ceph Cluster</a>
       </li>
     
   </ul>
@@ -313,8 +340,8 @@ some good use in work, though it could do with a rewrite in C.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/2012/04/30/slurm-user-group-meeting-2012/';
-        var disqus_url = 'http://jcftang.github.com/2012/04/30/slurm-user-group-meeting-2012/';
+        var disqus_identifier = 'http://jcftang.github.com/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/';
+        var disqus_url = 'http://jcftang.github.com/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/';
         var disqus_script = 'embed.js';
       
     (function () {
