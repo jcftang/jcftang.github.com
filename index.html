@@ -81,6 +81,97 @@
 
 
 
+  
+
+
+
+
+
+
+
+
+    <article class="linklog">
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="http://yourmediashelf.com/hydracamp/">Hydracamp 2012 - Penn State</a>
+<span class='linklog-marker'>&rarr;</span>
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-13T07:34:00-04:00" pubdate data-updated="true">Oct 13<span>th</span>, 2012</time>
+        
+         | <a href="/2012/10/13/hydracamp-2012-penn-state/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/10/13/hydracamp-2012-penn-state/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>What do you do when you need a crash course on RoR, Hydra and frameworks for
+digital preservation and archiving? You go to Hydracamp!</p>
+
+<p>The syllabus was</p>
+
+<ul>
+<li>Day 1 - Rails, CRUD, TDD and Git</li>
+<li>Day 2 - Collaborative development with Stories, Tickets, TDD and Git</li>
+<li>Day 3 - Hydra, Fedora, XML and RDF (ActiveFedora and OM)</li>
+<li>Day 4 - SOLR and Blacklight</li>
+<li>Day 5 - Hydra-head, Hydra Access Controls</li>
+</ul>
+
+
+<p>Most of the training sessions were hands on from day 1 which was
+refreshing, as it was hands on I getting the most out of the training
+session. It would have been better if I had known more ruby to move
+along some of the exercises more effectively.</p>
+
+<p>To give an overview of what we had done (between ~30 people), we created
+a ruby on rails application titled &#8220;Twitter for Zombies&#8221;. With this small
+application everybody was frantically committing, pulling, merging and
+pushing code. It was highly informative and a good learning experience
+to see how fast things could move.</p>
+
+<p>The training session also included a crash course into what Fedora and
+SOLR does and how Hydra interacts with these components. The third and
+fourth days were the most interesting as it showed how someone might
+convert from a typical RoR application into an application which uses
+Fedora as the persistance layer. The last day was really just a wrap up
+and Q&amp;A session.</p>
+
+<p>You could take a look at the <a href="https://github.com/projecthydra">github</a>
+account for Project Hydra and have a peek at the hydracamp repo.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/10/13/hydracamp-2012-penn-state/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
 
 
 
@@ -1396,103 +1487,6 @@ build</a> or just go to their
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/08/28/taking-vagrant-and-running-with-it/">Taking Vagrant and Running With It</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-28T18:49:00-04:00" pubdate data-updated="true">Aug 28<span>th</span>, 2012</time>
-        
-         | <a href="/2012/08/28/taking-vagrant-and-running-with-it/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/08/28/taking-vagrant-and-running-with-it/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>Over past few weeks I&#8217;ve been working on doing some integration and
-testing work to try and deliver a prototype system. I&#8217;ve taken the
-<a href="http://vagrantup.com/">Vagrant</a> tool and puppet to try and deliver
-systems for testing and development. Although the systems that I am
-currently working with aren&#8217;t fully automated, they are automated
-enough for them to be easily started up by a developer who reads the
-documentation (I hope).</p>
-
-<p>I&#8217;m hoping that by providing these disposable systems that the various
-members in the team that I am working with will be more free to experiment
-and less fearful of breaking the system. At best everyone will take the
-idea on board and run with it as it does provide a common environment
-for all members in the team and it encourages reproducibility of issues
-and features.</p>
-
-<p>One of the next steps of building up the development framework that I
-now have is to introduce some of these concepts and the whole Vagrant
-environment to the more front facing part of the team who need to deal
-with stakeholders in the project. If our requirements and policy team have
-constant up to date access to our development, testing and QA environment
-along with the executable specifications (in the form of cucumber tests)
-I hope to push forward communications between the stakeholders and the
-team that I&#8217;m working with.</p>
-
-<p>For now I have one VM for the application itself and a number of
-&#8220;clusters&#8221; of VM&#8217;s which I had used for reviewing some technical
-documentation, they are partially automated for others to
-play with. Currently these scripts are internal to the project
-only, but it&#8217;s not hard to setup if you know how to configure
-<a href="http://puppetlabs.com/">puppet</a>. Some of the scripts and ideas can
-be found at <a href="https://github.com/jcftang/tchpc-vagrant">tchpc-vagrant</a>,
-they&#8217;re not great, but not bad either. I need more of the developers in
-the team to use what I&#8217;ve setup to evolve the system more for our use.</p>
-
-<p>In parallel to using this for my day job, I&#8217;ve
-also setup a Vagrantfile for one of my pet projects
-<a href="https://github.com/jcftang/cports">cports</a>. Using Vagrant for testing
-builds and deployments of a packaging system has been great. I&#8217;ve been
-able to do clean rebuilds of various packages without fear of completely
-polluting the enviroment, as its just a few commands away from being
-redeployed and provisioned. I&#8217;ll need to play more and then release it
-to the HPC community (or those that care).</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/08/28/taking-vagrant-and-running-with-it/#disqus_thread">View comments &raquo;</a></p>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1515,6 +1509,10 @@ to the HPC community (or those that care).</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/10/13/hydracamp-2012-penn-state/">Hydracamp 2012 - Penn State</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/">Digital Preservation and Archiving is a HPC problem?</a>
       </li>
     
@@ -1528,10 +1526,6 @@ to the HPC community (or those that care).</p>
     
       <li class="post">
         <a href="/2012/09/23/a-poor-mans-nas-device-with-ceph/">A poor man&#8217;s NAS device with Ceph</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released/">Ceph V0.48.2 ARGONAUT RELEASED</a>
       </li>
     
   </ul>

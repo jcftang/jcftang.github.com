@@ -93,6 +93,103 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2012/08/28/taking-vagrant-and-running-with-it/">Taking Vagrant and Running With It</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-28T18:49:00-04:00" pubdate data-updated="true">Aug 28<span>th</span>, 2012</time>
+        
+         | <a href="/2012/08/28/taking-vagrant-and-running-with-it/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/08/28/taking-vagrant-and-running-with-it/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>Over past few weeks I&#8217;ve been working on doing some integration and
+testing work to try and deliver a prototype system. I&#8217;ve taken the
+<a href="http://vagrantup.com/">Vagrant</a> tool and puppet to try and deliver
+systems for testing and development. Although the systems that I am
+currently working with aren&#8217;t fully automated, they are automated
+enough for them to be easily started up by a developer who reads the
+documentation (I hope).</p>
+
+<p>I&#8217;m hoping that by providing these disposable systems that the various
+members in the team that I am working with will be more free to experiment
+and less fearful of breaking the system. At best everyone will take the
+idea on board and run with it as it does provide a common environment
+for all members in the team and it encourages reproducibility of issues
+and features.</p>
+
+<p>One of the next steps of building up the development framework that I
+now have is to introduce some of these concepts and the whole Vagrant
+environment to the more front facing part of the team who need to deal
+with stakeholders in the project. If our requirements and policy team have
+constant up to date access to our development, testing and QA environment
+along with the executable specifications (in the form of cucumber tests)
+I hope to push forward communications between the stakeholders and the
+team that I&#8217;m working with.</p>
+
+<p>For now I have one VM for the application itself and a number of
+&#8220;clusters&#8221; of VM&#8217;s which I had used for reviewing some technical
+documentation, they are partially automated for others to
+play with. Currently these scripts are internal to the project
+only, but it&#8217;s not hard to setup if you know how to configure
+<a href="http://puppetlabs.com/">puppet</a>. Some of the scripts and ideas can
+be found at <a href="https://github.com/jcftang/tchpc-vagrant">tchpc-vagrant</a>,
+they&#8217;re not great, but not bad either. I need more of the developers in
+the team to use what I&#8217;ve setup to evolve the system more for our use.</p>
+
+<p>In parallel to using this for my day job, I&#8217;ve
+also setup a Vagrantfile for one of my pet projects
+<a href="https://github.com/jcftang/cports">cports</a>. Using Vagrant for testing
+builds and deployments of a packaging system has been great. I&#8217;ve been
+able to do clean rebuilds of various packages without fear of completely
+polluting the enviroment, as its just a few commands away from being
+redeployed and provisioned. I&#8217;ll need to play more and then release it
+to the HPC community (or those that care).</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/08/28/taking-vagrant-and-running-with-it/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2012/08/02/an-excuse-to-learn-ruby-and-ruby-on-rails/">An Excuse to Learn Ruby and Ruby on Rails</a>
 
 </h1>
@@ -933,87 +1030,6 @@ or at least convince the git-annex author to write one!</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/">Using Git-daemon to Share Your Git Repo on a Trusted LAN</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-02T12:05:00-04:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2012</time>
-        
-         | <a href="/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>One of the things that I don&#8217;t like about <a href="http://git-scm.com/">git</a> is
-the interface at times can be too geared towards power users. One command
-that I particularly like in <a href="http://mercurial.selenic.com/">mercurial</a>
-is the <em>hg serve</em> command, which is incredibly easy to use.</p>
-
-<p>To do the equivalent of the <em>hg serve</em> in <em>git</em> you can do the following&#8230;</p>
-
-<pre><code>user$ cd my-repo
-user$ git daemon --export-all --base-path=$(pwd)
-</code></pre>
-
-<p>The above assumes you are on a trusted network and you want to share
-your repo with people on your LAN and you are in the toplevel directory
-of the repository that you want to temporarily share. If you&#8217;re lazy
-you could do&#8230;</p>
-
-<pre><code>user$ git config --global alias.serve 'daemon --reuseaddr --verbose  --base-path=. --export-all ./.git'
-</code></pre>
-
-<p>Which would place the following (or similar) in your ~/.gitconfig file</p>
-
-<pre><code>[alias]
-    serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
-</code></pre>
-
-<p>The above was taken from <a href="https://git.wiki.kernel.org/index.php/Aliases">https://git.wiki.kernel.org/index.php/Aliases</a></p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/#disqus_thread">View comments &raquo;</a></p>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -1038,6 +1054,10 @@ you could do&#8230;</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/10/13/hydracamp-2012-penn-state/">Hydracamp 2012 - Penn State</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/">Digital Preservation and Archiving is a HPC problem?</a>
       </li>
     
@@ -1051,10 +1071,6 @@ you could do&#8230;</p>
     
       <li class="post">
         <a href="/2012/09/23/a-poor-mans-nas-device-with-ceph/">A poor man&#8217;s NAS device with Ceph</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released/">Ceph V0.48.2 ARGONAUT RELEASED</a>
       </li>
     
   </ul>

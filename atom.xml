@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-10-08T17:30:39-04:00</updated>
+  <updated>2012-10-13T09:50:37-04:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,54 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Hydracamp 2012 - Penn State &rarr;]]></title>
+<link href="http://yourmediashelf.com/hydracamp/"/>
+<updated>2012-10-13T07:34:00-04:00</updated>
+<id>http://jcftang.github.com/2012/10/13/hydracamp-2012-penn-state</id>
+
+      <content type="html"><![CDATA[<p>What do you do when you need a crash course on RoR, Hydra and frameworks for
+digital preservation and archiving? You go to Hydracamp!</p>
+
+<p>The syllabus was</p>
+
+<ul>
+<li>Day 1 - Rails, CRUD, TDD and Git</li>
+<li>Day 2 - Collaborative development with Stories, Tickets, TDD and Git</li>
+<li>Day 3 - Hydra, Fedora, XML and RDF (ActiveFedora and OM)</li>
+<li>Day 4 - SOLR and Blacklight</li>
+<li>Day 5 - Hydra-head, Hydra Access Controls</li>
+</ul>
+
+
+<p>Most of the training sessions were hands on from day 1 which was
+refreshing, as it was hands on I getting the most out of the training
+session. It would have been better if I had known more ruby to move
+along some of the exercises more effectively.</p>
+
+<p>To give an overview of what we had done (between ~30 people), we created
+a ruby on rails application titled &#8220;Twitter for Zombies&#8221;. With this small
+application everybody was frantically committing, pulling, merging and
+pushing code. It was highly informative and a good learning experience
+to see how fast things could move.</p>
+
+<p>The training session also included a crash course into what Fedora and
+SOLR does and how Hydra interacts with these components. The third and
+fourth days were the most interesting as it showed how someone might
+convert from a typical RoR application into an application which uses
+Fedora as the persistance layer. The last day was really just a wrap up
+and Q&amp;A session.</p>
+
+<p>You could take a look at the <a href="https://github.com/projecthydra">github</a>
+account for Project Hydra and have a peek at the hydracamp repo.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/10/13/hydracamp-2012-penn-state/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -1489,46 +1537,6 @@ tahoe-lafs.</p>
 <p>At somepoint I need to write a tahoe-lafs backend/remote for git-annex,
 or at least convince the git-annex author to write one!</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/07/05/tahoe-lafs-1-dot-9-2-is-released/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Using git-daemon to share your git repo on a trusted LAN]]></title>
-<link href="http://jcftang.github.com/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/"/>
-<updated>2012-07-02T12:05:00-04:00</updated>
-<id>http://jcftang.github.com/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan</id>
-
-      <content type="html"><![CDATA[<p>One of the things that I don&#8217;t like about <a href="http://git-scm.com/">git</a> is
-the interface at times can be too geared towards power users. One command
-that I particularly like in <a href="http://mercurial.selenic.com/">mercurial</a>
-is the <em>hg serve</em> command, which is incredibly easy to use.</p>
-
-<p>To do the equivalent of the <em>hg serve</em> in <em>git</em> you can do the following&#8230;</p>
-
-<pre><code>user$ cd my-repo
-user$ git daemon --export-all --base-path=$(pwd)
-</code></pre>
-
-<p>The above assumes you are on a trusted network and you want to share
-your repo with people on your LAN and you are in the toplevel directory
-of the repository that you want to temporarily share. If you&#8217;re lazy
-you could do&#8230;</p>
-
-<pre><code>user$ git config --global alias.serve 'daemon --reuseaddr --verbose  --base-path=. --export-all ./.git'
-</code></pre>
-
-<p>Which would place the following (or similar) in your ~/.gitconfig file</p>
-
-<pre><code>[alias]
-    serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
-</code></pre>
-
-<p>The above was taken from <a href="https://git.wiki.kernel.org/index.php/Aliases">https://git.wiki.kernel.org/index.php/Aliases</a></p>
-<p><a rel="bookmark" href="http://jcftang.github.com/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>

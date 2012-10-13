@@ -263,12 +263,16 @@
         <lastmod>2012-10-07T09:06:32-04:00</lastmod>
     </url>
     <url>
+        <loc>http://jcftang.github.com/2012/10/13/hydracamp-2012-penn-state/</loc>
+        <lastmod>2012-10-13T09:50:07-04:00</lastmod>
+    </url>
+    <url>
         <loc>http://jcftang.github.com/about/</loc>
         <lastmod>2012-09-21T06:01:03-04:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/archives/</loc>
-        <lastmod>2012-10-07T09:06:32-04:00</lastmod>
+        <lastmod>2012-10-13T09:50:07-04:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/blog/categories/</loc>
@@ -276,6 +280,6 @@
     </url>
     <url>
         <loc>http://jcftang.github.com/</loc>
-        <lastmod>2012-10-07T09:06:32-04:00</lastmod>
+        <lastmod>2012-10-13T09:50:07-04:00</lastmod>
     </url>
 </urlset>
