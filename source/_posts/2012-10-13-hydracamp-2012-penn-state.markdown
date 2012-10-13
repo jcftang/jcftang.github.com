@@ -26,7 +26,7 @@ along some of the exercises more effectively.
 To give an overview of what we had done (between ~30 people), we created
 a ruby on rails application titled "Twitter for Zombies". With this small
 application everybody was frantically committing, pulling, merging and
-pushing code. It was highly entertaining and a good learning experience
+pushing code. It was highly informative and a good learning experience
 to see how fast things could move.
 
 The training session also included a crash course into what Fedora and
@@ -36,4 +36,5 @@ convert from a typical RoR application into an application which uses
 Fedora as the persistance layer. The last day was really just a wrap up
 and Q&A session.
 
-The
+You could take a look at the [github](https://github.com/projecthydra)
+account for Project Hydra and have a peek at the hydracamp repo.
