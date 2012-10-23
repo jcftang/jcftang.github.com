@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-10-13T09:50:37-04:00</updated>
+  <updated>2012-10-23T15:14:11+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -18,9 +18,31 @@
 
 
 
+<title type="html"><![CDATA[Ceph V0.53 RELEASED &rarr;]]></title>
+<link href="http://ceph.com/releases/v0-53-released/"/>
+<updated>2012-10-23T15:08:00+01:00</updated>
+<id>http://jcftang.github.com/2012/10/23/ceph-v0-dot-53-released</id>
+
+      <content type="html"><![CDATA[<p>There&#8217;s a new release of Ceph, I hope that they release a stable soon so we can
+do further evaluations of the Ceph storage
+system. A few of my work colleagues are going to the <a href="http://www.inktank.com/news-events/event/ceph-workshops-amsterdam/">Ceph
+workshop</a>
+next week.</p>
+
+<p>I&#8217;m wondering if anyone has taken the CRUSH algorithm and used it in other
+domains.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/10/23/ceph-v0-dot-53-released/">&#9875; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
 <title type="html"><![CDATA[Hydracamp 2012 - Penn State &rarr;]]></title>
 <link href="http://yourmediashelf.com/hydracamp/"/>
-<updated>2012-10-13T07:34:00-04:00</updated>
+<updated>2012-10-13T07:34:00+01:00</updated>
 <id>http://jcftang.github.com/2012/10/13/hydracamp-2012-penn-state</id>
 
       <content type="html"><![CDATA[<p>What do you do when you need a crash course on RoR, Hydra and frameworks for
@@ -68,7 +90,7 @@ account for Project Hydra and have a peek at the hydracamp repo.</p>
 
 <title type="html"><![CDATA[Digital Preservation and Archiving is a HPC problem?]]></title>
 <link href="http://jcftang.github.com/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/"/>
-<updated>2012-10-07T13:42:00-04:00</updated>
+<updated>2012-10-07T13:42:00+01:00</updated>
 <id>http://jcftang.github.com/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem</id>
 
       <content type="html"><![CDATA[<p>I shall be going to SC2012 next month, I plan on hitting a few of the
@@ -124,7 +146,7 @@ point, especially if you want to do something with the data.</p>
 
 <title type="html"><![CDATA[SLURM-Bank that big script for banking in SLURM &rarr;]]></title>
 <link href="https://github.com/jcftang/slurm-bank"/>
-<updated>2012-09-29T19:52:00-04:00</updated>
+<updated>2012-09-29T19:52:00+01:00</updated>
 <id>http://jcftang.github.com/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm</id>
 
       <content type="html"><![CDATA[<p>A co-worker of mine (Paddy Doyle) had originally hacked at a perl script
@@ -171,7 +193,7 @@ facilities in SLURM itself. Visiting BSC again would have been fun.</p>
 
 <title type="html"><![CDATA[Ceph V0.52 RELEASED &rarr;]]></title>
 <link href="http://ceph.com/releases/v0-52-released/"/>
-<updated>2012-09-28T15:52:00-04:00</updated>
+<updated>2012-09-28T15:52:00+01:00</updated>
 <id>http://jcftang.github.com/2012/09/28/ceph-v0-dot-52-released</id>
 
       <content type="html"><![CDATA[<p>The latest development branch of Ceph is out with some rather nice
@@ -192,7 +214,7 @@ access to a 10tb RBD for doing backups on.</p>
 
 <title type="html"><![CDATA[A poor man's NAS device with Ceph]]></title>
 <link href="http://jcftang.github.com/2012/09/23/a-poor-mans-nas-device-with-ceph/"/>
-<updated>2012-09-23T08:59:00-04:00</updated>
+<updated>2012-09-23T08:59:00+01:00</updated>
 <id>http://jcftang.github.com/2012/09/23/a-poor-mans-nas-device-with-ceph</id>
 
       <content type="html"><![CDATA[<p>Given that I have a number of old 64bit capable desktop machines and a
@@ -253,7 +275,7 @@ software.</p>
 
 <title type="html"><![CDATA[Ceph V0.48.2 ARGONAUT RELEASED &rarr;]]></title>
 <link href="http://ceph.com/releases/v0-48-2-argonaut-stable-update-released/"/>
-<updated>2012-09-21T10:38:00-04:00</updated>
+<updated>2012-09-21T10:38:00+01:00</updated>
 <id>http://jcftang.github.com/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released</id>
 
       <content type="html"><![CDATA[<p>There&#8217;s a new stable release of Ceph Argonaut, I seem to be having better
@@ -274,7 +296,7 @@ it can be found at <a href="https://github.com/jcftang/ceph-client-standalone">h
 
 <title type="html"><![CDATA[Going from replicating across OSD's to replicating across hosts in a Ceph cluster]]></title>
 <link href="http://jcftang.github.com/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster/"/>
-<updated>2012-09-06T21:44:00-04:00</updated>
+<updated>2012-09-06T21:44:00+01:00</updated>
 <id>http://jcftang.github.com/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster</id>
 
       <content type="html"><![CDATA[<p>Having learnt how to remove and add monitor&#8217;s, meta-data and data servers (mon&#8217;s, mds&#8217;s
@@ -470,7 +492,7 @@ with the project that I am working on in the long run.</p>
 
 <title type="html"><![CDATA[Adding an OSD to a Ceph Cluster]]></title>
 <link href="http://jcftang.github.com/2012/09/04/adding-an-osd-to-a-ceph-cluster/"/>
-<updated>2012-09-04T18:42:00-04:00</updated>
+<updated>2012-09-04T18:42:00+01:00</updated>
 <id>http://jcftang.github.com/2012/09/04/adding-an-osd-to-a-ceph-cluster</id>
 
       <content type="html"><![CDATA[<p>Having created a small single node Ceph cluster with following the <a href="http://ceph.com/docs/master/start/quick-start/">5 minute quickstart</a> guide I was able to create a single node cluster with one OSD.</p>
@@ -679,7 +701,7 @@ other parallel and distributed file systems).</p>
 
 <title type="html"><![CDATA[Scientific Linux 6 build environment for Ceph]]></title>
 <link href="http://jcftang.github.com/2012/09/02/scientific-linux-6-build-environment-for-ceph/"/>
-<updated>2012-09-02T10:50:00-04:00</updated>
+<updated>2012-09-02T10:50:00+01:00</updated>
 <id>http://jcftang.github.com/2012/09/02/scientific-linux-6-build-environment-for-ceph</id>
 
       <content type="html"><![CDATA[<p>After my last failed attempt at <a href="http://jcftang.github.com/2012/07/06/installing-ceph-on-sl6/">Installing Ceph on
@@ -992,7 +1014,7 @@ build</a> or just go to their
 
 <title type="html"><![CDATA[RCE 62: Ceph Petabyte Scale Storage &rarr;]]></title>
 <link href="http://www.rce-cast.com/Podcast/rce-62-ceph-petabyte-scale-storage.html"/>
-<updated>2012-09-01T19:42:00-04:00</updated>
+<updated>2012-09-01T19:42:00+01:00</updated>
 <id>http://jcftang.github.com/2012/09/01/rce-62-ceph-petabyte-scale-storage</id>
 
       <content type="html"><![CDATA[<p>It&#8217;s somewhat interesting to listen to, we&#8217;ve been looking at
@@ -1010,7 +1032,7 @@ build</a> or just go to their
 
 <title type="html"><![CDATA[Taking Vagrant and running with it]]></title>
 <link href="http://jcftang.github.com/2012/08/28/taking-vagrant-and-running-with-it/"/>
-<updated>2012-08-28T18:49:00-04:00</updated>
+<updated>2012-08-28T18:49:00+01:00</updated>
 <id>http://jcftang.github.com/2012/08/28/taking-vagrant-and-running-with-it</id>
 
       <content type="html"><![CDATA[<p>Over past few weeks I&#8217;ve been working on doing some integration and
@@ -1066,7 +1088,7 @@ to the HPC community (or those that care).</p>
 
 <title type="html"><![CDATA[An excuse to learn Ruby and Ruby on Rails]]></title>
 <link href="http://jcftang.github.com/2012/08/02/an-excuse-to-learn-ruby-and-ruby-on-rails/"/>
-<updated>2012-08-02T18:15:00-04:00</updated>
+<updated>2012-08-02T18:15:00+01:00</updated>
 <id>http://jcftang.github.com/2012/08/02/an-excuse-to-learn-ruby-and-ruby-on-rails</id>
 
       <content type="html"><![CDATA[<p>I&#8217;ve been a long time consumer of ruby applications but never quite
@@ -1142,7 +1164,7 @@ C library.</p>
 
 <title type="html"><![CDATA[OSX Kernel panics and VirtualBox]]></title>
 <link href="http://jcftang.github.com/2012/07/20/osx-kernel-panics-and-virtualbox/"/>
-<updated>2012-07-20T20:49:00-04:00</updated>
+<updated>2012-07-20T20:49:00+01:00</updated>
 <id>http://jcftang.github.com/2012/07/20/osx-kernel-panics-and-virtualbox</id>
 
       <content type="html"><![CDATA[<p>Having discovered <a href="http://vagrantup.com/">vagrant</a> and
@@ -1171,7 +1193,7 @@ broken.</p>
 
 <title type="html"><![CDATA[Vagrant and Veewee for managing virtual machines for development]]></title>
 <link href="http://jcftang.github.com/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development/"/>
-<updated>2012-07-17T12:06:00-04:00</updated>
+<updated>2012-07-17T12:06:00+01:00</updated>
 <id>http://jcftang.github.com/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development</id>
 
       <content type="html"><![CDATA[<p>I only discovered <a href="https://github.com/mitchellh/vagrant">Vagrant</a> last
@@ -1209,7 +1231,7 @@ somepoint setup a test system for cports with this tool.</p>
 
 <title type="html"><![CDATA[Open Repositories 2012 - the other days]]></title>
 <link href="http://jcftang.github.com/2012/07/15/open-repositories-2012-the-other-days/"/>
-<updated>2012-07-15T14:46:00-04:00</updated>
+<updated>2012-07-15T14:46:00+01:00</updated>
 <id>http://jcftang.github.com/2012/07/15/open-repositories-2012-the-other-days</id>
 
       <content type="html"><![CDATA[<p>I finally had gotten back from the conference late in the evening on
@@ -1246,7 +1268,7 @@ Canada. I will need to be better prepared next year (assuming I go).</p>
 
 <title type="html"><![CDATA[Open Repositories 2012 - Day 1 &rarr;]]></title>
 <link href="http://or2012.ed.ac.uk/"/>
-<updated>2012-07-09T20:04:00-04:00</updated>
+<updated>2012-07-09T20:04:00+01:00</updated>
 <id>http://jcftang.github.com/2012/07/09/open-repositories-2012-day-1</id>
 
       <content type="html"><![CDATA[<p>I only been here for a day and Edinburgh is as nice as I recall it
@@ -1275,7 +1297,7 @@ keynote.</p>
 
 <title type="html"><![CDATA[Installing Ceph on SL6]]></title>
 <link href="http://jcftang.github.com/2012/07/06/installing-ceph-on-sl6/"/>
-<updated>2012-07-06T14:43:00-04:00</updated>
+<updated>2012-07-06T14:43:00+01:00</updated>
 <id>http://jcftang.github.com/2012/07/06/installing-ceph-on-sl6</id>
 
       <content type="html"><![CDATA[<p>As an exercise of a Friday afternoon of not starting something big before
@@ -1440,7 +1462,7 @@ I&#8217;m going to Open Repositories 2012 this weekend.</p>
 
 <title type="html"><![CDATA[Thoughts on using the likes of tahoe-lafs and git-annex as a backend storage system for Digital Preservation]]></title>
 <link href="http://jcftang.github.com/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/"/>
-<updated>2012-07-05T15:29:00-04:00</updated>
+<updated>2012-07-05T15:29:00+01:00</updated>
 <id>http://jcftang.github.com/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation</id>
 
       <content type="html"><![CDATA[<p>Having happily running and using both git-annex and tahoe-lafs in the
@@ -1501,7 +1523,7 @@ afternoon after thinking about the OR2012 developer challenge.</p>
 
 <title type="html"><![CDATA[Ceph V0.48 “ARGONAUT” RELEASED &rarr;]]></title>
 <link href="http://ceph.com/releases/v0-48-argonaut-released/"/>
-<updated>2012-07-05T09:54:00-04:00</updated>
+<updated>2012-07-05T09:54:00+01:00</updated>
 <id>http://jcftang.github.com/2012/07/05/ceph-v0-dot-48-argonaut-released</id>
 
       <content type="html"><![CDATA[<p>I&#8217;ve been eyeing this Ceph storage system for a while for a number of
@@ -1512,31 +1534,6 @@ production usage yet. Still, Ceph is really going to shake up the
 distributed storage industry. Having used GPFS, Lustre and a few other
 systems in production in the past, Ceph certainly looks attractive.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/07/05/ceph-v0-dot-48-argonaut-released/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[tahoe-lafs 1.9.2 is released &rarr;]]></title>
-<link href="https://tahoe-lafs.org/trac/tahoe-lafs/wiki/Installation"/>
-<updated>2012-07-05T09:47:00-04:00</updated>
-<id>http://jcftang.github.com/2012/07/05/tahoe-lafs-1-dot-9-2-is-released</id>
-
-      <content type="html"><![CDATA[<p>I&#8217;ve been happily using <a href="http://www.tahoe-lafs.org">tahoe-lafs</a> for my
-backup needs for a while now in work. It&#8217;s not a huge cluster, but just
-a small hive cache from workstations dotted around the lab.</p>
-
-<p>The project recently did a release which fixes a number of bugs and
-issues which has made this software much more pleasant to use. I&#8217;ve
-also been happily using git-annex to manage my files which reside in
-tahoe-lafs.</p>
-
-<p>At somepoint I need to write a tahoe-lafs backend/remote for git-annex,
-or at least convince the git-annex author to write one!</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/2012/07/05/tahoe-lafs-1-dot-9-2-is-released/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
