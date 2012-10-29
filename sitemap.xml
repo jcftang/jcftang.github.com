@@ -271,12 +271,16 @@
         <lastmod>2012-10-23T15:14:00+01:00</lastmod>
     </url>
     <url>
+        <loc>http://jcftang.github.com/2012/10/27/crowbar-for-deploying-systems/</loc>
+        <lastmod>2012-10-29T14:13:23+00:00</lastmod>
+    </url>
+    <url>
         <loc>http://jcftang.github.com/about/</loc>
         <lastmod>2012-09-21T11:01:03+01:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/archives/</loc>
-        <lastmod>2012-10-23T15:14:00+01:00</lastmod>
+        <lastmod>2012-10-29T14:13:23+00:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/blog/categories/</loc>
@@ -284,6 +288,6 @@
     </url>
     <url>
         <loc>http://jcftang.github.com/</loc>
-        <lastmod>2012-10-23T15:14:00+01:00</lastmod>
+        <lastmod>2012-10-29T14:13:23+00:00</lastmod>
     </url>
 </urlset>

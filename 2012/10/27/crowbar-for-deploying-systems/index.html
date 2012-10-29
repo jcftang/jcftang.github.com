@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>DRIS Workflows just got uploaded to github - Jimmy Tang</title>
+  <title>Crowbar for deploying systems - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/2012/05/21/dris-workflows-just-got-uploaded-to-github/">
+  <link rel="canonical" href="http://jcftang.github.com/2012/10/27/crowbar-for-deploying-systems/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Jimmy Tang" type="application/atom+xml">
@@ -92,7 +92,7 @@
   <header>
     <h1 class="entry-title">
 
-DRIS Workflows Just Got Uploaded to Github
+Crowbar for Deploying Systems
 
 </h1>
 
@@ -110,51 +110,42 @@ DRIS Workflows Just Got Uploaded to Github
   
 
 
-<time datetime="2012-05-21T21:19:00+01:00" pubdate data-updated="true">May 21<span>st</span>, 2012</time>
+<time datetime="2012-10-27T20:07:00+01:00" pubdate data-updated="true">Oct 27<span>th</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/2012/05/21/dris-workflows-just-got-uploaded-to-github/">Permalink</a>
+         &bull; <a rel="bookmark" href="/2012/10/27/crowbar-for-deploying-systems/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p>After almost 3 months supervising and working with two interns I&#8217;ve
-finally uploaded their work under the GPLv2 License.</p>
+<div class="entry-content"><p>I&#8217;ve been eyeing <a href="https://github.com/dellcloudedge/crowbar">crowbar</a>
+recently, it looks pretty useful and interesting for deploying servers
+and applications. I haven&#8217;t seen much if at all any documentation out
+there which suggests that people in the digital preservation and archiving
+fields are implementing systems at scale, I&#8217;m under the impression that
+most systems/sites are building systems up one piece at a time without
+much automation.</p>
 
-<ul>
-<li><a href="https://github.com/jcftang/dri-api">https://github.com/jcftang/dri-api</a></li>
-<li><a href="https://github.com/jcftang/dris-workflows">https://github.com/jcftang/dris-workflows</a></li>
-<li><a href="https://github.com/jcftang/dris-workflows-site">https://github.com/jcftang/dris-workflows-site</a></li>
-<li><a href="https://github.com/jcftang/node-dri">https://github.com/jcftang/node-dri</a></li>
-<li><a href="https://github.com/jcftang/node-fedora">https://github.com/jcftang/node-fedora</a></li>
-</ul>
+<p>It seems to use <a href="http://www.opscode.com/chef/">chef</a> in the backend for
+all the automation. I&#8217;ve been relearning <a href="http://puppetlabs.com/">puppet</a>
+recently so that I can have reproducible environments with
+<a href="http://vagrantup.com/">Vagrant</a>.</p>
 
+<p>There might be an advantage to learn and port all the existing modules
+that I have already created and configured to chef instead of puppet. If
+I did move to a chef automation in my vagrant environments then a few
+years from now when we go to full production we might be able to deploy
+the whole system from bare metal relatively quickly and repeatably.</p>
 
-<p>Please note that the packages above do not represent DRI at all, they
-just ended up getting labelled that way for whatever reason.</p>
+<p>Automating the deployments will mean that we will have documentation
+on the infrastructure itself. Either which way there is still a need
+to automate the fedora-commons, SOLR, mysql and postgres deployments at
+some point.</p>
 
-<p>So what are the above packages? Well they are an attempt at creating a
-workflow for the DRIS team in TCD who work on digital preservation,
-digitisation, cataloging and a host of other tasks which I probably
-don&#8217;t know about.</p>
-
-<p>The prototype system consists of the DRIS Workflows package and the
-API server. The system currently target the problem of ingesting
-objects. It tries to map what the librarians/archivists at TCD are
-doing to a single interface to increase throughput and quality of the
-work (amongst other things).</p>
-
-<p>It&#8217;s also able to export the internal meta-data as Dublin-Core, it&#8217;s
-not great right now and requires more work and there is a small start
-made on MODS as well. It does demonstrate what the interns managed to
-achieve in 3 months time with a loose spec on what needed to be
-done. The basic design and architecture of the system isn&#8217;t too
-different from Hydra, it was very much by accident that we ended up
-some similar ideas.</p>
-
-<p>The primary purpose of this post is to share the code! and as per
-usual, hope someone finds it useful.</p>
+<p>After all this thinking and pondering, I&#8217;m still using puppet. There&#8217;s
+still the likes of ansible, cfengine, bcfg2 and juju. There is a never
+ending supply of these tools.</p>
 </div>
 
 
@@ -177,12 +168,12 @@ usual, hope someone finds it useful.</p>
   
 
 
-<time datetime="2012-05-21T21:19:00+01:00" pubdate data-updated="true">May 21<span>st</span>, 2012</time>
+<time datetime="2012-10-27T20:07:00+01:00" pubdate data-updated="true">Oct 27<span>th</span>, 2012</time>
 
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/team/'>team</a>
+    <a class='category' href='/blog/categories/linux/'>linux</a>
   
 </span>
 
@@ -200,12 +191,12 @@ usual, hope someone finds it useful.</p>
   
   
     
-      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/05/21/dris-workflows-just-got-uploaded-to-github/" target="_blank">+1</a>
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/10/27/crowbar-for-deploying-systems/" target="_blank">+1</a>
     
   
   
     
-    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/05/21/dris-workflows-just-got-uploaded-to-github/" target="_blank">Share</a>
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/10/27/crowbar-for-deploying-systems/" target="_blank">Share</a>
     
   
   
@@ -215,10 +206,8 @@ usual, hope someone finds it useful.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2012/05/19/ceph-gets-a-refresh/" title="Previous Post: ceph gets a refresh">&laquo; ceph gets a refresh</a>
+        <a class="basic-alignment left" href="/2012/10/23/ceph-v0-dot-53-released/" title="Previous Post: Ceph V0.53 RELEASED">&laquo; Ceph V0.53 RELEASED</a>
       
-      
-        <a class="basic-alignment right" href="/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter/" title="Next Post: git-annex assistant is being crowd funded on Kickstarter">git-annex assistant is being crowd funded on Kickstarter &raquo;</a>
       
     </p>
   </footer>
@@ -243,15 +232,15 @@ usual, hope someone finds it useful.</p>
   <ul class="posts">
     
       <li class="related">
-        <a href="/2012/04/09/prototyping-and-testing-systems/">Prototyping and testing systems</a>
-      </li>
-    
-      <li class="related">
         <a href="/2012/08/28/taking-vagrant-and-running-with-it/">Taking Vagrant and running with it</a>
       </li>
     
       <li class="related">
-        <a href="/2012/09/04/adding-an-osd-to-a-ceph-cluster/">Adding an OSD to a Ceph Cluster</a>
+        <a href="/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/">Is JAVA really the only game in town for building Digital Preservation Systems?</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/">Thoughts on using the likes of tahoe-lafs and git-annex as a backend storage system for Digital Preservation</a>
       </li>
     
       <li class="related">
@@ -259,7 +248,7 @@ usual, hope someone finds it useful.</p>
       </li>
     
       <li class="related">
-        <a href="/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster/">Going from replicating across OSD's to replicating across hosts in a Ceph cluster</a>
+        <a href="/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for HPC systems</a>
       </li>
     
   </ul>
@@ -336,8 +325,8 @@ usual, hope someone finds it useful.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/2012/05/21/dris-workflows-just-got-uploaded-to-github/';
-        var disqus_url = 'http://jcftang.github.com/2012/05/21/dris-workflows-just-got-uploaded-to-github/';
+        var disqus_identifier = 'http://jcftang.github.com/2012/10/27/crowbar-for-deploying-systems/';
+        var disqus_url = 'http://jcftang.github.com/2012/10/27/crowbar-for-deploying-systems/';
         var disqus_script = 'embed.js';
       
     (function () {
