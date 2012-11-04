@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2012-10-29T14:20:35+00:00</updated>
+  <updated>2012-11-04T20:36:33+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[There is light on the otherside]]></title>
+<link href="http://jcftang.github.com/2012/11/04/there-is-light-on-the-otherside/"/>
+<updated>2012-11-04T19:52:00+00:00</updated>
+<id>http://jcftang.github.com/2012/11/04/there-is-light-on-the-otherside</id>
+
+      <content type="html"><![CDATA[<p>Having spent the best part of my Sunday afternoon playing with ansible
+just to learn and see what all the fuss is about, I was pleasantly
+surprised with it.</p>
+
+<p>I had installed <a href="https://github.com/ansible/ansible">ansible</a> on my OSX
+laptop and <a href="https://github.com/ansible/vagrant-ansible">vagrant-ansible</a>
+for my vagrant test environment.</p>
+
+<p>The plan was to try and re-create my current ruby on rails development
+and test virtual machine with vagrant. A secondary goal was to get it
+to work with both Ubuntu Precise (LTS) and Scientific Linux 6.</p>
+
+<p>My attempt at doing the above can be found at
+<a href="https://github.com/jcftang/tchpc-vagrant/tree/ansible">tchpc-vagrant</a>
+in the ansible branch. You will need ansible installed on your host
+machine. You don&#8217;t need much installed in the target machine as ansible
+is designed to login and execute commands as required, this is quite
+refreshing. Compared to puppet and chef, if I were to roll this out
+into production my overhead will be pretty low. This low overhead is
+something that I really like as I don&#8217;t need to setup an infrastructure
+just to run puppet.</p>
+
+<p>In short I was able to learn how ansible is supposed to work (I think)
+and build up enough configuration to start up a vagrant vm with what I
+need for to do rails development in a matter of hours.</p>
+
+<p>One thing that did occur to me was the lack of windows support, given
+that ansible is designed to use ssh to carry out its activities, finding
+stock windows machines which run ssh is pretty slim. This is one area
+which puppet (perhaps chef too) is better at. It&#8217;s also one feature that
+I would like as the vagrant vm&#8217;s that we&#8217;re using in work might be given
+to windows users for testing and evaluation.</p>
+
+<p>Going forward I think ansible will certainly be in my toolkit. There really is
+a light on the otherside for mangement, deployment and orchestration.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/2012/11/04/there-is-light-on-the-otherside/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -1493,67 +1542,6 @@ have time to poke at this problem right now. I need to recreate this
 scenario in a VM on my laptop so I can play with this on the plane when
 I&#8217;m going to Open Repositories 2012 this weekend.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/07/06/installing-ceph-on-sl6/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Thoughts on using the likes of tahoe-lafs and git-annex as a backend storage system for Digital Preservation]]></title>
-<link href="http://jcftang.github.com/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/"/>
-<updated>2012-07-05T15:29:00+01:00</updated>
-<id>http://jcftang.github.com/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation</id>
-
-      <content type="html"><![CDATA[<p>Having happily running and using both git-annex and tahoe-lafs in the
-past year or so to manage my files and backups. I&#8217;ve been thinking
-about plugging in tahoe-lafs as a backend driver for iRODS. I never
-quite got around to doing it properly, I had only gotten the universal
-mass storage driver to talk to tahoe-lafs. I was planning on writing
-an MSO driver for iRODS to talk to tahoe-lafs&#8217;s web-api, but alas I
-never got around to it. I need to get some interns to do it next year!</p>
-
-<p>It&#8217;s still highly attractive to have tahoe-lafs at the storage backend
-due to its erasure coding capabilities to maximise a return on
-investment in the storage infrastructure. I&#8217;m not sure if anyone has
-really tried to use something like tahoe-lafs as a backend for digital
-preservation.</p>
-
-<p>There are a few niggling issues with tahoe-lafs which may prevent one
-from using it in digital preservation, one is the lack of
-precedence. Someone needs to take a first step at trying to see if it
-works or not. Personally I would like to see the multi-introducer work
-to be production ready and released, this would hugely increase the
-availability of a tahoe-lafs grid and would mitigate the need for
-trying make one introducer node highly available and redundant and of
-course local network performance could be better. I&#8217;ve never really
-been able to get more than 10-20mbit/s out of a download/upload. If my
-transfers are queued up and running in the background it&#8217;s not a major
-issue.</p>
-
-<p>Which brings me to git-annex, all the new fancy features that the
-author of git-annex has been adding has been fantastic. I&#8217;ve setup a
-&#8220;target&#8221; which is a tahoe-lafs grid which I use a replica set for one
-of my annex&#8217;d collection of files. It&#8217;s not the fastest thing in the
-world for transfers but at least I know my data is safe in at least
-two places.</p>
-
-<p>Having used git-annex happily for the past while and being interested
-in the S3 and SWIFT interfaces that git-annex is able to talk to has
-made me wonder if it&#8217;s a good idea to try and create a fedora-commons
-backend/remote for git-annex or a real tahoe-lafs backend/remote that
-doesn&#8217;t rely on the general hook system that git-annex already
-has. Also the Internet Archive provides an S3/SWIFT like interface.</p>
-
-<p>Or would it be better to go the other way around and try using
-git-annex as a type of interface to other backend storage systems for
-fedora-commons, I wish I had more time to poke the akubra
-interface/package in fedora-commons.</p>
-
-<p>The above is just a rant and my brain spewing random stuff out in the
-afternoon after thinking about the OR2012 developer challenge.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>

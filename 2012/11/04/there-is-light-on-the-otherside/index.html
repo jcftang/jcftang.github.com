@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Using continuous integration systems in a team - Jimmy Tang</title>
+  <title>There is light on the otherside - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/2011/12/13/using-continuous-integration-systems-in-a-team/">
+  <link rel="canonical" href="http://jcftang.github.com/2012/11/04/there-is-light-on-the-otherside/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Jimmy Tang" type="application/atom+xml">
@@ -92,7 +92,7 @@
   <header>
     <h1 class="entry-title">
 
-Using Continuous Integration Systems in a Team
+There Is Light on the Otherside
 
 </h1>
 
@@ -110,55 +110,50 @@ Using Continuous Integration Systems in a Team
   
 
 
-<time datetime="2011-12-13T07:37:00+00:00" pubdate data-updated="true">Dec 13<span>th</span>, 2011</time>
+<time datetime="2012-11-04T19:52:00+00:00" pubdate data-updated="true">Nov 4<span>th</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/2011/12/13/using-continuous-integration-systems-in-a-team/">Permalink</a>
+         &bull; <a rel="bookmark" href="/2012/11/04/there-is-light-on-the-otherside/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p>Apart from the obvious unit testing code which could be fun trying to
-convince a team to use. There are things known as &#8216;Continuous
-Integration&#8217; processes and servers. The basic idea is to continually
-build and test your product automatically and report on successful and
-failed builds.</p>
+<div class="entry-content"><p>Having spent the best part of my Sunday afternoon playing with ansible
+just to learn and see what all the fuss is about, I was pleasantly
+surprised with it.</p>
 
-<p>I&#8217;ve known about this methodology for long time now but I&#8217;ve never
-bothered to install a CI server since it was always for myself. In the
-past a loop in a shell script running make and or make test usually
-did the trick. Then I discovered gitbuilder which is just a small set
-of scripts for automating the process. Today I have Jenkins installed
-and I&#8217;m somewhat looking at buildbot as well.</p>
+<p>I had installed <a href="https://github.com/ansible/ansible">ansible</a> on my OSX
+laptop and <a href="https://github.com/ansible/vagrant-ansible">vagrant-ansible</a>
+for my vagrant test environment.</p>
 
-<p>Jenkins appears to be the most responsive and feature rich of the
-three systems that I have played with. Buildbot looks lightweight and
-scalable.  Though I do miss the git bisect and build on a failure that
-gitbuilder provides.</p>
+<p>The plan was to try and re-create my current ruby on rails development
+and test virtual machine with vagrant. A secondary goal was to get it
+to work with both Ubuntu Precise (LTS) and Scientific Linux 6.</p>
 
-<p>Having to work with a team that is geographically distributed
-sometimes makes idea exchanges, organising events and development
-difficult. Any tool that I can get my hands on to encourage
-collaborative work and discussion is going to be used.</p>
+<p>My attempt at doing the above can be found at
+<a href="https://github.com/jcftang/tchpc-vagrant/tree/ansible">tchpc-vagrant</a>
+in the ansible branch. You will need ansible installed on your host
+machine. You don&#8217;t need much installed in the target machine as ansible
+is designed to login and execute commands as required, this is quite
+refreshing. Compared to puppet and chef, if I were to roll this out
+into production my overhead will be pretty low. This low overhead is
+something that I really like as I don&#8217;t need to setup an infrastructure
+just to run puppet.</p>
 
-<p>Automating the build and test process also means that it is possible
-to automate the release process. If all the &#8216;tests&#8217; pass then why not
-release it? I will need to look at integrating things with fitnesse
-next. Other benefits from using a CI process or server means that most
-if not all things get automated, this turns into a highly valuable
-source of documentation for incoming developers and
-engineers. Documentation often gets left to the end instead of being
-done on a continual basis as the project progresses.</p>
+<p>In short I was able to learn how ansible is supposed to work (I think)
+and build up enough configuration to start up a vagrant vm with what I
+need for to do rails development in a matter of hours.</p>
 
-<p>Hopefully the CI server won&#8217;t be used to name and shame developers in
-the group, it&#8217;s there to make sure everything is working as expected.</p>
+<p>One thing that did occur to me was the lack of windows support, given
+that ansible is designed to use ssh to carry out its activities, finding
+stock windows machines which run ssh is pretty slim. This is one area
+which puppet (perhaps chef too) is better at. It&#8217;s also one feature that
+I would like as the vagrant vm&#8217;s that we&#8217;re using in work might be given
+to windows users for testing and evaluation.</p>
 
-<p>Now to convince the team that building early and continually is
-actually a good idea! Having somewhat successfully kicked off some
-pairing sessions with various team members is good, but being more
-flexible and professional about what we are building is what I&#8217;m
-after.</p>
+<p>Going forward I think ansible will certainly be in my toolkit. There really is
+a light on the otherside for mangement, deployment and orchestration.</p>
 </div>
 
 
@@ -181,12 +176,12 @@ after.</p>
   
 
 
-<time datetime="2011-12-13T07:37:00+00:00" pubdate data-updated="true">Dec 13<span>th</span>, 2011</time>
+<time datetime="2012-11-04T19:52:00+00:00" pubdate data-updated="true">Nov 4<span>th</span>, 2012</time>
 
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/scm/'>scm</a>, <a class='category' href='/blog/categories/team/'>team</a>
+    <a class='category' href='/blog/categories/dri/'>dri</a>, <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/scm/'>scm</a>, <a class='category' href='/blog/categories/team/'>team</a>
   
 </span>
 
@@ -204,12 +199,12 @@ after.</p>
   
   
     
-      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2011/12/13/using-continuous-integration-systems-in-a-team/" target="_blank">+1</a>
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/11/04/there-is-light-on-the-otherside/" target="_blank">+1</a>
     
   
   
     
-    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2011/12/13/using-continuous-integration-systems-in-a-team/" target="_blank">Share</a>
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/11/04/there-is-light-on-the-otherside/" target="_blank">Share</a>
     
   
   
@@ -219,10 +214,8 @@ after.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2011/10/21/setting-up-my-work-macbook-air/" title="Previous Post: Setting up my work Macbook Air">&laquo; Setting up my work Macbook Air</a>
+        <a class="basic-alignment left" href="/2012/10/27/crowbar-for-deploying-systems/" title="Previous Post: Crowbar for deploying systems">&laquo; Crowbar for deploying systems</a>
       
-      
-        <a class="basic-alignment right" href="/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/" title="Next Post: Waterfall or Agile methods for delivering a project">Waterfall or Agile methods for delivering a project &raquo;</a>
       
     </p>
   </footer>
@@ -247,15 +240,15 @@ after.</p>
   <ul class="posts">
     
       <li class="related">
-        <a href="/2012/04/09/prototyping-and-testing-systems/">Prototyping and testing systems</a>
-      </li>
-    
-      <li class="related">
         <a href="/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux isn't the only platform to target when building applications</a>
       </li>
     
       <li class="related">
-        <a href="/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for HPC systems</a>
+        <a href="/2012/09/04/adding-an-osd-to-a-ceph-cluster/">Adding an OSD to a Ceph Cluster</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/04/09/prototyping-and-testing-systems/">Prototyping and testing systems</a>
       </li>
     
       <li class="related">
@@ -263,7 +256,7 @@ after.</p>
       </li>
     
       <li class="related">
-        <a href="/2012/09/04/adding-an-osd-to-a-ceph-cluster/">Adding an OSD to a Ceph Cluster</a>
+        <a href="/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/">Thoughts on using the likes of tahoe-lafs and git-annex as a backend storage system for Digital Preservation</a>
       </li>
     
   </ul>
@@ -340,8 +333,8 @@ after.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/2011/12/13/using-continuous-integration-systems-in-a-team/';
-        var disqus_url = 'http://jcftang.github.com/2011/12/13/using-continuous-integration-systems-in-a-team/';
+        var disqus_identifier = 'http://jcftang.github.com/2012/11/04/there-is-light-on-the-otherside/';
+        var disqus_url = 'http://jcftang.github.com/2012/11/04/there-is-light-on-the-otherside/';
         var disqus_script = 'embed.js';
       
     (function () {
