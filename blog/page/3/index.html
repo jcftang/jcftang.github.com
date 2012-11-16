@@ -93,6 +93,212 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2012/07/06/installing-ceph-on-sl6/">Installing Ceph on SL6</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-06T14:43:00-06:00" pubdate data-updated="true">Jul 6<span>th</span>, 2012</time>
+        
+         | <a href="/2012/07/06/installing-ceph-on-sl6/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/07/06/installing-ceph-on-sl6/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>As an exercise of a Friday afternoon of not starting something big before
+heading off to a conference. I&#8217;ve decided to spend an hour or two at
+seeing how ceph is installed and configured on an SL6 based machine
+(RHEL6 clone).</p>
+
+<p>The install target is just an old desktop running a 64bit install of SL6x,
+so it&#8217;s nothing too fancy.</p>
+
+<p>Following the instructions at <a href="http://ceph.com/wiki/Installing_on_RedHat_or_CentOS">http://ceph.com/wiki/Installing_on_RedHat_or_CentOS</a>, I ended up doing this</p>
+
+<pre><code>yum install yum-conf-epel
+yum update
+yum gcc gcc-c++ automake libtool expat expat-devel boost-devel nss-devel cryptopp cryptopp-devel libatomic_ops-devel fuse-devel
+yum install libedit-devel libedit
+</code></pre>
+
+<p>It seems that the packages <em>cryptopp-devel</em>, <em>cryptopp</em> and <em>expat-devel</em>,
+<em>expat</em> are the only packages pulled in from the epel repository.</p>
+
+<p>Additional libraries and tools include these weren&#8217;t mentioned in the
+upstream wiki, the upstream wiki probably needs to be updated.</p>
+
+<pre><code>yum install rpm-build
+yum install libaio-devel libcurl-devel libxml2-devel libuuid-devel keyutils-libs-devel fcgi-devel
+</code></pre>
+
+<p>I chose to install the newly designated stable branch of ceph 0.48argonaut</p>
+
+<pre><code>wget http://ceph.com/download/ceph-0.48argonaut.tar.bz2
+</code></pre>
+
+<p>I also chose to build it in RPM form, in the tarball there is a RPM spec
+file which can be used to create an installable RPM, the following is
+a transcript of what I did to build an installable RPM.</p>
+
+<pre><code>tar xjvf ceph-0.48argonaut.tar.bz2
+cp ceph-0.48argonaut.tar.bz2 ~/rpmbuild/SOURCES
+rpmbuild -ba ceph-0.48argonaut/ceph.spec
+</code></pre>
+
+<p>The build will take <em>some</em> time, especially if you are using old
+hardware. I ran into some minor packaging issues,</p>
+
+<pre><code>diff -u ceph.spec.in.orig ceph.spec.in
+--- ceph.spec.in.orig   2012-07-06 15:38:59.298497719 +0100
++++ ceph.spec.in    2012-07-06 15:39:45.423560177 +0100
+@@ -326,6 +326,8 @@
+/usr/sbin/rcceph
+%{_libdir}/rados-classes/libcls_rbd.so*
+%{_libdir}/rados-classes/libcls_rgw.so*
++/sbin/ceph-disk-activate
++/sbin/ceph-disk-prepare
+
+#################################################################################
+%files fuse
+</code></pre>
+
+<p>The above change need&#8217;s to be applied to the <em>ceph</em> spec file for the
+RPM(s) to build successfully.</p>
+
+<pre><code>ceph-0.48argonaut-6.el6.x86_64.rpm
+ceph-devel-0.48argonaut-6.el6.x86_64.rpm
+python-ceph-0.48argonaut-6.el6.x86_64.rpm
+librbd1-0.48argonaut-6.el6.x86_64.rpm
+librados2-0.48argonaut-6.el6.x86_64.rpm
+ceph-radosgw-0.48argonaut-6.el6.x86_64.rpm
+libcephfs1-0.48argonaut-6.el6.x86_64.rpm
+ceph-fuse-0.48argonaut-6.el6.x86_64.rpm
+</code></pre>
+
+<p>I chose to install <em>all</em> the RPM&#8217;s that were generated for educational
+purposes (used yum instead of the rpm commands so the dependancies are
+sorted out for me), from the <em>rpmbuild/RPMS/x86_64</em> directory</p>
+
+<pre><code>yum install ceph-0.48argonaut-6.el6.x86_64.rpm ceph-devel-0.48argonaut-6.el6.x86_64.rpm ceph-fuse-0.48argonaut-6.el6.x86_64.rpm ceph-radosgw-0.48argonaut-6.el6.x86_64.rpm libcephfs1-0.48argonaut-6.el6.x86_64.rpm librados2-0.48argonaut-6.el6.x86_64.rpm librbd1-0.48argonaut-6.el6.x86_64.rpm python-ceph-0.48argonaut-6.el6.x86_64.rpm
+</code></pre>
+
+<p>I then simply followed the 5 minute quick start guide at
+<a href="http://ceph.com/docs/master/start/quick-start/">http://ceph.com/docs/master/start/quick-start/</a> to see if ceph would
+start up. There is more documentation at <a href="http://ceph.com/docs/master">http://ceph.com/docs/master</a>
+that I have yet to go through. Perhaps the configuration of ceph can go
+into another post.</p>
+
+<p>To start the cluster after it&#8217;s configured</p>
+
+<pre><code>service ceph -a start
+</code></pre>
+
+<p>However on my test system it&#8217;s currently crashing out with the mds server giving the followin errors</p>
+
+<pre><code>2012-07-06 16:38:17.838055 7f2d6828d700 -1 mds.-1.0 *** got signal Terminated ***
+2012-07-06 16:38:17.838139 7f2d6828d700  1 mds.-1.0 suicide.  wanted down:dne, now up:boot
+2012-07-06 16:38:17.839020 7f2d6828d700 -1 osdc/Objecter.cc: In function 'void Objecter::shutdown()' thread 7f2d6828d700 time 2012-07-06 16:38:17.838156
+osdc/Objecter.cc: 221: FAILED assert(initialized)
+
+ ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
+ 1: (Objecter::shutdown()+0x170) [0x6e2e20]
+ 2: (MDS::suicide()+0xc9) [0x4ad829]
+ 3: (MDS::handle_signal(int)+0x1bb) [0x4b447b]
+ 4: (SignalHandler::entry()+0x283) [0x803d53]
+ 5: /lib64/libpthread.so.0() [0x3b3ea077f1]
+ 6: (clone()+0x6d) [0x3b3e6e5ccd]
+ NOTE: a copy of the executable, or `objdump -rdS &lt;executable&gt;` is needed to interpret this.
+
+--- begin dump of recent events ---
+    -3&gt; 2012-07-06 16:37:57.786954 7f2d6b496760  0 ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030), process ceph-mds, pid 12537
+    -2&gt; 2012-07-06 16:38:17.838055 7f2d6828d700 -1 mds.-1.0 *** got signal Terminated ***
+    -1&gt; 2012-07-06 16:38:17.838139 7f2d6828d700  1 mds.-1.0 suicide.  wanted down:dne, now up:boot
+     0&gt; 2012-07-06 16:38:17.839020 7f2d6828d700 -1 osdc/Objecter.cc: In function 'void Objecter::shutdown()' thread 7f2d6828d700 time 2012-07-06 16:38:17.838156
+osdc/Objecter.cc: 221: FAILED assert(initialized)
+
+ ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
+ 1: (Objecter::shutdown()+0x170) [0x6e2e20]
+ 2: (MDS::suicide()+0xc9) [0x4ad829]
+ 3: (MDS::handle_signal(int)+0x1bb) [0x4b447b]
+ 4: (SignalHandler::entry()+0x283) [0x803d53]
+ 5: /lib64/libpthread.so.0() [0x3b3ea077f1]
+ 6: (clone()+0x6d) [0x3b3e6e5ccd]
+ NOTE: a copy of the executable, or `objdump -rdS &lt;executable&gt;` is needed to interpret this.
+
+--- end dump of recent events ---
+2012-07-06 16:38:17.840237 7f2d6828d700 -1 *** Caught signal (Aborted) **
+ in thread 7f2d6828d700
+
+ ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
+ 1: /usr/bin/ceph-mds() [0x803309]
+ 2: /lib64/libpthread.so.0() [0x3b3ea0f4a0]
+ 3: (gsignal()+0x35) [0x3b3e632885]
+ 4: (abort()+0x175) [0x3b3e634065]
+ 5: (__gnu_cxx::__verbose_terminate_handler()+0x12d) [0x3b432bea7d]
+ NOTE: a copy of the executable, or `objdump -rdS &lt;executable&gt;` is needed to interpret this.
+
+--- begin dump of recent events ---
+     0&gt; 2012-07-06 16:38:17.840237 7f2d6828d700 -1 *** Caught signal (Aborted) **
+ in thread 7f2d6828d700
+
+ ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
+ 1: /usr/bin/ceph-mds() [0x803309]
+ 2: /lib64/libpthread.so.0() [0x3b3ea0f4a0]
+ 3: (gsignal()+0x35) [0x3b3e632885]
+ 4: (abort()+0x175) [0x3b3e634065]
+ 5: (__gnu_cxx::__verbose_terminate_handler()+0x12d) [0x3b432bea7d]
+ NOTE: a copy of the executable, or `objdump -rdS &lt;executable&gt;` is needed to interpret this.
+
+--- end dump of recent events ---
+</code></pre>
+
+<p>I&#8217;ve logged the error message on the ceph-devel mailing list, I don&#8217;t
+have time to poke at this problem right now. I need to recreate this
+scenario in a VM on my laptop so I can play with this on the plane when
+I&#8217;m going to Open Repositories 2012 this weekend.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/07/06/installing-ceph-on-sl6/#disqus_thread">View comments &raquo;</a></p>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/">Thoughts on Using the Likes of Tahoe-lafs and Git-annex as a Backend Storage System for Digital Preservation</a>
 
 </h1>
@@ -111,7 +317,7 @@
   
 
 
-<time datetime="2012-07-05T15:29:00+01:00" pubdate data-updated="true">Jul 5<span>th</span>, 2012</time>
+<time datetime="2012-07-05T15:29:00-06:00" pubdate data-updated="true">Jul 5<span>th</span>, 2012</time>
         
          | <a href="/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/#disqus_thread">Comments</a>
         
@@ -215,7 +421,7 @@ afternoon after thinking about the OR2012 developer challenge.</p>
   
 
 
-<time datetime="2012-07-05T09:54:00+01:00" pubdate data-updated="true">Jul 5<span>th</span>, 2012</time>
+<time datetime="2012-07-05T09:54:00-06:00" pubdate data-updated="true">Jul 5<span>th</span>, 2012</time>
         
          | <a href="/2012/07/05/ceph-v0-dot-48-argonaut-released/#disqus_thread">Comments</a>
         
@@ -279,7 +485,7 @@ systems in production in the past, Ceph certainly looks attractive.</p>
   
 
 
-<time datetime="2012-07-05T09:47:00+01:00" pubdate data-updated="true">Jul 5<span>th</span>, 2012</time>
+<time datetime="2012-07-05T09:47:00-06:00" pubdate data-updated="true">Jul 5<span>th</span>, 2012</time>
         
          | <a href="/2012/07/05/tahoe-lafs-1-dot-9-2-is-released/#disqus_thread">Comments</a>
         
@@ -345,7 +551,7 @@ or at least convince the git-annex author to write one!</p>
   
 
 
-<time datetime="2012-07-02T12:05:00+01:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2012</time>
+<time datetime="2012-07-02T12:05:00-06:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2012</time>
         
          | <a href="/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/#disqus_thread">Comments</a>
         
@@ -428,7 +634,7 @@ you could do&#8230;</p>
   
 
 
-<time datetime="2012-06-26T19:10:00+01:00" pubdate data-updated="true">Jun 26<span>th</span>, 2012</time>
+<time datetime="2012-06-26T19:10:00-06:00" pubdate data-updated="true">Jun 26<span>th</span>, 2012</time>
         
          | <a href="/2012/06/26/git-annex-assistant-is-making-leaps-and-bounds/#disqus_thread">Comments</a>
         
@@ -503,7 +709,7 @@ the development of this cool tool</p>
   
 
 
-<time datetime="2012-06-18T22:27:00+01:00" pubdate data-updated="true">Jun 18<span>th</span>, 2012</time>
+<time datetime="2012-06-18T22:27:00-06:00" pubdate data-updated="true">Jun 18<span>th</span>, 2012</time>
         
          | <a href="/2012/06/18/octopress-2-dot-1-taking-a-sneak-peek/#disqus_thread">Comments</a>
         
@@ -572,7 +778,7 @@ linklog feature for a few months now and it works pretty well.</p>
   
 
 
-<time datetime="2012-06-18T20:26:00+01:00" pubdate data-updated="true">Jun 18<span>th</span>, 2012</time>
+<time datetime="2012-06-18T20:26:00-06:00" pubdate data-updated="true">Jun 18<span>th</span>, 2012</time>
         
          | <a href="/2012/06/18/top500-supercomputers-for-summer-2012/#disqus_thread">Comments</a>
         
@@ -635,7 +841,7 @@ these big systems as well as <a href="http://www.whamcloud.com">Lustre</a> and
   
 
 
-<time datetime="2012-06-15T12:55:00+01:00" pubdate data-updated="true">Jun 15<span>th</span>, 2012</time>
+<time datetime="2012-06-15T12:55:00-06:00" pubdate data-updated="true">Jun 15<span>th</span>, 2012</time>
         
          | <a href="/2012/06/15/installing-git-annex-on-sl5/#disqus_thread">Comments</a>
         
@@ -771,7 +977,7 @@ would be required to do so.</p>
   
 
 
-<time datetime="2012-06-13T13:59:00+01:00" pubdate data-updated="true">Jun 13<span>th</span>, 2012</time>
+<time datetime="2012-06-13T13:59:00-06:00" pubdate data-updated="true">Jun 13<span>th</span>, 2012</time>
         
          | <a href="/2012/06/13/dris-workflows-is-now-available-via-npm/#disqus_thread">Comments</a>
         
@@ -812,77 +1018,6 @@ good to share with the world!.</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/06/07/facebook-open-house/">Facebook - Open House</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-07T09:12:00+01:00" pubdate data-updated="true">Jun 7<span>th</span>, 2012</time>
-        
-         | <a href="/2012/06/07/facebook-open-house/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/06/07/facebook-open-house/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>The event was actually on 2012-06-06 and it was invite only. The event
-was mostly about the infrastructure of Facebook. It was actually done
-quite tastefully with a main speaker giving an overview of the whole
-system. Luckily they did not turn the event into a recruitment event
-which was quite pleasant.</p>
-
-<p>Unfortunately one of the posters that I had actually want to see and
-chat to the engineers involved wasn&#8217;t there, there were enough
-engineers around for me to harass with questions.</p>
-
-<p>This event was also the first event that I have been to in Dublin
-which required an NDA, that was sort of strange. Some people that I
-know didn&#8217;t attend as a result of the NDA.</p>
-
-<p>All in all Facebook does have some pretty cool tech internally (like
-all the other big dotcom companies). Some of it is even opensource!</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/06/07/facebook-open-house/#disqus_thread">View comments &raquo;</a></p>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -907,6 +1042,10 @@ all the other big dotcom companies). Some of it is even opensource!</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale/">Supercomputing 2012 and the arms race to exascale</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/11/04/there-is-light-on-the-otherside/">There is light on the otherside</a>
       </li>
     
@@ -920,10 +1059,6 @@ all the other big dotcom companies). Some of it is even opensource!</p>
     
       <li class="post">
         <a href="/2012/10/13/hydracamp-2012-penn-state/">Hydracamp 2012 - Penn State</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/">Digital Preservation and Archiving is a HPC problem?</a>
       </li>
     
   </ul>
