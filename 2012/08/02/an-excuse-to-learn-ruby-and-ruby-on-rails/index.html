@@ -40,6 +40,8 @@
   </script>
 
 
+  
+
    
   <link href="/octopress-favicon.png" rel="icon">
 </head>
@@ -110,7 +112,7 @@ An Excuse to Learn Ruby and Ruby on Rails
   
 
 
-<time datetime="2012-08-02T18:15:00-06:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2012</time>
+<time datetime="2012-08-02T18:15:00+01:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -138,34 +140,21 @@ creating a rubygem. I&#8217;m attempting to expose the insides of
 functionality in <em>fec.c</em>. So far I&#8217;ve been lazy and I am using swig to
 automatically generate the C to ruby bindings with something like this</p>
 
-<figure class='code'><figcaption><span>fec.i </span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="o">%</span><span class="n">module</span> <span class="n">fec</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">%</span><span class="p">{</span>
-</span><span class='line'><span class="cp">#include &quot;fec.h&quot;</span>
-</span><span class='line'><span class="o">%</span><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">fec_t</span><span class="o">*</span> <span class="n">fec_new</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">k</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">m</span><span class="p">);</span>
-</span><span class='line'><span class="kt">void</span> <span class="n">fec_free</span><span class="p">(</span><span class="n">fec_t</span><span class="o">*</span> <span class="n">p</span><span class="p">);</span>
-</span><span class='line'><span class="kt">void</span> <span class="n">fec_decode</span><span class="p">(</span><span class="k">const</span> <span class="n">fec_t</span><span class="o">*</span> <span class="n">code</span><span class="p">,</span> <span class="k">const</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">inpkts</span><span class="p">,</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">outpkts</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">index</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">sz</span><span class="p">);</span>
-</span><span class='line'><span class="kt">void</span> <span class="n">fec_encode</span><span class="p">(</span><span class="k">const</span> <span class="n">fec_t</span><span class="o">*</span> <span class="n">code</span><span class="p">,</span> <span class="k">const</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">src</span><span class="p">,</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">fecs</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">block_nums</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">num_block_nums</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">sz</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption>fec.i </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div></pre></td><td class='main  c'><pre><div class='line'><span class="o">%</span><span class="n">module</span> <span class="n">fec</span>
+</div><div class='line'> </div><div class='line'><span class="o">%</span><span class="p">{</span>
+</div><div class='line'><span class="cp">#include &quot;fec.h&quot;</span>
+</div><div class='line'><span class="o">%</span><span class="p">}</span>
+</div><div class='line'> </div><div class='line'><span class="n">fec_t</span><span class="o">*</span> <span class="n">fec_new</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">k</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">m</span><span class="p">);</span>
+</div><div class='line'><span class="kt">void</span> <span class="nf">fec_free</span><span class="p">(</span><span class="n">fec_t</span><span class="o">*</span> <span class="n">p</span><span class="p">);</span>
+</div><div class='line'><span class="kt">void</span> <span class="nf">fec_decode</span><span class="p">(</span><span class="k">const</span> <span class="n">fec_t</span><span class="o">*</span> <span class="n">code</span><span class="p">,</span> <span class="k">const</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">inpkts</span><span class="p">,</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">outpkts</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">index</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">sz</span><span class="p">);</span>
+</div><div class='line'><span class="kt">void</span> <span class="nf">fec_encode</span><span class="p">(</span><span class="k">const</span> <span class="n">fec_t</span><span class="o">*</span> <span class="n">code</span><span class="p">,</span> <span class="k">const</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">src</span><span class="p">,</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">fecs</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">block_nums</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">num_block_nums</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">sz</span><span class="p">);</span>
+</div></pre></td></tr></table></div></figure>
 
 
 <p>Swig does it&#8217;s thing,</p>
 
-<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>swig -ruby fec.i
-</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  bash'><pre><div class='line'>swig -ruby fec.i
+</div></pre></td></tr></table></div></figure>
 
 
 <p>Amazingly after some fiddling I got ruby to load up the module. It
@@ -203,7 +192,7 @@ C library.</p>
   
 
 
-<time datetime="2012-08-02T18:15:00-06:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2012</time>
+<time datetime="2012-08-02T18:15:00+01:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2012</time>
 
 
 <span class="categories">
@@ -263,8 +252,8 @@ C library.</p>
 </div>
 
 <aside class="sidebar">
-  
-    <section>
+  
+    <section>
   <h1>Related Posts</h1>
   <ul class="posts">
     
@@ -335,21 +324,19 @@ C library.</p>
 
 
 
-  <a href="https://plus.google.com/115375964029787125148?rel=author">
-    <img src="https://ssl.gstatic.com/images/icons/gplus-32.png" alt="Google Plus icon">
-  </a>
+<a href="https://plus.google.com/115375964029787125148?rel=author"><img src="https://ssl.gstatic.com/images/icons/gplus-32.png" alt="Google Plus icon"></a>
 
 
 
 
-  
+  
 </aside>
 
 
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Jimmy Tang -
+  Copyright &copy; 2013 - Jimmy Tang -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
