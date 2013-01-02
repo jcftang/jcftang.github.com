@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2013-01-01T17:13:48+00:00</updated>
+  <updated>2013-01-02T15:45:14+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,58 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Making the jump and migrating my archlinux machines to use btrfs]]></title>
+<link href="http://jcftang.github.com/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs/"/>
+<updated>2013-01-02T15:18:00+00:00</updated>
+<id>http://jcftang.github.com/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs</id>
+<category term="linux" /><category term="storage" />
+
+      <content type="html"><![CDATA[<p>Having a few days of time off from work I&#8217;ve committed to migrating my
+archlinux based laptops to using btrfs. I&#8217;ve to date been just using
+ext4 and nilfs2 (on an SD card) on my eeepc and plain old ext4 on the
+bigger laptop.</p>
+
+<p>The main motivation was that the two devices were pretty outdated and
+I felt lucky with doing a major upgrade (replaced sysvinit with systemd
+as recommended by the archlinux people)</p>
+
+<p>I didn&#8217;t want to reinstall my machines so I took the route of converting
+the existing ext4 partitions to btrfs. I left my <em>/boot</em> partition as
+ext2 for safety. Prior to converting to btrfs I had upgraded the two
+laptops to using <a href="https://wiki.archlinux.org/index.php/Grub2">grub2</a>
+first. I then proceeded to boot up my laptops with the
+archlinux installer image via a usb key. Then just followed the
+<a href="https://wiki.archlinux.org/index.php/Btrfs">btrfs</a> documentation at
+the archlinux wiki.</p>
+
+<p>The process went more smoothly than I had anticipated, I didn&#8217;t run into
+any major stumbling blocks, that said I did have to free up some space
+for the migration to occur.</p>
+
+<p>Once the systems were back up and running I enabled compression on btrfs
+and defragged the systems</p>
+
+<pre><code>find / -xdev -type f -print -exec btrfs filesystem defrag '{}' \;
+</code></pre>
+
+<p>This compression feature made a huge difference on the space limited
+eeepc, the compression feature reclaimed about 10% of the space on the
+system. It&#8217;s a shame that the RHEL based distros aren&#8217;t quite supporting
+btrfs yet there are quite a few nice features there that are very
+attractive for pro-consumers and the enterprise. RHEL7 will have btrfs,
+hopefully there will be backports to RHEL6.</p>
+
+<p>Performance wise I haven&#8217;t used the system in anger yet, so time will
+tell if I&#8217;m happy with btrfs or not.</p>
+]]></content>
+    </entry>
   
     <entry>
       
@@ -1270,36 +1322,6 @@ interesting as the ones that other people took. See
 <p>Next year Open Repositories will be held in Prince Edward Island,
 Canada. I will need to be better prepared next year (assuming I go).</p>
 ]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Open Repositories 2012 - Day 1 &rarr;]]></title>
-<link href="http://or2012.ed.ac.uk/"/>
-<updated>2012-07-09T20:04:00+01:00</updated>
-<id>http://jcftang.github.com/2012/07/09/open-repositories-2012-day-1</id>
-<category term="dri" /><category term="team" />
-
-      <content type="html"><![CDATA[<p>I only been here for a day and Edinburgh is as nice as I recall it
-was. This time my attendance to Open Repositories 2012 brought me and
-some co-workers of the DRI team to this city. It&#8217;s my first time at
-this event and there seems to be lots of people, so far it&#8217;s been
-pleasant enough apart from the weather.</p>
-
-<p>For those interested in whats happening you should follow the hashtag
-<strong><em>#or2012</em></strong> on twitter to see what people are saying. One of the cool
-thing was they gave out 8gb USB memory sticks (built into the name
-cards), I thought that was a nice touch.</p>
-
-<p>So far it&#8217;s two thumbs up for the organisers. It&#8217;s only workshops for
-far, I look forward to the poster sessions and other talks which will
-be on. Day 2 will be more workshops and poster sessions, plus a
-keynote.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/2012/07/09/open-repositories-2012-day-1/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>

@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Waterfall or Agile methods for delivering a project - Jimmy Tang</title>
+  <title>Making the jump and migrating my archlinux machines to use btrfs - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/">
+  <link rel="canonical" href="http://jcftang.github.com/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Jimmy Tang" type="application/atom+xml">
@@ -94,7 +94,7 @@
   <header>
     <h1 class="entry-title">
 
-Waterfall or Agile Methods for Delivering a Project
+Making the Jump and Migrating My Archlinux Machines to Use Btrfs
 
 </h1>
 
@@ -112,46 +112,52 @@ Waterfall or Agile Methods for Delivering a Project
   
 
 
-<time datetime="2012-01-18T08:41:00+00:00" pubdate data-updated="true">Jan 18<span>th</span>, 2012</time>
+<time datetime="2013-01-02T15:18:00+00:00" pubdate data-updated="true">Jan 2<span>nd</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/">Permalink</a>
+         &bull; <a rel="bookmark" href="/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p>Waterfall methods seem to work well for smallish projects that are
-well defined and well understood. At least from my own experiences of
-putting things together, but realistically to think of all possible
-scenarios and to write up all the possible solutions to the problem
-seems a little bit wacky. To also assume that the requirements process
-has captured requirements that won&#8217;t change close the end of the
-project is also a little unreasonable or unrealistic, this would be
-especially true on a project that is planned to run for a few years
-with fairly substantial goals in an ever changing research and
-development environment.</p>
+<div class="entry-content"><p>Having a few days of time off from work I&#8217;ve committed to migrating my
+archlinux based laptops to using btrfs. I&#8217;ve to date been just using
+ext4 and nilfs2 (on an SD card) on my eeepc and plain old ext4 on the
+bigger laptop.</p>
 
-<p>Waterfall styled methods just cause problems with planning and
-adjusting the process to the needs of the stakeholder (no matter what
-the stakeholder thinks they need, they will change their mind). Again
-this is especially true for long running projects.</p>
+<p>The main motivation was that the two devices were pretty outdated and
+I felt lucky with doing a major upgrade (replaced sysvinit with systemd
+as recommended by the archlinux people)</p>
 
-<p>So why not use agile methods? Simply because there is little or no
-plan and it requires real collaboration, delegation of tasks and
-trust to work towards a common goal. People get afraid perhaps?</p>
+<p>I didn&#8217;t want to reinstall my machines so I took the route of converting
+the existing ext4 partitions to btrfs. I left my <em>/boot</em> partition as
+ext2 for safety. Prior to converting to btrfs I had upgraded the two
+laptops to using <a href="https://wiki.archlinux.org/index.php/Grub2">grub2</a>
+first. I then proceeded to boot up my laptops with the
+archlinux installer image via a usb key. Then just followed the
+<a href="https://wiki.archlinux.org/index.php/Btrfs">btrfs</a> documentation at
+the archlinux wiki.</p>
 
-<p>The trick is communication and trying to introduce agile methods
-slowly and steadily into the system. I&#8217;ve been slowly introducing the
-idea of pairings, sprints and elements of scrum with kanban (yes,
-that&#8217;s lots of buzz words there already). Getting people to agree to
-talk is probably the hardest thing to do, and it&#8217;s even harder to try
-and get everyone on the same page without ego&#8217;s getting in the way.</p>
+<p>The process went more smoothly than I had anticipated, I didn&#8217;t run into
+any major stumbling blocks, that said I did have to free up some space
+for the migration to occur.</p>
 
-<p>It&#8217;s paying off a little for now, the team members are beginning to at
-least talk and exchange ideas. In my world that is a huge step
-already. Next is it try getting things done by prioritising tasks and
-resources.</p>
+<p>Once the systems were back up and running I enabled compression on btrfs
+and defragged the systems</p>
+
+<pre><code>find / -xdev -type f -print -exec btrfs filesystem defrag '{}' \;
+</code></pre>
+
+<p>This compression feature made a huge difference on the space limited
+eeepc, the compression feature reclaimed about 10% of the space on the
+system. It&#8217;s a shame that the RHEL based distros aren&#8217;t quite supporting
+btrfs yet there are quite a few nice features there that are very
+attractive for pro-consumers and the enterprise. RHEL7 will have btrfs,
+hopefully there will be backports to RHEL6.</p>
+
+<p>Performance wise I haven&#8217;t used the system in anger yet, so time will
+tell if I&#8217;m happy with btrfs or not.</p>
 </div>
 
 
@@ -174,12 +180,12 @@ resources.</p>
   
 
 
-<time datetime="2012-01-18T08:41:00+00:00" pubdate data-updated="true">Jan 18<span>th</span>, 2012</time>
+<time datetime="2013-01-02T15:18:00+00:00" pubdate data-updated="true">Jan 2<span>nd</span>, 2013</time>
 
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/team/'>team</a>
+    <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/storage/'>storage</a>
   
 </span>
 
@@ -197,12 +203,12 @@ resources.</p>
   
   
     
-      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/" target="_blank">+1</a>
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs/" target="_blank">+1</a>
     
   
   
     
-    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/" target="_blank">Share</a>
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs/" target="_blank">Share</a>
     
   
   
@@ -212,10 +218,8 @@ resources.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2011/12/13/using-continuous-integration-systems-in-a-team/" title="Previous Post: Using continuous integration systems in a team">&laquo; Using continuous integration systems in a team</a>
+        <a class="basic-alignment left" href="/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale/" title="Previous Post: Supercomputing 2012 and the arms race to exascale">&laquo; Supercomputing 2012 and the arms race to exascale</a>
       
-      
-        <a class="basic-alignment right" href="/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years/" title="Next Post: Red Hat Enterprise Linux Life Cycle Extended to Ten Years">Red Hat Enterprise Linux Life Cycle Extended to Ten Years &raquo;</a>
       
     </p>
   </footer>
@@ -240,23 +244,23 @@ resources.</p>
   <ul class="posts">
     
       <li class="related">
-        <a href="/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/">Things not to say and to do in a project meeting</a>
-      </li>
-    
-      <li class="related">
-        <a href="/2012/04/09/prototyping-and-testing-systems/">Prototyping and testing systems</a>
-      </li>
-    
-      <li class="related">
-        <a href="/2012/08/28/taking-vagrant-and-running-with-it/">Taking Vagrant and running with it</a>
-      </li>
-    
-      <li class="related">
         <a href="/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux isn't the only platform to target when building applications</a>
       </li>
     
       <li class="related">
-        <a href="/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/">Thoughts on using the likes of tahoe-lafs and git-annex as a backend storage system for Digital Preservation</a>
+        <a href="/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster/">Going from replicating across OSD's to replicating across hosts in a Ceph cluster</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/09/04/adding-an-osd-to-a-ceph-cluster/">Adding an OSD to a Ceph Cluster</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/">SLURM-Bank that big script for banking in SLURM</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/06/15/installing-git-annex-on-sl5/">Installing git-annex on SL5</a>
       </li>
     
   </ul>
@@ -331,8 +335,8 @@ resources.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/';
-        var disqus_url = 'http://jcftang.github.com/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/';
+        var disqus_identifier = 'http://jcftang.github.com/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs/';
+        var disqus_url = 'http://jcftang.github.com/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs/';
         var disqus_script = 'embed.js';
       
     (function () {
