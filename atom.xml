@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2013-01-02T15:45:14+00:00</updated>
+  <updated>2013-01-06T21:36:10+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -24,8 +24,8 @@
 <id>http://jcftang.github.com/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs</id>
 <category term="linux" /><category term="storage" />
 
-      <content type="html"><![CDATA[<p>Having a few days of time off from work I&#8217;ve committed to migrating my
-archlinux based laptops to using btrfs. I&#8217;ve to date been just using
+      <content type="html"><![CDATA[<p>Having a few days of time off from work I&#39;ve committed to migrating my
+archlinux based laptops to using btrfs. I&#39;ve to date been just using
 ext4 and nilfs2 (on an SD card) on my eeepc and plain old ext4 on the
 bigger laptop.</p>
 
@@ -33,7 +33,7 @@ bigger laptop.</p>
 I felt lucky with doing a major upgrade (replaced sysvinit with systemd
 as recommended by the archlinux people)</p>
 
-<p>I didn&#8217;t want to reinstall my machines so I took the route of converting
+<p>I didn&#39;t want to reinstall my machines so I took the route of converting
 the existing ext4 partitions to btrfs. I left my <em>/boot</em> partition as
 ext2 for safety. Prior to converting to btrfs I had upgraded the two
 laptops to using <a href="https://wiki.archlinux.org/index.php/Grub2">grub2</a>
@@ -42,25 +42,23 @@ archlinux installer image via a usb key. Then just followed the
 <a href="https://wiki.archlinux.org/index.php/Btrfs">btrfs</a> documentation at
 the archlinux wiki.</p>
 
-<p>The process went more smoothly than I had anticipated, I didn&#8217;t run into
+<p>The process went more smoothly than I had anticipated, I didn&#39;t run into
 any major stumbling blocks, that said I did have to free up some space
 for the migration to occur.</p>
 
 <p>Once the systems were back up and running I enabled compression on btrfs
 and defragged the systems</p>
-
-<pre><code>find / -xdev -type f -print -exec btrfs filesystem defrag '{}' \;
-</code></pre>
-
+<div class="highlight"><pre><code class="text">find / -xdev -type f -print -exec btrfs filesystem defrag &#39;{}&#39; \;
+</code></pre></div>
 <p>This compression feature made a huge difference on the space limited
 eeepc, the compression feature reclaimed about 10% of the space on the
-system. It&#8217;s a shame that the RHEL based distros aren&#8217;t quite supporting
+system. It&#39;s a shame that the RHEL based distros aren&#39;t quite supporting
 btrfs yet there are quite a few nice features there that are very
 attractive for pro-consumers and the enterprise. RHEL7 will have btrfs,
 hopefully there will be backports to RHEL6.</p>
 
-<p>Performance wise I haven&#8217;t used the system in anger yet, so time will
-tell if I&#8217;m happy with btrfs or not.</p>
+<p>Performance wise I haven&#39;t used the system in anger yet, so time will
+tell if I&#39;m happy with btrfs or not.</p>
 ]]></content>
     </entry>
   
@@ -76,30 +74,30 @@ tell if I&#8217;m happy with btrfs or not.</p>
 <id>http://jcftang.github.com/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale</id>
 <category term="hpc" /><category term="linux" /><category term="storage" />
 
-      <content type="html"><![CDATA[<p>It was clear at this year&#8217;s supercomputing conference that there wasn&#8217;t
-as much excitement as previous years. There wasn&#8217;t much surprise as
+      <content type="html"><![CDATA[<p>It was clear at this year&#39;s supercomputing conference that there wasn&#39;t
+as much excitement as previous years. There wasn&#39;t much surprise as
 nothing too revolutionary and radical was announced. In the past when
 Bluegene/L and P arrived after the earth simulator there was an arms race
-to being number 1 in the top500 list.  Even things like GPGPU&#8217;s aren&#8217;t
+to being number 1 in the top500 list.  Even things like GPGPU&#39;s aren&#39;t
 as cool anymore, everyone is selling effectively the same systems when
 it comes to clusters. Not everyone has the budget to procure a specialist
-machine like a NEC vector machine, a CRAY, Bluegene/Q etc&#8230;</p>
+machine like a NEC vector machine, a CRAY, Bluegene/Q etc&hellip;</p>
 
 <p>The arms race to the top is just completely crazy, the top 50 or so
 machines are so powerful compared to what a typical university or small
 research lab might have access is too is completely skewed. At our site
-we&#8217;re probably about 0.5% of the top machine. In the past we were about
+we&#39;re probably about 0.5% of the top machine. In the past we were about
 1-2% typically of the top machine, and we were about 5yrs behind the
 curve. The top 500 list should really be renamed to the top 50 list and
 the green 500 list or the HPCC list should be used instead as a measure
 of the top machines in the world. Do people really think that LINPACK
 is a good measure of how powerful a machine is going to be?</p>
 
-<p>What was interesting at this year&#8217;s conference was some of the papers
+<p>What was interesting at this year&#39;s conference was some of the papers
 and panels were focused on project management and data management of
 scientific datasets. I noticed that when people are starting to worry
 about meta-data standards like librarians, people are starting to think
-about archiving the data, they probably haven&#8217;t thought about the access
+about archiving the data, they probably haven&#39;t thought about the access
 component of preservation which will be amusing when they do realise
 it. There is also a disconnect from some of the papers which focused on
 silent data corruption at the storage and network layers. The archiving
@@ -108,7 +106,7 @@ data corruption, malicious users and all that funk that is related to it.</p>
 
 <p>After having a few chats with some vendors during the week, /me eyes
 them vendors. There seems to be a bit of a lack of understanding that
-archiving and preservation of data isn&#8217;t just about bulk, cheap and
+archiving and preservation of data isn&#39;t just about bulk, cheap and
 reliable storage. There are apects to it which require data processing and
 analytics of the data. It seems somewhat pointless to archive data and not
 index it, process it and deliver it to who needs it. At somepoint the data
@@ -152,11 +150,11 @@ to work with both Ubuntu Precise (LTS) and Scientific Linux 6.</p>
 <p>My attempt at doing the above can be found at
 <a href="https://github.com/jcftang/tchpc-vagrant/tree/ansible">tchpc-vagrant</a>
 in the ansible branch. You will need ansible installed on your host
-machine. You don&#8217;t need much installed in the target machine as ansible
+machine. You don&#39;t need much installed in the target machine as ansible
 is designed to login and execute commands as required, this is quite
 refreshing. Compared to puppet and chef, if I were to roll this out
 into production my overhead will be pretty low. This low overhead is
-something that I really like as I don&#8217;t need to setup an infrastructure
+something that I really like as I don&#39;t need to setup an infrastructure
 just to run puppet.</p>
 
 <p>In short I was able to learn how ansible is supposed to work (I think)
@@ -166,8 +164,8 @@ need for to do rails development in a matter of hours.</p>
 <p>One thing that did occur to me was the lack of windows support, given
 that ansible is designed to use ssh to carry out its activities, finding
 stock windows machines which run ssh is pretty slim. This is one area
-which puppet (perhaps chef too) is better at. It&#8217;s also one feature that
-I would like as the vagrant vm&#8217;s that we&#8217;re using in work might be given
+which puppet (perhaps chef too) is better at. It&#39;s also one feature that
+I would like as the vagrant vm&#39;s that we&#39;re using in work might be given
 to windows users for testing and evaluation.</p>
 
 <p>Going forward I think ansible will certainly be in my toolkit. There really is
@@ -187,16 +185,16 @@ a light on the otherside for mangement, deployment and orchestration.</p>
 <id>http://jcftang.github.com/2012/10/27/crowbar-for-deploying-systems</id>
 <category term="linux" />
 
-      <content type="html"><![CDATA[<p>I&#8217;ve been eyeing <a href="https://github.com/dellcloudedge/crowbar">crowbar</a>
+      <content type="html"><![CDATA[<p>I&#39;ve been eyeing <a href="https://github.com/dellcloudedge/crowbar">crowbar</a>
 recently, it looks pretty useful and interesting for deploying servers
-and applications. I haven&#8217;t seen much if at all any documentation out
+and applications. I haven&#39;t seen much if at all any documentation out
 there which suggests that people in the digital preservation and archiving
-fields are implementing systems at scale, I&#8217;m under the impression that
+fields are implementing systems at scale, I&#39;m under the impression that
 most systems/sites are building systems up one piece at a time without
 much automation.</p>
 
 <p>It seems to use <a href="http://www.opscode.com/chef/">chef</a> in the backend for
-all the automation. I&#8217;ve been relearning <a href="http://puppetlabs.com/">puppet</a>
+all the automation. I&#39;ve been relearning <a href="http://puppetlabs.com/">puppet</a>
 recently so that I can have reproducible environments with
 <a href="http://vagrantup.com/">Vagrant</a>.</p>
 
@@ -211,7 +209,7 @@ on the infrastructure itself. Either which way there is still a need
 to automate the fedora-commons, SOLR, mysql and postgres deployments at
 some point.</p>
 
-<p>After all this thinking and pondering, I&#8217;m still using puppet. There&#8217;s
+<p>After all this thinking and pondering, I&#39;m still using puppet. There&#39;s
 still the likes of ansible, cfengine, bcfg2 and juju. There is a never
 ending supply of these tools.</p>
 ]]></content>
@@ -229,13 +227,13 @@ ending supply of these tools.</p>
 <id>http://jcftang.github.com/2012/10/23/ceph-v0-dot-53-released</id>
 <category term="ceph" /><category term="linux" /><category term="storage" />
 
-      <content type="html"><![CDATA[<p>There&#8217;s a new release of Ceph, I hope that they release a stable soon so we can
+      <content type="html"><![CDATA[<p>There&#39;s a new release of Ceph, I hope that they release a stable soon so we can
 do further evaluations of the Ceph storage
 system. A few of my work colleagues are going to the <a href="http://www.inktank.com/news-events/event/ceph-workshops-amsterdam/">Ceph
 workshop</a>
 next week.</p>
 
-<p>I&#8217;m wondering if anyone has taken the CRUSH algorithm and used it in other
+<p>I&#39;m wondering if anyone has taken the CRUSH algorithm and used it in other
 domains.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/10/23/ceph-v0-dot-53-released/">&#9875; Permalink</a></p>]]></content>
     </entry>
@@ -265,14 +263,13 @@ digital preservation and archiving? You go to Hydracamp!</p>
 <li>Day 5 - Hydra-head, Hydra Access Controls</li>
 </ul>
 
-
 <p>Most of the training sessions were hands on from day 1 which was
 refreshing, as it was hands on I getting the most out of the training
 session. It would have been better if I had known more ruby to move
 along some of the exercises more effectively.</p>
 
 <p>To give an overview of what we had done (between ~30 people), we created
-a ruby on rails application titled &#8220;Twitter for Zombies&#8221;. With this small
+a ruby on rails application titled &ldquo;Twitter for Zombies&rdquo;. With this small
 application everybody was frantically committing, pulling, merging and
 pushing code. It was highly informative and a good learning experience
 to see how fast things could move.</p>
@@ -303,9 +300,9 @@ account for Project Hydra and have a peek at the hydracamp repo.</p>
 
       <content type="html"><![CDATA[<p>I shall be going to SC2012 next month, I plan on hitting a few of the
 storage vendors for possible collaborations and flagging to them that
-we&#8217;re on the look out for storage systems. One of the first
-observation that the reader will note is &#8220;where is that link between
-HPC and Digital Preservation and Archiving&#8221;. It&#8217;s probably not obvious
+we&#39;re on the look out for storage systems. One of the first
+observation that the reader will note is &ldquo;where is that link between
+HPC and Digital Preservation and Archiving&rdquo;. It&#39;s probably not obvious
 to most people, one of the big problems in the area of preservation
 and archiving is the the amount of data involved and the varied types
 of data. This is not taking into account of the issues with data
@@ -316,8 +313,8 @@ trusted system, the system will want to read out every single byte
 that was put in to verify that the data is correct at somepoint
 (usually with some form of hashing).</p>
 
-<p>Reading data out and checking that it&#8217;s correct serially probably
-isn&#8217;t the smartest solution. Nor is copying the data into 2-3
+<p>Reading data out and checking that it&#39;s correct serially probably
+isn&#39;t the smartest solution. Nor is copying the data into 2-3
 locations (where each site is maintaining 2-3 copies for backups and
 redundancy). The current and seemingly most popular solutions is to
 dump the data to a few offsite locations (such as S3 or SWIFT)
@@ -328,17 +325,17 @@ storage and data-distribution strategies that some of the bigger
 projects are taking. There has to be a smarter way of storing and
 preserving data without having to make copies of things.</p>
 
-<p>I&#8217;ve often wondered how projects manage to copy/move data across
+<p>I&#39;ve often wondered how projects manage to copy/move data across
 storage providers in a reasonable amount of time without needing to
 wheel a few racks of disks around. It would also be interesting to see
 the error rates of these systems and how often errors are
 corrected. If they are corrected what is the computational cost of
 doing this.</p>
 
-<p>If you have a multi-terabyte archive the problem isn&#8217;t too bad, the
+<p>If you have a multi-terabyte archive the problem isn&#39;t too bad, the
 more typical case these days might be in the order of the low hundreds
 of terabytes. I could only imagine what lager scale sites must deal
-with. I&#8217;m still not a fan of moving a problem from a local site to a
+with. I&#39;m still not a fan of moving a problem from a local site to a
 remote site as it often shows that there is a lack of understanding to
 the problem. Storage in the preservation and archiving domain will
 probably turn into an IO and compute intensive operation at some
@@ -359,16 +356,16 @@ point, especially if you want to do something with the data.</p>
 <category term="hpc" /><category term="linux" />
 
       <content type="html"><![CDATA[<p>A co-worker of mine (Paddy Doyle) had originally hacked at a perl script
-for reporting balances from SLURM&#8217;s accounting system a year or two ago
+for reporting balances from SLURM&#39;s accounting system a year or two ago
 and he had figured out that it might be possible to do some minimalistic
-&#8216;configuration&#8217; and scripting to get a system that&#8217;s very basic but
+&#39;configuration&#39; and scripting to get a system that&#39;s very basic but
 functional.</p>
 
 <p>It was just one of those things that funding agencies wanted to justify
 how the system was being used, GOLD was clunky and obtrusive and
 complicated for what we wanted. Most of all we liked SLURM but not GOLD
 and Maui which was needed to get full accounting and banking (most of
-the features weren&#8217;t used).</p>
+the features weren&#39;t used).</p>
 
 <p>Being good and lazy engineers we got excited with the prospect of having
 the option of replacing SLURM, Maui and GOLD with just plain old SLURM
@@ -379,16 +376,16 @@ old sh/bash scripting with a splash of perl. Replacing two components
 with one meant that we would have less work to do in the long run ;)</p>
 
 <p>After a whole year of running with these scripts and just putting it
-online, I&#8217;ve noticed that there may be a few sites out there that might
+online, I&#39;ve noticed that there may be a few sites out there that might
 be using our scripts and workflows. It would be nice to find out how
 many people are using our implementation of a banking system in SLURM
-and if it&#8217;s driven by sysadmins looking to account for usage or is it
+and if it&#39;s driven by sysadmins looking to account for usage or is it
 funding agencies looking for justification of the usage of a system.</p>
 
 <p>I was going to be at the SLURM User Group Meeting 2012 to give a
 short talk on our experiences with the SLURM-Bank scripts and workflow,
 but sadly I have to be in the US during this meeting and my colleague
-&#8220;Paddy Doyle&#8221; will there instead of me.  I would have liked to go and chat
+&ldquo;Paddy Doyle&rdquo; will there instead of me.  I would have liked to go and chat
 with the developers of SLURM to push for more advanced banking/accounting
 facilities in SLURM itself. Visiting BSC again would have been fun.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/">&#9875; Permalink</a></p>]]></content>
@@ -407,11 +404,11 @@ facilities in SLURM itself. Visiting BSC again would have been fun.</p>
 <category term="ceph" /><category term="linux" /><category term="storage" />
 
       <content type="html"><![CDATA[<p>The latest development branch of Ceph is out with some rather nice
-looking features, what&#8217;s probably the most useful are the RPM builds
+looking features, what&#39;s probably the most useful are the RPM builds
 for those that run RHEL6 like systems.</p>
 
 <p>Still no real sight of backported kernel modules :P Also some of the
-guys in work here just deployed a ~200tb Ceph installation which I&#8217;ve
+guys in work here just deployed a ~200tb Ceph installation which I&#39;ve
 access to a 10tb RBD for doing backups on.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/09/28/ceph-v0-dot-52-released/">&#9875; Permalink</a></p>]]></content>
     </entry>
@@ -434,45 +431,45 @@ collection of hard drives at home, I could have run
 for backup purposes. In fact Tahoe works quite well for the
 technically capable user.</p>
 
-<p>Recently I&#8217;ve decided that I need a more central location at home to
+<p>Recently I&#39;ve decided that I need a more central location at home to
 store my photo collection (I love to take photos with my Canon DSLR
 and Panasonic LX5). Traditionally I would have just fired up
 <a href="http://git-annex.branchable.com/">git-annex</a> to track the data and
 then setup a number of remotes to store the data, where one of them
 might be Tahoe-LAFS and the rest might be portable hard drives, remote
-machines etc&#8230;</p>
+machines etc&hellip;</p>
 
 <p>I could have gone with any number of distributed storage solutions
 such as <a href="http://www.gluster.org/">GlusterFS</a>,
 <a href="http://www.irods.org">iRODS</a>,
 <a href="http://xrootd.slac.stanford.edu/">xrootd</a>,
 <a href="http://wiki.lustre.org/index.php/Main_Page">Lustre</a> or
-<a href="http://www.xtreemfs.org/">xtreemfs</a>. I&#8217;ve worked with some of these
+<a href="http://www.xtreemfs.org/">xtreemfs</a>. I&#39;ve worked with some of these
 systems in production and toyed with others. Since this is for a home
 system I can pick what I want and change it at will.</p>
 
-<p>I probably have 2-3tb&#8217;s of data to archive and store, I also want easy
-access to my data so NFS or CIFS exports are required. It wouldn&#8217;t be
+<p>I probably have 2-3tb&#39;s of data to archive and store, I also want easy
+access to my data so NFS or CIFS exports are required. It wouldn&#39;t be
 unfeasible to acquire a few 2 or 3 terabyte drives for my old desktop
 machine which would effectively provide me with a 2 or 3 terabyte
 replicated data store. Given the amount of toying around and learning
 about Ceph in my spare time I would expect that Ceph would provide me
-with a pretty good &#8220;backend&#8221; system for storing my files and the
-option of &#8220;migrating my data from one machine to another machine&#8221; by
-adding and removing OSD&#8217;s. The handiest feature for me will be the
+with a pretty good &ldquo;backend&rdquo; system for storing my files and the
+option of &ldquo;migrating my data from one machine to another machine&rdquo; by
+adding and removing OSD&#39;s. The handiest feature for me will be the
 capability of expanding and shrinking the system as I need.</p>
 
-<p>There probably aren&#8217;t many people who would want to setup something
+<p>There probably aren&#39;t many people who would want to setup something
 like this for a home system, but it is an alternative to the usual
 RAID or LVM setup.</p>
 
-<p>Here&#8217;s my proposed setup which I&#8217;m going to setup in the next few
+<p>Here&#39;s my proposed setup which I&#39;m going to setup in the next few
 spare weekends that I will have.</p>
 
 <p><img class="" src="http://jcftang.github.com/downloads/images/ceph-home.png"></p>
 
 <p>It would be great if Ceph offered some of of parity/erasure coding
-instead of plain replication. I&#8217;m greedy and I want to maximise my
+instead of plain replication. I&#39;m greedy and I want to maximise my
 disks that I have, I wonder how low I can go on hardware with the Ceph
 software.</p>
 ]]></content>
@@ -490,12 +487,12 @@ software.</p>
 <id>http://jcftang.github.com/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released</id>
 <category term="ceph" /><category term="linux" /><category term="storage" />
 
-      <content type="html"><![CDATA[<p>There&#8217;s a new stable release of Ceph Argonaut, I seem to be having better
+      <content type="html"><![CDATA[<p>There&#39;s a new stable release of Ceph Argonaut, I seem to be having better
 luck with playing with the development releases of Ceph.</p>
 
 <p>Oh how I wish that there was a backport of the kernel ceph and rbd drivers
 for RHEL6, I have a dodgy repo and some reverted commits that one of
-the guys in work told me about. It seems to run but it isn&#8217;t great,
+the guys in work told me about. It seems to run but it isn&#39;t great,
 it can be found at <a href="https://github.com/jcftang/ceph-client-standalone">https://github.com/jcftang/ceph-client-standalone</a>.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released/">&#9875; Permalink</a></p>]]></content>
     </entry>
@@ -512,35 +509,30 @@ it can be found at <a href="https://github.com/jcftang/ceph-client-standalone">h
 <id>http://jcftang.github.com/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster</id>
 <category term="ceph" /><category term="linux" /><category term="storage" />
 
-      <content type="html"><![CDATA[<p>Having learnt how to remove and add monitor&#8217;s, meta-data and data servers (mon&#8217;s, mds&#8217;s
-and osd&#8217;s) for my small two node Ceph cluster. I want to say that it wasn&#8217;t too hard to
+      <content type="html"><![CDATA[<p>Having learnt how to remove and add monitor&#39;s, meta-data and data servers (mon&#39;s, mds&#39;s
+and osd&#39;s) for my small two node Ceph cluster. I want to say that it wasn&#39;t too hard to
 do, the ceph website does have documentation for this.</p>
 
-<p>As the default CRUSH map replicates across OSD&#8217;s I wanted to try replicating data across
+<p>As the default CRUSH map replicates across OSD&#39;s I wanted to try replicating data across
 hosts just to see what would happen. In a real world scenario I would probably treat
 individual hosts in a rack as a failure unit and if I had more than one rack of storage,
 I would want to treat each rack as the minimum unit.</p>
 
 <p>One of the coolest features of ceph is that it allows me to play with different mappings
-and configurations of where my data gets allocated. There aren&#8217;t many (if any) storage
+and configurations of where my data gets allocated. There aren&#39;t many (if any) storage
 systems that I know of which provides this type of capability.</p>
 
-<p>So the steps that I went through to get to what I wanted&#8230;</p>
+<p>So the steps that I went through to get to what I wanted&hellip;</p>
 
-<p>First I had to dump the CRUSH map from my cluster of two nodes and three (very unbalanced OSD&#8217;s so I can play with the weights).</p>
-
-<pre><code>ceph osd getcrushmap -o /tmp/mycrushmap
-</code></pre>
-
+<p>First I had to dump the CRUSH map from my cluster of two nodes and three (very unbalanced OSD&#39;s so I can play with the weights).</p>
+<div class="highlight"><pre><code class="text">ceph osd getcrushmap -o /tmp/mycrushmap
+</code></pre></div>
 <p>The CRUSH map that is created is a binary file it must be decoded to plain text before
 you can edit it.</p>
-
-<pre><code>crushtool -d /tmp/mycrushmap &gt; /tmp/mycrushmap.txt
-</code></pre>
-
-<p>Here&#8217;s the map that is decoded from the binary file</p>
-
-<pre><code># begin crush map
+<div class="highlight"><pre><code class="text">crushtool -d /tmp/mycrushmap &gt; /tmp/mycrushmap.txt
+</code></pre></div>
+<p>Here&#39;s the map that is decoded from the binary file</p>
+<div class="highlight"><pre><code class="text"># begin crush map
 
 # devices
 device 0 osd.0
@@ -618,12 +610,10 @@ rule rbd {
 }
 
 # end crush map
-</code></pre>
-
-<p>The relevant chunks of the config that I&#8217;m interested in is the <strong>rule NAME {}</strong> blocks.
-As I&#8217;m interested in making my data, meta-data and probably my rbd rule replicate across hosts, I naturally made the rule look like this</p>
-
-<pre><code>rule data {
+</code></pre></div>
+<p>The relevant chunks of the config that I&#39;m interested in is the <strong>rule NAME {}</strong> blocks.
+As I&#39;m interested in making my data, meta-data and probably my rbd rule replicate across hosts, I naturally made the rule look like this</p>
+<div class="highlight"><pre><code class="text">rule data {
         ruleset 0
         type replicated
         min_size 1
@@ -632,14 +622,12 @@ As I&#8217;m interested in making my data, meta-data and probably my rbd rule re
         step choose firstn 0 type host
         step emit
 }
-</code></pre>
-
+</code></pre></div>
 <p>The above change is apparently incorrect as the last step before the <em>step emit</em> needs
 to be a device of some sort. I had found this out after posting the ceph-devel mailing
 list. There were two proposed solutions (thanks to Greg from inktank), the first
 proposed rule was</p>
-
-<pre><code>rule data {
+<div class="highlight"><pre><code class="text">rule data {
         ruleset 0
         type replicated
         min_size 1
@@ -649,11 +637,9 @@ proposed rule was</p>
         step choose firstn 1 osd
         step emit
 }
-</code></pre>
-
-<p>Which selects <em>n</em> hosts then the first osd from each host, but it can&#8217;t deal with an entire hosts failed OSD&#8217;s. The second proposed rule was</p>
-
-<pre><code>rule data {
+</code></pre></div>
+<p>Which selects <em>n</em> hosts then the first osd from each host, but it can&#39;t deal with an entire hosts failed OSD&#39;s. The second proposed rule was</p>
+<div class="highlight"><pre><code class="text">rule data {
         ruleset 0
         type replicated
         min_size 1
@@ -662,34 +648,29 @@ proposed rule was</p>
         step chooseleaf firstn 0 type host
         step emit
 }
-</code></pre>
-
-<p>The above rule will select <em>n</em> hosts and an OSD from the host. It&#8217;s pretty obvious that
+</code></pre></div>
+<p>The above rule will select <em>n</em> hosts and an OSD from the host. It&#39;s pretty obvious that
 the second rule is the one that I want. I would expect that if I had more machines in
 racks and rows I could probably just replace host with rack, row or even data-center.</p>
 
 <p>With the second proposed rule, I made the changes to <em>mycrushmap.txt</em>. Once the changes
 are made, I had to compile the map into a binary format that the ceph cluster
 understands, this can be done by</p>
-
-<pre><code>crushtool -c /tmp/mycrushmap.txt -o /tmp/mycrushmap.new
-</code></pre>
-
+<div class="highlight"><pre><code class="text">crushtool -c /tmp/mycrushmap.txt -o /tmp/mycrushmap.new
+</code></pre></div>
 <p>Once the map is compiled it must then be applied to the cluster</p>
-
-<pre><code>ceph osd setcrushmap -i /tmp/mycrushmap.new
-</code></pre>
-
+<div class="highlight"><pre><code class="text">ceph osd setcrushmap -i /tmp/mycrushmap.new
+</code></pre></div>
 <p>The above is documented on the ceph website. Once I applied the new CRUSH map I ran a <em>ceph -w</em> to see that
-the system had detected the changes and it then started to move data around on its own. I&#8217;ll need to play
+the system had detected the changes and it then started to move data around on its own. I&#39;ll need to play
 with pulling out the network cable or SATA cables to see how the system behaves from me causing catastrophic
 failures in the test system.</p>
 
-<p>I&#8217;m pretty sure I took the long way around to making the changes, there must be a more dynamic way of
+<p>I&#39;m pretty sure I took the long way around to making the changes, there must be a more dynamic way of
 changing the system.</p>
 
-<p>To recap and review the above operation, it&#8217;s again no harder than my reference system that I know, which is
-GPFS. GPFS doesn&#8217;t allow me to do what ceph allows me to do. I would however like to see some more visible
+<p>To recap and review the above operation, it&#39;s again no harder than my reference system that I know, which is
+GPFS. GPFS doesn&#39;t allow me to do what ceph allows me to do. I would however like to see some more visible
 documentation relating to the CRUSH configuration parameters and tuneables.</p>
 
 <p>So far this has been a distraction from my main day job, but this will certainly help
@@ -711,17 +692,16 @@ with the project that I am working on in the long run.</p>
 
       <content type="html"><![CDATA[<p>Having created a small single node Ceph cluster with following the <a href="http://ceph.com/docs/master/start/quick-start/">5 minute quickstart</a> guide I was able to create a single node cluster with one OSD.</p>
 
-<p>This probably wouldn&#8217;t be the first post that someone has written about this topic.</p>
+<p>This probably wouldn&#39;t be the first post that someone has written about this topic.</p>
 
-<p>I&#8217;ve verified that it works in my test environment of Scientific Linux
+<p>I&#39;ve verified that it works in my test environment of Scientific Linux
 6 by mounting the system with FUSE.</p>
 
-<p>Here&#8217;s my <em>fstab</em> to describe my disk layout</p>
-
-<pre><code># /etc/fstab
+<p>Here&#39;s my <em>fstab</em> to describe my disk layout</p>
+<div class="highlight"><pre><code class="text"># /etc/fstab
 # Created by anaconda on Fri Jul  6 14:27:56 2012
 #
-# Accessible filesystems, by reference, are maintained under '/dev/disk'
+# Accessible filesystems, by reference, are maintained under &#39;/dev/disk&#39;
 # See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
 #
 /dev/mapper/vg_ceres-lv_root /                     ext4    defaults,user_xattr        1 1
@@ -733,11 +713,9 @@ tmpfs                   /dev/shm                tmpfs   defaults        0 0
 devpts                  /dev/pts                devpts  gid=5,mode=620  0 0
 sysfs                   /sys                    sysfs   defaults        0 0
 proc                    /proc                   proc    defaults        0 0
-</code></pre>
-
+</code></pre></div>
 <p>Running a <em>df -h</em> gives this</p>
-
-<pre><code>$ df -h
+<div class="highlight"><pre><code class="text">$ df -h
 Filesystem            Size  Used Avail Use% Mounted on
 /dev/mapper/vg_ceres-lv_root
                50G  5.5G   42G  12% /
@@ -747,14 +725,12 @@ tmpfs                 938M     0  938M   0% /dev/shm
 ceph-fuse             230G   13G  217G   6% /mnt
 /dev/mapper/vg_ceres-lv_home
               176G  188M  167G   1% /data1
-</code></pre>
-
-<p>I&#8217;m using an old desktop machine so I can plonk some &#8220;files&#8221; on it so I
+</code></pre></div>
+<p>I&#39;m using an old desktop machine so I can plonk some &ldquo;files&rdquo; on it so I
 can dogfood the test system in administering the bits and pieces of Ceph.</p>
 
-<p>Here&#8217;s my current Ceph configuration (before I add a new OSD)</p>
-
-<pre><code>[global]
+<p>Here&#39;s my current Ceph configuration (before I add a new OSD)</p>
+<div class="highlight"><pre><code class="text">[global]
     #auth supported = cephx
     #keyring = /etc/ceph/ceph.keyring
     filestore xattr use omap = true
@@ -775,8 +751,7 @@ can dogfood the test system in administering the bits and pieces of Ceph.</p>
     host = x.y.z.194
     osd data = /data/osd.$id
     osd journal = /data/osd.$id.journal
-</code></pre>
-
+</code></pre></div>
 <p>I was a little caught out by the <em>osd journal</em> setting, I did not realise
 that I needed to set this value if I set a journal size.</p>
 
@@ -784,38 +759,29 @@ that I needed to set this value if I set a journal size.</p>
 <a href="http://ceph.com/docs/master/ops/manage/grow/osd/">http://ceph.com/docs/master/ops/manage/grow/osd/</a>. This involves
 allocating a new OSD id, editting the ceph.conf file, formatting the
 OSD then adjusting the CRUSH map to allocate data to the new OSD.</p>
-
-<pre><code>ceph osd create
+<div class="highlight"><pre><code class="text">ceph osd create
 1
-</code></pre>
-
+</code></pre></div>
 <p>I then added these lines to my ceph.conf file (as this is my test system,
-I&#8217;ve ignored all sensible naming conventions)</p>
-
-<pre><code>[osd.1]
+I&#39;ve ignored all sensible naming conventions)</p>
+<div class="highlight"><pre><code class="text">[osd.1]
     host = x.y.z.194
     osd data = /data$id/osd.$id
     osd journal = /data$id/osd.$id.journal
-</code></pre>
-
+</code></pre></div>
 <p>I then create the directory for osd.1</p>
-
-<pre><code>mkdir /data1/osd.1
-</code></pre>
-
+<div class="highlight"><pre><code class="text">mkdir /data1/osd.1
+</code></pre></div>
 <p>Once the above is done, I need to initialise the osd data directory,
 this can be done with the following command.</p>
-
-<pre><code>ceph-osd -i 1 --mkfs
-</code></pre>
-
+<div class="highlight"><pre><code class="text">ceph-osd -i 1 --mkfs
+</code></pre></div>
 <p>As I am not using any authentication (for now) I do not bother with keys
 and the such.</p>
 
 <p>With the above done, one can verify that the OSD has been added to the
 system by executing the following command</p>
-
-<pre><code># ceph osd tree
+<div class="highlight"><pre><code class="text"># ceph osd tree
 dumped osdmap tree epoch 10
 # id    weight  type name       up/down reweight
 -1      1       pool default
@@ -824,16 +790,12 @@ dumped osdmap tree epoch 10
 0       1                               osd.0   up      1
 
 1       0       osd.1   down    0
-</code></pre>
-
+</code></pre></div>
 <p>Once the osd is in the cluster, it must be added to the CRUSH map. Given the above, the command that I need to execute would be</p>
-
-<pre><code>ceph osd crush set 1 osd.1 1.0 pool=default rack=unknownrack host=x.y.z.194
-</code></pre>
-
+<div class="highlight"><pre><code class="text">ceph osd crush set 1 osd.1 1.0 pool=default rack=unknownrack host=x.y.z.194
+</code></pre></div>
 <p>Running the osd tree command again will show that I have added the OSD to my host</p>
-
-<pre><code># ceph osd tree
+<div class="highlight"><pre><code class="text"># ceph osd tree
 dumped osdmap tree epoch 11
 # id    weight  type name       up/down reweight
 -1      2       pool default
@@ -841,12 +803,10 @@ dumped osdmap tree epoch 11
 -2      2                       host x.y.z.194
 0       1                               osd.0   up      1
 1       1                               osd.1   down    0
-</code></pre>
-
+</code></pre></div>
 <p>However the state is down for <em>osd.1</em>, it must be brought up before it
 is usable. It can be brought up by doing,</p>
-
-<pre><code># service ceph -a start osd
+<div class="highlight"><pre><code class="text"># service ceph -a start osd
 # ceph osd tree
 dumped osdmap tree epoch 13
 # id    weight  type name       up/down reweight
@@ -855,11 +815,9 @@ dumped osdmap tree epoch 13
 -2      2                       host x.y.z.194
 0       1                               osd.0   up      1
 1       1                               osd.1   up      1
-</code></pre>
-
+</code></pre></div>
 <p>If I do a <em>df -h</em> I should see an increase in the space that is available.</p>
-
-<pre><code># df -h
+<div class="highlight"><pre><code class="text"># df -h
 Filesystem            Size  Used Avail Use% Mounted on
 /dev/mapper/vg_ceres-lv_root
                50G  5.5G   42G  12% /
@@ -869,13 +827,12 @@ tmpfs                 938M     0  938M   0% /dev/shm
 ceph-fuse             405G   23G  382G   6% /mnt
 /dev/mapper/vg_ceres-lv_home
                   176G  1.2G  166G   1% /data1
-</code></pre>
-
+</code></pre></div>
 <p>Given that I have in the past administered GPFS and Lustre filesystem
-in production, this doesn&#8217;t look too bad. I don&#8217;t know the system that
+in production, this doesn&#39;t look too bad. I don&#39;t know the system that
 well, but the configuration is pretty sensible and straight forward.</p>
 
-<p>It&#8217;s no harder than GPFS where one needs to create an NSD, then add the
+<p>It&#39;s no harder than GPFS where one needs to create an NSD, then add the
 NSD to a GPFS filesystem, nor is it more harder than just <em>mounting</em>
 and OST in Lustre.</p>
 
@@ -887,19 +844,19 @@ and tidy. However for the less experienced it looks like it might be a
 bit hard to grasp some of the concepts before one can be an effective
 admin of Ceph.</p>
 
-<p>Now that I&#8217;ve gone through the process of adding an OSD to my small test
+<p>Now that I&#39;ve gone through the process of adding an OSD to my small test
 cluster, I think the next thing to try is to play with the CRUSH map to
-see if I can get Ceph replicate data between my OSD&#8217;s even though
+see if I can get Ceph replicate data between my OSD&#39;s even though
 they are on the one machine. I guess the place to look at next is
 <a href="http://ceph.com/wiki/Adjusting_replication_level">http://ceph.com/wiki/Adjusting_replication_level</a></p>
 
 <p>Without getting into the finer details of all this, in GPFS you can only
 have a replica size of 1 or 2 and you can only play with failure groups
-of NSD&#8217;s and nodes. GPFS does a lot to hide things from the admin, this
-is probably a good thing. Lustre doesn&#8217;t allow replicas at all (or
+of NSD&#39;s and nodes. GPFS does a lot to hide things from the admin, this
+is probably a good thing. Lustre doesn&#39;t allow replicas at all (or
 raid1). As powerful as Ceph is, I would imagine at some point someone
-will ask &#8220;can I just have a tool to set the replica count assuming I
-have configured my machines and OSD lists accordingly&#8221;</p>
+will ask &ldquo;can I just have a tool to set the replica count assuming I
+have configured my machines and OSD lists accordingly&rdquo;</p>
 
 <p>However the sysadmin in me just wants documentation as Ceph seems to
 be almost ready for competing against GPFS and Lustre (as well as the
@@ -923,11 +880,11 @@ other parallel and distributed file systems).</p>
 SL6</a> or rather my attempt at
 configuring Ceph for a test failed miserably.</p>
 
-<p>It hasn&#8217;t deterred me to test more. As a result I setup a number of
+<p>It hasn&#39;t deterred me to test more. As a result I setup a number of
 Vagrant Virtual machines and got together a few puppet scripts to
 provision machines.</p>
 
-<p>Here&#8217;s a sample manifest for puppet to automate the deployment of a
+<p>Here&#39;s a sample manifest for puppet to automate the deployment of a
 machine to build Ceph. It requires that you SL6 environment to have at
 least the epel repository enabled.</p>
 
@@ -1010,8 +967,7 @@ least the epel repository enabled.</p>
 </div><div class='line'><span class="p">}</span>
 </div></pre></td></tr></table></div></figure>
 
-
-<p>Here&#8217;s also a sample <em>Vagrantfile</em> to get one started</p>
+<p>Here&#39;s also a sample <em>Vagrantfile</em> to get one started</p>
 
 <figure class='code'><figcaption>Vagrantfile </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div><div data-line='11' class='line-number'></div><div data-line='12' class='line-number'></div><div data-line='13' class='line-number'></div><div data-line='14' class='line-number'></div><div data-line='15' class='line-number'></div><div data-line='16' class='line-number'></div><div data-line='17' class='line-number'></div><div data-line='18' class='line-number'></div><div data-line='19' class='line-number'></div><div data-line='20' class='line-number'></div><div data-line='21' class='line-number'></div><div data-line='22' class='line-number'></div><div data-line='23' class='line-number'></div><div data-line='24' class='line-number'></div><div data-line='25' class='line-number'></div><div data-line='26' class='line-number'></div><div data-line='27' class='line-number'></div><div data-line='28' class='line-number'></div><div data-line='29' class='line-number'></div><div data-line='30' class='line-number'></div><div data-line='31' class='line-number'></div><div data-line='32' class='line-number'></div><div data-line='33' class='line-number'></div><div data-line='34' class='line-number'></div><div data-line='35' class='line-number'></div><div data-line='36' class='line-number'></div><div data-line='37' class='line-number'></div><div data-line='38' class='line-number'></div><div data-line='39' class='line-number'></div><div data-line='40' class='line-number'></div></pre></td><td class='main  ruby'><pre><div class='line'><span class="c1"># -*- mode: ruby -*-</span>
 </div><div class='line'><span class="c1"># vi: set ft=ruby :</span>
@@ -1048,7 +1004,6 @@ least the epel repository enabled.</p>
 </div><div class='line'> </div><div class='line'><span class="k">end</span>
 </div></pre></td></tr></table></div></figure>
 
-
 <p>With the Virtual Machines I was able to download the latest <a href="http://www.ceph.com/download/ceph-0.51.tar.bz2">Ceph
 0.51</a> and do at least
 the following</p>
@@ -1060,18 +1015,17 @@ the following</p>
 <li>execute a <em>rpmbuild -ba ceph.spec</em> to build the source and binary rpm packages for installation</li>
 </ul>
 
-
-<p>After the RPM&#8217;s were built and installed, I again followed the quick
+<p>After the RPM&#39;s were built and installed, I again followed the quick
 guide at <a href="http://ceph.com/docs/master/start/quick-start/">http://ceph.com/docs/master/start/quick-start/</a> and was able
 to setup a small 3 node cluster for playing around with.</p>
 
 <p>So to note, I tried out the cephfs feature (via the fuse module) and
-creating(destroying and resizing) RBD&#8217;s. I haven&#8217;t had a chance to
+creating(destroying and resizing) RBD&#39;s. I haven&#39;t had a chance to
 experiment with the kernel modules to actually do something useful with
-the POSIX filesystem or RBD&#8217;s that Ceph provides.</p>
+the POSIX filesystem or RBD&#39;s that Ceph provides.</p>
 
 <p>It would be worth nothing that the Ceph project are working on providing
-prebuilt RPM&#8217;s soon, there is already a <a href="http://ceph.com/gitbuilder-centos6-rpm-amd64/">gitbuilder instance for the rpm
+prebuilt RPM&#39;s soon, there is already a <a href="http://ceph.com/gitbuilder-centos6-rpm-amd64/">gitbuilder instance for the rpm
 build</a> or just go to their
 <a href="http://ceph.com/gitbuilder.cgi">gitbuilder aggregator</a></p>
 ]]></content>
@@ -1089,7 +1043,7 @@ build</a> or just go to their
 <id>http://jcftang.github.com/2012/09/01/rce-62-ceph-petabyte-scale-storage</id>
 <category term="ceph" /><category term="linux" /><category term="storage" />
 
-      <content type="html"><![CDATA[<p>It&#8217;s somewhat interesting to listen to, we&#8217;ve been looking at
+      <content type="html"><![CDATA[<p>It&#39;s somewhat interesting to listen to, we&#39;ve been looking at
 <a href="http://www.ceph.com/">ceph</a> for a few things in work.</p>
 
 <p>Just jotting this down so I remember to share this with the guys in work.</p>
@@ -1108,15 +1062,15 @@ build</a> or just go to their
 <id>http://jcftang.github.com/2012/08/28/taking-vagrant-and-running-with-it</id>
 <category term="linux" /><category term="osx" /><category term="scm" /><category term="team" />
 
-      <content type="html"><![CDATA[<p>Over past few weeks I&#8217;ve been working on doing some integration and
-testing work to try and deliver a prototype system. I&#8217;ve taken the
+      <content type="html"><![CDATA[<p>Over past few weeks I&#39;ve been working on doing some integration and
+testing work to try and deliver a prototype system. I&#39;ve taken the
 <a href="http://vagrantup.com/">Vagrant</a> tool and puppet to try and deliver
 systems for testing and development. Although the systems that I am
-currently working with aren&#8217;t fully automated, they are automated
+currently working with aren&#39;t fully automated, they are automated
 enough for them to be easily started up by a developer who reads the
 documentation (I hope).</p>
 
-<p>I&#8217;m hoping that by providing these disposable systems that the various
+<p>I&#39;m hoping that by providing these disposable systems that the various
 members in the team that I am working with will be more free to experiment
 and less fearful of breaking the system. At best everyone will take the
 idea on board and run with it as it does provide a common environment
@@ -1130,25 +1084,25 @@ with stakeholders in the project. If our requirements and policy team have
 constant up to date access to our development, testing and QA environment
 along with the executable specifications (in the form of cucumber tests)
 I hope to push forward communications between the stakeholders and the
-team that I&#8217;m working with.</p>
+team that I&#39;m working with.</p>
 
 <p>For now I have one VM for the application itself and a number of
-&#8220;clusters&#8221; of VM&#8217;s which I had used for reviewing some technical
+&ldquo;clusters&rdquo; of VM&#39;s which I had used for reviewing some technical
 documentation, they are partially automated for others to
 play with. Currently these scripts are internal to the project
-only, but it&#8217;s not hard to setup if you know how to configure
+only, but it&#39;s not hard to setup if you know how to configure
 <a href="http://puppetlabs.com/">puppet</a>. Some of the scripts and ideas can
 be found at <a href="https://github.com/jcftang/tchpc-vagrant">tchpc-vagrant</a>,
-they&#8217;re not great, but not bad either. I need more of the developers in
-the team to use what I&#8217;ve setup to evolve the system more for our use.</p>
+they&#39;re not great, but not bad either. I need more of the developers in
+the team to use what I&#39;ve setup to evolve the system more for our use.</p>
 
-<p>In parallel to using this for my day job, I&#8217;ve
+<p>In parallel to using this for my day job, I&#39;ve
 also setup a Vagrantfile for one of my pet projects
 <a href="https://github.com/jcftang/cports">cports</a>. Using Vagrant for testing
-builds and deployments of a packaging system has been great. I&#8217;ve been
+builds and deployments of a packaging system has been great. I&#39;ve been
 able to do clean rebuilds of various packages without fear of completely
 polluting the enviroment, as its just a few commands away from being
-redeployed and provisioned. I&#8217;ll need to play more and then release it
+redeployed and provisioned. I&#39;ll need to play more and then release it
 to the HPC community (or those that care).</p>
 ]]></content>
     </entry>
@@ -1165,23 +1119,23 @@ to the HPC community (or those that care).</p>
 <id>http://jcftang.github.com/2012/08/02/an-excuse-to-learn-ruby-and-ruby-on-rails</id>
 <category term="dri" /><category term="ruby" /><category term="team" />
 
-      <content type="html"><![CDATA[<p>I&#8217;ve been a long time consumer of ruby applications but never quite
+      <content type="html"><![CDATA[<p>I&#39;ve been a long time consumer of ruby applications but never quite
 got around to learning the language and the frameworks that are
 available to developers. Within the team that I have been working
-with, we&#8217;ve been evaluating <a href="http://projecthydra.org">hydra</a> as a
+with, we&#39;ve been evaluating <a href="http://projecthydra.org">hydra</a> as a
 possible framework for our project.</p>
 
-<p>I&#8217;ve been spending the last few days reading
-<a href="http://pragprog.com/book/achbd/the-rspec-book">The RSpec Book</a>, I&#8217;ve
+<p>I&#39;ve been spending the last few days reading
+<a href="http://pragprog.com/book/achbd/the-rspec-book">The RSpec Book</a>, I&#39;ve
 been able to pick up some of the basic syntax of the language from the
 BDD book. As soon as I finish this book I will be moving on to a more
 real world book relating to ruby with the goal of being able to
 develop Ruby and Ruby on Rails applications.</p>
 
-<p>Well, I didn&#8217;t get as far as finishing the RSpec book and I&#8217;ve started
-creating a rubygem. I&#8217;m attempting to expose the insides of
+<p>Well, I didn&#39;t get as far as finishing the RSpec book and I&#39;ve started
+creating a rubygem. I&#39;m attempting to expose the insides of
 <a href="https://tahoe-lafs.org/trac/zfec/">zfec</a>, specifically the
-functionality in <em>fec.c</em>. So far I&#8217;ve been lazy and I am using swig to
+functionality in <em>fec.c</em>. So far I&#39;ve been lazy and I am using swig to
 automatically generate the C to ruby bindings with something like this</p>
 
 <figure class='code'><figcaption>fec.i </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div></pre></td><td class='main  c'><pre><div class='line'><span class="o">%</span><span class="n">module</span> <span class="n">fec</span>
@@ -1194,23 +1148,21 @@ automatically generate the C to ruby bindings with something like this</p>
 </div><div class='line'><span class="kt">void</span> <span class="nf">fec_encode</span><span class="p">(</span><span class="k">const</span> <span class="n">fec_t</span><span class="o">*</span> <span class="n">code</span><span class="p">,</span> <span class="k">const</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">src</span><span class="p">,</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">fecs</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">block_nums</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">num_block_nums</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">sz</span><span class="p">);</span>
 </div></pre></td></tr></table></div></figure>
 
-
-<p>Swig does it&#8217;s thing,</p>
+<p>Swig does it&#39;s thing,</p>
 
 <figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  bash'><pre><div class='line'>swig -ruby fec.i
 </div></pre></td></tr></table></div></figure>
 
-
 <p>Amazingly after some fiddling I got ruby to load up the module. It
-doesn&#8217;t mean that it&#8217;s going to do much though as I need to learn
+doesn&#39;t mean that it&#39;s going to do much though as I need to learn
 about the typemaps in the ruby C interface do the correct mappings.</p>
 
-<p>I&#8217;m so far taking inspiration from the zfec python module to take a
+<p>I&#39;m so far taking inspiration from the zfec python module to take a
 stab at building a ruby equivalent package for the sake of learning
 ruby and maybe even end up with something useful for the project that
 I am working on in work.</p>
 
-<p>After playing with extending ruby, I&#8217;m thinking I may need to take a
+<p>After playing with extending ruby, I&#39;m thinking I may need to take a
 step back and evaluate if this is the best way for me to learn ruby or
 not. I should probably not mess too much extending the language with a
 C library.</p>
@@ -1230,19 +1182,19 @@ C library.</p>
 <category term="osx" /><category term="team" />
 
       <content type="html"><![CDATA[<p>Having discovered <a href="http://vagrantup.com/">vagrant</a> and
-<a href="https://github.com/jedi4ever/veewee">veewee</a> recently at OR2012 I&#8217;ve
-been building a few <em>boxes</em> for our site for testing purposes. I&#8217;ve
-had to relearn puppet to provision machines, but it&#8217;s paying off. I&#8217;ve
+<a href="https://github.com/jedi4ever/veewee">veewee</a> recently at OR2012 I&#39;ve
+been building a few <em>boxes</em> for our site for testing purposes. I&#39;ve
+had to relearn puppet to provision machines, but it&#39;s paying off. I&#39;ve
 been able to deploy 3-4 virtual machines with relative ease.</p>
 
 <p>The only disappointment is the seemingly frequent and semi-random
 kernel panics and crashes that I get on OSX (which is probably caused
-by VirtualBox when I do lots of IO). It&#8217;s making me rethink if I
+by VirtualBox when I do lots of IO). It&#39;s making me rethink if I
 really want to stick with OSX as my primary desktop OS in work. I may
 have to revert back to using Linux at somepoint.</p>
 
 <p>At least in Linux I know how to get a kdump out and debug the issue
-but with OSX I&#8217;m not sure where I should begin to figure out what&#8217;s
+but with OSX I&#39;m not sure where I should begin to figure out what&#39;s
 broken.</p>
 ]]></content>
     </entry>
@@ -1266,22 +1218,22 @@ it was leaveraging lots of free and opensource technology to provide
 repeatable environments for development and testing. I was even more
 impressed by the <a href="https://github.com/jedi4ever/veewee">Veewee</a> project
 which provides some additional wrappers for building custom
-&#8216;boxes&#8217;. Veewee certainly saved me lots of time in setting up some
+&#39;boxes&#39;. Veewee certainly saved me lots of time in setting up some
 updated <a href="http://www.scientificlinux.org/">Scientific Linux</a> boxes
-(it&#8217;s my preferred distro for deployments).</p>
+(it&#39;s my preferred distro for deployments).</p>
 
 <p>In summary Vagrant is a set of scripts to manage virtual machines and
 Veewee is a set of scripts for creating base images for use in
-Vagrant. If you&#8217;re interested in the updated SL6.2 definitions they
+Vagrant. If you&#39;re interested in the updated SL6.2 definitions they
 can be found at my
 <a href="https://github.com/jcftang/veewee/tree/scientificlinux-6.2">fork of veewee</a>.</p>
 
 <p>All that is left now is to setup <a href="http://puppetlabs.com/">puppet</a> and
-have it automatically provision my development/test environment. I&#8217;m
-not a huge fan of puppet, but I guess it&#8217;s better than rolling my own.</p>
+have it automatically provision my development/test environment. I&#39;m
+not a huge fan of puppet, but I guess it&#39;s better than rolling my own.</p>
 
 <p>I look forward to have the capability of having easy access to
-disposable VM&#8217;s for prototyping and testing! I will need to at
+disposable VM&#39;s for prototyping and testing! I will need to at
 somepoint setup a test system for cports with this tool.</p>
 ]]></content>
     </entry>
@@ -1309,13 +1261,13 @@ Repository.</p>
 
 <p>There was also a developer challenge which I decided to enter at the
 last minute, it was both a new and interesting experience at
-presenting something that wasn&#8217;t well prepared to an audience that I
+presenting something that wasn&#39;t well prepared to an audience that I
 had no experience with either. By the way, I was a team of one! I had
 proposed the idea that replicating data can be expensive and bad,
 there are alternatives to just copying files around en-mass and
 storing replicas left right and centre.</p>
 
-<p>I promised I would post some photos, but it seems my photos aren&#8217;t as
+<p>I promised I would post some photos, but it seems my photos aren&#39;t as
 interesting as the ones that other people took. See
 <a href="http://www.flickr.com/groups/or2012/">http://www.flickr.com/groups/or2012/</a>.</p>
 

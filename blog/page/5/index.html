@@ -193,7 +193,7 @@ feature and behavioural testing. Call it what you will, but the basic
 idea is to get a common understanding between the stakeholder, project
 owner and developer to understand what is being built and to write
 automated tests collectively to ensure that it is being
-delivered. This might be a narrow view of the whole area, but I&#8217;m just
+delivered. This might be a narrow view of the whole area, but I&#39;m just
 taking what works for me and using it to deliver the project.</p>
 
 <p>There are <em>many</em> specification/feature/behavioural testing tools out
@@ -209,14 +209,14 @@ specifications or requirements in place.</p>
 for a bigger project and the benefits of writing tests are beginning
 to show. It has become apparent to the interns that have been working
 on this project that <em>testing is a good thing</em>, especially if it can
-be automated. We&#8217;re not quite doing TDD or BDD, but it&#8217;s something
-that is in between, we&#8217;re getting there with a tiered set of tests.</p>
+be automated. We&#39;re not quite doing TDD or BDD, but it&#39;s something
+that is in between, we&#39;re getting there with a tiered set of tests.</p>
 
-<p>We&#8217;re finding that (probably) about 50% of the time of the team is
+<p>We&#39;re finding that (probably) about 50% of the time of the team is
 spent on refactoring, writing tests and documentation. Testing
 combined with the automated builder/tester, the team is writing code
 smarter and better instead of just churning out masses of code which
-isn&#8217;t well tested or documented. Given the choice and based on
+isn&#39;t well tested or documented. Given the choice and based on
 experience I would prefer to have code that is tested and
 documentated, rather than lots of cool half-working and half-tested
 features.</p>
@@ -226,7 +226,7 @@ interns, given how little expertise I have with javascript. The tests
 let me learn how the interns have been putting the prototype together,
 but it also lets me fuzz up the tests to make sure things are working
 and to also write new tests to communicate what I think is needed when
-appropriate. We&#8217;ve somewhat combined minimal QA into the development
+appropriate. We&#39;ve somewhat combined minimal QA into the development
 and testing process.</p>
 
 <p>In the end we hope to have a functional prototype system which does
@@ -297,17 +297,17 @@ work for a large number of projects, we also try and test things as
 much as we can. I first noticed that someone had written an aggregator
 for gitbuilder at <a href="http://ceph.newdream.net/gitbuilder.cgi">ceph
 gitbuilders</a>, this seemed
-like a great idea (and it is) except the aggregator at the time didn&#8217;t
+like a great idea (and it is) except the aggregator at the time didn&#39;t
 quite work very fast and needed some ajax magic.</p>
 
 <p>I had asked for a copy of the aggregator script from the ceph
 developers, this was really just a perl hack as they said, but it
 works. Since we had some students doing an internship here to learn
-new things, I got one of the interns to write an ajax&#8217;d up version of
+new things, I got one of the interns to write an ajax&#39;d up version of
 the aggregator.</p>
 
-<p>After a few weeks worth of usage and minor changes, it&#8217;s a bit more
-ready to share with everyone, the ajax&#8217;d up version of the aggregator
+<p>After a few weeks worth of usage and minor changes, it&#39;s a bit more
+ready to share with everyone, the ajax&#39;d up version of the aggregator
 can be found at my
 <a href="https://github.com/jcftang/gitbuilder/tree/develop/contrib/gitbuilder-ajax">github</a>
 account in the develop branch. For fun I updated the main gitbuilder
@@ -321,7 +321,7 @@ errcache.</p>
 
 <p>At somepoint it might be worth re-implementing the gitbuilder scripts
 in a single language in a generic way such that it works with other
-DVCS&#8217;s that have the bisect feature.</p>
+DVCS&#39;s that have the bisect feature.</p>
 </div>
 
   <footer>
@@ -384,13 +384,13 @@ requirements from the stakeholder in a project with a greenfield for
 development. There is a lot to be said about having a working
 implementation that can be presented and refined.</p>
 
-<p>Sometimes the project that you are working on won&#8217;t have clear
+<p>Sometimes the project that you are working on won&#39;t have clear
 requirements for implementation, so you should probably take basic
 assumed cases and run with it. Starting early to see what works and
-what doesn&#8217;t work is a pragmatic approach which the waterfall crowd
+what doesn&#39;t work is a pragmatic approach which the waterfall crowd
 might not like. But hey, an implementation speaks for itself.</p>
 
-<p>If you don&#8217;t use what you develop, then it is very hard to relate to
+<p>If you don&#39;t use what you develop, then it is very hard to relate to
 the customer/end-user in the long run. On the note of dogfooding your
 own work, sometimes best-practice might cost too much in terms of time
 and money, sometimes good-enough practice might just be enough to
@@ -399,7 +399,7 @@ deliver a functioning product.</p>
 <p>Accelerating development by dogfooding your own work and using
 good-enough practices should increase throughput of development, but
 not necessarily quality. Again in a greenfield project where there
-aren&#8217;t many requirements due to the schedule, it&#8217;s worth taking this
+aren&#39;t many requirements due to the schedule, it&#39;s worth taking this
 approach until hard requirements get delivered.</p>
 </div>
 
@@ -462,12 +462,10 @@ approach until hard requirements get delivered.</p>
 <div class="entry-content"><p>I turned this feature on for a few of my git repos but I had
 completely forgotten about it. As far as I recall the feature has been
 around for a few years now. It can be turned on globally by doing</p>
-
-<pre><code>git config --global rerere.enabled 1
-</code></pre>
-
+<div class="highlight"><pre><code class="text">git config --global rerere.enabled 1
+</code></pre></div>
 <p>It pretty much automates the resolution of conflicts in long lived
-branches. I&#8217;ve been lazy recently and I have just doing merges instead
+branches. I&#39;ve been lazy recently and I have just doing merges instead
 rebasing, which lead me to re-discover <em>git rerere</em>.</p>
 </div>
 
@@ -526,32 +524,28 @@ rebasing, which lead me to re-discover <em>git rerere</em>.</p>
   </header>
 
 <div class="entry-content"><p>For those that care about having related posts on their <a href="">Octopress</a>
-blog. It&#8217;s actually quite easy to turn it on, it&#8217;s nice to have and
-useful. But it&#8217;s not enabled by default in Octopress.</p>
+blog. It&#39;s actually quite easy to turn it on, it&#39;s nice to have and
+useful. But it&#39;s not enabled by default in Octopress.</p>
 
 <p>This feature already exists in jekyll, enabling this feature in
 Octopress is a trival task.</p>
 
 <p>Firstly add this to your <code>_config.yml</code> file</p>
-
-<pre><code>lsi: true
-</code></pre>
-
+<div class="highlight"><pre><code class="text">lsi: true
+</code></pre></div>
 <p>Then create a file such as <code>source/_includes/custom/asides/related.html</code> with the following
 content, add it to one of your asides in <code>_config.yml</code></p>
-
-<pre><code>&lt;section&gt;
+<div class="highlight"><pre><code class="text">&lt;section&gt;
 &lt;h1&gt;Related Posts&lt;/h1&gt;
-&lt;ul class="posts"&gt;
+&lt;ul class=&quot;posts&quot;&gt;
     {% for post in site.related_posts limit:5 %}
-    &lt;li class="related"&gt;
-        &lt;a href="{{ root_url }}{{ post.url }}"&gt;{{ post.title }}&lt;/a&gt;
+    &lt;li class=&quot;related&quot;&gt;
+        &lt;a href=&quot;{{ root_url }}{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;
     &lt;/li&gt;
     {% endfor %}
     &lt;/ul&gt;
 &lt;/section&gt;
-</code></pre>
-
+</code></pre></div>
 <p>It is possible to style the list, but in the above I have chosen to
 keep the same style as the recent posts.</p>
 
@@ -620,7 +614,7 @@ that rb-gsl be installed to accelerate the classification process.</p>
   </header>
 
 <div class="entry-content"><p>This is just a temporary solution till something better or more
-appropriate comes along. It&#8217;s just an ikiwiki news aggregator for
+appropriate comes along. It&#39;s just an ikiwiki news aggregator for
 websites and projects which are related to Digital Preservation,
 Digitial Humanities and other related bits and pieces.</p>
 
@@ -629,7 +623,7 @@ latest happenings. I found myself falling behind in being
 knowledgeable in all things related to <em>Digital Repositories Ireland</em>.</p>
 
 <p>I hope that my team mates will appreciate and contribute to this
-little effort. I don&#8217;t think I&#8217;ve ever come across a Digital
+little effort. I don&#39;t think I&#39;ve ever come across a Digital
 Humanities and Digital Preservation aggregator before.</p>
 </div>
 
@@ -689,16 +683,16 @@ Humanities and Digital Preservation aggregator before.</p>
     
   </header>
 
-<div class="entry-content"><p>In the past few months, in my spare time whenever I get a chance, I&#8217;ve
-been working on a side project in work. It&#8217;s a research project
+<div class="entry-content"><p>In the past few months, in my spare time whenever I get a chance, I&#39;ve
+been working on a side project in work. It&#39;s a research project
 amongst a group of people with a cool idea. The idea is to apply
 neural networks to identifying diseases, populations and traits via
-machine learning/supervised learning. I&#8217;m not entirely sure about the
+machine learning/supervised learning. I&#39;m not entirely sure about the
 application of the technology as to how new or revolutionary it is,
 but it seems sensible that a machine is going to be very good at being
 taught how to recognise patterns so why not do it.</p>
 
-<p>I&#8217;m not directly responsible for the code for this paper, but I did go
+<p>I&#39;m not directly responsible for the code for this paper, but I did go
 back and refactor most of the code in an attempt to make it a little
 presentable to the world and also much faster as a result. I hope that
 the source code will eventually see the light of day.</p>
@@ -712,12 +706,12 @@ this research.</p>
 I will be curious as to what people think. Is it a crazy good or a
 crazy bad idea? The data that is being generated is apparently good,
 though personally I would like to see more analysis being done with
-additional ANN&#8217;s or SVM&#8217;s to verify that it really is working as
+additional ANN&#39;s or SVM&#39;s to verify that it really is working as
 expected.</p>
 
 <p>I wonder if I can convince a CS or a Maths summer student to
 re-implement the algorithm with a different ANN or SVM library. There
-are a rake of ideas that I have that I wouldn&#8217;t mind seeing
+are a rake of ideas that I have that I wouldn&#39;t mind seeing
 implemented. I just need more time!</p>
 </div>
 
@@ -779,9 +773,9 @@ implemented. I just need more time!</p>
 people find. If they are well structured with a purpose and goal then
 a lot can be achieved (most of the time).</p>
 
-<p>For explorartory meetings, it&#8217;s probably okay to have some time set
+<p>For explorartory meetings, it&#39;s probably okay to have some time set
 aside for some free and open discussions. Once a goal has been agreed
-upon, it&#8217;s probably a good idea to focus on it more and steer the
+upon, it&#39;s probably a good idea to focus on it more and steer the
 discussion to try and deliver on the goal. Having open ended
 discussions with no set goals sometimes is discouraging and sometimes
 a waste of time.</p>
@@ -792,32 +786,31 @@ some things that I have noticed in the last few months worth of
 meetings and are based on my own experiences,</p>
 
 <ul>
-<li>Don&#8217;t assume you know everything, there will always be someone
-smarter than you. There&#8217;s nothing wrong with being an expert in your
+<li>Don&#39;t assume you know everything, there will always be someone
+smarter than you. There&#39;s nothing wrong with being an expert in your
 own area, but there are times where you just need to trust others to
 deliver.</li>
-<li>Don&#8217;t pick on other team members for (possibly) not delivering, this
-is hugely demoralising. It&#8217;s better to ask why, and if possible does
+<li>Don&#39;t pick on other team members for (possibly) not delivering, this
+is hugely demoralising. It&#39;s better to ask why, and if possible does
 that team member or members need help to deliver.</li>
 <li>In real life, does anyone really use waterfall methods to deliver a
 project?</li>
-<li>Don&#8217;t try and do micro-management if you are clearly middle or even
+<li>Don&#39;t try and do micro-management if you are clearly middle or even
 senior management, but at least describe tasks in the same language
-as the stakeholder and developer so that things don&#8217;t get lost in
+as the stakeholder and developer so that things don&#39;t get lost in
 translation.</li>
 <li>Do have a plan if the series of meetings are to last a few months if
-there are long term goals to be achieved. If it&#8217;s not a plan, then
+there are long term goals to be achieved. If it&#39;s not a plan, then
 at least have a list of todo, work in progress and done tasks.</li>
-<li>Don&#8217;t assign tasks without deadlines (realistic ones).</li>
-<li>Don&#8217;t assume you are on the same page in discussions unless you are
+<li>Don&#39;t assign tasks without deadlines (realistic ones).</li>
+<li>Don&#39;t assume you are on the same page in discussions unless you are
 confident that everyone at the meeting has common language and
 understands what is being discussed. People come and go, so you just
 have to be aware.</li>
 </ul>
 
-
 <p>Most if not all of the above list of things is common sense, there
-isn&#8217;t anything too special that you need to do to succeed at
+isn&#39;t anything too special that you need to do to succeed at
 communicating.</p>
 </div>
 
@@ -877,20 +870,20 @@ communicating.</p>
     
   </header>
 
-<div class="entry-content"><p>SL6.2 has been out for a few days now, I haven&#8217;t had a chance to
+<div class="entry-content"><p>SL6.2 has been out for a few days now, I haven&#39;t had a chance to
 really take a look at it, since the more recent SL6 installs I
 maintain tend to be tracking the 6x releases. Hopefully SL will try
 and keep inline with the upstreams support schedule.</p>
 
-<p>I&#8217;ve a personal preference for deploying SL over CentOS (or any other
+<p>I&#39;ve a personal preference for deploying SL over CentOS (or any other
 recompiles of RHEL). SL tends to be a bit more polished in terms of
-not breaking older installs, i.e. the upstream doesn&#8217;t move point
+not breaking older installs, i.e. the upstream doesn&#39;t move point
 releases around as CentOS does, SL does not force the end user to run
 the latest stable or continually upgrade to the latest point release
 to get updates (due to the weird convention CentOS seems to have with
 their archives).</p>
 
-<p>It&#8217;s out, I need to look at it again, especially since ZFS is getting
+<p>It&#39;s out, I need to look at it again, especially since ZFS is getting
 closer to being ready for a bit more general usage on the server side
 and the project that I am working will be needing some machines to be
 installed and setup soon.</p>
@@ -957,7 +950,7 @@ installed and setup soon.</p>
 <section>
   <h1>On GitHub</h1>
   <ul id="gh_repos" data-user="jcftang" data-count="0" data-skip="true">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a class="github-follow" href="https://github.com/jcftang">Follow @jcftang</a>
@@ -969,7 +962,7 @@ installed and setup soon.</p>
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets" data-user="jcftang" data-count="4" data-replies="false">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
     <a href="//twitter.com/jcftang" class="twitter-follow-button" data-show-count="false">Follow @jcftang</a>

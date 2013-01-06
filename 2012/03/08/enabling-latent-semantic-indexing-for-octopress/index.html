@@ -122,32 +122,28 @@ Enabling Latent Semantic Indexing for Octopress
   </header>
 
 <div class="entry-content"><p>For those that care about having related posts on their <a href="">Octopress</a>
-blog. It&#8217;s actually quite easy to turn it on, it&#8217;s nice to have and
-useful. But it&#8217;s not enabled by default in Octopress.</p>
+blog. It&#39;s actually quite easy to turn it on, it&#39;s nice to have and
+useful. But it&#39;s not enabled by default in Octopress.</p>
 
 <p>This feature already exists in jekyll, enabling this feature in
 Octopress is a trival task.</p>
 
 <p>Firstly add this to your <code>_config.yml</code> file</p>
-
-<pre><code>lsi: true
-</code></pre>
-
+<div class="highlight"><pre><code class="text">lsi: true
+</code></pre></div>
 <p>Then create a file such as <code>source/_includes/custom/asides/related.html</code> with the following
 content, add it to one of your asides in <code>_config.yml</code></p>
-
-<pre><code>&lt;section&gt;
+<div class="highlight"><pre><code class="text">&lt;section&gt;
 &lt;h1&gt;Related Posts&lt;/h1&gt;
-&lt;ul class="posts"&gt;
+&lt;ul class=&quot;posts&quot;&gt;
     {% for post in site.related_posts limit:5 %}
-    &lt;li class="related"&gt;
-        &lt;a href="{{ root_url }}{{ post.url }}"&gt;{{ post.title }}&lt;/a&gt;
+    &lt;li class=&quot;related&quot;&gt;
+        &lt;a href=&quot;{{ root_url }}{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;
     &lt;/li&gt;
     {% endfor %}
     &lt;/ul&gt;
 &lt;/section&gt;
-</code></pre>
-
+</code></pre></div>
 <p>It is possible to style the list, but in the above I have chosen to
 keep the same style as the recent posts.</p>
 

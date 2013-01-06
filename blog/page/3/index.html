@@ -126,8 +126,8 @@
 
 <div class="entry-content"><p>I only been here for a day and Edinburgh is as nice as I recall it
 was. This time my attendance to Open Repositories 2012 brought me and
-some co-workers of the DRI team to this city. It&#8217;s my first time at
-this event and there seems to be lots of people, so far it&#8217;s been
+some co-workers of the DRI team to this city. It&#39;s my first time at
+this event and there seems to be lots of people, so far it&#39;s been
 pleasant enough apart from the weather.</p>
 
 <p>For those interested in whats happening you should follow the hashtag
@@ -135,7 +135,7 @@ pleasant enough apart from the weather.</p>
 thing was they gave out 8gb USB memory sticks (built into the name
 cards), I thought that was a nice touch.</p>
 
-<p>So far it&#8217;s two thumbs up for the organisers. It&#8217;s only workshops for
+<p>So far it&#39;s two thumbs up for the organisers. It&#39;s only workshops for
 far, I look forward to the poster sessions and other talks which will
 be on. Day 2 will be more workshops and poster sessions, plus a
 keynote.</p>
@@ -196,49 +196,40 @@ keynote.</p>
   </header>
 
 <div class="entry-content"><p>As an exercise of a Friday afternoon of not starting something big before
-heading off to a conference. I&#8217;ve decided to spend an hour or two at
+heading off to a conference. I&#39;ve decided to spend an hour or two at
 seeing how ceph is installed and configured on an SL6 based machine
 (RHEL6 clone).</p>
 
 <p>The install target is just an old desktop running a 64bit install of SL6x,
-so it&#8217;s nothing too fancy.</p>
+so it&#39;s nothing too fancy.</p>
 
 <p>Following the instructions at <a href="http://ceph.com/wiki/Installing_on_RedHat_or_CentOS">http://ceph.com/wiki/Installing_on_RedHat_or_CentOS</a>, I ended up doing this</p>
-
-<pre><code>yum install yum-conf-epel
+<div class="highlight"><pre><code class="text">yum install yum-conf-epel
 yum update
 yum gcc gcc-c++ automake libtool expat expat-devel boost-devel nss-devel cryptopp cryptopp-devel libatomic_ops-devel fuse-devel
 yum install libedit-devel libedit
-</code></pre>
-
+</code></pre></div>
 <p>It seems that the packages <em>cryptopp-devel</em>, <em>cryptopp</em> and <em>expat-devel</em>,
 <em>expat</em> are the only packages pulled in from the epel repository.</p>
 
-<p>Additional libraries and tools include these weren&#8217;t mentioned in the
+<p>Additional libraries and tools include these weren&#39;t mentioned in the
 upstream wiki, the upstream wiki probably needs to be updated.</p>
-
-<pre><code>yum install rpm-build
+<div class="highlight"><pre><code class="text">yum install rpm-build
 yum install libaio-devel libcurl-devel libxml2-devel libuuid-devel keyutils-libs-devel fcgi-devel
-</code></pre>
-
+</code></pre></div>
 <p>I chose to install the newly designated stable branch of ceph 0.48argonaut</p>
-
-<pre><code>wget http://ceph.com/download/ceph-0.48argonaut.tar.bz2
-</code></pre>
-
+<div class="highlight"><pre><code class="text">wget http://ceph.com/download/ceph-0.48argonaut.tar.bz2
+</code></pre></div>
 <p>I also chose to build it in RPM form, in the tarball there is a RPM spec
 file which can be used to create an installable RPM, the following is
 a transcript of what I did to build an installable RPM.</p>
-
-<pre><code>tar xjvf ceph-0.48argonaut.tar.bz2
+<div class="highlight"><pre><code class="text">tar xjvf ceph-0.48argonaut.tar.bz2
 cp ceph-0.48argonaut.tar.bz2 ~/rpmbuild/SOURCES
 rpmbuild -ba ceph-0.48argonaut/ceph.spec
-</code></pre>
-
+</code></pre></div>
 <p>The build will take <em>some</em> time, especially if you are using old
 hardware. I ran into some minor packaging issues,</p>
-
-<pre><code>diff -u ceph.spec.in.orig ceph.spec.in
+<div class="highlight"><pre><code class="text">diff -u ceph.spec.in.orig ceph.spec.in
 --- ceph.spec.in.orig   2012-07-06 15:38:59.298497719 +0100
 +++ ceph.spec.in    2012-07-06 15:39:45.423560177 +0100
 @@ -326,6 +326,8 @@
@@ -250,12 +241,10 @@ hardware. I ran into some minor packaging issues,</p>
 
 #################################################################################
 %files fuse
-</code></pre>
-
-<p>The above change need&#8217;s to be applied to the <em>ceph</em> spec file for the
+</code></pre></div>
+<p>The above change need&#39;s to be applied to the <em>ceph</em> spec file for the
 RPM(s) to build successfully.</p>
-
-<pre><code>ceph-0.48argonaut-6.el6.x86_64.rpm
+<div class="highlight"><pre><code class="text">ceph-0.48argonaut-6.el6.x86_64.rpm
 ceph-devel-0.48argonaut-6.el6.x86_64.rpm
 python-ceph-0.48argonaut-6.el6.x86_64.rpm
 librbd1-0.48argonaut-6.el6.x86_64.rpm
@@ -263,31 +252,25 @@ librados2-0.48argonaut-6.el6.x86_64.rpm
 ceph-radosgw-0.48argonaut-6.el6.x86_64.rpm
 libcephfs1-0.48argonaut-6.el6.x86_64.rpm
 ceph-fuse-0.48argonaut-6.el6.x86_64.rpm
-</code></pre>
-
-<p>I chose to install <em>all</em> the RPM&#8217;s that were generated for educational
+</code></pre></div>
+<p>I chose to install <em>all</em> the RPM&#39;s that were generated for educational
 purposes (used yum instead of the rpm commands so the dependancies are
 sorted out for me), from the <em>rpmbuild/RPMS/x86_64</em> directory</p>
-
-<pre><code>yum install ceph-0.48argonaut-6.el6.x86_64.rpm ceph-devel-0.48argonaut-6.el6.x86_64.rpm ceph-fuse-0.48argonaut-6.el6.x86_64.rpm ceph-radosgw-0.48argonaut-6.el6.x86_64.rpm libcephfs1-0.48argonaut-6.el6.x86_64.rpm librados2-0.48argonaut-6.el6.x86_64.rpm librbd1-0.48argonaut-6.el6.x86_64.rpm python-ceph-0.48argonaut-6.el6.x86_64.rpm
-</code></pre>
-
+<div class="highlight"><pre><code class="text">yum install ceph-0.48argonaut-6.el6.x86_64.rpm ceph-devel-0.48argonaut-6.el6.x86_64.rpm ceph-fuse-0.48argonaut-6.el6.x86_64.rpm ceph-radosgw-0.48argonaut-6.el6.x86_64.rpm libcephfs1-0.48argonaut-6.el6.x86_64.rpm librados2-0.48argonaut-6.el6.x86_64.rpm librbd1-0.48argonaut-6.el6.x86_64.rpm python-ceph-0.48argonaut-6.el6.x86_64.rpm
+</code></pre></div>
 <p>I then simply followed the 5 minute quick start guide at
 <a href="http://ceph.com/docs/master/start/quick-start/">http://ceph.com/docs/master/start/quick-start/</a> to see if ceph would
 start up. There is more documentation at <a href="http://ceph.com/docs/master">http://ceph.com/docs/master</a>
 that I have yet to go through. Perhaps the configuration of ceph can go
 into another post.</p>
 
-<p>To start the cluster after it&#8217;s configured</p>
-
-<pre><code>service ceph -a start
-</code></pre>
-
-<p>However on my test system it&#8217;s currently crashing out with the mds server giving the followin errors</p>
-
-<pre><code>2012-07-06 16:38:17.838055 7f2d6828d700 -1 mds.-1.0 *** got signal Terminated ***
+<p>To start the cluster after it&#39;s configured</p>
+<div class="highlight"><pre><code class="text">service ceph -a start
+</code></pre></div>
+<p>However on my test system it&#39;s currently crashing out with the mds server giving the followin errors</p>
+<div class="highlight"><pre><code class="text">2012-07-06 16:38:17.838055 7f2d6828d700 -1 mds.-1.0 *** got signal Terminated ***
 2012-07-06 16:38:17.838139 7f2d6828d700  1 mds.-1.0 suicide.  wanted down:dne, now up:boot
-2012-07-06 16:38:17.839020 7f2d6828d700 -1 osdc/Objecter.cc: In function 'void Objecter::shutdown()' thread 7f2d6828d700 time 2012-07-06 16:38:17.838156
+2012-07-06 16:38:17.839020 7f2d6828d700 -1 osdc/Objecter.cc: In function &#39;void Objecter::shutdown()&#39; thread 7f2d6828d700 time 2012-07-06 16:38:17.838156
 osdc/Objecter.cc: 221: FAILED assert(initialized)
 
  ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
@@ -303,7 +286,7 @@ osdc/Objecter.cc: 221: FAILED assert(initialized)
     -3&gt; 2012-07-06 16:37:57.786954 7f2d6b496760  0 ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030), process ceph-mds, pid 12537
     -2&gt; 2012-07-06 16:38:17.838055 7f2d6828d700 -1 mds.-1.0 *** got signal Terminated ***
     -1&gt; 2012-07-06 16:38:17.838139 7f2d6828d700  1 mds.-1.0 suicide.  wanted down:dne, now up:boot
-     0&gt; 2012-07-06 16:38:17.839020 7f2d6828d700 -1 osdc/Objecter.cc: In function 'void Objecter::shutdown()' thread 7f2d6828d700 time 2012-07-06 16:38:17.838156
+     0&gt; 2012-07-06 16:38:17.839020 7f2d6828d700 -1 osdc/Objecter.cc: In function &#39;void Objecter::shutdown()&#39; thread 7f2d6828d700 time 2012-07-06 16:38:17.838156
 osdc/Objecter.cc: 221: FAILED assert(initialized)
 
  ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
@@ -340,12 +323,11 @@ osdc/Objecter.cc: 221: FAILED assert(initialized)
  NOTE: a copy of the executable, or `objdump -rdS &lt;executable&gt;` is needed to interpret this.
 
 --- end dump of recent events ---
-</code></pre>
-
-<p>I&#8217;ve logged the error message on the ceph-devel mailing list, I don&#8217;t
+</code></pre></div>
+<p>I&#39;ve logged the error message on the ceph-devel mailing list, I don&#39;t
 have time to poke at this problem right now. I need to recreate this
 scenario in a VM on my laptop so I can play with this on the plane when
-I&#8217;m going to Open Repositories 2012 this weekend.</p>
+I&#39;m going to Open Repositories 2012 this weekend.</p>
 </div>
 
   <footer>
@@ -403,16 +385,16 @@ I&#8217;m going to Open Repositories 2012 this weekend.</p>
   </header>
 
 <div class="entry-content"><p>Having happily running and using both git-annex and tahoe-lafs in the
-past year or so to manage my files and backups. I&#8217;ve been thinking
+past year or so to manage my files and backups. I&#39;ve been thinking
 about plugging in tahoe-lafs as a backend driver for iRODS. I never
 quite got around to doing it properly, I had only gotten the universal
 mass storage driver to talk to tahoe-lafs. I was planning on writing
-an MSO driver for iRODS to talk to tahoe-lafs&#8217;s web-api, but alas I
+an MSO driver for iRODS to talk to tahoe-lafs&#39;s web-api, but alas I
 never got around to it. I need to get some interns to do it next year!</p>
 
-<p>It&#8217;s still highly attractive to have tahoe-lafs at the storage backend
+<p>It&#39;s still highly attractive to have tahoe-lafs at the storage backend
 due to its erasure coding capabilities to maximise a return on
-investment in the storage infrastructure. I&#8217;m not sure if anyone has
+investment in the storage infrastructure. I&#39;m not sure if anyone has
 really tried to use something like tahoe-lafs as a backend for digital
 preservation.</p>
 
@@ -423,23 +405,23 @@ works or not. Personally I would like to see the multi-introducer work
 to be production ready and released, this would hugely increase the
 availability of a tahoe-lafs grid and would mitigate the need for
 trying make one introducer node highly available and redundant and of
-course local network performance could be better. I&#8217;ve never really
+course local network performance could be better. I&#39;ve never really
 been able to get more than 10-20mbit/s out of a download/upload. If my
-transfers are queued up and running in the background it&#8217;s not a major
+transfers are queued up and running in the background it&#39;s not a major
 issue.</p>
 
 <p>Which brings me to git-annex, all the new fancy features that the
-author of git-annex has been adding has been fantastic. I&#8217;ve setup a
-&#8220;target&#8221; which is a tahoe-lafs grid which I use a replica set for one
-of my annex&#8217;d collection of files. It&#8217;s not the fastest thing in the
+author of git-annex has been adding has been fantastic. I&#39;ve setup a
+&ldquo;target&rdquo; which is a tahoe-lafs grid which I use a replica set for one
+of my annex&#39;d collection of files. It&#39;s not the fastest thing in the
 world for transfers but at least I know my data is safe in at least
 two places.</p>
 
 <p>Having used git-annex happily for the past while and being interested
 in the S3 and SWIFT interfaces that git-annex is able to talk to has
-made me wonder if it&#8217;s a good idea to try and create a fedora-commons
+made me wonder if it&#39;s a good idea to try and create a fedora-commons
 backend/remote for git-annex or a real tahoe-lafs backend/remote that
-doesn&#8217;t rely on the general hook system that git-annex already
+doesn&#39;t rely on the general hook system that git-annex already
 has. Also the Internet Archive provides an S3/SWIFT like interface.</p>
 
 <p>Or would it be better to go the other way around and try using
@@ -507,10 +489,10 @@ afternoon after thinking about the OR2012 developer challenge.</p>
     
   </header>
 
-<div class="entry-content"><p>I&#8217;ve been eyeing this Ceph storage system for a while for a number of
+<div class="entry-content"><p>I&#39;ve been eyeing this Ceph storage system for a while for a number of
 potential uses, it looks like its finally ready for production usage.</p>
 
-<p>It is a pitty that the cephfs component isn&#8217;t recommended for
+<p>It is a pitty that the cephfs component isn&#39;t recommended for
 production usage yet. Still, Ceph is really going to shake up the
 distributed storage industry. Having used GPFS, Lustre and a few other
 systems in production in the past, Ceph certainly looks attractive.</p>
@@ -572,12 +554,12 @@ systems in production in the past, Ceph certainly looks attractive.</p>
     
   </header>
 
-<div class="entry-content"><p>I&#8217;ve been happily using <a href="http://www.tahoe-lafs.org">tahoe-lafs</a> for my
-backup needs for a while now in work. It&#8217;s not a huge cluster, but just
+<div class="entry-content"><p>I&#39;ve been happily using <a href="http://www.tahoe-lafs.org">tahoe-lafs</a> for my
+backup needs for a while now in work. It&#39;s not a huge cluster, but just
 a small hive cache from workstations dotted around the lab.</p>
 
 <p>The project recently did a release which fixes a number of bugs and
-issues which has made this software much more pleasant to use. I&#8217;ve
+issues which has made this software much more pleasant to use. I&#39;ve
 also been happily using git-annex to manage my files which reside in
 tahoe-lafs.</p>
 
@@ -639,31 +621,25 @@ or at least convince the git-annex author to write one!</p>
     
   </header>
 
-<div class="entry-content"><p>One of the things that I don&#8217;t like about <a href="http://git-scm.com/">git</a> is
+<div class="entry-content"><p>One of the things that I don&#39;t like about <a href="http://git-scm.com/">git</a> is
 the interface at times can be too geared towards power users. One command
 that I particularly like in <a href="http://mercurial.selenic.com/">mercurial</a>
 is the <em>hg serve</em> command, which is incredibly easy to use.</p>
 
-<p>To do the equivalent of the <em>hg serve</em> in <em>git</em> you can do the following&#8230;</p>
-
-<pre><code>user$ cd my-repo
+<p>To do the equivalent of the <em>hg serve</em> in <em>git</em> you can do the following&hellip;</p>
+<div class="highlight"><pre><code class="text">user$ cd my-repo
 user$ git daemon --export-all --base-path=$(pwd)
-</code></pre>
-
+</code></pre></div>
 <p>The above assumes you are on a trusted network and you want to share
 your repo with people on your LAN and you are in the toplevel directory
-of the repository that you want to temporarily share. If you&#8217;re lazy
-you could do&#8230;</p>
-
-<pre><code>user$ git config --global alias.serve 'daemon --reuseaddr --verbose  --base-path=. --export-all ./.git'
-</code></pre>
-
+of the repository that you want to temporarily share. If you&#39;re lazy
+you could do&hellip;</p>
+<div class="highlight"><pre><code class="text">user$ git config --global alias.serve &#39;daemon --reuseaddr --verbose  --base-path=. --export-all ./.git&#39;
+</code></pre></div>
 <p>Which would place the following (or similar) in your ~/.gitconfig file</p>
-
-<pre><code>[alias]
+<div class="highlight"><pre><code class="text">[alias]
     serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
-</code></pre>
-
+</code></pre></div>
 <p>The above was taken from <a href="https://git.wiki.kernel.org/index.php/Aliases">https://git.wiki.kernel.org/index.php/Aliases</a></p>
 </div>
 
@@ -723,18 +699,18 @@ you could do&#8230;</p>
     
   </header>
 
-<div class="entry-content"><p>I&#8217;ve been following the development of the new <em>git-annex assistant</em>
+<div class="entry-content"><p>I&#39;ve been following the development of the new <em>git-annex assistant</em>
 work that Joey Hess has been working on over the past few weeks. Even
 in this early state of development, it is slowly becoming more usable
 and accessible for less technical users.</p>
 
 <p>As soon as as the
-<a href="http://git-annex.branchable.com/bugs/Issue_on_OSX_with_some_system_limits/">issues with the limitations of <em>kqueue</em> and OSX&#8217;s silly limits</a>
+<a href="http://git-annex.branchable.com/bugs/Issue_on_OSX_with_some_system_limits/">issues with the limitations of <em>kqueue</em> and OSX&#39;s silly limits</a>
 are resolved (without the need for a user to do a <em>sysctl -w
 WHATEVER</em>) it will be pretty cool.</p>
 
-<p>I&#8217;ve been throwing small batches of data at a newly setup <em>annex</em>&#8216;d
-repository and it&#8217;s been handling it well enough for me to constantly
+<p>I&#39;ve been throwing small batches of data at a newly setup <em>annex</em>&#39;d
+repository and it&#39;s been handling it well enough for me to constantly
 test the various development branch. Kudos to Joey for being so
 responsive to fixing bugs during development.</p>
 
@@ -799,17 +775,17 @@ the development of this cool tool</p>
     
   </header>
 
-<div class="entry-content"><p>I feel lucky and living on the edge and I&#8217;ve recently decided to take
+<div class="entry-content"><p>I feel lucky and living on the edge and I&#39;ve recently decided to take
 a preview of the 2.1 branch of octopress. So far Octopress has been
-pretty good, it&#8217;s been a refreshing change to the usual ikiwiki system
+pretty good, it&#39;s been a refreshing change to the usual ikiwiki system
 that I prefer. This experiment has worked out not too bad for me given
 how much I like ikiwiki for most of if not all of my other little
 websites and documentation sites.</p>
 
-<p>It&#8217;s not quite there yet, there a few theme issues which are probably
+<p>It&#39;s not quite there yet, there a few theme issues which are probably
 to be fixed. At least if I adopt it now there will be less conflicts
 for me to resolve later on. Out of all the features that 2.1 will
-bring that I like the most is the linklog feature. I&#8217;ve been using the
+bring that I like the most is the linklog feature. I&#39;ve been using the
 linklog feature for a few months now and it works pretty well.</p>
 </div>
 
@@ -869,8 +845,8 @@ linklog feature for a few months now and it works pretty well.</p>
     
   </header>
 
-<div class="entry-content"><p>The Top 500 List is out! It&#8217;s been no surprise that LLNL and IBM has
-reclaimed the top spot. There is some pretty cool tech that&#8217;s going to
+<div class="entry-content"><p>The Top 500 List is out! It&#39;s been no surprise that LLNL and IBM has
+reclaimed the top spot. There is some pretty cool tech that&#39;s going to
 come out of these systems which the HPC community should be rubbing
 their hands over.</p>
 
@@ -938,7 +914,7 @@ these big systems as well as <a href="http://www.whamcloud.com">Lustre</a> and
 git-annex on a SL5 based machine. SL5 is just an opensource
 clone/recompile of RHEL5.</p>
 
-<p>I haven&#8217;t tried to install the newer versions of Haskell Platform and
+<p>I haven&#39;t tried to install the newer versions of Haskell Platform and
 GHC in a while on SL5 to instal git-annex. But the last time I checked
 when GHC7 was out, it was a pain to install GHC on SL5.</p>
 
@@ -947,45 +923,37 @@ packaging up GHC and Haskell Platform for RHEL based distros.</p>
 
 <ul>
 <li><a href="http://justhub.org/download">http://justhub.org/download</a> - Packaged GHC and Haskell Platform
-RPM&#8217;s for RHEL based systems.</li>
+RPM&#39;s for RHEL based systems.</li>
 </ul>
 
-
-<p>I&#8217;m primarily interested in installing <em>git-annex</em> on SL5 based
-systems. The installation process goes as such&#8230;</p>
+<p>I&#39;m primarily interested in installing <em>git-annex</em> on SL5 based
+systems. The installation process goes as such&hellip;</p>
 
 <p>First install GHC and Haskell Platform (you need root for these
 following steps)</p>
-
-<pre><code>$ wget http://sherkin.justhub.org/el5/RPMS/x86_64/justhub-release-2.0-4.0.el5.x86_64.rpm
+<div class="highlight"><pre><code class="text">$ wget http://sherkin.justhub.org/el5/RPMS/x86_64/justhub-release-2.0-4.0.el5.x86_64.rpm
 $ rpm -ivh justhub-release-2.0-4.0.el5.x86_64.rpm
 $ yum install haskell
-</code></pre>
-
-<p>The RPM&#8217;s don&#8217;t place the files in /usr/bin, so you must add the
-following to your .bashrc (from here on you don&#8217;t need root if you
-don&#8217;t want things to be system wide)</p>
-
-<pre><code>$ export PATH=/usr/hs/bin:$PATH
-</code></pre>
-
+</code></pre></div>
+<p>The RPM&#39;s don&#39;t place the files in /usr/bin, so you must add the
+following to your .bashrc (from here on you don&#39;t need root if you
+don&#39;t want things to be system wide)</p>
+<div class="highlight"><pre><code class="text">$ export PATH=/usr/hs/bin:$PATH
+</code></pre></div>
 <p>On SL5 pcre is at version 6.6 which is far too old for one of the
 dependancies that git-annex requires. Therefore the user must install
 an updated version of <em>pcre</em> either from source or another method, I
 chose to install it from source and by hand into /usr/local</p>
-
-<pre><code>$ wget http://sourceforge.net/projects/pcre/files/pcre/8.30/pcre-8.30.tar.gz/download
+<div class="highlight"><pre><code class="text">$ wget http://sourceforge.net/projects/pcre/files/pcre/8.30/pcre-8.30.tar.gz/download
 $ tar zxvf pcre-8.30.tar.gz
 $ cd pcre-8.30
 $ ./configure
 $ make &amp;&amp; make install
-</code></pre>
-
+</code></pre></div>
 <p>Once the packages are installed and are in your execution path, using
 cabal to configure and build git-annex just makes life easier, it
 should install all the needed dependancies.</p>
-
-<pre><code>$ cabal update
+<div class="highlight"><pre><code class="text">$ cabal update
 $ cabal install pcre-light --extra-include-dirs=/usr/local/include
 $ git clone git://git.kitenet.net/git-annex
 $ cd git-annex
@@ -993,25 +961,22 @@ $ make git-annex.1
 $ cabal configure
 $ cabal build
 $ cabal install
-</code></pre>
-
+</code></pre></div>
 <p>Or if you want to install it globallly for everyone (otherwise it will
 get installed into $HOME/.cabal/bin)</p>
-
-<pre><code>$ cabal install --global
-</code></pre>
-
+<div class="highlight"><pre><code class="text">$ cabal install --global
+</code></pre></div>
 <p>The above will take a while to compile and install the needed
 dependancies. I would suggest any user who does should run the tests
 that comes with git-annex to make sure everything is functioning as
 expected.</p>
 
-<p>I wonder if it&#8217;s possible to get git-annex as a back-end driver for
+<p>I wonder if it&#39;s possible to get git-annex as a back-end driver for
 some of the digital preservation systems out there. Or more
 interestingly can fedora-commons be used a special remote or back-end
 for git-annex.</p>
 
-<p>I haven&#8217;t had a chance or need to install git-annex on a SL6 based
+<p>I haven&#39;t had a chance or need to install git-annex on a SL6 based
 system yet, but I would assume something similar to the above steps
 would be required to do so.</p>
 </div>
@@ -1077,7 +1042,7 @@ would be required to do so.</p>
 <section>
   <h1>On GitHub</h1>
   <ul id="gh_repos" data-user="jcftang" data-count="0" data-skip="true">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a class="github-follow" href="https://github.com/jcftang">Follow @jcftang</a>
@@ -1089,7 +1054,7 @@ would be required to do so.</p>
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets" data-user="jcftang" data-count="4" data-replies="false">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
     <a href="//twitter.com/jcftang" class="twitter-follow-button" data-show-count="false">Follow @jcftang</a>

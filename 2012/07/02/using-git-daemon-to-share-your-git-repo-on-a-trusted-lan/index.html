@@ -121,31 +121,25 @@ Using Git-daemon to Share Your Git Repo on a Trusted LAN
     
   </header>
 
-<div class="entry-content"><p>One of the things that I don&#8217;t like about <a href="http://git-scm.com/">git</a> is
+<div class="entry-content"><p>One of the things that I don&#39;t like about <a href="http://git-scm.com/">git</a> is
 the interface at times can be too geared towards power users. One command
 that I particularly like in <a href="http://mercurial.selenic.com/">mercurial</a>
 is the <em>hg serve</em> command, which is incredibly easy to use.</p>
 
-<p>To do the equivalent of the <em>hg serve</em> in <em>git</em> you can do the following&#8230;</p>
-
-<pre><code>user$ cd my-repo
+<p>To do the equivalent of the <em>hg serve</em> in <em>git</em> you can do the following&hellip;</p>
+<div class="highlight"><pre><code class="text">user$ cd my-repo
 user$ git daemon --export-all --base-path=$(pwd)
-</code></pre>
-
+</code></pre></div>
 <p>The above assumes you are on a trusted network and you want to share
 your repo with people on your LAN and you are in the toplevel directory
-of the repository that you want to temporarily share. If you&#8217;re lazy
-you could do&#8230;</p>
-
-<pre><code>user$ git config --global alias.serve 'daemon --reuseaddr --verbose  --base-path=. --export-all ./.git'
-</code></pre>
-
+of the repository that you want to temporarily share. If you&#39;re lazy
+you could do&hellip;</p>
+<div class="highlight"><pre><code class="text">user$ git config --global alias.serve &#39;daemon --reuseaddr --verbose  --base-path=. --export-all ./.git&#39;
+</code></pre></div>
 <p>Which would place the following (or similar) in your ~/.gitconfig file</p>
-
-<pre><code>[alias]
+<div class="highlight"><pre><code class="text">[alias]
     serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
-</code></pre>
-
+</code></pre></div>
 <p>The above was taken from <a href="https://git.wiki.kernel.org/index.php/Aliases">https://git.wiki.kernel.org/index.php/Aliases</a></p>
 </div>
 

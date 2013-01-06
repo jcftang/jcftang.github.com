@@ -126,19 +126,19 @@
 
 <div class="entry-content"><p>At the time of writing it seems that the Raspberry Pi site is down,
 probably suffering from a slashdot effect. I would imagine almost
-every nerd, sheevaplug developer, OLPC developer, DIY&#8217;ers who want to
+every nerd, sheevaplug developer, OLPC developer, DIY&#39;ers who want to
 build their own home media centres are looking to get a Raspberry Pi
 right now.</p>
 
 <p>So what would I use one of these mini-computers for? I can think up a
 range of cool applications for this device, assuming I can order a few
-of these to play with. I&#8217;ve got ideas such as:</p>
+of these to play with. I&#39;ve got ideas such as:</p>
 
 <ul>
-<li>A Tahoe-LAFS storage node, I could attach a few HDD&#8217;s to one of these
+<li>A Tahoe-LAFS storage node, I could attach a few HDD&#39;s to one of these
 devices and run Tahoe-LAFS on it, these computers are cheap enough
 and have a low enough power consumption that I could just have them
-on all the time.</li>
+on all the time.<br></li>
 <li>A Babeld node, I could have a few of these devices dotted around my
 house/apartment to build a mesh network.</li>
 <li>A portable computer, not quite a tablet PC with a screen, but it has
@@ -148,7 +148,6 @@ batteries, plug in a wireless card, wrap it up in a water proof
 package. Power on, and see how far you can throw it at your target,
 I can see endless possibilities for this device for pen-testing.</li>
 </ul>
-
 
 <p>I wonder if the device will ever be able to be powered via the USB
 port or the the ethernet port. I can see some interesting uses for
@@ -183,7 +182,7 @@ consumption and a host of other things.</p>
   <header>
     <h1 class="entry-title">
 
-<a href="/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux Isn&#8217;t the Only Platform to Target When Building Applications</a>
+<a href="/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux Isn't the Only Platform to Target When Building Applications</a>
 
 </h1>
 
@@ -211,22 +210,22 @@ consumption and a host of other things.</p>
   </header>
 
 <div class="entry-content"><p>Why would one want to target other platforms when building applications
-on the server side?</p>
+on the server side? </p>
 
 <p>This came out of a conversation with the ex-CTO of Creme software (he
 is also a friend of mine), the conversation started out with why I
-like to use Macs and OSX as my laptop or workstation. I&#8217;ve been a long
+like to use Macs and OSX as my laptop or workstation. I&#39;ve been a long
 time Linux user of pretty much most of the major distributions ranging
 from RHEL, Debian/Ubuntu, Gentoo, ArchLinux as well as a number of
-other derivatives, not to mention other systems like the BSD&#8217;s which I
-have a soft spot for.</p>
+other derivatives, not to mention other systems like the BSD&#39;s which I
+have a soft spot for. </p>
 
 <p>I interchange the terms Linux and Distros quite a bit in this post.</p>
 
-<p>Some of the things that didn&#8217;t like with the Linux&#8217;s was that not all
-my hardware would be supported all the time, the distro&#8217;s sometimes
-think that it&#8217;s a good idea to completely change how lowlevel systems
-work in favour of <em>what&#8217;s hot right now</em>, sometimes the lack of long
+<p>Some of the things that didn&#39;t like with the Linux&#39;s was that not all
+my hardware would be supported all the time, the distro&#39;s sometimes
+think that it&#39;s a good idea to completely change how lowlevel systems
+work in favour of <em>what&#39;s hot right now</em>, sometimes the lack of long
 term support for security updates (not package updates to fix security
 problems) does make it more difficult to plan and deploy. The
 perceived flexibility sometimes causes headaches with migration plans
@@ -237,7 +236,7 @@ and packaging to fix and redeploy packages. The stability and
 reliability that can be achieved is attractive if everything is
 automated and planned out (though too much automation can be bad too).</p>
 
-<p>To get back to the original point of why you wouldn&#8217;t want to target
+<p>To get back to the original point of why you wouldn&#39;t want to target
 Linux specifically when building applications? Unless you have a
 strong motivating reason to write code that <em>specifically</em> requires a
 feature of Linux (or any other operating system), then you really
@@ -251,16 +250,16 @@ underlying system, and if your code is tied down to particular
 features of the underlying system then you will have lots of fun
 migrating.</p>
 
-<p>It&#8217;s just bad practice to rely on system specific behaviour which
-isn&#8217;t portable (or maintainable) going forward in a project. To
+<p>It&#39;s just bad practice to rely on system specific behaviour which
+isn&#39;t portable (or maintainable) going forward in a project. To
 mitigate some of this, one would want to at least try to use a
 continuous build systems such as <em>gitbuilder</em>, <em>buildbot</em> or <em>jenkins</em>
 on a bunch of <strong>different</strong> architectures and platforms. This will
 reveal portability issues and more often than not, subtle bugs in your
-code which you probably didn&#8217;t see as a result of your development
+code which you probably didn&#39;t see as a result of your development
 system being too smart for you!</p>
 
-<p>There isn&#8217;t much of an excuse not to do continuous builds and testings
+<p>There isn&#39;t much of an excuse not to do continuous builds and testings
 across different Linux, BSD and Solaris distributions these
 days. Diskspace and compute power is cheap, there are free and
 opensource virtualisation technologies out there to provide you with a
@@ -330,23 +329,23 @@ minimal changes needed when a new platform arises.</p>
     
   </header>
 
-<div class="entry-content"><p>I&#8217;ve talked about <em>cports</em> in the past, it&#8217;s basically a collection of
+<div class="entry-content"><p>I&#39;ve talked about <em>cports</em> in the past, it&#39;s basically a collection of
 <em>makefiles</em> which mostly automates the process of downloading,
 configuring, building and installing applications and libraries for
 High Performance Computing systems that use environment-modules.</p>
 
 <p>One of the key-features that <em>cports</em> offers is the automated
 modulefile generation, and the fact that the <em>makefiles</em> acts as
-documentation to how software is configured, built and installed. It&#8217;s
+documentation to how software is configured, built and installed. It&#39;s
 currently being used on the clusters at my work place, it has been a
-boost to the productivity of the systems admin team. It&#8217;s a nice
-alternative to trying to create RPM&#8217;s or DEB&#8217;s (pick your custom
+boost to the productivity of the systems admin team. It&#39;s a nice
+alternative to trying to create RPM&#39;s or DEB&#39;s (pick your custom
 package manager of choice here), as <em>makefiles</em> tend to be a little
 more flexible than traditional package managers.</p>
 
 <p>One main drawback of the <em>cports</em> system right now is the lack of good
 dependancy management and checking, it is all currently up to the
-packager to resolve these dependancy issues. It&#8217;s also <em>cports</em>
+packager to resolve these dependancy issues. It&#39;s also <em>cports</em>
 strongest point that there is no dependancy management, as the
 packager can build many unique trees of packages.</p>
 
@@ -390,11 +389,10 @@ packager can build many unique trees of packages.</p>
 </div><div class='line'>    python setup.py test
 </div><div class='line'> </div><div class='line'>include ../../../mk/gnu.post.mk</div></pre></td></tr></table></div></figure>
 
-
 <p>In this example, as Tahoe-LAFS (upstream project) gets updated, the
 cports packager just needs to copy this makefile to a new directory,
 update the version numbers, then do a <em>make install</em>. This assumes
-that the dependancies haven&#8217;t changed much, if they have it is trivial
+that the dependancies haven&#39;t changed much, if they have it is trivial
 to update the dependancies. The above example generates a modulefile
 similar to like this,</p>
 
@@ -419,7 +417,6 @@ similar to like this,</p>
 </div><div class='line'>prepend-path   PYTHONPATH /home/support/apps/cports/rhel-5.x86_64/gnu/allmydata-tahoe/1.9.0-SUMO/lib
 </div><div class='line'>/python2.6/site-packages</div></pre></td></tr></table></div></figure>
 
-
 <p>Once the package has been built and tested on a development system, we
 can take the package and replicate the installation in fairly
 automated fashion. This type of scripting and automation means that
@@ -430,7 +427,7 @@ applications.</p>
 about the naming conventions. This in turn reduces the confusion and
 documentation that is needed for the end user.</p>
 
-<p>Sadly, I don&#8217;t get to play with <em>cports</em> as much as I used to, since I
+<p>Sadly, I don&#39;t get to play with <em>cports</em> as much as I used to, since I
 do not administrate High Performance Computing systems anymore in my
 new role at my current work place. It is just a hobby to develop this
 build system, I plan on automating more testing of the <em>cports</em> system
@@ -438,7 +435,7 @@ when I get a chance. We currently have <em>jenkins</em> and <em>gitbuilder</em>
 running on select machines in work to continually build and test
 specific packages to find regressions and broken download links.</p>
 
-<p><em>cports</em> isn&#8217;t quite ready for general public usage, but if you are a
+<p><em>cports</em> isn&#39;t quite ready for general public usage, but if you are a
 clued in systems administrator at a High Performance Computing
 facility and use environment-module then <em>cports</em> is just about
 usable. This is of course if you are willing to look at the sample
@@ -501,13 +498,13 @@ packages and write <em>makefiles</em>.</p>
     
   </header>
 
-<div class="entry-content"><p>It&#8217;s all over the internet that RHEL6 and newer releases will have a
+<div class="entry-content"><p>It&#39;s all over the internet that RHEL6 and newer releases will have a
 life cycle of 10yrs. This is pretty good news for projects that are
 deploying systems that have a lifetime of 5yrs or more. Namely Digital
 Preservation projects, not having to worry about migration between
 point releases of an operating system platform reduces time and costs.</p>
 
-<p>I&#8217;m now more likely to target the systems we develop in work towards a
+<p>I&#39;m now more likely to target the systems we develop in work towards a
 RHEL system (or a RHEL like clone).</p>
 
 <p>Another side effect of this long term support is that it will probably
@@ -515,8 +512,8 @@ make life easier for those who have lots of virtual machines running
 RHEL. Longer support means less issues with continually migrating
 between point releases. From a practical point of view of a
 operational sysadmin, this is great. From a developers point of view,
-it&#8217;s also not bad either, software written now (assuming the
-requirements haven&#8217;t changed) will probably work long into the future.</p>
+it&#39;s also not bad either, software written now (assuming the
+requirements haven&#39;t changed) will probably work long into the future.</p>
 
 <p>Note: I am not a RHEL (Fedora) fanboy, I used to sysadmin a few
 hundred RHEL (scientific linux) based systems. Before that, I used to
@@ -582,7 +579,7 @@ well defined and well understood. At least from my own experiences of
 putting things together, but realistically to think of all possible
 scenarios and to write up all the possible solutions to the problem
 seems a little bit wacky. To also assume that the requirements process
-has captured requirements that won&#8217;t change close the end of the
+has captured requirements that won&#39;t change close the end of the
 project is also a little unreasonable or unrealistic, this would be
 especially true on a project that is planned to run for a few years
 with fairly substantial goals in an ever changing research and
@@ -598,13 +595,13 @@ plan and it requires real collaboration, delegation of tasks and
 trust to work towards a common goal. People get afraid perhaps?</p>
 
 <p>The trick is communication and trying to introduce agile methods
-slowly and steadily into the system. I&#8217;ve been slowly introducing the
+slowly and steadily into the system. I&#39;ve been slowly introducing the
 idea of pairings, sprints and elements of scrum with kanban (yes,
-that&#8217;s lots of buzz words there already). Getting people to agree to
-talk is probably the hardest thing to do, and it&#8217;s even harder to try
-and get everyone on the same page without ego&#8217;s getting in the way.</p>
+that&#39;s lots of buzz words there already). Getting people to agree to
+talk is probably the hardest thing to do, and it&#39;s even harder to try
+and get everyone on the same page without ego&#39;s getting in the way.</p>
 
-<p>It&#8217;s paying off a little for now, the team members are beginning to at
+<p>It&#39;s paying off a little for now, the team members are beginning to at
 least talk and exchange ideas. In my world that is a huge step
 already. Next is it try getting things done by prioritising tasks and
 resources.</p>
@@ -665,17 +662,17 @@ resources.</p>
   </header>
 
 <div class="entry-content"><p>Apart from the obvious unit testing code which could be fun trying to
-convince a team to use. There are things known as &#8216;Continuous
-Integration&#8217; processes and servers. The basic idea is to continually
+convince a team to use. There are things known as &#39;Continuous
+Integration&#39; processes and servers. The basic idea is to continually
 build and test your product automatically and report on successful and
 failed builds.</p>
 
-<p>I&#8217;ve known about this methodology for long time now but I&#8217;ve never
+<p>I&#39;ve known about this methodology for long time now but I&#39;ve never
 bothered to install a CI server since it was always for myself. In the
 past a loop in a shell script running make and or make test usually
 did the trick. Then I discovered gitbuilder which is just a small set
 of scripts for automating the process. Today I have Jenkins installed
-and I&#8217;m somewhat looking at buildbot as well.</p>
+and I&#39;m somewhat looking at buildbot as well.</p>
 
 <p>Jenkins appears to be the most responsive and feature rich of the
 three systems that I have played with. Buildbot looks lightweight and
@@ -688,7 +685,7 @@ difficult. Any tool that I can get my hands on to encourage
 collaborative work and discussion is going to be used.</p>
 
 <p>Automating the build and test process also means that it is possible
-to automate the release process. If all the &#8216;tests&#8217; pass then why not
+to automate the release process. If all the &#39;tests&#39; pass then why not
 release it? I will need to look at integrating things with fitnesse
 next. Other benefits from using a CI process or server means that most
 if not all things get automated, this turns into a highly valuable
@@ -696,13 +693,13 @@ source of documentation for incoming developers and
 engineers. Documentation often gets left to the end instead of being
 done on a continual basis as the project progresses.</p>
 
-<p>Hopefully the CI server won&#8217;t be used to name and shame developers in
-the group, it&#8217;s there to make sure everything is working as expected.</p>
+<p>Hopefully the CI server won&#39;t be used to name and shame developers in
+the group, it&#39;s there to make sure everything is working as expected.</p>
 
 <p>Now to convince the team that building early and continually is
 actually a good idea! Having somewhat successfully kicked off some
 pairing sessions with various team members is good, but being more
-flexible and professional about what we are building is what I&#8217;m
+flexible and professional about what we are building is what I&#39;m
 after.</p>
 </div>
 
@@ -762,7 +759,7 @@ after.</p>
 
 <div class="entry-content"><p>Everytime when I install, reinstall or setup a mac desktop or laptop I
 always tend to install the same set of software that I was using. As time
-goes on I change what I like to install and what to use. So I&#8217;ve been
+goes on I change what I like to install and what to use. So I&#39;ve been
 keeping notes and logs of that I usually install first.</p>
 
 <p>For my new job I will mainly be writing documents, writing/modify JAVA
@@ -789,7 +786,6 @@ software must function as expected and so on.</p>
 <li>iTerm2</li>
 </ul>
 
-
 <h2>Ruby related packages</h2>
 
 <ul>
@@ -797,7 +793,6 @@ software must function as expected and so on.</p>
 <li>showoff</li>
 <li>git-scribe</li>
 </ul>
-
 
 <h2>Macports</h2>
 
@@ -825,19 +820,18 @@ software must function as expected and so on.</p>
 <li>tmux</li>
 </ul>
 
-
-<p>The Macports list isn&#8217;t exactly complete, but it&#8217;s pretty close to
+<p>The Macports list isn&#39;t exactly complete, but it&#39;s pretty close to
 what I had explicitly installed. Sadly I tried to install gcc45 and
 gcc46 because I wanted to play with some codes which needed a fortran
 compiler, this failed to install due to some bootstrapping issue of
 the fortran compiler during the build.</p>
 
-<p>I&#8217;ve yet to install Haskell and some of the related tools which are
+<p>I&#39;ve yet to install Haskell and some of the related tools which are
 pretty handy for a lazy user. There is also the need for installing
 Office for OSX. I wish I could just use plain text.</p>
 
 <p>At somepoint I should grab my previous lists and see what I have
-added/removed to my toolbox over the years. So far Lion hasn&#8217;t been
+added/removed to my toolbox over the years. So far Lion hasn&#39;t been
 too bad, but I have yet to develop anything or seriously tried to do
 anything too technical on this system so far.</p>
 </div>
@@ -898,14 +892,14 @@ anything too technical on this system so far.</p>
 
 <div class="entry-content"><p>Having worked in a number of cross institutional projects in the past
 has lead me to always be weary about how to interact with
-people. Often it&#8217;s the lack of co-ordination and communication that
+people. Often it&#39;s the lack of co-ordination and communication that
 seems to be the killer. Parts of the team would seem to not know what
 other parts of the team are doing and thus either deviate from the
 master plan or duplicate work.</p>
 
 <p>Gathering requirements for a project is always fun, translating the
 requirements for a developer to create the end product is even more
-fun, it often can lead to &#8216;chinese whispers&#8217; where things just get
+fun, it often can lead to &#39;chinese whispers&#39; where things just get
 miscommunicated and misunderstood.</p>
 
 <p>Agreeing on collaborating in a sense that everyone should talk and
@@ -976,14 +970,14 @@ the goal posts have changed.</p>
     
   </header>
 
-<div class="entry-content"><p>I&#8217;ve recently started a new role as being a senior software engineer
+<div class="entry-content"><p>I&#39;ve recently started a new role as being a senior software engineer
 for an Irish National Project and I have had to refresh my OOP skills
 with JAVA.</p>
 
 <p>Naturally I gravitated to free and opensource tools to refresh
 myself. This lead me to install Eclipse, which is the the EMACS of the
-modern world. I&#8217;ve never had much luck with IDE&#8217;s nor have I liked
-using IDE&#8217;s much in the past since I mainly dealt with codes written
+modern world. I&#39;ve never had much luck with IDE&#39;s nor have I liked
+using IDE&#39;s much in the past since I mainly dealt with codes written
 in C, Fortran and if I am lucky Perl or C++. This is because my
 background is in Applied Mathematics, Phyiscs and High Performance
 Computing and the codes in this general area are just plain old and
@@ -993,10 +987,10 @@ hack at, develop for is setup differently with its own build system,
 its own way of laying out the code base, code that depends on specific
 compiler bugs. The list of fun things just goes on.</p>
 
-<p>Having to deal with old codes written in &#8220;old&#8221; languages really makes
+<p>Having to deal with old codes written in &ldquo;old&rdquo; languages really makes
 the user or system administrator really learn about the build system,
 the compliers that are needed, the environment and the dependancy hell
-that they get into at times. Because of these experiences, I&#8217;ve yet
+that they get into at times. Because of these experiences, I&#39;ve yet
 again found that JAVA provides lots and lots of support and protection
 for the developer. Other nice things that modern languages like JAVA
 provide is really the tools that standardise the workflow. This seems
@@ -1005,7 +999,7 @@ to have had a huge impact on the quality of systems that are produced.</p>
 <p>However I really do appreciate the whole TDD concept, but more
 importantly the whole concept of Acceptance Testing Driven Development
 and Behavioural Driven Development concepts. The features of modern
-IDE&#8217;s hinting users scares me to think that fresh graduates from
+IDE&#39;s hinting users scares me to think that fresh graduates from
 university might be too reliant on these modern systems that do too
 many things for the developer. It does however give fast feedback to
 the developer so that they can learn the language much more easily.</p>
@@ -1014,7 +1008,7 @@ the developer so that they can learn the language much more easily.</p>
 writing C programs and shell scripts and liking it. I really do feel
 disconnected from what modern developers are doing these
 days. Developers these days just have it far easier if JAVA or an
-equivalent modern language is used with the appropriate tool. It&#8217;s
+equivalent modern language is used with the appropriate tool. It&#39;s
 just down to a communication problem of creating the right thing.</p>
 
 <p>By the way this is the first post!</p>
@@ -1079,7 +1073,7 @@ just down to a communication problem of creating the right thing.</p>
 <section>
   <h1>On GitHub</h1>
   <ul id="gh_repos" data-user="jcftang" data-count="0" data-skip="true">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a class="github-follow" href="https://github.com/jcftang">Follow @jcftang</a>
@@ -1091,7 +1085,7 @@ just down to a communication problem of creating the right thing.</p>
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets" data-user="jcftang" data-count="4" data-replies="false">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
     <a href="//twitter.com/jcftang" class="twitter-follow-button" data-show-count="false">Follow @jcftang</a>

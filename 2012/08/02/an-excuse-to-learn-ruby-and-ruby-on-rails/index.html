@@ -121,23 +121,23 @@ An Excuse to Learn Ruby and Ruby on Rails
     
   </header>
 
-<div class="entry-content"><p>I&#8217;ve been a long time consumer of ruby applications but never quite
+<div class="entry-content"><p>I&#39;ve been a long time consumer of ruby applications but never quite
 got around to learning the language and the frameworks that are
 available to developers. Within the team that I have been working
-with, we&#8217;ve been evaluating <a href="http://projecthydra.org">hydra</a> as a
+with, we&#39;ve been evaluating <a href="http://projecthydra.org">hydra</a> as a
 possible framework for our project.</p>
 
-<p>I&#8217;ve been spending the last few days reading
-<a href="http://pragprog.com/book/achbd/the-rspec-book">The RSpec Book</a>, I&#8217;ve
+<p>I&#39;ve been spending the last few days reading
+<a href="http://pragprog.com/book/achbd/the-rspec-book">The RSpec Book</a>, I&#39;ve
 been able to pick up some of the basic syntax of the language from the
 BDD book. As soon as I finish this book I will be moving on to a more
 real world book relating to ruby with the goal of being able to
 develop Ruby and Ruby on Rails applications.</p>
 
-<p>Well, I didn&#8217;t get as far as finishing the RSpec book and I&#8217;ve started
-creating a rubygem. I&#8217;m attempting to expose the insides of
+<p>Well, I didn&#39;t get as far as finishing the RSpec book and I&#39;ve started
+creating a rubygem. I&#39;m attempting to expose the insides of
 <a href="https://tahoe-lafs.org/trac/zfec/">zfec</a>, specifically the
-functionality in <em>fec.c</em>. So far I&#8217;ve been lazy and I am using swig to
+functionality in <em>fec.c</em>. So far I&#39;ve been lazy and I am using swig to
 automatically generate the C to ruby bindings with something like this</p>
 
 <figure class='code'><figcaption>fec.i </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div></pre></td><td class='main  c'><pre><div class='line'><span class="o">%</span><span class="n">module</span> <span class="n">fec</span>
@@ -150,23 +150,21 @@ automatically generate the C to ruby bindings with something like this</p>
 </div><div class='line'><span class="kt">void</span> <span class="nf">fec_encode</span><span class="p">(</span><span class="k">const</span> <span class="n">fec_t</span><span class="o">*</span> <span class="n">code</span><span class="p">,</span> <span class="k">const</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">src</span><span class="p">,</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">fecs</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">block_nums</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">num_block_nums</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">sz</span><span class="p">);</span>
 </div></pre></td></tr></table></div></figure>
 
-
-<p>Swig does it&#8217;s thing,</p>
+<p>Swig does it&#39;s thing,</p>
 
 <figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  bash'><pre><div class='line'>swig -ruby fec.i
 </div></pre></td></tr></table></div></figure>
 
-
 <p>Amazingly after some fiddling I got ruby to load up the module. It
-doesn&#8217;t mean that it&#8217;s going to do much though as I need to learn
+doesn&#39;t mean that it&#39;s going to do much though as I need to learn
 about the typemaps in the ruby C interface do the correct mappings.</p>
 
-<p>I&#8217;m so far taking inspiration from the zfec python module to take a
+<p>I&#39;m so far taking inspiration from the zfec python module to take a
 stab at building a ruby equivalent package for the sake of learning
 ruby and maybe even end up with something useful for the project that
 I am working on in work.</p>
 
-<p>After playing with extending ruby, I&#8217;m thinking I may need to take a
+<p>After playing with extending ruby, I&#39;m thinking I may need to take a
 step back and evaluate if this is the best way for me to learn ruby or
 not. I should probably not mess too much extending the language with a
 C library.</p>

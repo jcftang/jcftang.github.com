@@ -121,8 +121,8 @@ Making the Jump and Migrating My Archlinux Machines to Use Btrfs
     
   </header>
 
-<div class="entry-content"><p>Having a few days of time off from work I&#8217;ve committed to migrating my
-archlinux based laptops to using btrfs. I&#8217;ve to date been just using
+<div class="entry-content"><p>Having a few days of time off from work I&#39;ve committed to migrating my
+archlinux based laptops to using btrfs. I&#39;ve to date been just using
 ext4 and nilfs2 (on an SD card) on my eeepc and plain old ext4 on the
 bigger laptop.</p>
 
@@ -130,7 +130,7 @@ bigger laptop.</p>
 I felt lucky with doing a major upgrade (replaced sysvinit with systemd
 as recommended by the archlinux people)</p>
 
-<p>I didn&#8217;t want to reinstall my machines so I took the route of converting
+<p>I didn&#39;t want to reinstall my machines so I took the route of converting
 the existing ext4 partitions to btrfs. I left my <em>/boot</em> partition as
 ext2 for safety. Prior to converting to btrfs I had upgraded the two
 laptops to using <a href="https://wiki.archlinux.org/index.php/Grub2">grub2</a>
@@ -139,25 +139,23 @@ archlinux installer image via a usb key. Then just followed the
 <a href="https://wiki.archlinux.org/index.php/Btrfs">btrfs</a> documentation at
 the archlinux wiki.</p>
 
-<p>The process went more smoothly than I had anticipated, I didn&#8217;t run into
+<p>The process went more smoothly than I had anticipated, I didn&#39;t run into
 any major stumbling blocks, that said I did have to free up some space
 for the migration to occur.</p>
 
 <p>Once the systems were back up and running I enabled compression on btrfs
 and defragged the systems</p>
-
-<pre><code>find / -xdev -type f -print -exec btrfs filesystem defrag '{}' \;
-</code></pre>
-
+<div class="highlight"><pre><code class="text">find / -xdev -type f -print -exec btrfs filesystem defrag &#39;{}&#39; \;
+</code></pre></div>
 <p>This compression feature made a huge difference on the space limited
 eeepc, the compression feature reclaimed about 10% of the space on the
-system. It&#8217;s a shame that the RHEL based distros aren&#8217;t quite supporting
+system. It&#39;s a shame that the RHEL based distros aren&#39;t quite supporting
 btrfs yet there are quite a few nice features there that are very
 attractive for pro-consumers and the enterprise. RHEL7 will have btrfs,
 hopefully there will be backports to RHEL6.</p>
 
-<p>Performance wise I haven&#8217;t used the system in anger yet, so time will
-tell if I&#8217;m happy with btrfs or not.</p>
+<p>Performance wise I haven&#39;t used the system in anger yet, so time will
+tell if I&#39;m happy with btrfs or not.</p>
 </div>
 
 

@@ -123,23 +123,23 @@
     
   </header>
 
-<div class="entry-content"><p>I&#8217;ve talked about <em>cports</em> in the past, it&#8217;s basically a collection of
+<div class="entry-content"><p>I&#39;ve talked about <em>cports</em> in the past, it&#39;s basically a collection of
 <em>makefiles</em> which mostly automates the process of downloading,
 configuring, building and installing applications and libraries for
 High Performance Computing systems that use environment-modules.</p>
 
 <p>One of the key-features that <em>cports</em> offers is the automated
 modulefile generation, and the fact that the <em>makefiles</em> acts as
-documentation to how software is configured, built and installed. It&#8217;s
+documentation to how software is configured, built and installed. It&#39;s
 currently being used on the clusters at my work place, it has been a
-boost to the productivity of the systems admin team. It&#8217;s a nice
-alternative to trying to create RPM&#8217;s or DEB&#8217;s (pick your custom
+boost to the productivity of the systems admin team. It&#39;s a nice
+alternative to trying to create RPM&#39;s or DEB&#39;s (pick your custom
 package manager of choice here), as <em>makefiles</em> tend to be a little
 more flexible than traditional package managers.</p>
 
 <p>One main drawback of the <em>cports</em> system right now is the lack of good
 dependancy management and checking, it is all currently up to the
-packager to resolve these dependancy issues. It&#8217;s also <em>cports</em>
+packager to resolve these dependancy issues. It&#39;s also <em>cports</em>
 strongest point that there is no dependancy management, as the
 packager can build many unique trees of packages.</p>
 
@@ -183,11 +183,10 @@ packager can build many unique trees of packages.</p>
 </div><div class='line'>    python setup.py test
 </div><div class='line'> </div><div class='line'>include ../../../mk/gnu.post.mk</div></pre></td></tr></table></div></figure>
 
-
 <p>In this example, as Tahoe-LAFS (upstream project) gets updated, the
 cports packager just needs to copy this makefile to a new directory,
 update the version numbers, then do a <em>make install</em>. This assumes
-that the dependancies haven&#8217;t changed much, if they have it is trivial
+that the dependancies haven&#39;t changed much, if they have it is trivial
 to update the dependancies. The above example generates a modulefile
 similar to like this,</p>
 
@@ -212,7 +211,6 @@ similar to like this,</p>
 </div><div class='line'>prepend-path   PYTHONPATH /home/support/apps/cports/rhel-5.x86_64/gnu/allmydata-tahoe/1.9.0-SUMO/lib
 </div><div class='line'>/python2.6/site-packages</div></pre></td></tr></table></div></figure>
 
-
 <p>Once the package has been built and tested on a development system, we
 can take the package and replicate the installation in fairly
 automated fashion. This type of scripting and automation means that
@@ -223,7 +221,7 @@ applications.</p>
 about the naming conventions. This in turn reduces the confusion and
 documentation that is needed for the end user.</p>
 
-<p>Sadly, I don&#8217;t get to play with <em>cports</em> as much as I used to, since I
+<p>Sadly, I don&#39;t get to play with <em>cports</em> as much as I used to, since I
 do not administrate High Performance Computing systems anymore in my
 new role at my current work place. It is just a hobby to develop this
 build system, I plan on automating more testing of the <em>cports</em> system
@@ -231,7 +229,7 @@ when I get a chance. We currently have <em>jenkins</em> and <em>gitbuilder</em>
 running on select machines in work to continually build and test
 specific packages to find regressions and broken download links.</p>
 
-<p><em>cports</em> isn&#8217;t quite ready for general public usage, but if you are a
+<p><em>cports</em> isn&#39;t quite ready for general public usage, but if you are a
 clued in systems administrator at a High Performance Computing
 facility and use environment-module then <em>cports</em> is just about
 usable. This is of course if you are willing to look at the sample

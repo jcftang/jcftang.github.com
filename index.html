@@ -122,8 +122,8 @@
     
   </header>
 
-<div class="entry-content"><p>Having a few days of time off from work I&#8217;ve committed to migrating my
-archlinux based laptops to using btrfs. I&#8217;ve to date been just using
+<div class="entry-content"><p>Having a few days of time off from work I&#39;ve committed to migrating my
+archlinux based laptops to using btrfs. I&#39;ve to date been just using
 ext4 and nilfs2 (on an SD card) on my eeepc and plain old ext4 on the
 bigger laptop.</p>
 
@@ -131,7 +131,7 @@ bigger laptop.</p>
 I felt lucky with doing a major upgrade (replaced sysvinit with systemd
 as recommended by the archlinux people)</p>
 
-<p>I didn&#8217;t want to reinstall my machines so I took the route of converting
+<p>I didn&#39;t want to reinstall my machines so I took the route of converting
 the existing ext4 partitions to btrfs. I left my <em>/boot</em> partition as
 ext2 for safety. Prior to converting to btrfs I had upgraded the two
 laptops to using <a href="https://wiki.archlinux.org/index.php/Grub2">grub2</a>
@@ -140,25 +140,23 @@ archlinux installer image via a usb key. Then just followed the
 <a href="https://wiki.archlinux.org/index.php/Btrfs">btrfs</a> documentation at
 the archlinux wiki.</p>
 
-<p>The process went more smoothly than I had anticipated, I didn&#8217;t run into
+<p>The process went more smoothly than I had anticipated, I didn&#39;t run into
 any major stumbling blocks, that said I did have to free up some space
 for the migration to occur.</p>
 
 <p>Once the systems were back up and running I enabled compression on btrfs
 and defragged the systems</p>
-
-<pre><code>find / -xdev -type f -print -exec btrfs filesystem defrag '{}' \;
-</code></pre>
-
+<div class="highlight"><pre><code class="text">find / -xdev -type f -print -exec btrfs filesystem defrag &#39;{}&#39; \;
+</code></pre></div>
 <p>This compression feature made a huge difference on the space limited
 eeepc, the compression feature reclaimed about 10% of the space on the
-system. It&#8217;s a shame that the RHEL based distros aren&#8217;t quite supporting
+system. It&#39;s a shame that the RHEL based distros aren&#39;t quite supporting
 btrfs yet there are quite a few nice features there that are very
 attractive for pro-consumers and the enterprise. RHEL7 will have btrfs,
 hopefully there will be backports to RHEL6.</p>
 
-<p>Performance wise I haven&#8217;t used the system in anger yet, so time will
-tell if I&#8217;m happy with btrfs or not.</p>
+<p>Performance wise I haven&#39;t used the system in anger yet, so time will
+tell if I&#39;m happy with btrfs or not.</p>
 </div>
 
   <footer>
@@ -215,30 +213,30 @@ tell if I&#8217;m happy with btrfs or not.</p>
     
   </header>
 
-<div class="entry-content"><p>It was clear at this year&#8217;s supercomputing conference that there wasn&#8217;t
-as much excitement as previous years. There wasn&#8217;t much surprise as
+<div class="entry-content"><p>It was clear at this year&#39;s supercomputing conference that there wasn&#39;t
+as much excitement as previous years. There wasn&#39;t much surprise as
 nothing too revolutionary and radical was announced. In the past when
 Bluegene/L and P arrived after the earth simulator there was an arms race
-to being number 1 in the top500 list.  Even things like GPGPU&#8217;s aren&#8217;t
+to being number 1 in the top500 list.  Even things like GPGPU&#39;s aren&#39;t
 as cool anymore, everyone is selling effectively the same systems when
 it comes to clusters. Not everyone has the budget to procure a specialist
-machine like a NEC vector machine, a CRAY, Bluegene/Q etc&#8230;</p>
+machine like a NEC vector machine, a CRAY, Bluegene/Q etc&hellip;</p>
 
 <p>The arms race to the top is just completely crazy, the top 50 or so
 machines are so powerful compared to what a typical university or small
 research lab might have access is too is completely skewed. At our site
-we&#8217;re probably about 0.5% of the top machine. In the past we were about
+we&#39;re probably about 0.5% of the top machine. In the past we were about
 1-2% typically of the top machine, and we were about 5yrs behind the
 curve. The top 500 list should really be renamed to the top 50 list and
 the green 500 list or the HPCC list should be used instead as a measure
 of the top machines in the world. Do people really think that LINPACK
 is a good measure of how powerful a machine is going to be?</p>
 
-<p>What was interesting at this year&#8217;s conference was some of the papers
+<p>What was interesting at this year&#39;s conference was some of the papers
 and panels were focused on project management and data management of
 scientific datasets. I noticed that when people are starting to worry
 about meta-data standards like librarians, people are starting to think
-about archiving the data, they probably haven&#8217;t thought about the access
+about archiving the data, they probably haven&#39;t thought about the access
 component of preservation which will be amusing when they do realise
 it. There is also a disconnect from some of the papers which focused on
 silent data corruption at the storage and network layers. The archiving
@@ -247,7 +245,7 @@ data corruption, malicious users and all that funk that is related to it.</p>
 
 <p>After having a few chats with some vendors during the week, /me eyes
 them vendors. There seems to be a bit of a lack of understanding that
-archiving and preservation of data isn&#8217;t just about bulk, cheap and
+archiving and preservation of data isn&#39;t just about bulk, cheap and
 reliable storage. There are apects to it which require data processing and
 analytics of the data. It seems somewhat pointless to archive data and not
 index it, process it and deliver it to who needs it. At somepoint the data
@@ -332,11 +330,11 @@ to work with both Ubuntu Precise (LTS) and Scientific Linux 6.</p>
 <p>My attempt at doing the above can be found at
 <a href="https://github.com/jcftang/tchpc-vagrant/tree/ansible">tchpc-vagrant</a>
 in the ansible branch. You will need ansible installed on your host
-machine. You don&#8217;t need much installed in the target machine as ansible
+machine. You don&#39;t need much installed in the target machine as ansible
 is designed to login and execute commands as required, this is quite
 refreshing. Compared to puppet and chef, if I were to roll this out
 into production my overhead will be pretty low. This low overhead is
-something that I really like as I don&#8217;t need to setup an infrastructure
+something that I really like as I don&#39;t need to setup an infrastructure
 just to run puppet.</p>
 
 <p>In short I was able to learn how ansible is supposed to work (I think)
@@ -346,8 +344,8 @@ need for to do rails development in a matter of hours.</p>
 <p>One thing that did occur to me was the lack of windows support, given
 that ansible is designed to use ssh to carry out its activities, finding
 stock windows machines which run ssh is pretty slim. This is one area
-which puppet (perhaps chef too) is better at. It&#8217;s also one feature that
-I would like as the vagrant vm&#8217;s that we&#8217;re using in work might be given
+which puppet (perhaps chef too) is better at. It&#39;s also one feature that
+I would like as the vagrant vm&#39;s that we&#39;re using in work might be given
 to windows users for testing and evaluation.</p>
 
 <p>Going forward I think ansible will certainly be in my toolkit. There really is
@@ -408,16 +406,16 @@ a light on the otherside for mangement, deployment and orchestration.</p>
     
   </header>
 
-<div class="entry-content"><p>I&#8217;ve been eyeing <a href="https://github.com/dellcloudedge/crowbar">crowbar</a>
+<div class="entry-content"><p>I&#39;ve been eyeing <a href="https://github.com/dellcloudedge/crowbar">crowbar</a>
 recently, it looks pretty useful and interesting for deploying servers
-and applications. I haven&#8217;t seen much if at all any documentation out
+and applications. I haven&#39;t seen much if at all any documentation out
 there which suggests that people in the digital preservation and archiving
-fields are implementing systems at scale, I&#8217;m under the impression that
+fields are implementing systems at scale, I&#39;m under the impression that
 most systems/sites are building systems up one piece at a time without
 much automation.</p>
 
 <p>It seems to use <a href="http://www.opscode.com/chef/">chef</a> in the backend for
-all the automation. I&#8217;ve been relearning <a href="http://puppetlabs.com/">puppet</a>
+all the automation. I&#39;ve been relearning <a href="http://puppetlabs.com/">puppet</a>
 recently so that I can have reproducible environments with
 <a href="http://vagrantup.com/">Vagrant</a>.</p>
 
@@ -432,7 +430,7 @@ on the infrastructure itself. Either which way there is still a need
 to automate the fedora-commons, SOLR, mysql and postgres deployments at
 some point.</p>
 
-<p>After all this thinking and pondering, I&#8217;m still using puppet. There&#8217;s
+<p>After all this thinking and pondering, I&#39;m still using puppet. There&#39;s
 still the likes of ansible, cfengine, bcfg2 and juju. There is a never
 ending supply of these tools.</p>
 </div>
@@ -493,13 +491,13 @@ ending supply of these tools.</p>
     
   </header>
 
-<div class="entry-content"><p>There&#8217;s a new release of Ceph, I hope that they release a stable soon so we can
+<div class="entry-content"><p>There&#39;s a new release of Ceph, I hope that they release a stable soon so we can
 do further evaluations of the Ceph storage
 system. A few of my work colleagues are going to the <a href="http://www.inktank.com/news-events/event/ceph-workshops-amsterdam/">Ceph
 workshop</a>
 next week.</p>
 
-<p>I&#8217;m wondering if anyone has taken the CRUSH algorithm and used it in other
+<p>I&#39;m wondering if anyone has taken the CRUSH algorithm and used it in other
 domains.</p>
 </div>
 
@@ -572,14 +570,13 @@ digital preservation and archiving? You go to Hydracamp!</p>
 <li>Day 5 - Hydra-head, Hydra Access Controls</li>
 </ul>
 
-
 <p>Most of the training sessions were hands on from day 1 which was
 refreshing, as it was hands on I getting the most out of the training
 session. It would have been better if I had known more ruby to move
 along some of the exercises more effectively.</p>
 
 <p>To give an overview of what we had done (between ~30 people), we created
-a ruby on rails application titled &#8220;Twitter for Zombies&#8221;. With this small
+a ruby on rails application titled &ldquo;Twitter for Zombies&rdquo;. With this small
 application everybody was frantically committing, pulling, merging and
 pushing code. It was highly informative and a good learning experience
 to see how fast things could move.</p>
@@ -651,9 +648,9 @@ account for Project Hydra and have a peek at the hydracamp repo.</p>
 
 <div class="entry-content"><p>I shall be going to SC2012 next month, I plan on hitting a few of the
 storage vendors for possible collaborations and flagging to them that
-we&#8217;re on the look out for storage systems. One of the first
-observation that the reader will note is &#8220;where is that link between
-HPC and Digital Preservation and Archiving&#8221;. It&#8217;s probably not obvious
+we&#39;re on the look out for storage systems. One of the first
+observation that the reader will note is &ldquo;where is that link between
+HPC and Digital Preservation and Archiving&rdquo;. It&#39;s probably not obvious
 to most people, one of the big problems in the area of preservation
 and archiving is the the amount of data involved and the varied types
 of data. This is not taking into account of the issues with data
@@ -664,8 +661,8 @@ trusted system, the system will want to read out every single byte
 that was put in to verify that the data is correct at somepoint
 (usually with some form of hashing).</p>
 
-<p>Reading data out and checking that it&#8217;s correct serially probably
-isn&#8217;t the smartest solution. Nor is copying the data into 2-3
+<p>Reading data out and checking that it&#39;s correct serially probably
+isn&#39;t the smartest solution. Nor is copying the data into 2-3
 locations (where each site is maintaining 2-3 copies for backups and
 redundancy). The current and seemingly most popular solutions is to
 dump the data to a few offsite locations (such as S3 or SWIFT)
@@ -676,17 +673,17 @@ storage and data-distribution strategies that some of the bigger
 projects are taking. There has to be a smarter way of storing and
 preserving data without having to make copies of things.</p>
 
-<p>I&#8217;ve often wondered how projects manage to copy/move data across
+<p>I&#39;ve often wondered how projects manage to copy/move data across
 storage providers in a reasonable amount of time without needing to
 wheel a few racks of disks around. It would also be interesting to see
 the error rates of these systems and how often errors are
 corrected. If they are corrected what is the computational cost of
 doing this.</p>
 
-<p>If you have a multi-terabyte archive the problem isn&#8217;t too bad, the
+<p>If you have a multi-terabyte archive the problem isn&#39;t too bad, the
 more typical case these days might be in the order of the low hundreds
 of terabytes. I could only imagine what lager scale sites must deal
-with. I&#8217;m still not a fan of moving a problem from a local site to a
+with. I&#39;m still not a fan of moving a problem from a local site to a
 remote site as it often shows that there is a lack of understanding to
 the problem. Storage in the preservation and archiving domain will
 probably turn into an IO and compute intensive operation at some
@@ -750,16 +747,16 @@ point, especially if you want to do something with the data.</p>
   </header>
 
 <div class="entry-content"><p>A co-worker of mine (Paddy Doyle) had originally hacked at a perl script
-for reporting balances from SLURM&#8217;s accounting system a year or two ago
+for reporting balances from SLURM&#39;s accounting system a year or two ago
 and he had figured out that it might be possible to do some minimalistic
-&#8216;configuration&#8217; and scripting to get a system that&#8217;s very basic but
+&#39;configuration&#39; and scripting to get a system that&#39;s very basic but
 functional.</p>
 
 <p>It was just one of those things that funding agencies wanted to justify
 how the system was being used, GOLD was clunky and obtrusive and
 complicated for what we wanted. Most of all we liked SLURM but not GOLD
 and Maui which was needed to get full accounting and banking (most of
-the features weren&#8217;t used).</p>
+the features weren&#39;t used).</p>
 
 <p>Being good and lazy engineers we got excited with the prospect of having
 the option of replacing SLURM, Maui and GOLD with just plain old SLURM
@@ -770,16 +767,16 @@ old sh/bash scripting with a splash of perl. Replacing two components
 with one meant that we would have less work to do in the long run ;)</p>
 
 <p>After a whole year of running with these scripts and just putting it
-online, I&#8217;ve noticed that there may be a few sites out there that might
+online, I&#39;ve noticed that there may be a few sites out there that might
 be using our scripts and workflows. It would be nice to find out how
 many people are using our implementation of a banking system in SLURM
-and if it&#8217;s driven by sysadmins looking to account for usage or is it
+and if it&#39;s driven by sysadmins looking to account for usage or is it
 funding agencies looking for justification of the usage of a system.</p>
 
 <p>I was going to be at the SLURM User Group Meeting 2012 to give a
 short talk on our experiences with the SLURM-Bank scripts and workflow,
 but sadly I have to be in the US during this meeting and my colleague
-&#8220;Paddy Doyle&#8221; will there instead of me.  I would have liked to go and chat
+&ldquo;Paddy Doyle&rdquo; will there instead of me.  I would have liked to go and chat
 with the developers of SLURM to push for more advanced banking/accounting
 facilities in SLURM itself. Visiting BSC again would have been fun.</p>
 </div>
@@ -841,11 +838,11 @@ facilities in SLURM itself. Visiting BSC again would have been fun.</p>
   </header>
 
 <div class="entry-content"><p>The latest development branch of Ceph is out with some rather nice
-looking features, what&#8217;s probably the most useful are the RPM builds
+looking features, what&#39;s probably the most useful are the RPM builds
 for those that run RHEL6 like systems.</p>
 
 <p>Still no real sight of backported kernel modules :P Also some of the
-guys in work here just deployed a ~200tb Ceph installation which I&#8217;ve
+guys in work here just deployed a ~200tb Ceph installation which I&#39;ve
 access to a 10tb RBD for doing backups on.</p>
 </div>
 
@@ -876,7 +873,7 @@ access to a 10tb RBD for doing backups on.</p>
   <header>
     <h1 class="entry-title">
 
-<a href="/2012/09/23/a-poor-mans-nas-device-with-ceph/">A Poor Man&#8217;s NAS Device With Ceph</a>
+<a href="/2012/09/23/a-poor-mans-nas-device-with-ceph/">A Poor Man's NAS Device With Ceph</a>
 
 </h1>
 
@@ -909,45 +906,45 @@ collection of hard drives at home, I could have run
 for backup purposes. In fact Tahoe works quite well for the
 technically capable user.</p>
 
-<p>Recently I&#8217;ve decided that I need a more central location at home to
+<p>Recently I&#39;ve decided that I need a more central location at home to
 store my photo collection (I love to take photos with my Canon DSLR
 and Panasonic LX5). Traditionally I would have just fired up
 <a href="http://git-annex.branchable.com/">git-annex</a> to track the data and
 then setup a number of remotes to store the data, where one of them
 might be Tahoe-LAFS and the rest might be portable hard drives, remote
-machines etc&#8230;</p>
+machines etc&hellip;</p>
 
 <p>I could have gone with any number of distributed storage solutions
 such as <a href="http://www.gluster.org/">GlusterFS</a>,
 <a href="http://www.irods.org">iRODS</a>,
 <a href="http://xrootd.slac.stanford.edu/">xrootd</a>,
 <a href="http://wiki.lustre.org/index.php/Main_Page">Lustre</a> or
-<a href="http://www.xtreemfs.org/">xtreemfs</a>. I&#8217;ve worked with some of these
+<a href="http://www.xtreemfs.org/">xtreemfs</a>. I&#39;ve worked with some of these
 systems in production and toyed with others. Since this is for a home
 system I can pick what I want and change it at will.</p>
 
-<p>I probably have 2-3tb&#8217;s of data to archive and store, I also want easy
-access to my data so NFS or CIFS exports are required. It wouldn&#8217;t be
+<p>I probably have 2-3tb&#39;s of data to archive and store, I also want easy
+access to my data so NFS or CIFS exports are required. It wouldn&#39;t be
 unfeasible to acquire a few 2 or 3 terabyte drives for my old desktop
 machine which would effectively provide me with a 2 or 3 terabyte
 replicated data store. Given the amount of toying around and learning
 about Ceph in my spare time I would expect that Ceph would provide me
-with a pretty good &#8220;backend&#8221; system for storing my files and the
-option of &#8220;migrating my data from one machine to another machine&#8221; by
-adding and removing OSD&#8217;s. The handiest feature for me will be the
+with a pretty good &ldquo;backend&rdquo; system for storing my files and the
+option of &ldquo;migrating my data from one machine to another machine&rdquo; by
+adding and removing OSD&#39;s. The handiest feature for me will be the
 capability of expanding and shrinking the system as I need.</p>
 
-<p>There probably aren&#8217;t many people who would want to setup something
+<p>There probably aren&#39;t many people who would want to setup something
 like this for a home system, but it is an alternative to the usual
 RAID or LVM setup.</p>
 
-<p>Here&#8217;s my proposed setup which I&#8217;m going to setup in the next few
+<p>Here&#39;s my proposed setup which I&#39;m going to setup in the next few
 spare weekends that I will have.</p>
 
 <p><img class="" src="/downloads/images/ceph-home.png"></p>
 
 <p>It would be great if Ceph offered some of of parity/erasure coding
-instead of plain replication. I&#8217;m greedy and I want to maximise my
+instead of plain replication. I&#39;m greedy and I want to maximise my
 disks that I have, I wonder how low I can go on hardware with the Ceph
 software.</p>
 </div>
@@ -1011,7 +1008,7 @@ software.</p>
 <section>
   <h1>On GitHub</h1>
   <ul id="gh_repos" data-user="jcftang" data-count="0" data-skip="true">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a class="github-follow" href="https://github.com/jcftang">Follow @jcftang</a>
@@ -1023,7 +1020,7 @@ software.</p>
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets" data-user="jcftang" data-count="4" data-replies="false">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
     <a href="//twitter.com/jcftang" class="twitter-follow-button" data-show-count="false">Follow @jcftang</a>

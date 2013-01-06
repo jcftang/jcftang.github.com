@@ -122,49 +122,40 @@ Installing Ceph on SL6
   </header>
 
 <div class="entry-content"><p>As an exercise of a Friday afternoon of not starting something big before
-heading off to a conference. I&#8217;ve decided to spend an hour or two at
+heading off to a conference. I&#39;ve decided to spend an hour or two at
 seeing how ceph is installed and configured on an SL6 based machine
 (RHEL6 clone).</p>
 
 <p>The install target is just an old desktop running a 64bit install of SL6x,
-so it&#8217;s nothing too fancy.</p>
+so it&#39;s nothing too fancy.</p>
 
 <p>Following the instructions at <a href="http://ceph.com/wiki/Installing_on_RedHat_or_CentOS">http://ceph.com/wiki/Installing_on_RedHat_or_CentOS</a>, I ended up doing this</p>
-
-<pre><code>yum install yum-conf-epel
+<div class="highlight"><pre><code class="text">yum install yum-conf-epel
 yum update
 yum gcc gcc-c++ automake libtool expat expat-devel boost-devel nss-devel cryptopp cryptopp-devel libatomic_ops-devel fuse-devel
 yum install libedit-devel libedit
-</code></pre>
-
+</code></pre></div>
 <p>It seems that the packages <em>cryptopp-devel</em>, <em>cryptopp</em> and <em>expat-devel</em>,
 <em>expat</em> are the only packages pulled in from the epel repository.</p>
 
-<p>Additional libraries and tools include these weren&#8217;t mentioned in the
+<p>Additional libraries and tools include these weren&#39;t mentioned in the
 upstream wiki, the upstream wiki probably needs to be updated.</p>
-
-<pre><code>yum install rpm-build
+<div class="highlight"><pre><code class="text">yum install rpm-build
 yum install libaio-devel libcurl-devel libxml2-devel libuuid-devel keyutils-libs-devel fcgi-devel
-</code></pre>
-
+</code></pre></div>
 <p>I chose to install the newly designated stable branch of ceph 0.48argonaut</p>
-
-<pre><code>wget http://ceph.com/download/ceph-0.48argonaut.tar.bz2
-</code></pre>
-
+<div class="highlight"><pre><code class="text">wget http://ceph.com/download/ceph-0.48argonaut.tar.bz2
+</code></pre></div>
 <p>I also chose to build it in RPM form, in the tarball there is a RPM spec
 file which can be used to create an installable RPM, the following is
 a transcript of what I did to build an installable RPM.</p>
-
-<pre><code>tar xjvf ceph-0.48argonaut.tar.bz2
+<div class="highlight"><pre><code class="text">tar xjvf ceph-0.48argonaut.tar.bz2
 cp ceph-0.48argonaut.tar.bz2 ~/rpmbuild/SOURCES
 rpmbuild -ba ceph-0.48argonaut/ceph.spec
-</code></pre>
-
+</code></pre></div>
 <p>The build will take <em>some</em> time, especially if you are using old
 hardware. I ran into some minor packaging issues,</p>
-
-<pre><code>diff -u ceph.spec.in.orig ceph.spec.in
+<div class="highlight"><pre><code class="text">diff -u ceph.spec.in.orig ceph.spec.in
 --- ceph.spec.in.orig   2012-07-06 15:38:59.298497719 +0100
 +++ ceph.spec.in    2012-07-06 15:39:45.423560177 +0100
 @@ -326,6 +326,8 @@
@@ -176,12 +167,10 @@ hardware. I ran into some minor packaging issues,</p>
 
 #################################################################################
 %files fuse
-</code></pre>
-
-<p>The above change need&#8217;s to be applied to the <em>ceph</em> spec file for the
+</code></pre></div>
+<p>The above change need&#39;s to be applied to the <em>ceph</em> spec file for the
 RPM(s) to build successfully.</p>
-
-<pre><code>ceph-0.48argonaut-6.el6.x86_64.rpm
+<div class="highlight"><pre><code class="text">ceph-0.48argonaut-6.el6.x86_64.rpm
 ceph-devel-0.48argonaut-6.el6.x86_64.rpm
 python-ceph-0.48argonaut-6.el6.x86_64.rpm
 librbd1-0.48argonaut-6.el6.x86_64.rpm
@@ -189,31 +178,25 @@ librados2-0.48argonaut-6.el6.x86_64.rpm
 ceph-radosgw-0.48argonaut-6.el6.x86_64.rpm
 libcephfs1-0.48argonaut-6.el6.x86_64.rpm
 ceph-fuse-0.48argonaut-6.el6.x86_64.rpm
-</code></pre>
-
-<p>I chose to install <em>all</em> the RPM&#8217;s that were generated for educational
+</code></pre></div>
+<p>I chose to install <em>all</em> the RPM&#39;s that were generated for educational
 purposes (used yum instead of the rpm commands so the dependancies are
 sorted out for me), from the <em>rpmbuild/RPMS/x86_64</em> directory</p>
-
-<pre><code>yum install ceph-0.48argonaut-6.el6.x86_64.rpm ceph-devel-0.48argonaut-6.el6.x86_64.rpm ceph-fuse-0.48argonaut-6.el6.x86_64.rpm ceph-radosgw-0.48argonaut-6.el6.x86_64.rpm libcephfs1-0.48argonaut-6.el6.x86_64.rpm librados2-0.48argonaut-6.el6.x86_64.rpm librbd1-0.48argonaut-6.el6.x86_64.rpm python-ceph-0.48argonaut-6.el6.x86_64.rpm
-</code></pre>
-
+<div class="highlight"><pre><code class="text">yum install ceph-0.48argonaut-6.el6.x86_64.rpm ceph-devel-0.48argonaut-6.el6.x86_64.rpm ceph-fuse-0.48argonaut-6.el6.x86_64.rpm ceph-radosgw-0.48argonaut-6.el6.x86_64.rpm libcephfs1-0.48argonaut-6.el6.x86_64.rpm librados2-0.48argonaut-6.el6.x86_64.rpm librbd1-0.48argonaut-6.el6.x86_64.rpm python-ceph-0.48argonaut-6.el6.x86_64.rpm
+</code></pre></div>
 <p>I then simply followed the 5 minute quick start guide at
 <a href="http://ceph.com/docs/master/start/quick-start/">http://ceph.com/docs/master/start/quick-start/</a> to see if ceph would
 start up. There is more documentation at <a href="http://ceph.com/docs/master">http://ceph.com/docs/master</a>
 that I have yet to go through. Perhaps the configuration of ceph can go
 into another post.</p>
 
-<p>To start the cluster after it&#8217;s configured</p>
-
-<pre><code>service ceph -a start
-</code></pre>
-
-<p>However on my test system it&#8217;s currently crashing out with the mds server giving the followin errors</p>
-
-<pre><code>2012-07-06 16:38:17.838055 7f2d6828d700 -1 mds.-1.0 *** got signal Terminated ***
+<p>To start the cluster after it&#39;s configured</p>
+<div class="highlight"><pre><code class="text">service ceph -a start
+</code></pre></div>
+<p>However on my test system it&#39;s currently crashing out with the mds server giving the followin errors</p>
+<div class="highlight"><pre><code class="text">2012-07-06 16:38:17.838055 7f2d6828d700 -1 mds.-1.0 *** got signal Terminated ***
 2012-07-06 16:38:17.838139 7f2d6828d700  1 mds.-1.0 suicide.  wanted down:dne, now up:boot
-2012-07-06 16:38:17.839020 7f2d6828d700 -1 osdc/Objecter.cc: In function 'void Objecter::shutdown()' thread 7f2d6828d700 time 2012-07-06 16:38:17.838156
+2012-07-06 16:38:17.839020 7f2d6828d700 -1 osdc/Objecter.cc: In function &#39;void Objecter::shutdown()&#39; thread 7f2d6828d700 time 2012-07-06 16:38:17.838156
 osdc/Objecter.cc: 221: FAILED assert(initialized)
 
  ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
@@ -229,7 +212,7 @@ osdc/Objecter.cc: 221: FAILED assert(initialized)
     -3&gt; 2012-07-06 16:37:57.786954 7f2d6b496760  0 ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030), process ceph-mds, pid 12537
     -2&gt; 2012-07-06 16:38:17.838055 7f2d6828d700 -1 mds.-1.0 *** got signal Terminated ***
     -1&gt; 2012-07-06 16:38:17.838139 7f2d6828d700  1 mds.-1.0 suicide.  wanted down:dne, now up:boot
-     0&gt; 2012-07-06 16:38:17.839020 7f2d6828d700 -1 osdc/Objecter.cc: In function 'void Objecter::shutdown()' thread 7f2d6828d700 time 2012-07-06 16:38:17.838156
+     0&gt; 2012-07-06 16:38:17.839020 7f2d6828d700 -1 osdc/Objecter.cc: In function &#39;void Objecter::shutdown()&#39; thread 7f2d6828d700 time 2012-07-06 16:38:17.838156
 osdc/Objecter.cc: 221: FAILED assert(initialized)
 
  ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
@@ -266,12 +249,11 @@ osdc/Objecter.cc: 221: FAILED assert(initialized)
  NOTE: a copy of the executable, or `objdump -rdS &lt;executable&gt;` is needed to interpret this.
 
 --- end dump of recent events ---
-</code></pre>
-
-<p>I&#8217;ve logged the error message on the ceph-devel mailing list, I don&#8217;t
+</code></pre></div>
+<p>I&#39;ve logged the error message on the ceph-devel mailing list, I don&#39;t
 have time to poke at this problem right now. I need to recreate this
 scenario in a VM on my laptop so I can play with this on the plane when
-I&#8217;m going to Open Repositories 2012 this weekend.</p>
+I&#39;m going to Open Repositories 2012 this weekend.</p>
 </div>
 
 

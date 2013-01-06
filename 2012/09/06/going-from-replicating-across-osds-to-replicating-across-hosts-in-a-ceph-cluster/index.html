@@ -121,35 +121,30 @@ Going From Replicating Across OSD's to Replicating Across Hosts in a Ceph Cluste
     
   </header>
 
-<div class="entry-content"><p>Having learnt how to remove and add monitor&#8217;s, meta-data and data servers (mon&#8217;s, mds&#8217;s
-and osd&#8217;s) for my small two node Ceph cluster. I want to say that it wasn&#8217;t too hard to
+<div class="entry-content"><p>Having learnt how to remove and add monitor&#39;s, meta-data and data servers (mon&#39;s, mds&#39;s
+and osd&#39;s) for my small two node Ceph cluster. I want to say that it wasn&#39;t too hard to
 do, the ceph website does have documentation for this.</p>
 
-<p>As the default CRUSH map replicates across OSD&#8217;s I wanted to try replicating data across
+<p>As the default CRUSH map replicates across OSD&#39;s I wanted to try replicating data across
 hosts just to see what would happen. In a real world scenario I would probably treat
 individual hosts in a rack as a failure unit and if I had more than one rack of storage,
 I would want to treat each rack as the minimum unit.</p>
 
 <p>One of the coolest features of ceph is that it allows me to play with different mappings
-and configurations of where my data gets allocated. There aren&#8217;t many (if any) storage
+and configurations of where my data gets allocated. There aren&#39;t many (if any) storage
 systems that I know of which provides this type of capability.</p>
 
-<p>So the steps that I went through to get to what I wanted&#8230;</p>
+<p>So the steps that I went through to get to what I wanted&hellip;</p>
 
-<p>First I had to dump the CRUSH map from my cluster of two nodes and three (very unbalanced OSD&#8217;s so I can play with the weights).</p>
-
-<pre><code>ceph osd getcrushmap -o /tmp/mycrushmap
-</code></pre>
-
+<p>First I had to dump the CRUSH map from my cluster of two nodes and three (very unbalanced OSD&#39;s so I can play with the weights).</p>
+<div class="highlight"><pre><code class="text">ceph osd getcrushmap -o /tmp/mycrushmap
+</code></pre></div>
 <p>The CRUSH map that is created is a binary file it must be decoded to plain text before
 you can edit it.</p>
-
-<pre><code>crushtool -d /tmp/mycrushmap &gt; /tmp/mycrushmap.txt
-</code></pre>
-
-<p>Here&#8217;s the map that is decoded from the binary file</p>
-
-<pre><code># begin crush map
+<div class="highlight"><pre><code class="text">crushtool -d /tmp/mycrushmap &gt; /tmp/mycrushmap.txt
+</code></pre></div>
+<p>Here&#39;s the map that is decoded from the binary file</p>
+<div class="highlight"><pre><code class="text"># begin crush map
 
 # devices
 device 0 osd.0
@@ -227,12 +222,10 @@ rule rbd {
 }
 
 # end crush map
-</code></pre>
-
-<p>The relevant chunks of the config that I&#8217;m interested in is the <strong>rule NAME {}</strong> blocks.
-As I&#8217;m interested in making my data, meta-data and probably my rbd rule replicate across hosts, I naturally made the rule look like this</p>
-
-<pre><code>rule data {
+</code></pre></div>
+<p>The relevant chunks of the config that I&#39;m interested in is the <strong>rule NAME {}</strong> blocks.
+As I&#39;m interested in making my data, meta-data and probably my rbd rule replicate across hosts, I naturally made the rule look like this</p>
+<div class="highlight"><pre><code class="text">rule data {
         ruleset 0
         type replicated
         min_size 1
@@ -241,14 +234,12 @@ As I&#8217;m interested in making my data, meta-data and probably my rbd rule re
         step choose firstn 0 type host
         step emit
 }
-</code></pre>
-
+</code></pre></div>
 <p>The above change is apparently incorrect as the last step before the <em>step emit</em> needs
 to be a device of some sort. I had found this out after posting the ceph-devel mailing
 list. There were two proposed solutions (thanks to Greg from inktank), the first
 proposed rule was</p>
-
-<pre><code>rule data {
+<div class="highlight"><pre><code class="text">rule data {
         ruleset 0
         type replicated
         min_size 1
@@ -258,11 +249,9 @@ proposed rule was</p>
         step choose firstn 1 osd
         step emit
 }
-</code></pre>
-
-<p>Which selects <em>n</em> hosts then the first osd from each host, but it can&#8217;t deal with an entire hosts failed OSD&#8217;s. The second proposed rule was</p>
-
-<pre><code>rule data {
+</code></pre></div>
+<p>Which selects <em>n</em> hosts then the first osd from each host, but it can&#39;t deal with an entire hosts failed OSD&#39;s. The second proposed rule was</p>
+<div class="highlight"><pre><code class="text">rule data {
         ruleset 0
         type replicated
         min_size 1
@@ -271,34 +260,29 @@ proposed rule was</p>
         step chooseleaf firstn 0 type host
         step emit
 }
-</code></pre>
-
-<p>The above rule will select <em>n</em> hosts and an OSD from the host. It&#8217;s pretty obvious that
+</code></pre></div>
+<p>The above rule will select <em>n</em> hosts and an OSD from the host. It&#39;s pretty obvious that
 the second rule is the one that I want. I would expect that if I had more machines in
 racks and rows I could probably just replace host with rack, row or even data-center.</p>
 
 <p>With the second proposed rule, I made the changes to <em>mycrushmap.txt</em>. Once the changes
 are made, I had to compile the map into a binary format that the ceph cluster
 understands, this can be done by</p>
-
-<pre><code>crushtool -c /tmp/mycrushmap.txt -o /tmp/mycrushmap.new
-</code></pre>
-
+<div class="highlight"><pre><code class="text">crushtool -c /tmp/mycrushmap.txt -o /tmp/mycrushmap.new
+</code></pre></div>
 <p>Once the map is compiled it must then be applied to the cluster</p>
-
-<pre><code>ceph osd setcrushmap -i /tmp/mycrushmap.new
-</code></pre>
-
+<div class="highlight"><pre><code class="text">ceph osd setcrushmap -i /tmp/mycrushmap.new
+</code></pre></div>
 <p>The above is documented on the ceph website. Once I applied the new CRUSH map I ran a <em>ceph -w</em> to see that
-the system had detected the changes and it then started to move data around on its own. I&#8217;ll need to play
+the system had detected the changes and it then started to move data around on its own. I&#39;ll need to play
 with pulling out the network cable or SATA cables to see how the system behaves from me causing catastrophic
 failures in the test system.</p>
 
-<p>I&#8217;m pretty sure I took the long way around to making the changes, there must be a more dynamic way of
+<p>I&#39;m pretty sure I took the long way around to making the changes, there must be a more dynamic way of
 changing the system.</p>
 
-<p>To recap and review the above operation, it&#8217;s again no harder than my reference system that I know, which is
-GPFS. GPFS doesn&#8217;t allow me to do what ceph allows me to do. I would however like to see some more visible
+<p>To recap and review the above operation, it&#39;s again no harder than my reference system that I know, which is
+GPFS. GPFS doesn&#39;t allow me to do what ceph allows me to do. I would however like to see some more visible
 documentation relating to the CRUSH configuration parameters and tuneables.</p>
 
 <p>So far this has been a distraction from my main day job, but this will certainly help
