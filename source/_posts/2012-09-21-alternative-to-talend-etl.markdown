@@ -5,7 +5,7 @@ date: 2012-09-21 10:31
 comments: true
 external-url:
 categories: 
-published: false
+published: true
 ---
 
 I've used Talend ETL a few times, however I came across this application
