@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2013-01-13T09:55:57+00:00</updated>
+  <updated>2013-01-26T11:08:13+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,63 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Deploying our hydra-head with jruby]]></title>
+<link href="http://jcftang.github.com/2013/01/22/deploying-our-hydra-head-with-jruby/"/>
+<updated>2013-01-22T19:49:02+00:00</updated>
+<id>http://jcftang.github.com/2013/01/22/deploying-our-hydra-head-with-jruby</id>
+<category term="dri" /><category term="java" /><category term="linux" /><category term="preservation" /><category term="ruby" />
+
+      <content type="html"><![CDATA[<p>We&#39;ve been ramping up our development work on the project that I have been on
+in the last month or so. One of the issues that we&#39;ve come across is the not
+so good XML validation and parsing libraries that are available in the ruby
+world compared to the java world.</p>
+
+<p>So as an exercise I decided to see if I could make our prototype work
+with jruby with the view of doing a test deployment on tomcat or some
+other application server. One of the motivating reason for doing this
+is to get access to the java based XML libraries for validation and
+processing. It also means that if I can deploy to the same Tomcat server
+where I&#39;m running SOLR and Fedora-Commons then it means I&#39;m saving myself
+a chunk of work setting up and maintaining <em>mod_passenger</em>.</p>
+
+<p>In short what I ended up doing was make sqlite3 as being dependent on
+the ruby platform and creating a block for jruby. So here&#39;s the relevant
+snippet from my <em>Gemfile</em></p>
+
+<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div><div data-line='11' class='line-number'></div><div data-line='12' class='line-number'></div><div data-line='13' class='line-number'></div><div data-line='14' class='line-number'></div><div data-line='15' class='line-number'></div><div data-line='16' class='line-number'></div><div data-line='17' class='line-number'></div><div data-line='18' class='line-number'></div></pre></td><td class='main  ruby'><pre><div class='line'><span class="n">gem</span> <span class="s1">&#39;sqlite3&#39;</span><span class="p">,</span> <span class="ss">:platforms</span> <span class="o">=&gt;</span> <span class="ss">:ruby</span>
+</div><div class='line'> </div><div class='line'><span class="n">platforms</span> <span class="ss">:jruby</span> <span class="k">do</span>
+</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;jruby-openssl&#39;</span>
+</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;activerecord-jdbcsqlite3-adapter&#39;</span>
+</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;jruby-lint&#39;</span>
+</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;warbler&#39;</span>
+</div><div class='line'> </div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;actionmailer&#39;</span>
+</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;actionpack&#39;</span>
+</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;activerecord&#39;</span>
+</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;activerecord-jdbc-adapter&#39;</span>
+</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;activeresource&#39;</span>
+</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;activesupport&#39;</span>
+</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;jdbc-mysql&#39;</span>
+</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;rack&#39;</span>
+</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;rake&#39;</span>
+</div><div class='line'><span class="k">end</span>
+</div></pre></td></tr></table></div></figure>
+
+<p>What I found was that jruby behaves oddly when I&#39;m behind a proxy, it
+seems to blindly take my system proxy settings on my mac, so I had to
+work around it.</p>
+
+<p>Nokogiri seems to be subtly different when deployed with jruby and thus
+it breaks a bunch of things, which is funny as this was the main reason
+to testing out jruby so that we can access the java based XML libraries.</p>
+]]></content>
+    </entry>
   
     <entry>
       
@@ -1215,45 +1272,6 @@ have to revert back to using Linux at somepoint.</p>
 <p>At least in Linux I know how to get a kdump out and debug the issue
 but with OSX I&#39;m not sure where I should begin to figure out what&#39;s
 broken.</p>
-]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Vagrant and Veewee for managing virtual machines for development]]></title>
-<link href="http://jcftang.github.com/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development/"/>
-<updated>2012-07-17T12:06:00+01:00</updated>
-<id>http://jcftang.github.com/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development</id>
-<category term="linux" /><category term="osx" /><category term="scm" /><category term="team" />
-
-      <content type="html"><![CDATA[<p>I only discovered <a href="https://github.com/mitchellh/vagrant">Vagrant</a> last
-week at OR2012 when one of the presentations had Vagrant as a part of
-the testing component in the project. I was pleasantly surprised that
-it was leaveraging lots of free and opensource technology to provide
-repeatable environments for development and testing. I was even more
-impressed by the <a href="https://github.com/jedi4ever/veewee">Veewee</a> project
-which provides some additional wrappers for building custom
-&#39;boxes&#39;. Veewee certainly saved me lots of time in setting up some
-updated <a href="http://www.scientificlinux.org/">Scientific Linux</a> boxes
-(it&#39;s my preferred distro for deployments).</p>
-
-<p>In summary Vagrant is a set of scripts to manage virtual machines and
-Veewee is a set of scripts for creating base images for use in
-Vagrant. If you&#39;re interested in the updated SL6.2 definitions they
-can be found at my
-<a href="https://github.com/jcftang/veewee/tree/scientificlinux-6.2">fork of veewee</a>.</p>
-
-<p>All that is left now is to setup <a href="http://puppetlabs.com/">puppet</a> and
-have it automatically provision my development/test environment. I&#39;m
-not a huge fan of puppet, but I guess it&#39;s better than rolling my own.</p>
-
-<p>I look forward to have the capability of having easy access to
-disposable VM&#39;s for prototyping and testing! I will need to at
-somepoint setup a test system for cports with this tool.</p>
 ]]></content>
     </entry>
   
