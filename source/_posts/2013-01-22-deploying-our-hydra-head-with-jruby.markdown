@@ -5,7 +5,7 @@ date: 2013-01-22T19:49:02+00:00
 comments: true
 external-url: 
 categories: ruby java linux preservation dri
-published: false
+published: true
 ---
 
 We've been ramping up our development work on the project that I have been on
