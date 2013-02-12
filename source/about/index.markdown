@@ -12,6 +12,23 @@ footer: true
 This is more of a technical blog of what I want to rant about
 separate from my [personal blog](http://www.sgenomics.org/~jtang/).
 
+## Summary
+
+Jimmy Tang is a senior software engineer in the TCHPC. He has worked on a
+number of grid storage systems in the HPC Europa 1 and 2 programs, developing
+management and storage solutions for numerical computing. He has also
+participated in the development and deployment of the infrastructure for the
+Irish African Partnership, 1641 Depositions, IITAC, eINIS and a number of other
+research projects.
+
+Jimmy has extensive knowledge in the development, deployment and maintenance of
+large-scale storage and computer systems. He has in the past provided software
+development and support services to numerous researchers, research groups and
+projects in the area of High Performance Computing.
+
+Specialties: systems programming, beowulf cluster architecture, high
+performance computing, numerical computing, SCM
+
 ## Resume
 
 The following is an incomplete resume, it is work in progress.
