@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2013-01-26T11:08:13+00:00</updated>
+  <updated>2013-02-17T09:31:19+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,45 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[HydraCamp 2013 - Trinity College Dublin &rarr;]]></title>
+<link href="http://www.tchpc.tcd.ie/hydracamp2013"/>
+<updated>2013-02-08T10:02:12+00:00</updated>
+<id>http://jcftang.github.com/2013/02/08/hydracamp-2013-trinity-college--dublin</id>
+<category term="dri" /><category term="preservation" /><category term="ruby" /><category term="tcd" />
+
+      <content type="html"><![CDATA[<p>After a few months of budgeting, negotiations and finding venues we&#39;ve
+at Trinity College Dublin have committed to hosting a HydraCamp for
+europe! So I&#39;m shamelessly plugging it here.</p>
+
+<p>Trinity College Dublin as a part of Digital Repository of Ireland will
+be organising Hydra Camp in the week of April 8th till 12th, 2013. This
+will be a week long training course, which will be aimed at developers
+who are interested in the Hydra framework for developing repositories.</p>
+
+<p>For those that don&#39;t know Hydra is a framework built upon various
+Fedora-Commons, Apache SOLR, Ruby and Ruby on Rails technologies. At
+DRI we&#39;re using it to build up our prototype repository.</p>
+
+<p>It&#39;s possible to use the Hydra framework to build repositories for
+archiving and preservation.</p>
+
+<h3>Resources</h3>
+
+<ul>
+<li>HydraCamp 2013 - <a href="http://www.tchpc.tcd.ie/hydracamp2013">http://www.tchpc.tcd.ie/hydracamp2013</a></li>
+<li>Digital Repository of Ireland - <a href="http://www.dri.ie/">http://www.dri.ie/</a></li>
+<li>Project Hydra - <a href="http://projecthydra.org/">http://projecthydra.org/</a></li>
+<li>Data Curation Experts - <a href="http://curationexperts.wordpress.com/">http://curationexperts.wordpress.com/</a></li>
+</ul>
+<p><a rel="bookmark" href="http://jcftang.github.com/2013/02/08/hydracamp-2013-trinity-college--dublin/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -1242,36 +1281,6 @@ I am working on in work.</p>
 step back and evaluate if this is the best way for me to learn ruby or
 not. I should probably not mess too much extending the language with a
 C library.</p>
-]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[OSX Kernel panics and VirtualBox]]></title>
-<link href="http://jcftang.github.com/2012/07/20/osx-kernel-panics-and-virtualbox/"/>
-<updated>2012-07-20T20:49:00+01:00</updated>
-<id>http://jcftang.github.com/2012/07/20/osx-kernel-panics-and-virtualbox</id>
-<category term="osx" /><category term="team" />
-
-      <content type="html"><![CDATA[<p>Having discovered <a href="http://vagrantup.com/">vagrant</a> and
-<a href="https://github.com/jedi4ever/veewee">veewee</a> recently at OR2012 I&#39;ve
-been building a few <em>boxes</em> for our site for testing purposes. I&#39;ve
-had to relearn puppet to provision machines, but it&#39;s paying off. I&#39;ve
-been able to deploy 3-4 virtual machines with relative ease.</p>
-
-<p>The only disappointment is the seemingly frequent and semi-random
-kernel panics and crashes that I get on OSX (which is probably caused
-by VirtualBox when I do lots of IO). It&#39;s making me rethink if I
-really want to stick with OSX as my primary desktop OS in work. I may
-have to revert back to using Linux at somepoint.</p>
-
-<p>At least in Linux I know how to get a kdump out and debug the issue
-but with OSX I&#39;m not sure where I should begin to figure out what&#39;s
-broken.</p>
 ]]></content>
     </entry>
   
