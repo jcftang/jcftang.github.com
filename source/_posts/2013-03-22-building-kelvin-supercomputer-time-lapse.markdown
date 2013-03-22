@@ -26,3 +26,6 @@ not the lowest latency networking that we could get at the time.
 When we were configuring this system we had also redesigned the storage
 system roughly around this period and went with a cluster to cluster
 GPFS configuration.
+
+Oh and we threw out the old cluster which was about 10racks of IBM e326
+machines in the process.
