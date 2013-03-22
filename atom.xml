@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2013-03-06T19:53:20+00:00</updated>
+  <updated>2013-03-22T08:10:21+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Building Kelvin Supercomputer (time lapse) &rarr;]]></title>
+<link href="http://www.youtube.com/watch?v=F0zon45WR-U&feature=youtu.be"/>
+<updated>2013-03-22T07:46:26+00:00</updated>
+<id>http://jcftang.github.com/2013/03/22/building-kelvin-supercomputer-time-lapse</id>
+<category term="hpc" /><category term="tcd" /><category term="team" />
+
+      <content type="html"><![CDATA[<p>I was cleaning up some files and I found
+this time lapse that I did when we were building
+<a href="http://www.tchpc.tcd.ie/resources/clusters/kelvin">Kelvin</a>, it&#39;s a few
+years old now. Even by current standards it&#39;s still pretty respectable.</p>
+
+<div class="ratio-4-3 embed-video-container" onclick="var myAnchor = document.getElementById('F0zon45WR-U');var tmpDiv = document.createElement('div');tmpDiv.innerHTML = '&lt;iframe style=&quot;vertical-align:top;width:100%;height:100%;position:absolute;&quot; src=&quot;http://www.youtube.com/embed/F0zon45WR-U?autoplay=1&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;';myAnchor.parentNode.replaceChild(tmpDiv.firstChild, myAnchor);return false;" title="click here to play">
+<a class="youtube-lazy-link" style="width:100%;height:100%;background:#000 url(http://i2.ytimg.com/vi/F0zon45WR-U/0.jpg) center center no-repeat;background-size:contain;position:absolute" href="http://www.youtube.com/watch?v=F0zon45WR-U" id="F0zon45WR-U" onclick="return false;">
+<div class="youtube-lazy-link-div"></div>
+<div class="youtube-lazy-link-info">Kelvin_eINIS_with_music_with_logos_trimmed-trifonic-hp</div>
+</a>
+<div class="video-info" >Time lapse of building Kelvin capability computer</div>
+</div>
+
+<p>We had to unpack and install all the infiniband cards ourselves, cabled,
+racked, installed, configured and burnt it in for production usage. The
+cluster has 100 nodes, each node has 2 sockets, each socket has 6 cores
+and 24gb of ram.</p>
+
+<p>The most interesting thing about this machine was that we got it with
+QLogic infiniscale/infinipath HCA&#39;s and switching. It was one of the if
+not the lowest latency networking that we could get at the time.</p>
+
+<p>When we were configuring this system we had also redesigned the storage
+system roughly around this period and went with a cluster to cluster
+GPFS configuration.</p>
+<p><a rel="bookmark" href="http://jcftang.github.com/2013/03/22/building-kelvin-supercomputer-time-lapse/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -1219,68 +1259,6 @@ able to do clean rebuilds of various packages without fear of completely
 polluting the enviroment, as its just a few commands away from being
 redeployed and provisioned. I&#39;ll need to play more and then release it
 to the HPC community (or those that care).</p>
-]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[An excuse to learn Ruby and Ruby on Rails]]></title>
-<link href="http://jcftang.github.com/2012/08/02/an-excuse-to-learn-ruby-and-ruby-on-rails/"/>
-<updated>2012-08-02T18:15:00+01:00</updated>
-<id>http://jcftang.github.com/2012/08/02/an-excuse-to-learn-ruby-and-ruby-on-rails</id>
-<category term="dri" /><category term="ruby" /><category term="team" />
-
-      <content type="html"><![CDATA[<p>I&#39;ve been a long time consumer of ruby applications but never quite
-got around to learning the language and the frameworks that are
-available to developers. Within the team that I have been working
-with, we&#39;ve been evaluating <a href="http://projecthydra.org">hydra</a> as a
-possible framework for our project.</p>
-
-<p>I&#39;ve been spending the last few days reading
-<a href="http://pragprog.com/book/achbd/the-rspec-book">The RSpec Book</a>, I&#39;ve
-been able to pick up some of the basic syntax of the language from the
-BDD book. As soon as I finish this book I will be moving on to a more
-real world book relating to ruby with the goal of being able to
-develop Ruby and Ruby on Rails applications.</p>
-
-<p>Well, I didn&#39;t get as far as finishing the RSpec book and I&#39;ve started
-creating a rubygem. I&#39;m attempting to expose the insides of
-<a href="https://tahoe-lafs.org/trac/zfec/">zfec</a>, specifically the
-functionality in <em>fec.c</em>. So far I&#39;ve been lazy and I am using swig to
-automatically generate the C to ruby bindings with something like this</p>
-
-<figure class='code'><figcaption>fec.i </figcaption><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div></pre></td><td class='main  c'><pre><div class='line'><span class="o">%</span><span class="n">module</span> <span class="n">fec</span>
-</div><div class='line'> </div><div class='line'><span class="o">%</span><span class="p">{</span>
-</div><div class='line'><span class="cp">#include &quot;fec.h&quot;</span>
-</div><div class='line'><span class="o">%</span><span class="p">}</span>
-</div><div class='line'> </div><div class='line'><span class="n">fec_t</span><span class="o">*</span> <span class="n">fec_new</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">k</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">m</span><span class="p">);</span>
-</div><div class='line'><span class="kt">void</span> <span class="nf">fec_free</span><span class="p">(</span><span class="n">fec_t</span><span class="o">*</span> <span class="n">p</span><span class="p">);</span>
-</div><div class='line'><span class="kt">void</span> <span class="nf">fec_decode</span><span class="p">(</span><span class="k">const</span> <span class="n">fec_t</span><span class="o">*</span> <span class="n">code</span><span class="p">,</span> <span class="k">const</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">inpkts</span><span class="p">,</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">outpkts</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">index</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">sz</span><span class="p">);</span>
-</div><div class='line'><span class="kt">void</span> <span class="nf">fec_encode</span><span class="p">(</span><span class="k">const</span> <span class="n">fec_t</span><span class="o">*</span> <span class="n">code</span><span class="p">,</span> <span class="k">const</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">src</span><span class="p">,</span> <span class="n">gf</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">fecs</span><span class="p">,</span> <span class="k">const</span> <span class="kt">unsigned</span><span class="o">*</span><span class="kr">restrict</span> <span class="k">const</span> <span class="n">block_nums</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">num_block_nums</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">sz</span><span class="p">);</span>
-</div></pre></td></tr></table></div></figure>
-
-<p>Swig does it&#39;s thing,</p>
-
-<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div></pre></td><td class='main  bash'><pre><div class='line'>swig -ruby fec.i
-</div></pre></td></tr></table></div></figure>
-
-<p>Amazingly after some fiddling I got ruby to load up the module. It
-doesn&#39;t mean that it&#39;s going to do much though as I need to learn
-about the typemaps in the ruby C interface do the correct mappings.</p>
-
-<p>I&#39;m so far taking inspiration from the zfec python module to take a
-stab at building a ruby equivalent package for the sake of learning
-ruby and maybe even end up with something useful for the project that
-I am working on in work.</p>
-
-<p>After playing with extending ruby, I&#39;m thinking I may need to take a
-step back and evaluate if this is the best way for me to learn ruby or
-not. I should probably not mess too much extending the language with a
-C library.</p>
 ]]></content>
     </entry>
   

@@ -97,6 +97,89 @@
   <header>
     <h1 class="entry-title">
 
+<a href="http://www.youtube.com/watch?v=F0zon45WR-U&feature=youtu.be">Building Kelvin Supercomputer (Time Lapse)</a>
+<span class='linklog-marker'>&rarr;</span>
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-22T07:46:26+00:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2013</time>
+        
+         | <a href="/2013/03/22/building-kelvin-supercomputer-time-lapse/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2013/03/22/building-kelvin-supercomputer-time-lapse/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>I was cleaning up some files and I found
+this time lapse that I did when we were building
+<a href="http://www.tchpc.tcd.ie/resources/clusters/kelvin">Kelvin</a>, it&#39;s a few
+years old now. Even by current standards it&#39;s still pretty respectable.</p>
+
+<div class="ratio-4-3 embed-video-container" onclick="var myAnchor = document.getElementById('F0zon45WR-U');var tmpDiv = document.createElement('div');tmpDiv.innerHTML = '&lt;iframe style=&quot;vertical-align:top;width:100%;height:100%;position:absolute;&quot; src=&quot;http://www.youtube.com/embed/F0zon45WR-U?autoplay=1&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;';myAnchor.parentNode.replaceChild(tmpDiv.firstChild, myAnchor);return false;" title="click here to play">
+<a class="youtube-lazy-link" style="width:100%;height:100%;background:#000 url(http://i2.ytimg.com/vi/F0zon45WR-U/0.jpg) center center no-repeat;background-size:contain;position:absolute" href="http://www.youtube.com/watch?v=F0zon45WR-U" id="F0zon45WR-U" onclick="return false;">
+<div class="youtube-lazy-link-div"></div>
+<div class="youtube-lazy-link-info">Kelvin_eINIS_with_music_with_logos_trimmed-trifonic-hp</div>
+</a>
+<div class="video-info" >Time lapse of building Kelvin capability computer</div>
+</div>
+
+<p>We had to unpack and install all the infiniband cards ourselves, cabled,
+racked, installed, configured and burnt it in for production usage. The
+cluster has 100 nodes, each node has 2 sockets, each socket has 6 cores
+and 24gb of ram.</p>
+
+<p>The most interesting thing about this machine was that we got it with
+QLogic infiniscale/infinipath HCA&#39;s and switching. It was one of the if
+not the lowest latency networking that we could get at the time.</p>
+
+<p>When we were configuring this system we had also redesigned the storage
+system roughly around this period and went with a cluster to cluster
+GPFS configuration.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2013/03/22/building-kelvin-supercomputer-time-lapse/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2013/03/22/building-kelvin-supercomputer-time-lapse/">View comments &raquo;</a></p>
+    
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+  
+
+
+
+
+
+
+
+
+    <article class="linklog">
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="http://www.tchpc.tcd.ie/hydracamp2013">HydraCamp 2013 - Trinity College Dublin</a>
 <span class='linklog-marker'>&rarr;</span>
 </h1>
@@ -881,97 +964,6 @@ point, especially if you want to do something with the data.</p>
 
     </article>
   
-    
-
-
-
-  
-
-
-
-
-
-
-
-
-    <article class="linklog">
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="https://github.com/jcftang/slurm-bank">SLURM-Bank That Big Script for Banking in SLURM</a>
-<span class='linklog-marker'>&rarr;</span>
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-29T19:52:00+01:00" pubdate data-updated="true">Sep 29<span>th</span>, 2012</time>
-        
-         | <a href="/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>A co-worker of mine (Paddy Doyle) had originally hacked at a perl script
-for reporting balances from SLURM&#39;s accounting system a year or two ago
-and he had figured out that it might be possible to do some minimalistic
-&#39;configuration&#39; and scripting to get a system that&#39;s very basic but
-functional.</p>
-
-<p>It was just one of those things that funding agencies wanted to justify
-how the system was being used, GOLD was clunky and obtrusive and
-complicated for what we wanted. Most of all we liked SLURM but not GOLD
-and Maui which was needed to get full accounting and banking (most of
-the features weren&#39;t used).</p>
-
-<p>Being good and lazy engineers we got excited with the prospect of having
-the option of replacing SLURM, Maui and GOLD with just plain old SLURM
-we set out to write down the workflows for what we wanted to do and what
-the user and funding agencies actually wanted. With those ideas in mind
-we set out to implement as much as we could and needed in just plain
-old sh/bash scripting with a splash of perl. Replacing two components
-with one meant that we would have less work to do in the long run ;)</p>
-
-<p>After a whole year of running with these scripts and just putting it
-online, I&#39;ve noticed that there may be a few sites out there that might
-be using our scripts and workflows. It would be nice to find out how
-many people are using our implementation of a banking system in SLURM
-and if it&#39;s driven by sysadmins looking to account for usage or is it
-funding agencies looking for justification of the usage of a system.</p>
-
-<p>I was going to be at the SLURM User Group Meeting 2012 to give a
-short talk on our experiences with the SLURM-Bank scripts and workflow,
-but sadly I have to be in the US during this meeting and my colleague
-&ldquo;Paddy Doyle&rdquo; will there instead of me.  I would have liked to go and chat
-with the developers of SLURM to push for more advanced banking/accounting
-facilities in SLURM itself. Visiting BSC again would have been fun.</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/">View comments &raquo;</a></p>
-    
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -994,6 +986,10 @@ facilities in SLURM itself. Visiting BSC again would have been fun.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/03/22/building-kelvin-supercomputer-time-lapse/">Building Kelvin Supercomputer (time lapse)</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/02/08/hydracamp-2013-trinity-college--dublin/">HydraCamp 2013 - Trinity College Dublin</a>
       </li>
     
@@ -1007,10 +1003,6 @@ facilities in SLURM itself. Visiting BSC again would have been fun.</p>
     
       <li class="post">
         <a href="/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale/">Supercomputing 2012 and the arms race to exascale</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/11/04/there-is-light-on-the-otherside/">There is light on the otherside</a>
       </li>
     
   </ul>

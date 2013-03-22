@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>RCE 62: Ceph Petabyte Scale Storage - Jimmy Tang</title>
+  <title>Building Kelvin Supercomputer (time lapse) - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/2012/09/01/rce-62-ceph-petabyte-scale-storage/">
+  <link rel="canonical" href="http://jcftang.github.com/2013/03/22/building-kelvin-supercomputer-time-lapse/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Jimmy Tang" type="application/atom+xml">
@@ -96,7 +96,7 @@
   <header>
     <h1 class="entry-title">
 
-<a href="http://www.rce-cast.com/Podcast/rce-62-ceph-petabyte-scale-storage.html">RCE 62: Ceph Petabyte Scale Storage</a>
+<a href="http://www.youtube.com/watch?v=F0zon45WR-U&feature=youtu.be">Building Kelvin Supercomputer (Time Lapse)</a>
 <span class='linklog-marker'>&rarr;</span>
 </h1>
 
@@ -114,19 +114,40 @@
   
 
 
-<time datetime="2012-09-01T19:42:00+01:00" pubdate data-updated="true">Sep 1<span>st</span>, 2012</time>
+<time datetime="2013-03-22T07:46:26+00:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/2012/09/01/rce-62-ceph-petabyte-scale-storage/">Permalink</a>
+         &bull; <a rel="bookmark" href="/2013/03/22/building-kelvin-supercomputer-time-lapse/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p>It&#39;s somewhat interesting to listen to, we&#39;ve been looking at
-<a href="http://www.ceph.com/">ceph</a> for a few things in work.</p>
+<div class="entry-content"><p>I was cleaning up some files and I found
+this time lapse that I did when we were building
+<a href="http://www.tchpc.tcd.ie/resources/clusters/kelvin">Kelvin</a>, it&#39;s a few
+years old now. Even by current standards it&#39;s still pretty respectable.</p>
 
-<p>Just jotting this down so I remember to share this with the guys in work.</p>
+<div class="ratio-4-3 embed-video-container" onclick="var myAnchor = document.getElementById('F0zon45WR-U');var tmpDiv = document.createElement('div');tmpDiv.innerHTML = '&lt;iframe style=&quot;vertical-align:top;width:100%;height:100%;position:absolute;&quot; src=&quot;http://www.youtube.com/embed/F0zon45WR-U?autoplay=1&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;';myAnchor.parentNode.replaceChild(tmpDiv.firstChild, myAnchor);return false;" title="click here to play">
+<a class="youtube-lazy-link" style="width:100%;height:100%;background:#000 url(http://i2.ytimg.com/vi/F0zon45WR-U/0.jpg) center center no-repeat;background-size:contain;position:absolute" href="http://www.youtube.com/watch?v=F0zon45WR-U" id="F0zon45WR-U" onclick="return false;">
+<div class="youtube-lazy-link-div"></div>
+<div class="youtube-lazy-link-info">Kelvin_eINIS_with_music_with_logos_trimmed-trifonic-hp</div>
+</a>
+<div class="video-info" >Time lapse of building Kelvin capability computer</div>
+</div>
+
+<p>We had to unpack and install all the infiniband cards ourselves, cabled,
+racked, installed, configured and burnt it in for production usage. The
+cluster has 100 nodes, each node has 2 sockets, each socket has 6 cores
+and 24gb of ram.</p>
+
+<p>The most interesting thing about this machine was that we got it with
+QLogic infiniscale/infinipath HCA&#39;s and switching. It was one of the if
+not the lowest latency networking that we could get at the time.</p>
+
+<p>When we were configuring this system we had also redesigned the storage
+system roughly around this period and went with a cluster to cluster
+GPFS configuration.</p>
 </div>
 
 
@@ -149,12 +170,12 @@
   
 
 
-<time datetime="2012-09-01T19:42:00+01:00" pubdate data-updated="true">Sep 1<span>st</span>, 2012</time>
+<time datetime="2013-03-22T07:46:26+00:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2013</time>
 
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/ceph/'>ceph</a>, <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/storage/'>storage</a>
+    <a class='category' href='/blog/categories/hpc/'>hpc</a>, <a class='category' href='/blog/categories/tcd/'>tcd</a>, <a class='category' href='/blog/categories/team/'>team</a>
   
 </span>
 
@@ -172,12 +193,12 @@
   
   
     
-      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/09/01/rce-62-ceph-petabyte-scale-storage/" target="_blank">+1</a>
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2013/03/22/building-kelvin-supercomputer-time-lapse/" target="_blank">+1</a>
     
   
   
     
-    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/09/01/rce-62-ceph-petabyte-scale-storage/" target="_blank">Share</a>
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2013/03/22/building-kelvin-supercomputer-time-lapse/" target="_blank">Share</a>
     
   
   
@@ -187,10 +208,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2012/08/28/taking-vagrant-and-running-with-it/" title="Previous Post: Taking Vagrant and running with it">&laquo; Taking Vagrant and running with it</a>
+        <a class="basic-alignment left" href="/2013/02/08/hydracamp-2013-trinity-college--dublin/" title="Previous Post: HydraCamp 2013 - Trinity College Dublin">&laquo; HydraCamp 2013 - Trinity College Dublin</a>
       
-      
-        <a class="basic-alignment right" href="/2012/09/02/scientific-linux-6-build-environment-for-ceph/" title="Next Post: Scientific Linux 6 build environment for Ceph">Scientific Linux 6 build environment for Ceph &raquo;</a>
       
     </p>
   </footer>
@@ -215,23 +234,23 @@
   <ul class="posts">
     
       <li class="related">
-        <a href="/2012/04/01/gitbuilder-aggregator/">Gitbuilder aggregator</a>
+        <a href="/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster/">Going from replicating across OSD's to replicating across hosts in a Ceph cluster</a>
       </li>
     
       <li class="related">
-        <a href="/2012/04/09/prototyping-and-testing-systems/">Prototyping and testing systems</a>
+        <a href="/2012/09/04/adding-an-osd-to-a-ceph-cluster/">Adding an OSD to a Ceph Cluster</a>
       </li>
     
       <li class="related">
-        <a href="/2012/06/26/git-annex-assistant-is-making-leaps-and-bounds/">git-annex assistant is making leaps and bounds</a>
+        <a href="/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/">Thoughts on using the likes of tahoe-lafs and git-annex as a backend storage system for Digital Preservation</a>
       </li>
     
       <li class="related">
-        <a href="/2012/06/18/octopress-2-dot-1-taking-a-sneak-peek/">Octopress 2.1, taking a sneak peek</a>
+        <a href="/2012/06/15/installing-git-annex-on-sl5/">Installing git-annex on SL5</a>
       </li>
     
       <li class="related">
-        <a href="/2012/08/02/an-excuse-to-learn-ruby-and-ruby-on-rails/">An excuse to learn Ruby and Ruby on Rails</a>
+        <a href="/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for HPC systems</a>
       </li>
     
   </ul>
@@ -307,8 +326,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/2012/09/01/rce-62-ceph-petabyte-scale-storage/';
-        var disqus_url = 'http://jcftang.github.com/2012/09/01/rce-62-ceph-petabyte-scale-storage/';
+        var disqus_identifier = 'http://jcftang.github.com/2013/03/22/building-kelvin-supercomputer-time-lapse/';
+        var disqus_url = 'http://jcftang.github.com/2013/03/22/building-kelvin-supercomputer-time-lapse/';
         var disqus_script = 'embed.js';
       
     (function () {
