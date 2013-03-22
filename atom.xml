@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2013-03-22T08:10:21+00:00</updated>
+  <updated>2013-03-22T08:13:08+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -49,6 +49,9 @@ not the lowest latency networking that we could get at the time.</p>
 <p>When we were configuring this system we had also redesigned the storage
 system roughly around this period and went with a cluster to cluster
 GPFS configuration.</p>
+
+<p>Oh and we threw out the old cluster which was about 10racks of IBM e326
+machines in the process.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2013/03/22/building-kelvin-supercomputer-time-lapse/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
