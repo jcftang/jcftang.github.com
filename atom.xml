@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2013-03-22T08:13:08+00:00</updated>
+  <updated>2013-03-24T11:45:01+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Amazon Redshift - a curiousity to me?]]></title>
+<link href="http://jcftang.github.com/2013/03/24/amazon-redshift-a-curiousity-to-me/"/>
+<updated>2013-03-24T11:16:54+00:00</updated>
+<id>http://jcftang.github.com/2013/03/24/amazon-redshift-a-curiousity-to-me</id>
+<category term="hpc" /><category term="storage" />
+
+      <content type="html"><![CDATA[<p>I&#39;ve been recently reading up on Amazon <a href="">Redshift</a>, at first I thought
+it was a parallel/distributed datastore like HDFS. At a second look in
+reality its more of a distributed relational database. This in itself
+is pretty cool for scaling applications with large data sets that happen
+to need to be in a database; which is quite a few things.</p>
+
+<p>From the initial reading of the architecture and docs, it looks like
+Amazon built a job queuing system around postgres to schedule queries
+out to its nodes in the cluster. What&#39;s curious to me is how do they
+deal with failed nodes in the system and how they provision the system,
+there must be an ordered set of operations to do so.</p>
+
+<p>Another oddity is the mesh network that the system has, I&#39;m under the
+impression that there is only 1x10gb network connection on the machine. I
+wonder if the mesh network is just a virtual mesh network or if it&#39;s
+really a real physical one. If it&#39;s a real physical mesh network then
+each machine would require more than one network interface. It would
+also be a cabling nightmare to build such a device and if Amazon has
+built a large scale mesh network of machines, that would be pretty cool.
+I wonder how much of the Redshift user base are latency, bandwidth or
+compute bound when looking at large datasets; or if its really just the
+challenge of having one real big database that can be queried.</p>
+]]></content>
+    </entry>
   
     <entry>
       
@@ -1206,63 +1243,6 @@ build</a> or just go to their
 
 <p>Just jotting this down so I remember to share this with the guys in work.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/09/01/rce-62-ceph-petabyte-scale-storage/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Taking Vagrant and running with it]]></title>
-<link href="http://jcftang.github.com/2012/08/28/taking-vagrant-and-running-with-it/"/>
-<updated>2012-08-28T18:49:00+01:00</updated>
-<id>http://jcftang.github.com/2012/08/28/taking-vagrant-and-running-with-it</id>
-<category term="linux" /><category term="osx" /><category term="scm" /><category term="team" />
-
-      <content type="html"><![CDATA[<p>Over past few weeks I&#39;ve been working on doing some integration and
-testing work to try and deliver a prototype system. I&#39;ve taken the
-<a href="http://vagrantup.com/">Vagrant</a> tool and puppet to try and deliver
-systems for testing and development. Although the systems that I am
-currently working with aren&#39;t fully automated, they are automated
-enough for them to be easily started up by a developer who reads the
-documentation (I hope).</p>
-
-<p>I&#39;m hoping that by providing these disposable systems that the various
-members in the team that I am working with will be more free to experiment
-and less fearful of breaking the system. At best everyone will take the
-idea on board and run with it as it does provide a common environment
-for all members in the team and it encourages reproducibility of issues
-and features.</p>
-
-<p>One of the next steps of building up the development framework that I
-now have is to introduce some of these concepts and the whole Vagrant
-environment to the more front facing part of the team who need to deal
-with stakeholders in the project. If our requirements and policy team have
-constant up to date access to our development, testing and QA environment
-along with the executable specifications (in the form of cucumber tests)
-I hope to push forward communications between the stakeholders and the
-team that I&#39;m working with.</p>
-
-<p>For now I have one VM for the application itself and a number of
-&ldquo;clusters&rdquo; of VM&#39;s which I had used for reviewing some technical
-documentation, they are partially automated for others to
-play with. Currently these scripts are internal to the project
-only, but it&#39;s not hard to setup if you know how to configure
-<a href="http://puppetlabs.com/">puppet</a>. Some of the scripts and ideas can
-be found at <a href="https://github.com/jcftang/tchpc-vagrant">tchpc-vagrant</a>,
-they&#39;re not great, but not bad either. I need more of the developers in
-the team to use what I&#39;ve setup to evolve the system more for our use.</p>
-
-<p>In parallel to using this for my day job, I&#39;ve
-also setup a Vagrantfile for one of my pet projects
-<a href="https://github.com/jcftang/cports">cports</a>. Using Vagrant for testing
-builds and deployments of a packaging system has been great. I&#39;ve been
-able to do clean rebuilds of various packages without fear of completely
-polluting the enviroment, as its just a few commands away from being
-redeployed and provisioned. I&#39;ll need to play more and then release it
-to the HPC community (or those that care).</p>
-]]></content>
     </entry>
   
 </feed>

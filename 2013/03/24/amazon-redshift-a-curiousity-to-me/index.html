@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>DCC Roadshow N. Ireland - Jimmy Tang</title>
+  <title>Amazon Redshift - a curiousity to me? - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/2012/06/06/dcc-roadshow-n-ireland/">
+  <link rel="canonical" href="http://jcftang.github.com/2013/03/24/amazon-redshift-a-curiousity-to-me/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Jimmy Tang" type="application/atom+xml">
@@ -82,7 +82,6 @@
 
 
 
-  
 
 
 
@@ -90,14 +89,13 @@
 
 
 
-
-<article class="hentry linklog" role="article">
+<article class="hentry " role="article">
   
   <header>
     <h1 class="entry-title">
 
-<a href="http://www.dcc.ac.uk/events/data-management-roadshows/dcc-roadshow-n-ireland">DCC Roadshow N. Ireland</a>
-<span class='linklog-marker'>&rarr;</span>
+Amazon Redshift - a Curiousity to Me?
+
 </h1>
 
     
@@ -114,25 +112,37 @@
   
 
 
-<time datetime="2012-06-06T14:16:00+01:00" pubdate data-updated="true">Jun 6<span>th</span>, 2012</time>
+<time datetime="2013-03-24T11:16:54+00:00" pubdate data-updated="true">Mar 24<span>th</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/2012/06/06/dcc-roadshow-n-ireland/">Permalink</a>
+         &bull; <a rel="bookmark" href="/2013/03/24/amazon-redshift-a-curiousity-to-me/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p>The 12th DCC regional roadshow will take place on 6th and 7th June at
-the McClay library, Queen&#39;s University Belfast.</p>
+<div class="entry-content"><p>I&#39;ve been recently reading up on Amazon <a href="">Redshift</a>, at first I thought
+it was a parallel/distributed datastore like HDFS. At a second look in
+reality its more of a distributed relational database. This in itself
+is pretty cool for scaling applications with large data sets that happen
+to need to be in a database; which is quite a few things.</p>
 
-<p>The roadshow is being organised in conjunction with Queen&#39;s University
-Belfast.</p>
+<p>From the initial reading of the architecture and docs, it looks like
+Amazon built a job queuing system around postgres to schedule queries
+out to its nodes in the cluster. What&#39;s curious to me is how do they
+deal with failed nodes in the system and how they provision the system,
+there must be an ordered set of operations to do so.</p>
 
-<p>Turns out to be far more informative than I originally thought. Lot&#39;s
-of real life examples of what people are doing and what&#39;s
-relavent. It&#39;s not the usual workshop, conference or meeting that I
-would attend.</p>
+<p>Another oddity is the mesh network that the system has, I&#39;m under the
+impression that there is only 1x10gb network connection on the machine. I
+wonder if the mesh network is just a virtual mesh network or if it&#39;s
+really a real physical one. If it&#39;s a real physical mesh network then
+each machine would require more than one network interface. It would
+also be a cabling nightmare to build such a device and if Amazon has
+built a large scale mesh network of machines, that would be pretty cool.
+I wonder how much of the Redshift user base are latency, bandwidth or
+compute bound when looking at large datasets; or if its really just the
+challenge of having one real big database that can be queried.</p>
 </div>
 
 
@@ -155,12 +165,12 @@ would attend.</p>
   
 
 
-<time datetime="2012-06-06T14:16:00+01:00" pubdate data-updated="true">Jun 6<span>th</span>, 2012</time>
+<time datetime="2013-03-24T11:16:54+00:00" pubdate data-updated="true">Mar 24<span>th</span>, 2013</time>
 
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/dri/'>dri</a>
+    <a class='category' href='/blog/categories/hpc/'>hpc</a>, <a class='category' href='/blog/categories/storage/'>storage</a>
   
 </span>
 
@@ -178,12 +188,12 @@ would attend.</p>
   
   
     
-      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/06/06/dcc-roadshow-n-ireland/" target="_blank">+1</a>
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2013/03/24/amazon-redshift-a-curiousity-to-me/" target="_blank">+1</a>
     
   
   
     
-    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/06/06/dcc-roadshow-n-ireland/" target="_blank">Share</a>
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2013/03/24/amazon-redshift-a-curiousity-to-me/" target="_blank">Share</a>
     
   
   
@@ -193,10 +203,8 @@ would attend.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter/" title="Previous Post: git-annex assistant is being crowd funded on Kickstarter">&laquo; git-annex assistant is being crowd funded on Kickstarter</a>
+        <a class="basic-alignment left" href="/2013/03/22/building-kelvin-supercomputer-time-lapse/" title="Previous Post: Building Kelvin Supercomputer (time lapse)">&laquo; Building Kelvin Supercomputer (time lapse)</a>
       
-      
-        <a class="basic-alignment right" href="/2012/06/07/facebook-open-house/" title="Next Post: Facebook - Open House">Facebook - Open House &raquo;</a>
       
     </p>
   </footer>
@@ -221,23 +229,23 @@ would attend.</p>
   <ul class="posts">
     
       <li class="related">
-        <a href="/2012/07/09/open-repositories-2012-day-1/">Open Repositories 2012 - Day 1</a>
-      </li>
-    
-      <li class="related">
-        <a href="/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/">SLURM-Bank that big script for banking in SLURM</a>
-      </li>
-    
-      <li class="related">
         <a href="/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster/">Going from replicating across OSD's to replicating across hosts in a Ceph cluster</a>
       </li>
     
       <li class="related">
-        <a href="/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/">Digital Preservation and Archiving is a HPC problem?</a>
+        <a href="/2012/09/04/adding-an-osd-to-a-ceph-cluster/">Adding an OSD to a Ceph Cluster</a>
       </li>
     
       <li class="related">
-        <a href="/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/">Things not to say and to do in a project meeting</a>
+        <a href="/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/">Thoughts on using the likes of tahoe-lafs and git-annex as a backend storage system for Digital Preservation</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux isn't the only platform to target when building applications</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/">Digital Preservation and Archiving is a HPC problem?</a>
       </li>
     
   </ul>
@@ -313,8 +321,8 @@ would attend.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/2012/06/06/dcc-roadshow-n-ireland/';
-        var disqus_url = 'http://jcftang.github.com/2012/06/06/dcc-roadshow-n-ireland/';
+        var disqus_identifier = 'http://jcftang.github.com/2013/03/24/amazon-redshift-a-curiousity-to-me/';
+        var disqus_url = 'http://jcftang.github.com/2013/03/24/amazon-redshift-a-curiousity-to-me/';
         var disqus_script = 'embed.js';
       
     (function () {

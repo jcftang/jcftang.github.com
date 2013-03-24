@@ -95,6 +95,102 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2011/12/13/using-continuous-integration-systems-in-a-team/">Using Continuous Integration Systems in a Team</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-13T07:37:00+00:00" pubdate data-updated="true">Dec 13<span>th</span>, 2011</time>
+        
+         | <a href="/2011/12/13/using-continuous-integration-systems-in-a-team/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2011/12/13/using-continuous-integration-systems-in-a-team/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>Apart from the obvious unit testing code which could be fun trying to
+convince a team to use. There are things known as &#39;Continuous
+Integration&#39; processes and servers. The basic idea is to continually
+build and test your product automatically and report on successful and
+failed builds.</p>
+
+<p>I&#39;ve known about this methodology for long time now but I&#39;ve never
+bothered to install a CI server since it was always for myself. In the
+past a loop in a shell script running make and or make test usually
+did the trick. Then I discovered gitbuilder which is just a small set
+of scripts for automating the process. Today I have Jenkins installed
+and I&#39;m somewhat looking at buildbot as well.</p>
+
+<p>Jenkins appears to be the most responsive and feature rich of the
+three systems that I have played with. Buildbot looks lightweight and
+scalable.  Though I do miss the git bisect and build on a failure that
+gitbuilder provides.</p>
+
+<p>Having to work with a team that is geographically distributed
+sometimes makes idea exchanges, organising events and development
+difficult. Any tool that I can get my hands on to encourage
+collaborative work and discussion is going to be used.</p>
+
+<p>Automating the build and test process also means that it is possible
+to automate the release process. If all the &#39;tests&#39; pass then why not
+release it? I will need to look at integrating things with fitnesse
+next. Other benefits from using a CI process or server means that most
+if not all things get automated, this turns into a highly valuable
+source of documentation for incoming developers and
+engineers. Documentation often gets left to the end instead of being
+done on a continual basis as the project progresses.</p>
+
+<p>Hopefully the CI server won&#39;t be used to name and shame developers in
+the group, it&#39;s there to make sure everything is working as expected.</p>
+
+<p>Now to convince the team that building early and continually is
+actually a good idea! Having somewhat successfully kicked off some
+pairing sessions with various team members is good, but being more
+flexible and professional about what we are building is what I&#39;m
+after.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2011/12/13/using-continuous-integration-systems-in-a-team/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2011/12/13/using-continuous-integration-systems-in-a-team/">View comments &raquo;</a></p>
+    
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2011/10/21/setting-up-my-work-macbook-air/">Setting Up My Work Macbook Air</a>
 
 </h1>
@@ -412,6 +508,10 @@ just down to a communication problem of creating the right thing.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/03/24/amazon-redshift-a-curiousity-to-me/">Amazon Redshift - a curiousity to me?</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/03/22/building-kelvin-supercomputer-time-lapse/">Building Kelvin Supercomputer (time lapse)</a>
       </li>
     
@@ -425,10 +525,6 @@ just down to a communication problem of creating the right thing.</p>
     
       <li class="post">
         <a href="/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs/">Making the jump and migrating my archlinux machines to use btrfs</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale/">Supercomputing 2012 and the arms race to exascale</a>
       </li>
     
   </ul>
