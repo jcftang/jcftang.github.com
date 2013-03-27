@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/jcftang/rb-gsl.git
+  revision: 7bcdf1328fb84041913f74611b4194b83c6a0c54
+  specs:
+    gsl (1.14.7)
+      narray (>= 0.5.9)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -12,8 +19,6 @@ GEM
     directory_watcher (1.4.1)
     fast-stemmer (1.0.1)
     fssm (0.2.9)
-    gsl (1.14.7)
-      narray (>= 0.5.9)
     haml (3.1.7)
     jekyll (0.12.0)
       classifier (~> 1.3)
@@ -27,7 +32,7 @@ GEM
     liquid (2.3.0)
     maruku (0.6.1)
       syntax (>= 1.0.0)
-    narray (0.6.0.4)
+    narray (0.6.0.8)
     posix-spawn (0.3.6)
     pygments.rb (0.3.7)
       posix-spawn (~> 0.3.6)
@@ -59,7 +64,7 @@ PLATFORMS
 DEPENDENCIES
   RedCloth (~> 4.2.9)
   compass (~> 0.12.2)
-  gsl
+  gsl!
   haml (~> 3.1.7)
   jekyll (~> 0.12.0)
   liquid (~> 2.3.0)
