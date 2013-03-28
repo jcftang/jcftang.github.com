@@ -34,11 +34,11 @@ selenium or better yet [poltergeist][] for capybara. We chose poltergeist
 as it runs headless. This isn't really a problem of cucumber/capybara,
 but rather a problem of RHEL6 and friends with old packages.
 
-... after sometime I have a half-way there set of ansible playbooks to
+...after sometime I have a half-way there set of ansible playbooks to
 get me to where I need to be in a virtual environment...
 
-... less rant ...
+...less rant ...
 
 [poltergeist]: https://github.com/jonleighton/poltergeist
 [capybara-webkit]: https://github.com/thoughtbot/capybara-webkit
-[tomcat depends]: https://bugzilla.redhat.com/show_bug.cgi?id=886996
+[tomcat6 depends]: https://bugzilla.redhat.com/show_bug.cgi?id=886996
