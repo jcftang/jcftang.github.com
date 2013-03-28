@@ -83,6 +83,97 @@
 
 
 
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="/2012/05/21/dris-workflows-just-got-uploaded-to-github/">DRIS Workflows Just Got Uploaded to Github</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-21T21:19:00+01:00" pubdate data-updated="true">May 21<span>st</span>, 2012</time>
+        
+         | <a href="/2012/05/21/dris-workflows-just-got-uploaded-to-github/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/05/21/dris-workflows-just-got-uploaded-to-github/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>After almost 3 months supervising and working with two interns I&#39;ve
+finally uploaded their work under the GPLv2 License.</p>
+
+<ul>
+<li><a href="https://github.com/jcftang/dri-api">https://github.com/jcftang/dri-api</a></li>
+<li><a href="https://github.com/jcftang/dris-workflows">https://github.com/jcftang/dris-workflows</a></li>
+<li><a href="https://github.com/jcftang/dris-workflows-site">https://github.com/jcftang/dris-workflows-site</a></li>
+<li><a href="https://github.com/jcftang/node-dri">https://github.com/jcftang/node-dri</a></li>
+<li><a href="https://github.com/jcftang/node-fedora">https://github.com/jcftang/node-fedora</a></li>
+</ul>
+
+<p>Please note that the packages above do not represent DRI at all, they
+just ended up getting labelled that way for whatever reason.</p>
+
+<p>So what are the above packages? Well they are an attempt at creating a
+workflow for the DRIS team in TCD who work on digital preservation,
+digitisation, cataloging and a host of other tasks which I probably
+don&#39;t know about.</p>
+
+<p>The prototype system consists of the DRIS Workflows package and the
+API server. The system currently target the problem of ingesting
+objects. It tries to map what the librarians/archivists at TCD are
+doing to a single interface to increase throughput and quality of the
+work (amongst other things).</p>
+
+<p>It&#39;s also able to export the internal meta-data as Dublin-Core, it&#39;s
+not great right now and requires more work and there is a small start
+made on MODS as well. It does demonstrate what the interns managed to
+achieve in 3 months time with a loose spec on what needed to be
+done. The basic design and architecture of the system isn&#39;t too
+different from Hydra, it was very much by accident that we ended up
+some similar ideas.</p>
+
+<p>The primary purpose of this post is to share the code! and as per
+usual, hope someone finds it useful.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/05/21/dris-workflows-just-got-uploaded-to-github/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2012/05/21/dris-workflows-just-got-uploaded-to-github/">View comments &raquo;</a></p>
+    
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
   
 
 
@@ -783,72 +874,6 @@ approach until hard requirements get delivered.</p>
 
     </article>
   
-    
-
-
-
-  
-
-
-
-
-
-
-
-
-    <article class="linklog">
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="http://progit.org/2010/03/08/rerere.html">Git Rerere for Long Lived Feature Branches</a>
-<span class='linklog-marker'>&rarr;</span>
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-11T11:45:00+00:00" pubdate data-updated="true">Mar 11<span>th</span>, 2012</time>
-        
-         | <a href="/2012/03/11/git-rerere-for-long-lived-feature-branches/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/03/11/git-rerere-for-long-lived-feature-branches/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>I turned this feature on for a few of my git repos but I had
-completely forgotten about it. As far as I recall the feature has been
-around for a few years now. It can be turned on globally by doing</p>
-<div class="highlight"><pre><code class="text">git config --global rerere.enabled 1
-</code></pre></div>
-<p>It pretty much automates the resolution of conflicts in long lived
-branches. I&#39;ve been lazy recently and I have just doing merges instead
-rebasing, which lead me to re-discover <em>git rerere</em>.</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/03/11/git-rerere-for-long-lived-feature-branches/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2012/03/11/git-rerere-for-long-lived-feature-branches/">View comments &raquo;</a></p>
-    
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -873,6 +898,10 @@ rebasing, which lead me to re-discover <em>git rerere</em>.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/">Testing and developing rails applications in a near production like environment</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/03/24/amazon-redshift-a-curiousity-to-me/">Amazon Redshift - a curiousity to me?</a>
       </li>
     
@@ -886,10 +915,6 @@ rebasing, which lead me to re-discover <em>git rerere</em>.</p>
     
       <li class="post">
         <a href="/2013/01/22/deploying-our-hydra-head-with-jruby/">Deploying our hydra-head with jruby</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs/">Making the jump and migrating my archlinux machines to use btrfs</a>
       </li>
     
   </ul>

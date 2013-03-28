@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2013-03-24T11:45:01+00:00</updated>
+  <updated>2013-03-28T17:16:01+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Testing and developing rails applications in a near production like environment]]></title>
+<link href="http://jcftang.github.com/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/"/>
+<updated>2013-03-27T11:57:41+00:00</updated>
+<id>http://jcftang.github.com/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment</id>
+<category term="dri" /><category term="linux" /><category term="team" />
+
+      <content type="html"><![CDATA[<p>At work we like to do lots of testing and behaviour driven development
+since we have a number of stakeholders and institutions all working on
+the same application. To make sure everyone is getting what they want
+we&#39;re using cucumber to write our specifications; that is we&#39;re primarily
+doing outside in developement of our system.</p>
+
+<p>As such we like to test things in a near production like
+environment&hellip; Having chosen to use <a href="https://github.com/thoughtbot/capybara-webkit">capybara-webkit</a> to test
+the interface (at a very functional and simplistic level) on our
+workstations. I decided to test drive the vagrant enviroment that I had
+been working on the past few months. Btw, this environment is bootstrapped
+with ansible, I&#39;m a much happier person since I ditched puppet.</p>
+
+<p>Annoyingly in RHEL6 and friends QT is a little bit behind the current
+times, we needed at least QT4.7 to run the javascript tests (which rely
+on webkit). The first an obvious thing was to uninstall qt from the base
+system and then install qt47 from atrpms-testing.</p>
+
+<p>Little did I know that <a href="https://bugzilla.redhat.com/show_bug.cgi?id=886996">tomcat6 depends</a> on redhat-lsb which in turn
+depends on qt-x11 and so on&hellip; My plans on testing and developing our
+application in a near production environment almost got shot.</p>
+
+<p>In the end the solution was to test the java script components with either
+selenium or better yet <a href="https://github.com/jonleighton/poltergeist">poltergeist</a> for capybara. We chose poltergeist
+as it runs headless. This isn&#39;t really a problem of cucumber/capybara,
+but rather a problem of RHEL6 and friends with old packages.</p>
+
+<p>&hellip;after sometime I have a half-way there set of ansible playbooks to
+get me to where I need to be in a virtual environment&hellip;</p>
+
+<p>&hellip;less rant &hellip;</p>
+]]></content>
+    </entry>
   
     <entry>
       
@@ -1224,25 +1270,6 @@ prebuilt RPM&#39;s soon, there is already a <a href="http://ceph.com/gitbuilder-
 build</a> or just go to their
 <a href="http://ceph.com/gitbuilder.cgi">gitbuilder aggregator</a></p>
 ]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[RCE 62: Ceph Petabyte Scale Storage &rarr;]]></title>
-<link href="http://www.rce-cast.com/Podcast/rce-62-ceph-petabyte-scale-storage.html"/>
-<updated>2012-09-01T19:42:00+01:00</updated>
-<id>http://jcftang.github.com/2012/09/01/rce-62-ceph-petabyte-scale-storage</id>
-<category term="ceph" /><category term="linux" /><category term="storage" />
-
-      <content type="html"><![CDATA[<p>It&#39;s somewhat interesting to listen to, we&#39;ve been looking at
-<a href="http://www.ceph.com/">ceph</a> for a few things in work.</p>
-
-<p>Just jotting this down so I remember to share this with the guys in work.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/2012/09/01/rce-62-ceph-petabyte-scale-storage/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>

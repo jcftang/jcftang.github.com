@@ -95,6 +95,93 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/">Testing and Developing Rails Applications in a Near Production Like Environment</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-27T11:57:41+00:00" pubdate data-updated="true">Mar 27<span>th</span>, 2013</time>
+        
+         | <a href="/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>At work we like to do lots of testing and behaviour driven development
+since we have a number of stakeholders and institutions all working on
+the same application. To make sure everyone is getting what they want
+we&#39;re using cucumber to write our specifications; that is we&#39;re primarily
+doing outside in developement of our system.</p>
+
+<p>As such we like to test things in a near production like
+environment&hellip; Having chosen to use <a href="https://github.com/thoughtbot/capybara-webkit">capybara-webkit</a> to test
+the interface (at a very functional and simplistic level) on our
+workstations. I decided to test drive the vagrant enviroment that I had
+been working on the past few months. Btw, this environment is bootstrapped
+with ansible, I&#39;m a much happier person since I ditched puppet.</p>
+
+<p>Annoyingly in RHEL6 and friends QT is a little bit behind the current
+times, we needed at least QT4.7 to run the javascript tests (which rely
+on webkit). The first an obvious thing was to uninstall qt from the base
+system and then install qt47 from atrpms-testing.</p>
+
+<p>Little did I know that <a href="https://bugzilla.redhat.com/show_bug.cgi?id=886996">tomcat6 depends</a> on redhat-lsb which in turn
+depends on qt-x11 and so on&hellip; My plans on testing and developing our
+application in a near production environment almost got shot.</p>
+
+<p>In the end the solution was to test the java script components with either
+selenium or better yet <a href="https://github.com/jonleighton/poltergeist">poltergeist</a> for capybara. We chose poltergeist
+as it runs headless. This isn&#39;t really a problem of cucumber/capybara,
+but rather a problem of RHEL6 and friends with old packages.</p>
+
+<p>&hellip;after sometime I have a half-way there set of ansible playbooks to
+get me to where I need to be in a virtual environment&hellip;</p>
+
+<p>&hellip;less rant &hellip;</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/">View comments &raquo;</a></p>
+    
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2013/03/24/amazon-redshift-a-curiousity-to-me/">Amazon Redshift - a Curiousity to Me?</a>
 
 </h1>
@@ -856,97 +943,6 @@ domains.</p>
 
     </article>
   
-    
-
-
-
-  
-
-
-
-
-
-
-
-
-    <article class="linklog">
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="http://yourmediashelf.com/hydracamp/">Hydracamp 2012 - Penn State</a>
-<span class='linklog-marker'>&rarr;</span>
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-13T07:34:00+01:00" pubdate data-updated="true">Oct 13<span>th</span>, 2012</time>
-        
-         | <a href="/2012/10/13/hydracamp-2012-penn-state/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/10/13/hydracamp-2012-penn-state/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>What do you do when you need a crash course on RoR, Hydra and frameworks for
-digital preservation and archiving? You go to Hydracamp!</p>
-
-<p>The syllabus was</p>
-
-<ul>
-<li>Day 1 - Rails, CRUD, TDD and Git</li>
-<li>Day 2 - Collaborative development with Stories, Tickets, TDD and Git</li>
-<li>Day 3 - Hydra, Fedora, XML and RDF (ActiveFedora and OM)</li>
-<li>Day 4 - SOLR and Blacklight</li>
-<li>Day 5 - Hydra-head, Hydra Access Controls</li>
-</ul>
-
-<p>Most of the training sessions were hands on from day 1 which was
-refreshing, as it was hands on I getting the most out of the training
-session. It would have been better if I had known more ruby to move
-along some of the exercises more effectively.</p>
-
-<p>To give an overview of what we had done (between ~30 people), we created
-a ruby on rails application titled &ldquo;Twitter for Zombies&rdquo;. With this small
-application everybody was frantically committing, pulling, merging and
-pushing code. It was highly informative and a good learning experience
-to see how fast things could move.</p>
-
-<p>The training session also included a crash course into what Fedora and
-SOLR does and how Hydra interacts with these components. The third and
-fourth days were the most interesting as it showed how someone might
-convert from a typical RoR application into an application which uses
-Fedora as the persistance layer. The last day was really just a wrap up
-and Q&amp;A session.</p>
-
-<p>You could take a look at the <a href="https://github.com/projecthydra">github</a>
-account for Project Hydra and have a peek at the hydracamp repo.</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/10/13/hydracamp-2012-penn-state/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2012/10/13/hydracamp-2012-penn-state/">View comments &raquo;</a></p>
-    
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -969,6 +965,10 @@ account for Project Hydra and have a peek at the hydracamp repo.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/">Testing and developing rails applications in a near production like environment</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/03/24/amazon-redshift-a-curiousity-to-me/">Amazon Redshift - a curiousity to me?</a>
       </li>
     
@@ -982,10 +982,6 @@ account for Project Hydra and have a peek at the hydracamp repo.</p>
     
       <li class="post">
         <a href="/2013/01/22/deploying-our-hydra-head-with-jruby/">Deploying our hydra-head with jruby</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs/">Making the jump and migrating my archlinux machines to use btrfs</a>
       </li>
     
   </ul>
