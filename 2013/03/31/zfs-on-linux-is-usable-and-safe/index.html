@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Dogfooding your own project to accelerate development - Jimmy Tang</title>
+  <title>ZFS on Linux is usable and safe - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/2012/03/15/dogfooding-your-own-project-to-accelerate-development/">
+  <link rel="canonical" href="http://jcftang.github.com/2013/03/31/zfs-on-linux-is-usable-and-safe/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Jimmy Tang" type="application/atom+xml">
@@ -82,6 +82,7 @@
 
 
 
+  
 
 
 
@@ -89,13 +90,14 @@
 
 
 
-<article class="hentry " role="article">
+
+<article class="hentry linklog" role="article">
   
   <header>
     <h1 class="entry-title">
 
-Dogfooding Your Own Project to Accelerate Development
-
+<a href="https://groups.google.com/a/zfsonlinux.org/forum/?fromgroups=#!topic/zfs-announce/ZXADhyOwFfA">ZFS on Linux Is Usable and Safe</a>
+<span class='linklog-marker'>&rarr;</span>
 </h1>
 
     
@@ -112,38 +114,28 @@ Dogfooding Your Own Project to Accelerate Development
   
 
 
-<time datetime="2012-03-15T19:31:00+00:00" pubdate data-updated="true">Mar 15<span>th</span>, 2012</time>
+<time datetime="2013-03-31T11:05:56+01:00" pubdate data-updated="true">Mar 31<span>st</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/2012/03/15/dogfooding-your-own-project-to-accelerate-development/">Permalink</a>
+         &bull; <a rel="bookmark" href="/2013/03/31/zfs-on-linux-is-usable-and-safe/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p>Should you dogfood your own project that you are developing? The
-answer is probably yes, especially if you have no clear cut
-requirements from the stakeholder in a project with a greenfield for
-development. There is a lot to be said about having a working
-implementation that can be presented and refined.</p>
+<div class="entry-content"><p>It seems that ZFS On Linux reached a significant milestone, that is the
+software is stable to use on Linux. This is pretty useful and significant
+for the preservation and archivists community as it provides a more
+reliable platform to build on. The LLNL guys must really want to mitigate
+against silent data failures in their systems (they&#39;re running Lustre
+on top of ZFS).</p>
 
-<p>Sometimes the project that you are working on won&#39;t have clear
-requirements for implementation, so you should probably take basic
-assumed cases and run with it. Starting early to see what works and
-what doesn&#39;t work is a pragmatic approach which the waterfall crowd
-might not like. But hey, an implementation speaks for itself.</p>
+<p>If ZFS is trustable or not we will know over time. At least with
+ZFS&#39;s data protection features we will see less issues with silent
+data corruption.</p>
 
-<p>If you don&#39;t use what you develop, then it is very hard to relate to
-the customer/end-user in the long run. On the note of dogfooding your
-own work, sometimes best-practice might cost too much in terms of time
-and money, sometimes good-enough practice might just be enough to
-deliver a functioning product.</p>
-
-<p>Accelerating development by dogfooding your own work and using
-good-enough practices should increase throughput of development, but
-not necessarily quality. Again in a greenfield project where there
-aren&#39;t many requirements due to the schedule, it&#39;s worth taking this
-approach until hard requirements get delivered.</p>
+<p>If one could build glusterfs or better yet, Ceph on top of ZFS it would
+be pretty desirable.</p>
 </div>
 
 
@@ -166,12 +158,12 @@ approach until hard requirements get delivered.</p>
   
 
 
-<time datetime="2012-03-15T19:31:00+00:00" pubdate data-updated="true">Mar 15<span>th</span>, 2012</time>
+<time datetime="2013-03-31T11:05:56+01:00" pubdate data-updated="true">Mar 31<span>st</span>, 2013</time>
 
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/scm/'>scm</a>, <a class='category' href='/blog/categories/team/'>team</a>
+    <a class='category' href='/blog/categories/dri/'>dri</a>, <a class='category' href='/blog/categories/hpc/'>hpc</a>, <a class='category' href='/blog/categories/preservation/'>preservation</a>, <a class='category' href='/blog/categories/storage/'>storage</a>
   
 </span>
 
@@ -189,12 +181,12 @@ approach until hard requirements get delivered.</p>
   
   
     
-      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/03/15/dogfooding-your-own-project-to-accelerate-development/" target="_blank">+1</a>
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2013/03/31/zfs-on-linux-is-usable-and-safe/" target="_blank">+1</a>
     
   
   
     
-    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/03/15/dogfooding-your-own-project-to-accelerate-development/" target="_blank">Share</a>
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2013/03/31/zfs-on-linux-is-usable-and-safe/" target="_blank">Share</a>
     
   
   
@@ -204,10 +196,8 @@ approach until hard requirements get delivered.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2012/03/11/git-rerere-for-long-lived-feature-branches/" title="Previous Post: git rerere for long lived feature branches">&laquo; git rerere for long lived feature branches</a>
+        <a class="basic-alignment left" href="/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/" title="Previous Post: Testing and developing rails applications in a near production like environment">&laquo; Testing and developing rails applications in a near production like environment</a>
       
-      
-        <a class="basic-alignment right" href="/2012/04/01/gitbuilder-aggregator/" title="Next Post: Gitbuilder aggregator">Gitbuilder aggregator &raquo;</a>
       
     </p>
   </footer>
@@ -232,15 +222,7 @@ approach until hard requirements get delivered.</p>
   <ul class="posts">
     
       <li class="related">
-        <a href="/2012/04/09/prototyping-and-testing-systems/">Prototyping and testing systems</a>
-      </li>
-    
-      <li class="related">
-        <a href="/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/">Is JAVA really the only game in town for building Digital Preservation Systems?</a>
-      </li>
-    
-      <li class="related">
-        <a href="/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/">Things not to say and to do in a project meeting</a>
+        <a href="/2012/09/04/adding-an-osd-to-a-ceph-cluster/">Adding an OSD to a Ceph Cluster</a>
       </li>
     
       <li class="related">
@@ -248,7 +230,15 @@ approach until hard requirements get delivered.</p>
       </li>
     
       <li class="related">
+        <a href="/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster/">Going from replicating across OSD's to replicating across hosts in a Ceph cluster</a>
+      </li>
+    
+      <li class="related">
         <a href="/2012/08/28/taking-vagrant-and-running-with-it/">Taking Vagrant and running with it</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale/">Supercomputing 2012 and the arms race to exascale</a>
       </li>
     
   </ul>
@@ -324,8 +314,8 @@ approach until hard requirements get delivered.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/2012/03/15/dogfooding-your-own-project-to-accelerate-development/';
-        var disqus_url = 'http://jcftang.github.com/2012/03/15/dogfooding-your-own-project-to-accelerate-development/';
+        var disqus_identifier = 'http://jcftang.github.com/2013/03/31/zfs-on-linux-is-usable-and-safe/';
+        var disqus_url = 'http://jcftang.github.com/2013/03/31/zfs-on-linux-is-usable-and-safe/';
         var disqus_script = 'embed.js';
       
     (function () {
