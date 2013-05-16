@@ -16,6 +16,7 @@ group :development do
   gem 'tzinfo', '~> 0.3.35'
   gem 'rake-minify'
   gem 'gsl', git: 'https://github.com/jcftang/rb-gsl.git'
+  gem 'directory_watcher', '~> 1.4.1'
 end
 
 gem 'sinatra', '~> 1.3.3'
