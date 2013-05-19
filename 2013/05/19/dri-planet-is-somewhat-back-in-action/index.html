@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Crowbar for deploying systems - Jimmy Tang</title>
+  <title>DRI Planet is somewhat back in action - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/2012/10/27/crowbar-for-deploying-systems/">
+  <link rel="canonical" href="http://jcftang.github.com/2013/05/19/dri-planet-is-somewhat-back-in-action/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Jimmy Tang" type="application/atom+xml">
@@ -82,6 +82,7 @@
 
 
 
+  
 
 
 
@@ -89,13 +90,14 @@
 
 
 
-<article class="hentry " role="article">
+
+<article class="hentry linklog" role="article">
   
   <header>
     <h1 class="entry-title">
 
-Crowbar for Deploying Systems
-
+<a href="http://www.tchpc.tcd.ie/dri-planet">DRI Planet Is Somewhat Back in Action</a>
+<span class='linklog-marker'>&rarr;</span>
 </h1>
 
     
@@ -112,42 +114,20 @@ Crowbar for Deploying Systems
   
 
 
-<time datetime="2012-10-27T20:07:00+01:00" pubdate data-updated="true">Oct 27<span>th</span>, 2012</time>
+<time datetime="2013-05-19T08:51:15+01:00" pubdate data-updated="true">May 19<span>th</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/2012/10/27/crowbar-for-deploying-systems/">Permalink</a>
+         &bull; <a rel="bookmark" href="/2013/05/19/dri-planet-is-somewhat-back-in-action/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p>I&#39;ve been eyeing <a href="https://github.com/dellcloudedge/crowbar">crowbar</a>
-recently, it looks pretty useful and interesting for deploying servers
-and applications. I haven&#39;t seen much if at all any documentation out
-there which suggests that people in the digital preservation and archiving
-fields are implementing systems at scale, I&#39;m under the impression that
-most systems/sites are building systems up one piece at a time without
-much automation.</p>
+<div class="entry-content"><p>I&#39;ve been meaning to fix the RSS aggregator at
+<a href="http://www.tchpc.tcd.ie/dri-planet">http://www.tchpc.tcd.ie/dri-planet</a> for a while now, it&#39;s fixed!</p>
 
-<p>It seems to use <a href="http://www.opscode.com/chef/">chef</a> in the backend for
-all the automation. I&#39;ve been relearning <a href="http://puppetlabs.com/">puppet</a>
-recently so that I can have reproducible environments with
-<a href="http://vagrantup.com/">Vagrant</a>.</p>
-
-<p>There might be an advantage to learn and port all the existing modules
-that I have already created and configured to chef instead of puppet. If
-I did move to a chef automation in my vagrant environments then a few
-years from now when we go to full production we might be able to deploy
-the whole system from bare metal relatively quickly and repeatably.</p>
-
-<p>Automating the deployments will mean that we will have documentation
-on the infrastructure itself. Either which way there is still a need
-to automate the fedora-commons, SOLR, mysql and postgres deployments at
-some point.</p>
-
-<p>After all this thinking and pondering, I&#39;m still using puppet. There&#39;s
-still the likes of ansible, cfengine, bcfg2 and juju. There is a never
-ending supply of these tools.</p>
+<p>Note that it&#39;s just something that aggregates news that I think are useful
+for work. The aggregated links may or may not be affiliated with my work.</p>
 </div>
 
 
@@ -170,12 +150,12 @@ ending supply of these tools.</p>
   
 
 
-<time datetime="2012-10-27T20:07:00+01:00" pubdate data-updated="true">Oct 27<span>th</span>, 2012</time>
+<time datetime="2013-05-19T08:51:15+01:00" pubdate data-updated="true">May 19<span>th</span>, 2013</time>
 
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/linux/'>linux</a>
+    <a class='category' href='/blog/categories/dri/'>dri</a>
   
 </span>
 
@@ -193,12 +173,12 @@ ending supply of these tools.</p>
   
   
     
-      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/10/27/crowbar-for-deploying-systems/" target="_blank">+1</a>
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2013/05/19/dri-planet-is-somewhat-back-in-action/" target="_blank">+1</a>
     
   
   
     
-    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/10/27/crowbar-for-deploying-systems/" target="_blank">Share</a>
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2013/05/19/dri-planet-is-somewhat-back-in-action/" target="_blank">Share</a>
     
   
   
@@ -208,10 +188,8 @@ ending supply of these tools.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2012/10/23/ceph-v0-dot-53-released/" title="Previous Post: Ceph V0.53 RELEASED">&laquo; Ceph V0.53 RELEASED</a>
+        <a class="basic-alignment left" href="/2013/03/31/zfs-on-linux-is-usable-and-safe/" title="Previous Post: ZFS on Linux is usable and safe">&laquo; ZFS on Linux is usable and safe</a>
       
-      
-        <a class="basic-alignment right" href="/2012/11/04/there-is-light-on-the-otherside/" title="Next Post: There is light on the otherside">There is light on the otherside &raquo;</a>
       
     </p>
   </footer>
@@ -236,11 +214,7 @@ ending supply of these tools.</p>
   <ul class="posts">
     
       <li class="related">
-        <a href="/2012/08/28/taking-vagrant-and-running-with-it/">Taking Vagrant and running with it</a>
-      </li>
-    
-      <li class="related">
-        <a href="/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/">Is JAVA really the only game in town for building Digital Preservation Systems?</a>
+        <a href="/2012/08/02/an-excuse-to-learn-ruby-and-ruby-on-rails/">An excuse to learn Ruby and Ruby on Rails</a>
       </li>
     
       <li class="related">
@@ -248,11 +222,15 @@ ending supply of these tools.</p>
       </li>
     
       <li class="related">
-        <a href="/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for HPC systems</a>
+        <a href="/2012/06/18/octopress-2-dot-1-taking-a-sneak-peek/">Octopress 2.1, taking a sneak peek</a>
       </li>
     
       <li class="related">
-        <a href="/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux isn't the only platform to target when building applications</a>
+        <a href="/2012/04/01/gitbuilder-aggregator/">Gitbuilder aggregator</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/07/05/tahoe-lafs-1-dot-9-2-is-released/">tahoe-lafs 1.9.2 is released</a>
       </li>
     
   </ul>
@@ -328,8 +306,8 @@ ending supply of these tools.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/2012/10/27/crowbar-for-deploying-systems/';
-        var disqus_url = 'http://jcftang.github.com/2012/10/27/crowbar-for-deploying-systems/';
+        var disqus_identifier = 'http://jcftang.github.com/2013/05/19/dri-planet-is-somewhat-back-in-action/';
+        var disqus_url = 'http://jcftang.github.com/2013/05/19/dri-planet-is-somewhat-back-in-action/';
         var disqus_script = 'embed.js';
       
     (function () {
