@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Ceph V0.53 RELEASED - Jimmy Tang</title>
+  <title>Hydra and Ansible - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/2012/10/23/ceph-v0-dot-53-released/">
+  <link rel="canonical" href="http://jcftang.github.com/2013/06/06/hydra-and-ansible/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Jimmy Tang" type="application/atom+xml">
@@ -82,7 +82,6 @@
 
 
 
-  
 
 
 
@@ -90,14 +89,13 @@
 
 
 
-
-<article class="hentry linklog" role="article">
+<article class="hentry " role="article">
   
   <header>
     <h1 class="entry-title">
 
-<a href="http://ceph.com/releases/v0-53-released/">Ceph V0.53 RELEASED</a>
-<span class='linklog-marker'>&rarr;</span>
+Hydra and Ansible
+
 </h1>
 
     
@@ -114,23 +112,55 @@
   
 
 
-<time datetime="2012-10-23T15:08:00+01:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2012</time>
+<time datetime="2013-06-06T18:11:40+01:00" pubdate data-updated="true">Jun 6<span>th</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/2012/10/23/ceph-v0-dot-53-released/">Permalink</a>
+         &bull; <a rel="bookmark" href="/2013/06/06/hydra-and-ansible/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p>There&#39;s a new release of Ceph, I hope that they release a stable soon so we can
-do further evaluations of the Ceph storage
-system. A few of my work colleagues are going to the <a href="http://www.inktank.com/news-events/event/ceph-workshops-amsterdam/">Ceph
-workshop</a>
-next week.</p>
+<div class="entry-content"><p>The team that I am working with right are very much agile and we&#39;re
+doing quite a bit of outside in development of the repository that we&#39;re
+building. We&#39;re mostly adopting a behaviour driven development with a
+touch of test driven development. As a result we&#39;re very much in favour
+of testing things out as much as we can and using the same environments
+to develop against. As previously mentioned before I had originally
+been using puppet and vagrant to build up the development harness and
+experiment with tools/services that we might want to use for our system.</p>
 
-<p>I&#39;m wondering if anyone has taken the CRUSH algorithm and used it in other
-domains.</p>
+<p>At somepoint I came across <a href="http://www.ansible.cc">ansible</a> and not long
+after discovering it, I migrated a large chunk of the development and
+test systems to using ansible. I&#39;ve even cooked up one or two ansible
+modules as a result.</p>
+
+<p>As a result of adopting ansible for building up our test and development
+infrastructure, I&#39;ve collected the relevant playbooks and roles that a
+person might want for deploying all the bits and pieces needed to roll
+out a hydra-head. See <a href="https://github.com/jcftang/ansible-hydra">https://github.com/jcftang/ansible-hydra</a>, I have
+a set of roles and a few example playbooks on setting up at least</p>
+
+<ul>
+<li>Tomcat (from the base repositories of RHEL6/Centos6/ScientificLinux6)</li>
+<li>Fedora-Commons (the same version as is in the hydra-jetty repo)</li>
+<li>Apache SOLR (the same version as is in the hydra-jetty repo)</li>
+<li>Ruby (via RVM) in a user directory</li>
+<li>Passenger with the installed version of Ruby</li>
+<li>MySQL (from the base repositories of RHEL6/Centos6/ScientificLinux6)</li>
+<li>Redis</li>
+</ul>
+
+<p>The configurations aren&#39;t quite production ready yet as they do require
+some more work in setting up Fedora-Commons and SOLR the way we want. The
+configurations are however fairly realistic and are daily use
+for doing test deployments of our hydra-head (RoR application) or
+experimenting with additional tools, configurations and systems such as
+<a href="https://github.com/jcftang/ansible-ceph">ceph</a> - we&#39;re using the radosgw
+to provide a realistic and local S3 service.</p>
+
+<p>So far the configurations need polishing off and another playbook needs
+to be created for continuous deployment of our hydra-head.</p>
 </div>
 
 
@@ -153,12 +183,12 @@ domains.</p>
   
 
 
-<time datetime="2012-10-23T15:08:00+01:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2012</time>
+<time datetime="2013-06-06T18:11:40+01:00" pubdate data-updated="true">Jun 6<span>th</span>, 2013</time>
 
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/ceph/'>ceph</a>, <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/storage/'>storage</a>
+    <a class='category' href='/blog/categories/dri/'>dri</a>, <a class='category' href='/blog/categories/team/'>team</a>
   
 </span>
 
@@ -176,12 +206,12 @@ domains.</p>
   
   
     
-      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/10/23/ceph-v0-dot-53-released/" target="_blank">+1</a>
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2013/06/06/hydra-and-ansible/" target="_blank">+1</a>
     
   
   
     
-    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/10/23/ceph-v0-dot-53-released/" target="_blank">Share</a>
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2013/06/06/hydra-and-ansible/" target="_blank">Share</a>
     
   
   
@@ -191,10 +221,8 @@ domains.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2012/10/13/hydracamp-2012-penn-state/" title="Previous Post: Hydracamp 2012 - Penn State">&laquo; Hydracamp 2012 - Penn State</a>
+        <a class="basic-alignment left" href="/2013/05/19/dri-planet-is-somewhat-back-in-action/" title="Previous Post: DRI Planet is somewhat back in action">&laquo; DRI Planet is somewhat back in action</a>
       
-      
-        <a class="basic-alignment right" href="/2012/10/27/crowbar-for-deploying-systems/" title="Next Post: Crowbar for deploying systems">Crowbar for deploying systems &raquo;</a>
       
     </p>
   </footer>
@@ -223,19 +251,19 @@ domains.</p>
       </li>
     
       <li class="related">
+        <a href="/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux isn't the only platform to target when building applications</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for HPC systems</a>
+      </li>
+    
+      <li class="related">
         <a href="/2012/09/04/adding-an-osd-to-a-ceph-cluster/">Adding an OSD to a Ceph Cluster</a>
       </li>
     
       <li class="related">
-        <a href="/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/">Thoughts on using the likes of tahoe-lafs and git-annex as a backend storage system for Digital Preservation</a>
-      </li>
-    
-      <li class="related">
-        <a href="/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/">Digital Preservation and Archiving is a HPC problem?</a>
-      </li>
-    
-      <li class="related">
-        <a href="/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster/">Going from replicating across OSD's to replicating across hosts in a Ceph cluster</a>
+        <a href="/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/">Testing and developing rails applications in a near production like environment</a>
       </li>
     
   </ul>
@@ -311,8 +339,8 @@ domains.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/2012/10/23/ceph-v0-dot-53-released/';
-        var disqus_url = 'http://jcftang.github.com/2012/10/23/ceph-v0-dot-53-released/';
+        var disqus_identifier = 'http://jcftang.github.com/2013/06/06/hydra-and-ansible/';
+        var disqus_url = 'http://jcftang.github.com/2013/06/06/hydra-and-ansible/';
         var disqus_script = 'embed.js';
       
     (function () {

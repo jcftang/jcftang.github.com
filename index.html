@@ -83,6 +83,102 @@
 
 
 
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="/2013/06/06/hydra-and-ansible/">Hydra and Ansible</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-06T18:11:40+01:00" pubdate data-updated="true">Jun 6<span>th</span>, 2013</time>
+        
+         | <a href="/2013/06/06/hydra-and-ansible/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2013/06/06/hydra-and-ansible/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>The team that I am working with right are very much agile and we&#39;re
+doing quite a bit of outside in development of the repository that we&#39;re
+building. We&#39;re mostly adopting a behaviour driven development with a
+touch of test driven development. As a result we&#39;re very much in favour
+of testing things out as much as we can and using the same environments
+to develop against. As previously mentioned before I had originally
+been using puppet and vagrant to build up the development harness and
+experiment with tools/services that we might want to use for our system.</p>
+
+<p>At somepoint I came across <a href="http://www.ansible.cc">ansible</a> and not long
+after discovering it, I migrated a large chunk of the development and
+test systems to using ansible. I&#39;ve even cooked up one or two ansible
+modules as a result.</p>
+
+<p>As a result of adopting ansible for building up our test and development
+infrastructure, I&#39;ve collected the relevant playbooks and roles that a
+person might want for deploying all the bits and pieces needed to roll
+out a hydra-head. See <a href="https://github.com/jcftang/ansible-hydra">https://github.com/jcftang/ansible-hydra</a>, I have
+a set of roles and a few example playbooks on setting up at least</p>
+
+<ul>
+<li>Tomcat (from the base repositories of RHEL6/Centos6/ScientificLinux6)</li>
+<li>Fedora-Commons (the same version as is in the hydra-jetty repo)</li>
+<li>Apache SOLR (the same version as is in the hydra-jetty repo)</li>
+<li>Ruby (via RVM) in a user directory</li>
+<li>Passenger with the installed version of Ruby</li>
+<li>MySQL (from the base repositories of RHEL6/Centos6/ScientificLinux6)</li>
+<li>Redis</li>
+</ul>
+
+<p>The configurations aren&#39;t quite production ready yet as they do require
+some more work in setting up Fedora-Commons and SOLR the way we want. The
+configurations are however fairly realistic and are daily use
+for doing test deployments of our hydra-head (RoR application) or
+experimenting with additional tools, configurations and systems such as
+<a href="https://github.com/jcftang/ansible-ceph">ceph</a> - we&#39;re using the radosgw
+to provide a realistic and local S3 service.</p>
+
+<p>So far the configurations need polishing off and another playbook needs
+to be created for continuous deployment of our hydra-head.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2013/06/06/hydra-and-ansible/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2013/06/06/hydra-and-ansible/">View comments &raquo;</a></p>
+    
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
   
 
 
@@ -837,97 +933,6 @@ end to end data integrity built into storage systems.</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/11/04/there-is-light-on-the-otherside/">There Is Light on the Otherside</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-11-04T19:52:00+00:00" pubdate data-updated="true">Nov 4<span>th</span>, 2012</time>
-        
-         | <a href="/2012/11/04/there-is-light-on-the-otherside/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/11/04/there-is-light-on-the-otherside/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>Having spent the best part of my Sunday afternoon playing with ansible
-just to learn and see what all the fuss is about, I was pleasantly
-surprised with it.</p>
-
-<p>I had installed <a href="https://github.com/ansible/ansible">ansible</a> on my OSX
-laptop and <a href="https://github.com/ansible/vagrant-ansible">vagrant-ansible</a>
-for my vagrant test environment.</p>
-
-<p>The plan was to try and re-create my current ruby on rails development
-and test virtual machine with vagrant. A secondary goal was to get it
-to work with both Ubuntu Precise (LTS) and Scientific Linux 6.</p>
-
-<p>My attempt at doing the above can be found at
-<a href="https://github.com/jcftang/tchpc-vagrant/tree/ansible">tchpc-vagrant</a>
-in the ansible branch. You will need ansible installed on your host
-machine. You don&#39;t need much installed in the target machine as ansible
-is designed to login and execute commands as required, this is quite
-refreshing. Compared to puppet and chef, if I were to roll this out
-into production my overhead will be pretty low. This low overhead is
-something that I really like as I don&#39;t need to setup an infrastructure
-just to run puppet.</p>
-
-<p>In short I was able to learn how ansible is supposed to work (I think)
-and build up enough configuration to start up a vagrant vm with what I
-need for to do rails development in a matter of hours.</p>
-
-<p>One thing that did occur to me was the lack of windows support, given
-that ansible is designed to use ssh to carry out its activities, finding
-stock windows machines which run ssh is pretty slim. This is one area
-which puppet (perhaps chef too) is better at. It&#39;s also one feature that
-I would like as the vagrant vm&#39;s that we&#39;re using in work might be given
-to windows users for testing and evaluation.</p>
-
-<p>Going forward I think ansible will certainly be in my toolkit. There really is
-a light on the otherside for mangement, deployment and orchestration.</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/11/04/there-is-light-on-the-otherside/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2012/11/04/there-is-light-on-the-otherside/">View comments &raquo;</a></p>
-    
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -950,6 +955,10 @@ a light on the otherside for mangement, deployment and orchestration.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/06/06/hydra-and-ansible/">Hydra and Ansible</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/05/19/dri-planet-is-somewhat-back-in-action/">DRI Planet is somewhat back in action</a>
       </li>
     
@@ -963,10 +972,6 @@ a light on the otherside for mangement, deployment and orchestration.</p>
     
       <li class="post">
         <a href="/2013/03/24/amazon-redshift-a-curiousity-to-me/">Amazon Redshift - a curiousity to me?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/03/22/building-kelvin-supercomputer-time-lapse/">Building Kelvin Supercomputer (time lapse)</a>
       </li>
     
   </ul>

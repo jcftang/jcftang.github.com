@@ -83,6 +83,111 @@
 
 
 
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="/2012/04/09/prototyping-and-testing-systems/">Prototyping and Testing Systems</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-09T11:12:00+01:00" pubdate data-updated="true">Apr 9<span>th</span>, 2012</time>
+        
+         | <a href="/2012/04/09/prototyping-and-testing-systems/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/04/09/prototyping-and-testing-systems/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>One of the issues with with dogfooding your own projects to accelerate
+development might be the lack of control and feedback from the
+specifications and requirements process. To try and mitigate this
+effect, automated testing should be done, that is specification,
+feature and behavioural testing. Call it what you will, but the basic
+idea is to get a common understanding between the stakeholder, project
+owner and developer to understand what is being built and to write
+automated tests collectively to ensure that it is being
+delivered. This might be a narrow view of the whole area, but I&#39;m just
+taking what works for me and using it to deliver the project.</p>
+
+<p>There are <em>many</em> specification/feature/behavioural testing tools out
+there for almost language that you can think of, so use what works for
+you and your team. The testing process not only ensures that the
+prototype is working the way that you intend, but it is also a process
+where documentation can also be written at the sametime. This
+documentation could be used as an initial proposal to the stakeholder
+to put forward what you think they want if there are no clear
+specifications or requirements in place.</p>
+
+<p>The interns and I have been working on a small prototype system
+for a bigger project and the benefits of writing tests are beginning
+to show. It has become apparent to the interns that have been working
+on this project that <em>testing is a good thing</em>, especially if it can
+be automated. We&#39;re not quite doing TDD or BDD, but it&#39;s something
+that is in between, we&#39;re getting there with a tiered set of tests.</p>
+
+<p>We&#39;re finding that (probably) about 50% of the time of the team is
+spent on refactoring, writing tests and documentation. Testing
+combined with the automated builder/tester, the team is writing code
+smarter and better instead of just churning out masses of code which
+isn&#39;t well tested or documented. Given the choice and based on
+experience I would prefer to have code that is tested and
+documentated, rather than lots of cool half-working and half-tested
+features.</p>
+
+<p>The testing process has been a fantastic way for me to steer the
+interns, given how little expertise I have with javascript. The tests
+let me learn how the interns have been putting the prototype together,
+but it also lets me fuzz up the tests to make sure things are working
+and to also write new tests to communicate what I think is needed when
+appropriate. We&#39;ve somewhat combined minimal QA into the development
+and testing process.</p>
+
+<p>In the end we hope to have a functional prototype system which does
+one thing (one set of workflows) well, have lots of documentation,
+have tests to back it up and prove that it works. While having an
+implementation is great for the potential stakeholder, having
+documentation and tests puts us in an even stronger position.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/04/09/prototyping-and-testing-systems/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2012/04/09/prototyping-and-testing-systems/">View comments &raquo;</a></p>
+    
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
   
 
 
@@ -819,124 +924,6 @@ consumption and a host of other things.</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux Isn't the Only Platform to Target When Building Applications</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-02-16T09:33:00+00:00" pubdate data-updated="true">Feb 16<span>th</span>, 2012</time>
-        
-         | <a href="/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>Why would one want to target other platforms when building applications
-on the server side? </p>
-
-<p>This came out of a conversation with the ex-CTO of Creme software (he
-is also a friend of mine), the conversation started out with why I
-like to use Macs and OSX as my laptop or workstation. I&#39;ve been a long
-time Linux user of pretty much most of the major distributions ranging
-from RHEL, Debian/Ubuntu, Gentoo, ArchLinux as well as a number of
-other derivatives, not to mention other systems like the BSD&#39;s which I
-have a soft spot for. </p>
-
-<p>I interchange the terms Linux and Distros quite a bit in this post.</p>
-
-<p>Some of the things that didn&#39;t like with the Linux&#39;s was that not all
-my hardware would be supported all the time, the distro&#39;s sometimes
-think that it&#39;s a good idea to completely change how lowlevel systems
-work in favour of <em>what&#39;s hot right now</em>, sometimes the lack of long
-term support for security updates (not package updates to fix security
-problems) does make it more difficult to plan and deploy. The
-perceived flexibility sometimes causes headaches with migration plans
-and maintanence.</p>
-
-<p>Of course there are things that I like, the access to the source code
-and packaging to fix and redeploy packages. The stability and
-reliability that can be achieved is attractive if everything is
-automated and planned out (though too much automation can be bad too).</p>
-
-<p>To get back to the original point of why you wouldn&#39;t want to target
-Linux specifically when building applications? Unless you have a
-strong motivating reason to write code that <em>specifically</em> requires a
-feature of Linux (or any other operating system), then you really
-ought to be writing code that adheres to at least some POSIX or cross
-platform standard, and pick libraries that are known to have good
-cross platform compatibility. There is nothing to gain from writing
-platform specific codes in the long run, the platform might hide
-issues from the developer if it is too clever. Linux or more
-specifically the distros might change various behaviour of the
-underlying system, and if your code is tied down to particular
-features of the underlying system then you will have lots of fun
-migrating.</p>
-
-<p>It&#39;s just bad practice to rely on system specific behaviour which
-isn&#39;t portable (or maintainable) going forward in a project. To
-mitigate some of this, one would want to at least try to use a
-continuous build systems such as <em>gitbuilder</em>, <em>buildbot</em> or <em>jenkins</em>
-on a bunch of <strong>different</strong> architectures and platforms. This will
-reveal portability issues and more often than not, subtle bugs in your
-code which you probably didn&#39;t see as a result of your development
-system being too smart for you!</p>
-
-<p>There isn&#39;t much of an excuse not to do continuous builds and testings
-across different Linux, BSD and Solaris distributions these
-days. Diskspace and compute power is cheap, there are free and
-opensource virtualisation technologies out there to provide you with a
-means to run different distributions for testing on a single
-machine. The problem will be the upfront manpower needed to setup such
-a system.</p>
-
-<p>In the long run targetting at least two platforms will make your code
-base far more portable and hopefully more maintainable as you will end
-up making sure you write code once that runs on many systems with
-minimal changes needed when a new platform arises.</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">View comments &raquo;</a></p>
-    
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/7/">&larr; Older</a>
@@ -961,6 +948,10 @@ minimal changes needed when a new platform arises.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/06/06/hydra-and-ansible/">Hydra and Ansible</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/05/19/dri-planet-is-somewhat-back-in-action/">DRI Planet is somewhat back in action</a>
       </li>
     
@@ -974,10 +965,6 @@ minimal changes needed when a new platform arises.</p>
     
       <li class="post">
         <a href="/2013/03/24/amazon-redshift-a-curiousity-to-me/">Amazon Redshift - a curiousity to me?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/03/22/building-kelvin-supercomputer-time-lapse/">Building Kelvin Supercomputer (time lapse)</a>
       </li>
     
   </ul>
