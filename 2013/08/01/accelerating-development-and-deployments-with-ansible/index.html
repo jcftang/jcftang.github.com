@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Slurm User Group Meeting 2012 - Jimmy Tang</title>
+  <title>Accelerating Development and Deployments with Ansible - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/2012/04/30/slurm-user-group-meeting-2012/">
+  <link rel="canonical" href="http://jcftang.github.com/2013/08/01/accelerating-development-and-deployments-with-ansible/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Jimmy Tang" type="application/atom+xml">
@@ -82,7 +82,6 @@
 
 
 
-  
 
 
 
@@ -90,14 +89,13 @@
 
 
 
-
-<article class="hentry linklog" role="article">
+<article class="hentry " role="article">
   
   <header>
     <h1 class="entry-title">
 
-<a href="http://www.bsc.es/marenostrum-support-services/hpc-events-trainings/others/slurm-user-group-meeting-2012">Slurm User Group Meeting 2012</a>
-<span class='linklog-marker'>&rarr;</span>
+Accelerating Development and Deployments With Ansible
+
 </h1>
 
     
@@ -114,26 +112,44 @@
   
 
 
-<time datetime="2012-04-30T20:19:00+01:00" pubdate data-updated="true">Apr 30<span>th</span>, 2012</time>
+<time datetime="2013-08-01T21:38:54+01:00" pubdate data-updated="true">Aug 1<span>st</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/2012/04/30/slurm-user-group-meeting-2012/">Permalink</a>
+         &bull; <a rel="bookmark" href="/2013/08/01/accelerating-development-and-deployments-with-ansible/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p>This time the usergroup meeting is in BSC in Spain (this place is
-cool, I&#39;ve been at BSC for a few conferences and meetings before). I
-wish I was doing some HPC right now, I&#39;m very tempted to submit an
-abstract or two on the last two things with slurm that I was involved
-with.</p>
+<div class="entry-content"><p>It&#39;s probably no secret that we use Ansible at our work place for
+the project that I am working on. So far we&#39;ve used it to deploy and
+maintain state for our Open Nebula deployment, Jenkins CI system, Ceph&#39;s
+radosgw and our digital repository.</p>
 
-<p>The <a href="https://github.com/jcftang/php-slurm">php-slurm</a> package needs
-some love, its somewhat in use at work. I just wish I had more time to
-fix the memory leaks. There is also
-<a href="https://github.com/jcftang/slurm-bank">slurm-bank</a> which is seeing
-some good use in work, though it could do with a rewrite in C.</p>
+<p>In fact I currently have a Jenkins job which deploys our software stack
+using Ansible to a test system in our Open Nebula cluster. This has been
+hugely beneficial to myself so far to be able to teardown and bring up
+systems quickly to make sure our application is well tested and debugged.</p>
+
+<p>Without going into a huge amount of detail, we&#39;ve been able to deploy our
+systems with relative ease and repeatability. I&#39;ve got the configurations
+up at my github account for those that are interested.</p>
+
+<p>The best thing about these deployments is that the initial prototyping
+was done in a set of vagrant managed virtual machines, this allowed me
+to rapidly bring up and teardown systems to ensure we have everything
+automated smoothly. On the flipside, the systems that get developed for
+production usage get backported to our vagrant setup. This means that
+we&#39;re able to provide a development environment for each developer which
+is identical or as close as possible to our production systems.</p>
+
+<p>Having the capability to develop and test on a local machine which is
+close to or identical to our production system has accelerated our bug
+finding and development process.</p>
+
+<p>I&#39;m not too sure what the team think, since we&#39;re moving quite fast and
+Ansible has allowed us to do so due to its ease of use, well it has at
+least let me do so anyway.</p>
 </div>
 
 
@@ -156,14 +172,8 @@ some good use in work, though it could do with a rewrite in C.</p>
   
 
 
-<time datetime="2012-04-30T20:19:00+01:00" pubdate data-updated="true">Apr 30<span>th</span>, 2012</time>
+<time datetime="2013-08-01T21:38:54+01:00" pubdate data-updated="true">Aug 1<span>st</span>, 2013</time>
 
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/hpc/'>hpc</a>, <a class='category' href='/blog/categories/linux/'>linux</a>
-  
-</span>
 
 
 
@@ -179,12 +189,12 @@ some good use in work, though it could do with a rewrite in C.</p>
   
   
     
-      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/04/30/slurm-user-group-meeting-2012/" target="_blank">+1</a>
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2013/08/01/accelerating-development-and-deployments-with-ansible/" target="_blank">+1</a>
     
   
   
     
-    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/04/30/slurm-user-group-meeting-2012/" target="_blank">Share</a>
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2013/08/01/accelerating-development-and-deployments-with-ansible/" target="_blank">Share</a>
     
   
   
@@ -194,10 +204,8 @@ some good use in work, though it could do with a rewrite in C.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2012/04/17/mosh-an-alternative-to-ssh/" title="Previous Post: MOSH - An alternative to SSH">&laquo; MOSH - An alternative to SSH</a>
+        <a class="basic-alignment left" href="/2013/06/06/hydra-and-ansible/" title="Previous Post: Hydra and Ansible">&laquo; Hydra and Ansible</a>
       
-      
-        <a class="basic-alignment right" href="/2012/05/02/git-subtree-is-now-in-mainline-git/" title="Next Post: git-subtree is now in mainline git">git-subtree is now in mainline git &raquo;</a>
       
     </p>
   </footer>
@@ -222,23 +230,23 @@ some good use in work, though it could do with a rewrite in C.</p>
   <ul class="posts">
     
       <li class="related">
-        <a href="/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/">SLURM-Bank that big script for banking in SLURM</a>
+        <a href="/2012/08/28/taking-vagrant-and-running-with-it/">Taking Vagrant and running with it</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/04/09/prototyping-and-testing-systems/">Prototyping and testing systems</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2013/06/06/hydra-and-ansible/">Hydra and Ansible</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for HPC systems</a>
       </li>
     
       <li class="related">
         <a href="/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/">Thoughts on using the likes of tahoe-lafs and git-annex as a backend storage system for Digital Preservation</a>
-      </li>
-    
-      <li class="related">
-        <a href="/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/">Things not to say and to do in a project meeting</a>
-      </li>
-    
-      <li class="related">
-        <a href="/2012/09/04/adding-an-osd-to-a-ceph-cluster/">Adding an OSD to a Ceph Cluster</a>
-      </li>
-    
-      <li class="related">
-        <a href="/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux isn't the only platform to target when building applications</a>
       </li>
     
   </ul>
@@ -314,8 +322,8 @@ some good use in work, though it could do with a rewrite in C.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/2012/04/30/slurm-user-group-meeting-2012/';
-        var disqus_url = 'http://jcftang.github.com/2012/04/30/slurm-user-group-meeting-2012/';
+        var disqus_identifier = 'http://jcftang.github.com/2013/08/01/accelerating-development-and-deployments-with-ansible/';
+        var disqus_url = 'http://jcftang.github.com/2013/08/01/accelerating-development-and-deployments-with-ansible/';
         var disqus_script = 'embed.js';
       
     (function () {

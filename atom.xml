@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2013-06-06T18:30:32+01:00</updated>
+  <updated>2013-08-05T15:07:28+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Accelerating Development and Deployments with Ansible]]></title>
+<link href="http://jcftang.github.com/2013/08/01/accelerating-development-and-deployments-with-ansible/"/>
+<updated>2013-08-01T21:38:54+01:00</updated>
+<id>http://jcftang.github.com/2013/08/01/accelerating-development-and-deployments-with-ansible</id>
+
+
+      <content type="html"><![CDATA[<p>It&#39;s probably no secret that we use Ansible at our work place for
+the project that I am working on. So far we&#39;ve used it to deploy and
+maintain state for our Open Nebula deployment, Jenkins CI system, Ceph&#39;s
+radosgw and our digital repository.</p>
+
+<p>In fact I currently have a Jenkins job which deploys our software stack
+using Ansible to a test system in our Open Nebula cluster. This has been
+hugely beneficial to myself so far to be able to teardown and bring up
+systems quickly to make sure our application is well tested and debugged.</p>
+
+<p>Without going into a huge amount of detail, we&#39;ve been able to deploy our
+systems with relative ease and repeatability. I&#39;ve got the configurations
+up at my github account for those that are interested.</p>
+
+<p>The best thing about these deployments is that the initial prototyping
+was done in a set of vagrant managed virtual machines, this allowed me
+to rapidly bring up and teardown systems to ensure we have everything
+automated smoothly. On the flipside, the systems that get developed for
+production usage get backported to our vagrant setup. This means that
+we&#39;re able to provide a development environment for each developer which
+is identical or as close as possible to our production systems.</p>
+
+<p>Having the capability to develop and test on a local machine which is
+close to or identical to our production system has accelerated our bug
+finding and development process.</p>
+
+<p>I&#39;m not too sure what the team think, since we&#39;re moving quite fast and
+Ansible has allowed us to do so due to its ease of use, well it has at
+least let me do so anyway.</p>
+]]></content>
+    </entry>
   
     <entry>
       
@@ -820,25 +864,6 @@ for RHEL6, I have a dodgy repo and some reverted commits that one of
 the guys in work told me about. It seems to run but it isn&#39;t great,
 it can be found at <a href="https://github.com/jcftang/ceph-client-standalone">https://github.com/jcftang/ceph-client-standalone</a>.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Alternative to Talend ETL?]]></title>
-<link href="http://jcftang.github.com/2012/09/21/alternative-to-talend-etl/"/>
-<updated>2012-09-21T10:31:00+01:00</updated>
-<id>http://jcftang.github.com/2012/09/21/alternative-to-talend-etl</id>
-
-
-      <content type="html"><![CDATA[<p>I&#39;ve used Talend ETL a few times, however I came across this application
-<a href="http://datacleaner.org/">http://datacleaner.org/</a>, I need to take a look at this somepoint to
-see if its an alternative to Taled or not, or whether it works on a Mac
-or not!</p>
-]]></content>
     </entry>
   
 </feed>
