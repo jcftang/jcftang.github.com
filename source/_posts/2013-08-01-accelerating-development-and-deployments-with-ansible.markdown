@@ -13,7 +13,7 @@ maintain state for our Open Nebula deployment, Jenkins CI system, Ceph's
 radosgw and our digital repository.
 
 In fact I currently have a Jenkins job which deploys our software stack
-using Ansible  to a test system in our Open Nebula cluster. This has been
+using Ansible to a test system in our Open Nebula cluster. This has been
 hugely beneficial to myself so far to be able to teardown and bring up
 systems quickly to make sure our application is well tested and debugged.
 
@@ -34,4 +34,5 @@ close to or identical to our production system has accelerated our bug
 finding and development process.
 
 I'm not too sure what the team think, since we're moving quite fast and
-Ansible has allowed us to do so due to its ease of use.
+Ansible has allowed us to do so due to its ease of use, well it has at
+least let me do so anyway.
