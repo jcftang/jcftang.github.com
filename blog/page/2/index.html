@@ -95,6 +95,97 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs/">Making the Jump and Migrating My Archlinux Machines to Use Btrfs</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-02T15:18:00+00:00" pubdate data-updated="true">Jan 2<span>nd</span>, 2013</time>
+        
+         | <a href="/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>Having a few days of time off from work I&#39;ve committed to migrating my
+archlinux based laptops to using btrfs. I&#39;ve to date been just using
+ext4 and nilfs2 (on an SD card) on my eeepc and plain old ext4 on the
+bigger laptop.</p>
+
+<p>The main motivation was that the two devices were pretty outdated and
+I felt lucky with doing a major upgrade (replaced sysvinit with systemd
+as recommended by the archlinux people)</p>
+
+<p>I didn&#39;t want to reinstall my machines so I took the route of converting
+the existing ext4 partitions to btrfs. I left my <em>/boot</em> partition as
+ext2 for safety. Prior to converting to btrfs I had upgraded the two
+laptops to using <a href="https://wiki.archlinux.org/index.php/Grub2">grub2</a>
+first. I then proceeded to boot up my laptops with the
+archlinux installer image via a usb key. Then just followed the
+<a href="https://wiki.archlinux.org/index.php/Btrfs">btrfs</a> documentation at
+the archlinux wiki.</p>
+
+<p>The process went more smoothly than I had anticipated, I didn&#39;t run into
+any major stumbling blocks, that said I did have to free up some space
+for the migration to occur.</p>
+
+<p>Once the systems were back up and running I enabled compression on btrfs
+and defragged the systems</p>
+<div class="highlight"><pre><code class="text">find / -xdev -type f -print -exec btrfs filesystem defrag &#39;{}&#39; \;
+</code></pre></div>
+<p>This compression feature made a huge difference on the space limited
+eeepc, the compression feature reclaimed about 10% of the space on the
+system. It&#39;s a shame that the RHEL based distros aren&#39;t quite supporting
+btrfs yet there are quite a few nice features there that are very
+attractive for pro-consumers and the enterprise. RHEL7 will have btrfs,
+hopefully there will be backports to RHEL6.</p>
+
+<p>Performance wise I haven&#39;t used the system in anger yet, so time will
+tell if I&#39;m happy with btrfs or not.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs/">View comments &raquo;</a></p>
+    
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale/">Supercomputing 2012 and the Arms Race to Exascale</a>
 
 </h1>
@@ -869,71 +960,6 @@ software.</p>
 
     </article>
   
-    
-
-
-
-  
-
-
-
-
-
-
-
-
-    <article class="linklog">
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="http://ceph.com/releases/v0-48-2-argonaut-stable-update-released/">Ceph V0.48.2 ARGONAUT RELEASED</a>
-<span class='linklog-marker'>&rarr;</span>
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-21T10:38:00+01:00" pubdate data-updated="true">Sep 21<span>st</span>, 2012</time>
-        
-         | <a href="/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>There&#39;s a new stable release of Ceph Argonaut, I seem to be having better
-luck with playing with the development releases of Ceph.</p>
-
-<p>Oh how I wish that there was a backport of the kernel ceph and rbd drivers
-for RHEL6, I have a dodgy repo and some reverted commits that one of
-the guys in work told me about. It seems to run but it isn&#39;t great,
-it can be found at <a href="https://github.com/jcftang/ceph-client-standalone">https://github.com/jcftang/ceph-client-standalone</a>.</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released/">View comments &raquo;</a></p>
-    
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -958,6 +984,10 @@ it can be found at <a href="https://github.com/jcftang/ceph-client-standalone">h
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/12/01/post-sc13-thoughts/">Post SC13 Thoughts</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/08/01/accelerating-development-and-deployments-with-ansible/">Accelerating Development and Deployments with Ansible</a>
       </li>
     
@@ -971,10 +1001,6 @@ it can be found at <a href="https://github.com/jcftang/ceph-client-standalone">h
     
       <li class="post">
         <a href="/2013/03/31/zfs-on-linux-is-usable-and-safe/">ZFS on Linux is usable and safe</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/">Testing and developing rails applications in a near production like environment</a>
       </li>
     
   </ul>

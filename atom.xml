@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2013-08-27T20:35:02+01:00</updated>
+  <updated>2013-12-14T10:31:19+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Post SC13 Thoughts]]></title>
+<link href="http://jcftang.github.com/2013/12/01/post-sc13-thoughts/"/>
+<updated>2013-12-01T09:04:25+00:00</updated>
+<id>http://jcftang.github.com/2013/12/01/post-sc13-thoughts</id>
+
+
+      <content type="html"><![CDATA[<p>I was recently at SC13 and attended a number of Python HPC tutorials,
+Data Management and HPC systems engineering and administration BOF&#39;s.</p>
+
+<p>This year&#39;s SC13 much calmer than previous years, but I did pick up a
+few new tools during the conference. However I was pretty surprised that
+there is a real lack of devops, sysadmins etc&hellip; in the this space.</p>
+
+<p>I was also surprised at how things like salt and ansible are being
+adopted in this space.</p>
+]]></content>
+    </entry>
   
     <entry>
       
@@ -842,28 +866,6 @@ instead of plain replication. I&#39;m greedy and I want to maximise my
 disks that I have, I wonder how low I can go on hardware with the Ceph
 software.</p>
 ]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Ceph V0.48.2 ARGONAUT RELEASED &rarr;]]></title>
-<link href="http://ceph.com/releases/v0-48-2-argonaut-stable-update-released/"/>
-<updated>2012-09-21T10:38:00+01:00</updated>
-<id>http://jcftang.github.com/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released</id>
-<category term="ceph" /><category term="linux" /><category term="storage" />
-
-      <content type="html"><![CDATA[<p>There&#39;s a new stable release of Ceph Argonaut, I seem to be having better
-luck with playing with the development releases of Ceph.</p>
-
-<p>Oh how I wish that there was a backport of the kernel ceph and rbd drivers
-for RHEL6, I have a dodgy repo and some reverted commits that one of
-the guys in work told me about. It seems to run but it isn&#39;t great,
-it can be found at <a href="https://github.com/jcftang/ceph-client-standalone">https://github.com/jcftang/ceph-client-standalone</a>.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
