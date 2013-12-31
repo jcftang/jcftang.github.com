@@ -83,6 +83,109 @@
 
 
 
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="/2012/09/23/a-poor-mans-nas-device-with-ceph/">A Poor Man's NAS Device With Ceph</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-23T08:59:00+01:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2012</time>
+        
+         | <a href="/2012/09/23/a-poor-mans-nas-device-with-ceph/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/09/23/a-poor-mans-nas-device-with-ceph/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>Given that I have a number of old 64bit capable desktop machines and a
+collection of hard drives at home, I could have run
+<a href="https://tahoe-lafs.org/trac/tahoe-lafs">Tahoe-LAFS</a> like I do in work
+for backup purposes. In fact Tahoe works quite well for the
+technically capable user.</p>
+
+<p>Recently I&#39;ve decided that I need a more central location at home to
+store my photo collection (I love to take photos with my Canon DSLR
+and Panasonic LX5). Traditionally I would have just fired up
+<a href="http://git-annex.branchable.com/">git-annex</a> to track the data and
+then setup a number of remotes to store the data, where one of them
+might be Tahoe-LAFS and the rest might be portable hard drives, remote
+machines etc&hellip;</p>
+
+<p>I could have gone with any number of distributed storage solutions
+such as <a href="http://www.gluster.org/">GlusterFS</a>,
+<a href="http://www.irods.org">iRODS</a>,
+<a href="http://xrootd.slac.stanford.edu/">xrootd</a>,
+<a href="http://wiki.lustre.org/index.php/Main_Page">Lustre</a> or
+<a href="http://www.xtreemfs.org/">xtreemfs</a>. I&#39;ve worked with some of these
+systems in production and toyed with others. Since this is for a home
+system I can pick what I want and change it at will.</p>
+
+<p>I probably have 2-3tb&#39;s of data to archive and store, I also want easy
+access to my data so NFS or CIFS exports are required. It wouldn&#39;t be
+unfeasible to acquire a few 2 or 3 terabyte drives for my old desktop
+machine which would effectively provide me with a 2 or 3 terabyte
+replicated data store. Given the amount of toying around and learning
+about Ceph in my spare time I would expect that Ceph would provide me
+with a pretty good &ldquo;backend&rdquo; system for storing my files and the
+option of &ldquo;migrating my data from one machine to another machine&rdquo; by
+adding and removing OSD&#39;s. The handiest feature for me will be the
+capability of expanding and shrinking the system as I need.</p>
+
+<p>There probably aren&#39;t many people who would want to setup something
+like this for a home system, but it is an alternative to the usual
+RAID or LVM setup.</p>
+
+<p>Here&#39;s my proposed setup which I&#39;m going to setup in the next few
+spare weekends that I will have.</p>
+
+<p><img class="" src="/downloads/images/ceph-home.png"></p>
+
+<p>It would be great if Ceph offered some of of parity/erasure coding
+instead of plain replication. I&#39;m greedy and I want to maximise my
+disks that I have, I wonder how low I can go on hardware with the Ceph
+software.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/09/23/a-poor-mans-nas-device-with-ceph/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2012/09/23/a-poor-mans-nas-device-with-ceph/">View comments &raquo;</a></p>
+    
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
   
 
 
@@ -1195,86 +1298,6 @@ broken.</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development/">Vagrant and Veewee for Managing Virtual Machines for Development</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-17T12:06:00+01:00" pubdate data-updated="true">Jul 17<span>th</span>, 2012</time>
-        
-         | <a href="/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>I only discovered <a href="https://github.com/mitchellh/vagrant">Vagrant</a> last
-week at OR2012 when one of the presentations had Vagrant as a part of
-the testing component in the project. I was pleasantly surprised that
-it was leaveraging lots of free and opensource technology to provide
-repeatable environments for development and testing. I was even more
-impressed by the <a href="https://github.com/jedi4ever/veewee">Veewee</a> project
-which provides some additional wrappers for building custom
-&#39;boxes&#39;. Veewee certainly saved me lots of time in setting up some
-updated <a href="http://www.scientificlinux.org/">Scientific Linux</a> boxes
-(it&#39;s my preferred distro for deployments).</p>
-
-<p>In summary Vagrant is a set of scripts to manage virtual machines and
-Veewee is a set of scripts for creating base images for use in
-Vagrant. If you&#39;re interested in the updated SL6.2 definitions they
-can be found at my
-<a href="https://github.com/jcftang/veewee/tree/scientificlinux-6.2">fork of veewee</a>.</p>
-
-<p>All that is left now is to setup <a href="http://puppetlabs.com/">puppet</a> and
-have it automatically provision my development/test environment. I&#39;m
-not a huge fan of puppet, but I guess it&#39;s better than rolling my own.</p>
-
-<p>I look forward to have the capability of having easy access to
-disposable VM&#39;s for prototyping and testing! I will need to at
-somepoint setup a test system for cports with this tool.</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development/">View comments &raquo;</a></p>
-    
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -1299,6 +1322,10 @@ somepoint setup a test system for cports with this tool.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/">Building a private cloud with saltstack as the cloud controller</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/12/01/post-sc13-thoughts/">Post SC13 Thoughts</a>
       </li>
     
@@ -1312,10 +1339,6 @@ somepoint setup a test system for cports with this tool.</p>
     
       <li class="post">
         <a href="/2013/05/19/dri-planet-is-somewhat-back-in-action/">DRI Planet is somewhat back in action</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/03/31/zfs-on-linux-is-usable-and-safe/">ZFS on Linux is usable and safe</a>
       </li>
     
   </ul>

@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>HydraCamp 2013 - Trinity College Dublin - Jimmy Tang</title>
+  <title>Building a private cloud with saltstack as the cloud controller - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/2013/02/08/hydracamp-2013-trinity-college--dublin/">
+  <link rel="canonical" href="http://jcftang.github.com/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Jimmy Tang" type="application/atom+xml">
@@ -82,7 +82,6 @@
 
 
 
-  
 
 
 
@@ -90,14 +89,13 @@
 
 
 
-
-<article class="hentry linklog" role="article">
+<article class="hentry " role="article">
   
   <header>
     <h1 class="entry-title">
 
-<a href="http://www.tchpc.tcd.ie/hydracamp2013">HydraCamp 2013 - Trinity College Dublin</a>
-<span class='linklog-marker'>&rarr;</span>
+Building a Private Cloud With Saltstack as the Cloud Controller
+
 </h1>
 
     
@@ -114,39 +112,43 @@
   
 
 
-<time datetime="2013-02-08T10:02:12+00:00" pubdate data-updated="true">Feb 8<span>th</span>, 2013</time>
+<time datetime="2013-12-31T12:55:26+00:00" pubdate data-updated="true">Dec 31<span>st</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/2013/02/08/hydracamp-2013-trinity-college--dublin/">Permalink</a>
+         &bull; <a rel="bookmark" href="/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p>After a few months of budgeting, negotiations and finding venues we&#39;ve
-at Trinity College Dublin have committed to hosting a HydraCamp for
-europe! So I&#39;m shamelessly plugging it here.</p>
+<div class="entry-content"><p>After going to SC13 and being at a few BoF&#39;s and hearing
+some people talk about their operations and potentially using
+<a href="http://www.saltstack.com/">Salt</a> to replace the likes of puppet and chef,
+I decided to learn a little more about Salt.</p>
 
-<p>Trinity College Dublin as a part of Digital Repository of Ireland will
-be organising Hydra Camp in the week of April 8th till 12th, 2013. This
-will be a week long training course, which will be aimed at developers
-who are interested in the Hydra framework for developing repositories.</p>
+<p>In particular since I have an old laptop lying around at
+home, I decided to setup a little private cloud. I followed this <a href="http://www.saltstack.com/salt-blog/2013/11/19/cloud-making-doesnt-have-to-be-so-hard-salt-virt-tutorial">blog
+post</a>.</p>
 
-<p>For those that don&#39;t know Hydra is a framework built upon various
-Fedora-Commons, Apache SOLR, Ruby and Ruby on Rails technologies. At
-DRI we&#39;re using it to build up our prototype repository.</p>
+<p>It mostly worked apart from some buggy behaviour in the seeding
+process. It was certainly lower overhead in setting a salt managed
+&#39;cloud&#39; than setting up a full on <a href="http://opennebula.org/">Open Nebula</a>
+instance or even openstack.</p>
 
-<p>It&#39;s possible to use the Hydra framework to build repositories for
-archiving and preservation.</p>
+<p>It&#39;s pretty neat that a provisioned VM reports into the salt master
+and is ready to be provisioned pretty quickly when it boots up. I can
+certainly see the attraction of using Salt to setup a private cloud with
+Salt as the controller.</p>
 
-<h3>Resources</h3>
+<p>In short compared to <a href="http://www.ansibleworks.com/">Ansible</a> Salt is a
+bit more heavy weight than Ansible. I haven&#39;t done any like with like
+comparisons but I do feel that Salt seems like the better option for
+maintaining long running systems and Ansible is great for rapid redeploys
+of systems (from a clean state)</p>
 
-<ul>
-<li>HydraCamp 2013 - <a href="http://www.tchpc.tcd.ie/hydracamp2013">http://www.tchpc.tcd.ie/hydracamp2013</a></li>
-<li>Digital Repository of Ireland - <a href="http://www.dri.ie/">http://www.dri.ie/</a></li>
-<li>Project Hydra - <a href="http://projecthydra.org/">http://projecthydra.org/</a></li>
-<li>Data Curation Experts - <a href="http://curationexperts.wordpress.com/">http://curationexperts.wordpress.com/</a></li>
-</ul>
+<p>I&#39;ve uploaded the configs that I have been using at home to github, they
+can be found <a href="https://github.com/jcftang/salt-virt">here</a>, there&#39;s even a
+few packer templates to build base images for CentOS 6.5 and Ubuntu 12.04.</p>
 </div>
 
 
@@ -169,14 +171,8 @@ archiving and preservation.</p>
   
 
 
-<time datetime="2013-02-08T10:02:12+00:00" pubdate data-updated="true">Feb 8<span>th</span>, 2013</time>
+<time datetime="2013-12-31T12:55:26+00:00" pubdate data-updated="true">Dec 31<span>st</span>, 2013</time>
 
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/dri/'>dri</a>, <a class='category' href='/blog/categories/preservation/'>preservation</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/tcd/'>tcd</a>
-  
-</span>
 
 
 
@@ -192,12 +188,12 @@ archiving and preservation.</p>
   
   
     
-      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2013/02/08/hydracamp-2013-trinity-college--dublin/" target="_blank">+1</a>
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/" target="_blank">+1</a>
     
   
   
     
-    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2013/02/08/hydracamp-2013-trinity-college--dublin/" target="_blank">Share</a>
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/" target="_blank">Share</a>
     
   
   
@@ -207,10 +203,8 @@ archiving and preservation.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2013/01/22/deploying-our-hydra-head-with-jruby/" title="Previous Post: Deploying our hydra-head with jruby">&laquo; Deploying our hydra-head with jruby</a>
+        <a class="basic-alignment left" href="/2013/12/01/post-sc13-thoughts/" title="Previous Post: Post SC13 Thoughts">&laquo; Post SC13 Thoughts</a>
       
-      
-        <a class="basic-alignment right" href="/2013/03/22/building-kelvin-supercomputer-time-lapse/" title="Next Post: Building Kelvin Supercomputer (time lapse)">Building Kelvin Supercomputer (time lapse) &raquo;</a>
       
     </p>
   </footer>
@@ -235,11 +229,11 @@ archiving and preservation.</p>
   <ul class="posts">
     
       <li class="related">
-        <a href="/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/">Is JAVA really the only game in town for building Digital Preservation Systems?</a>
+        <a href="/2012/09/04/adding-an-osd-to-a-ceph-cluster/">Adding an OSD to a Ceph Cluster</a>
       </li>
     
       <li class="related">
-        <a href="/2012/10/13/hydracamp-2012-penn-state/">Hydracamp 2012 - Penn State</a>
+        <a href="/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/">SLURM-Bank that big script for banking in SLURM</a>
       </li>
     
       <li class="related">
@@ -247,11 +241,11 @@ archiving and preservation.</p>
       </li>
     
       <li class="related">
-        <a href="/2013/06/06/hydra-and-ansible/">Hydra and Ansible</a>
+        <a href="/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/">Thoughts on using the likes of tahoe-lafs and git-annex as a backend storage system for Digital Preservation</a>
       </li>
     
       <li class="related">
-        <a href="/2012/08/02/an-excuse-to-learn-ruby-and-ruby-on-rails/">An excuse to learn Ruby and Ruby on Rails</a>
+        <a href="/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux isn't the only platform to target when building applications</a>
       </li>
     
   </ul>
@@ -323,8 +317,8 @@ archiving and preservation.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/2013/02/08/hydracamp-2013-trinity-college--dublin/';
-        var disqus_url = 'http://jcftang.github.com/2013/02/08/hydracamp-2013-trinity-college--dublin/';
+        var disqus_identifier = 'http://jcftang.github.com/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/';
+        var disqus_url = 'http://jcftang.github.com/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/';
         var disqus_script = 'embed.js';
       
     (function () {

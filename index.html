@@ -95,6 +95,90 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/">Building a Private Cloud With Saltstack as the Cloud Controller</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-31T12:55:26+00:00" pubdate data-updated="true">Dec 31<span>st</span>, 2013</time>
+        
+         | <a href="/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>After going to SC13 and being at a few BoF&#39;s and hearing
+some people talk about their operations and potentially using
+<a href="http://www.saltstack.com/">Salt</a> to replace the likes of puppet and chef,
+I decided to learn a little more about Salt.</p>
+
+<p>In particular since I have an old laptop lying around at
+home, I decided to setup a little private cloud. I followed this <a href="http://www.saltstack.com/salt-blog/2013/11/19/cloud-making-doesnt-have-to-be-so-hard-salt-virt-tutorial">blog
+post</a>.</p>
+
+<p>It mostly worked apart from some buggy behaviour in the seeding
+process. It was certainly lower overhead in setting a salt managed
+&#39;cloud&#39; than setting up a full on <a href="http://opennebula.org/">Open Nebula</a>
+instance or even openstack.</p>
+
+<p>It&#39;s pretty neat that a provisioned VM reports into the salt master
+and is ready to be provisioned pretty quickly when it boots up. I can
+certainly see the attraction of using Salt to setup a private cloud with
+Salt as the controller.</p>
+
+<p>In short compared to <a href="http://www.ansibleworks.com/">Ansible</a> Salt is a
+bit more heavy weight than Ansible. I haven&#39;t done any like with like
+comparisons but I do feel that Salt seems like the better option for
+maintaining long running systems and Ansible is great for rapid redeploys
+of systems (from a clean state)</p>
+
+<p>I&#39;ve uploaded the configs that I have been using at home to github, they
+can be found <a href="https://github.com/jcftang/salt-virt">here</a>, there&#39;s even a
+few packer templates to build base images for CentOS 6.5 and Ubuntu 12.04.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/">View comments &raquo;</a></p>
+    
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2013/12/01/post-sc13-thoughts/">Post SC13 Thoughts</a>
 
 </h1>
@@ -792,104 +876,6 @@ archiving and preservation.</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2013/01/22/deploying-our-hydra-head-with-jruby/">Deploying Our Hydra-head With Jruby</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-22T19:49:02+00:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2013</time>
-        
-         | <a href="/2013/01/22/deploying-our-hydra-head-with-jruby/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2013/01/22/deploying-our-hydra-head-with-jruby/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>We&#39;ve been ramping up our development work on the project that I have been on
-in the last month or so. One of the issues that we&#39;ve come across is the not
-so good XML validation and parsing libraries that are available in the ruby
-world compared to the java world.</p>
-
-<p>So as an exercise I decided to see if I could make our prototype work
-with jruby with the view of doing a test deployment on tomcat or some
-other application server. One of the motivating reason for doing this
-is to get access to the java based XML libraries for validation and
-processing. It also means that if I can deploy to the same Tomcat server
-where I&#39;m running SOLR and Fedora-Commons then it means I&#39;m saving myself
-a chunk of work setting up and maintaining <em>mod_passenger</em>.</p>
-
-<p>In short what I ended up doing was make sqlite3 as being dependent on
-the ruby platform and creating a block for jruby. So here&#39;s the relevant
-snippet from my <em>Gemfile</em></p>
-
-<figure class='code'><div class='highlight'><table><td class='line-numbers' aria-hidden='true'><pre><div data-line='1' class='line-number'></div><div data-line='2' class='line-number'></div><div data-line='3' class='line-number'></div><div data-line='4' class='line-number'></div><div data-line='5' class='line-number'></div><div data-line='6' class='line-number'></div><div data-line='7' class='line-number'></div><div data-line='8' class='line-number'></div><div data-line='9' class='line-number'></div><div data-line='10' class='line-number'></div><div data-line='11' class='line-number'></div><div data-line='12' class='line-number'></div><div data-line='13' class='line-number'></div><div data-line='14' class='line-number'></div><div data-line='15' class='line-number'></div><div data-line='16' class='line-number'></div><div data-line='17' class='line-number'></div><div data-line='18' class='line-number'></div></pre></td><td class='main  ruby'><pre><div class='line'><span class="n">gem</span> <span class="s1">&#39;sqlite3&#39;</span><span class="p">,</span> <span class="ss">:platforms</span> <span class="o">=&gt;</span> <span class="ss">:ruby</span>
-</div><div class='line'> </div><div class='line'><span class="n">platforms</span> <span class="ss">:jruby</span> <span class="k">do</span>
-</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;jruby-openssl&#39;</span>
-</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;activerecord-jdbcsqlite3-adapter&#39;</span>
-</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;jruby-lint&#39;</span>
-</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;warbler&#39;</span>
-</div><div class='line'> </div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;actionmailer&#39;</span>
-</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;actionpack&#39;</span>
-</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;activerecord&#39;</span>
-</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;activerecord-jdbc-adapter&#39;</span>
-</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;activeresource&#39;</span>
-</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;activesupport&#39;</span>
-</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;jdbc-mysql&#39;</span>
-</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;rack&#39;</span>
-</div><div class='line'>  <span class="n">gem</span> <span class="s1">&#39;rake&#39;</span>
-</div><div class='line'><span class="k">end</span>
-</div></pre></td></tr></table></div></figure>
-
-<p>What I found was that jruby behaves oddly when I&#39;m behind a proxy, it
-seems to blindly take my system proxy settings on my mac, so I had to
-work around it.</p>
-
-<p>Nokogiri seems to be subtly different when deployed with jruby and thus
-it breaks a bunch of things, which is funny as this was the main reason
-to testing out jruby so that we can access the java based XML libraries.</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2013/01/22/deploying-our-hydra-head-with-jruby/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2013/01/22/deploying-our-hydra-head-with-jruby/">View comments &raquo;</a></p>
-    
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -912,6 +898,10 @@ to testing out jruby so that we can access the java based XML libraries.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/">Building a private cloud with saltstack as the cloud controller</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/12/01/post-sc13-thoughts/">Post SC13 Thoughts</a>
       </li>
     
@@ -925,10 +915,6 @@ to testing out jruby so that we can access the java based XML libraries.</p>
     
       <li class="post">
         <a href="/2013/05/19/dri-planet-is-somewhat-back-in-action/">DRI Planet is somewhat back in action</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/03/31/zfs-on-linux-is-usable-and-safe/">ZFS on Linux is usable and safe</a>
       </li>
     
   </ul>

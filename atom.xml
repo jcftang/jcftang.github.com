@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2013-12-14T10:31:19+00:00</updated>
+  <updated>2013-12-31T13:12:29+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,49 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Building a private cloud with saltstack as the cloud controller]]></title>
+<link href="http://jcftang.github.com/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/"/>
+<updated>2013-12-31T12:55:26+00:00</updated>
+<id>http://jcftang.github.com/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller</id>
+
+
+      <content type="html"><![CDATA[<p>After going to SC13 and being at a few BoF&#39;s and hearing
+some people talk about their operations and potentially using
+<a href="http://www.saltstack.com/">Salt</a> to replace the likes of puppet and chef,
+I decided to learn a little more about Salt.</p>
+
+<p>In particular since I have an old laptop lying around at
+home, I decided to setup a little private cloud. I followed this <a href="http://www.saltstack.com/salt-blog/2013/11/19/cloud-making-doesnt-have-to-be-so-hard-salt-virt-tutorial">blog
+post</a>.</p>
+
+<p>It mostly worked apart from some buggy behaviour in the seeding
+process. It was certainly lower overhead in setting a salt managed
+&#39;cloud&#39; than setting up a full on <a href="http://opennebula.org/">Open Nebula</a>
+instance or even openstack.</p>
+
+<p>It&#39;s pretty neat that a provisioned VM reports into the salt master
+and is ready to be provisioned pretty quickly when it boots up. I can
+certainly see the attraction of using Salt to setup a private cloud with
+Salt as the controller.</p>
+
+<p>In short compared to <a href="http://www.ansibleworks.com/">Ansible</a> Salt is a
+bit more heavy weight than Ansible. I haven&#39;t done any like with like
+comparisons but I do feel that Salt seems like the better option for
+maintaining long running systems and Ansible is great for rapid redeploys
+of systems (from a clean state)</p>
+
+<p>I&#39;ve uploaded the configs that I have been using at home to github, they
+can be found <a href="https://github.com/jcftang/salt-virt">here</a>, there&#39;s even a
+few packer templates to build base images for CentOS 6.5 and Ubuntu 12.04.</p>
+]]></content>
+    </entry>
   
     <entry>
       
@@ -804,68 +847,6 @@ for those that run RHEL6 like systems.</p>
 guys in work here just deployed a ~200tb Ceph installation which I&#39;ve
 access to a 10tb RBD for doing backups on.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/09/28/ceph-v0-dot-52-released/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[A poor man's NAS device with Ceph]]></title>
-<link href="http://jcftang.github.com/2012/09/23/a-poor-mans-nas-device-with-ceph/"/>
-<updated>2012-09-23T08:59:00+01:00</updated>
-<id>http://jcftang.github.com/2012/09/23/a-poor-mans-nas-device-with-ceph</id>
-<category term="ceph" /><category term="linux" /><category term="storage" />
-
-      <content type="html"><![CDATA[<p>Given that I have a number of old 64bit capable desktop machines and a
-collection of hard drives at home, I could have run
-<a href="https://tahoe-lafs.org/trac/tahoe-lafs">Tahoe-LAFS</a> like I do in work
-for backup purposes. In fact Tahoe works quite well for the
-technically capable user.</p>
-
-<p>Recently I&#39;ve decided that I need a more central location at home to
-store my photo collection (I love to take photos with my Canon DSLR
-and Panasonic LX5). Traditionally I would have just fired up
-<a href="http://git-annex.branchable.com/">git-annex</a> to track the data and
-then setup a number of remotes to store the data, where one of them
-might be Tahoe-LAFS and the rest might be portable hard drives, remote
-machines etc&hellip;</p>
-
-<p>I could have gone with any number of distributed storage solutions
-such as <a href="http://www.gluster.org/">GlusterFS</a>,
-<a href="http://www.irods.org">iRODS</a>,
-<a href="http://xrootd.slac.stanford.edu/">xrootd</a>,
-<a href="http://wiki.lustre.org/index.php/Main_Page">Lustre</a> or
-<a href="http://www.xtreemfs.org/">xtreemfs</a>. I&#39;ve worked with some of these
-systems in production and toyed with others. Since this is for a home
-system I can pick what I want and change it at will.</p>
-
-<p>I probably have 2-3tb&#39;s of data to archive and store, I also want easy
-access to my data so NFS or CIFS exports are required. It wouldn&#39;t be
-unfeasible to acquire a few 2 or 3 terabyte drives for my old desktop
-machine which would effectively provide me with a 2 or 3 terabyte
-replicated data store. Given the amount of toying around and learning
-about Ceph in my spare time I would expect that Ceph would provide me
-with a pretty good &ldquo;backend&rdquo; system for storing my files and the
-option of &ldquo;migrating my data from one machine to another machine&rdquo; by
-adding and removing OSD&#39;s. The handiest feature for me will be the
-capability of expanding and shrinking the system as I need.</p>
-
-<p>There probably aren&#39;t many people who would want to setup something
-like this for a home system, but it is an alternative to the usual
-RAID or LVM setup.</p>
-
-<p>Here&#39;s my proposed setup which I&#39;m going to setup in the next few
-spare weekends that I will have.</p>
-
-<p><img class="" src="http://jcftang.github.com/downloads/images/ceph-home.png"></p>
-
-<p>It would be great if Ceph offered some of of parity/erasure coding
-instead of plain replication. I&#39;m greedy and I want to maximise my
-disks that I have, I wonder how low I can go on hardware with the Ceph
-software.</p>
-]]></content>
     </entry>
   
 </feed>

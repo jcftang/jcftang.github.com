@@ -339,12 +339,18 @@
         <lastmod>2013-12-14T10:30:30+00:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://jcftang.github.com/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/
+        </loc>
+        <lastmod>2013-12-31T13:11:49+00:00</lastmod>
+    </url>
+    <url>
         <loc>http://jcftang.github.com/about/</loc>
         <lastmod>2013-05-16T21:29:01+01:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/archives/</loc>
-        <lastmod>2013-12-14T10:30:30+00:00</lastmod>
+        <lastmod>2013-12-31T13:11:49+00:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/blog/categories/</loc>
@@ -352,7 +358,7 @@
     </url>
     <url>
         <loc>http://jcftang.github.com/</loc>
-        <lastmod>2013-12-14T10:30:30+00:00</lastmod>
+        <lastmod>2013-12-31T13:11:49+00:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/robots.txt</loc>
