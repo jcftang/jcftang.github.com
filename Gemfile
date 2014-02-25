@@ -15,7 +15,9 @@ group :development do
   gem 'liquid', '~> 2.3.0'
   gem 'tzinfo', '~> 0.3.35'
   gem 'rake-minify'
-  gem 'gsl', git: 'https://github.com/jcftang/rb-gsl.git'
+#  gem 'gsl', git: 'https://github.com/jcftang/rb-gsl.git'
+#  gem 'gsl', git: 'https://github.com/whistlerbrk/rb-gsl'
+  gem 'gsl'
   gem 'directory_watcher', '~> 1.4.1'
 end
 
