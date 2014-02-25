@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2013-12-31T13:12:29+00:00</updated>
+  <updated>2014-02-25T18:21:16+08:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -18,9 +18,29 @@
 
 
 
+<title type="html"><![CDATA[Hydra Europe 2014 &rarr;]]></title>
+<link href="https://wiki.duraspace.org/display/hydra/Hydra+Europe+2014"/>
+<updated>2014-02-25T18:16:09+08:00</updated>
+<id>http://jcftang.github.com/2014/02/25/hydra-europe-2014</id>
+<category term="dri" /><category term="hydra" /><category term="preservation" />
+
+      <content type="html"><![CDATA[<p>It&#39;s that time of the year again and it seems we&#39;re going to hold another
+Hydra related event in work at Trinity College, Dublin.</p>
+
+<p>For more information see
+<a href="https://wiki.duraspace.org/display/hydra/Hydra+Europe+2014">https://wiki.duraspace.org/display/hydra/Hydra+Europe+2014</a></p>
+<p><a rel="bookmark" href="http://jcftang.github.com/2014/02/25/hydra-europe-2014/">&#9875; Permalink</a></p>]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
 <title type="html"><![CDATA[Building a private cloud with saltstack as the cloud controller]]></title>
 <link href="http://jcftang.github.com/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/"/>
-<updated>2013-12-31T12:55:26+00:00</updated>
+<updated>2013-12-31T20:55:26+08:00</updated>
 <id>http://jcftang.github.com/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller</id>
 
 
@@ -63,7 +83,7 @@ few packer templates to build base images for CentOS 6.5 and Ubuntu 12.04.</p>
 
 <title type="html"><![CDATA[Post SC13 Thoughts]]></title>
 <link href="http://jcftang.github.com/2013/12/01/post-sc13-thoughts/"/>
-<updated>2013-12-01T09:04:25+00:00</updated>
+<updated>2013-12-01T17:04:25+08:00</updated>
 <id>http://jcftang.github.com/2013/12/01/post-sc13-thoughts</id>
 
 
@@ -86,9 +106,9 @@ adopted in this space.</p>
 
 
 <title type="html"><![CDATA[Accelerating Development and Deployments with Ansible]]></title>
-<link href="http://jcftang.github.com/2013/08/01/accelerating-development-and-deployments-with-ansible/"/>
-<updated>2013-08-01T21:38:54+01:00</updated>
-<id>http://jcftang.github.com/2013/08/01/accelerating-development-and-deployments-with-ansible</id>
+<link href="http://jcftang.github.com/2013/08/02/accelerating-development-and-deployments-with-ansible/"/>
+<updated>2013-08-02T04:38:54+08:00</updated>
+<id>http://jcftang.github.com/2013/08/02/accelerating-development-and-deployments-with-ansible</id>
 
 
       <content type="html"><![CDATA[<p>It&#39;s probably no secret that we use Ansible at our work place for
@@ -130,9 +150,9 @@ least let me do so anyway.</p>
 
 
 <title type="html"><![CDATA[Hydra and Ansible]]></title>
-<link href="http://jcftang.github.com/2013/06/06/hydra-and-ansible/"/>
-<updated>2013-06-06T18:11:40+01:00</updated>
-<id>http://jcftang.github.com/2013/06/06/hydra-and-ansible</id>
+<link href="http://jcftang.github.com/2013/06/07/hydra-and-ansible/"/>
+<updated>2013-06-07T01:11:40+08:00</updated>
+<id>http://jcftang.github.com/2013/06/07/hydra-and-ansible</id>
 <category term="dri" /><category term="team" />
 
       <content type="html"><![CDATA[<p>The team that I am working with right are very much agile and we&#39;re
@@ -186,7 +206,7 @@ to be created for continuous deployment of our hydra-head.</p>
 
 <title type="html"><![CDATA[DRI Planet is somewhat back in action &rarr;]]></title>
 <link href="http://www.tchpc.tcd.ie/dri-planet"/>
-<updated>2013-05-19T08:51:15+01:00</updated>
+<updated>2013-05-19T15:51:15+08:00</updated>
 <id>http://jcftang.github.com/2013/05/19/dri-planet-is-somewhat-back-in-action</id>
 <category term="dri" />
 
@@ -206,7 +226,7 @@ for work. The aggregated links may or may not be affiliated with my work.</p>
 
 <title type="html"><![CDATA[ZFS on Linux is usable and safe &rarr;]]></title>
 <link href="https://groups.google.com/a/zfsonlinux.org/forum/?fromgroups=#!topic/zfs-announce/ZXADhyOwFfA"/>
-<updated>2013-03-31T11:05:56+01:00</updated>
+<updated>2013-03-31T18:05:56+08:00</updated>
 <id>http://jcftang.github.com/2013/03/31/zfs-on-linux-is-usable-and-safe</id>
 <category term="dri" /><category term="hpc" /><category term="preservation" /><category term="storage" />
 
@@ -234,7 +254,7 @@ be pretty desirable.</p>
 
 <title type="html"><![CDATA[Testing and developing rails applications in a near production like environment]]></title>
 <link href="http://jcftang.github.com/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/"/>
-<updated>2013-03-27T11:57:41+00:00</updated>
+<updated>2013-03-27T19:57:41+08:00</updated>
 <id>http://jcftang.github.com/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment</id>
 <category term="dri" /><category term="linux" /><category term="team" />
 
@@ -280,7 +300,7 @@ get me to where I need to be in a virtual environment&hellip;</p>
 
 <title type="html"><![CDATA[Amazon Redshift - a curiousity to me?]]></title>
 <link href="http://jcftang.github.com/2013/03/24/amazon-redshift-a-curiousity-to-me/"/>
-<updated>2013-03-24T11:16:54+00:00</updated>
+<updated>2013-03-24T19:16:54+08:00</updated>
 <id>http://jcftang.github.com/2013/03/24/amazon-redshift-a-curiousity-to-me</id>
 <category term="hpc" /><category term="storage" />
 
@@ -317,7 +337,7 @@ challenge of having one real big database that can be queried.</p>
 
 <title type="html"><![CDATA[Building Kelvin Supercomputer (time lapse) &rarr;]]></title>
 <link href="http://www.youtube.com/watch?v=F0zon45WR-U&feature=youtu.be"/>
-<updated>2013-03-22T07:46:26+00:00</updated>
+<updated>2013-03-22T15:46:26+08:00</updated>
 <id>http://jcftang.github.com/2013/03/22/building-kelvin-supercomputer-time-lapse</id>
 <category term="hpc" /><category term="tcd" /><category term="team" />
 
@@ -360,7 +380,7 @@ machines in the process.</p>
 
 <title type="html"><![CDATA[HydraCamp 2013 - Trinity College Dublin &rarr;]]></title>
 <link href="http://www.tchpc.tcd.ie/hydracamp2013"/>
-<updated>2013-02-08T10:02:12+00:00</updated>
+<updated>2013-02-08T18:02:12+08:00</updated>
 <id>http://jcftang.github.com/2013/02/08/hydracamp-2013-trinity-college--dublin</id>
 <category term="dri" /><category term="preservation" /><category term="ruby" /><category term="tcd" />
 
@@ -398,9 +418,9 @@ archiving and preservation.</p>
 
 
 <title type="html"><![CDATA[Deploying our hydra-head with jruby]]></title>
-<link href="http://jcftang.github.com/2013/01/22/deploying-our-hydra-head-with-jruby/"/>
-<updated>2013-01-22T19:49:02+00:00</updated>
-<id>http://jcftang.github.com/2013/01/22/deploying-our-hydra-head-with-jruby</id>
+<link href="http://jcftang.github.com/2013/01/23/deploying-our-hydra-head-with-jruby/"/>
+<updated>2013-01-23T03:49:02+08:00</updated>
+<id>http://jcftang.github.com/2013/01/23/deploying-our-hydra-head-with-jruby</id>
 <category term="dri" /><category term="java" /><category term="linux" /><category term="preservation" /><category term="ruby" />
 
       <content type="html"><![CDATA[<p>We&#39;ve been ramping up our development work on the project that I have been on
@@ -456,7 +476,7 @@ to testing out jruby so that we can access the java based XML libraries.</p>
 
 <title type="html"><![CDATA[Making the jump and migrating my archlinux machines to use btrfs]]></title>
 <link href="http://jcftang.github.com/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs/"/>
-<updated>2013-01-02T15:18:00+00:00</updated>
+<updated>2013-01-02T15:18:00+08:00</updated>
 <id>http://jcftang.github.com/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs</id>
 <category term="linux" /><category term="storage" />
 
@@ -506,7 +526,7 @@ tell if I&#39;m happy with btrfs or not.</p>
 
 <title type="html"><![CDATA[Supercomputing 2012 and the arms race to exascale]]></title>
 <link href="http://jcftang.github.com/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale/"/>
-<updated>2012-11-16T06:30:00+00:00</updated>
+<updated>2012-11-16T06:30:00+08:00</updated>
 <id>http://jcftang.github.com/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale</id>
 <category term="hpc" /><category term="linux" /><category term="storage" />
 
@@ -567,7 +587,7 @@ end to end data integrity built into storage systems.</p>
 
 <title type="html"><![CDATA[There is light on the otherside]]></title>
 <link href="http://jcftang.github.com/2012/11/04/there-is-light-on-the-otherside/"/>
-<updated>2012-11-04T19:52:00+00:00</updated>
+<updated>2012-11-04T19:52:00+08:00</updated>
 <id>http://jcftang.github.com/2012/11/04/there-is-light-on-the-otherside</id>
 <category term="dri" /><category term="linux" /><category term="scm" /><category term="team" />
 
@@ -617,7 +637,7 @@ a light on the otherside for mangement, deployment and orchestration.</p>
 
 <title type="html"><![CDATA[Crowbar for deploying systems]]></title>
 <link href="http://jcftang.github.com/2012/10/27/crowbar-for-deploying-systems/"/>
-<updated>2012-10-27T20:07:00+01:00</updated>
+<updated>2012-10-27T20:07:00+08:00</updated>
 <id>http://jcftang.github.com/2012/10/27/crowbar-for-deploying-systems</id>
 <category term="linux" />
 
@@ -659,7 +679,7 @@ ending supply of these tools.</p>
 
 <title type="html"><![CDATA[Ceph V0.53 RELEASED &rarr;]]></title>
 <link href="http://ceph.com/releases/v0-53-released/"/>
-<updated>2012-10-23T15:08:00+01:00</updated>
+<updated>2012-10-23T15:08:00+08:00</updated>
 <id>http://jcftang.github.com/2012/10/23/ceph-v0-dot-53-released</id>
 <category term="ceph" /><category term="linux" /><category term="storage" />
 
@@ -682,7 +702,7 @@ domains.</p>
 
 <title type="html"><![CDATA[Hydracamp 2012 - Penn State &rarr;]]></title>
 <link href="http://yourmediashelf.com/hydracamp/"/>
-<updated>2012-10-13T07:34:00+01:00</updated>
+<updated>2012-10-13T07:34:00+08:00</updated>
 <id>http://jcftang.github.com/2012/10/13/hydracamp-2012-penn-state</id>
 <category term="dri" /><category term="preservation" /><category term="ruby" />
 
@@ -730,7 +750,7 @@ account for Project Hydra and have a peek at the hydracamp repo.</p>
 
 <title type="html"><![CDATA[Digital Preservation and Archiving is a HPC problem?]]></title>
 <link href="http://jcftang.github.com/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/"/>
-<updated>2012-10-07T13:42:00+01:00</updated>
+<updated>2012-10-07T13:42:00+08:00</updated>
 <id>http://jcftang.github.com/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem</id>
 <category term="hpc" /><category term="storage" />
 
@@ -787,7 +807,7 @@ point, especially if you want to do something with the data.</p>
 
 <title type="html"><![CDATA[SLURM-Bank that big script for banking in SLURM &rarr;]]></title>
 <link href="https://github.com/jcftang/slurm-bank"/>
-<updated>2012-09-29T19:52:00+01:00</updated>
+<updated>2012-09-29T19:52:00+08:00</updated>
 <id>http://jcftang.github.com/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm</id>
 <category term="hpc" /><category term="linux" />
 
@@ -825,28 +845,6 @@ but sadly I have to be in the US during this meeting and my colleague
 with the developers of SLURM to push for more advanced banking/accounting
 facilities in SLURM itself. Visiting BSC again would have been fun.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Ceph V0.52 RELEASED &rarr;]]></title>
-<link href="http://ceph.com/releases/v0-52-released/"/>
-<updated>2012-09-28T15:52:00+01:00</updated>
-<id>http://jcftang.github.com/2012/09/28/ceph-v0-dot-52-released</id>
-<category term="ceph" /><category term="linux" /><category term="storage" />
-
-      <content type="html"><![CDATA[<p>The latest development branch of Ceph is out with some rather nice
-looking features, what&#39;s probably the most useful are the RPM builds
-for those that run RHEL6 like systems.</p>
-
-<p>Still no real sight of backported kernel modules :P Also some of the
-guys in work here just deployed a ~200tb Ceph installation which I&#39;ve
-access to a 10tb RBD for doing backups on.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/2012/09/28/ceph-v0-dot-52-released/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
