@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Accelerating Development and Deployments with Ansible - Jimmy Tang</title>
+  <title>When to automate deployments and when not to? - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/2013/08/02/accelerating-development-and-deployments-with-ansible/">
+  <link rel="canonical" href="http://jcftang.github.com/2014/04/21/when-to-automate-deployments-and-when-not-to/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Jimmy Tang" type="application/atom+xml">
@@ -94,7 +94,7 @@
   <header>
     <h1 class="entry-title">
 
-Accelerating Development and Deployments With Ansible
+When to Automate Deployments and When Not To?
 
 </h1>
 
@@ -112,44 +112,35 @@ Accelerating Development and Deployments With Ansible
   
 
 
-<time datetime="2013-08-02T04:38:54+08:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2013</time>
+<time datetime="2014-04-21T15:17:23+01:00" pubdate data-updated="true">Apr 21<span>st</span>, 2014</time>
         
          | <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/2013/08/02/accelerating-development-and-deployments-with-ansible/">Permalink</a>
+         &bull; <a rel="bookmark" href="/2014/04/21/when-to-automate-deployments-and-when-not-to/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p>It&#39;s probably no secret that we use Ansible at our work place for
-the project that I am working on. So far we&#39;ve used it to deploy and
-maintain state for our Open Nebula deployment, Jenkins CI system, Ceph&#39;s
-radosgw and our digital repository.</p>
+<div class="entry-content"><p>We recently had Hydra Camp in Dublin in Trinity College Dublin which
+went pretty well. I even got to talk a little about what we&#39;re doing
+with Shibboleth and how we&#39;re deploying our systems.</p>
 
-<p>In fact I currently have a Jenkins job which deploys our software stack
-using Ansible to a test system in our Open Nebula cluster. This has been
-hugely beneficial to myself so far to be able to teardown and bring up
-systems quickly to make sure our application is well tested and debugged.</p>
+<p>We&#39;re deploy with ansible either by someone running the playbook by hand
+or via buildbot which pushes out a build when tests pass successfully
+on the master branch.</p>
 
-<p>Without going into a huge amount of detail, we&#39;ve been able to deploy our
-systems with relative ease and repeatability. I&#39;ve got the configurations
-up at my github account for those that are interested.</p>
+<p>Someone in the camp asked at what complexity should you begin to automate
+at, which I thought was a strange question since at DRI/TCD we thought
+of deploying as automatically as possible from day 1.</p>
 
-<p>The best thing about these deployments is that the initial prototyping
-was done in a set of vagrant managed virtual machines, this allowed me
-to rapidly bring up and teardown systems to ensure we have everything
-automated smoothly. On the flipside, the systems that get developed for
-production usage get backported to our vagrant setup. This means that
-we&#39;re able to provide a development environment for each developer which
-is identical or as close as possible to our production systems.</p>
+<p>My response to the question of when to automate was to automate it if you
+know that you need documentation or know that there might be a second
+time in setting up the system. Which pretty meant that we automate as
+much as we can.</p>
 
-<p>Having the capability to develop and test on a local machine which is
-close to or identical to our production system has accelerated our bug
-finding and development process.</p>
-
-<p>I&#39;m not too sure what the team think, since we&#39;re moving quite fast and
-Ansible has allowed us to do so due to its ease of use, well it has at
-least let me do so anyway.</p>
+<p>Automating means you at least have a script as documentation and as people
+leave/join the project you have a chance of figuring out whats going
+on. This is especially useful when you have a CI or CD styled system.</p>
 </div>
 
 
@@ -172,8 +163,14 @@ least let me do so anyway.</p>
   
 
 
-<time datetime="2013-08-02T04:38:54+08:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2013</time>
+<time datetime="2014-04-21T15:17:23+01:00" pubdate data-updated="true">Apr 21<span>st</span>, 2014</time>
 
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ansible/'>ansible</a>, <a class='category' href='/blog/categories/dri/'>dri</a>, <a class='category' href='/blog/categories/hydra/'>hydra</a>
+  
+</span>
 
 
 
@@ -189,12 +186,12 @@ least let me do so anyway.</p>
   
   
     
-      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2013/08/02/accelerating-development-and-deployments-with-ansible/" target="_blank">+1</a>
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2014/04/21/when-to-automate-deployments-and-when-not-to/" target="_blank">+1</a>
     
   
   
     
-    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2013/08/02/accelerating-development-and-deployments-with-ansible/" target="_blank">Share</a>
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2014/04/21/when-to-automate-deployments-and-when-not-to/" target="_blank">Share</a>
     
   
   
@@ -204,10 +201,8 @@ least let me do so anyway.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2013/06/07/hydra-and-ansible/" title="Previous Post: Hydra and Ansible">&laquo; Hydra and Ansible</a>
+        <a class="basic-alignment left" href="/2014/02/25/hydra-europe-2014/" title="Previous Post: Hydra Europe 2014">&laquo; Hydra Europe 2014</a>
       
-      
-        <a class="basic-alignment right" href="/2013/12/01/post-sc13-thoughts/" title="Next Post: Post SC13 Thoughts">Post SC13 Thoughts &raquo;</a>
       
     </p>
   </footer>
@@ -232,7 +227,7 @@ least let me do so anyway.</p>
   <ul class="posts">
     
       <li class="related">
-        <a href="/2012/08/28/taking-vagrant-and-running-with-it/">Taking Vagrant and running with it</a>
+        <a href="/2011/12/13/using-continuous-integration-systems-in-a-team/">Using continuous integration systems in a team</a>
       </li>
     
       <li class="related">
@@ -240,15 +235,15 @@ least let me do so anyway.</p>
       </li>
     
       <li class="related">
-        <a href="/2013/06/07/hydra-and-ansible/">Hydra and Ansible</a>
+        <a href="/2012/10/27/crowbar-for-deploying-systems/">Crowbar for deploying systems</a>
       </li>
     
       <li class="related">
-        <a href="/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for HPC systems</a>
+        <a href="/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/">SLURM-Bank that big script for banking in SLURM</a>
       </li>
     
       <li class="related">
-        <a href="/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/">Thoughts on using the likes of tahoe-lafs and git-annex as a backend storage system for Digital Preservation</a>
+        <a href="/2013/08/01/accelerating-development-and-deployments-with-ansible/">Accelerating Development and Deployments with Ansible</a>
       </li>
     
   </ul>
@@ -257,6 +252,10 @@ least let me do so anyway.</p>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2014/04/21/when-to-automate-deployments-and-when-not-to/">When to automate deployments and when not to?</a>
+      </li>
     
       <li class="post">
         <a href="/2014/02/25/hydra-europe-2014/">Hydra Europe 2014</a>
@@ -271,11 +270,7 @@ least let me do so anyway.</p>
       </li>
     
       <li class="post">
-        <a href="/2013/08/02/accelerating-development-and-deployments-with-ansible/">Accelerating Development and Deployments with Ansible</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/06/07/hydra-and-ansible/">Hydra and Ansible</a>
+        <a href="/2013/08/01/accelerating-development-and-deployments-with-ansible/">Accelerating Development and Deployments with Ansible</a>
       </li>
     
   </ul>
@@ -320,8 +315,8 @@ least let me do so anyway.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/2013/08/02/accelerating-development-and-deployments-with-ansible/';
-        var disqus_url = 'http://jcftang.github.com/2013/08/02/accelerating-development-and-deployments-with-ansible/';
+        var disqus_identifier = 'http://jcftang.github.com/2014/04/21/when-to-automate-deployments-and-when-not-to/';
+        var disqus_url = 'http://jcftang.github.com/2014/04/21/when-to-automate-deployments-and-when-not-to/';
         var disqus_script = 'embed.js';
       
     (function () {

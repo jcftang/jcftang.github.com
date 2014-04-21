@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2014-02-25T18:21:16+08:00</updated>
+  <updated>2014-04-21T19:25:40+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -18,9 +18,44 @@
 
 
 
+<title type="html"><![CDATA[When to automate deployments and when not to?]]></title>
+<link href="http://jcftang.github.com/2014/04/21/when-to-automate-deployments-and-when-not-to/"/>
+<updated>2014-04-21T15:17:23+01:00</updated>
+<id>http://jcftang.github.com/2014/04/21/when-to-automate-deployments-and-when-not-to</id>
+<category term="ansible" /><category term="dri" /><category term="hydra" />
+
+      <content type="html"><![CDATA[<p>We recently had Hydra Camp in Dublin in Trinity College Dublin which
+went pretty well. I even got to talk a little about what we&#39;re doing
+with Shibboleth and how we&#39;re deploying our systems.</p>
+
+<p>We&#39;re deploy with ansible either by someone running the playbook by hand
+or via buildbot which pushes out a build when tests pass successfully
+on the master branch.</p>
+
+<p>Someone in the camp asked at what complexity should you begin to automate
+at, which I thought was a strange question since at DRI/TCD we thought
+of deploying as automatically as possible from day 1.</p>
+
+<p>My response to the question of when to automate was to automate it if you
+know that you need documentation or know that there might be a second
+time in setting up the system. Which pretty meant that we automate as
+much as we can.</p>
+
+<p>Automating means you at least have a script as documentation and as people
+leave/join the project you have a chance of figuring out whats going
+on. This is especially useful when you have a CI or CD styled system.</p>
+]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
 <title type="html"><![CDATA[Hydra Europe 2014 &rarr;]]></title>
 <link href="https://wiki.duraspace.org/display/hydra/Hydra+Europe+2014"/>
-<updated>2014-02-25T18:16:09+08:00</updated>
+<updated>2014-02-25T10:16:09+00:00</updated>
 <id>http://jcftang.github.com/2014/02/25/hydra-europe-2014</id>
 <category term="dri" /><category term="hydra" /><category term="preservation" />
 
@@ -40,7 +75,7 @@ Hydra related event in work at Trinity College, Dublin.</p>
 
 <title type="html"><![CDATA[Building a private cloud with saltstack as the cloud controller]]></title>
 <link href="http://jcftang.github.com/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/"/>
-<updated>2013-12-31T20:55:26+08:00</updated>
+<updated>2013-12-31T12:55:26+00:00</updated>
 <id>http://jcftang.github.com/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller</id>
 
 
@@ -83,7 +118,7 @@ few packer templates to build base images for CentOS 6.5 and Ubuntu 12.04.</p>
 
 <title type="html"><![CDATA[Post SC13 Thoughts]]></title>
 <link href="http://jcftang.github.com/2013/12/01/post-sc13-thoughts/"/>
-<updated>2013-12-01T17:04:25+08:00</updated>
+<updated>2013-12-01T09:04:25+00:00</updated>
 <id>http://jcftang.github.com/2013/12/01/post-sc13-thoughts</id>
 
 
@@ -106,9 +141,9 @@ adopted in this space.</p>
 
 
 <title type="html"><![CDATA[Accelerating Development and Deployments with Ansible]]></title>
-<link href="http://jcftang.github.com/2013/08/02/accelerating-development-and-deployments-with-ansible/"/>
-<updated>2013-08-02T04:38:54+08:00</updated>
-<id>http://jcftang.github.com/2013/08/02/accelerating-development-and-deployments-with-ansible</id>
+<link href="http://jcftang.github.com/2013/08/01/accelerating-development-and-deployments-with-ansible/"/>
+<updated>2013-08-01T21:38:54+01:00</updated>
+<id>http://jcftang.github.com/2013/08/01/accelerating-development-and-deployments-with-ansible</id>
 
 
       <content type="html"><![CDATA[<p>It&#39;s probably no secret that we use Ansible at our work place for
@@ -150,9 +185,9 @@ least let me do so anyway.</p>
 
 
 <title type="html"><![CDATA[Hydra and Ansible]]></title>
-<link href="http://jcftang.github.com/2013/06/07/hydra-and-ansible/"/>
-<updated>2013-06-07T01:11:40+08:00</updated>
-<id>http://jcftang.github.com/2013/06/07/hydra-and-ansible</id>
+<link href="http://jcftang.github.com/2013/06/06/hydra-and-ansible/"/>
+<updated>2013-06-06T18:11:40+01:00</updated>
+<id>http://jcftang.github.com/2013/06/06/hydra-and-ansible</id>
 <category term="dri" /><category term="team" />
 
       <content type="html"><![CDATA[<p>The team that I am working with right are very much agile and we&#39;re
@@ -206,7 +241,7 @@ to be created for continuous deployment of our hydra-head.</p>
 
 <title type="html"><![CDATA[DRI Planet is somewhat back in action &rarr;]]></title>
 <link href="http://www.tchpc.tcd.ie/dri-planet"/>
-<updated>2013-05-19T15:51:15+08:00</updated>
+<updated>2013-05-19T08:51:15+01:00</updated>
 <id>http://jcftang.github.com/2013/05/19/dri-planet-is-somewhat-back-in-action</id>
 <category term="dri" />
 
@@ -226,7 +261,7 @@ for work. The aggregated links may or may not be affiliated with my work.</p>
 
 <title type="html"><![CDATA[ZFS on Linux is usable and safe &rarr;]]></title>
 <link href="https://groups.google.com/a/zfsonlinux.org/forum/?fromgroups=#!topic/zfs-announce/ZXADhyOwFfA"/>
-<updated>2013-03-31T18:05:56+08:00</updated>
+<updated>2013-03-31T11:05:56+01:00</updated>
 <id>http://jcftang.github.com/2013/03/31/zfs-on-linux-is-usable-and-safe</id>
 <category term="dri" /><category term="hpc" /><category term="preservation" /><category term="storage" />
 
@@ -254,7 +289,7 @@ be pretty desirable.</p>
 
 <title type="html"><![CDATA[Testing and developing rails applications in a near production like environment]]></title>
 <link href="http://jcftang.github.com/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/"/>
-<updated>2013-03-27T19:57:41+08:00</updated>
+<updated>2013-03-27T11:57:41+00:00</updated>
 <id>http://jcftang.github.com/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment</id>
 <category term="dri" /><category term="linux" /><category term="team" />
 
@@ -300,7 +335,7 @@ get me to where I need to be in a virtual environment&hellip;</p>
 
 <title type="html"><![CDATA[Amazon Redshift - a curiousity to me?]]></title>
 <link href="http://jcftang.github.com/2013/03/24/amazon-redshift-a-curiousity-to-me/"/>
-<updated>2013-03-24T19:16:54+08:00</updated>
+<updated>2013-03-24T11:16:54+00:00</updated>
 <id>http://jcftang.github.com/2013/03/24/amazon-redshift-a-curiousity-to-me</id>
 <category term="hpc" /><category term="storage" />
 
@@ -337,7 +372,7 @@ challenge of having one real big database that can be queried.</p>
 
 <title type="html"><![CDATA[Building Kelvin Supercomputer (time lapse) &rarr;]]></title>
 <link href="http://www.youtube.com/watch?v=F0zon45WR-U&feature=youtu.be"/>
-<updated>2013-03-22T15:46:26+08:00</updated>
+<updated>2013-03-22T07:46:26+00:00</updated>
 <id>http://jcftang.github.com/2013/03/22/building-kelvin-supercomputer-time-lapse</id>
 <category term="hpc" /><category term="tcd" /><category term="team" />
 
@@ -380,7 +415,7 @@ machines in the process.</p>
 
 <title type="html"><![CDATA[HydraCamp 2013 - Trinity College Dublin &rarr;]]></title>
 <link href="http://www.tchpc.tcd.ie/hydracamp2013"/>
-<updated>2013-02-08T18:02:12+08:00</updated>
+<updated>2013-02-08T10:02:12+00:00</updated>
 <id>http://jcftang.github.com/2013/02/08/hydracamp-2013-trinity-college--dublin</id>
 <category term="dri" /><category term="preservation" /><category term="ruby" /><category term="tcd" />
 
@@ -418,9 +453,9 @@ archiving and preservation.</p>
 
 
 <title type="html"><![CDATA[Deploying our hydra-head with jruby]]></title>
-<link href="http://jcftang.github.com/2013/01/23/deploying-our-hydra-head-with-jruby/"/>
-<updated>2013-01-23T03:49:02+08:00</updated>
-<id>http://jcftang.github.com/2013/01/23/deploying-our-hydra-head-with-jruby</id>
+<link href="http://jcftang.github.com/2013/01/22/deploying-our-hydra-head-with-jruby/"/>
+<updated>2013-01-22T19:49:02+00:00</updated>
+<id>http://jcftang.github.com/2013/01/22/deploying-our-hydra-head-with-jruby</id>
 <category term="dri" /><category term="java" /><category term="linux" /><category term="preservation" /><category term="ruby" />
 
       <content type="html"><![CDATA[<p>We&#39;ve been ramping up our development work on the project that I have been on
@@ -476,7 +511,7 @@ to testing out jruby so that we can access the java based XML libraries.</p>
 
 <title type="html"><![CDATA[Making the jump and migrating my archlinux machines to use btrfs]]></title>
 <link href="http://jcftang.github.com/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs/"/>
-<updated>2013-01-02T15:18:00+08:00</updated>
+<updated>2013-01-02T15:18:00+00:00</updated>
 <id>http://jcftang.github.com/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs</id>
 <category term="linux" /><category term="storage" />
 
@@ -526,7 +561,7 @@ tell if I&#39;m happy with btrfs or not.</p>
 
 <title type="html"><![CDATA[Supercomputing 2012 and the arms race to exascale]]></title>
 <link href="http://jcftang.github.com/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale/"/>
-<updated>2012-11-16T06:30:00+08:00</updated>
+<updated>2012-11-16T06:30:00+00:00</updated>
 <id>http://jcftang.github.com/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale</id>
 <category term="hpc" /><category term="linux" /><category term="storage" />
 
@@ -587,7 +622,7 @@ end to end data integrity built into storage systems.</p>
 
 <title type="html"><![CDATA[There is light on the otherside]]></title>
 <link href="http://jcftang.github.com/2012/11/04/there-is-light-on-the-otherside/"/>
-<updated>2012-11-04T19:52:00+08:00</updated>
+<updated>2012-11-04T19:52:00+00:00</updated>
 <id>http://jcftang.github.com/2012/11/04/there-is-light-on-the-otherside</id>
 <category term="dri" /><category term="linux" /><category term="scm" /><category term="team" />
 
@@ -637,7 +672,7 @@ a light on the otherside for mangement, deployment and orchestration.</p>
 
 <title type="html"><![CDATA[Crowbar for deploying systems]]></title>
 <link href="http://jcftang.github.com/2012/10/27/crowbar-for-deploying-systems/"/>
-<updated>2012-10-27T20:07:00+08:00</updated>
+<updated>2012-10-27T20:07:00+01:00</updated>
 <id>http://jcftang.github.com/2012/10/27/crowbar-for-deploying-systems</id>
 <category term="linux" />
 
@@ -679,7 +714,7 @@ ending supply of these tools.</p>
 
 <title type="html"><![CDATA[Ceph V0.53 RELEASED &rarr;]]></title>
 <link href="http://ceph.com/releases/v0-53-released/"/>
-<updated>2012-10-23T15:08:00+08:00</updated>
+<updated>2012-10-23T15:08:00+01:00</updated>
 <id>http://jcftang.github.com/2012/10/23/ceph-v0-dot-53-released</id>
 <category term="ceph" /><category term="linux" /><category term="storage" />
 
@@ -702,7 +737,7 @@ domains.</p>
 
 <title type="html"><![CDATA[Hydracamp 2012 - Penn State &rarr;]]></title>
 <link href="http://yourmediashelf.com/hydracamp/"/>
-<updated>2012-10-13T07:34:00+08:00</updated>
+<updated>2012-10-13T07:34:00+01:00</updated>
 <id>http://jcftang.github.com/2012/10/13/hydracamp-2012-penn-state</id>
 <category term="dri" /><category term="preservation" /><category term="ruby" />
 
@@ -750,7 +785,7 @@ account for Project Hydra and have a peek at the hydracamp repo.</p>
 
 <title type="html"><![CDATA[Digital Preservation and Archiving is a HPC problem?]]></title>
 <link href="http://jcftang.github.com/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/"/>
-<updated>2012-10-07T13:42:00+08:00</updated>
+<updated>2012-10-07T13:42:00+01:00</updated>
 <id>http://jcftang.github.com/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem</id>
 <category term="hpc" /><category term="storage" />
 
@@ -797,54 +832,6 @@ the problem. Storage in the preservation and archiving domain will
 probably turn into an IO and compute intensive operation at some
 point, especially if you want to do something with the data.</p>
 ]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[SLURM-Bank that big script for banking in SLURM &rarr;]]></title>
-<link href="https://github.com/jcftang/slurm-bank"/>
-<updated>2012-09-29T19:52:00+08:00</updated>
-<id>http://jcftang.github.com/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm</id>
-<category term="hpc" /><category term="linux" />
-
-      <content type="html"><![CDATA[<p>A co-worker of mine (Paddy Doyle) had originally hacked at a perl script
-for reporting balances from SLURM&#39;s accounting system a year or two ago
-and he had figured out that it might be possible to do some minimalistic
-&#39;configuration&#39; and scripting to get a system that&#39;s very basic but
-functional.</p>
-
-<p>It was just one of those things that funding agencies wanted to justify
-how the system was being used, GOLD was clunky and obtrusive and
-complicated for what we wanted. Most of all we liked SLURM but not GOLD
-and Maui which was needed to get full accounting and banking (most of
-the features weren&#39;t used).</p>
-
-<p>Being good and lazy engineers we got excited with the prospect of having
-the option of replacing SLURM, Maui and GOLD with just plain old SLURM
-we set out to write down the workflows for what we wanted to do and what
-the user and funding agencies actually wanted. With those ideas in mind
-we set out to implement as much as we could and needed in just plain
-old sh/bash scripting with a splash of perl. Replacing two components
-with one meant that we would have less work to do in the long run ;)</p>
-
-<p>After a whole year of running with these scripts and just putting it
-online, I&#39;ve noticed that there may be a few sites out there that might
-be using our scripts and workflows. It would be nice to find out how
-many people are using our implementation of a banking system in SLURM
-and if it&#39;s driven by sysadmins looking to account for usage or is it
-funding agencies looking for justification of the usage of a system.</p>
-
-<p>I was going to be at the SLURM User Group Meeting 2012 to give a
-short talk on our experiences with the SLURM-Bank scripts and workflow,
-but sadly I have to be in the US during this meeting and my colleague
-&ldquo;Paddy Doyle&rdquo; will there instead of me.  I would have liked to go and chat
-with the developers of SLURM to push for more advanced banking/accounting
-facilities in SLURM itself. Visiting BSC again would have been fun.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
