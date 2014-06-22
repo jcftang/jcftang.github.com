@@ -83,6 +83,84 @@
 
 
 
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="/2013/03/24/amazon-redshift-a-curiousity-to-me/">Amazon Redshift - a Curiousity to Me?</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-24T11:16:54+00:00" pubdate data-updated="true">Mar 24<span>th</span>, 2013</time>
+        
+         | <a href="/2013/03/24/amazon-redshift-a-curiousity-to-me/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2013/03/24/amazon-redshift-a-curiousity-to-me/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>I&#39;ve been recently reading up on Amazon <a href="">Redshift</a>, at first I thought
+it was a parallel/distributed datastore like HDFS. At a second look in
+reality its more of a distributed relational database. This in itself
+is pretty cool for scaling applications with large data sets that happen
+to need to be in a database; which is quite a few things.</p>
+
+<p>From the initial reading of the architecture and docs, it looks like
+Amazon built a job queuing system around postgres to schedule queries
+out to its nodes in the cluster. What&#39;s curious to me is how do they
+deal with failed nodes in the system and how they provision the system,
+there must be an ordered set of operations to do so.</p>
+
+<p>Another oddity is the mesh network that the system has, I&#39;m under the
+impression that there is only 1x10gb network connection on the machine. I
+wonder if the mesh network is just a virtual mesh network or if it&#39;s
+really a real physical one. If it&#39;s a real physical mesh network then
+each machine would require more than one network interface. It would
+also be a cabling nightmare to build such a device and if Amazon has
+built a large scale mesh network of machines, that would be pretty cool.
+I wonder how much of the Redshift user base are latency, bandwidth or
+compute bound when looking at large datasets; or if its really just the
+challenge of having one real big database that can be queried.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2013/03/24/amazon-redshift-a-curiousity-to-me/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2013/03/24/amazon-redshift-a-curiousity-to-me/">View comments &raquo;</a></p>
+    
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
   
 
 
@@ -869,104 +947,6 @@ account for Project Hydra and have a peek at the hydracamp repo.</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/">Digital Preservation and Archiving Is a HPC Problem?</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-07T13:42:00+01:00" pubdate data-updated="true">Oct 7<span>th</span>, 2012</time>
-        
-         | <a href="/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>I shall be going to SC2012 next month, I plan on hitting a few of the
-storage vendors for possible collaborations and flagging to them that
-we&#39;re on the look out for storage systems. One of the first
-observation that the reader will note is &ldquo;where is that link between
-HPC and Digital Preservation and Archiving&rdquo;. It&#39;s probably not obvious
-to most people, one of the big problems in the area of preservation
-and archiving is the the amount of data involved and the varied types
-of data. This is not taking into account of the issues with data
-access patterns.</p>
-
-<p>Given that a preservation and archiving project will want to provide a
-trusted system, the system will want to read out every single byte
-that was put in to verify that the data is correct at somepoint
-(usually with some form of hashing).</p>
-
-<p>Reading data out and checking that it&#39;s correct serially probably
-isn&#39;t the smartest solution. Nor is copying the data into 2-3
-locations (where each site is maintaining 2-3 copies for backups and
-redundancy). The current and seemingly most popular solutions is to
-dump the data to a few offsite locations (such as S3 or SWIFT)
-compatible storage systems, then just hoping for the best that if
-anyone of the sites is down or corrupted there site can be restored
-from the other sites or from a backup. I need to delve deeper into the
-storage and data-distribution strategies that some of the bigger
-projects are taking. There has to be a smarter way of storing and
-preserving data without having to make copies of things.</p>
-
-<p>I&#39;ve often wondered how projects manage to copy/move data across
-storage providers in a reasonable amount of time without needing to
-wheel a few racks of disks around. It would also be interesting to see
-the error rates of these systems and how often errors are
-corrected. If they are corrected what is the computational cost of
-doing this.</p>
-
-<p>If you have a multi-terabyte archive the problem isn&#39;t too bad, the
-more typical case these days might be in the order of the low hundreds
-of terabytes. I could only imagine what lager scale sites must deal
-with. I&#39;m still not a fan of moving a problem from a local site to a
-remote site as it often shows that there is a lack of understanding to
-the problem. Storage in the preservation and archiving domain will
-probably turn into an IO and compute intensive operation at some
-point, especially if you want to do something with the data.</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/">View comments &raquo;</a></p>
-    
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -991,6 +971,10 @@ point, especially if you want to do something with the data.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2014/06/22/hashdist-for-repeatably-building-an-environment/">Hashdist for repeatably and reliably building an environment across platforms</a>
+      </li>
+    
+      <li class="post">
         <a href="/2014/04/21/when-to-automate-deployments-and-when-not-to/">When to automate deployments and when not to?</a>
       </li>
     
@@ -1004,10 +988,6 @@ point, especially if you want to do something with the data.</p>
     
       <li class="post">
         <a href="/2013/12/01/post-sc13-thoughts/">Post SC13 Thoughts</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/08/01/accelerating-development-and-deployments-with-ansible/">Accelerating Development and Deployments with Ansible</a>
       </li>
     
   </ul>

@@ -83,6 +83,104 @@
 
 
 
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/">Digital Preservation and Archiving Is a HPC Problem?</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-07T13:42:00+01:00" pubdate data-updated="true">Oct 7<span>th</span>, 2012</time>
+        
+         | <a href="/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>I shall be going to SC2012 next month, I plan on hitting a few of the
+storage vendors for possible collaborations and flagging to them that
+we&#39;re on the look out for storage systems. One of the first
+observation that the reader will note is &ldquo;where is that link between
+HPC and Digital Preservation and Archiving&rdquo;. It&#39;s probably not obvious
+to most people, one of the big problems in the area of preservation
+and archiving is the the amount of data involved and the varied types
+of data. This is not taking into account of the issues with data
+access patterns.</p>
+
+<p>Given that a preservation and archiving project will want to provide a
+trusted system, the system will want to read out every single byte
+that was put in to verify that the data is correct at somepoint
+(usually with some form of hashing).</p>
+
+<p>Reading data out and checking that it&#39;s correct serially probably
+isn&#39;t the smartest solution. Nor is copying the data into 2-3
+locations (where each site is maintaining 2-3 copies for backups and
+redundancy). The current and seemingly most popular solutions is to
+dump the data to a few offsite locations (such as S3 or SWIFT)
+compatible storage systems, then just hoping for the best that if
+anyone of the sites is down or corrupted there site can be restored
+from the other sites or from a backup. I need to delve deeper into the
+storage and data-distribution strategies that some of the bigger
+projects are taking. There has to be a smarter way of storing and
+preserving data without having to make copies of things.</p>
+
+<p>I&#39;ve often wondered how projects manage to copy/move data across
+storage providers in a reasonable amount of time without needing to
+wheel a few racks of disks around. It would also be interesting to see
+the error rates of these systems and how often errors are
+corrected. If they are corrected what is the computational cost of
+doing this.</p>
+
+<p>If you have a multi-terabyte archive the problem isn&#39;t too bad, the
+more typical case these days might be in the order of the low hundreds
+of terabytes. I could only imagine what lager scale sites must deal
+with. I&#39;m still not a fan of moving a problem from a local site to a
+remote site as it often shows that there is a lack of understanding to
+the problem. Storage in the preservation and archiving domain will
+probably turn into an IO and compute intensive operation at some
+point, especially if you want to do something with the data.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/">View comments &raquo;</a></p>
+    
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
   
 
 
@@ -1182,104 +1280,6 @@ build</a> or just go to their
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/08/28/taking-vagrant-and-running-with-it/">Taking Vagrant and Running With It</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-28T18:49:00+01:00" pubdate data-updated="true">Aug 28<span>th</span>, 2012</time>
-        
-         | <a href="/2012/08/28/taking-vagrant-and-running-with-it/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/08/28/taking-vagrant-and-running-with-it/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>Over past few weeks I&#39;ve been working on doing some integration and
-testing work to try and deliver a prototype system. I&#39;ve taken the
-<a href="http://vagrantup.com/">Vagrant</a> tool and puppet to try and deliver
-systems for testing and development. Although the systems that I am
-currently working with aren&#39;t fully automated, they are automated
-enough for them to be easily started up by a developer who reads the
-documentation (I hope).</p>
-
-<p>I&#39;m hoping that by providing these disposable systems that the various
-members in the team that I am working with will be more free to experiment
-and less fearful of breaking the system. At best everyone will take the
-idea on board and run with it as it does provide a common environment
-for all members in the team and it encourages reproducibility of issues
-and features.</p>
-
-<p>One of the next steps of building up the development framework that I
-now have is to introduce some of these concepts and the whole Vagrant
-environment to the more front facing part of the team who need to deal
-with stakeholders in the project. If our requirements and policy team have
-constant up to date access to our development, testing and QA environment
-along with the executable specifications (in the form of cucumber tests)
-I hope to push forward communications between the stakeholders and the
-team that I&#39;m working with.</p>
-
-<p>For now I have one VM for the application itself and a number of
-&ldquo;clusters&rdquo; of VM&#39;s which I had used for reviewing some technical
-documentation, they are partially automated for others to
-play with. Currently these scripts are internal to the project
-only, but it&#39;s not hard to setup if you know how to configure
-<a href="http://puppetlabs.com/">puppet</a>. Some of the scripts and ideas can
-be found at <a href="https://github.com/jcftang/tchpc-vagrant">tchpc-vagrant</a>,
-they&#39;re not great, but not bad either. I need more of the developers in
-the team to use what I&#39;ve setup to evolve the system more for our use.</p>
-
-<p>In parallel to using this for my day job, I&#39;ve
-also setup a Vagrantfile for one of my pet projects
-<a href="https://github.com/jcftang/cports">cports</a>. Using Vagrant for testing
-builds and deployments of a packaging system has been great. I&#39;ve been
-able to do clean rebuilds of various packages without fear of completely
-polluting the enviroment, as its just a few commands away from being
-redeployed and provisioned. I&#39;ll need to play more and then release it
-to the HPC community (or those that care).</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/08/28/taking-vagrant-and-running-with-it/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2012/08/28/taking-vagrant-and-running-with-it/">View comments &raquo;</a></p>
-    
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -1304,6 +1304,10 @@ to the HPC community (or those that care).</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2014/06/22/hashdist-for-repeatably-building-an-environment/">Hashdist for repeatably and reliably building an environment across platforms</a>
+      </li>
+    
+      <li class="post">
         <a href="/2014/04/21/when-to-automate-deployments-and-when-not-to/">When to automate deployments and when not to?</a>
       </li>
     
@@ -1317,10 +1321,6 @@ to the HPC community (or those that care).</p>
     
       <li class="post">
         <a href="/2013/12/01/post-sc13-thoughts/">Post SC13 Thoughts</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/08/01/accelerating-development-and-deployments-with-ansible/">Accelerating Development and Deployments with Ansible</a>
       </li>
     
   </ul>

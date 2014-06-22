@@ -95,6 +95,82 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2014/06/22/hashdist-for-repeatably-building-an-environment/">Hashdist for Repeatably and Reliably Building an Environment Across Platforms</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-22T14:52:42+01:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2014</time>
+        
+         | <a href="/2014/06/22/hashdist-for-repeatably-building-an-environment/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2014/06/22/hashdist-for-repeatably-building-an-environment/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>I&#39;ve been happily hacking at some packages for
+<a href="https://hashdist.github.com">hashdist</a>, it&#39;s pretty nice, there
+other build systems out there for dealing with building applications
+and libraries with different combinations of compilers and numerical
+libraries. Out of the lot I think hashdist has been the most satisfying
+to use so far. It&#39;s still missing some bits and pieces to allow users
+to use different compilers for key components (or everything).</p>
+
+<p>Without explaining too much, it&#39;s basically taking inputs which define
+a package and then generating an output hash to store the output of the
+build. This means that as you modify the the environment and rebuild, it
+will install the updated packages into a different location. Traditionally
+I would have just overwritten the old versions or install it into a named
+directory, then setup a module file for it etc&hellip; with hashdist there
+is less messing around. It doesn&#39;t fully solve the problem of having
+multiple versions of the software available at any one point in time,
+but it does let you have many versions installed and you can create
+different inputs profiles to get access to the &#39;builds&#39;. This means you
+can version control your environment, it also means you can roll back
+to a previous environment if something is broken or wrong.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2014/06/22/hashdist-for-repeatably-building-an-environment/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2014/06/22/hashdist-for-repeatably-building-an-environment/">View comments &raquo;</a></p>
+    
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2014/04/21/when-to-automate-deployments-and-when-not-to/">When to Automate Deployments and When Not To?</a>
 
 </h1>
@@ -769,84 +845,6 @@ get me to where I need to be in a virtual environment&hellip;</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2013/03/24/amazon-redshift-a-curiousity-to-me/">Amazon Redshift - a Curiousity to Me?</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-24T11:16:54+00:00" pubdate data-updated="true">Mar 24<span>th</span>, 2013</time>
-        
-         | <a href="/2013/03/24/amazon-redshift-a-curiousity-to-me/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2013/03/24/amazon-redshift-a-curiousity-to-me/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>I&#39;ve been recently reading up on Amazon <a href="">Redshift</a>, at first I thought
-it was a parallel/distributed datastore like HDFS. At a second look in
-reality its more of a distributed relational database. This in itself
-is pretty cool for scaling applications with large data sets that happen
-to need to be in a database; which is quite a few things.</p>
-
-<p>From the initial reading of the architecture and docs, it looks like
-Amazon built a job queuing system around postgres to schedule queries
-out to its nodes in the cluster. What&#39;s curious to me is how do they
-deal with failed nodes in the system and how they provision the system,
-there must be an ordered set of operations to do so.</p>
-
-<p>Another oddity is the mesh network that the system has, I&#39;m under the
-impression that there is only 1x10gb network connection on the machine. I
-wonder if the mesh network is just a virtual mesh network or if it&#39;s
-really a real physical one. If it&#39;s a real physical mesh network then
-each machine would require more than one network interface. It would
-also be a cabling nightmare to build such a device and if Amazon has
-built a large scale mesh network of machines, that would be pretty cool.
-I wonder how much of the Redshift user base are latency, bandwidth or
-compute bound when looking at large datasets; or if its really just the
-challenge of having one real big database that can be queried.</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2013/03/24/amazon-redshift-a-curiousity-to-me/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2013/03/24/amazon-redshift-a-curiousity-to-me/">View comments &raquo;</a></p>
-    
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -869,6 +867,10 @@ challenge of having one real big database that can be queried.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2014/06/22/hashdist-for-repeatably-building-an-environment/">Hashdist for repeatably and reliably building an environment across platforms</a>
+      </li>
+    
+      <li class="post">
         <a href="/2014/04/21/when-to-automate-deployments-and-when-not-to/">When to automate deployments and when not to?</a>
       </li>
     
@@ -882,10 +884,6 @@ challenge of having one real big database that can be queried.</p>
     
       <li class="post">
         <a href="/2013/12/01/post-sc13-thoughts/">Post SC13 Thoughts</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/08/01/accelerating-development-and-deployments-with-ansible/">Accelerating Development and Deployments with Ansible</a>
       </li>
     
   </ul>

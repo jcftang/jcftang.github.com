@@ -83,6 +83,94 @@
 
 
 
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="/2012/03/08/enabling-latent-semantic-indexing-for-octopress/">Enabling Latent Semantic Indexing for Octopress</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-08T20:02:00+00:00" pubdate data-updated="true">Mar 8<span>th</span>, 2012</time>
+        
+         | <a href="/2012/03/08/enabling-latent-semantic-indexing-for-octopress/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/03/08/enabling-latent-semantic-indexing-for-octopress/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>For those that care about having related posts on their <a href="">Octopress</a>
+blog. It&#39;s actually quite easy to turn it on, it&#39;s nice to have and
+useful. But it&#39;s not enabled by default in Octopress.</p>
+
+<p>This feature already exists in jekyll, enabling this feature in
+Octopress is a trival task.</p>
+
+<p>Firstly add this to your <code>_config.yml</code> file</p>
+<div class="highlight"><pre><code class="text">lsi: true
+</code></pre></div>
+<p>Then create a file such as <code>source/_includes/custom/asides/related.html</code> with the following
+content, add it to one of your asides in <code>_config.yml</code></p>
+<div class="highlight"><pre><code class="text">&lt;section&gt;
+&lt;h1&gt;Related Posts&lt;/h1&gt;
+&lt;ul class=&quot;posts&quot;&gt;
+    {% for post in site.related_posts limit:5 %}
+    &lt;li class=&quot;related&quot;&gt;
+        &lt;a href=&quot;{{ root_url }}{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;
+    &lt;/li&gt;
+    {% endfor %}
+    &lt;/ul&gt;
+&lt;/section&gt;
+</code></pre></div>
+<p>It is possible to style the list, but in the above I have chosen to
+keep the same style as the recent posts.</p>
+
+<h2>Probable issues with enabling LSI</h2>
+
+<p>There are some issues with enabling LSI in jekyll/octopress, the
+primary issue will be performance. The default implementation will be
+slow if you have lots of posts to classify. It would be recommended
+that rb-gsl be installed to accelerate the classification process.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/03/08/enabling-latent-semantic-indexing-for-octopress/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2012/03/08/enabling-latent-semantic-indexing-for-octopress/">View comments &raquo;</a></p>
+    
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
   
 
 
@@ -950,102 +1038,6 @@ resources.</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2011/12/13/using-continuous-integration-systems-in-a-team/">Using Continuous Integration Systems in a Team</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-13T07:37:00+00:00" pubdate data-updated="true">Dec 13<span>th</span>, 2011</time>
-        
-         | <a href="/2011/12/13/using-continuous-integration-systems-in-a-team/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2011/12/13/using-continuous-integration-systems-in-a-team/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>Apart from the obvious unit testing code which could be fun trying to
-convince a team to use. There are things known as &#39;Continuous
-Integration&#39; processes and servers. The basic idea is to continually
-build and test your product automatically and report on successful and
-failed builds.</p>
-
-<p>I&#39;ve known about this methodology for long time now but I&#39;ve never
-bothered to install a CI server since it was always for myself. In the
-past a loop in a shell script running make and or make test usually
-did the trick. Then I discovered gitbuilder which is just a small set
-of scripts for automating the process. Today I have Jenkins installed
-and I&#39;m somewhat looking at buildbot as well.</p>
-
-<p>Jenkins appears to be the most responsive and feature rich of the
-three systems that I have played with. Buildbot looks lightweight and
-scalable.  Though I do miss the git bisect and build on a failure that
-gitbuilder provides.</p>
-
-<p>Having to work with a team that is geographically distributed
-sometimes makes idea exchanges, organising events and development
-difficult. Any tool that I can get my hands on to encourage
-collaborative work and discussion is going to be used.</p>
-
-<p>Automating the build and test process also means that it is possible
-to automate the release process. If all the &#39;tests&#39; pass then why not
-release it? I will need to look at integrating things with fitnesse
-next. Other benefits from using a CI process or server means that most
-if not all things get automated, this turns into a highly valuable
-source of documentation for incoming developers and
-engineers. Documentation often gets left to the end instead of being
-done on a continual basis as the project progresses.</p>
-
-<p>Hopefully the CI server won&#39;t be used to name and shame developers in
-the group, it&#39;s there to make sure everything is working as expected.</p>
-
-<p>Now to convince the team that building early and continually is
-actually a good idea! Having somewhat successfully kicked off some
-pairing sessions with various team members is good, but being more
-flexible and professional about what we are building is what I&#39;m
-after.</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2011/12/13/using-continuous-integration-systems-in-a-team/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2011/12/13/using-continuous-integration-systems-in-a-team/">View comments &raquo;</a></p>
-    
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/8/">&larr; Older</a>
@@ -1070,6 +1062,10 @@ after.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2014/06/22/hashdist-for-repeatably-building-an-environment/">Hashdist for repeatably and reliably building an environment across platforms</a>
+      </li>
+    
+      <li class="post">
         <a href="/2014/04/21/when-to-automate-deployments-and-when-not-to/">When to automate deployments and when not to?</a>
       </li>
     
@@ -1083,10 +1079,6 @@ after.</p>
     
       <li class="post">
         <a href="/2013/12/01/post-sc13-thoughts/">Post SC13 Thoughts</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/08/01/accelerating-development-and-deployments-with-ansible/">Accelerating Development and Deployments with Ansible</a>
       </li>
     
   </ul>

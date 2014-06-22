@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2014-04-21T19:25:40+01:00</updated>
+  <updated>2014-06-22T15:09:25+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Hashdist for repeatably and reliably building an environment across platforms]]></title>
+<link href="http://jcftang.github.com/2014/06/22/hashdist-for-repeatably-building-an-environment/"/>
+<updated>2014-06-22T14:52:42+01:00</updated>
+<id>http://jcftang.github.com/2014/06/22/hashdist-for-repeatably-building-an-environment</id>
+<category term="hpc" /><category term="linux" />
+
+      <content type="html"><![CDATA[<p>I&#39;ve been happily hacking at some packages for
+<a href="https://hashdist.github.com">hashdist</a>, it&#39;s pretty nice, there
+other build systems out there for dealing with building applications
+and libraries with different combinations of compilers and numerical
+libraries. Out of the lot I think hashdist has been the most satisfying
+to use so far. It&#39;s still missing some bits and pieces to allow users
+to use different compilers for key components (or everything).</p>
+
+<p>Without explaining too much, it&#39;s basically taking inputs which define
+a package and then generating an output hash to store the output of the
+build. This means that as you modify the the environment and rebuild, it
+will install the updated packages into a different location. Traditionally
+I would have just overwritten the old versions or install it into a named
+directory, then setup a module file for it etc&hellip; with hashdist there
+is less messing around. It doesn&#39;t fully solve the problem of having
+multiple versions of the software available at any one point in time,
+but it does let you have many versions installed and you can create
+different inputs profiles to get access to the &#39;builds&#39;. This means you
+can version control your environment, it also means you can roll back
+to a previous environment if something is broken or wrong.</p>
+]]></content>
+    </entry>
   
     <entry>
       
@@ -775,63 +810,6 @@ and Q&amp;A session.</p>
 <p>You could take a look at the <a href="https://github.com/projecthydra">github</a>
 account for Project Hydra and have a peek at the hydracamp repo.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/10/13/hydracamp-2012-penn-state/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Digital Preservation and Archiving is a HPC problem?]]></title>
-<link href="http://jcftang.github.com/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/"/>
-<updated>2012-10-07T13:42:00+01:00</updated>
-<id>http://jcftang.github.com/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem</id>
-<category term="hpc" /><category term="storage" />
-
-      <content type="html"><![CDATA[<p>I shall be going to SC2012 next month, I plan on hitting a few of the
-storage vendors for possible collaborations and flagging to them that
-we&#39;re on the look out for storage systems. One of the first
-observation that the reader will note is &ldquo;where is that link between
-HPC and Digital Preservation and Archiving&rdquo;. It&#39;s probably not obvious
-to most people, one of the big problems in the area of preservation
-and archiving is the the amount of data involved and the varied types
-of data. This is not taking into account of the issues with data
-access patterns.</p>
-
-<p>Given that a preservation and archiving project will want to provide a
-trusted system, the system will want to read out every single byte
-that was put in to verify that the data is correct at somepoint
-(usually with some form of hashing).</p>
-
-<p>Reading data out and checking that it&#39;s correct serially probably
-isn&#39;t the smartest solution. Nor is copying the data into 2-3
-locations (where each site is maintaining 2-3 copies for backups and
-redundancy). The current and seemingly most popular solutions is to
-dump the data to a few offsite locations (such as S3 or SWIFT)
-compatible storage systems, then just hoping for the best that if
-anyone of the sites is down or corrupted there site can be restored
-from the other sites or from a backup. I need to delve deeper into the
-storage and data-distribution strategies that some of the bigger
-projects are taking. There has to be a smarter way of storing and
-preserving data without having to make copies of things.</p>
-
-<p>I&#39;ve often wondered how projects manage to copy/move data across
-storage providers in a reasonable amount of time without needing to
-wheel a few racks of disks around. It would also be interesting to see
-the error rates of these systems and how often errors are
-corrected. If they are corrected what is the computational cost of
-doing this.</p>
-
-<p>If you have a multi-terabyte archive the problem isn&#39;t too bad, the
-more typical case these days might be in the order of the low hundreds
-of terabytes. I could only imagine what lager scale sites must deal
-with. I&#39;m still not a fan of moving a problem from a local site to a
-remote site as it often shows that there is a lack of understanding to
-the problem. Storage in the preservation and archiving domain will
-probably turn into an IO and compute intensive operation at some
-point, especially if you want to do something with the data.</p>
-]]></content>
     </entry>
   
 </feed>
