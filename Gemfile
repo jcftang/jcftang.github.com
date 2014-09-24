@@ -17,7 +17,7 @@ group :development do
   gem 'rake-minify'
 #  gem 'gsl', git: 'https://github.com/jcftang/rb-gsl.git'
 #  gem 'gsl', git: 'https://github.com/whistlerbrk/rb-gsl'
-#  gem 'gsl'
+  gem 'rb-gsl'
   gem 'directory_watcher', '~> 1.4.1'
 end
 
