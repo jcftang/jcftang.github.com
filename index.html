@@ -95,6 +95,89 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2014/09/24/developer-happiness-with-waf/">Developer Happiness With Waf</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-24T17:40:46+01:00" pubdate data-updated="true">Sep 24<span>th</span>, 2014</time>
+        
+         | <a href="/2014/09/24/developer-happiness-with-waf/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2014/09/24/developer-happiness-with-waf/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>Having recently changed jobs (after a very long stint at TCD - just
+abit shy under 10yrs!) I’ve moved to a small startup. I’ve been
+working on a few small bits and pieces of code, infrastructure,
+etc&hellip; I had to make some stuff work and make it work well. So I
+decided to use autotools to configure and build the application
+that I’m working on.</p>
+
+<p>As great as it was on my nice fast intel based machine, it was dog
+slow on my target platform, especially when I had to regenerate the
+autoconf scripts.</p>
+
+<p>To get to the point, I ended up spending a day or two checking out
+alternatives (that wasn’t cmake) and came across
+<a href="https://code.google.com/p/waf/">waf</a>, the documentation isn’t all
+that great if you just look at the website, I had to spend a few
+hours digging around to get what I wanted.</p>
+
+<p>Once I ported my application over to using waf, the configure and
+build process was an order of magnitude faster than autotools. This
+made a huge difference on my target platform. I noticed that waf
+ships with some experimental plugins like the daemon plugin which
+runs a build when it notices that somefiles have changed.</p>
+
+<p>This daemon plugin is <em>great</em> it gives waf similar behaviour to
+what java developers have with junit and eclipse. I’m finding that
+waf is making me happy when I develop and fix stuff in the application
+that I’m working on.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2014/09/24/developer-happiness-with-waf/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2014/09/24/developer-happiness-with-waf/">View comments &raquo;</a></p>
+    
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2014/06/22/hashdist-for-repeatably-building-an-environment/">Hashdist for Repeatably and Reliably Building an Environment Across Platforms</a>
 
 </h1>
@@ -758,93 +841,6 @@ be pretty desirable.</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/">Testing and Developing Rails Applications in a Near Production Like Environment</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-27T11:57:41+00:00" pubdate data-updated="true">Mar 27<span>th</span>, 2013</time>
-        
-         | <a href="/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>At work we like to do lots of testing and behaviour driven development
-since we have a number of stakeholders and institutions all working on
-the same application. To make sure everyone is getting what they want
-we&#39;re using cucumber to write our specifications; that is we&#39;re primarily
-doing outside in developement of our system.</p>
-
-<p>As such we like to test things in a near production like
-environment&hellip; Having chosen to use <a href="https://github.com/thoughtbot/capybara-webkit">capybara-webkit</a> to test
-the interface (at a very functional and simplistic level) on our
-workstations. I decided to test drive the vagrant enviroment that I had
-been working on the past few months. Btw, this environment is bootstrapped
-with ansible, I&#39;m a much happier person since I ditched puppet.</p>
-
-<p>Annoyingly in RHEL6 and friends QT is a little bit behind the current
-times, we needed at least QT4.7 to run the javascript tests (which rely
-on webkit). The first an obvious thing was to uninstall qt from the base
-system and then install qt47 from atrpms-testing.</p>
-
-<p>Little did I know that <a href="https://bugzilla.redhat.com/show_bug.cgi?id=886996">tomcat6 depends</a> on redhat-lsb which in turn
-depends on qt-x11 and so on&hellip; My plans on testing and developing our
-application in a near production environment almost got shot.</p>
-
-<p>In the end the solution was to test the java script components with either
-selenium or better yet <a href="https://github.com/jonleighton/poltergeist">poltergeist</a> for capybara. We chose poltergeist
-as it runs headless. This isn&#39;t really a problem of cucumber/capybara,
-but rather a problem of RHEL6 and friends with old packages.</p>
-
-<p>&hellip;after sometime I have a half-way there set of ansible playbooks to
-get me to where I need to be in a virtual environment&hellip;</p>
-
-<p>&hellip;less rant &hellip;</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/">View comments &raquo;</a></p>
-    
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -867,6 +863,10 @@ get me to where I need to be in a virtual environment&hellip;</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2014/09/24/developer-happiness-with-waf/">Developer happiness with waf</a>
+      </li>
+    
+      <li class="post">
         <a href="/2014/06/22/hashdist-for-repeatably-building-an-environment/">Hashdist for repeatably and reliably building an environment across platforms</a>
       </li>
     
@@ -880,10 +880,6 @@ get me to where I need to be in a virtual environment&hellip;</p>
     
       <li class="post">
         <a href="/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/">Building a private cloud with saltstack as the cloud controller</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/12/01/post-sc13-thoughts/">Post SC13 Thoughts</a>
       </li>
     
   </ul>

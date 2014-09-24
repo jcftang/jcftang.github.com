@@ -83,6 +83,75 @@
 
 
 
+  
+
+
+
+
+
+
+
+
+    <article class="linklog">
+      
+  <header>
+    <h1 class="entry-title">
+
+<a href="https://tahoe-lafs.org/trac/tahoe-lafs/wiki/Installation">Tahoe-lafs 1.9.2 Is Released</a>
+<span class='linklog-marker'>&rarr;</span>
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-05T09:47:00+01:00" pubdate data-updated="true">Jul 5<span>th</span>, 2012</time>
+        
+         | <a href="/2012/07/05/tahoe-lafs-1-dot-9-2-is-released/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2012/07/05/tahoe-lafs-1-dot-9-2-is-released/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>I&#39;ve been happily using <a href="http://www.tahoe-lafs.org">tahoe-lafs</a> for my
+backup needs for a while now in work. It&#39;s not a huge cluster, but just
+a small hive cache from workstations dotted around the lab.</p>
+
+<p>The project recently did a release which fixes a number of bugs and
+issues which has made this software much more pleasant to use. I&#39;ve
+also been happily using git-annex to manage my files which reside in
+tahoe-lafs.</p>
+
+<p>At somepoint I need to write a tahoe-lafs backend/remote for git-annex,
+or at least convince the git-annex author to write one!</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2012/07/05/tahoe-lafs-1-dot-9-2-is-released/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2012/07/05/tahoe-lafs-1-dot-9-2-is-released/">View comments &raquo;</a></p>
+    
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
 
 
 
@@ -781,97 +850,6 @@ the roadmap as well.</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/05/21/dris-workflows-just-got-uploaded-to-github/">DRIS Workflows Just Got Uploaded to Github</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-21T21:19:00+01:00" pubdate data-updated="true">May 21<span>st</span>, 2012</time>
-        
-         | <a href="/2012/05/21/dris-workflows-just-got-uploaded-to-github/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2012/05/21/dris-workflows-just-got-uploaded-to-github/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>After almost 3 months supervising and working with two interns I&#39;ve
-finally uploaded their work under the GPLv2 License.</p>
-
-<ul>
-<li><a href="https://github.com/jcftang/dri-api">https://github.com/jcftang/dri-api</a></li>
-<li><a href="https://github.com/jcftang/dris-workflows">https://github.com/jcftang/dris-workflows</a></li>
-<li><a href="https://github.com/jcftang/dris-workflows-site">https://github.com/jcftang/dris-workflows-site</a></li>
-<li><a href="https://github.com/jcftang/node-dri">https://github.com/jcftang/node-dri</a></li>
-<li><a href="https://github.com/jcftang/node-fedora">https://github.com/jcftang/node-fedora</a></li>
-</ul>
-
-<p>Please note that the packages above do not represent DRI at all, they
-just ended up getting labelled that way for whatever reason.</p>
-
-<p>So what are the above packages? Well they are an attempt at creating a
-workflow for the DRIS team in TCD who work on digital preservation,
-digitisation, cataloging and a host of other tasks which I probably
-don&#39;t know about.</p>
-
-<p>The prototype system consists of the DRIS Workflows package and the
-API server. The system currently target the problem of ingesting
-objects. It tries to map what the librarians/archivists at TCD are
-doing to a single interface to increase throughput and quality of the
-work (amongst other things).</p>
-
-<p>It&#39;s also able to export the internal meta-data as Dublin-Core, it&#39;s
-not great right now and requires more work and there is a small start
-made on MODS as well. It does demonstrate what the interns managed to
-achieve in 3 months time with a loose spec on what needed to be
-done. The basic design and architecture of the system isn&#39;t too
-different from Hydra, it was very much by accident that we ended up
-some similar ideas.</p>
-
-<p>The primary purpose of this post is to share the code! and as per
-usual, hope someone finds it useful.</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2012/05/21/dris-workflows-just-got-uploaded-to-github/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2012/05/21/dris-workflows-just-got-uploaded-to-github/">View comments &raquo;</a></p>
-    
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -896,6 +874,10 @@ usual, hope someone finds it useful.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2014/09/24/developer-happiness-with-waf/">Developer happiness with waf</a>
+      </li>
+    
+      <li class="post">
         <a href="/2014/06/22/hashdist-for-repeatably-building-an-environment/">Hashdist for repeatably and reliably building an environment across platforms</a>
       </li>
     
@@ -909,10 +891,6 @@ usual, hope someone finds it useful.</p>
     
       <li class="post">
         <a href="/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/">Building a private cloud with saltstack as the cloud controller</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/12/01/post-sc13-thoughts/">Post SC13 Thoughts</a>
       </li>
     
   </ul>

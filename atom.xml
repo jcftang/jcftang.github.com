@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2014-06-22T15:09:25+01:00</updated>
+  <updated>2014-09-24T17:51:45+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Developer happiness with waf]]></title>
+<link href="http://jcftang.github.com/2014/09/24/developer-happiness-with-waf/"/>
+<updated>2014-09-24T17:40:46+01:00</updated>
+<id>http://jcftang.github.com/2014/09/24/developer-happiness-with-waf</id>
+
+
+      <content type="html"><![CDATA[<p>Having recently changed jobs (after a very long stint at TCD - just
+abit shy under 10yrs!) I’ve moved to a small startup. I’ve been
+working on a few small bits and pieces of code, infrastructure,
+etc&hellip; I had to make some stuff work and make it work well. So I
+decided to use autotools to configure and build the application
+that I’m working on.</p>
+
+<p>As great as it was on my nice fast intel based machine, it was dog
+slow on my target platform, especially when I had to regenerate the
+autoconf scripts.</p>
+
+<p>To get to the point, I ended up spending a day or two checking out
+alternatives (that wasn’t cmake) and came across
+<a href="https://code.google.com/p/waf/">waf</a>, the documentation isn’t all
+that great if you just look at the website, I had to spend a few
+hours digging around to get what I wanted.</p>
+
+<p>Once I ported my application over to using waf, the configure and
+build process was an order of magnitude faster than autotools. This
+made a huge difference on my target platform. I noticed that waf
+ships with some experimental plugins like the daemon plugin which
+runs a build when it notices that somefiles have changed.</p>
+
+<p>This daemon plugin is <em>great</em> it gives waf similar behaviour to
+what java developers have with junit and eclipse. I’m finding that
+waf is making me happy when I develop and fix stuff in the application
+that I’m working on.</p>
+]]></content>
+    </entry>
   
     <entry>
       
@@ -762,54 +804,6 @@ next week.</p>
 <p>I&#39;m wondering if anyone has taken the CRUSH algorithm and used it in other
 domains.</p>
 <p><a rel="bookmark" href="http://jcftang.github.com/2012/10/23/ceph-v0-dot-53-released/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Hydracamp 2012 - Penn State &rarr;]]></title>
-<link href="http://yourmediashelf.com/hydracamp/"/>
-<updated>2012-10-13T07:34:00+01:00</updated>
-<id>http://jcftang.github.com/2012/10/13/hydracamp-2012-penn-state</id>
-<category term="dri" /><category term="preservation" /><category term="ruby" />
-
-      <content type="html"><![CDATA[<p>What do you do when you need a crash course on RoR, Hydra and frameworks for
-digital preservation and archiving? You go to Hydracamp!</p>
-
-<p>The syllabus was</p>
-
-<ul>
-<li>Day 1 - Rails, CRUD, TDD and Git</li>
-<li>Day 2 - Collaborative development with Stories, Tickets, TDD and Git</li>
-<li>Day 3 - Hydra, Fedora, XML and RDF (ActiveFedora and OM)</li>
-<li>Day 4 - SOLR and Blacklight</li>
-<li>Day 5 - Hydra-head, Hydra Access Controls</li>
-</ul>
-
-<p>Most of the training sessions were hands on from day 1 which was
-refreshing, as it was hands on I getting the most out of the training
-session. It would have been better if I had known more ruby to move
-along some of the exercises more effectively.</p>
-
-<p>To give an overview of what we had done (between ~30 people), we created
-a ruby on rails application titled &ldquo;Twitter for Zombies&rdquo;. With this small
-application everybody was frantically committing, pulling, merging and
-pushing code. It was highly informative and a good learning experience
-to see how fast things could move.</p>
-
-<p>The training session also included a crash course into what Fedora and
-SOLR does and how Hydra interacts with these components. The third and
-fourth days were the most interesting as it showed how someone might
-convert from a typical RoR application into an application which uses
-Fedora as the persistance layer. The last day was really just a wrap up
-and Q&amp;A session.</p>
-
-<p>You could take a look at the <a href="https://github.com/projecthydra">github</a>
-account for Project Hydra and have a peek at the hydracamp repo.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/2012/10/13/hydracamp-2012-penn-state/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>

@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Scientific Linux 6.2 is out - Jimmy Tang</title>
+  <title>Developer happiness with waf - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/2012/02/19/scientific-linux-6-dot-2-is-out/">
+  <link rel="canonical" href="http://jcftang.github.com/2014/09/24/developer-happiness-with-waf/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Jimmy Tang" type="application/atom+xml">
@@ -82,7 +82,6 @@
 
 
 
-  
 
 
 
@@ -90,14 +89,13 @@
 
 
 
-
-<article class="hentry linklog" role="article">
+<article class="hentry " role="article">
   
   <header>
     <h1 class="entry-title">
 
-<a href="http://www.scientificlinux.org/distributions/6x/62/">Scientific Linux 6.2 Is Out</a>
-<span class='linklog-marker'>&rarr;</span>
+Developer Happiness With Waf
+
 </h1>
 
     
@@ -114,32 +112,42 @@
   
 
 
-<time datetime="2012-02-19T18:00:00+00:00" pubdate data-updated="true">Feb 19<span>th</span>, 2012</time>
+<time datetime="2014-09-24T17:40:46+01:00" pubdate data-updated="true">Sep 24<span>th</span>, 2014</time>
         
          | <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/2012/02/19/scientific-linux-6-dot-2-is-out/">Permalink</a>
+         &bull; <a rel="bookmark" href="/2014/09/24/developer-happiness-with-waf/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p>SL6.2 has been out for a few days now, I haven&#39;t had a chance to
-really take a look at it, since the more recent SL6 installs I
-maintain tend to be tracking the 6x releases. Hopefully SL will try
-and keep inline with the upstreams support schedule.</p>
+<div class="entry-content"><p>Having recently changed jobs (after a very long stint at TCD - just
+abit shy under 10yrs!) I’ve moved to a small startup. I’ve been
+working on a few small bits and pieces of code, infrastructure,
+etc&hellip; I had to make some stuff work and make it work well. So I
+decided to use autotools to configure and build the application
+that I’m working on.</p>
 
-<p>I&#39;ve a personal preference for deploying SL over CentOS (or any other
-recompiles of RHEL). SL tends to be a bit more polished in terms of
-not breaking older installs, i.e. the upstream doesn&#39;t move point
-releases around as CentOS does, SL does not force the end user to run
-the latest stable or continually upgrade to the latest point release
-to get updates (due to the weird convention CentOS seems to have with
-their archives).</p>
+<p>As great as it was on my nice fast intel based machine, it was dog
+slow on my target platform, especially when I had to regenerate the
+autoconf scripts.</p>
 
-<p>It&#39;s out, I need to look at it again, especially since ZFS is getting
-closer to being ready for a bit more general usage on the server side
-and the project that I am working will be needing some machines to be
-installed and setup soon.</p>
+<p>To get to the point, I ended up spending a day or two checking out
+alternatives (that wasn’t cmake) and came across
+<a href="https://code.google.com/p/waf/">waf</a>, the documentation isn’t all
+that great if you just look at the website, I had to spend a few
+hours digging around to get what I wanted.</p>
+
+<p>Once I ported my application over to using waf, the configure and
+build process was an order of magnitude faster than autotools. This
+made a huge difference on my target platform. I noticed that waf
+ships with some experimental plugins like the daemon plugin which
+runs a build when it notices that somefiles have changed.</p>
+
+<p>This daemon plugin is <em>great</em> it gives waf similar behaviour to
+what java developers have with junit and eclipse. I’m finding that
+waf is making me happy when I develop and fix stuff in the application
+that I’m working on.</p>
 </div>
 
 
@@ -162,14 +170,8 @@ installed and setup soon.</p>
   
 
 
-<time datetime="2012-02-19T18:00:00+00:00" pubdate data-updated="true">Feb 19<span>th</span>, 2012</time>
+<time datetime="2014-09-24T17:40:46+01:00" pubdate data-updated="true">Sep 24<span>th</span>, 2014</time>
 
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/linux/'>linux</a>
-  
-</span>
 
 
 
@@ -185,12 +187,12 @@ installed and setup soon.</p>
   
   
     
-      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/02/19/scientific-linux-6-dot-2-is-out/" target="_blank">+1</a>
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2014/09/24/developer-happiness-with-waf/" target="_blank">+1</a>
     
   
   
     
-    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/02/19/scientific-linux-6-dot-2-is-out/" target="_blank">Share</a>
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2014/09/24/developer-happiness-with-waf/" target="_blank">Share</a>
     
   
   
@@ -200,10 +202,8 @@ installed and setup soon.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2012/02/19/rasberry-pi-what-i-would-use-it-for/" title="Previous Post: Rasberry Pi - what I would use it for?">&laquo; Rasberry Pi - what I would use it for?</a>
+        <a class="basic-alignment left" href="/2014/06/22/hashdist-for-repeatably-building-an-environment/" title="Previous Post: Hashdist for repeatably and reliably building an environment across platforms">&laquo; Hashdist for repeatably and reliably building an environment across platforms</a>
       
-      
-        <a class="basic-alignment right" href="/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/" title="Next Post: Things not to say and to do in a project meeting">Things not to say and to do in a project meeting &raquo;</a>
       
     </p>
   </footer>
@@ -228,23 +228,23 @@ installed and setup soon.</p>
   <ul class="posts">
     
       <li class="related">
-        <a href="/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for HPC systems</a>
-      </li>
-    
-      <li class="related">
         <a href="/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux isn't the only platform to target when building applications</a>
       </li>
     
       <li class="related">
-        <a href="/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/">Thoughts on using the likes of tahoe-lafs and git-annex as a backend storage system for Digital Preservation</a>
+        <a href="/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster/">Going from replicating across OSD's to replicating across hosts in a Ceph cluster</a>
       </li>
     
       <li class="related">
-        <a href="/2012/06/15/installing-git-annex-on-sl5/">Installing git-annex on SL5</a>
+        <a href="/2011/12/13/using-continuous-integration-systems-in-a-team/">Using continuous integration systems in a team</a>
       </li>
     
       <li class="related">
-        <a href="/2012/08/28/taking-vagrant-and-running-with-it/">Taking Vagrant and running with it</a>
+        <a href="/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/">SLURM-Bank that big script for banking in SLURM</a>
+      </li>
+    
+      <li class="related">
+        <a href="/2012/04/09/prototyping-and-testing-systems/">Prototyping and testing systems</a>
       </li>
     
   </ul>
@@ -316,8 +316,8 @@ installed and setup soon.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/2012/02/19/scientific-linux-6-dot-2-is-out/';
-        var disqus_url = 'http://jcftang.github.com/2012/02/19/scientific-linux-6-dot-2-is-out/';
+        var disqus_identifier = 'http://jcftang.github.com/2014/09/24/developer-happiness-with-waf/';
+        var disqus_url = 'http://jcftang.github.com/2014/09/24/developer-happiness-with-waf/';
         var disqus_script = 'embed.js';
       
     (function () {
