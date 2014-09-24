@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2014-09-24T17:51:45+01:00</updated>
+  <updated>2014-09-24T17:56:15+01:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -25,11 +25,11 @@
 
 
       <content type="html"><![CDATA[<p>Having recently changed jobs (after a very long stint at TCD - just
-abit shy under 10yrs!) I’ve moved to a small startup. I’ve been
-working on a few small bits and pieces of code, infrastructure,
-etc&hellip; I had to make some stuff work and make it work well. So I
-decided to use autotools to configure and build the application
-that I’m working on.</p>
+short of 10yrs!) I’ve moved to a small startup. I’ve been working
+on a few small bits and pieces of code, infrastructure, etc&hellip; I
+had to make some stuff work and make it work well. So I decided to
+use autotools to configure and build the application that I’m working
+on.</p>
 
 <p>As great as it was on my nice fast intel based machine, it was dog
 slow on my target platform, especially when I had to regenerate the
