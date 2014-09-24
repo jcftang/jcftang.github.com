@@ -8,11 +8,11 @@ categories:
 ---
 
 Having recently changed jobs (after a very long stint at TCD - just
-abit shy under 10yrs!) I’ve moved to a small startup. I’ve been
-working on a few small bits and pieces of code, infrastructure,
-etc... I had to make some stuff work and make it work well. So I
-decided to use autotools to configure and build the application
-that I’m working on.
+short of 10yrs!) I’ve moved to a small startup. I’ve been working
+on a few small bits and pieces of code, infrastructure, etc... I
+had to make some stuff work and make it work well. So I decided to
+use autotools to configure and build the application that I’m working
+on.
 
 As great as it was on my nice fast intel based machine, it was dog
 slow on my target platform, especially when I had to regenerate the
