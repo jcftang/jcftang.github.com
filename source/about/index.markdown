@@ -167,3 +167,6 @@ Notable responsibilities
 * BSc in Applied Sciences at Dublin Institute of Technology
 * Oatlands College Christian Brothers School, Stillorgan, Dublin
 
+### Publications
+
+* HashDist: Reproducible, Relocatable, Customizable, Cross-Platform Software Stacks for Open Hydrological Science - http://dx.doi.org/10.6084/m9.figshare.1274017 Retrieved 08:22, Dec 31, 2014 (GMT)
