@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Supercomputing 2012 and the arms race to exascale - Jimmy Tang</title>
+  <title>Cobbler 2.6 on Ubuntu Precise - Jimmy Tang</title>
   <meta name="author" content="Jimmy Tang">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jcftang.github.com/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale/">
+  <link rel="canonical" href="http://jcftang.github.com/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Jimmy Tang" type="application/atom+xml">
@@ -94,7 +94,7 @@
   <header>
     <h1 class="entry-title">
 
-Supercomputing 2012 and the Arms Race to Exascale
+Cobbler 2.6 on Ubuntu Precise
 
 </h1>
 
@@ -112,61 +112,30 @@ Supercomputing 2012 and the Arms Race to Exascale
   
 
 
-<time datetime="2012-11-16T06:30:00+00:00" pubdate data-updated="true">Nov 16<span>th</span>, 2012</time>
+<time datetime="2015-01-23T19:28:55+00:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2015</time>
         
          | <a href="#disqus_thread">Comments</a>
         
-         &bull; <a rel="bookmark" href="/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale/">Permalink</a>
+         &bull; <a rel="bookmark" href="/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/">Permalink</a>
       </p>
     
   </header>
 
-<div class="entry-content"><p>It was clear at this year&#39;s supercomputing conference that there wasn&#39;t
-as much excitement as previous years. There wasn&#39;t much surprise as
-nothing too revolutionary and radical was announced. In the past when
-Bluegene/L and P arrived after the earth simulator there was an arms race
-to being number 1 in the top500 list.  Even things like GPGPU&#39;s aren&#39;t
-as cool anymore, everyone is selling effectively the same systems when
-it comes to clusters. Not everyone has the budget to procure a specialist
-machine like a NEC vector machine, a CRAY, Bluegene/Q etc&hellip;</p>
+<div class="entry-content"><p>I&#39;ve recently went and updated a bunch of things that I&#39;m working
+with, and one of the things I decided to refresh was an automated
+installer. In the past I&#39;ve relied on either hand rolled configurations
+or more recently Ubuntu <a href="https://maas.ubuntu.com/">MAAS</a>. This time
+I decided to give <a href="http://www.cobblerd.org/">Cobbler</a> a try on my
+Ubuntu Precise installations.</p>
 
-<p>The arms race to the top is just completely crazy, the top 50 or so
-machines are so powerful compared to what a typical university or small
-research lab might have access is too is completely skewed. At our site
-we&#39;re probably about 0.5% of the top machine. In the past we were about
-1-2% typically of the top machine, and we were about 5yrs behind the
-curve. The top 500 list should really be renamed to the top 50 list and
-the green 500 list or the HPCC list should be used instead as a measure
-of the top machines in the world. Do people really think that LINPACK
-is a good measure of how powerful a machine is going to be?</p>
+<p>Given Cobbler is pretty (or was) RHEL specific, I was not too
+disappointed with the Debian packaging. Most things worked, I did
+have to correct the dnsmasq and tftpd templates but it mostly worked.
+I&#39;ve a smallish salt formula for setting up said system at
+<a href="https://github.com/jcftang/cobbler-formula">https://github.com/jcftang/cobbler-formula</a></p>
 
-<p>What was interesting at this year&#39;s conference was some of the papers
-and panels were focused on project management and data management of
-scientific datasets. I noticed that when people are starting to worry
-about meta-data standards like librarians, people are starting to think
-about archiving the data, they probably haven&#39;t thought about the access
-component of preservation which will be amusing when they do realise
-it. There is also a disconnect from some of the papers which focused on
-silent data corruption at the storage and network layers. The archiving
-and preservation space for HPC will need to deal with bit-flips, silent
-data corruption, malicious users and all that funk that is related to it.</p>
-
-<p>After having a few chats with some vendors during the week, /me eyes
-them vendors. There seems to be a bit of a lack of understanding that
-archiving and preservation of data isn&#39;t just about bulk, cheap and
-reliable storage. There are apects to it which require data processing and
-analytics of the data. It seems somewhat pointless to archive data and not
-index it, process it and deliver it to who needs it. At somepoint the data
-will be touched for checksumming, surrogate generation, delivery to the
-end user. There also seems to be a lack of a guarantee of data-integrity
-at the filesystem level. It appears that this responsiblity is left to
-the application developer.</p>
-
-<p>Would storage vendors (filesystems, devices the whole stack!) please
-consider providing end to end data integrity? If the guys at the top are
-trying to reach exascale computing in the next 5 years then the storage
-component needs to catch up. Other sectors would also benefit from the
-end to end data integrity built into storage systems.</p>
+<p>It&#39;s pretty nice that Cobbler is able to provision KVM or XEN based
+virtual machines as well as the usual bare metal systems.</p>
 </div>
 
 
@@ -189,12 +158,12 @@ end to end data integrity built into storage systems.</p>
   
 
 
-<time datetime="2012-11-16T06:30:00+00:00" pubdate data-updated="true">Nov 16<span>th</span>, 2012</time>
+<time datetime="2015-01-23T19:28:55+00:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2015</time>
 
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/hpc/'>hpc</a>, <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/storage/'>storage</a>
+    <a class='category' href='/blog/categories/linux/'>linux</a>
   
 </span>
 
@@ -212,12 +181,12 @@ end to end data integrity built into storage systems.</p>
   
   
     
-      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale/" target="_blank">+1</a>
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://jcftang.github.com/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/" target="_blank">+1</a>
     
   
   
     
-    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale/" target="_blank">Share</a>
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://jcftang.github.com/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/" target="_blank">Share</a>
     
   
   
@@ -227,10 +196,8 @@ end to end data integrity built into storage systems.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2012/11/04/there-is-light-on-the-otherside/" title="Previous Post: There is light on the otherside">&laquo; There is light on the otherside</a>
+        <a class="basic-alignment left" href="/2014/09/24/developer-happiness-with-waf/" title="Previous Post: Developer happiness with waf">&laquo; Developer happiness with waf</a>
       
-      
-        <a class="basic-alignment right" href="/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs/" title="Next Post: Making the jump and migrating my archlinux machines to use btrfs">Making the jump and migrating my archlinux machines to use btrfs &raquo;</a>
       
     </p>
   </footer>
@@ -255,7 +222,7 @@ end to end data integrity built into storage systems.</p>
   <ul class="posts">
     
       <li class="related">
-        <a href="/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/">Digital Preservation and Archiving is a HPC problem?</a>
+        <a href="/2012/06/15/installing-git-annex-on-sl5/">Installing git-annex on SL5</a>
       </li>
     
       <li class="related">
@@ -263,15 +230,15 @@ end to end data integrity built into storage systems.</p>
       </li>
     
       <li class="related">
-        <a href="/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster/">Going from replicating across OSD's to replicating across hosts in a Ceph cluster</a>
+        <a href="/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Why Linux isn't the only platform to target when building applications</a>
       </li>
     
       <li class="related">
-        <a href="/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/">Thoughts on using the likes of tahoe-lafs and git-annex as a backend storage system for Digital Preservation</a>
+        <a href="/2012/11/04/there-is-light-on-the-otherside/">There is light on the otherside</a>
       </li>
     
       <li class="related">
-        <a href="/2012/09/23/a-poor-mans-nas-device-with-ceph/">A poor man's NAS device with Ceph</a>
+        <a href="/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for HPC systems</a>
       </li>
     
   </ul>
@@ -343,8 +310,8 @@ end to end data integrity built into storage systems.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jcftang.github.com/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale/';
-        var disqus_url = 'http://jcftang.github.com/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale/';
+        var disqus_identifier = 'http://jcftang.github.com/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/';
+        var disqus_url = 'http://jcftang.github.com/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/';
         var disqus_script = 'embed.js';
       
     (function () {

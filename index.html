@@ -95,6 +95,77 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/">Cobbler 2.6 on Ubuntu Precise</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-23T19:28:55+00:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2015</time>
+        
+         | <a href="/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/#disqus_thread">Comments</a>
+        
+         &bull; <a rel="bookmark" href="/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>I&#39;ve recently went and updated a bunch of things that I&#39;m working
+with, and one of the things I decided to refresh was an automated
+installer. In the past I&#39;ve relied on either hand rolled configurations
+or more recently Ubuntu <a href="https://maas.ubuntu.com/">MAAS</a>. This time
+I decided to give <a href="http://www.cobblerd.org/">Cobbler</a> a try on my
+Ubuntu Precise installations.</p>
+
+<p>Given Cobbler is pretty (or was) RHEL specific, I was not too
+disappointed with the Debian packaging. Most things worked, I did
+have to correct the dnsmasq and tftpd templates but it mostly worked.
+I&#39;ve a smallish salt formula for setting up said system at
+<a href="https://github.com/jcftang/cobbler-formula">https://github.com/jcftang/cobbler-formula</a></p>
+
+<p>It&#39;s pretty nice that Cobbler is able to provision KVM or XEN based
+virtual machines as well as the usual bare metal systems.</p>
+</div>
+
+  <footer>
+    
+    <p><a class="comments-link" href="/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/">View comments &raquo;</a></p>
+    
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2014/09/24/developer-happiness-with-waf/">Developer Happiness With Waf</a>
 
 </h1>
@@ -770,77 +841,6 @@ for work. The aggregated links may or may not be affiliated with my work.</p>
 
     </article>
   
-    
-
-
-
-  
-
-
-
-
-
-
-
-
-    <article class="linklog">
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="https://groups.google.com/a/zfsonlinux.org/forum/?fromgroups=#!topic/zfs-announce/ZXADhyOwFfA">ZFS on Linux Is Usable and Safe</a>
-<span class='linklog-marker'>&rarr;</span>
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-31T11:05:56+01:00" pubdate data-updated="true">Mar 31<span>st</span>, 2013</time>
-        
-         | <a href="/2013/03/31/zfs-on-linux-is-usable-and-safe/#disqus_thread">Comments</a>
-        
-         &bull; <a rel="bookmark" href="/2013/03/31/zfs-on-linux-is-usable-and-safe/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>It seems that ZFS On Linux reached a significant milestone, that is the
-software is stable to use on Linux. This is pretty useful and significant
-for the preservation and archivists community as it provides a more
-reliable platform to build on. The LLNL guys must really want to mitigate
-against silent data failures in their systems (they&#39;re running Lustre
-on top of ZFS).</p>
-
-<p>If ZFS is trustable or not we will know over time. At least with
-ZFS&#39;s data protection features we will see less issues with silent
-data corruption.</p>
-
-<p>If one could build glusterfs or better yet, Ceph on top of ZFS it would
-be pretty desirable.</p>
-</div>
-
-  <footer>
-    
-    <p><a class="comments-link" href="/2013/03/31/zfs-on-linux-is-usable-and-safe/#disqus_thread" data-disqus-identifier="http://jcftang.github.com/2013/03/31/zfs-on-linux-is-usable-and-safe/">View comments &raquo;</a></p>
-    
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -863,6 +863,10 @@ be pretty desirable.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/">Cobbler 2.6 on Ubuntu Precise</a>
+      </li>
+    
+      <li class="post">
         <a href="/2014/09/24/developer-happiness-with-waf/">Developer happiness with waf</a>
       </li>
     
@@ -876,10 +880,6 @@ be pretty desirable.</p>
     
       <li class="post">
         <a href="/2014/02/25/hydra-europe-2014/">Hydra Europe 2014</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/">Building a private cloud with saltstack as the cloud controller</a>
       </li>
     
   </ul>
@@ -923,7 +923,7 @@ be pretty desirable.</p>
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Jimmy Tang -
+  Copyright &copy; 2015 - Jimmy Tang -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2014-12-31T09:09:45+00:00</updated>
+  <updated>2015-01-27T19:03:45+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,6 +11,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Cobbler 2.6 on Ubuntu Precise]]></title>
+<link href="http://jcftang.github.com/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/"/>
+<updated>2015-01-23T19:28:55+00:00</updated>
+<id>http://jcftang.github.com/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise</id>
+<category term="linux" />
+
+      <content type="html"><![CDATA[<p>I&#39;ve recently went and updated a bunch of things that I&#39;m working
+with, and one of the things I decided to refresh was an automated
+installer. In the past I&#39;ve relied on either hand rolled configurations
+or more recently Ubuntu <a href="https://maas.ubuntu.com/">MAAS</a>. This time
+I decided to give <a href="http://www.cobblerd.org/">Cobbler</a> a try on my
+Ubuntu Precise installations.</p>
+
+<p>Given Cobbler is pretty (or was) RHEL specific, I was not too
+disappointed with the Debian packaging. Most things worked, I did
+have to correct the dnsmasq and tftpd templates but it mostly worked.
+I&#39;ve a smallish salt formula for setting up said system at
+<a href="https://github.com/jcftang/cobbler-formula">https://github.com/jcftang/cobbler-formula</a></p>
+
+<p>It&#39;s pretty nice that Cobbler is able to provision KVM or XEN based
+virtual machines as well as the usual bare metal systems.</p>
+]]></content>
+    </entry>
   
     <entry>
       
@@ -781,29 +811,6 @@ some point.</p>
 still the likes of ansible, cfengine, bcfg2 and juju. There is a never
 ending supply of these tools.</p>
 ]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Ceph V0.53 RELEASED &rarr;]]></title>
-<link href="http://ceph.com/releases/v0-53-released/"/>
-<updated>2012-10-23T15:08:00+01:00</updated>
-<id>http://jcftang.github.com/2012/10/23/ceph-v0-dot-53-released</id>
-<category term="ceph" /><category term="linux" /><category term="storage" />
-
-      <content type="html"><![CDATA[<p>There&#39;s a new release of Ceph, I hope that they release a stable soon so we can
-do further evaluations of the Ceph storage
-system. A few of my work colleagues are going to the <a href="http://www.inktank.com/news-events/event/ceph-workshops-amsterdam/">Ceph
-workshop</a>
-next week.</p>
-
-<p>I&#39;m wondering if anyone has taken the CRUSH algorithm and used it in other
-domains.</p>
-<p><a rel="bookmark" href="http://jcftang.github.com/2012/10/23/ceph-v0-dot-53-released/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
