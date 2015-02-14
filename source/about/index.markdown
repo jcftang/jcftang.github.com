@@ -7,24 +7,21 @@ sharing: true
 footer: true
 ---
 
-## Personal Blog
-
-This is more of a technical blog of what I want to rant about
-separate from my [personal blog](http://www.sgenomics.org/~jtang/).
-
 ## Summary
 
-Jimmy Tang is a senior software engineer in the TCHPC. He has worked on a
-number of grid storage systems in the HPC Europa 1 and 2 programs, developing
-management and storage solutions for numerical computing. He has also
-participated in the development and deployment of the infrastructure for the
-Irish African Partnership, 1641 Depositions, IITAC, eINIS and a number of other
-research projects.
+Jimmy Tang is the Principal DevOps engineer at Quantum Biosystems.
+He has worked on Digital Repository of Ireland and a number of grid
+storage systems in the HPC Europa 1 and 2 programs, developing
+management and storage solutions for numerical computing. He has
+also participated in the development and deployment of the
+infrastructure for the Irish African Partnership, 1641 Depositions,
+IITAC, eINIS and a number of other research projects.
 
-Jimmy has extensive knowledge in the development, deployment and maintenance of
-large-scale storage and computer systems. He has in the past provided software
-development and support services to numerous researchers, research groups and
-projects in the area of High Performance Computing.
+Jimmy has extensive knowledge in the development, deployment and
+maintenance of large-scale storage and computer systems. He has in
+the past provided software development and support services to
+numerous researchers, research groups and projects in the area of
+High Performance Computing.
 
 Specialties: systems programming, beowulf cluster architecture, high
 performance computing, numerical computing, SCM
@@ -42,18 +39,19 @@ computing, numerical computing.
 
 ## Profile
 
-Jimmy Tang is a senior software engineer in the TCHPC. He has
-worked on a number of grid storage systems in the HPC Europa 1 and
-2 programs developing management and storage solutions for numerical
-computing. He has also participated in the development and deployment of
-the infrastructures for the Irish African Partnership, 1641 Depositions,
-IITAC, eINIS and a number of other projects.
+Jimmy Tang is the Principal DevOps engineer at Quantum Biosystems.
+He has worked on Digital Repository of Ireland and a number of grid
+storage systems in the HPC Europa 1 and 2 programs, developing
+management and storage solutions for numerical computing. He has
+also participated in the development and deployment of the
+infrastructure for the Irish African Partnership, 1641 Depositions,
+IITAC, eINIS and a number of other research projects.
 
-He has extensive knowledge in the development, deployment and maintenance
-of large scale storage and compute systems. He has in the past provided
-software development and support services to numerous researchers,
-research groups and projects in the area of High Performance Computing.
-
+Jimmy has extensive knowledge in the development, deployment and
+maintenance of large-scale storage and computer systems. He has in
+the past provided software development and support services to
+numerous researchers, research groups and projects in the area of
+High Performance Computing.
 
 ### Special Skills
 
@@ -78,8 +76,9 @@ research groups and projects in the area of High Performance Computing.
   network and clusters. Administration and configuration of various
   SAN storage systems.
 * Expert with MySQL, PostgreSQL. Experience with OracleDB.
-* Configuration management with cfengine2, puppet and cdist.
+* Configuration management with ansible, saltstack, cfengine2, puppet and cdist.
 * Packaging of software with .deb, .rpm and other packaging systems.
+* Cobbler for baremetal installations.
 
 #### Miscellaneous
 
@@ -101,6 +100,19 @@ research groups and projects in the area of High Performance Computing.
 
 ### Current Employment
 
+#### Principle DevOps Engineer, Quantum Biosystems.
+
+Responsibilities include
+
+* Management of IT infrastructure.
+* Deployment and management of compute and storage cluster.
+* Software development for data capture devices on the Novena computer platform.
+* System integration and development on the Novena computer platform.
+* Continuous delivery, integration and testing of software projects. Maintaining Debian based repository for deployments.
+* Maintenance of dependency chain for building applications.
+
+### Past Employment
+
 #### Senior Software Engineer, Digital Repository Ireland, Trinity Centre for High Performance Computing.
 
 Responsibilities include
@@ -108,7 +120,6 @@ Responsibilities include
 * Overall architecture and design
 * Leading a team of developers
 
-### Past Employment
 
 #### Research Assistant and Systems Administrator, Trinity Centre for High Performance Computing.
 
