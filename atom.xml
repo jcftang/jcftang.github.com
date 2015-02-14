@@ -3,7 +3,7 @@
   <title><![CDATA[Jimmy Tang]]></title>
   <link href="http://jcftang.github.com/atom.xml" rel="self"/>
   <link href="http://jcftang.github.com/"/>
-  <updated>2015-02-14T13:03:58+00:00</updated>
+  <updated>2015-02-14T13:05:01+00:00</updated>
   <id>http://jcftang.github.com/</id>
   <author>
     <name><![CDATA[Jimmy Tang]]></name>
@@ -11,23 +11,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[All the bad things about Debian and Ubuntu Preseeds]]></title>
-<link href="http://jcftang.github.com/2015/02/02/all-the-bad-things-about-debian-and-ubuntu-preseeds/"/>
-<updated>2015-02-02T18:19:44+00:00</updated>
-<id>http://jcftang.github.com/2015/02/02/all-the-bad-things-about-debian-and-ubuntu-preseeds</id>
-<category term="hpc" /><category term="linux" />
-
-      <content type="html"><![CDATA[<p><em>Sigh</em>, there is something wrong when a configuration file is
-trailing space sensitive.</p>
-]]></content>
-    </entry>
   
     <entry>
       
@@ -785,6 +768,48 @@ to windows users for testing and evaluation.</p>
 
 <p>Going forward I think ansible will certainly be in my toolkit. There really is
 a light on the otherside for mangement, deployment and orchestration.</p>
+]]></content>
+    </entry>
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Crowbar for deploying systems]]></title>
+<link href="http://jcftang.github.com/2012/10/27/crowbar-for-deploying-systems/"/>
+<updated>2012-10-27T20:07:00+01:00</updated>
+<id>http://jcftang.github.com/2012/10/27/crowbar-for-deploying-systems</id>
+<category term="linux" />
+
+      <content type="html"><![CDATA[<p>I&#39;ve been eyeing <a href="https://github.com/dellcloudedge/crowbar">crowbar</a>
+recently, it looks pretty useful and interesting for deploying servers
+and applications. I haven&#39;t seen much if at all any documentation out
+there which suggests that people in the digital preservation and archiving
+fields are implementing systems at scale, I&#39;m under the impression that
+most systems/sites are building systems up one piece at a time without
+much automation.</p>
+
+<p>It seems to use <a href="http://www.opscode.com/chef/">chef</a> in the backend for
+all the automation. I&#39;ve been relearning <a href="http://puppetlabs.com/">puppet</a>
+recently so that I can have reproducible environments with
+<a href="http://vagrantup.com/">Vagrant</a>.</p>
+
+<p>There might be an advantage to learn and port all the existing modules
+that I have already created and configured to chef instead of puppet. If
+I did move to a chef automation in my vagrant environments then a few
+years from now when we go to full production we might be able to deploy
+the whole system from bare metal relatively quickly and repeatably.</p>
+
+<p>Automating the deployments will mean that we will have documentation
+on the infrastructure itself. Either which way there is still a need
+to automate the fedora-commons, SOLR, mysql and postgres deployments at
+some point.</p>
+
+<p>After all this thinking and pondering, I&#39;m still using puppet. There&#39;s
+still the likes of ansible, cfengine, bcfg2 and juju. There is a never
+ending supply of these tools.</p>
 ]]></content>
     </entry>
   
