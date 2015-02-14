@@ -369,12 +369,18 @@
         <lastmod>2015-01-27T19:03:15+00:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://jcftang.github.com/2015/02/02/all-the-bad-things-about-debian-and-ubuntu-preseeds/
+        </loc>
+        <lastmod>2015-02-02T18:22:02+00:00</lastmod>
+    </url>
+    <url>
         <loc>http://jcftang.github.com/about/</loc>
-        <lastmod>2014-12-31T08:24:52+00:00</lastmod>
+        <lastmod>2015-02-14T13:03:43+00:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/archives/</loc>
-        <lastmod>2015-01-27T19:03:15+00:00</lastmod>
+        <lastmod>2015-02-02T18:22:02+00:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/blog/categories/</loc>
@@ -382,7 +388,7 @@
     </url>
     <url>
         <loc>http://jcftang.github.com/</loc>
-        <lastmod>2015-01-27T19:03:15+00:00</lastmod>
+        <lastmod>2015-02-02T18:22:02+00:00</lastmod>
     </url>
     <url>
         <loc>http://jcftang.github.com/robots.txt</loc>
