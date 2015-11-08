@@ -12,7 +12,7 @@ this time lapse that I did when we were building
 [Kelvin](http://www.tchpc.tcd.ie/resources/clusters/kelvin), it's a few
 years old now. Even by current standards it's still pretty respectable.
 
-{% youtube F0zon45WR-U %}
+[The timelapse](http://www.youtube.com/watch?v=F0zon45WR-U&feature=youtu.be)
 
 We had to unpack and install all the infiniband cards ourselves, cabled,
 racked, installed, configured and burnt it in for production usage. The

@@ -9,11 +9,11 @@ footer: true
 
 ## Summary
 
-Jimmy Tang is the Principal DevOps engineer at Quantum Biosystems.
-He has worked on Digital Repository of Ireland and a number of grid
-storage systems in the HPC Europa 1 and 2 programs, developing
-management and storage solutions for numerical computing. He has
-also participated in the development and deployment of the
+Jimmy Tang is a software engineer at Logentries within Rapid7.  He
+has worked on Quantum Biosystems, Digital Repository of Ireland and
+a number of grid storage systems in the HPC Europa 1 and 2 programs,
+developing management and storage solutions for numerical computing.
+He has also participated in the development and deployment of the
 infrastructure for the Irish African Partnership, 1641 Depositions,
 IITAC, eINIS and a number of other research projects.
 
@@ -100,6 +100,21 @@ High Performance Computing.
 
 ### Current Employment
 
+#### Senior Software/Devops/Ops Engineer, Logentries at Rapid7
+
+Responsibilities are as before, except Rapid7 has acquired Logentries.
+
+### Past Employment
+
+#### Principle DevOps Engineer, Logentries.
+
+Responsibilities include
+
+* Building automated pipelines for deploying systems.
+* Developement and Operational work on production systems.
+* Developing in house tools.
+* The usual ops and dev related tasks with keepings running and scaling out.
+
 #### Principle DevOps Engineer, Quantum Biosystems.
 
 Responsibilities include
@@ -110,8 +125,6 @@ Responsibilities include
 * System integration and development on the Novena computer platform.
 * Continuous delivery, integration and testing of software projects. Maintaining Debian based repository for deployments.
 * Maintenance of dependency chain for building applications.
-
-### Past Employment
 
 #### Senior Software Engineer, Digital Repository Ireland, Trinity Centre for High Performance Computing.
 
