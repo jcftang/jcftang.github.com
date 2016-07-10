@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim on My New Hugo Site</title>
+    <link>http://replace-this-with-your-hugo-site.com/categories/vim/</link>
+    <description>Recent content in Vim on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Apr 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://replace-this-with-your-hugo-site.com/categories/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>spf13-vim 3.0 release and new website</title>
+      <link>http://replace-this-with-your-hugo-site.com/about/</link>
+      <pubDate>Fri, 06 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://replace-this-with-your-hugo-site.com/about/</guid>
+      <description>&lt;p&gt;Content of the file goes Here&lt;/p&gt;
+
+&lt;p&gt;mdafsd&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

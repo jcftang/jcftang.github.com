@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jimmy Tang</title>
+    <link>http://jcftang.github.com/</link>
+    <description>Recent content on Jimmy Tang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Jan 2015 19:28:55 +0000</lastBuildDate>
+    <atom:link href="http://jcftang.github.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>cobbler 2 dot 6 on ubuntu precise</title>
+      <link>http://jcftang.github.com/blog/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/</link>
+      <pubDate>Fri, 23 Jan 2015 19:28:55 +0000</pubDate>
+      
+      <guid>http://jcftang.github.com/blog/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve recently went and updated a bunch of things that I&amp;rsquo;m working
+with, and one of the things I decided to refresh was an automated
+installer. In the past I&amp;rsquo;ve relied on either hand rolled configurations
+or more recently Ubuntu &lt;a href=&#34;https://maas.ubuntu.com/&#34;&gt;MAAS&lt;/a&gt;. This time
+I decided to give &lt;a href=&#34;http://www.cobblerd.org/&#34;&gt;Cobbler&lt;/a&gt; a try on my
+Ubuntu Precise installations.&lt;/p&gt;
+
+&lt;p&gt;Given Cobbler is pretty (or was) RHEL specific, I was not too
+disappointed with the Debian packaging. Most things worked, I did
+have to correct the dnsmasq and tftpd templates but it mostly worked.
+I&amp;rsquo;ve a smallish salt formula for setting up said system at
+&lt;a href=&#34;https://github.com/jcftang/cobbler-formula&#34;&gt;https://github.com/jcftang/cobbler-formula&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s pretty nice that Cobbler is able to provision KVM or XEN based
+virtual machines as well as the usual bare metal systems.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>developer happiness with waf</title>
+      <link>http://jcftang.github.com/blog/2014/09/24/developer-happiness-with-waf/</link>
+      <pubDate>Wed, 24 Sep 2014 17:40:46 +0100</pubDate>
+      
+      <guid>http://jcftang.github.com/blog/2014/09/24/developer-happiness-with-waf/</guid>
+      <description>&lt;p&gt;Having recently changed jobs (after a very long stint at TCD - just
+short of 10yrs!) I’ve moved to a small startup. I’ve been working
+on a few small bits and pieces of code, infrastructure, etc&amp;hellip; I
+had to make some stuff work and make it work well. So I decided to
+use autotools to configure and build the application that I’m working
+on.&lt;/p&gt;
+
+&lt;p&gt;As great as it was on my nice fast intel based machine, it was dog
+slow on my target platform, especially when I had to regenerate the
+autoconf scripts.&lt;/p&gt;
+
+&lt;p&gt;To get to the point, I ended up spending a day or two checking out
+alternatives (that wasn’t cmake) and came across
+&lt;a href=&#34;https://code.google.com/p/waf/&#34;&gt;waf&lt;/a&gt;, the documentation isn’t all
+that great if you just look at the website, I had to spend a few
+hours digging around to get what I wanted.&lt;/p&gt;
+
+&lt;p&gt;Once I ported my application over to using waf, the configure and
+build process was an order of magnitude faster than autotools. This
+made a huge difference on my target platform. I noticed that waf
+ships with some experimental plugins like the daemon plugin which
+runs a build when it notices that somefiles have changed.&lt;/p&gt;
+
+&lt;p&gt;This daemon plugin is &lt;em&gt;great&lt;/em&gt; it gives waf similar behaviour to
+what java developers have with junit and eclipse. I’m finding that
+waf is making me happy when I develop and fix stuff in the application
+that I’m working on.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>hashdist for repeatably building an environment</title>
+      <link>http://jcftang.github.com/blog/2014/06/22/hashdist-for-repeatably-building-an-environment/</link>
+      <pubDate>Sun, 22 Jun 2014 14:52:42 +0100</pubDate>
+      
+      <guid>http://jcftang.github.com/blog/2014/06/22/hashdist-for-repeatably-building-an-environment/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been happily hacking at some packages for
+&lt;a href=&#34;https://hashdist.github.com&#34;&gt;hashdist&lt;/a&gt;, it&amp;rsquo;s pretty nice, there
+other build systems out there for dealing with building applications
+and libraries with different combinations of compilers and numerical
+libraries. Out of the lot I think hashdist has been the most satisfying
+to use so far. It&amp;rsquo;s still missing some bits and pieces to allow users
+to use different compilers for key components (or everything).&lt;/p&gt;
+
+&lt;p&gt;Without explaining too much, it&amp;rsquo;s basically taking inputs which define
+a package and then generating an output hash to store the output of the
+build. This means that as you modify the the environment and rebuild, it
+will install the updated packages into a different location. Traditionally
+I would have just overwritten the old versions or install it into a named
+directory, then setup a module file for it etc&amp;hellip; with hashdist there
+is less messing around. It doesn&amp;rsquo;t fully solve the problem of having
+multiple versions of the software available at any one point in time,
+but it does let you have many versions installed and you can create
+different inputs profiles to get access to the &amp;lsquo;builds&amp;rsquo;. This means you
+can version control your environment, it also means you can roll back
+to a previous environment if something is broken or wrong.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>when to automate deployments and when not to</title>
+      <link>http://jcftang.github.com/blog/2014/04/21/when-to-automate-deployments-and-when-not-to/</link>
+      <pubDate>Mon, 21 Apr 2014 15:17:23 +0100</pubDate>
+      
+      <guid>http://jcftang.github.com/blog/2014/04/21/when-to-automate-deployments-and-when-not-to/</guid>
+      <description>&lt;p&gt;We recently had Hydra Camp in Dublin in Trinity College Dublin which
+went pretty well. I even got to talk a little about what we&amp;rsquo;re doing
+with Shibboleth and how we&amp;rsquo;re deploying our systems.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;re deploy with ansible either by someone running the playbook by hand
+or via buildbot which pushes out a build when tests pass successfully
+on the master branch.&lt;/p&gt;
+
+&lt;p&gt;Someone in the camp asked at what complexity should you begin to automate
+at, which I thought was a strange question since at DRI/TCD we thought
+of deploying as automatically as possible from day 1.&lt;/p&gt;
+
+&lt;p&gt;My response to the question of when to automate was to automate it if you
+know that you need documentation or know that there might be a second
+time in setting up the system. Which pretty meant that we automate as
+much as we can.&lt;/p&gt;
+
+&lt;p&gt;Automating means you at least have a script as documentation and as people
+leave/join the project you have a chance of figuring out whats going
+on. This is especially useful when you have a CI or CD styled system.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>hydra europe 2014</title>
+      <link>http://jcftang.github.com/blog/2014/02/25/hydra-europe-2014/</link>
+      <pubDate>Tue, 25 Feb 2014 18:16:09 +0800</pubDate>
+      
+      <guid>http://jcftang.github.com/blog/2014/02/25/hydra-europe-2014/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s that time of the year again and it seems we&amp;rsquo;re going to hold another
+Hydra related event in work at Trinity College, Dublin.&lt;/p&gt;
+
+&lt;p&gt;For more information see
+&lt;a href=&#34;https://wiki.duraspace.org/display/hydra/Hydra+Europe+2014&#34;&gt;https://wiki.duraspace.org/display/hydra/Hydra+Europe+2014&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>building a private cloud with saltstack as the cloud controller</title>
+      <link>http://jcftang.github.com/blog/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/</link>
+      <pubDate>Tue, 31 Dec 2013 12:55:26 +0000</pubDate>
+      
+      <guid>http://jcftang.github.com/blog/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/</guid>
+      <description>&lt;p&gt;After going to SC13 and being at a few BoF&amp;rsquo;s and hearing
+some people talk about their operations and potentially using
+&lt;a href=&#34;http://www.saltstack.com/&#34;&gt;Salt&lt;/a&gt; to replace the likes of puppet and chef,
+I decided to learn a little more about Salt.&lt;/p&gt;
+
+&lt;p&gt;In particular since I have an old laptop lying around at
+home, I decided to setup a little private cloud. I followed this &lt;a href=&#34;http://www.saltstack.com/salt-blog/2013/11/19/cloud-making-doesnt-have-to-be-so-hard-salt-virt-tutorial&#34;&gt;blog
+post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It mostly worked apart from some buggy behaviour in the seeding
+process. It was certainly lower overhead in setting a salt managed
+&amp;lsquo;cloud&amp;rsquo; than setting up a full on &lt;a href=&#34;http://opennebula.org/&#34;&gt;Open Nebula&lt;/a&gt;
+instance or even openstack.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s pretty neat that a provisioned VM reports into the salt master
+and is ready to be provisioned pretty quickly when it boots up. I can
+certainly see the attraction of using Salt to setup a private cloud with
+Salt as the controller.&lt;/p&gt;
+
+&lt;p&gt;In short compared to &lt;a href=&#34;http://www.ansibleworks.com/&#34;&gt;Ansible&lt;/a&gt; Salt is a
+bit more heavy weight than Ansible. I haven&amp;rsquo;t done any like with like
+comparisons but I do feel that Salt seems like the better option for
+maintaining long running systems and Ansible is great for rapid redeploys
+of systems (from a clean state)&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve uploaded the configs that I have been using at home to github, they
+can be found &lt;a href=&#34;https://github.com/jcftang/salt-virt&#34;&gt;here&lt;/a&gt;, there&amp;rsquo;s even a
+few packer templates to build base images for CentOS 6.5 and Ubuntu 12.04.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>post sc13 thoughts</title>
+      <link>http://jcftang.github.com/blog/2013/12/01/post-sc13-thoughts/</link>
+      <pubDate>Sun, 01 Dec 2013 09:04:25 +0000</pubDate>
+      
+      <guid>http://jcftang.github.com/blog/2013/12/01/post-sc13-thoughts/</guid>
+      <description>&lt;p&gt;I was recently at SC13 and attended a number of Python HPC tutorials,
+Data Management and HPC systems engineering and administration BOF&amp;rsquo;s.&lt;/p&gt;
+
+&lt;p&gt;This year&amp;rsquo;s SC13 much calmer than previous years, but I did pick up a
+few new tools during the conference. However I was pretty surprised that
+there is a real lack of devops, sysadmins etc&amp;hellip; in the this space.&lt;/p&gt;
+
+&lt;p&gt;I was also surprised at how things like salt and ansible are being
+adopted in this space.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>accelerating development and deployments with ansible</title>
+      <link>http://jcftang.github.com/blog/2013/08/01/accelerating-development-and-deployments-with-ansible/</link>
+      <pubDate>Thu, 01 Aug 2013 21:38:54 +0100</pubDate>
+      
+      <guid>http://jcftang.github.com/blog/2013/08/01/accelerating-development-and-deployments-with-ansible/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s probably no secret that we use Ansible at our work place for
+the project that I am working on. So far we&amp;rsquo;ve used it to deploy and
+maintain state for our Open Nebula deployment, Jenkins CI system, Ceph&amp;rsquo;s
+radosgw and our digital repository.&lt;/p&gt;
+
+&lt;p&gt;In fact I currently have a Jenkins job which deploys our software stack
+using Ansible to a test system in our Open Nebula cluster. This has been
+hugely beneficial to myself so far to be able to teardown and bring up
+systems quickly to make sure our application is well tested and debugged.&lt;/p&gt;
+
+&lt;p&gt;Without going into a huge amount of detail, we&amp;rsquo;ve been able to deploy our
+systems with relative ease and repeatability. I&amp;rsquo;ve got the configurations
+up at my github account for those that are interested.&lt;/p&gt;
+
+&lt;p&gt;The best thing about these deployments is that the initial prototyping
+was done in a set of vagrant managed virtual machines, this allowed me
+to rapidly bring up and teardown systems to ensure we have everything
+automated smoothly. On the flipside, the systems that get developed for
+production usage get backported to our vagrant setup. This means that
+we&amp;rsquo;re able to provide a development environment for each developer which
+is identical or as close as possible to our production systems.&lt;/p&gt;
+
+&lt;p&gt;Having the capability to develop and test on a local machine which is
+close to or identical to our production system has accelerated our bug
+finding and development process.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m not too sure what the team think, since we&amp;rsquo;re moving quite fast and
+Ansible has allowed us to do so due to its ease of use, well it has at
+least let me do so anyway.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>hydra and ansible</title>
+      <link>http://jcftang.github.com/blog/2013/06/06/hydra-and-ansible/</link>
+      <pubDate>Thu, 06 Jun 2013 18:11:40 +0100</pubDate>
+      
+      <guid>http://jcftang.github.com/blog/2013/06/06/hydra-and-ansible/</guid>
+      <description>&lt;p&gt;The team that I am working with right are very much agile and we&amp;rsquo;re
+doing quite a bit of outside in development of the repository that we&amp;rsquo;re
+building. We&amp;rsquo;re mostly adopting a behaviour driven development with a
+touch of test driven development. As a result we&amp;rsquo;re very much in favour
+of testing things out as much as we can and using the same environments
+to develop against. As previously mentioned before I had originally
+been using puppet and vagrant to build up the development harness and
+experiment with tools/services that we might want to use for our system.&lt;/p&gt;
+
+&lt;p&gt;At somepoint I came across &lt;a href=&#34;http://www.ansible.cc&#34;&gt;ansible&lt;/a&gt; and not long
+after discovering it, I migrated a large chunk of the development and
+test systems to using ansible. I&amp;rsquo;ve even cooked up one or two ansible
+modules as a result.&lt;/p&gt;
+
+&lt;p&gt;As a result of adopting ansible for building up our test and development
+infrastructure, I&amp;rsquo;ve collected the relevant playbooks and roles that a
+person might want for deploying all the bits and pieces needed to roll
+out a hydra-head. See &lt;a href=&#34;https://github.com/jcftang/ansible-hydra&#34;&gt;https://github.com/jcftang/ansible-hydra&lt;/a&gt;, I have
+a set of roles and a few example playbooks on setting up at least&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Tomcat (from the base repositories of RHEL6/Centos6/ScientificLinux6)&lt;/li&gt;
+&lt;li&gt;Fedora-Commons (the same version as is in the hydra-jetty repo)&lt;/li&gt;
+&lt;li&gt;Apache SOLR (the same version as is in the hydra-jetty repo)&lt;/li&gt;
+&lt;li&gt;Ruby (via RVM) in a user directory&lt;/li&gt;
+&lt;li&gt;Passenger with the installed version of Ruby&lt;/li&gt;
+&lt;li&gt;MySQL (from the base repositories of RHEL6/Centos6/ScientificLinux6)&lt;/li&gt;
+&lt;li&gt;Redis&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The configurations aren&amp;rsquo;t quite production ready yet as they do require
+some more work in setting up Fedora-Commons and SOLR the way we want. The
+configurations are however fairly realistic and are daily use
+for doing test deployments of our hydra-head (RoR application) or
+experimenting with additional tools, configurations and systems such as
+&lt;a href=&#34;https://github.com/jcftang/ansible-ceph&#34;&gt;ceph&lt;/a&gt; - we&amp;rsquo;re using the radosgw
+to provide a realistic and local S3 service.&lt;/p&gt;
+
+&lt;p&gt;So far the configurations need polishing off and another playbook needs
+to be created for continuous deployment of our hydra-head.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>dri planet is somewhat back in action</title>
+      <link>http://jcftang.github.com/blog/2013/05/19/dri-planet-is-somewhat-back-in-action/</link>
+      <pubDate>Sun, 19 May 2013 08:51:15 +0100</pubDate>
+      
+      <guid>http://jcftang.github.com/blog/2013/05/19/dri-planet-is-somewhat-back-in-action/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been meaning to fix the RSS aggregator at
+&lt;a href=&#34;http://www.tchpc.tcd.ie/dri-planet&#34;&gt;http://www.tchpc.tcd.ie/dri-planet&lt;/a&gt; for a while now, it&amp;rsquo;s fixed!&lt;/p&gt;
+
+&lt;p&gt;Note that it&amp;rsquo;s just something that aggregates news that I think are useful
+for work. The aggregated links may or may not be affiliated with my work.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>zfs on linux is usable and safe</title>
+      <link>http://jcftang.github.com/blog/2013/03/31/zfs-on-linux-is-usable-and-safe/</link>
+      <pubDate>Sun, 31 Mar 2013 11:05:56 +0100</pubDate>
+      
+      <guid>http://jcftang.github.com/blog/2013/03/31/zfs-on-linux-is-usable-and-safe/</guid>
+      <description>&lt;p&gt;It seems that ZFS On Linux reached a significant milestone, that is the
+software is stable to use on Linux. This is pretty useful and significant
+for the preservation and archivists community as it provides a more
+reliable platform to build on. The LLNL guys must really want to mitigate
+against silent data failures in their systems (they&amp;rsquo;re running Lustre
+on top of ZFS).&lt;/p&gt;
+
+&lt;p&gt;If ZFS is trustable or not we will know over time. At least with
+ZFS&amp;rsquo;s data protection features we will see less issues with silent
+data corruption.&lt;/p&gt;
+
+&lt;p&gt;If one could build glusterfs or better yet, Ceph on top of ZFS it would
+be pretty desirable.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>testing and developing rails applications in a near production like environment</title>
+      <link>http://jcftang.github.com/blog/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/</link>
+      <pubDate>Wed, 27 Mar 2013 11:57:41 +0000</pubDate>
+      
+      <guid>http://jcftang.github.com/blog/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/</guid>
+      <description>&lt;p&gt;At work we like to do lots of testing and behaviour driven development
+since we have a number of stakeholders and institutions all working on
+the same application. To make sure everyone is getting what they want
+we&amp;rsquo;re using cucumber to write our specifications; that is we&amp;rsquo;re primarily
+doing outside in developement of our system.&lt;/p&gt;
+
+&lt;p&gt;As such we like to test things in a near production like
+environment&amp;hellip; Having chosen to use &lt;a href=&#34;https://github.com/thoughtbot/capybara-webkit&#34;&gt;capybara-webkit&lt;/a&gt; to test
+the interface (at a very functional and simplistic level) on our
+workstations. I decided to test drive the vagrant enviroment that I had
+been working on the past few months. Btw, this environment is bootstrapped
+with ansible, I&amp;rsquo;m a much happier person since I ditched puppet.&lt;/p&gt;
+
+&lt;p&gt;Annoyingly in RHEL6 and friends QT is a little bit behind the current
+times, we needed at least QT4.7 to run the javascript tests (which rely
+on webkit). The first an obvious thing was to uninstall qt from the base
+system and then install qt47 from atrpms-testing.&lt;/p&gt;
+
+&lt;p&gt;Little did I know that &lt;a href=&#34;https://bugzilla.redhat.com/show_bug.cgi?id=886996&#34;&gt;tomcat6 depends&lt;/a&gt; on redhat-lsb which in turn
+depends on qt-x11 and so on&amp;hellip; My plans on testing and developing our
+application in a near production environment almost got shot.&lt;/p&gt;
+
+&lt;p&gt;In the end the solution was to test the java script components with either
+selenium or better yet &lt;a href=&#34;https://github.com/jonleighton/poltergeist&#34;&gt;poltergeist&lt;/a&gt; for capybara. We chose poltergeist
+as it runs headless. This isn&amp;rsquo;t really a problem of cucumber/capybara,
+but rather a problem of RHEL6 and friends with old packages.&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;after sometime I have a half-way there set of ansible playbooks to
+get me to where I need to be in a virtual environment&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;less rant &amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>amazon redshift a curiousity to me</title>
+      <link>http://jcftang.github.com/blog/2013/03/24/amazon-redshift-a-curiousity-to-me/</link>
+      <pubDate>Sun, 24 Mar 2013 11:16:54 +0000</pubDate>
+      
+      <guid>http://jcftang.github.com/blog/2013/03/24/amazon-redshift-a-curiousity-to-me/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been recently reading up on Amazon [Redshift](), at first I thought
+it was a parallel/distributed datastore like HDFS. At a second look in
+reality its more of a distributed relational database. This in itself
+is pretty cool for scaling applications with large data sets that happen
+to need to be in a database; which is quite a few things.&lt;/p&gt;
+
+&lt;p&gt;From the initial reading of the architecture and docs, it looks like
+Amazon built a job queuing system around postgres to schedule queries
+out to its nodes in the cluster. What&amp;rsquo;s curious to me is how do they
+deal with failed nodes in the system and how they provision the system,
+there must be an ordered set of operations to do so.&lt;/p&gt;
+
+&lt;p&gt;Another oddity is the mesh network that the system has, I&amp;rsquo;m under the
+impression that there is only 1x10gb network connection on the machine. I
+wonder if the mesh network is just a virtual mesh network or if it&amp;rsquo;s
+really a real physical one. If it&amp;rsquo;s a real physical mesh network then
+each machine would require more than one network interface. It would
+also be a cabling nightmare to build such a device and if Amazon has
+built a large scale mesh network of machines, that would be pretty cool.
+I wonder how much of the Redshift user base are latency, bandwidth or
+compute bound when looking at large datasets; or if its really just the
+challenge of having one real big database that can be queried.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>building kelvin supercomputer time lapse</title>
+      <link>http://jcftang.github.com/blog/2013/03/22/building-kelvin-supercomputer-time-lapse/</link>
+      <pubDate>Fri, 22 Mar 2013 07:46:26 +0000</pubDate>
+      
+      <guid>http://jcftang.github.com/blog/2013/03/22/building-kelvin-supercomputer-time-lapse/</guid>
+      <description>&lt;p&gt;I was cleaning up some files and I found
+this time lapse that I did when we were building
+&lt;a href=&#34;http://www.tchpc.tcd.ie/resources/clusters/kelvin&#34;&gt;Kelvin&lt;/a&gt;, it&amp;rsquo;s a few
+years old now. Even by current standards it&amp;rsquo;s still pretty respectable.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=F0zon45WR-U&amp;amp;feature=youtu.be&#34;&gt;The timelapse&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We had to unpack and install all the infiniband cards ourselves, cabled,
+racked, installed, configured and burnt it in for production usage. The
+cluster has 100 nodes, each node has 2 sockets, each socket has 6 cores
+and 24gb of ram.&lt;/p&gt;
+
+&lt;p&gt;The most interesting thing about this machine was that we got it with
+QLogic infiniscale/infinipath HCA&amp;rsquo;s and switching. It was one of the if
+not the lowest latency networking that we could get at the time.&lt;/p&gt;
+
+&lt;p&gt;When we were configuring this system we had also redesigned the storage
+system roughly around this period and went with a cluster to cluster
+GPFS configuration.&lt;/p&gt;
+
+&lt;p&gt;Oh and we threw out the old cluster which was about 10racks of IBM e326
+machines in the process.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>hydracamp 2013 trinity college  dublin</title>
+      <link>http://jcftang.github.com/blog/2013/02/08/hydracamp-2013-trinity-college--dublin/</link>
+      <pubDate>Fri, 08 Feb 2013 10:02:12 +0000</pubDate>
+      
+      <guid>http://jcftang.github.com/blog/2013/02/08/hydracamp-2013-trinity-college--dublin/</guid>
+      <description>
+
+&lt;p&gt;After a few months of budgeting, negotiations and finding venues we&amp;rsquo;ve
+at Trinity College Dublin have committed to hosting a HydraCamp for
+europe! So I&amp;rsquo;m shamelessly plugging it here.&lt;/p&gt;
+
+&lt;p&gt;Trinity College Dublin as a part of Digital Repository of Ireland will
+be organising Hydra Camp in the week of April 8th till 12th, 2013. This
+will be a week long training course, which will be aimed at developers
+who are interested in the Hydra framework for developing repositories.&lt;/p&gt;
+
+&lt;p&gt;For those that don&amp;rsquo;t know Hydra is a framework built upon various
+Fedora-Commons, Apache SOLR, Ruby and Ruby on Rails technologies. At
+DRI we&amp;rsquo;re using it to build up our prototype repository.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s possible to use the Hydra framework to build repositories for
+archiving and preservation.&lt;/p&gt;
+
+&lt;h3 id=&#34;resources&#34;&gt;Resources&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HydraCamp 2013 - &lt;a href=&#34;http://www.tchpc.tcd.ie/hydracamp2013&#34;&gt;http://www.tchpc.tcd.ie/hydracamp2013&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Digital Repository of Ireland - &lt;a href=&#34;http://www.dri.ie/&#34;&gt;http://www.dri.ie/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Project Hydra - &lt;a href=&#34;http://projecthydra.org/&#34;&gt;http://projecthydra.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Data Curation Experts - &lt;a href=&#34;http://curationexperts.wordpress.com/&#34;&gt;http://curationexperts.wordpress.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

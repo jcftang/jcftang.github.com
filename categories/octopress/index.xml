@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Octopress on Jimmy Tang</title>
+    <link>http://jcftang.github.com/categories/octopress/</link>
+    <description>Recent content in Octopress on Jimmy Tang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 08 Mar 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://jcftang.github.com/categories/octopress/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>enabling latent semantic indexing for octopress</title>
+      <link>http://jcftang.github.com/blog/2012/03/08/enabling-latent-semantic-indexing-for-octopress/</link>
+      <pubDate>Thu, 08 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.com/blog/2012/03/08/enabling-latent-semantic-indexing-for-octopress/</guid>
+      <description>
+
+&lt;p&gt;For those that care about having related posts on their [Octopress]()
+blog. It&amp;rsquo;s actually quite easy to turn it on, it&amp;rsquo;s nice to have and
+useful. But it&amp;rsquo;s not enabled by default in Octopress.&lt;/p&gt;
+
+&lt;p&gt;This feature already exists in jekyll, enabling this feature in
+Octopress is a trival task.&lt;/p&gt;
+
+&lt;p&gt;Firstly add this to your &lt;code&gt;_config.yml&lt;/code&gt; file&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;lsi: true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then create a file such as &lt;code&gt;source/_includes/custom/asides/related.html&lt;/code&gt; with the following
+content, add it to one of your asides in &lt;code&gt;_config.yml&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;{% raw %}
+    &lt;section&gt;
+    &lt;h1&gt;Related Posts&lt;/h1&gt;
+    &lt;ul class=&#34;posts&#34;&gt;
+        {% for post in site.related_posts limit:5 %}
+        &lt;li class=&#34;related&#34;&gt;
+            &lt;a href=&#34;{{ root_url }}{{ post.url }}&#34;&gt;{{ post.title }}&lt;/a&gt;
+        &lt;/li&gt;
+        {% endfor %}
+        &lt;/ul&gt;
+    &lt;/section&gt;
+{% endraw %}&lt;/p&gt;
+
+&lt;p&gt;It is possible to style the list, but in the above I have chosen to
+keep the same style as the recent posts.&lt;/p&gt;
+
+&lt;h2 id=&#34;probable-issues-with-enabling-lsi&#34;&gt;Probable issues with enabling LSI&lt;/h2&gt;
+
+&lt;p&gt;There are some issues with enabling LSI in jekyll/octopress, the
+primary issue will be performance. The default implementation will be
+slow if you have lots of posts to classify. It would be recommended
+that rb-gsl be installed to accelerate the classification process.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

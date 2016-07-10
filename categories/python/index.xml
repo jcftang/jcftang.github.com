@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Jimmy Tang</title>
+    <link>http://jcftang.github.com/categories/python/</link>
+    <description>Recent content in Python on Jimmy Tang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Sep 2014 17:40:46 +0100</lastBuildDate>
+    <atom:link href="http://jcftang.github.com/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>developer happiness with waf</title>
+      <link>http://jcftang.github.com/blog/2014/09/24/developer-happiness-with-waf/</link>
+      <pubDate>Wed, 24 Sep 2014 17:40:46 +0100</pubDate>
+      
+      <guid>http://jcftang.github.com/blog/2014/09/24/developer-happiness-with-waf/</guid>
+      <description>&lt;p&gt;Having recently changed jobs (after a very long stint at TCD - just
+short of 10yrs!) I’ve moved to a small startup. I’ve been working
+on a few small bits and pieces of code, infrastructure, etc&amp;hellip; I
+had to make some stuff work and make it work well. So I decided to
+use autotools to configure and build the application that I’m working
+on.&lt;/p&gt;
+
+&lt;p&gt;As great as it was on my nice fast intel based machine, it was dog
+slow on my target platform, especially when I had to regenerate the
+autoconf scripts.&lt;/p&gt;
+
+&lt;p&gt;To get to the point, I ended up spending a day or two checking out
+alternatives (that wasn’t cmake) and came across
+&lt;a href=&#34;https://code.google.com/p/waf/&#34;&gt;waf&lt;/a&gt;, the documentation isn’t all
+that great if you just look at the website, I had to spend a few
+hours digging around to get what I wanted.&lt;/p&gt;
+
+&lt;p&gt;Once I ported my application over to using waf, the configure and
+build process was an order of magnitude faster than autotools. This
+made a huge difference on my target platform. I noticed that waf
+ships with some experimental plugins like the daemon plugin which
+runs a build when it notices that somefiles have changed.&lt;/p&gt;
+
+&lt;p&gt;This daemon plugin is &lt;em&gt;great&lt;/em&gt; it gives waf similar behaviour to
+what java developers have with junit and eclipse. I’m finding that
+waf is making me happy when I develop and fix stuff in the application
+that I’m working on.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

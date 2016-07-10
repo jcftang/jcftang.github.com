@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.16-DEV" />
+
+  <title>installing ceph on sl6 &middot; Jimmy Tang</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="http://jcftang.github.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="http://jcftang.github.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="http://jcftang.github.com/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="http://jcftang.github.com/img/favicon.ico" type="image/x-icon" />
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://jcftang.github.com/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://jcftang.github.com/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://jcftang.github.com/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/jcftang" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://plus.google.com/+JimmyTang" target="_blank"><i class="fa fa-google-plus-square fa-fw"></i>Google+</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/jimmy-tang-1b54322" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/jcftang" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>installing ceph on sl6</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>06 Jul 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  <p>As an exercise of a Friday afternoon of not starting something big before
+heading off to a conference. I&rsquo;ve decided to spend an hour or two at
+seeing how ceph is installed and configured on an SL6 based machine
+(RHEL6 clone).</p>
+
+<p>The install target is just an old desktop running a 64bit install of SL6x,
+so it&rsquo;s nothing too fancy.</p>
+
+<p>Following the instructions at <a href="http://ceph.com/wiki/Installing_on_RedHat_or_CentOS">http://ceph.com/wiki/Installing_on_RedHat_or_CentOS</a>, I ended up doing this</p>
+
+<pre><code>yum install yum-conf-epel
+yum update
+yum gcc gcc-c++ automake libtool expat expat-devel boost-devel nss-devel cryptopp cryptopp-devel libatomic_ops-devel fuse-devel
+yum install libedit-devel libedit
+</code></pre>
+
+<p>It seems that the packages <em>cryptopp-devel</em>, <em>cryptopp</em> and <em>expat-devel</em>,
+<em>expat</em> are the only packages pulled in from the epel repository.</p>
+
+<p>Additional libraries and tools include these weren&rsquo;t mentioned in the
+upstream wiki, the upstream wiki probably needs to be updated.</p>
+
+<pre><code>yum install rpm-build
+yum install libaio-devel libcurl-devel libxml2-devel libuuid-devel keyutils-libs-devel fcgi-devel
+</code></pre>
+
+<p>I chose to install the newly designated stable branch of ceph 0.48argonaut</p>
+
+<pre><code>wget http://ceph.com/download/ceph-0.48argonaut.tar.bz2
+</code></pre>
+
+<p>I also chose to build it in RPM form, in the tarball there is a RPM spec
+file which can be used to create an installable RPM, the following is
+a transcript of what I did to build an installable RPM.</p>
+
+<pre><code>tar xjvf ceph-0.48argonaut.tar.bz2
+cp ceph-0.48argonaut.tar.bz2 ~/rpmbuild/SOURCES
+rpmbuild -ba ceph-0.48argonaut/ceph.spec
+</code></pre>
+
+<p>The build will take <em>some</em> time, especially if you are using old
+hardware. I ran into some minor packaging issues,</p>
+
+<pre><code>diff -u ceph.spec.in.orig ceph.spec.in
+--- ceph.spec.in.orig   2012-07-06 15:38:59.298497719 +0100
++++ ceph.spec.in    2012-07-06 15:39:45.423560177 +0100
+@@ -326,6 +326,8 @@
+/usr/sbin/rcceph
+%{_libdir}/rados-classes/libcls_rbd.so*
+%{_libdir}/rados-classes/libcls_rgw.so*
++/sbin/ceph-disk-activate
++/sbin/ceph-disk-prepare
+
+#################################################################################
+%files fuse
+</code></pre>
+
+<p>The above change need&rsquo;s to be applied to the <em>ceph</em> spec file for the
+RPM(s) to build successfully.</p>
+
+<pre><code>ceph-0.48argonaut-6.el6.x86_64.rpm
+ceph-devel-0.48argonaut-6.el6.x86_64.rpm
+python-ceph-0.48argonaut-6.el6.x86_64.rpm
+librbd1-0.48argonaut-6.el6.x86_64.rpm
+librados2-0.48argonaut-6.el6.x86_64.rpm
+ceph-radosgw-0.48argonaut-6.el6.x86_64.rpm
+libcephfs1-0.48argonaut-6.el6.x86_64.rpm
+ceph-fuse-0.48argonaut-6.el6.x86_64.rpm
+</code></pre>
+
+<p>I chose to install <em>all</em> the RPM&rsquo;s that were generated for educational
+purposes (used yum instead of the rpm commands so the dependancies are
+sorted out for me), from the <em>rpmbuild/RPMS/x86_64</em> directory</p>
+
+<pre><code>yum install ceph-0.48argonaut-6.el6.x86_64.rpm ceph-devel-0.48argonaut-6.el6.x86_64.rpm ceph-fuse-0.48argonaut-6.el6.x86_64.rpm ceph-radosgw-0.48argonaut-6.el6.x86_64.rpm libcephfs1-0.48argonaut-6.el6.x86_64.rpm librados2-0.48argonaut-6.el6.x86_64.rpm librbd1-0.48argonaut-6.el6.x86_64.rpm python-ceph-0.48argonaut-6.el6.x86_64.rpm
+</code></pre>
+
+<p>I then simply followed the 5 minute quick start guide at
+<a href="http://ceph.com/docs/master/start/quick-start/">http://ceph.com/docs/master/start/quick-start/</a> to see if ceph would
+start up. There is more documentation at <a href="http://ceph.com/docs/master">http://ceph.com/docs/master</a>
+that I have yet to go through. Perhaps the configuration of ceph can go
+into another post.</p>
+
+<p>To start the cluster after it&rsquo;s configured</p>
+
+<pre><code>service ceph -a start
+</code></pre>
+
+<p>However on my test system it&rsquo;s currently crashing out with the mds server giving the followin errors</p>
+
+<pre><code>2012-07-06 16:38:17.838055 7f2d6828d700 -1 mds.-1.0 *** got signal Terminated ***
+2012-07-06 16:38:17.838139 7f2d6828d700  1 mds.-1.0 suicide.  wanted down:dne, now up:boot
+2012-07-06 16:38:17.839020 7f2d6828d700 -1 osdc/Objecter.cc: In function 'void Objecter::shutdown()' thread 7f2d6828d700 time 2012-07-06 16:38:17.838156
+osdc/Objecter.cc: 221: FAILED assert(initialized)
+
+ ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
+ 1: (Objecter::shutdown()+0x170) [0x6e2e20]
+ 2: (MDS::suicide()+0xc9) [0x4ad829]
+ 3: (MDS::handle_signal(int)+0x1bb) [0x4b447b]
+ 4: (SignalHandler::entry()+0x283) [0x803d53]
+ 5: /lib64/libpthread.so.0() [0x3b3ea077f1]
+ 6: (clone()+0x6d) [0x3b3e6e5ccd]
+ NOTE: a copy of the executable, or `objdump -rdS &lt;executable&gt;` is needed to interpret this.
+
+--- begin dump of recent events ---
+    -3&gt; 2012-07-06 16:37:57.786954 7f2d6b496760  0 ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030), process ceph-mds, pid 12537
+    -2&gt; 2012-07-06 16:38:17.838055 7f2d6828d700 -1 mds.-1.0 *** got signal Terminated ***
+    -1&gt; 2012-07-06 16:38:17.838139 7f2d6828d700  1 mds.-1.0 suicide.  wanted down:dne, now up:boot
+     0&gt; 2012-07-06 16:38:17.839020 7f2d6828d700 -1 osdc/Objecter.cc: In function 'void Objecter::shutdown()' thread 7f2d6828d700 time 2012-07-06 16:38:17.838156
+osdc/Objecter.cc: 221: FAILED assert(initialized)
+
+ ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
+ 1: (Objecter::shutdown()+0x170) [0x6e2e20]
+ 2: (MDS::suicide()+0xc9) [0x4ad829]
+ 3: (MDS::handle_signal(int)+0x1bb) [0x4b447b]
+ 4: (SignalHandler::entry()+0x283) [0x803d53]
+ 5: /lib64/libpthread.so.0() [0x3b3ea077f1]
+ 6: (clone()+0x6d) [0x3b3e6e5ccd]
+ NOTE: a copy of the executable, or `objdump -rdS &lt;executable&gt;` is needed to interpret this.
+
+--- end dump of recent events ---
+2012-07-06 16:38:17.840237 7f2d6828d700 -1 *** Caught signal (Aborted) **
+ in thread 7f2d6828d700
+
+ ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
+ 1: /usr/bin/ceph-mds() [0x803309]
+ 2: /lib64/libpthread.so.0() [0x3b3ea0f4a0]
+ 3: (gsignal()+0x35) [0x3b3e632885]
+ 4: (abort()+0x175) [0x3b3e634065]
+ 5: (__gnu_cxx::__verbose_terminate_handler()+0x12d) [0x3b432bea7d]
+ NOTE: a copy of the executable, or `objdump -rdS &lt;executable&gt;` is needed to interpret this.
+
+--- begin dump of recent events ---
+     0&gt; 2012-07-06 16:38:17.840237 7f2d6828d700 -1 *** Caught signal (Aborted) **
+ in thread 7f2d6828d700
+
+ ceph version 0.48argonaut (commit:c2b20ca74249892c8e5e40c12aa14446a2bf2030)
+ 1: /usr/bin/ceph-mds() [0x803309]
+ 2: /lib64/libpthread.so.0() [0x3b3ea0f4a0]
+ 3: (gsignal()+0x35) [0x3b3e632885]
+ 4: (abort()+0x175) [0x3b3e634065]
+ 5: (__gnu_cxx::__verbose_terminate_handler()+0x12d) [0x3b432bea7d]
+ NOTE: a copy of the executable, or `objdump -rdS &lt;executable&gt;` is needed to interpret this.
+
+--- end dump of recent events ---
+</code></pre>
+
+<p>I&rsquo;ve logged the error message on the ceph-devel mailing list, I don&rsquo;t
+have time to poke at this problem right now. I need to recreate this
+scenario in a VM on my laptop so I can play with this on the plane when
+I&rsquo;m going to Open Repositories 2012 this weekend.</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="http://jcftang.github.com/blog/2012/07/05/ceph-v0-dot-48-argonaut-released/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="http://jcftang.github.com/blog/2012/07/05/ceph-v0-dot-48-argonaut-released/">ceph v0 dot 48 argonaut released</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="http://jcftang.github.com/blog/2012/07/09/open-repositories-2012-day-1/">open repositories 2012 day 1</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="http://jcftang.github.com/blog/2012/07/09/open-repositories-2012-day-1/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'jcftang';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="http://jcftang.github.com/js/ui.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-8597777-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>
+

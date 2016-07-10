@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.16-DEV" />
+
+  <title>going from replicating across osds to replicating across hosts in a ceph cluster &middot; Jimmy Tang</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="http://jcftang.github.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="http://jcftang.github.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="http://jcftang.github.com/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="http://jcftang.github.com/img/favicon.ico" type="image/x-icon" />
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://jcftang.github.com/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://jcftang.github.com/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://jcftang.github.com/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/jcftang" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://plus.google.com/+JimmyTang" target="_blank"><i class="fa fa-google-plus-square fa-fw"></i>Google+</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/jimmy-tang-1b54322" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/jcftang" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>going from replicating across osds to replicating across hosts in a ceph cluster</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>06 Sep 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  <p>Having learnt how to remove and add monitor&rsquo;s, meta-data and data servers (mon&rsquo;s, mds&rsquo;s
+and osd&rsquo;s) for my small two node Ceph cluster. I want to say that it wasn&rsquo;t too hard to
+do, the ceph website does have documentation for this.</p>
+
+<p>As the default CRUSH map replicates across OSD&rsquo;s I wanted to try replicating data across
+hosts just to see what would happen. In a real world scenario I would probably treat
+individual hosts in a rack as a failure unit and if I had more than one rack of storage,
+I would want to treat each rack as the minimum unit.</p>
+
+<p>One of the coolest features of ceph is that it allows me to play with different mappings
+and configurations of where my data gets allocated. There aren&rsquo;t many (if any) storage
+systems that I know of which provides this type of capability.</p>
+
+<p>So the steps that I went through to get to what I wanted&hellip;</p>
+
+<p>First I had to dump the CRUSH map from my cluster of two nodes and three (very unbalanced OSD&rsquo;s so I can play with the weights).</p>
+
+<pre><code>ceph osd getcrushmap -o /tmp/mycrushmap
+</code></pre>
+
+<p>The CRUSH map that is created is a binary file it must be decoded to plain text before
+you can edit it.</p>
+
+<pre><code>crushtool -d /tmp/mycrushmap &gt; /tmp/mycrushmap.txt
+</code></pre>
+
+<p>Here&rsquo;s the map that is decoded from the binary file</p>
+
+<pre><code># begin crush map
+
+# devices
+device 0 osd.0
+device 1 osd.1
+device 2 osd.2
+
+# types
+type 0 osd
+type 1 host
+type 2 rack
+type 3 row
+type 4 room
+type 5 datacenter
+type 6 pool
+
+# buckets
+host x.y.z.194 {
+        id -2           # do not change unnecessarily
+        # weight 2.000
+        alg straw
+        hash 0  # rjenkins1
+        item osd.1 weight 1.000
+        item osd.0 weight 1.000
+}
+host x.y.z.138 {
+        id -4           # do not change unnecessarily
+        # weight 1.000
+        alg straw
+        hash 0  # rjenkins1
+        item osd.2 weight 1.000
+}
+rack rack-1 {
+        id -3           # do not change unnecessarily
+        # weight 3.000
+        alg straw
+        hash 0  # rjenkins1
+        item x.y.z.194 weight 2.000
+        item x.y.z.138 weight 1.000
+}
+pool default {
+        id -1           # do not change unnecessarily
+        # weight 2.000
+        alg straw
+        hash 0  # rjenkins1
+        item rack-1 weight 2.000
+}
+
+# rules
+rule data {
+        ruleset 0
+        type replicated
+        min_size 1
+        max_size 10
+        step take default
+        step choose firstn 0 type osd
+        step emit
+}
+rule metadata {
+        ruleset 1
+        type replicated
+        min_size 1
+        max_size 10
+        step take default
+        step choose firstn 0 type osd
+        step emit
+}
+rule rbd {
+        ruleset 2
+        type replicated
+        min_size 1
+        max_size 10
+        step take default
+        step choose firstn 0 type osd
+        step emit
+}
+
+# end crush map
+</code></pre>
+
+<p>The relevant chunks of the config that I&rsquo;m interested in is the <strong>rule NAME {}</strong> blocks.
+As I&rsquo;m interested in making my data, meta-data and probably my rbd rule replicate across hosts, I naturally made the rule look like this</p>
+
+<pre><code>rule data {
+        ruleset 0
+        type replicated
+        min_size 1
+        max_size 10
+        step take default
+        step choose firstn 0 type host
+        step emit
+}
+</code></pre>
+
+<p>The above change is apparently incorrect as the last step before the <em>step emit</em> needs
+to be a device of some sort. I had found this out after posting the ceph-devel mailing
+list. There were two proposed solutions (thanks to Greg from inktank), the first
+proposed rule was</p>
+
+<pre><code>rule data {
+        ruleset 0
+        type replicated
+        min_size 1
+        max_size 10
+        step take default
+        step choose firstn 0 type host
+        step choose firstn 1 osd
+        step emit
+}
+</code></pre>
+
+<p>Which selects <em>n</em> hosts then the first osd from each host, but it can&rsquo;t deal with an entire hosts failed OSD&rsquo;s. The second proposed rule was</p>
+
+<pre><code>rule data {
+        ruleset 0
+        type replicated
+        min_size 1
+        max_size 10
+        step take default
+        step chooseleaf firstn 0 type host
+        step emit
+}
+</code></pre>
+
+<p>The above rule will select <em>n</em> hosts and an OSD from the host. It&rsquo;s pretty obvious that
+the second rule is the one that I want. I would expect that if I had more machines in
+racks and rows I could probably just replace host with rack, row or even data-center.</p>
+
+<p>With the second proposed rule, I made the changes to <em>mycrushmap.txt</em>. Once the changes
+are made, I had to compile the map into a binary format that the ceph cluster
+understands, this can be done by</p>
+
+<pre><code>crushtool -c /tmp/mycrushmap.txt -o /tmp/mycrushmap.new
+</code></pre>
+
+<p>Once the map is compiled it must then be applied to the cluster</p>
+
+<pre><code>ceph osd setcrushmap -i /tmp/mycrushmap.new
+</code></pre>
+
+<p>The above is documented on the ceph website. Once I applied the new CRUSH map I ran a <em>ceph -w</em> to see that
+the system had detected the changes and it then started to move data around on its own. I&rsquo;ll need to play
+with pulling out the network cable or SATA cables to see how the system behaves from me causing catastrophic
+failures in the test system.</p>
+
+<p>I&rsquo;m pretty sure I took the long way around to making the changes, there must be a more dynamic way of
+changing the system.</p>
+
+<p>To recap and review the above operation, it&rsquo;s again no harder than my reference system that I know, which is
+GPFS. GPFS doesn&rsquo;t allow me to do what ceph allows me to do. I would however like to see some more visible
+documentation relating to the CRUSH configuration parameters and tuneables.</p>
+
+<p>So far this has been a distraction from my main day job, but this will certainly help
+with the project that I am working on in the long run.</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="http://jcftang.github.com/blog/2012/09/04/adding-an-osd-to-a-ceph-cluster/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="http://jcftang.github.com/blog/2012/09/04/adding-an-osd-to-a-ceph-cluster/">adding an osd to a ceph cluster</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="http://jcftang.github.com/blog/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released/">ceph v0 dot 48 dot 2 argonaut released</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="http://jcftang.github.com/blog/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'jcftang';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="http://jcftang.github.com/js/ui.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-8597777-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>
+
