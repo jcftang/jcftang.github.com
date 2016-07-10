@@ -1,0 +1,54 @@
+baseurl = "http://jcftang.github.com/"
+languageCode = "en-us"
+title = "Jimmy Tang"
+theme = "blackburn"
+
+canonifyurls = true
+paginate = 10
+
+[params]
+googleAnalytics = "UA-8597777-2"
+disqus = "jcftang"
+highlightjs = "androidstudio"
+
+[permalinks]
+  post = "/blog/:year/:month/:day/:slug/"
+  fixed = "/:slug"
+
+[social]
+  twitter = "jcftang"
+  googleplus = "JimmyTang"
+
+  linkedin = "jimmy-tang-1b54322"
+
+  # Techie
+  github = "jcftang"
+
+[menu]
+    # Shown in the side menu.
+    [[menu.main]]
+    name = "Home"
+    pre = "<i class='fa fa-home fa-fw'></i>"
+    weight = 0
+    identifier = "home"
+    url = "/"
+
+    [[menu.main]]
+    name = "Posts"
+    pre = "<i class='fa fa-list fa-fw'></i>"
+    weight = 1
+    identifier = "post"
+    url = "/post/"
+
+    [[menu.main]]
+    name = "About"
+    pre = "<i class='fa fa-user fa-fw'></i>"
+    weight = 2
+    identifier = "about"
+    url = "/about/"
+
+[taxonomies]
+    tag = "tags"
+    topic = "topics"
+    category = "Categories"
+
