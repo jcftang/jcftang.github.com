@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jimmy Tang</title>
-    <link>http://jcftang.github.com/</link>
+    <link>http://jcftang.github.io/</link>
     <description>Recent content on Jimmy Tang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Jan 2015 19:28:55 +0000</lastBuildDate>
-    <atom:link href="http://jcftang.github.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jcftang.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>cobbler 2 dot 6 on ubuntu precise</title>
-      <link>http://jcftang.github.com/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/</link>
+      <link>http://jcftang.github.io/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/</link>
       <pubDate>Fri, 23 Jan 2015 19:28:55 +0000</pubDate>
       
-      <guid>http://jcftang.github.com/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/</guid>
+      <guid>http://jcftang.github.io/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve recently went and updated a bunch of things that I&amp;rsquo;m working
 with, and one of the things I decided to refresh was an automated
 installer. In the past I&amp;rsquo;ve relied on either hand rolled configurations
@@ -35,10 +35,10 @@ virtual machines as well as the usual bare metal systems.&lt;/p&gt;
     
     <item>
       <title>developer happiness with waf</title>
-      <link>http://jcftang.github.com/2014/09/24/developer-happiness-with-waf/</link>
+      <link>http://jcftang.github.io/2014/09/24/developer-happiness-with-waf/</link>
       <pubDate>Wed, 24 Sep 2014 17:40:46 +0100</pubDate>
       
-      <guid>http://jcftang.github.com/2014/09/24/developer-happiness-with-waf/</guid>
+      <guid>http://jcftang.github.io/2014/09/24/developer-happiness-with-waf/</guid>
       <description>&lt;p&gt;Having recently changed jobs (after a very long stint at TCD - just
 short of 10yrs!) I’ve moved to a small startup. I’ve been working
 on a few small bits and pieces of code, infrastructure, etc&amp;hellip; I
@@ -71,10 +71,10 @@ that I’m working on.&lt;/p&gt;
     
     <item>
       <title>hashdist for repeatably building an environment</title>
-      <link>http://jcftang.github.com/2014/06/22/hashdist-for-repeatably-building-an-environment/</link>
+      <link>http://jcftang.github.io/2014/06/22/hashdist-for-repeatably-building-an-environment/</link>
       <pubDate>Sun, 22 Jun 2014 14:52:42 +0100</pubDate>
       
-      <guid>http://jcftang.github.com/2014/06/22/hashdist-for-repeatably-building-an-environment/</guid>
+      <guid>http://jcftang.github.io/2014/06/22/hashdist-for-repeatably-building-an-environment/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve been happily hacking at some packages for
 &lt;a href=&#34;https://hashdist.github.com&#34;&gt;hashdist&lt;/a&gt;, it&amp;rsquo;s pretty nice, there
 other build systems out there for dealing with building applications
@@ -100,10 +100,10 @@ to a previous environment if something is broken or wrong.&lt;/p&gt;
     
     <item>
       <title>when to automate deployments and when not to</title>
-      <link>http://jcftang.github.com/2014/04/21/when-to-automate-deployments-and-when-not-to/</link>
+      <link>http://jcftang.github.io/2014/04/21/when-to-automate-deployments-and-when-not-to/</link>
       <pubDate>Mon, 21 Apr 2014 15:17:23 +0100</pubDate>
       
-      <guid>http://jcftang.github.com/2014/04/21/when-to-automate-deployments-and-when-not-to/</guid>
+      <guid>http://jcftang.github.io/2014/04/21/when-to-automate-deployments-and-when-not-to/</guid>
       <description>&lt;p&gt;We recently had Hydra Camp in Dublin in Trinity College Dublin which
 went pretty well. I even got to talk a little about what we&amp;rsquo;re doing
 with Shibboleth and how we&amp;rsquo;re deploying our systems.&lt;/p&gt;
@@ -129,10 +129,10 @@ on. This is especially useful when you have a CI or CD styled system.&lt;/p&gt;
     
     <item>
       <title>hydra europe 2014</title>
-      <link>http://jcftang.github.com/2014/02/25/hydra-europe-2014/</link>
+      <link>http://jcftang.github.io/2014/02/25/hydra-europe-2014/</link>
       <pubDate>Tue, 25 Feb 2014 18:16:09 +0800</pubDate>
       
-      <guid>http://jcftang.github.com/2014/02/25/hydra-europe-2014/</guid>
+      <guid>http://jcftang.github.io/2014/02/25/hydra-europe-2014/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s that time of the year again and it seems we&amp;rsquo;re going to hold another
 Hydra related event in work at Trinity College, Dublin.&lt;/p&gt;
 
@@ -143,10 +143,10 @@ Hydra related event in work at Trinity College, Dublin.&lt;/p&gt;
     
     <item>
       <title>building a private cloud with saltstack as the cloud controller</title>
-      <link>http://jcftang.github.com/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/</link>
+      <link>http://jcftang.github.io/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/</link>
       <pubDate>Tue, 31 Dec 2013 12:55:26 +0000</pubDate>
       
-      <guid>http://jcftang.github.com/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/</guid>
+      <guid>http://jcftang.github.io/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/</guid>
       <description>&lt;p&gt;After going to SC13 and being at a few BoF&amp;rsquo;s and hearing
 some people talk about their operations and potentially using
 &lt;a href=&#34;http://www.saltstack.com/&#34;&gt;Salt&lt;/a&gt; to replace the likes of puppet and chef,
@@ -180,10 +180,10 @@ few packer templates to build base images for CentOS 6.5 and Ubuntu 12.04.&lt;/p
     
     <item>
       <title>post sc13 thoughts</title>
-      <link>http://jcftang.github.com/2013/12/01/post-sc13-thoughts/</link>
+      <link>http://jcftang.github.io/2013/12/01/post-sc13-thoughts/</link>
       <pubDate>Sun, 01 Dec 2013 09:04:25 +0000</pubDate>
       
-      <guid>http://jcftang.github.com/2013/12/01/post-sc13-thoughts/</guid>
+      <guid>http://jcftang.github.io/2013/12/01/post-sc13-thoughts/</guid>
       <description>&lt;p&gt;I was recently at SC13 and attended a number of Python HPC tutorials,
 Data Management and HPC systems engineering and administration BOF&amp;rsquo;s.&lt;/p&gt;
 
@@ -198,10 +198,10 @@ adopted in this space.&lt;/p&gt;
     
     <item>
       <title>accelerating development and deployments with ansible</title>
-      <link>http://jcftang.github.com/2013/08/01/accelerating-development-and-deployments-with-ansible/</link>
+      <link>http://jcftang.github.io/2013/08/01/accelerating-development-and-deployments-with-ansible/</link>
       <pubDate>Thu, 01 Aug 2013 21:38:54 +0100</pubDate>
       
-      <guid>http://jcftang.github.com/2013/08/01/accelerating-development-and-deployments-with-ansible/</guid>
+      <guid>http://jcftang.github.io/2013/08/01/accelerating-development-and-deployments-with-ansible/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s probably no secret that we use Ansible at our work place for
 the project that I am working on. So far we&amp;rsquo;ve used it to deploy and
 maintain state for our Open Nebula deployment, Jenkins CI system, Ceph&amp;rsquo;s
@@ -236,10 +236,10 @@ least let me do so anyway.&lt;/p&gt;
     
     <item>
       <title>hydra and ansible</title>
-      <link>http://jcftang.github.com/2013/06/06/hydra-and-ansible/</link>
+      <link>http://jcftang.github.io/2013/06/06/hydra-and-ansible/</link>
       <pubDate>Thu, 06 Jun 2013 18:11:40 +0100</pubDate>
       
-      <guid>http://jcftang.github.com/2013/06/06/hydra-and-ansible/</guid>
+      <guid>http://jcftang.github.io/2013/06/06/hydra-and-ansible/</guid>
       <description>&lt;p&gt;The team that I am working with right are very much agile and we&amp;rsquo;re
 doing quite a bit of outside in development of the repository that we&amp;rsquo;re
 building. We&amp;rsquo;re mostly adopting a behaviour driven development with a
@@ -285,10 +285,10 @@ to be created for continuous deployment of our hydra-head.&lt;/p&gt;
     
     <item>
       <title>dri planet is somewhat back in action</title>
-      <link>http://jcftang.github.com/2013/05/19/dri-planet-is-somewhat-back-in-action/</link>
+      <link>http://jcftang.github.io/2013/05/19/dri-planet-is-somewhat-back-in-action/</link>
       <pubDate>Sun, 19 May 2013 08:51:15 +0100</pubDate>
       
-      <guid>http://jcftang.github.com/2013/05/19/dri-planet-is-somewhat-back-in-action/</guid>
+      <guid>http://jcftang.github.io/2013/05/19/dri-planet-is-somewhat-back-in-action/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve been meaning to fix the RSS aggregator at
 &lt;a href=&#34;http://www.tchpc.tcd.ie/dri-planet&#34;&gt;http://www.tchpc.tcd.ie/dri-planet&lt;/a&gt; for a while now, it&amp;rsquo;s fixed!&lt;/p&gt;
 
@@ -299,10 +299,10 @@ for work. The aggregated links may or may not be affiliated with my work.&lt;/p&
     
     <item>
       <title>zfs on linux is usable and safe</title>
-      <link>http://jcftang.github.com/2013/03/31/zfs-on-linux-is-usable-and-safe/</link>
+      <link>http://jcftang.github.io/2013/03/31/zfs-on-linux-is-usable-and-safe/</link>
       <pubDate>Sun, 31 Mar 2013 11:05:56 +0100</pubDate>
       
-      <guid>http://jcftang.github.com/2013/03/31/zfs-on-linux-is-usable-and-safe/</guid>
+      <guid>http://jcftang.github.io/2013/03/31/zfs-on-linux-is-usable-and-safe/</guid>
       <description>&lt;p&gt;It seems that ZFS On Linux reached a significant milestone, that is the
 software is stable to use on Linux. This is pretty useful and significant
 for the preservation and archivists community as it provides a more
@@ -321,10 +321,10 @@ be pretty desirable.&lt;/p&gt;
     
     <item>
       <title>testing and developing rails applications in a near production like environment</title>
-      <link>http://jcftang.github.com/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/</link>
+      <link>http://jcftang.github.io/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/</link>
       <pubDate>Wed, 27 Mar 2013 11:57:41 +0000</pubDate>
       
-      <guid>http://jcftang.github.com/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/</guid>
+      <guid>http://jcftang.github.io/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/</guid>
       <description>&lt;p&gt;At work we like to do lots of testing and behaviour driven development
 since we have a number of stakeholders and institutions all working on
 the same application. To make sure everyone is getting what they want
@@ -361,10 +361,10 @@ get me to where I need to be in a virtual environment&amp;hellip;&lt;/p&gt;
     
     <item>
       <title>amazon redshift a curiousity to me</title>
-      <link>http://jcftang.github.com/2013/03/24/amazon-redshift-a-curiousity-to-me/</link>
+      <link>http://jcftang.github.io/2013/03/24/amazon-redshift-a-curiousity-to-me/</link>
       <pubDate>Sun, 24 Mar 2013 11:16:54 +0000</pubDate>
       
-      <guid>http://jcftang.github.com/2013/03/24/amazon-redshift-a-curiousity-to-me/</guid>
+      <guid>http://jcftang.github.io/2013/03/24/amazon-redshift-a-curiousity-to-me/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve been recently reading up on Amazon [Redshift](), at first I thought
 it was a parallel/distributed datastore like HDFS. At a second look in
 reality its more of a distributed relational database. This in itself
@@ -392,10 +392,10 @@ challenge of having one real big database that can be queried.&lt;/p&gt;
     
     <item>
       <title>building kelvin supercomputer time lapse</title>
-      <link>http://jcftang.github.com/2013/03/22/building-kelvin-supercomputer-time-lapse/</link>
+      <link>http://jcftang.github.io/2013/03/22/building-kelvin-supercomputer-time-lapse/</link>
       <pubDate>Fri, 22 Mar 2013 07:46:26 +0000</pubDate>
       
-      <guid>http://jcftang.github.com/2013/03/22/building-kelvin-supercomputer-time-lapse/</guid>
+      <guid>http://jcftang.github.io/2013/03/22/building-kelvin-supercomputer-time-lapse/</guid>
       <description>&lt;p&gt;I was cleaning up some files and I found
 this time lapse that I did when we were building
 &lt;a href=&#34;http://www.tchpc.tcd.ie/resources/clusters/kelvin&#34;&gt;Kelvin&lt;/a&gt;, it&amp;rsquo;s a few
@@ -423,10 +423,10 @@ machines in the process.&lt;/p&gt;
     
     <item>
       <title>hydracamp 2013 trinity college  dublin</title>
-      <link>http://jcftang.github.com/2013/02/08/hydracamp-2013-trinity-college--dublin/</link>
+      <link>http://jcftang.github.io/2013/02/08/hydracamp-2013-trinity-college--dublin/</link>
       <pubDate>Fri, 08 Feb 2013 10:02:12 +0000</pubDate>
       
-      <guid>http://jcftang.github.com/2013/02/08/hydracamp-2013-trinity-college--dublin/</guid>
+      <guid>http://jcftang.github.io/2013/02/08/hydracamp-2013-trinity-college--dublin/</guid>
       <description>
 
 &lt;p&gt;After a few months of budgeting, negotiations and finding venues we&amp;rsquo;ve

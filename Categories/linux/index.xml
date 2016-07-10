@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on Jimmy Tang</title>
-    <link>http://jcftang.github.com/categories/linux/</link>
+    <link>http://jcftang.github.io/categories/linux/</link>
     <description>Recent content in Linux on Jimmy Tang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 08 Mar 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://jcftang.github.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jcftang.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>enabling latent semantic indexing for octopress</title>
-      <link>http://jcftang.github.com/2012/03/08/enabling-latent-semantic-indexing-for-octopress/</link>
+      <link>http://jcftang.github.io/2012/03/08/enabling-latent-semantic-indexing-for-octopress/</link>
       <pubDate>Thu, 08 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://jcftang.github.com/2012/03/08/enabling-latent-semantic-indexing-for-octopress/</guid>
+      <guid>http://jcftang.github.io/2012/03/08/enabling-latent-semantic-indexing-for-octopress/</guid>
       <description>
 
 &lt;p&gt;For those that care about having related posts on their [Octopress]()
