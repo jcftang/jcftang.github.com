@@ -1,7 +1,10 @@
-default:
+default: docs
+
+docs:
+	rm -rf public
 	hugo
 
-export-docs:
+export-docs: docs
 	git update-ref refs/heads/master origin/master '' 2>/dev/null || true
 	GIT_INDEX_FILE=gitindex.tmp; export GIT_INDEX_FILE; \
 	rm -f $${GIT_INDEX_FILE} && \
