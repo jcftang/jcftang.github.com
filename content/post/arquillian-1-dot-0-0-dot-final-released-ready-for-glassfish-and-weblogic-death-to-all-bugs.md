@@ -3,7 +3,7 @@ title = "arquillian 1 dot 0 0 dot final released ready for glassfish and weblogi
 date = "2012-04-16"
 
 
-Categories = []
+categories = []
 +++
 
 Looks like an interesting and useful tool, must take note of this tool

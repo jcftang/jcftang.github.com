@@ -3,7 +3,7 @@ title = "a poor mans nas device with ceph"
 date = "2012-09-23"
 
 
-Categories = []
+categories = []
 +++
 
 Given that I have a number of old 64bit capable desktop machines and a

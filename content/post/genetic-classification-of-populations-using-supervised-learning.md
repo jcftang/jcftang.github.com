@@ -3,7 +3,7 @@ title = "genetic classification of populations using supervised learning"
 date = "2012-02-26"
 
 
-Categories = []
+categories = []
 +++
 
 In the past few months, in my spare time whenever I get a chance, I've

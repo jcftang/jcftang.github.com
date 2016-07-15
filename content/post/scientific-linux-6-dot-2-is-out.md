@@ -3,7 +3,7 @@ title = "scientific linux 6 dot 2 is out"
 date = "2012-02-19"
 
 
-Categories = []
+categories = []
 +++
 
 SL6.2 has been out for a few days now, I haven't had a chance to

@@ -3,7 +3,7 @@ title = "things not to say and to do in a project meeting"
 date = "2012-02-23"
 
 
-Categories = []
+categories = []
 +++
 
 Team meetings can be both productive and counter productive as most

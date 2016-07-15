@@ -3,7 +3,7 @@ title = "is java really the only game in town for building digital preservation 
 date = "2012-05-16"
 
 
-Categories = []
+categories = []
 +++
 
 In the world of digital preservation and repositories it seems that

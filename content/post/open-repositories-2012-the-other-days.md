@@ -3,7 +3,7 @@ title = "open repositories 2012 the other days"
 date = "2012-07-15"
 
 
-Categories = []
+categories = []
 +++
 
 I finally had gotten back from the conference late in the evening on

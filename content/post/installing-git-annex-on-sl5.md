@@ -3,7 +3,7 @@ title = "installing git annex on sl5"
 date = "2012-06-15"
 
 
-Categories = []
+categories = []
 +++
 
 I was waiting for my backups to be done hence this post, as I was using

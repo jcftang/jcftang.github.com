@@ -3,7 +3,7 @@ title = "hydra and ansible"
 date = "2013-06-06T18:11:40+01:00"
 
 
-Categories = []
+categories = []
 +++
 
 The team that I am working with right are very much agile and we're

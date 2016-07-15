@@ -3,7 +3,7 @@ title = "an excuse to learn ruby and ruby on rails"
 date = "2012-08-02"
 
 
-Categories = []
+categories = []
 +++
 
 I've been a long time consumer of ruby applications but never quite

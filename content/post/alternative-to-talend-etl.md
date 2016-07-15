@@ -3,7 +3,7 @@ title = "alternative to talend etl"
 date = "2012-09-21"
 
 
-Categories = []
+categories = []
 +++
 
 I've used Talend ETL a few times, however I came across this application

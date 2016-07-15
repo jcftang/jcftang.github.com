@@ -3,7 +3,7 @@ title = "hydracamp 2013 trinity college  dublin"
 date = "2013-02-08T10:02:12+00:00"
 
 
-Categories = []
+categories = []
 +++
 
 After a few months of budgeting, negotiations and finding venues we've

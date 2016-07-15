@@ -2,7 +2,7 @@
 title = "feeling disconnected from modern software development tools"
 date = "2011-10-13"
 
-Categories = []
+categories = []
 +++
 
 I've recently started a new role as being a senior software engineer

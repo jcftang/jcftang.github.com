@@ -3,7 +3,7 @@ title = "taking vagrant and running with it"
 date = "2012-08-28"
 
 
-Categories = []
+categories = []
 +++
 
 Over past few weeks I've been working on doing some integration and

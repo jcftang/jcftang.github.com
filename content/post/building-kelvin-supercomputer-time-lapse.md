@@ -3,7 +3,7 @@ title = "building kelvin supercomputer time lapse"
 date = "2013-03-22T07:46:26+00:00"
 
 
-Categories = []
+categories = []
 +++
 
 I was cleaning up some files and I found

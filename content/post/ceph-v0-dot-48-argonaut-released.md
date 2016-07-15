@@ -3,7 +3,7 @@ title = "ceph v0 dot 48 argonaut released"
 date = "2012-07-05"
 
 
-Categories = []
+categories = []
 +++
 
 I've been eyeing this Ceph storage system for a while for a number of

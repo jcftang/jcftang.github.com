@@ -3,7 +3,7 @@ title = "dri planet is somewhat back in action"
 date = "2013-05-19T08:51:15+01:00"
 
 
-Categories = []
+categories = []
 +++
 
 I've been meaning to fix the RSS aggregator at

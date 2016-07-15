@@ -3,7 +3,7 @@ title = "accelerating development and deployments with ansible"
 date = "2013-08-01T21:38:54+01:00"
 
 
-Categories = []
+categories = []
 +++
 
 It's probably no secret that we use Ansible at our work place for

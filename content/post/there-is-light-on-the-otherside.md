@@ -3,7 +3,7 @@ title = "there is light on the otherside"
 date = "2012-11-04"
 
 
-Categories = []
+categories = []
 +++
 
 Having spent the best part of my Sunday afternoon playing with ansible

@@ -3,7 +3,7 @@ title = "dris workflows just got uploaded to github"
 date = "2012-05-21"
 
 
-Categories = []
+categories = []
 +++
 
 After almost 3 months supervising and working with two interns I've

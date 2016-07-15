@@ -3,7 +3,7 @@ title = "post sc13 thoughts"
 date = "2013-12-01T09:04:25+00:00"
 
 
-Categories = []
+categories = []
 +++
 
 I was recently at SC13 and attended a number of Python HPC tutorials,

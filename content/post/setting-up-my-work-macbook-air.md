@@ -2,7 +2,7 @@
 title = "setting up my work macbook air"
 date = "2011-10-21"
 
-Categories = []
+categories = []
 +++
 
 Everytime when I install, reinstall or setup a mac desktop or laptop I

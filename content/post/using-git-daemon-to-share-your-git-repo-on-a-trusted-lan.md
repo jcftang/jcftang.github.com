@@ -3,7 +3,7 @@ title = "using git daemon to share your git repo on a trusted lan"
 date = "2012-07-02"
 
 
-Categories = []
+categories = []
 +++
 
 One of the things that I don't like about [git](http://git-scm.com/) is

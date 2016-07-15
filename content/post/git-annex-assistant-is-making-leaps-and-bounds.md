@@ -3,7 +3,7 @@ title = "git annex assistant is making leaps and bounds"
 date = "2012-06-26"
 
 
-Categories = []
+categories = []
 +++
 
 I've been following the development of the new _git-annex assistant_

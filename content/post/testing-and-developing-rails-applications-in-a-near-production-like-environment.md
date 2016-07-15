@@ -3,7 +3,7 @@ title = "testing and developing rails applications in a near production like env
 date = "2013-03-27T11:57:41+00:00"
 
 
-Categories = []
+categories = []
 +++
 
 At work we like to do lots of testing and behaviour driven development

@@ -2,7 +2,7 @@
 title = "the joys of working with a team across multiple institutions"
 date = "2011-10-19"
 
-Categories = []
+categories = []
 +++
 
 Having worked in a number of cross institutional projects in the past

@@ -3,7 +3,7 @@ title = "installing ceph on sl6"
 date = "2012-07-06"
 
 
-Categories = []
+categories = []
 +++
 
 As an exercise of a Friday afternoon of not starting something big before

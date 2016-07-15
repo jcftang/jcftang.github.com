@@ -3,7 +3,7 @@ title = "tahoe lafs 1 dot 9 2 is released"
 date = "2012-07-05"
 
 
-Categories = []
+categories = []
 +++
 
 I've been happily using [tahoe-lafs](http://www.tahoe-lafs.org) for my

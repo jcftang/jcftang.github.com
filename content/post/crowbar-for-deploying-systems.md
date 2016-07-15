@@ -3,7 +3,7 @@ title = "crowbar for deploying systems"
 date = "2012-10-27"
 
 
-Categories = []
+categories = []
 +++
 
 I've been eyeing [crowbar](https://github.com/dellcloudedge/crowbar)

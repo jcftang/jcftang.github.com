@@ -3,7 +3,7 @@ title = "slurm bank that big script for banking in slurm"
 date = "2012-09-29"
 
 
-Categories = []
+categories = []
 +++
 
 A co-worker of mine (Paddy Doyle) had originally hacked at a perl script

@@ -3,7 +3,7 @@ title = "when to automate deployments and when not to"
 date = "2014-04-21T15:17:23+01:00"
 
 
-Categories = []
+categories = []
 +++
 
 We recently had Hydra Camp in Dublin in Trinity College Dublin which

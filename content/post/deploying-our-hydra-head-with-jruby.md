@@ -3,7 +3,7 @@ title = "deploying our hydra head with jruby"
 date = "2013-01-22T19:49:02+00:00"
 
 
-Categories = []
+categories = []
 +++
 
 We've been ramping up our development work on the project that I have been on

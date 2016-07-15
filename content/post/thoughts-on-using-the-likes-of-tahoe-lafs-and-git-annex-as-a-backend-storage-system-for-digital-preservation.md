@@ -3,7 +3,7 @@ title = "thoughts on using the likes of tahoe lafs and git annex as a backend st
 date = "2012-07-05"
 
 
-Categories = []
+categories = []
 +++
 
 Having happily running and using both git-annex and tahoe-lafs in the

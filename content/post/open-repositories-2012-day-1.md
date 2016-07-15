@@ -3,7 +3,7 @@ title = "open repositories 2012 day 1"
 date = "2012-07-09"
 
 
-Categories = []
+categories = []
 +++
 
 I only been here for a day and Edinburgh is as nice as I recall it

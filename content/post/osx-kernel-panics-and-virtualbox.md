@@ -3,7 +3,7 @@ title = "osx kernel panics and virtualbox"
 date = "2012-07-20"
 
 
-Categories = []
+categories = []
 +++
 
 Having discovered [vagrant](http://vagrantup.com/) and

@@ -3,7 +3,7 @@ title = "rasberry pi what i would use it for"
 date = "2012-02-19"
 
 
-Categories = []
+categories = []
 +++
 
 At the time of writing it seems that the Raspberry Pi site is down,

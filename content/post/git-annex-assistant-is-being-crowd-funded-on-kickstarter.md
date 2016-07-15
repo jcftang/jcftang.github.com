@@ -3,7 +3,7 @@ title = "git annex assistant is being crowd funded on kickstarter"
 date = "2012-06-04"
 
 
-Categories = []
+categories = []
 +++
 
 It seems [Joey Hess](http://kitenet.net/~joey/) is in the process of

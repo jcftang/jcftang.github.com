@@ -3,7 +3,7 @@ title = "going from replicating across osds to replicating across hosts in a cep
 date = "2012-09-06"
 
 
-Categories = []
+categories = []
 +++
 
 Having learnt how to remove and add monitor's, meta-data and data servers (mon's, mds's

@@ -3,7 +3,7 @@ title = "octopress 2 dot 1 taking a sneak peek"
 date = "2012-06-18"
 
 
-Categories = []
+categories = []
 +++
 
 I feel lucky and living on the edge and I've recently decided to take

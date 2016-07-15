@@ -3,7 +3,7 @@ title = "vagrant and veewee for managing virtual machines for development"
 date = "2012-07-17"
 
 
-Categories = []
+categories = []
 +++
 
 I only discovered [Vagrant](https://github.com/mitchellh/vagrant) last

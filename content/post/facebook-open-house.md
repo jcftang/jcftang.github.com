@@ -3,7 +3,7 @@ title = "facebook open house"
 date = "2012-06-07"
 
 
-Categories = []
+categories = []
 +++
 
 The event was actually on 2012-06-06 and it was invite only. The event

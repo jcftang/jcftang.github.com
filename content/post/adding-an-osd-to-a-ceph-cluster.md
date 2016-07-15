@@ -3,7 +3,7 @@ title = "adding an osd to a ceph cluster"
 date = "2012-09-04"
 
 
-Categories = []
+categories = []
 +++
 
 Having created a small single node Ceph cluster with following the [5 minute quickstart](http://ceph.com/docs/master/start/quick-start/) guide I was able to create a single node cluster with one OSD.

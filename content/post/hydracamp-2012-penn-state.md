@@ -3,7 +3,7 @@ title = "hydracamp 2012 penn state"
 date = "2012-10-13"
 
 
-Categories = []
+categories = []
 +++
 
 What do you do when you need a crash course on RoR, Hydra and frameworks for

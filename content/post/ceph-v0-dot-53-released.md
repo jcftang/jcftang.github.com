@@ -3,7 +3,7 @@ title = "ceph v0 dot 53 released"
 date = "2012-10-23"
 
 
-Categories = []
+categories = []
 +++
 
 There's a new release of Ceph, I hope that they release a stable soon so we can

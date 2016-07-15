@@ -3,7 +3,7 @@ title = "enabling latent semantic indexing for octopress"
 date = "2012-03-08"
 
 
-Categories = ["linux", "octopress"]
+categories = ["linux", "octopress"]
 +++
 
 For those that care about having related posts on their [Octopress]()

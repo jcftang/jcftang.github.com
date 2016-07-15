@@ -2,7 +2,7 @@
 title = "red hat enterprise linux life cycle extended to ten years"
 date = "2012-02-09"
 
-Categories = []
+categories = []
 +++
 
 It's all over the internet that RHEL6 and newer releases will have a

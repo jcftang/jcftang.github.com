@@ -3,7 +3,7 @@ title = "mosh an alternative to ssh"
 date = "2012-04-17"
 
 
-Categories = []
+categories = []
 +++
 
 This tool hasn't been around for too long, but long enough to make it

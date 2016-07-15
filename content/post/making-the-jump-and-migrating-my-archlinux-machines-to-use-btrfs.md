@@ -3,7 +3,7 @@ title = "making the jump and migrating my archlinux machines to use btrfs"
 date = "2013-01-02"
 
 
-Categories = []
+categories = []
 +++
 
 Having a few days of time off from work I've committed to migrating my

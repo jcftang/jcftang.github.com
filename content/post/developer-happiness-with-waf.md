@@ -3,7 +3,7 @@ title = "developer happiness with waf"
 date = "2014-09-24T17:40:46+01:00"
 
 
-Categories = ["python"]
+categories = ["python"]
 +++
 
 Having recently changed jobs (after a very long stint at TCD - just

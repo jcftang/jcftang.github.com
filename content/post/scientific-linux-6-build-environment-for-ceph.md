@@ -3,7 +3,7 @@ title = "scientific linux 6 build environment for ceph"
 date = "2012-09-02"
 
 
-Categories = []
+categories = []
 +++
 
 After my last failed attempt at [Installing Ceph on

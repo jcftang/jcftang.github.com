@@ -3,7 +3,7 @@ title = "cobbler 2 dot 6 on ubuntu precise"
 date = "2015-01-23T19:28:55+00:00"
 
 
-Categories = []
+categories = []
 +++
 
 I've recently went and updated a bunch of things that I'm working

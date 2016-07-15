@@ -3,7 +3,7 @@ title = "git rerere for long lived feature branches"
 date = "2012-03-11"
 
 
-Categories = []
+categories = []
 +++
 
 I turned this feature on for a few of my git repos but I had

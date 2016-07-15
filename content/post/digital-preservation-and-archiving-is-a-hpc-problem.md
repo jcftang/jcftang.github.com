@@ -3,7 +3,7 @@ title = "digital preservation and archiving is a hpc problem"
 date = "2012-10-07"
 
 
-Categories = []
+categories = []
 +++
 
 I shall be going to SC2012 next month, I plan on hitting a few of the

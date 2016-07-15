@@ -3,7 +3,7 @@ title = "top500 supercomputers for summer 2012"
 date = "2012-06-18"
 
 
-Categories = []
+categories = []
 +++
 
 The Top 500 List is out! It's been no surprise that LLNL and IBM has

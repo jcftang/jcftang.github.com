@@ -3,7 +3,7 @@ title = "git subtree is now in mainline git"
 date = "2012-05-02"
 
 
-Categories = []
+categories = []
 +++
 
 It seems that [git-subtree](git://github.com/apenwarr/git-subtree.git)

@@ -3,7 +3,7 @@ title = "dris workflows is now available via npm"
 date = "2012-06-13"
 
 
-Categories = []
+categories = []
 +++
 
 I've just uploaded the work that Matthias and Quirijn did over the

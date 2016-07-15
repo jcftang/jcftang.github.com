@@ -3,7 +3,7 @@ title = "ceph v0 dot 48 dot 2 argonaut released"
 date = "2012-09-21"
 
 
-Categories = []
+categories = []
 +++
 
 There's a new stable release of Ceph Argonaut, I seem to be having better

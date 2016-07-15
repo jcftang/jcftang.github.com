@@ -3,7 +3,7 @@ title = "planet dri a news aggregator for digital humanities and digital preserv
 date = "2012-03-04"
 
 
-Categories = []
+categories = []
 +++
 
 This is just a temporary solution till something better or more

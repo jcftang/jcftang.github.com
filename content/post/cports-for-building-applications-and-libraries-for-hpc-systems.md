@@ -2,7 +2,7 @@
 title = "cports for building applications and libraries for hpc systems"
 date = "2012-02-12"
 
-Categories = []
+categories = []
 +++
 
 I've talked about _cports_ in the past, it's basically a collection of

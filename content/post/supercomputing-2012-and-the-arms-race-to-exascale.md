@@ -3,7 +3,7 @@ title = "supercomputing 2012 and the arms race to exascale"
 date = "2012-11-16"
 
 
-Categories = []
+categories = []
 +++
 
 It was clear at this year's supercomputing conference that there wasn't

@@ -3,7 +3,7 @@ title = "gitbuilder aggregator"
 date = "2012-04-01"
 
 
-Categories = []
+categories = []
 +++
 
 We use git and [gitbuilder](https://github.com/apenwarr/gitbuilder) in

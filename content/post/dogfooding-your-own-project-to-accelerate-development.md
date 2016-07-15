@@ -3,7 +3,7 @@ title = "dogfooding your own project to accelerate development"
 date = "2012-03-15"
 
 
-Categories = []
+categories = []
 +++
 
 Should you dogfood your own project that you are developing? The

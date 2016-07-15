@@ -3,7 +3,7 @@ title = "building a private cloud with saltstack as the cloud controller"
 date = "2013-12-31T12:55:26+00:00"
 
 
-Categories = []
+categories = []
 +++
 
 After going to SC13 and being at a few BoF's and hearing

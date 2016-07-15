@@ -3,7 +3,7 @@ title = "why linux isnt the only platform to target when building applications"
 date = "2012-02-16"
 
 
-Categories = []
+categories = []
 +++
 
 Why would one want to target other platforms when building applications

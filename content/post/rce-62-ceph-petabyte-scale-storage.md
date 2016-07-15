@@ -3,7 +3,7 @@ title = "rce 62 ceph petabyte scale storage"
 date = "2012-09-01"
 
 
-Categories = []
+categories = []
 +++
 
 It's somewhat interesting to listen to, we've been looking at

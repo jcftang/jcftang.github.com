@@ -3,7 +3,7 @@ title = "slurm user group meeting 2012"
 date = "2012-04-30"
 
 
-Categories = []
+categories = []
 +++
 
 This time the usergroup meeting is in BSC in Spain (this place is

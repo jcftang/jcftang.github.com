@@ -3,7 +3,7 @@ title = "ceph gets a refresh"
 date = "2012-05-19"
 
 
-Categories = []
+categories = []
 +++
 
 I've been keeping an eye on _ceph_ for quite sometime now. It looks

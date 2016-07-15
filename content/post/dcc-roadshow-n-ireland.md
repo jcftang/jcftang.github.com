@@ -3,7 +3,7 @@ title = "dcc roadshow n ireland"
 date = "2012-06-06"
 
 
-Categories = []
+categories = []
 +++
 
 The 12th DCC regional roadshow will take place on 6th and 7th June at
