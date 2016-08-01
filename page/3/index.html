@@ -193,6 +193,39 @@
   
     <article>
   <header>
+    <h2><a href="http://jcftang.github.io/2012/10/27/crowbar-for-deploying-systems/">crowbar for deploying systems</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>27 Oct 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  </header>
+
+  <p>
+  I&rsquo;ve been eyeing crowbar recently, it looks pretty useful and interesting for deploying servers and applications. I haven&rsquo;t seen much if at all any documentation out there which suggests that people in the digital preservation and archiving fields are implementing systems at scale, I&rsquo;m under the impression that most systems/sites are building systems up one piece at a time without much automation. It seems to use chef in the backend for all the automation.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/10/27/crowbar-for-deploying-systems/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="http://jcftang.github.io/2012/10/23/ceph-v0-dot-53-released/">ceph v0 dot 53 released</a></h2>
 
     <div class="post-meta">
@@ -467,39 +500,6 @@
   
   <footer>
     <a href="http://jcftang.github.io/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="http://jcftang.github.io/2012/09/04/adding-an-osd-to-a-ceph-cluster/">adding an osd to a ceph cluster</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>04 Sep 2012, 00:00</time>
-  </div>
-
-  
-
-  
-
-  
-
-</div>
-
-  </header>
-
-  <p>
-  Having created a small single node Ceph cluster with following the 5 minute quickstart guide I was able to create a single node cluster with one OSD. This probably wouldn&rsquo;t be the first post that someone has written about this topic. I&rsquo;ve verified that it works in my test environment of Scientific Linux 6 by mounting the system with FUSE. Here&rsquo;s my fstab to describe my disk layout # /etc/fstab # Created by anaconda on Fri Jul 6 14:27:56 2012 # # Accessible filesystems, by reference, are maintained under '/dev/disk' # See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info # /dev/mapper/vg_ceres-lv_root / ext4 defaults,user_xattr 1 1 UUID=4eb5efad-dbcd-4a9f-8187-d8ffa913e147 /boot ext4 defaults 1 2 /dev/mapper/vg_ceres-lv_home /data1 ext4 defaults,user_xattr 1 2 /dev/sdb /data ext4 defaults,user_xattr 1 2 /dev/mapper/vg_ceres-lv_swap swap swap defaults 0 0 tmpfs /dev/shm tmpfs defaults 0 0 devpts /dev/pts devpts gid=5,mode=620 0 0 sysfs /sys sysfs defaults 0 0 proc /proc proc defaults 0 0 Running a df -h gives this $ df -h Filesystem Size Used Avail Use% Mounted on /dev/mapper/vg_ceres-lv_root 50G 5.5G 42G 12% / tmpfs 938M 0 938M 0% /dev/shm /dev/sda1 485M 80M 380M 18% /boot /dev/sdb 230G 1.2G 217G 1% /data ceph-fuse 230G 13G 217G 6% /mnt /dev/mapper/vg_ceres-lv_home 176G 188M 167G 1% /data1 I&rsquo;m using an old desktop machine so I can plonk some &ldquo;files&rdquo; on it so I can dogfood the test system in administering the bits and pieces of Ceph.
-  </p>
-
-  
-  <footer>
-    <a href="http://jcftang.github.io/2012/09/04/adding-an-osd-to-a-ceph-cluster/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

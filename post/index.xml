@@ -6,8 +6,37 @@
     <description>Recent content in Posts on Jimmy Tang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Jan 2015 19:28:55 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Aug 2016 10:26:34 +0100</lastBuildDate>
     <atom:link href="http://jcftang.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Acer Chromebook 11in, CB3-131</title>
+      <link>http://jcftang.github.io/2016/08/01/acer-chromebook-11in-cb3-131/</link>
+      <pubDate>Mon, 01 Aug 2016 10:26:34 +0100</pubDate>
+      
+      <guid>http://jcftang.github.io/2016/08/01/acer-chromebook-11in-cb3-131/</guid>
+      <description>&lt;p&gt;I recently picked up a cheap Acer Chromebook 11inch - CB3-131. It
+runs Chome OS. While it&amp;rsquo;s nice as a machine that just works for
+small things and travel. I found the environment to be a bit
+restrictive (less fun) to play with. I did try
+&lt;a href=&#34;https://github.com/dnschneid/crouton&#34;&gt;crouton&lt;/a&gt;, but it wasn&amp;rsquo;t what
+I had hoped for.&lt;/p&gt;
+
+&lt;p&gt;I proceeded to investigate installing a full linux distro onto my
+Chromebook and discovered that on some (the one that I got) has a
+physical write protect screw on the mainboard. I proceeded to take
+it apart and compared it to some photos of the older &lt;a href=&#34;https://plus.google.com/photos/+RyanSchelske/albums/6125754696828294017/6125754695280265442?pid=6125754695280265442&amp;amp;oid=109699564062072057954&#34;&gt;CB3-111&lt;/a&gt; model.
+I then proceeded to remove the write protect screw which I think
+is this one (circled in red). The layout of the board hasn&amp;rsquo;t changed
+much if at all, so it&amp;rsquo;s a pretty safe bet.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://jcftang.github.io/CB3-131.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve yet to try installing a linux like &lt;a href=&#34;https://galliumos.org/&#34;&gt;GalliumOS&lt;/a&gt;
+or just straight up Debian/Ubuntu. It seems the BayTrail chipset
+is less supported than the Haswell/Broadwell based Chromebooks.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>cobbler 2 dot 6 on ubuntu precise</title>
@@ -418,41 +447,6 @@ GPFS configuration.&lt;/p&gt;
 
 &lt;p&gt;Oh and we threw out the old cluster which was about 10racks of IBM e326
 machines in the process.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>hydracamp 2013 trinity college  dublin</title>
-      <link>http://jcftang.github.io/2013/02/08/hydracamp-2013-trinity-college--dublin/</link>
-      <pubDate>Fri, 08 Feb 2013 10:02:12 +0000</pubDate>
-      
-      <guid>http://jcftang.github.io/2013/02/08/hydracamp-2013-trinity-college--dublin/</guid>
-      <description>
-
-&lt;p&gt;After a few months of budgeting, negotiations and finding venues we&amp;rsquo;ve
-at Trinity College Dublin have committed to hosting a HydraCamp for
-europe! So I&amp;rsquo;m shamelessly plugging it here.&lt;/p&gt;
-
-&lt;p&gt;Trinity College Dublin as a part of Digital Repository of Ireland will
-be organising Hydra Camp in the week of April 8th till 12th, 2013. This
-will be a week long training course, which will be aimed at developers
-who are interested in the Hydra framework for developing repositories.&lt;/p&gt;
-
-&lt;p&gt;For those that don&amp;rsquo;t know Hydra is a framework built upon various
-Fedora-Commons, Apache SOLR, Ruby and Ruby on Rails technologies. At
-DRI we&amp;rsquo;re using it to build up our prototype repository.&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s possible to use the Hydra framework to build repositories for
-archiving and preservation.&lt;/p&gt;
-
-&lt;h3 id=&#34;resources&#34;&gt;Resources&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;HydraCamp 2013 - &lt;a href=&#34;http://www.tchpc.tcd.ie/hydracamp2013&#34;&gt;http://www.tchpc.tcd.ie/hydracamp2013&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Digital Repository of Ireland - &lt;a href=&#34;http://www.dri.ie/&#34;&gt;http://www.dri.ie/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Project Hydra - &lt;a href=&#34;http://projecthydra.org/&#34;&gt;http://projecthydra.org/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Data Curation Experts - &lt;a href=&#34;http://curationexperts.wordpress.com/&#34;&gt;http://curationexperts.wordpress.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

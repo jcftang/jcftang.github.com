@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.16-DEV" />
 
-  <title>cobbler 2 dot 6 on ubuntu precise &middot; Jimmy Tang</title>
+  <title>Acer Chromebook 11in, CB3-131 &middot; Jimmy Tang</title>
 
   
   
@@ -179,7 +179,7 @@
 
 
 <div class="header">
-  <h1>cobbler 2 dot 6 on ubuntu precise</h1>
+  <h1>Acer Chromebook 11in, CB3-131</h1>
   <h2></h2>
 </div>
 <div class="content">
@@ -188,45 +188,56 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>23 Jan 2015, 19:28</time>
+    <time>01 Aug 2016, 10:26</time>
   </div>
 
   
 
   
+  
+  
+  
 
+  
+  
+  
   
 
 </div>
 
-  <p>I&rsquo;ve recently went and updated a bunch of things that I&rsquo;m working
-with, and one of the things I decided to refresh was an automated
-installer. In the past I&rsquo;ve relied on either hand rolled configurations
-or more recently Ubuntu <a href="https://maas.ubuntu.com/">MAAS</a>. This time
-I decided to give <a href="http://www.cobblerd.org/">Cobbler</a> a try on my
-Ubuntu Precise installations.</p>
+  <p>I recently picked up a cheap Acer Chromebook 11inch - CB3-131. It
+runs Chome OS. While it&rsquo;s nice as a machine that just works for
+small things and travel. I found the environment to be a bit
+restrictive (less fun) to play with. I did try
+<a href="https://github.com/dnschneid/crouton">crouton</a>, but it wasn&rsquo;t what
+I had hoped for.</p>
 
-<p>Given Cobbler is pretty (or was) RHEL specific, I was not too
-disappointed with the Debian packaging. Most things worked, I did
-have to correct the dnsmasq and tftpd templates but it mostly worked.
-I&rsquo;ve a smallish salt formula for setting up said system at
-<a href="https://github.com/jcftang/cobbler-formula">https://github.com/jcftang/cobbler-formula</a></p>
+<p>I proceeded to investigate installing a full linux distro onto my
+Chromebook and discovered that on some (the one that I got) has a
+physical write protect screw on the mainboard. I proceeded to take
+it apart and compared it to some photos of the older <a href="https://plus.google.com/photos/+RyanSchelske/albums/6125754696828294017/6125754695280265442?pid=6125754695280265442&amp;oid=109699564062072057954">CB3-111</a> model.
+I then proceeded to remove the write protect screw which I think
+is this one (circled in red). The layout of the board hasn&rsquo;t changed
+much if at all, so it&rsquo;s a pretty safe bet.</p>
 
-<p>It&rsquo;s pretty nice that Cobbler is able to provision KVM or XEN based
-virtual machines as well as the usual bare metal systems.</p>
+<p><img src="http://jcftang.github.io/CB3-131.jpg" alt="" /></p>
+
+<p>I&rsquo;ve yet to try installing a linux like <a href="https://galliumos.org/">GalliumOS</a>
+or just straight up Debian/Ubuntu. It seems the BayTrail chipset
+is less supported than the Haswell/Broadwell based Chromebooks.</p>
 
 
   
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="http://jcftang.github.io/2014/09/24/developer-happiness-with-waf/"><i class="fa fa-chevron-left"></i></a>
+    <a href="http://jcftang.github.io/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="http://jcftang.github.io/2014/09/24/developer-happiness-with-waf/">developer happiness with waf</a>
+      <a href="http://jcftang.github.io/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/">cobbler 2 dot 6 on ubuntu precise</a>
     </nav>
     
   </div>
@@ -235,14 +246,8 @@ virtual machines as well as the usual bare metal systems.</p>
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="http://jcftang.github.io/2016/08/01/acer-chromebook-11in-cb3-131/">Acer Chromebook 11in, CB3-131</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="http://jcftang.github.io/2016/08/01/acer-chromebook-11in-cb3-131/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
