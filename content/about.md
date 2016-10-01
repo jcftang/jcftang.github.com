@@ -8,13 +8,14 @@ layout = "simple-static"
 
 ## Summary
 
-Jimmy Tang is a software engineer at Logentries within Rapid7.  He
-has worked on Quantum Biosystems, Digital Repository of Ireland and
-a number of grid storage systems in the HPC Europa 1 and 2 programs,
-developing management and storage solutions for numerical computing.
-He has also participated in the development and deployment of the
-infrastructure for the Irish African Partnership, 1641 Depositions,
-IITAC, eINIS and a number of other research projects.
+Jimmy Tang is a HPC SRE at Voysis.  He has worked at
+Logentries within Rapid7, Quantum Biosystems, Digital Repository
+of Ireland and a number of grid storage systems in the HPC Europa
+1 and 2 programs, developing management and storage solutions for
+numerical computing.  He has also participated in the development
+and deployment of the infrastructure for the Irish African Partnership,
+1641 Depositions, IITAC, eINIS and a number of other research
+projects.
 
 Jimmy has extensive knowledge in the development, deployment and
 maintenance of large-scale storage and computer systems. He has in
@@ -38,9 +39,10 @@ computing, numerical computing.
 
 ## Profile
 
-Jimmy Tang is the Principal DevOps engineer at Quantum Biosystems.
-He has worked on Digital Repository of Ireland and a number of grid
-storage systems in the HPC Europa 1 and 2 programs, developing
+Jimmy Tang is a senior high performance compute SRE at Voysis. He
+has worked as a Principal DevOps engineer at Logentries/Rapid7,
+Quantum Biosystems, Digital Repository of Ireland and a number of
+grid storage systems in the HPC Europa 1 and 2 programs, developing
 management and storage solutions for numerical computing. He has
 also participated in the development and deployment of the
 infrastructure for the Irish African Partnership, 1641 Depositions,
@@ -56,7 +58,7 @@ High Performance Computing.
 
 #### Programming
 
-* C programming, MPI programming. Experience with Perl, Fortran,
+* Python programming, C programming, MPI programming. Experience with Perl, Fortran,
   Matlab, Labview, C++, Java, Haskell.
 * Developed iRODs microservices for storage and processing
   of simulation data, mixture of C, C++ and shell scripting.
@@ -65,6 +67,7 @@ High Performance Computing.
 
 #### Administration and Configuration
 
+* Deploying and maintaining AWS based infrastructures.
 * GPFS, Lustre, Network block devices and NFS for serving user data on
   compute clusters and other systems.
 * Globus Toolkit installation and configuration for building data
@@ -75,7 +78,7 @@ High Performance Computing.
   network and clusters. Administration and configuration of various
   SAN storage systems.
 * Expert with MySQL, PostgreSQL. Experience with OracleDB.
-* Configuration management with ansible, saltstack, cfengine2, puppet and cdist.
+* Configuration management with ansible, chef, saltstack, cfengine2, puppet and cdist.
 * Packaging of software with .deb, .rpm and other packaging systems.
 * Cobbler for baremetal installations.
 
@@ -99,11 +102,17 @@ High Performance Computing.
 
 ### Current Employment
 
+#### Senior High Performance Computing SRE
+
+Responsiblities include
+
+* Deployment and maintenance of HPC cluster(s)
+
+### Past Employment
+
 #### Senior Software/Devops/Ops Engineer, Logentries at Rapid7
 
 Responsibilities are as before, except Rapid7 has acquired Logentries.
-
-### Past Employment
 
 #### Principle DevOps Engineer, Logentries.
 
