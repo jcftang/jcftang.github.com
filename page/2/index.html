@@ -5,19 +5,19 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.17-DEV" />
+  <meta name="generator" content="Hugo 0.25-DEV" />
 
   <title>Jimmy Tang</title>
 
   
   
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/pure-min.css">
 
   <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-min.css">
   <!--<![endif]-->
 
   <!--[if lte IE 8]>
@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="http://jcftang.github.io/css/blackburn.css">
 
   
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
@@ -41,12 +41,15 @@
   
 
   
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/androidstudio.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   
 
   <link rel="shortcut icon" href="http://jcftang.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+  
 
 </head>
 
@@ -68,12 +71,6 @@
       
       
         <li class="pure-menu-item">
-          <a class="pure-menu-link" href="http://jcftang.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
           <a class="pure-menu-link" href="http://jcftang.github.io/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
       
         </li>
@@ -81,6 +78,12 @@
       
         <li class="pure-menu-item">
           <a class="pure-menu-link" href="http://jcftang.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://jcftang.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
       
         </li>
       
@@ -135,6 +138,10 @@
     
 
     
+
+    
+
+    
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://linkedin.com/in/jimmy-tang-1b54322" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
     </li>
@@ -154,6 +161,22 @@
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/jcftang" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -213,7 +236,8 @@
   </header>
 
   <p>
-  I&rsquo;ve been meaning to fix the RSS aggregator at http://www.tchpc.tcd.ie/dri-planet for a while now, it&rsquo;s fixed! Note that it&rsquo;s just something that aggregates news that I think are useful for work. The aggregated links may or may not be affiliated with my work.
+  I&rsquo;ve been meaning to fix the RSS aggregator at http://www.tchpc.tcd.ie/dri-planet for a while now, it&rsquo;s fixed!
+Note that it&rsquo;s just something that aggregates news that I think are useful for work. The aggregated links may or may not be affiliated with my work.
   </p>
 
   
@@ -242,7 +266,8 @@
   </header>
 
   <p>
-  It seems that ZFS On Linux reached a significant milestone, that is the software is stable to use on Linux. This is pretty useful and significant for the preservation and archivists community as it provides a more reliable platform to build on. The LLNL guys must really want to mitigate against silent data failures in their systems (they&rsquo;re running Lustre on top of ZFS). If ZFS is trustable or not we will know over time.
+  It seems that ZFS On Linux reached a significant milestone, that is the software is stable to use on Linux. This is pretty useful and significant for the preservation and archivists community as it provides a more reliable platform to build on. The LLNL guys must really want to mitigate against silent data failures in their systems (they&rsquo;re running Lustre on top of ZFS).
+If ZFS is trustable or not we will know over time.
   </p>
 
   
@@ -275,7 +300,8 @@
   </header>
 
   <p>
-  At work we like to do lots of testing and behaviour driven development since we have a number of stakeholders and institutions all working on the same application. To make sure everyone is getting what they want we&rsquo;re using cucumber to write our specifications; that is we&rsquo;re primarily doing outside in developement of our system. As such we like to test things in a near production like environment&hellip; Having chosen to use capybara-webkit to test the interface (at a very functional and simplistic level) on our workstations.
+  At work we like to do lots of testing and behaviour driven development since we have a number of stakeholders and institutions all working on the same application. To make sure everyone is getting what they want we&rsquo;re using cucumber to write our specifications; that is we&rsquo;re primarily doing outside in developement of our system.
+As such we like to test things in a near production like environment&hellip; Having chosen to use capybara-webkit to test the interface (at a very functional and simplistic level) on our workstations.
   </p>
 
   
@@ -308,7 +334,8 @@
   </header>
 
   <p>
-  I&rsquo;ve been recently reading up on Amazon [Redshift](), at first I thought it was a parallel/distributed datastore like HDFS. At a second look in reality its more of a distributed relational database. This in itself is pretty cool for scaling applications with large data sets that happen to need to be in a database; which is quite a few things. From the initial reading of the architecture and docs, it looks like Amazon built a job queuing system around postgres to schedule queries out to its nodes in the cluster.
+  I&rsquo;ve been recently reading up on Amazon [Redshift](), at first I thought it was a parallel/distributed datastore like HDFS. At a second look in reality its more of a distributed relational database. This in itself is pretty cool for scaling applications with large data sets that happen to need to be in a database; which is quite a few things.
+From the initial reading of the architecture and docs, it looks like Amazon built a job queuing system around postgres to schedule queries out to its nodes in the cluster.
   </p>
 
   
@@ -341,7 +368,9 @@
   </header>
 
   <p>
-  I was cleaning up some files and I found this time lapse that I did when we were building Kelvin, it&rsquo;s a few years old now. Even by current standards it&rsquo;s still pretty respectable. The timelapse We had to unpack and install all the infiniband cards ourselves, cabled, racked, installed, configured and burnt it in for production usage. The cluster has 100 nodes, each node has 2 sockets, each socket has 6 cores and 24gb of ram.
+  I was cleaning up some files and I found this time lapse that I did when we were building Kelvin, it&rsquo;s a few years old now. Even by current standards it&rsquo;s still pretty respectable.
+The timelapse
+We had to unpack and install all the infiniband cards ourselves, cabled, racked, installed, configured and burnt it in for production usage. The cluster has 100 nodes, each node has 2 sockets, each socket has 6 cores and 24gb of ram.
   </p>
 
   
@@ -374,7 +403,8 @@
   </header>
 
   <p>
-  After a few months of budgeting, negotiations and finding venues we&rsquo;ve at Trinity College Dublin have committed to hosting a HydraCamp for europe! So I&rsquo;m shamelessly plugging it here. Trinity College Dublin as a part of Digital Repository of Ireland will be organising Hydra Camp in the week of April 8th till 12th, 2013. This will be a week long training course, which will be aimed at developers who are interested in the Hydra framework for developing repositories.
+  After a few months of budgeting, negotiations and finding venues we&rsquo;ve at Trinity College Dublin have committed to hosting a HydraCamp for europe! So I&rsquo;m shamelessly plugging it here.
+Trinity College Dublin as a part of Digital Repository of Ireland will be organising Hydra Camp in the week of April 8th till 12th, 2013. This will be a week long training course, which will be aimed at developers who are interested in the Hydra framework for developing repositories.
   </p>
 
   
@@ -407,7 +437,8 @@
   </header>
 
   <p>
-  We&rsquo;ve been ramping up our development work on the project that I have been on in the last month or so. One of the issues that we&rsquo;ve come across is the not so good XML validation and parsing libraries that are available in the ruby world compared to the java world. So as an exercise I decided to see if I could make our prototype work with jruby with the view of doing a test deployment on tomcat or some other application server.
+  We&rsquo;ve been ramping up our development work on the project that I have been on in the last month or so. One of the issues that we&rsquo;ve come across is the not so good XML validation and parsing libraries that are available in the ruby world compared to the java world.
+So as an exercise I decided to see if I could make our prototype work with jruby with the view of doing a test deployment on tomcat or some other application server.
   </p>
 
   
@@ -440,7 +471,8 @@
   </header>
 
   <p>
-  Having a few days of time off from work I&rsquo;ve committed to migrating my archlinux based laptops to using btrfs. I&rsquo;ve to date been just using ext4 and nilfs2 (on an SD card) on my eeepc and plain old ext4 on the bigger laptop. The main motivation was that the two devices were pretty outdated and I felt lucky with doing a major upgrade (replaced sysvinit with systemd as recommended by the archlinux people) I didn&rsquo;t want to reinstall my machines so I took the route of converting the existing ext4 partitions to btrfs.
+  Having a few days of time off from work I&rsquo;ve committed to migrating my archlinux based laptops to using btrfs. I&rsquo;ve to date been just using ext4 and nilfs2 (on an SD card) on my eeepc and plain old ext4 on the bigger laptop.
+The main motivation was that the two devices were pretty outdated and I felt lucky with doing a major upgrade (replaced sysvinit with systemd as recommended by the archlinux people)
   </p>
 
   
@@ -506,7 +538,9 @@
   </header>
 
   <p>
-  Having spent the best part of my Sunday afternoon playing with ansible just to learn and see what all the fuss is about, I was pleasantly surprised with it. I had installed ansible on my OSX laptop and vagrant-ansible for my vagrant test environment. The plan was to try and re-create my current ruby on rails development and test virtual machine with vagrant. A secondary goal was to get it to work with both Ubuntu Precise (LTS) and Scientific Linux 6.
+  Having spent the best part of my Sunday afternoon playing with ansible just to learn and see what all the fuss is about, I was pleasantly surprised with it.
+I had installed ansible on my OSX laptop and vagrant-ansible for my vagrant test environment.
+The plan was to try and re-create my current ruby on rails development and test virtual machine with vagrant. A secondary goal was to get it to work with both Ubuntu Precise (LTS) and Scientific Linux 6.
   </p>
 
   

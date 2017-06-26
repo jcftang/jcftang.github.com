@@ -5,19 +5,19 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.17-DEV" />
+  <meta name="generator" content="Hugo 0.25-DEV" />
 
   <title>Jimmy Tang</title>
 
   
   
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/pure-min.css">
 
   <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-min.css">
   <!--<![endif]-->
 
   <!--[if lte IE 8]>
@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="http://jcftang.github.io/css/blackburn.css">
 
   
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
@@ -41,12 +41,15 @@
   
 
   
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/androidstudio.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   
 
   <link rel="shortcut icon" href="http://jcftang.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+  
 
 </head>
 
@@ -68,12 +71,6 @@
       
       
         <li class="pure-menu-item">
-          <a class="pure-menu-link" href="http://jcftang.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
           <a class="pure-menu-link" href="http://jcftang.github.io/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
       
         </li>
@@ -81,6 +78,12 @@
       
         <li class="pure-menu-item">
           <a class="pure-menu-link" href="http://jcftang.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://jcftang.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
       
         </li>
       
@@ -135,6 +138,10 @@
     
 
     
+
+    
+
+    
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://linkedin.com/in/jimmy-tang-1b54322" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
     </li>
@@ -154,6 +161,22 @@
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/jcftang" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -213,7 +236,8 @@
   </header>
 
   <p>
-  We use git and gitbuilder in work for a large number of projects, we also try and test things as much as we can. I first noticed that someone had written an aggregator for gitbuilder at ceph gitbuilders, this seemed like a great idea (and it is) except the aggregator at the time didn&rsquo;t quite work very fast and needed some ajax magic. I had asked for a copy of the aggregator script from the ceph developers, this was really just a perl hack as they said, but it works.
+  We use git and gitbuilder in work for a large number of projects, we also try and test things as much as we can. I first noticed that someone had written an aggregator for gitbuilder at ceph gitbuilders, this seemed like a great idea (and it is) except the aggregator at the time didn&rsquo;t quite work very fast and needed some ajax magic.
+I had asked for a copy of the aggregator script from the ceph developers, this was really just a perl hack as they said, but it works.
   </p>
 
   
@@ -246,7 +270,8 @@
   </header>
 
   <p>
-  Should you dogfood your own project that you are developing? The answer is probably yes, especially if you have no clear cut requirements from the stakeholder in a project with a greenfield for development. There is a lot to be said about having a working implementation that can be presented and refined. Sometimes the project that you are working on won&rsquo;t have clear requirements for implementation, so you should probably take basic assumed cases and run with it.
+  Should you dogfood your own project that you are developing? The answer is probably yes, especially if you have no clear cut requirements from the stakeholder in a project with a greenfield for development. There is a lot to be said about having a working implementation that can be presented and refined.
+Sometimes the project that you are working on won&rsquo;t have clear requirements for implementation, so you should probably take basic assumed cases and run with it.
   </p>
 
   
@@ -279,9 +304,14 @@
   </header>
 
   <p>
-  I turned this feature on for a few of my git repos but I had completely forgotten about it. As far as I recall the feature has been around for a few years now. It can be turned on globally by doing git config --global rerere.enabled 1 It pretty much automates the resolution of conflicts in long lived branches. I&rsquo;ve been lazy recently and I have just doing merges instead rebasing, which lead me to re-discover git rerere.
+  I turned this feature on for a few of my git repos but I had completely forgotten about it. As far as I recall the feature has been around for a few years now. It can be turned on globally by doing
+git config --global rerere.enabled 1  It pretty much automates the resolution of conflicts in long lived branches. I&rsquo;ve been lazy recently and I have just doing merges instead rebasing, which lead me to re-discover git rerere.
   </p>
 
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/03/11/git-rerere-for-long-lived-feature-branches/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
   
 </article>
 
@@ -308,7 +338,10 @@
   </header>
 
   <p>
-  For those that care about having related posts on their [Octopress]() blog. It&rsquo;s actually quite easy to turn it on, it&rsquo;s nice to have and useful. But it&rsquo;s not enabled by default in Octopress. This feature already exists in jekyll, enabling this feature in Octopress is a trival task. Firstly add this to your _config.yml file lsi: true Then create a file such as source/_includes/custom/asides/related.html with the following content, add it to one of your asides in _config.yml {% raw %} Related Posts {% for post in site.related_posts limit:5 %} {{ post.title }} {% endfor %} {% endraw %} It is possible to style the list, but in the above I have chosen to keep the same style as the recent posts.
+  For those that care about having related posts on their [Octopress]() blog. It&rsquo;s actually quite easy to turn it on, it&rsquo;s nice to have and useful. But it&rsquo;s not enabled by default in Octopress.
+This feature already exists in jekyll, enabling this feature in Octopress is a trival task.
+Firstly add this to your _config.yml file
+lsi: true  Then create a file such as source/_includes/custom/asides/related.html with the following content, add it to one of your asides in _config.
   </p>
 
   
@@ -341,7 +374,8 @@
   </header>
 
   <p>
-  This is just a temporary solution till something better or more appropriate comes along. It&rsquo;s just an ikiwiki news aggregator for websites and projects which are related to Digital Preservation, Digitial Humanities and other related bits and pieces. It was pretty much setup for myself to keep up to date with all the latest happenings. I found myself falling behind in being knowledgeable in all things related to Digital Repositories Ireland.
+  This is just a temporary solution till something better or more appropriate comes along. It&rsquo;s just an ikiwiki news aggregator for websites and projects which are related to Digital Preservation, Digitial Humanities and other related bits and pieces.
+It was pretty much setup for myself to keep up to date with all the latest happenings. I found myself falling behind in being knowledgeable in all things related to Digital Repositories Ireland.
   </p>
 
   
@@ -407,7 +441,8 @@
   </header>
 
   <p>
-  Team meetings can be both productive and counter productive as most people find. If they are well structured with a purpose and goal then a lot can be achieved (most of the time). For explorartory meetings, it&rsquo;s probably okay to have some time set aside for some free and open discussions. Once a goal has been agreed upon, it&rsquo;s probably a good idea to focus on it more and steer the discussion to try and deliver on the goal.
+  Team meetings can be both productive and counter productive as most people find. If they are well structured with a purpose and goal then a lot can be achieved (most of the time).
+For explorartory meetings, it&rsquo;s probably okay to have some time set aside for some free and open discussions. Once a goal has been agreed upon, it&rsquo;s probably a good idea to focus on it more and steer the discussion to try and deliver on the goal.
   </p>
 
   
@@ -440,7 +475,8 @@
   </header>
 
   <p>
-  At the time of writing it seems that the Raspberry Pi site is down, probably suffering from a slashdot effect. I would imagine almost every nerd, sheevaplug developer, OLPC developer, DIY&rsquo;ers who want to build their own home media centres are looking to get a Raspberry Pi right now. So what would I use one of these mini-computers for? I can think up a range of cool applications for this device, assuming I can order a few of these to play with.
+  At the time of writing it seems that the Raspberry Pi site is down, probably suffering from a slashdot effect. I would imagine almost every nerd, sheevaplug developer, OLPC developer, DIY&rsquo;ers who want to build their own home media centres are looking to get a Raspberry Pi right now.
+So what would I use one of these mini-computers for? I can think up a range of cool applications for this device, assuming I can order a few of these to play with.
   </p>
 
   
@@ -473,7 +509,8 @@
   </header>
 
   <p>
-  SL6.2 has been out for a few days now, I haven&rsquo;t had a chance to really take a look at it, since the more recent SL6 installs I maintain tend to be tracking the 6x releases. Hopefully SL will try and keep inline with the upstreams support schedule. I&rsquo;ve a personal preference for deploying SL over CentOS (or any other recompiles of RHEL). SL tends to be a bit more polished in terms of not breaking older installs, i.e.
+  SL6.2 has been out for a few days now, I haven&rsquo;t had a chance to really take a look at it, since the more recent SL6 installs I maintain tend to be tracking the 6x releases. Hopefully SL will try and keep inline with the upstreams support schedule.
+I&rsquo;ve a personal preference for deploying SL over CentOS (or any other recompiles of RHEL). SL tends to be a bit more polished in terms of not breaking older installs, i.
   </p>
 
   
@@ -506,7 +543,8 @@
   </header>
 
   <p>
-  Why would one want to target other platforms when building applications on the server side? This came out of a conversation with the ex-CTO of Creme software (he is also a friend of mine), the conversation started out with why I like to use Macs and OSX as my laptop or workstation. I&rsquo;ve been a long time Linux user of pretty much most of the major distributions ranging from RHEL, Debian/Ubuntu, Gentoo, ArchLinux as well as a number of other derivatives, not to mention other systems like the BSD&rsquo;s which I have a soft spot for.
+  Why would one want to target other platforms when building applications on the server side?
+This came out of a conversation with the ex-CTO of Creme software (he is also a friend of mine), the conversation started out with why I like to use Macs and OSX as my laptop or workstation. I&rsquo;ve been a long time Linux user of pretty much most of the major distributions ranging from RHEL, Debian/Ubuntu, Gentoo, ArchLinux as well as a number of other derivatives, not to mention other systems like the BSD&rsquo;s which I have a soft spot for.
   </p>
 
   

@@ -7,7 +7,9 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Aug 2016 10:26:34 +0100</lastBuildDate>
-    <atom:link href="http://jcftang.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://jcftang.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Acer Chromebook 11in, CB3-131</title>
@@ -15,27 +17,8 @@
       <pubDate>Mon, 01 Aug 2016 10:26:34 +0100</pubDate>
       
       <guid>http://jcftang.github.io/2016/08/01/acer-chromebook-11in-cb3-131/</guid>
-      <description>&lt;p&gt;I recently picked up a cheap Acer Chromebook 11inch - CB3-131. It
-runs Chome OS. While it&amp;rsquo;s nice as a machine that just works for
-small things and travel. I found the environment to be a bit
-restrictive (less fun) to play with. I did try
-&lt;a href=&#34;https://github.com/dnschneid/crouton&#34;&gt;crouton&lt;/a&gt;, but it wasn&amp;rsquo;t what
-I had hoped for.&lt;/p&gt;
-
-&lt;p&gt;I proceeded to investigate installing a full linux distro onto my
-Chromebook and discovered that on some (the one that I got) has a
-physical write protect screw on the mainboard. I proceeded to take
-it apart and compared it to some photos of the older &lt;a href=&#34;https://plus.google.com/photos/+RyanSchelske/albums/6125754696828294017/6125754695280265442?pid=6125754695280265442&amp;amp;oid=109699564062072057954&#34;&gt;CB3-111&lt;/a&gt; model.
-I then proceeded to remove the write protect screw which I think
-is this one (circled in red). The layout of the board hasn&amp;rsquo;t changed
-much if at all, so it&amp;rsquo;s a pretty safe bet.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://jcftang.github.io/CB3-131.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve yet to try installing a linux like &lt;a href=&#34;https://galliumos.org/&#34;&gt;GalliumOS&lt;/a&gt;
-or just straight up Debian/Ubuntu. It seems the BayTrail chipset
-is less supported than the Haswell/Broadwell based Chromebooks.&lt;/p&gt;
-</description>
+      <description>I recently picked up a cheap Acer Chromebook 11inch - CB3-131. It runs Chome OS. While it&amp;rsquo;s nice as a machine that just works for small things and travel. I found the environment to be a bit restrictive (less fun) to play with. I did try crouton, but it wasn&amp;rsquo;t what I had hoped for.
+I proceeded to investigate installing a full linux distro onto my Chromebook and discovered that on some (the one that I got) has a physical write protect screw on the mainboard.</description>
     </item>
     
     <item>
@@ -44,22 +27,8 @@ is less supported than the Haswell/Broadwell based Chromebooks.&lt;/p&gt;
       <pubDate>Fri, 23 Jan 2015 19:28:55 +0000</pubDate>
       
       <guid>http://jcftang.github.io/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve recently went and updated a bunch of things that I&amp;rsquo;m working
-with, and one of the things I decided to refresh was an automated
-installer. In the past I&amp;rsquo;ve relied on either hand rolled configurations
-or more recently Ubuntu &lt;a href=&#34;https://maas.ubuntu.com/&#34;&gt;MAAS&lt;/a&gt;. This time
-I decided to give &lt;a href=&#34;http://www.cobblerd.org/&#34;&gt;Cobbler&lt;/a&gt; a try on my
-Ubuntu Precise installations.&lt;/p&gt;
-
-&lt;p&gt;Given Cobbler is pretty (or was) RHEL specific, I was not too
-disappointed with the Debian packaging. Most things worked, I did
-have to correct the dnsmasq and tftpd templates but it mostly worked.
-I&amp;rsquo;ve a smallish salt formula for setting up said system at
-&lt;a href=&#34;https://github.com/jcftang/cobbler-formula&#34;&gt;https://github.com/jcftang/cobbler-formula&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s pretty nice that Cobbler is able to provision KVM or XEN based
-virtual machines as well as the usual bare metal systems.&lt;/p&gt;
-</description>
+      <description>I&amp;rsquo;ve recently went and updated a bunch of things that I&amp;rsquo;m working with, and one of the things I decided to refresh was an automated installer. In the past I&amp;rsquo;ve relied on either hand rolled configurations or more recently Ubuntu MAAS. This time I decided to give Cobbler a try on my Ubuntu Precise installations.
+Given Cobbler is pretty (or was) RHEL specific, I was not too disappointed with the Debian packaging.</description>
     </item>
     
     <item>
@@ -68,34 +37,8 @@ virtual machines as well as the usual bare metal systems.&lt;/p&gt;
       <pubDate>Wed, 24 Sep 2014 17:40:46 +0100</pubDate>
       
       <guid>http://jcftang.github.io/2014/09/24/developer-happiness-with-waf/</guid>
-      <description>&lt;p&gt;Having recently changed jobs (after a very long stint at TCD - just
-short of 10yrs!) I’ve moved to a small startup. I’ve been working
-on a few small bits and pieces of code, infrastructure, etc&amp;hellip; I
-had to make some stuff work and make it work well. So I decided to
-use autotools to configure and build the application that I’m working
-on.&lt;/p&gt;
-
-&lt;p&gt;As great as it was on my nice fast intel based machine, it was dog
-slow on my target platform, especially when I had to regenerate the
-autoconf scripts.&lt;/p&gt;
-
-&lt;p&gt;To get to the point, I ended up spending a day or two checking out
-alternatives (that wasn’t cmake) and came across
-&lt;a href=&#34;https://code.google.com/p/waf/&#34;&gt;waf&lt;/a&gt;, the documentation isn’t all
-that great if you just look at the website, I had to spend a few
-hours digging around to get what I wanted.&lt;/p&gt;
-
-&lt;p&gt;Once I ported my application over to using waf, the configure and
-build process was an order of magnitude faster than autotools. This
-made a huge difference on my target platform. I noticed that waf
-ships with some experimental plugins like the daemon plugin which
-runs a build when it notices that somefiles have changed.&lt;/p&gt;
-
-&lt;p&gt;This daemon plugin is &lt;em&gt;great&lt;/em&gt; it gives waf similar behaviour to
-what java developers have with junit and eclipse. I’m finding that
-waf is making me happy when I develop and fix stuff in the application
-that I’m working on.&lt;/p&gt;
-</description>
+      <description>Having recently changed jobs (after a very long stint at TCD - just short of 10yrs!) I’ve moved to a small startup. I’ve been working on a few small bits and pieces of code, infrastructure, etc&amp;hellip; I had to make some stuff work and make it work well. So I decided to use autotools to configure and build the application that I’m working on.
+As great as it was on my nice fast intel based machine, it was dog slow on my target platform, especially when I had to regenerate the autoconf scripts.</description>
     </item>
     
     <item>
@@ -104,27 +47,8 @@ that I’m working on.&lt;/p&gt;
       <pubDate>Sun, 22 Jun 2014 14:52:42 +0100</pubDate>
       
       <guid>http://jcftang.github.io/2014/06/22/hashdist-for-repeatably-building-an-environment/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve been happily hacking at some packages for
-&lt;a href=&#34;https://hashdist.github.com&#34;&gt;hashdist&lt;/a&gt;, it&amp;rsquo;s pretty nice, there
-other build systems out there for dealing with building applications
-and libraries with different combinations of compilers and numerical
-libraries. Out of the lot I think hashdist has been the most satisfying
-to use so far. It&amp;rsquo;s still missing some bits and pieces to allow users
-to use different compilers for key components (or everything).&lt;/p&gt;
-
-&lt;p&gt;Without explaining too much, it&amp;rsquo;s basically taking inputs which define
-a package and then generating an output hash to store the output of the
-build. This means that as you modify the the environment and rebuild, it
-will install the updated packages into a different location. Traditionally
-I would have just overwritten the old versions or install it into a named
-directory, then setup a module file for it etc&amp;hellip; with hashdist there
-is less messing around. It doesn&amp;rsquo;t fully solve the problem of having
-multiple versions of the software available at any one point in time,
-but it does let you have many versions installed and you can create
-different inputs profiles to get access to the &amp;lsquo;builds&amp;rsquo;. This means you
-can version control your environment, it also means you can roll back
-to a previous environment if something is broken or wrong.&lt;/p&gt;
-</description>
+      <description>I&amp;rsquo;ve been happily hacking at some packages for hashdist, it&amp;rsquo;s pretty nice, there other build systems out there for dealing with building applications and libraries with different combinations of compilers and numerical libraries. Out of the lot I think hashdist has been the most satisfying to use so far. It&amp;rsquo;s still missing some bits and pieces to allow users to use different compilers for key components (or everything).
+Without explaining too much, it&amp;rsquo;s basically taking inputs which define a package and then generating an output hash to store the output of the build.</description>
     </item>
     
     <item>
@@ -133,27 +57,9 @@ to a previous environment if something is broken or wrong.&lt;/p&gt;
       <pubDate>Mon, 21 Apr 2014 15:17:23 +0100</pubDate>
       
       <guid>http://jcftang.github.io/2014/04/21/when-to-automate-deployments-and-when-not-to/</guid>
-      <description>&lt;p&gt;We recently had Hydra Camp in Dublin in Trinity College Dublin which
-went pretty well. I even got to talk a little about what we&amp;rsquo;re doing
-with Shibboleth and how we&amp;rsquo;re deploying our systems.&lt;/p&gt;
-
-&lt;p&gt;We&amp;rsquo;re deploy with ansible either by someone running the playbook by hand
-or via buildbot which pushes out a build when tests pass successfully
-on the master branch.&lt;/p&gt;
-
-&lt;p&gt;Someone in the camp asked at what complexity should you begin to automate
-at, which I thought was a strange question since at DRI/TCD we thought
-of deploying as automatically as possible from day 1.&lt;/p&gt;
-
-&lt;p&gt;My response to the question of when to automate was to automate it if you
-know that you need documentation or know that there might be a second
-time in setting up the system. Which pretty meant that we automate as
-much as we can.&lt;/p&gt;
-
-&lt;p&gt;Automating means you at least have a script as documentation and as people
-leave/join the project you have a chance of figuring out whats going
-on. This is especially useful when you have a CI or CD styled system.&lt;/p&gt;
-</description>
+      <description>We recently had Hydra Camp in Dublin in Trinity College Dublin which went pretty well. I even got to talk a little about what we&amp;rsquo;re doing with Shibboleth and how we&amp;rsquo;re deploying our systems.
+We&amp;rsquo;re deploy with ansible either by someone running the playbook by hand or via buildbot which pushes out a build when tests pass successfully on the master branch.
+Someone in the camp asked at what complexity should you begin to automate at, which I thought was a strange question since at DRI/TCD we thought of deploying as automatically as possible from day 1.</description>
     </item>
     
     <item>
@@ -162,12 +68,8 @@ on. This is especially useful when you have a CI or CD styled system.&lt;/p&gt;
       <pubDate>Tue, 25 Feb 2014 18:16:09 +0800</pubDate>
       
       <guid>http://jcftang.github.io/2014/02/25/hydra-europe-2014/</guid>
-      <description>&lt;p&gt;It&amp;rsquo;s that time of the year again and it seems we&amp;rsquo;re going to hold another
-Hydra related event in work at Trinity College, Dublin.&lt;/p&gt;
-
-&lt;p&gt;For more information see
-&lt;a href=&#34;https://wiki.duraspace.org/display/hydra/Hydra+Europe+2014&#34;&gt;https://wiki.duraspace.org/display/hydra/Hydra+Europe+2014&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>It&amp;rsquo;s that time of the year again and it seems we&amp;rsquo;re going to hold another Hydra related event in work at Trinity College, Dublin.
+For more information see https://wiki.duraspace.org/display/hydra/Hydra+Europe+2014</description>
     </item>
     
     <item>
@@ -176,35 +78,9 @@ Hydra related event in work at Trinity College, Dublin.&lt;/p&gt;
       <pubDate>Tue, 31 Dec 2013 12:55:26 +0000</pubDate>
       
       <guid>http://jcftang.github.io/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/</guid>
-      <description>&lt;p&gt;After going to SC13 and being at a few BoF&amp;rsquo;s and hearing
-some people talk about their operations and potentially using
-&lt;a href=&#34;http://www.saltstack.com/&#34;&gt;Salt&lt;/a&gt; to replace the likes of puppet and chef,
-I decided to learn a little more about Salt.&lt;/p&gt;
-
-&lt;p&gt;In particular since I have an old laptop lying around at
-home, I decided to setup a little private cloud. I followed this &lt;a href=&#34;http://www.saltstack.com/salt-blog/2013/11/19/cloud-making-doesnt-have-to-be-so-hard-salt-virt-tutorial&#34;&gt;blog
-post&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;It mostly worked apart from some buggy behaviour in the seeding
-process. It was certainly lower overhead in setting a salt managed
-&amp;lsquo;cloud&amp;rsquo; than setting up a full on &lt;a href=&#34;http://opennebula.org/&#34;&gt;Open Nebula&lt;/a&gt;
-instance or even openstack.&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s pretty neat that a provisioned VM reports into the salt master
-and is ready to be provisioned pretty quickly when it boots up. I can
-certainly see the attraction of using Salt to setup a private cloud with
-Salt as the controller.&lt;/p&gt;
-
-&lt;p&gt;In short compared to &lt;a href=&#34;http://www.ansibleworks.com/&#34;&gt;Ansible&lt;/a&gt; Salt is a
-bit more heavy weight than Ansible. I haven&amp;rsquo;t done any like with like
-comparisons but I do feel that Salt seems like the better option for
-maintaining long running systems and Ansible is great for rapid redeploys
-of systems (from a clean state)&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve uploaded the configs that I have been using at home to github, they
-can be found &lt;a href=&#34;https://github.com/jcftang/salt-virt&#34;&gt;here&lt;/a&gt;, there&amp;rsquo;s even a
-few packer templates to build base images for CentOS 6.5 and Ubuntu 12.04.&lt;/p&gt;
-</description>
+      <description>After going to SC13 and being at a few BoF&amp;rsquo;s and hearing some people talk about their operations and potentially using Salt to replace the likes of puppet and chef, I decided to learn a little more about Salt.
+In particular since I have an old laptop lying around at home, I decided to setup a little private cloud. I followed this blog post.
+It mostly worked apart from some buggy behaviour in the seeding process.</description>
     </item>
     
     <item>
@@ -213,16 +89,9 @@ few packer templates to build base images for CentOS 6.5 and Ubuntu 12.04.&lt;/p
       <pubDate>Sun, 01 Dec 2013 09:04:25 +0000</pubDate>
       
       <guid>http://jcftang.github.io/2013/12/01/post-sc13-thoughts/</guid>
-      <description>&lt;p&gt;I was recently at SC13 and attended a number of Python HPC tutorials,
-Data Management and HPC systems engineering and administration BOF&amp;rsquo;s.&lt;/p&gt;
-
-&lt;p&gt;This year&amp;rsquo;s SC13 much calmer than previous years, but I did pick up a
-few new tools during the conference. However I was pretty surprised that
-there is a real lack of devops, sysadmins etc&amp;hellip; in the this space.&lt;/p&gt;
-
-&lt;p&gt;I was also surprised at how things like salt and ansible are being
-adopted in this space.&lt;/p&gt;
-</description>
+      <description>I was recently at SC13 and attended a number of Python HPC tutorials, Data Management and HPC systems engineering and administration BOF&amp;rsquo;s.
+This year&amp;rsquo;s SC13 much calmer than previous years, but I did pick up a few new tools during the conference. However I was pretty surprised that there is a real lack of devops, sysadmins etc&amp;hellip; in the this space.
+I was also surprised at how things like salt and ansible are being adopted in this space.</description>
     </item>
     
     <item>
@@ -231,36 +100,8 @@ adopted in this space.&lt;/p&gt;
       <pubDate>Thu, 01 Aug 2013 21:38:54 +0100</pubDate>
       
       <guid>http://jcftang.github.io/2013/08/01/accelerating-development-and-deployments-with-ansible/</guid>
-      <description>&lt;p&gt;It&amp;rsquo;s probably no secret that we use Ansible at our work place for
-the project that I am working on. So far we&amp;rsquo;ve used it to deploy and
-maintain state for our Open Nebula deployment, Jenkins CI system, Ceph&amp;rsquo;s
-radosgw and our digital repository.&lt;/p&gt;
-
-&lt;p&gt;In fact I currently have a Jenkins job which deploys our software stack
-using Ansible to a test system in our Open Nebula cluster. This has been
-hugely beneficial to myself so far to be able to teardown and bring up
-systems quickly to make sure our application is well tested and debugged.&lt;/p&gt;
-
-&lt;p&gt;Without going into a huge amount of detail, we&amp;rsquo;ve been able to deploy our
-systems with relative ease and repeatability. I&amp;rsquo;ve got the configurations
-up at my github account for those that are interested.&lt;/p&gt;
-
-&lt;p&gt;The best thing about these deployments is that the initial prototyping
-was done in a set of vagrant managed virtual machines, this allowed me
-to rapidly bring up and teardown systems to ensure we have everything
-automated smoothly. On the flipside, the systems that get developed for
-production usage get backported to our vagrant setup. This means that
-we&amp;rsquo;re able to provide a development environment for each developer which
-is identical or as close as possible to our production systems.&lt;/p&gt;
-
-&lt;p&gt;Having the capability to develop and test on a local machine which is
-close to or identical to our production system has accelerated our bug
-finding and development process.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m not too sure what the team think, since we&amp;rsquo;re moving quite fast and
-Ansible has allowed us to do so due to its ease of use, well it has at
-least let me do so anyway.&lt;/p&gt;
-</description>
+      <description>It&amp;rsquo;s probably no secret that we use Ansible at our work place for the project that I am working on. So far we&amp;rsquo;ve used it to deploy and maintain state for our Open Nebula deployment, Jenkins CI system, Ceph&amp;rsquo;s radosgw and our digital repository.
+In fact I currently have a Jenkins job which deploys our software stack using Ansible to a test system in our Open Nebula cluster. This has been hugely beneficial to myself so far to be able to teardown and bring up systems quickly to make sure our application is well tested and debugged.</description>
     </item>
     
     <item>
@@ -269,47 +110,7 @@ least let me do so anyway.&lt;/p&gt;
       <pubDate>Thu, 06 Jun 2013 18:11:40 +0100</pubDate>
       
       <guid>http://jcftang.github.io/2013/06/06/hydra-and-ansible/</guid>
-      <description>&lt;p&gt;The team that I am working with right are very much agile and we&amp;rsquo;re
-doing quite a bit of outside in development of the repository that we&amp;rsquo;re
-building. We&amp;rsquo;re mostly adopting a behaviour driven development with a
-touch of test driven development. As a result we&amp;rsquo;re very much in favour
-of testing things out as much as we can and using the same environments
-to develop against. As previously mentioned before I had originally
-been using puppet and vagrant to build up the development harness and
-experiment with tools/services that we might want to use for our system.&lt;/p&gt;
-
-&lt;p&gt;At somepoint I came across &lt;a href=&#34;http://www.ansible.cc&#34;&gt;ansible&lt;/a&gt; and not long
-after discovering it, I migrated a large chunk of the development and
-test systems to using ansible. I&amp;rsquo;ve even cooked up one or two ansible
-modules as a result.&lt;/p&gt;
-
-&lt;p&gt;As a result of adopting ansible for building up our test and development
-infrastructure, I&amp;rsquo;ve collected the relevant playbooks and roles that a
-person might want for deploying all the bits and pieces needed to roll
-out a hydra-head. See &lt;a href=&#34;https://github.com/jcftang/ansible-hydra&#34;&gt;https://github.com/jcftang/ansible-hydra&lt;/a&gt;, I have
-a set of roles and a few example playbooks on setting up at least&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Tomcat (from the base repositories of RHEL6/Centos6/ScientificLinux6)&lt;/li&gt;
-&lt;li&gt;Fedora-Commons (the same version as is in the hydra-jetty repo)&lt;/li&gt;
-&lt;li&gt;Apache SOLR (the same version as is in the hydra-jetty repo)&lt;/li&gt;
-&lt;li&gt;Ruby (via RVM) in a user directory&lt;/li&gt;
-&lt;li&gt;Passenger with the installed version of Ruby&lt;/li&gt;
-&lt;li&gt;MySQL (from the base repositories of RHEL6/Centos6/ScientificLinux6)&lt;/li&gt;
-&lt;li&gt;Redis&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The configurations aren&amp;rsquo;t quite production ready yet as they do require
-some more work in setting up Fedora-Commons and SOLR the way we want. The
-configurations are however fairly realistic and are daily use
-for doing test deployments of our hydra-head (RoR application) or
-experimenting with additional tools, configurations and systems such as
-&lt;a href=&#34;https://github.com/jcftang/ansible-ceph&#34;&gt;ceph&lt;/a&gt; - we&amp;rsquo;re using the radosgw
-to provide a realistic and local S3 service.&lt;/p&gt;
-
-&lt;p&gt;So far the configurations need polishing off and another playbook needs
-to be created for continuous deployment of our hydra-head.&lt;/p&gt;
-</description>
+      <description>The team that I am working with right are very much agile and we&amp;rsquo;re doing quite a bit of outside in development of the repository that we&amp;rsquo;re building. We&amp;rsquo;re mostly adopting a behaviour driven development with a touch of test driven development. As a result we&amp;rsquo;re very much in favour of testing things out as much as we can and using the same environments to develop against. As previously mentioned before I had originally been using puppet and vagrant to build up the development harness and experiment with tools/services that we might want to use for our system.</description>
     </item>
     
     <item>
@@ -318,12 +119,8 @@ to be created for continuous deployment of our hydra-head.&lt;/p&gt;
       <pubDate>Sun, 19 May 2013 08:51:15 +0100</pubDate>
       
       <guid>http://jcftang.github.io/2013/05/19/dri-planet-is-somewhat-back-in-action/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve been meaning to fix the RSS aggregator at
-&lt;a href=&#34;http://www.tchpc.tcd.ie/dri-planet&#34;&gt;http://www.tchpc.tcd.ie/dri-planet&lt;/a&gt; for a while now, it&amp;rsquo;s fixed!&lt;/p&gt;
-
-&lt;p&gt;Note that it&amp;rsquo;s just something that aggregates news that I think are useful
-for work. The aggregated links may or may not be affiliated with my work.&lt;/p&gt;
-</description>
+      <description>I&amp;rsquo;ve been meaning to fix the RSS aggregator at http://www.tchpc.tcd.ie/dri-planet for a while now, it&amp;rsquo;s fixed!
+Note that it&amp;rsquo;s just something that aggregates news that I think are useful for work. The aggregated links may or may not be affiliated with my work.</description>
     </item>
     
     <item>
@@ -332,20 +129,8 @@ for work. The aggregated links may or may not be affiliated with my work.&lt;/p&
       <pubDate>Sun, 31 Mar 2013 11:05:56 +0100</pubDate>
       
       <guid>http://jcftang.github.io/2013/03/31/zfs-on-linux-is-usable-and-safe/</guid>
-      <description>&lt;p&gt;It seems that ZFS On Linux reached a significant milestone, that is the
-software is stable to use on Linux. This is pretty useful and significant
-for the preservation and archivists community as it provides a more
-reliable platform to build on. The LLNL guys must really want to mitigate
-against silent data failures in their systems (they&amp;rsquo;re running Lustre
-on top of ZFS).&lt;/p&gt;
-
-&lt;p&gt;If ZFS is trustable or not we will know over time. At least with
-ZFS&amp;rsquo;s data protection features we will see less issues with silent
-data corruption.&lt;/p&gt;
-
-&lt;p&gt;If one could build glusterfs or better yet, Ceph on top of ZFS it would
-be pretty desirable.&lt;/p&gt;
-</description>
+      <description>It seems that ZFS On Linux reached a significant milestone, that is the software is stable to use on Linux. This is pretty useful and significant for the preservation and archivists community as it provides a more reliable platform to build on. The LLNL guys must really want to mitigate against silent data failures in their systems (they&amp;rsquo;re running Lustre on top of ZFS).
+If ZFS is trustable or not we will know over time.</description>
     </item>
     
     <item>
@@ -354,38 +139,8 @@ be pretty desirable.&lt;/p&gt;
       <pubDate>Wed, 27 Mar 2013 11:57:41 +0000</pubDate>
       
       <guid>http://jcftang.github.io/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/</guid>
-      <description>&lt;p&gt;At work we like to do lots of testing and behaviour driven development
-since we have a number of stakeholders and institutions all working on
-the same application. To make sure everyone is getting what they want
-we&amp;rsquo;re using cucumber to write our specifications; that is we&amp;rsquo;re primarily
-doing outside in developement of our system.&lt;/p&gt;
-
-&lt;p&gt;As such we like to test things in a near production like
-environment&amp;hellip; Having chosen to use &lt;a href=&#34;https://github.com/thoughtbot/capybara-webkit&#34;&gt;capybara-webkit&lt;/a&gt; to test
-the interface (at a very functional and simplistic level) on our
-workstations. I decided to test drive the vagrant enviroment that I had
-been working on the past few months. Btw, this environment is bootstrapped
-with ansible, I&amp;rsquo;m a much happier person since I ditched puppet.&lt;/p&gt;
-
-&lt;p&gt;Annoyingly in RHEL6 and friends QT is a little bit behind the current
-times, we needed at least QT4.7 to run the javascript tests (which rely
-on webkit). The first an obvious thing was to uninstall qt from the base
-system and then install qt47 from atrpms-testing.&lt;/p&gt;
-
-&lt;p&gt;Little did I know that &lt;a href=&#34;https://bugzilla.redhat.com/show_bug.cgi?id=886996&#34;&gt;tomcat6 depends&lt;/a&gt; on redhat-lsb which in turn
-depends on qt-x11 and so on&amp;hellip; My plans on testing and developing our
-application in a near production environment almost got shot.&lt;/p&gt;
-
-&lt;p&gt;In the end the solution was to test the java script components with either
-selenium or better yet &lt;a href=&#34;https://github.com/jonleighton/poltergeist&#34;&gt;poltergeist&lt;/a&gt; for capybara. We chose poltergeist
-as it runs headless. This isn&amp;rsquo;t really a problem of cucumber/capybara,
-but rather a problem of RHEL6 and friends with old packages.&lt;/p&gt;
-
-&lt;p&gt;&amp;hellip;after sometime I have a half-way there set of ansible playbooks to
-get me to where I need to be in a virtual environment&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&amp;hellip;less rant &amp;hellip;&lt;/p&gt;
-</description>
+      <description>At work we like to do lots of testing and behaviour driven development since we have a number of stakeholders and institutions all working on the same application. To make sure everyone is getting what they want we&amp;rsquo;re using cucumber to write our specifications; that is we&amp;rsquo;re primarily doing outside in developement of our system.
+As such we like to test things in a near production like environment&amp;hellip; Having chosen to use capybara-webkit to test the interface (at a very functional and simplistic level) on our workstations.</description>
     </item>
     
     <item>
@@ -394,29 +149,8 @@ get me to where I need to be in a virtual environment&amp;hellip;&lt;/p&gt;
       <pubDate>Sun, 24 Mar 2013 11:16:54 +0000</pubDate>
       
       <guid>http://jcftang.github.io/2013/03/24/amazon-redshift-a-curiousity-to-me/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve been recently reading up on Amazon [Redshift](), at first I thought
-it was a parallel/distributed datastore like HDFS. At a second look in
-reality its more of a distributed relational database. This in itself
-is pretty cool for scaling applications with large data sets that happen
-to need to be in a database; which is quite a few things.&lt;/p&gt;
-
-&lt;p&gt;From the initial reading of the architecture and docs, it looks like
-Amazon built a job queuing system around postgres to schedule queries
-out to its nodes in the cluster. What&amp;rsquo;s curious to me is how do they
-deal with failed nodes in the system and how they provision the system,
-there must be an ordered set of operations to do so.&lt;/p&gt;
-
-&lt;p&gt;Another oddity is the mesh network that the system has, I&amp;rsquo;m under the
-impression that there is only 1x10gb network connection on the machine. I
-wonder if the mesh network is just a virtual mesh network or if it&amp;rsquo;s
-really a real physical one. If it&amp;rsquo;s a real physical mesh network then
-each machine would require more than one network interface. It would
-also be a cabling nightmare to build such a device and if Amazon has
-built a large scale mesh network of machines, that would be pretty cool.
-I wonder how much of the Redshift user base are latency, bandwidth or
-compute bound when looking at large datasets; or if its really just the
-challenge of having one real big database that can be queried.&lt;/p&gt;
-</description>
+      <description>I&amp;rsquo;ve been recently reading up on Amazon [Redshift](), at first I thought it was a parallel/distributed datastore like HDFS. At a second look in reality its more of a distributed relational database. This in itself is pretty cool for scaling applications with large data sets that happen to need to be in a database; which is quite a few things.
+From the initial reading of the architecture and docs, it looks like Amazon built a job queuing system around postgres to schedule queries out to its nodes in the cluster.</description>
     </item>
     
     <item>
@@ -425,29 +159,629 @@ challenge of having one real big database that can be queried.&lt;/p&gt;
       <pubDate>Fri, 22 Mar 2013 07:46:26 +0000</pubDate>
       
       <guid>http://jcftang.github.io/2013/03/22/building-kelvin-supercomputer-time-lapse/</guid>
-      <description>&lt;p&gt;I was cleaning up some files and I found
-this time lapse that I did when we were building
-&lt;a href=&#34;http://www.tchpc.tcd.ie/resources/clusters/kelvin&#34;&gt;Kelvin&lt;/a&gt;, it&amp;rsquo;s a few
-years old now. Even by current standards it&amp;rsquo;s still pretty respectable.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=F0zon45WR-U&amp;amp;feature=youtu.be&#34;&gt;The timelapse&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;We had to unpack and install all the infiniband cards ourselves, cabled,
-racked, installed, configured and burnt it in for production usage. The
-cluster has 100 nodes, each node has 2 sockets, each socket has 6 cores
-and 24gb of ram.&lt;/p&gt;
-
-&lt;p&gt;The most interesting thing about this machine was that we got it with
-QLogic infiniscale/infinipath HCA&amp;rsquo;s and switching. It was one of the if
-not the lowest latency networking that we could get at the time.&lt;/p&gt;
-
-&lt;p&gt;When we were configuring this system we had also redesigned the storage
-system roughly around this period and went with a cluster to cluster
-GPFS configuration.&lt;/p&gt;
-
-&lt;p&gt;Oh and we threw out the old cluster which was about 10racks of IBM e326
-machines in the process.&lt;/p&gt;
-</description>
+      <description>I was cleaning up some files and I found this time lapse that I did when we were building Kelvin, it&amp;rsquo;s a few years old now. Even by current standards it&amp;rsquo;s still pretty respectable.
+The timelapse
+We had to unpack and install all the infiniband cards ourselves, cabled, racked, installed, configured and burnt it in for production usage. The cluster has 100 nodes, each node has 2 sockets, each socket has 6 cores and 24gb of ram.</description>
+    </item>
+    
+    <item>
+      <title>hydracamp 2013 trinity college  dublin</title>
+      <link>http://jcftang.github.io/2013/02/08/hydracamp-2013-trinity-college--dublin/</link>
+      <pubDate>Fri, 08 Feb 2013 10:02:12 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2013/02/08/hydracamp-2013-trinity-college--dublin/</guid>
+      <description>After a few months of budgeting, negotiations and finding venues we&amp;rsquo;ve at Trinity College Dublin have committed to hosting a HydraCamp for europe! So I&amp;rsquo;m shamelessly plugging it here.
+Trinity College Dublin as a part of Digital Repository of Ireland will be organising Hydra Camp in the week of April 8th till 12th, 2013. This will be a week long training course, which will be aimed at developers who are interested in the Hydra framework for developing repositories.</description>
+    </item>
+    
+    <item>
+      <title>deploying our hydra head with jruby</title>
+      <link>http://jcftang.github.io/2013/01/22/deploying-our-hydra-head-with-jruby/</link>
+      <pubDate>Tue, 22 Jan 2013 19:49:02 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2013/01/22/deploying-our-hydra-head-with-jruby/</guid>
+      <description>We&amp;rsquo;ve been ramping up our development work on the project that I have been on in the last month or so. One of the issues that we&amp;rsquo;ve come across is the not so good XML validation and parsing libraries that are available in the ruby world compared to the java world.
+So as an exercise I decided to see if I could make our prototype work with jruby with the view of doing a test deployment on tomcat or some other application server.</description>
+    </item>
+    
+    <item>
+      <title>making the jump and migrating my archlinux machines to use btrfs</title>
+      <link>http://jcftang.github.io/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs/</link>
+      <pubDate>Wed, 02 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2013/01/02/making-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs/</guid>
+      <description>Having a few days of time off from work I&amp;rsquo;ve committed to migrating my archlinux based laptops to using btrfs. I&amp;rsquo;ve to date been just using ext4 and nilfs2 (on an SD card) on my eeepc and plain old ext4 on the bigger laptop.
+The main motivation was that the two devices were pretty outdated and I felt lucky with doing a major upgrade (replaced sysvinit with systemd as recommended by the archlinux people)</description>
+    </item>
+    
+    <item>
+      <title>supercomputing 2012 and the arms race to exascale</title>
+      <link>http://jcftang.github.io/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale/</link>
+      <pubDate>Fri, 16 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale/</guid>
+      <description>It was clear at this year&amp;rsquo;s supercomputing conference that there wasn&amp;rsquo;t as much excitement as previous years. There wasn&amp;rsquo;t much surprise as nothing too revolutionary and radical was announced. In the past when Bluegene/L and P arrived after the earth simulator there was an arms race to being number 1 in the top500 list. Even things like GPGPU&amp;rsquo;s aren&amp;rsquo;t as cool anymore, everyone is selling effectively the same systems when it comes to clusters.</description>
+    </item>
+    
+    <item>
+      <title>there is light on the otherside</title>
+      <link>http://jcftang.github.io/2012/11/04/there-is-light-on-the-otherside/</link>
+      <pubDate>Sun, 04 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/11/04/there-is-light-on-the-otherside/</guid>
+      <description>Having spent the best part of my Sunday afternoon playing with ansible just to learn and see what all the fuss is about, I was pleasantly surprised with it.
+I had installed ansible on my OSX laptop and vagrant-ansible for my vagrant test environment.
+The plan was to try and re-create my current ruby on rails development and test virtual machine with vagrant. A secondary goal was to get it to work with both Ubuntu Precise (LTS) and Scientific Linux 6.</description>
+    </item>
+    
+    <item>
+      <title>crowbar for deploying systems</title>
+      <link>http://jcftang.github.io/2012/10/27/crowbar-for-deploying-systems/</link>
+      <pubDate>Sat, 27 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/10/27/crowbar-for-deploying-systems/</guid>
+      <description>I&amp;rsquo;ve been eyeing crowbar recently, it looks pretty useful and interesting for deploying servers and applications. I haven&amp;rsquo;t seen much if at all any documentation out there which suggests that people in the digital preservation and archiving fields are implementing systems at scale, I&amp;rsquo;m under the impression that most systems/sites are building systems up one piece at a time without much automation.
+It seems to use chef in the backend for all the automation.</description>
+    </item>
+    
+    <item>
+      <title>ceph v0 dot 53 released</title>
+      <link>http://jcftang.github.io/2012/10/23/ceph-v0-dot-53-released/</link>
+      <pubDate>Tue, 23 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/10/23/ceph-v0-dot-53-released/</guid>
+      <description>There&amp;rsquo;s a new release of Ceph, I hope that they release a stable soon so we can do further evaluations of the Ceph storage system. A few of my work colleagues are going to the Ceph workshop next week.
+I&amp;rsquo;m wondering if anyone has taken the CRUSH algorithm and used it in other domains.</description>
+    </item>
+    
+    <item>
+      <title>hydracamp 2012 penn state</title>
+      <link>http://jcftang.github.io/2012/10/13/hydracamp-2012-penn-state/</link>
+      <pubDate>Sat, 13 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/10/13/hydracamp-2012-penn-state/</guid>
+      <description>What do you do when you need a crash course on RoR, Hydra and frameworks for digital preservation and archiving? You go to Hydracamp!
+The syllabus was
+ Day 1 - Rails, CRUD, TDD and Git Day 2 - Collaborative development with Stories, Tickets, TDD and Git Day 3 - Hydra, Fedora, XML and RDF (ActiveFedora and OM) Day 4 - SOLR and Blacklight Day 5 - Hydra-head, Hydra Access Controls  Most of the training sessions were hands on from day 1 which was refreshing, as it was hands on I getting the most out of the training session.</description>
+    </item>
+    
+    <item>
+      <title>digital preservation and archiving is a hpc problem</title>
+      <link>http://jcftang.github.io/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/</link>
+      <pubDate>Sun, 07 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/</guid>
+      <description>I shall be going to SC2012 next month, I plan on hitting a few of the storage vendors for possible collaborations and flagging to them that we&amp;rsquo;re on the look out for storage systems. One of the first observation that the reader will note is &amp;ldquo;where is that link between HPC and Digital Preservation and Archiving&amp;rdquo;. It&amp;rsquo;s probably not obvious to most people, one of the big problems in the area of preservation and archiving is the the amount of data involved and the varied types of data.</description>
+    </item>
+    
+    <item>
+      <title>slurm bank that big script for banking in slurm</title>
+      <link>http://jcftang.github.io/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/</link>
+      <pubDate>Sat, 29 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/</guid>
+      <description>A co-worker of mine (Paddy Doyle) had originally hacked at a perl script for reporting balances from SLURM&amp;rsquo;s accounting system a year or two ago and he had figured out that it might be possible to do some minimalistic &amp;lsquo;configuration&amp;rsquo; and scripting to get a system that&amp;rsquo;s very basic but functional.
+It was just one of those things that funding agencies wanted to justify how the system was being used, GOLD was clunky and obtrusive and complicated for what we wanted.</description>
+    </item>
+    
+    <item>
+      <title>ceph v0 dot 52 released</title>
+      <link>http://jcftang.github.io/2012/09/28/ceph-v0-dot-52-released/</link>
+      <pubDate>Fri, 28 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/09/28/ceph-v0-dot-52-released/</guid>
+      <description>The latest development branch of Ceph is out with some rather nice looking features, what&amp;rsquo;s probably the most useful are the RPM builds for those that run RHEL6 like systems.
+Still no real sight of backported kernel modules :P Also some of the guys in work here just deployed a ~200tb Ceph installation which I&amp;rsquo;ve access to a 10tb RBD for doing backups on.</description>
+    </item>
+    
+    <item>
+      <title>a poor mans nas device with ceph</title>
+      <link>http://jcftang.github.io/2012/09/23/a-poor-mans-nas-device-with-ceph/</link>
+      <pubDate>Sun, 23 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/09/23/a-poor-mans-nas-device-with-ceph/</guid>
+      <description>Given that I have a number of old 64bit capable desktop machines and a collection of hard drives at home, I could have run Tahoe-LAFS like I do in work for backup purposes. In fact Tahoe works quite well for the technically capable user.
+Recently I&amp;rsquo;ve decided that I need a more central location at home to store my photo collection (I love to take photos with my Canon DSLR and Panasonic LX5).</description>
+    </item>
+    
+    <item>
+      <title>alternative to talend etl</title>
+      <link>http://jcftang.github.io/2012/09/21/alternative-to-talend-etl/</link>
+      <pubDate>Fri, 21 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/09/21/alternative-to-talend-etl/</guid>
+      <description>I&amp;rsquo;ve used Talend ETL a few times, however I came across this application http://datacleaner.org/, I need to take a look at this somepoint to see if its an alternative to Taled or not, or whether it works on a Mac or not!</description>
+    </item>
+    
+    <item>
+      <title>ceph v0 dot 48 dot 2 argonaut released</title>
+      <link>http://jcftang.github.io/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released/</link>
+      <pubDate>Fri, 21 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released/</guid>
+      <description>There&amp;rsquo;s a new stable release of Ceph Argonaut, I seem to be having better luck with playing with the development releases of Ceph.
+Oh how I wish that there was a backport of the kernel ceph and rbd drivers for RHEL6, I have a dodgy repo and some reverted commits that one of the guys in work told me about. It seems to run but it isn&amp;rsquo;t great, it can be found at https://github.</description>
+    </item>
+    
+    <item>
+      <title>going from replicating across osds to replicating across hosts in a ceph cluster</title>
+      <link>http://jcftang.github.io/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster/</link>
+      <pubDate>Thu, 06 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster/</guid>
+      <description>Having learnt how to remove and add monitor&amp;rsquo;s, meta-data and data servers (mon&amp;rsquo;s, mds&amp;rsquo;s and osd&amp;rsquo;s) for my small two node Ceph cluster. I want to say that it wasn&amp;rsquo;t too hard to do, the ceph website does have documentation for this.
+As the default CRUSH map replicates across OSD&amp;rsquo;s I wanted to try replicating data across hosts just to see what would happen. In a real world scenario I would probably treat individual hosts in a rack as a failure unit and if I had more than one rack of storage, I would want to treat each rack as the minimum unit.</description>
+    </item>
+    
+    <item>
+      <title>adding an osd to a ceph cluster</title>
+      <link>http://jcftang.github.io/2012/09/04/adding-an-osd-to-a-ceph-cluster/</link>
+      <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/09/04/adding-an-osd-to-a-ceph-cluster/</guid>
+      <description>Having created a small single node Ceph cluster with following the 5 minute quickstart guide I was able to create a single node cluster with one OSD.
+This probably wouldn&amp;rsquo;t be the first post that someone has written about this topic.
+I&amp;rsquo;ve verified that it works in my test environment of Scientific Linux 6 by mounting the system with FUSE.
+Here&amp;rsquo;s my fstab to describe my disk layout
+# /etc/fstab # Created by anaconda on Fri Jul 6 14:27:56 2012 # # Accessible filesystems, by reference, are maintained under &#39;/dev/disk&#39; # See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info # /dev/mapper/vg_ceres-lv_root / ext4 defaults,user_xattr 1 1 UUID=4eb5efad-dbcd-4a9f-8187-d8ffa913e147 /boot ext4 defaults 1 2 /dev/mapper/vg_ceres-lv_home /data1 ext4 defaults,user_xattr 1 2 /dev/sdb /data ext4 defaults,user_xattr 1 2 /dev/mapper/vg_ceres-lv_swap swap swap defaults 0 0 tmpfs /dev/shm tmpfs defaults 0 0 devpts /dev/pts devpts gid=5,mode=620 0 0 sysfs /sys sysfs defaults 0 0 proc /proc proc defaults 0 0  Running a df -h gives this</description>
+    </item>
+    
+    <item>
+      <title>scientific linux 6 build environment for ceph</title>
+      <link>http://jcftang.github.io/2012/09/02/scientific-linux-6-build-environment-for-ceph/</link>
+      <pubDate>Sun, 02 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/09/02/scientific-linux-6-build-environment-for-ceph/</guid>
+      <description>After my last failed attempt at Installing Ceph on SL6 or rather my attempt at configuring Ceph for a test failed miserably.
+It hasn&amp;rsquo;t deterred me to test more. As a result I setup a number of Vagrant Virtual machines and got together a few puppet scripts to provision machines.
+Here&amp;rsquo;s a sample manifest for puppet to automate the deployment of a machine to build Ceph. It requires that you SL6 environment to have at least the epel repository enabled.</description>
+    </item>
+    
+    <item>
+      <title>rce 62 ceph petabyte scale storage</title>
+      <link>http://jcftang.github.io/2012/09/01/rce-62-ceph-petabyte-scale-storage/</link>
+      <pubDate>Sat, 01 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/09/01/rce-62-ceph-petabyte-scale-storage/</guid>
+      <description>It&amp;rsquo;s somewhat interesting to listen to, we&amp;rsquo;ve been looking at ceph for a few things in work.
+Just jotting this down so I remember to share this with the guys in work.</description>
+    </item>
+    
+    <item>
+      <title>taking vagrant and running with it</title>
+      <link>http://jcftang.github.io/2012/08/28/taking-vagrant-and-running-with-it/</link>
+      <pubDate>Tue, 28 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/08/28/taking-vagrant-and-running-with-it/</guid>
+      <description>Over past few weeks I&amp;rsquo;ve been working on doing some integration and testing work to try and deliver a prototype system. I&amp;rsquo;ve taken the Vagrant tool and puppet to try and deliver systems for testing and development. Although the systems that I am currently working with aren&amp;rsquo;t fully automated, they are automated enough for them to be easily started up by a developer who reads the documentation (I hope).
+I&amp;rsquo;m hoping that by providing these disposable systems that the various members in the team that I am working with will be more free to experiment and less fearful of breaking the system.</description>
+    </item>
+    
+    <item>
+      <title>an excuse to learn ruby and ruby on rails</title>
+      <link>http://jcftang.github.io/2012/08/02/an-excuse-to-learn-ruby-and-ruby-on-rails/</link>
+      <pubDate>Thu, 02 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/08/02/an-excuse-to-learn-ruby-and-ruby-on-rails/</guid>
+      <description>I&amp;rsquo;ve been a long time consumer of ruby applications but never quite got around to learning the language and the frameworks that are available to developers. Within the team that I have been working with, we&amp;rsquo;ve been evaluating hydra as a possible framework for our project.
+I&amp;rsquo;ve been spending the last few days reading The RSpec Book, I&amp;rsquo;ve been able to pick up some of the basic syntax of the language from the BDD book.</description>
+    </item>
+    
+    <item>
+      <title>osx kernel panics and virtualbox</title>
+      <link>http://jcftang.github.io/2012/07/20/osx-kernel-panics-and-virtualbox/</link>
+      <pubDate>Fri, 20 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/07/20/osx-kernel-panics-and-virtualbox/</guid>
+      <description>Having discovered vagrant and veewee recently at OR2012 I&amp;rsquo;ve been building a few boxes for our site for testing purposes. I&amp;rsquo;ve had to relearn puppet to provision machines, but it&amp;rsquo;s paying off. I&amp;rsquo;ve been able to deploy 3-4 virtual machines with relative ease.
+The only disappointment is the seemingly frequent and semi-random kernel panics and crashes that I get on OSX (which is probably caused by VirtualBox when I do lots of IO).</description>
+    </item>
+    
+    <item>
+      <title>vagrant and veewee for managing virtual machines for development</title>
+      <link>http://jcftang.github.io/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development/</link>
+      <pubDate>Tue, 17 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/07/17/vagrant-and-veewee-for-managing-virtual-machines-for-development/</guid>
+      <description>I only discovered Vagrant last week at OR2012 when one of the presentations had Vagrant as a part of the testing component in the project. I was pleasantly surprised that it was leaveraging lots of free and opensource technology to provide repeatable environments for development and testing. I was even more impressed by the Veewee project which provides some additional wrappers for building custom &amp;lsquo;boxes&amp;rsquo;. Veewee certainly saved me lots of time in setting up some updated Scientific Linux boxes (it&amp;rsquo;s my preferred distro for deployments).</description>
+    </item>
+    
+    <item>
+      <title>open repositories 2012 the other days</title>
+      <link>http://jcftang.github.io/2012/07/15/open-repositories-2012-the-other-days/</link>
+      <pubDate>Sun, 15 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/07/15/open-repositories-2012-the-other-days/</guid>
+      <description>I finally had gotten back from the conference late in the evening on Friday, airport security was not fun at all. It was the first Open Repositories conference that I had attended, the community seems to be pretty tightly knit. There were two or three software stacks which were presented that looked useful. Things such as Fedora-Commons, Hydra and a few other sub-components which were talked about are going to be likely building blocks that we will be using for our Digital Repository.</description>
+    </item>
+    
+    <item>
+      <title>open repositories 2012 day 1</title>
+      <link>http://jcftang.github.io/2012/07/09/open-repositories-2012-day-1/</link>
+      <pubDate>Mon, 09 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/07/09/open-repositories-2012-day-1/</guid>
+      <description>I only been here for a day and Edinburgh is as nice as I recall it was. This time my attendance to Open Repositories 2012 brought me and some co-workers of the DRI team to this city. It&amp;rsquo;s my first time at this event and there seems to be lots of people, so far it&amp;rsquo;s been pleasant enough apart from the weather.
+For those interested in whats happening you should follow the hashtag #or2012 on twitter to see what people are saying.</description>
+    </item>
+    
+    <item>
+      <title>installing ceph on sl6</title>
+      <link>http://jcftang.github.io/2012/07/06/installing-ceph-on-sl6/</link>
+      <pubDate>Fri, 06 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/07/06/installing-ceph-on-sl6/</guid>
+      <description>As an exercise of a Friday afternoon of not starting something big before heading off to a conference. I&amp;rsquo;ve decided to spend an hour or two at seeing how ceph is installed and configured on an SL6 based machine (RHEL6 clone).
+The install target is just an old desktop running a 64bit install of SL6x, so it&amp;rsquo;s nothing too fancy.
+Following the instructions at http://ceph.com/wiki/Installing_on_RedHat_or_CentOS, I ended up doing this</description>
+    </item>
+    
+    <item>
+      <title>ceph v0 dot 48 argonaut released</title>
+      <link>http://jcftang.github.io/2012/07/05/ceph-v0-dot-48-argonaut-released/</link>
+      <pubDate>Thu, 05 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/07/05/ceph-v0-dot-48-argonaut-released/</guid>
+      <description>I&amp;rsquo;ve been eyeing this Ceph storage system for a while for a number of potential uses, it looks like its finally ready for production usage.
+It is a pitty that the cephfs component isn&amp;rsquo;t recommended for production usage yet. Still, Ceph is really going to shake up the distributed storage industry. Having used GPFS, Lustre and a few other systems in production in the past, Ceph certainly looks attractive.</description>
+    </item>
+    
+    <item>
+      <title>tahoe lafs 1 dot 9 2 is released</title>
+      <link>http://jcftang.github.io/2012/07/05/tahoe-lafs-1-dot-9-2-is-released/</link>
+      <pubDate>Thu, 05 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/07/05/tahoe-lafs-1-dot-9-2-is-released/</guid>
+      <description>I&amp;rsquo;ve been happily using tahoe-lafs for my backup needs for a while now in work. It&amp;rsquo;s not a huge cluster, but just a small hive cache from workstations dotted around the lab.
+The project recently did a release which fixes a number of bugs and issues which has made this software much more pleasant to use. I&amp;rsquo;ve also been happily using git-annex to manage my files which reside in tahoe-lafs.</description>
+    </item>
+    
+    <item>
+      <title>thoughts on using the likes of tahoe lafs and git annex as a backend storage system for digital preservation</title>
+      <link>http://jcftang.github.io/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/</link>
+      <pubDate>Thu, 05 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/</guid>
+      <description>Having happily running and using both git-annex and tahoe-lafs in the past year or so to manage my files and backups. I&amp;rsquo;ve been thinking about plugging in tahoe-lafs as a backend driver for iRODS. I never quite got around to doing it properly, I had only gotten the universal mass storage driver to talk to tahoe-lafs. I was planning on writing an MSO driver for iRODS to talk to tahoe-lafs&amp;rsquo;s web-api, but alas I never got around to it.</description>
+    </item>
+    
+    <item>
+      <title>using git daemon to share your git repo on a trusted lan</title>
+      <link>http://jcftang.github.io/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/</link>
+      <pubDate>Mon, 02 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/07/02/using-git-daemon-to-share-your-git-repo-on-a-trusted-lan/</guid>
+      <description>One of the things that I don&amp;rsquo;t like about git is the interface at times can be too geared towards power users. One command that I particularly like in mercurial is the hg serve command, which is incredibly easy to use.
+To do the equivalent of the hg serve in git you can do the following&amp;hellip;
+user$ cd my-repo user$ git daemon --export-all --base-path=$(pwd)  The above assumes you are on a trusted network and you want to share your repo with people on your LAN and you are in the toplevel directory of the repository that you want to temporarily share.</description>
+    </item>
+    
+    <item>
+      <title>git annex assistant is making leaps and bounds</title>
+      <link>http://jcftang.github.io/2012/06/26/git-annex-assistant-is-making-leaps-and-bounds/</link>
+      <pubDate>Tue, 26 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/06/26/git-annex-assistant-is-making-leaps-and-bounds/</guid>
+      <description>I&amp;rsquo;ve been following the development of the new git-annex assistant work that Joey Hess has been working on over the past few weeks. Even in this early state of development, it is slowly becoming more usable and accessible for less technical users.
+As soon as as the issues with the limitations of kqueue and OSX&amp;rsquo;s silly limits are resolved (without the need for a user to do a sysctl -w WHATEVER) it will be pretty cool.</description>
+    </item>
+    
+    <item>
+      <title>octopress 2 dot 1 taking a sneak peek</title>
+      <link>http://jcftang.github.io/2012/06/18/octopress-2-dot-1-taking-a-sneak-peek/</link>
+      <pubDate>Mon, 18 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/06/18/octopress-2-dot-1-taking-a-sneak-peek/</guid>
+      <description>I feel lucky and living on the edge and I&amp;rsquo;ve recently decided to take a preview of the 2.1 branch of octopress. So far Octopress has been pretty good, it&amp;rsquo;s been a refreshing change to the usual ikiwiki system that I prefer. This experiment has worked out not too bad for me given how much I like ikiwiki for most of if not all of my other little websites and documentation sites.</description>
+    </item>
+    
+    <item>
+      <title>top500 supercomputers for summer 2012</title>
+      <link>http://jcftang.github.io/2012/06/18/top500-supercomputers-for-summer-2012/</link>
+      <pubDate>Mon, 18 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/06/18/top500-supercomputers-for-summer-2012/</guid>
+      <description>The Top 500 List is out! It&amp;rsquo;s been no surprise that LLNL and IBM has reclaimed the top spot. There is some pretty cool tech that&amp;rsquo;s going to come out of these systems which the HPC community should be rubbing their hands over.
+Slurm will be moving along development for these big systems as well as Lustre and zfs on linux.</description>
+    </item>
+    
+    <item>
+      <title>installing git annex on sl5</title>
+      <link>http://jcftang.github.io/2012/06/15/installing-git-annex-on-sl5/</link>
+      <pubDate>Fri, 15 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/06/15/installing-git-annex-on-sl5/</guid>
+      <description>I was waiting for my backups to be done hence this post, as I was using git-annex to manage my files and I decided I needed to have git-annex on a SL5 based machine. SL5 is just an opensource clone/recompile of RHEL5.
+I haven&amp;rsquo;t tried to install the newer versions of Haskell Platform and GHC in a while on SL5 to instal git-annex. But the last time I checked when GHC7 was out, it was a pain to install GHC on SL5.</description>
+    </item>
+    
+    <item>
+      <title>dris workflows is now available via npm</title>
+      <link>http://jcftang.github.io/2012/06/13/dris-workflows-is-now-available-via-npm/</link>
+      <pubDate>Wed, 13 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/06/13/dris-workflows-is-now-available-via-npm/</guid>
+      <description>I&amp;rsquo;ve just uploaded the work that Matthias and Quirijn did over the past few months to the npm registry
+ http://search.npmjs.org/#/dri-api http://search.npmjs.org/#/dris-workflows http://search.npmjs.org/#/dri http://search.npmjs.org/#/fedora  I haven&amp;rsquo;t tried installing it from the npm repository yet, I assume that they will work. There&amp;rsquo;s still some cosmetic work (needs to be branded correctly) that needs to be done as well as lots of error checking, validation and testing. It&amp;rsquo;s not a bad place to be starting to look for ideas if you are interested in building your own system to interface with Fedora Commons.</description>
+    </item>
+    
+    <item>
+      <title>facebook open house</title>
+      <link>http://jcftang.github.io/2012/06/07/facebook-open-house/</link>
+      <pubDate>Thu, 07 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/06/07/facebook-open-house/</guid>
+      <description>The event was actually on 2012-06-06 and it was invite only. The event was mostly about the infrastructure of Facebook. It was actually done quite tastefully with a main speaker giving an overview of the whole system. Luckily they did not turn the event into a recruitment event which was quite pleasant.
+Unfortunately one of the posters that I had actually want to see and chat to the engineers involved wasn&amp;rsquo;t there, there were enough engineers around for me to harass with questions.</description>
+    </item>
+    
+    <item>
+      <title>dcc roadshow n ireland</title>
+      <link>http://jcftang.github.io/2012/06/06/dcc-roadshow-n-ireland/</link>
+      <pubDate>Wed, 06 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/06/06/dcc-roadshow-n-ireland/</guid>
+      <description>The 12th DCC regional roadshow will take place on 6th and 7th June at the McClay library, Queen&amp;rsquo;s University Belfast.
+The roadshow is being organised in conjunction with Queen&amp;rsquo;s University Belfast.
+Turns out to be far more informative than I originally thought. Lot&amp;rsquo;s of real life examples of what people are doing and what&amp;rsquo;s relavent. It&amp;rsquo;s not the usual workshop, conference or meeting that I would attend.</description>
+    </item>
+    
+    <item>
+      <title>git annex assistant is being crowd funded on kickstarter</title>
+      <link>http://jcftang.github.io/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter/</link>
+      <pubDate>Mon, 04 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter/</guid>
+      <description>It seems Joey Hess is in the process of getting git-annex assistant crowd funded. I had not been keeping up to date too much in the last year with git-annex partly because it met my needs and I never needed to upgrade to the latest tip.
+There are a number of really cool features now which is making git-annex more accessible. I particularly like how the merge and sync workflows have now been pretty much scripted so there is less to go wrong!</description>
+    </item>
+    
+    <item>
+      <title>dris workflows just got uploaded to github</title>
+      <link>http://jcftang.github.io/2012/05/21/dris-workflows-just-got-uploaded-to-github/</link>
+      <pubDate>Mon, 21 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/05/21/dris-workflows-just-got-uploaded-to-github/</guid>
+      <description>After almost 3 months supervising and working with two interns I&amp;rsquo;ve finally uploaded their work under the GPLv2 License.
+ https://github.com/jcftang/dri-api https://github.com/jcftang/dris-workflows https://github.com/jcftang/dris-workflows-site https://github.com/jcftang/node-dri https://github.com/jcftang/node-fedora  Please note that the packages above do not represent DRI at all, they just ended up getting labelled that way for whatever reason.
+So what are the above packages? Well they are an attempt at creating a workflow for the DRIS team in TCD who work on digital preservation, digitisation, cataloging and a host of other tasks which I probably don&amp;rsquo;t know about.</description>
+    </item>
+    
+    <item>
+      <title>ceph gets a refresh</title>
+      <link>http://jcftang.github.io/2012/05/19/ceph-gets-a-refresh/</link>
+      <pubDate>Sat, 19 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/05/19/ceph-gets-a-refresh/</guid>
+      <description>I&amp;rsquo;ve been keeping an eye on ceph for quite sometime now. It looks like ceph is almost ready for production usage. There is now a support infrastructure and a commercial company backing the product. So far the OSD, MDS and MON components all run on Linux since most of the implementation appears to be in the user land I wonder if it will be ported to non-linux platforms. It&amp;rsquo;s be quite nifty if one could have a heterogeneous network of servers providing storage.</description>
+    </item>
+    
+    <item>
+      <title>is java really the only game in town for building digital preservation systems</title>
+      <link>http://jcftang.github.io/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/</link>
+      <pubDate>Wed, 16 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/</guid>
+      <description>In the world of digital preservation and repositories it seems that there is primarily fedora-commons, dspace, eprints and one or two other solutions out there for building up digital preservation systems. The one that really stands out as a framework and toolkit for building bigger and more complex systems is fedora-commons.
+It also happens to be written in JAVA and is a fairly big and complex system which implements best-practices for storing digital objects with the sole purpose of preservation.</description>
+    </item>
+    
+    <item>
+      <title>git subtree is now in mainline git</title>
+      <link>http://jcftang.github.io/2012/05/02/git-subtree-is-now-in-mainline-git/</link>
+      <pubDate>Wed, 02 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/05/02/git-subtree-is-now-in-mainline-git/</guid>
+      <description>It seems that git-subtree has been merged into the mainline git project. git-subtree is one of those really useful wrappers for manipulating git repositories if you are an integrator or don&amp;rsquo;t really like git-submodule. It certainly is a nicer alternative to git-submodule. There is less chance of the person cloning a git-subtree repository messing up the checkout because they forgot to initialise the submodules. There is also the added advantage of not needing to fiddle around scripting up the git-archive commands for exporting the source tree for a release if you use git-subtree; actually git-subtree is just plain useful.</description>
+    </item>
+    
+    <item>
+      <title>slurm user group meeting 2012</title>
+      <link>http://jcftang.github.io/2012/04/30/slurm-user-group-meeting-2012/</link>
+      <pubDate>Mon, 30 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/04/30/slurm-user-group-meeting-2012/</guid>
+      <description>This time the usergroup meeting is in BSC in Spain (this place is cool, I&amp;rsquo;ve been at BSC for a few conferences and meetings before). I wish I was doing some HPC right now, I&amp;rsquo;m very tempted to submit an abstract or two on the last two things with slurm that I was involved with.
+The php-slurm package needs some love, its somewhat in use at work. I just wish I had more time to fix the memory leaks.</description>
+    </item>
+    
+    <item>
+      <title>mosh an alternative to ssh</title>
+      <link>http://jcftang.github.io/2012/04/17/mosh-an-alternative-to-ssh/</link>
+      <pubDate>Tue, 17 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/04/17/mosh-an-alternative-to-ssh/</guid>
+      <description>This tool hasn&amp;rsquo;t been around for too long, but long enough to make it into quite a few distros. It looks like it&amp;rsquo;s a good alternative to autossh and tmux which I have been using for the past few years. Like many new tools like this, if it&amp;rsquo;s not around everywhere it&amp;rsquo;s not as useful as it could be.
+The only minor criticism of the application is that the mosh command itself is written in perl, it would be nicer if the wrapper command would be written in C/C++ like the rest of the application.</description>
+    </item>
+    
+    <item>
+      <title>arquillian 1 dot 0 0 dot final released ready for glassfish and weblogic death to all bugs</title>
+      <link>http://jcftang.github.io/2012/04/16/arquillian-1-dot-0-0-dot-final-released-ready-for-glassfish-and-weblogic-death-to-all-bugs/</link>
+      <pubDate>Mon, 16 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/04/16/arquillian-1-dot-0-0-dot-final-released-ready-for-glassfish-and-weblogic-death-to-all-bugs/</guid>
+      <description>Looks like an interesting and useful tool, must take note of this tool for later use to kill all bugs that are found in the projects that we work on, well java ones at least.
+Anything to help squash bugs is good!</description>
+    </item>
+    
+    <item>
+      <title>prototyping and testing systems</title>
+      <link>http://jcftang.github.io/2012/04/09/prototyping-and-testing-systems/</link>
+      <pubDate>Mon, 09 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/04/09/prototyping-and-testing-systems/</guid>
+      <description>One of the issues with with dogfooding your own projects to accelerate development might be the lack of control and feedback from the specifications and requirements process. To try and mitigate this effect, automated testing should be done, that is specification, feature and behavioural testing. Call it what you will, but the basic idea is to get a common understanding between the stakeholder, project owner and developer to understand what is being built and to write automated tests collectively to ensure that it is being delivered.</description>
+    </item>
+    
+    <item>
+      <title>gitbuilder aggregator</title>
+      <link>http://jcftang.github.io/2012/04/01/gitbuilder-aggregator/</link>
+      <pubDate>Sun, 01 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/04/01/gitbuilder-aggregator/</guid>
+      <description>We use git and gitbuilder in work for a large number of projects, we also try and test things as much as we can. I first noticed that someone had written an aggregator for gitbuilder at ceph gitbuilders, this seemed like a great idea (and it is) except the aggregator at the time didn&amp;rsquo;t quite work very fast and needed some ajax magic.
+I had asked for a copy of the aggregator script from the ceph developers, this was really just a perl hack as they said, but it works.</description>
+    </item>
+    
+    <item>
+      <title>dogfooding your own project to accelerate development</title>
+      <link>http://jcftang.github.io/2012/03/15/dogfooding-your-own-project-to-accelerate-development/</link>
+      <pubDate>Thu, 15 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/03/15/dogfooding-your-own-project-to-accelerate-development/</guid>
+      <description>Should you dogfood your own project that you are developing? The answer is probably yes, especially if you have no clear cut requirements from the stakeholder in a project with a greenfield for development. There is a lot to be said about having a working implementation that can be presented and refined.
+Sometimes the project that you are working on won&amp;rsquo;t have clear requirements for implementation, so you should probably take basic assumed cases and run with it.</description>
+    </item>
+    
+    <item>
+      <title>git rerere for long lived feature branches</title>
+      <link>http://jcftang.github.io/2012/03/11/git-rerere-for-long-lived-feature-branches/</link>
+      <pubDate>Sun, 11 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/03/11/git-rerere-for-long-lived-feature-branches/</guid>
+      <description>I turned this feature on for a few of my git repos but I had completely forgotten about it. As far as I recall the feature has been around for a few years now. It can be turned on globally by doing
+git config --global rerere.enabled 1  It pretty much automates the resolution of conflicts in long lived branches. I&amp;rsquo;ve been lazy recently and I have just doing merges instead rebasing, which lead me to re-discover git rerere.</description>
+    </item>
+    
+    <item>
+      <title>enabling latent semantic indexing for octopress</title>
+      <link>http://jcftang.github.io/2012/03/08/enabling-latent-semantic-indexing-for-octopress/</link>
+      <pubDate>Thu, 08 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/03/08/enabling-latent-semantic-indexing-for-octopress/</guid>
+      <description>For those that care about having related posts on their [Octopress]() blog. It&amp;rsquo;s actually quite easy to turn it on, it&amp;rsquo;s nice to have and useful. But it&amp;rsquo;s not enabled by default in Octopress.
+This feature already exists in jekyll, enabling this feature in Octopress is a trival task.
+Firstly add this to your _config.yml file
+lsi: true  Then create a file such as source/_includes/custom/asides/related.html with the following content, add it to one of your asides in _config.</description>
+    </item>
+    
+    <item>
+      <title>planet dri a news aggregator for digital humanities and digital preservation projects in ireland</title>
+      <link>http://jcftang.github.io/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/</link>
+      <pubDate>Sun, 04 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/</guid>
+      <description>This is just a temporary solution till something better or more appropriate comes along. It&amp;rsquo;s just an ikiwiki news aggregator for websites and projects which are related to Digital Preservation, Digitial Humanities and other related bits and pieces.
+It was pretty much setup for myself to keep up to date with all the latest happenings. I found myself falling behind in being knowledgeable in all things related to Digital Repositories Ireland.</description>
+    </item>
+    
+    <item>
+      <title>genetic classification of populations using supervised learning</title>
+      <link>http://jcftang.github.io/2012/02/26/genetic-classification-of-populations-using-supervised-learning/</link>
+      <pubDate>Sun, 26 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/02/26/genetic-classification-of-populations-using-supervised-learning/</guid>
+      <description>In the past few months, in my spare time whenever I get a chance, I&amp;rsquo;ve been working on a side project in work. It&amp;rsquo;s a research project amongst a group of people with a cool idea. The idea is to apply neural networks to identifying diseases, populations and traits via machine learning/supervised learning. I&amp;rsquo;m not entirely sure about the application of the technology as to how new or revolutionary it is, but it seems sensible that a machine is going to be very good at being taught how to recognise patterns so why not do it.</description>
+    </item>
+    
+    <item>
+      <title>things not to say and to do in a project meeting</title>
+      <link>http://jcftang.github.io/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/</link>
+      <pubDate>Thu, 23 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/02/23/things-not-to-say-and-to-do-in-a-project-meeting/</guid>
+      <description>Team meetings can be both productive and counter productive as most people find. If they are well structured with a purpose and goal then a lot can be achieved (most of the time).
+For explorartory meetings, it&amp;rsquo;s probably okay to have some time set aside for some free and open discussions. Once a goal has been agreed upon, it&amp;rsquo;s probably a good idea to focus on it more and steer the discussion to try and deliver on the goal.</description>
+    </item>
+    
+    <item>
+      <title>rasberry pi what i would use it for</title>
+      <link>http://jcftang.github.io/2012/02/19/rasberry-pi-what-i-would-use-it-for/</link>
+      <pubDate>Sun, 19 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/02/19/rasberry-pi-what-i-would-use-it-for/</guid>
+      <description>At the time of writing it seems that the Raspberry Pi site is down, probably suffering from a slashdot effect. I would imagine almost every nerd, sheevaplug developer, OLPC developer, DIY&amp;rsquo;ers who want to build their own home media centres are looking to get a Raspberry Pi right now.
+So what would I use one of these mini-computers for? I can think up a range of cool applications for this device, assuming I can order a few of these to play with.</description>
+    </item>
+    
+    <item>
+      <title>scientific linux 6 dot 2 is out</title>
+      <link>http://jcftang.github.io/2012/02/19/scientific-linux-6-dot-2-is-out/</link>
+      <pubDate>Sun, 19 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/02/19/scientific-linux-6-dot-2-is-out/</guid>
+      <description>SL6.2 has been out for a few days now, I haven&amp;rsquo;t had a chance to really take a look at it, since the more recent SL6 installs I maintain tend to be tracking the 6x releases. Hopefully SL will try and keep inline with the upstreams support schedule.
+I&amp;rsquo;ve a personal preference for deploying SL over CentOS (or any other recompiles of RHEL). SL tends to be a bit more polished in terms of not breaking older installs, i.</description>
+    </item>
+    
+    <item>
+      <title>why linux isnt the only platform to target when building applications</title>
+      <link>http://jcftang.github.io/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/</link>
+      <pubDate>Thu, 16 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/</guid>
+      <description>Why would one want to target other platforms when building applications on the server side?
+This came out of a conversation with the ex-CTO of Creme software (he is also a friend of mine), the conversation started out with why I like to use Macs and OSX as my laptop or workstation. I&amp;rsquo;ve been a long time Linux user of pretty much most of the major distributions ranging from RHEL, Debian/Ubuntu, Gentoo, ArchLinux as well as a number of other derivatives, not to mention other systems like the BSD&amp;rsquo;s which I have a soft spot for.</description>
+    </item>
+    
+    <item>
+      <title>cports for building applications and libraries for hpc systems</title>
+      <link>http://jcftang.github.io/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/</link>
+      <pubDate>Sun, 12 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/</guid>
+      <description>I&amp;rsquo;ve talked about cports in the past, it&amp;rsquo;s basically a collection of makefiles which mostly automates the process of downloading, configuring, building and installing applications and libraries for High Performance Computing systems that use environment-modules.
+One of the key-features that cports offers is the automated modulefile generation, and the fact that the makefiles acts as documentation to how software is configured, built and installed. It&amp;rsquo;s currently being used on the clusters at my work place, it has been a boost to the productivity of the systems admin team.</description>
+    </item>
+    
+    <item>
+      <title>red hat enterprise linux life cycle extended to ten years</title>
+      <link>http://jcftang.github.io/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years/</link>
+      <pubDate>Thu, 09 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years/</guid>
+      <description>It&amp;rsquo;s all over the internet that RHEL6 and newer releases will have a life cycle of 10yrs. This is pretty good news for projects that are deploying systems that have a lifetime of 5yrs or more. Namely Digital Preservation projects, not having to worry about migration between point releases of an operating system platform reduces time and costs.
+I&amp;rsquo;m now more likely to target the systems we develop in work towards a RHEL system (or a RHEL like clone).</description>
+    </item>
+    
+    <item>
+      <title>waterfall or agile methods for delivering a project</title>
+      <link>http://jcftang.github.io/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/</link>
+      <pubDate>Wed, 18 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/</guid>
+      <description>Waterfall methods seem to work well for smallish projects that are well defined and well understood. At least from my own experiences of putting things together, but realistically to think of all possible scenarios and to write up all the possible solutions to the problem seems a little bit wacky. To also assume that the requirements process has captured requirements that won&amp;rsquo;t change close the end of the project is also a little unreasonable or unrealistic, this would be especially true on a project that is planned to run for a few years with fairly substantial goals in an ever changing research and development environment.</description>
+    </item>
+    
+    <item>
+      <title>using continuous integration systems in a team</title>
+      <link>http://jcftang.github.io/2011/12/13/using-continuous-integration-systems-in-a-team/</link>
+      <pubDate>Tue, 13 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2011/12/13/using-continuous-integration-systems-in-a-team/</guid>
+      <description>Apart from the obvious unit testing code which could be fun trying to convince a team to use. There are things known as &amp;lsquo;Continuous Integration&amp;rsquo; processes and servers. The basic idea is to continually build and test your product automatically and report on successful and failed builds.
+I&amp;rsquo;ve known about this methodology for long time now but I&amp;rsquo;ve never bothered to install a CI server since it was always for myself.</description>
+    </item>
+    
+    <item>
+      <title>setting up my work macbook air</title>
+      <link>http://jcftang.github.io/2011/10/21/setting-up-my-work-macbook-air/</link>
+      <pubDate>Fri, 21 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2011/10/21/setting-up-my-work-macbook-air/</guid>
+      <description>Everytime when I install, reinstall or setup a mac desktop or laptop I always tend to install the same set of software that I was using. As time goes on I change what I like to install and what to use. So I&amp;rsquo;ve been keeping notes and logs of that I usually install first.
+For my new job I will mainly be writing documents, writing/modify JAVA code and other bits and pieces that an integrator/architect or release engineer might want to do.</description>
+    </item>
+    
+    <item>
+      <title>the joys of working with a team across multiple institutions</title>
+      <link>http://jcftang.github.io/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions/</link>
+      <pubDate>Wed, 19 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2011/10/19/the-joys-of-working-with-a-team-across-multiple-institutions/</guid>
+      <description>Having worked in a number of cross institutional projects in the past has lead me to always be weary about how to interact with people. Often it&amp;rsquo;s the lack of co-ordination and communication that seems to be the killer. Parts of the team would seem to not know what other parts of the team are doing and thus either deviate from the master plan or duplicate work.
+Gathering requirements for a project is always fun, translating the requirements for a developer to create the end product is even more fun, it often can lead to &amp;lsquo;chinese whispers&amp;rsquo; where things just get miscommunicated and misunderstood.</description>
+    </item>
+    
+    <item>
+      <title>feeling disconnected from modern software development tools</title>
+      <link>http://jcftang.github.io/2011/10/13/feeling-disconnected-from-modern-software-development-tools/</link>
+      <pubDate>Thu, 13 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2011/10/13/feeling-disconnected-from-modern-software-development-tools/</guid>
+      <description>I&amp;rsquo;ve recently started a new role as being a senior software engineer for an Irish National Project and I have had to refresh my OOP skills with JAVA.
+Naturally I gravitated to free and opensource tools to refresh myself. This lead me to install Eclipse, which is the the EMACS of the modern world. I&amp;rsquo;ve never had much luck with IDE&amp;rsquo;s nor have I liked using IDE&amp;rsquo;s much in the past since I mainly dealt with codes written in C, Fortran and if I am lucky Perl or C++.</description>
     </item>
     
   </channel>

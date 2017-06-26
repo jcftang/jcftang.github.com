@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Team on Jimmy Tang</title>
+    <link>http://jcftang.github.io/categories/team/</link>
+    <description>Recent content in Team on Jimmy Tang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 09 Apr 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://jcftang.github.io/categories/team/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>prototyping and testing systems</title>
+      <link>http://jcftang.github.io/2012/04/09/prototyping-and-testing-systems/</link>
+      <pubDate>Mon, 09 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/04/09/prototyping-and-testing-systems/</guid>
+      <description>One of the issues with with dogfooding your own projects to accelerate development might be the lack of control and feedback from the specifications and requirements process. To try and mitigate this effect, automated testing should be done, that is specification, feature and behavioural testing. Call it what you will, but the basic idea is to get a common understanding between the stakeholder, project owner and developer to understand what is being built and to write automated tests collectively to ensure that it is being delivered.</description>
+    </item>
+    
+    <item>
+      <title>using continuous integration systems in a team</title>
+      <link>http://jcftang.github.io/2011/12/13/using-continuous-integration-systems-in-a-team/</link>
+      <pubDate>Tue, 13 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2011/12/13/using-continuous-integration-systems-in-a-team/</guid>
+      <description>Apart from the obvious unit testing code which could be fun trying to convince a team to use. There are things known as &amp;lsquo;Continuous Integration&amp;rsquo; processes and servers. The basic idea is to continually build and test your product automatically and report on successful and failed builds.
+I&amp;rsquo;ve known about this methodology for long time now but I&amp;rsquo;ve never bothered to install a CI server since it was always for myself.</description>
+    </item>
+    
+  </channel>
+</rss>

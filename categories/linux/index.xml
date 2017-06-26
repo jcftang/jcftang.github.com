@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Jimmy Tang</title>
+    <link>http://jcftang.github.io/categories/linux/</link>
+    <description>Recent content in Linux on Jimmy Tang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 08 Mar 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://jcftang.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>enabling latent semantic indexing for octopress</title>
+      <link>http://jcftang.github.io/2012/03/08/enabling-latent-semantic-indexing-for-octopress/</link>
+      <pubDate>Thu, 08 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/03/08/enabling-latent-semantic-indexing-for-octopress/</guid>
+      <description>For those that care about having related posts on their [Octopress]() blog. It&amp;rsquo;s actually quite easy to turn it on, it&amp;rsquo;s nice to have and useful. But it&amp;rsquo;s not enabled by default in Octopress.
+This feature already exists in jekyll, enabling this feature in Octopress is a trival task.
+Firstly add this to your _config.yml file
+lsi: true  Then create a file such as source/_includes/custom/asides/related.html with the following content, add it to one of your asides in _config.</description>
+    </item>
+    
+  </channel>
+</rss>

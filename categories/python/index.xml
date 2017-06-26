@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Jimmy Tang</title>
+    <link>http://jcftang.github.io/categories/python/</link>
+    <description>Recent content in Python on Jimmy Tang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Sep 2014 17:40:46 +0100</lastBuildDate>
+    
+	<atom:link href="http://jcftang.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>developer happiness with waf</title>
+      <link>http://jcftang.github.io/2014/09/24/developer-happiness-with-waf/</link>
+      <pubDate>Wed, 24 Sep 2014 17:40:46 +0100</pubDate>
+      
+      <guid>http://jcftang.github.io/2014/09/24/developer-happiness-with-waf/</guid>
+      <description>Having recently changed jobs (after a very long stint at TCD - just short of 10yrs!) I’ve moved to a small startup. I’ve been working on a few small bits and pieces of code, infrastructure, etc&amp;hellip; I had to make some stuff work and make it work well. So I decided to use autotools to configure and build the application that I’m working on.
+As great as it was on my nice fast intel based machine, it was dog slow on my target platform, especially when I had to regenerate the autoconf scripts.</description>
+    </item>
+    
+  </channel>
+</rss>

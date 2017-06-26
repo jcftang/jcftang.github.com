@@ -5,19 +5,19 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.17-DEV" />
+  <meta name="generator" content="Hugo 0.25-DEV" />
 
   <title>Jimmy Tang</title>
 
   
   
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/pure-min.css">
 
   <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-min.css">
   <!--<![endif]-->
 
   <!--[if lte IE 8]>
@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="http://jcftang.github.io/css/blackburn.css">
 
   
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
@@ -41,12 +41,15 @@
   
 
   
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/androidstudio.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   
 
   <link rel="shortcut icon" href="http://jcftang.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+  
 
 </head>
 
@@ -68,12 +71,6 @@
       
       
         <li class="pure-menu-item">
-          <a class="pure-menu-link" href="http://jcftang.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
-      
-        </li>
-      
-      
-        <li class="pure-menu-item">
           <a class="pure-menu-link" href="http://jcftang.github.io/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
       
         </li>
@@ -81,6 +78,12 @@
       
         <li class="pure-menu-item">
           <a class="pure-menu-link" href="http://jcftang.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://jcftang.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
       
         </li>
       
@@ -135,6 +138,10 @@
     
 
     
+
+    
+
+    
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://linkedin.com/in/jimmy-tang-1b54322" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
     </li>
@@ -154,6 +161,22 @@
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/jcftang" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -213,7 +236,11 @@
   </header>
 
   <p>
-  Having created a small single node Ceph cluster with following the 5 minute quickstart guide I was able to create a single node cluster with one OSD. This probably wouldn&rsquo;t be the first post that someone has written about this topic. I&rsquo;ve verified that it works in my test environment of Scientific Linux 6 by mounting the system with FUSE. Here&rsquo;s my fstab to describe my disk layout # /etc/fstab # Created by anaconda on Fri Jul 6 14:27:56 2012 # # Accessible filesystems, by reference, are maintained under '/dev/disk' # See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info # /dev/mapper/vg_ceres-lv_root / ext4 defaults,user_xattr 1 1 UUID=4eb5efad-dbcd-4a9f-8187-d8ffa913e147 /boot ext4 defaults 1 2 /dev/mapper/vg_ceres-lv_home /data1 ext4 defaults,user_xattr 1 2 /dev/sdb /data ext4 defaults,user_xattr 1 2 /dev/mapper/vg_ceres-lv_swap swap swap defaults 0 0 tmpfs /dev/shm tmpfs defaults 0 0 devpts /dev/pts devpts gid=5,mode=620 0 0 sysfs /sys sysfs defaults 0 0 proc /proc proc defaults 0 0 Running a df -h gives this $ df -h Filesystem Size Used Avail Use% Mounted on /dev/mapper/vg_ceres-lv_root 50G 5.5G 42G 12% / tmpfs 938M 0 938M 0% /dev/shm /dev/sda1 485M 80M 380M 18% /boot /dev/sdb 230G 1.2G 217G 1% /data ceph-fuse 230G 13G 217G 6% /mnt /dev/mapper/vg_ceres-lv_home 176G 188M 167G 1% /data1 I&rsquo;m using an old desktop machine so I can plonk some &ldquo;files&rdquo; on it so I can dogfood the test system in administering the bits and pieces of Ceph.
+  Having created a small single node Ceph cluster with following the 5 minute quickstart guide I was able to create a single node cluster with one OSD.
+This probably wouldn&rsquo;t be the first post that someone has written about this topic.
+I&rsquo;ve verified that it works in my test environment of Scientific Linux 6 by mounting the system with FUSE.
+Here&rsquo;s my fstab to describe my disk layout
+# /etc/fstab # Created by anaconda on Fri Jul 6 14:27:56 2012 # # Accessible filesystems, by reference, are maintained under '/dev/disk' # See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info # /dev/mapper/vg_ceres-lv_root / ext4 defaults,user_xattr 1 1 UUID=4eb5efad-dbcd-4a9f-8187-d8ffa913e147 /boot ext4 defaults 1 2 /dev/mapper/vg_ceres-lv_home /data1 ext4 defaults,user_xattr 1 2 /dev/sdb /data ext4 defaults,user_xattr 1 2 /dev/mapper/vg_ceres-lv_swap swap swap defaults 0 0 tmpfs /dev/shm tmpfs defaults 0 0 devpts /dev/pts devpts gid=5,mode=620 0 0 sysfs /sys sysfs defaults 0 0 proc /proc proc defaults 0 0  Running a df -h gives this
   </p>
 
   
@@ -246,7 +273,9 @@
   </header>
 
   <p>
-  After my last failed attempt at Installing Ceph on SL6 or rather my attempt at configuring Ceph for a test failed miserably. It hasn&rsquo;t deterred me to test more. As a result I setup a number of Vagrant Virtual machines and got together a few puppet scripts to provision machines. Here&rsquo;s a sample manifest for puppet to automate the deployment of a machine to build Ceph. It requires that you SL6 environment to have at least the epel repository enabled.
+  After my last failed attempt at Installing Ceph on SL6 or rather my attempt at configuring Ceph for a test failed miserably.
+It hasn&rsquo;t deterred me to test more. As a result I setup a number of Vagrant Virtual machines and got together a few puppet scripts to provision machines.
+Here&rsquo;s a sample manifest for puppet to automate the deployment of a machine to build Ceph. It requires that you SL6 environment to have at least the epel repository enabled.
   </p>
 
   
@@ -279,7 +308,8 @@
   </header>
 
   <p>
-  It&rsquo;s somewhat interesting to listen to, we&rsquo;ve been looking at ceph for a few things in work. Just jotting this down so I remember to share this with the guys in work.
+  It&rsquo;s somewhat interesting to listen to, we&rsquo;ve been looking at ceph for a few things in work.
+Just jotting this down so I remember to share this with the guys in work.
   </p>
 
   
@@ -308,7 +338,8 @@
   </header>
 
   <p>
-  Over past few weeks I&rsquo;ve been working on doing some integration and testing work to try and deliver a prototype system. I&rsquo;ve taken the Vagrant tool and puppet to try and deliver systems for testing and development. Although the systems that I am currently working with aren&rsquo;t fully automated, they are automated enough for them to be easily started up by a developer who reads the documentation (I hope). I&rsquo;m hoping that by providing these disposable systems that the various members in the team that I am working with will be more free to experiment and less fearful of breaking the system.
+  Over past few weeks I&rsquo;ve been working on doing some integration and testing work to try and deliver a prototype system. I&rsquo;ve taken the Vagrant tool and puppet to try and deliver systems for testing and development. Although the systems that I am currently working with aren&rsquo;t fully automated, they are automated enough for them to be easily started up by a developer who reads the documentation (I hope).
+I&rsquo;m hoping that by providing these disposable systems that the various members in the team that I am working with will be more free to experiment and less fearful of breaking the system.
   </p>
 
   
@@ -341,7 +372,8 @@
   </header>
 
   <p>
-  I&rsquo;ve been a long time consumer of ruby applications but never quite got around to learning the language and the frameworks that are available to developers. Within the team that I have been working with, we&rsquo;ve been evaluating hydra as a possible framework for our project. I&rsquo;ve been spending the last few days reading The RSpec Book, I&rsquo;ve been able to pick up some of the basic syntax of the language from the BDD book.
+  I&rsquo;ve been a long time consumer of ruby applications but never quite got around to learning the language and the frameworks that are available to developers. Within the team that I have been working with, we&rsquo;ve been evaluating hydra as a possible framework for our project.
+I&rsquo;ve been spending the last few days reading The RSpec Book, I&rsquo;ve been able to pick up some of the basic syntax of the language from the BDD book.
   </p>
 
   
@@ -374,7 +406,8 @@
   </header>
 
   <p>
-  Having discovered vagrant and veewee recently at OR2012 I&rsquo;ve been building a few boxes for our site for testing purposes. I&rsquo;ve had to relearn puppet to provision machines, but it&rsquo;s paying off. I&rsquo;ve been able to deploy 3-4 virtual machines with relative ease. The only disappointment is the seemingly frequent and semi-random kernel panics and crashes that I get on OSX (which is probably caused by VirtualBox when I do lots of IO).
+  Having discovered vagrant and veewee recently at OR2012 I&rsquo;ve been building a few boxes for our site for testing purposes. I&rsquo;ve had to relearn puppet to provision machines, but it&rsquo;s paying off. I&rsquo;ve been able to deploy 3-4 virtual machines with relative ease.
+The only disappointment is the seemingly frequent and semi-random kernel panics and crashes that I get on OSX (which is probably caused by VirtualBox when I do lots of IO).
   </p>
 
   
@@ -473,7 +506,8 @@
   </header>
 
   <p>
-  I only been here for a day and Edinburgh is as nice as I recall it was. This time my attendance to Open Repositories 2012 brought me and some co-workers of the DRI team to this city. It&rsquo;s my first time at this event and there seems to be lots of people, so far it&rsquo;s been pleasant enough apart from the weather. For those interested in whats happening you should follow the hashtag #or2012 on twitter to see what people are saying.
+  I only been here for a day and Edinburgh is as nice as I recall it was. This time my attendance to Open Repositories 2012 brought me and some co-workers of the DRI team to this city. It&rsquo;s my first time at this event and there seems to be lots of people, so far it&rsquo;s been pleasant enough apart from the weather.
+For those interested in whats happening you should follow the hashtag #or2012 on twitter to see what people are saying.
   </p>
 
   
@@ -506,7 +540,9 @@
   </header>
 
   <p>
-  As an exercise of a Friday afternoon of not starting something big before heading off to a conference. I&rsquo;ve decided to spend an hour or two at seeing how ceph is installed and configured on an SL6 based machine (RHEL6 clone). The install target is just an old desktop running a 64bit install of SL6x, so it&rsquo;s nothing too fancy. Following the instructions at http://ceph.com/wiki/Installing_on_RedHat_or_CentOS, I ended up doing this yum install yum-conf-epel yum update yum gcc gcc-c++ automake libtool expat expat-devel boost-devel nss-devel cryptopp cryptopp-devel libatomic_ops-devel fuse-devel yum install libedit-devel libedit It seems that the packages cryptopp-devel, cryptopp and expat-devel, expat are the only packages pulled in from the epel repository.
+  As an exercise of a Friday afternoon of not starting something big before heading off to a conference. I&rsquo;ve decided to spend an hour or two at seeing how ceph is installed and configured on an SL6 based machine (RHEL6 clone).
+The install target is just an old desktop running a 64bit install of SL6x, so it&rsquo;s nothing too fancy.
+Following the instructions at http://ceph.com/wiki/Installing_on_RedHat_or_CentOS, I ended up doing this
   </p>
 
   
