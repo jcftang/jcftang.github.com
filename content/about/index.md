@@ -1,11 +1,6 @@
 +++
 title = "About"
-date = "2011-10-13"
-slug = "/about/"
-type = "page"
-layout = "simple-static"
 +++
-
 ## Summary
 
 Jimmy Tang is a HPC SRE at Voysis.  He has worked at
