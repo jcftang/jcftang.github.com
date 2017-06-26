@@ -775,15 +775,6 @@ Gathering requirements for a project is always fun, translating the requirements
     </item>
     
     <item>
-      <title>About</title>
-      <link>http://jcftang.github.io/about/</link>
-      <pubDate>Thu, 13 Oct 2011 00:00:00 +0000</pubDate>
-      
-      <guid>http://jcftang.github.io/about/</guid>
-      <description>Summary Jimmy Tang is a HPC SRE at Voysis. He has worked at Logentries within Rapid7, Quantum Biosystems, Digital Repository of Ireland and a number of grid storage systems in the HPC Europa 1 and 2 programs, developing management and storage solutions for numerical computing. He has also participated in the development and deployment of the infrastructure for the Irish African Partnership, 1641 Depositions, IITAC, eINIS and a number of other research projects.</description>
-    </item>
-    
-    <item>
       <title>feeling disconnected from modern software development tools</title>
       <link>http://jcftang.github.io/2011/10/13/feeling-disconnected-from-modern-software-development-tools/</link>
       <pubDate>Thu, 13 Oct 2011 00:00:00 +0000</pubDate>
@@ -791,6 +782,15 @@ Gathering requirements for a project is always fun, translating the requirements
       <guid>http://jcftang.github.io/2011/10/13/feeling-disconnected-from-modern-software-development-tools/</guid>
       <description>I&amp;rsquo;ve recently started a new role as being a senior software engineer for an Irish National Project and I have had to refresh my OOP skills with JAVA.
 Naturally I gravitated to free and opensource tools to refresh myself. This lead me to install Eclipse, which is the the EMACS of the modern world. I&amp;rsquo;ve never had much luck with IDE&amp;rsquo;s nor have I liked using IDE&amp;rsquo;s much in the past since I mainly dealt with codes written in C, Fortran and if I am lucky Perl or C++.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://jcftang.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/about/</guid>
+      <description>Summary Jimmy Tang is a HPC SRE at Voysis. He has worked at Logentries within Rapid7, Quantum Biosystems, Digital Repository of Ireland and a number of grid storage systems in the HPC Europa 1 and 2 programs, developing management and storage solutions for numerical computing. He has also participated in the development and deployment of the infrastructure for the Irish African Partnership, 1641 Depositions, IITAC, eINIS and a number of other research projects.</description>
     </item>
     
   </channel>
