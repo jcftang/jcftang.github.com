@@ -1,7 +1,7 @@
 +++
 title = "why linux isnt the only platform to target when building applications"
 date = "2012-02-16"
-
+tags = ["linux"]
 
 categories = []
 +++

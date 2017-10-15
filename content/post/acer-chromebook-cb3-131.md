@@ -1,7 +1,7 @@
 +++
 date = "2016-08-01T10:26:34+01:00"
 description = ""
-tags = []
+tags = ["linux", "chromebook"]
 title = "Acer Chromebook 11in, CB3-131"
 topics = []
 +++

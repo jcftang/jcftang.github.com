@@ -1,7 +1,7 @@
 +++
 title = "zfs on linux is usable and safe"
 date = "2013-03-31T11:05:56+01:00"
-
+tags = ["linux", "zfs"]
 
 categories = []
 +++
