@@ -402,7 +402,19 @@
   </url>
   
   <url>
+    <loc>http://jcftang.github.io/tags/chromebook/</loc>
+    <lastmod>2016-08-01T10:26:34+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://jcftang.github.io/</loc>
+    <lastmod>2016-08-01T10:26:34+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jcftang.github.io/tags/linux/</loc>
     <lastmod>2016-08-01T10:26:34+01:00</lastmod>
     <priority>0</priority>
   </url>
@@ -439,6 +451,7 @@
   
   <url>
     <loc>http://jcftang.github.io/tags/</loc>
+    <lastmod>2016-08-01T10:26:34+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -450,6 +463,12 @@
   
   <url>
     <loc>http://jcftang.github.io/topics/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jcftang.github.io/tags/zfs/</loc>
+    <lastmod>2013-03-31T11:05:56+01:00</lastmod>
     <priority>0</priority>
   </url>
   

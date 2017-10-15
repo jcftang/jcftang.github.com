@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.29" />
 
-  <title>Acer Chromebook 11in, CB3-131 &middot; Jimmy Tang</title>
+  <title>Zfs &middot; Jimmy Tang</title>
 
   
   
@@ -36,6 +36,8 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
 
   
+  
+  <link rel="alternate" type="application/rss+xml" title="Jimmy Tang" href="http://jcftang.github.io/tags/zfs/index.xml" />
   
 
   
@@ -91,6 +93,10 @@
   <div class="pure-menu social">
   <ul class="pure-menu-list">
 
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="http://jcftang.github.io/tags/zfs/index.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+    </li>
     
 
     
@@ -202,23 +208,24 @@
 
 
 <div class="header">
-  <h1>Acer Chromebook 11in, CB3-131</h1>
-  <h2></h2>
+  <h1>Zfs</h1>
 </div>
-<div class="content">
 
-  <div class="post-meta">
+<div class="content">
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2013/03/31/zfs-on-linux-is-usable-and-safe/">zfs on linux is usable and safe</a></h2>
+
+    <div class="post-meta">
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Aug 2016, 10:26</time>
+    <time>31 Mar 2013, 11:05</time>
   </div>
 
   
 
-  
-  
-  
   
 
   
@@ -229,7 +236,7 @@
     
       <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>&nbsp;&#47;
     
-      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/chromebook">chromebook</a>
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/zfs">zfs</a>
     
   </div>
   
@@ -237,88 +244,21 @@
 
 </div>
 
-  <p>I recently picked up a cheap Acer Chromebook 11inch - CB3-131. It
-runs Chome OS. While it&rsquo;s nice as a machine that just works for
-small things and travel. I found the environment to be a bit
-restrictive (less fun) to play with. I did try
-<a href="https://github.com/dnschneid/crouton">crouton</a>, but it wasn&rsquo;t what
-I had hoped for.</p>
+  </header>
 
-<p>I proceeded to investigate installing a full linux distro onto my
-Chromebook and discovered that on some (the one that I got) has a
-physical write protect screw on the mainboard. I proceeded to take
-it apart and compared it to some photos of the older <a href="https://plus.google.com/photos/+RyanSchelske/albums/6125754696828294017/6125754695280265442?pid=6125754695280265442&amp;oid=109699564062072057954">CB3-111</a> model.
-I then proceeded to remove the write protect screw which I think
-is this one (circled in red). The layout of the board hasn&rsquo;t changed
-much if at all, so it&rsquo;s a pretty safe bet.</p>
-
-<p><img src="http://jcftang.github.io/CB3-131.jpg" alt="" /></p>
-
-<p>I&rsquo;ve yet to try installing a linux like <a href="https://galliumos.org/">GalliumOS</a>
-or just straight up Debian/Ubuntu. It seems the BayTrail chipset
-is less supported than the Haswell/Broadwell based Chromebooks.</p>
-
+  <p>
+  It seems that ZFS On Linux reached a significant milestone, that is the software is stable to use on Linux. This is pretty useful and significant for the preservation and archivists community as it provides a more reliable platform to build on. The LLNL guys must really want to mitigate against silent data failures in their systems (they&rsquo;re running Lustre on top of ZFS).
+If ZFS is trustable or not we will know over time.
+  </p>
 
   
-<div class="prev-next-post pure-g">
-  <div class="pure-u-1-24" style="text-align: left;">
-    
-    <a href="http://jcftang.github.io/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/"><i class="fa fa-chevron-left"></i></a>
-    
-  </div>
-  <div class="pure-u-10-24">
-    
-    <nav class="prev">
-      <a href="http://jcftang.github.io/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/">cobbler 2 dot 6 on ubuntu precise</a>
-    </nav>
-    
-  </div>
-  <div class="pure-u-2-24">
-    &nbsp;
-  </div>
-  <div class="pure-u-10-24">
-    
-  </div>
-  <div class="pure-u-1-24" style="text-align: right;">
-    
-  </div>
-</div>
-
-
+  <footer>
+    <a href="http://jcftang.github.io/2013/03/31/zfs-on-linux-is-usable-and-safe/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
 
   
-
-<h3>See Also</h3>
-<ul>
-	
-	<li><a href="http://jcftang.github.io/2013/03/31/zfs-on-linux-is-usable-and-safe/">zfs on linux is usable and safe</a></li>
-	
-	<li><a href="http://jcftang.github.io/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">why linux isnt the only platform to target when building applications</a></li>
-	
-</ul>
-
-
-
-  
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
-    
-    
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'jcftang';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
 </div>
 
 </div>
@@ -341,4 +281,3 @@ is less supported than the Haswell/Broadwell based Chromebooks.</p>
 
 </body>
 </html>
-

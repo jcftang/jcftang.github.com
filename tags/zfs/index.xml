@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zfs on Jimmy Tang</title>
+    <link>http://jcftang.github.io/tags/zfs/</link>
+    <description>Recent content in Zfs on Jimmy Tang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 31 Mar 2013 11:05:56 +0100</lastBuildDate>
+    
+	<atom:link href="http://jcftang.github.io/tags/zfs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>zfs on linux is usable and safe</title>
+      <link>http://jcftang.github.io/2013/03/31/zfs-on-linux-is-usable-and-safe/</link>
+      <pubDate>Sun, 31 Mar 2013 11:05:56 +0100</pubDate>
+      
+      <guid>http://jcftang.github.io/2013/03/31/zfs-on-linux-is-usable-and-safe/</guid>
+      <description>It seems that ZFS On Linux reached a significant milestone, that is the software is stable to use on Linux. This is pretty useful and significant for the preservation and archivists community as it provides a more reliable platform to build on. The LLNL guys must really want to mitigate against silent data failures in their systems (they&amp;rsquo;re running Lustre on top of ZFS).
+If ZFS is trustable or not we will know over time.</description>
+    </item>
+    
+  </channel>
+</rss>

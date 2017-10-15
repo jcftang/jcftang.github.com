@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Jimmy Tang</title>
+    <link>http://jcftang.github.io/tags/linux/</link>
+    <description>Recent content in Linux on Jimmy Tang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Aug 2016 10:26:34 +0100</lastBuildDate>
+    
+	<atom:link href="http://jcftang.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Acer Chromebook 11in, CB3-131</title>
+      <link>http://jcftang.github.io/2016/08/01/acer-chromebook-11in-cb3-131/</link>
+      <pubDate>Mon, 01 Aug 2016 10:26:34 +0100</pubDate>
+      
+      <guid>http://jcftang.github.io/2016/08/01/acer-chromebook-11in-cb3-131/</guid>
+      <description>I recently picked up a cheap Acer Chromebook 11inch - CB3-131. It runs Chome OS. While it&amp;rsquo;s nice as a machine that just works for small things and travel. I found the environment to be a bit restrictive (less fun) to play with. I did try crouton, but it wasn&amp;rsquo;t what I had hoped for.
+I proceeded to investigate installing a full linux distro onto my Chromebook and discovered that on some (the one that I got) has a physical write protect screw on the mainboard.</description>
+    </item>
+    
+    <item>
+      <title>zfs on linux is usable and safe</title>
+      <link>http://jcftang.github.io/2013/03/31/zfs-on-linux-is-usable-and-safe/</link>
+      <pubDate>Sun, 31 Mar 2013 11:05:56 +0100</pubDate>
+      
+      <guid>http://jcftang.github.io/2013/03/31/zfs-on-linux-is-usable-and-safe/</guid>
+      <description>It seems that ZFS On Linux reached a significant milestone, that is the software is stable to use on Linux. This is pretty useful and significant for the preservation and archivists community as it provides a more reliable platform to build on. The LLNL guys must really want to mitigate against silent data failures in their systems (they&amp;rsquo;re running Lustre on top of ZFS).
+If ZFS is trustable or not we will know over time.</description>
+    </item>
+    
+    <item>
+      <title>why linux isnt the only platform to target when building applications</title>
+      <link>http://jcftang.github.io/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/</link>
+      <pubDate>Thu, 16 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/</guid>
+      <description>Why would one want to target other platforms when building applications on the server side?
+This came out of a conversation with the ex-CTO of Creme software (he is also a friend of mine), the conversation started out with why I like to use Macs and OSX as my laptop or workstation. I&amp;rsquo;ve been a long time Linux user of pretty much most of the major distributions ranging from RHEL, Debian/Ubuntu, Gentoo, ArchLinux as well as a number of other derivatives, not to mention other systems like the BSD&amp;rsquo;s which I have a soft spot for.</description>
+    </item>
+    
+  </channel>
+</rss>

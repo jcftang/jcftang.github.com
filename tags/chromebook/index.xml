@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chromebook on Jimmy Tang</title>
+    <link>http://jcftang.github.io/tags/chromebook/</link>
+    <description>Recent content in Chromebook on Jimmy Tang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Aug 2016 10:26:34 +0100</lastBuildDate>
+    
+	<atom:link href="http://jcftang.github.io/tags/chromebook/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Acer Chromebook 11in, CB3-131</title>
+      <link>http://jcftang.github.io/2016/08/01/acer-chromebook-11in-cb3-131/</link>
+      <pubDate>Mon, 01 Aug 2016 10:26:34 +0100</pubDate>
+      
+      <guid>http://jcftang.github.io/2016/08/01/acer-chromebook-11in-cb3-131/</guid>
+      <description>I recently picked up a cheap Acer Chromebook 11inch - CB3-131. It runs Chome OS. While it&amp;rsquo;s nice as a machine that just works for small things and travel. I found the environment to be a bit restrictive (less fun) to play with. I did try crouton, but it wasn&amp;rsquo;t what I had hoped for.
+I proceeded to investigate installing a full linux distro onto my Chromebook and discovered that on some (the one that I got) has a physical write protect screw on the mainboard.</description>
+    </item>
+    
+  </channel>
+</rss>
