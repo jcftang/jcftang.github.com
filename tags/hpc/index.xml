@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hpc on Jimmy Tang</title>
+    <link>http://jcftang.github.io/tags/hpc/</link>
+    <description>Recent content in Hpc on Jimmy Tang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 Mar 2013 07:46:26 +0000</lastBuildDate>
+    
+	<atom:link href="http://jcftang.github.io/tags/hpc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>building kelvin supercomputer time lapse</title>
+      <link>http://jcftang.github.io/2013/03/22/building-kelvin-supercomputer-time-lapse/</link>
+      <pubDate>Fri, 22 Mar 2013 07:46:26 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2013/03/22/building-kelvin-supercomputer-time-lapse/</guid>
+      <description>I was cleaning up some files and I found this time lapse that I did when we were building Kelvin, it&amp;rsquo;s a few years old now. Even by current standards it&amp;rsquo;s still pretty respectable.
+The timelapse
+We had to unpack and install all the infiniband cards ourselves, cabled, racked, installed, configured and burnt it in for production usage. The cluster has 100 nodes, each node has 2 sockets, each socket has 6 cores and 24gb of ram.</description>
+    </item>
+    
+    <item>
+      <title>supercomputing 2012 and the arms race to exascale</title>
+      <link>http://jcftang.github.io/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale/</link>
+      <pubDate>Fri, 16 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale/</guid>
+      <description>It was clear at this year&amp;rsquo;s supercomputing conference that there wasn&amp;rsquo;t as much excitement as previous years. There wasn&amp;rsquo;t much surprise as nothing too revolutionary and radical was announced. In the past when Bluegene/L and P arrived after the earth simulator there was an arms race to being number 1 in the top500 list. Even things like GPGPU&amp;rsquo;s aren&amp;rsquo;t as cool anymore, everyone is selling effectively the same systems when it comes to clusters.</description>
+    </item>
+    
+    <item>
+      <title>digital preservation and archiving is a hpc problem</title>
+      <link>http://jcftang.github.io/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/</link>
+      <pubDate>Sun, 07 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/</guid>
+      <description>I shall be going to SC2012 next month, I plan on hitting a few of the storage vendors for possible collaborations and flagging to them that we&amp;rsquo;re on the look out for storage systems. One of the first observation that the reader will note is &amp;ldquo;where is that link between HPC and Digital Preservation and Archiving&amp;rdquo;. It&amp;rsquo;s probably not obvious to most people, one of the big problems in the area of preservation and archiving is the the amount of data involved and the varied types of data.</description>
+    </item>
+    
+    <item>
+      <title>slurm bank that big script for banking in slurm</title>
+      <link>http://jcftang.github.io/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/</link>
+      <pubDate>Sat, 29 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/</guid>
+      <description>A co-worker of mine (Paddy Doyle) had originally hacked at a perl script for reporting balances from SLURM&amp;rsquo;s accounting system a year or two ago and he had figured out that it might be possible to do some minimalistic &amp;lsquo;configuration&amp;rsquo; and scripting to get a system that&amp;rsquo;s very basic but functional.
+It was just one of those things that funding agencies wanted to justify how the system was being used, GOLD was clunky and obtrusive and complicated for what we wanted.</description>
+    </item>
+    
+    <item>
+      <title>top500 supercomputers for summer 2012</title>
+      <link>http://jcftang.github.io/2012/06/18/top500-supercomputers-for-summer-2012/</link>
+      <pubDate>Mon, 18 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/06/18/top500-supercomputers-for-summer-2012/</guid>
+      <description>The Top 500 List is out! It&amp;rsquo;s been no surprise that LLNL and IBM has reclaimed the top spot. There is some pretty cool tech that&amp;rsquo;s going to come out of these systems which the HPC community should be rubbing their hands over.
+Slurm will be moving along development for these big systems as well as Lustre and zfs on linux.</description>
+    </item>
+    
+    <item>
+      <title>slurm user group meeting 2012</title>
+      <link>http://jcftang.github.io/2012/04/30/slurm-user-group-meeting-2012/</link>
+      <pubDate>Mon, 30 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/04/30/slurm-user-group-meeting-2012/</guid>
+      <description>This time the usergroup meeting is in BSC in Spain (this place is cool, I&amp;rsquo;ve been at BSC for a few conferences and meetings before). I wish I was doing some HPC right now, I&amp;rsquo;m very tempted to submit an abstract or two on the last two things with slurm that I was involved with.
+The php-slurm package needs some love, its somewhat in use at work. I just wish I had more time to fix the memory leaks.</description>
+    </item>
+    
+    <item>
+      <title>cports for building applications and libraries for hpc systems</title>
+      <link>http://jcftang.github.io/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/</link>
+      <pubDate>Sun, 12 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/</guid>
+      <description>I&amp;rsquo;ve talked about cports in the past, it&amp;rsquo;s basically a collection of makefiles which mostly automates the process of downloading, configuring, building and installing applications and libraries for High Performance Computing systems that use environment-modules.
+One of the key-features that cports offers is the automated modulefile generation, and the fact that the makefiles acts as documentation to how software is configured, built and installed. It&amp;rsquo;s currently being used on the clusters at my work place, it has been a boost to the productivity of the systems admin team.</description>
+    </item>
+    
+  </channel>
+</rss>

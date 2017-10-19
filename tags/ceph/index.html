@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.30" />
+
+  <title>Ceph &middot; Jimmy Tang</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="http://jcftang.github.io/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="http://jcftang.github.io/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="http://jcftang.github.io/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="Jimmy Tang" href="http://jcftang.github.io/tags/ceph/index.xml" />
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="http://jcftang.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://jcftang.github.io/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://jcftang.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://jcftang.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="http://jcftang.github.io/tags/ceph/index.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+    </li>
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/jcftang" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://plus.google.com/+JimmyTang" target="_blank"><i class="fa fa-google-plus-square fa-fw"></i>Google+</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/jimmy-tang-1b54322" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/jcftang" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Ceph</h1>
+</div>
+
+<div class="content">
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/10/23/ceph-v0-dot-53-released/">ceph v0 dot 53 released</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>23 Oct 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/ceph">ceph</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  There&rsquo;s a new release of Ceph, I hope that they release a stable soon so we can do further evaluations of the Ceph storage system. A few of my work colleagues are going to the Ceph workshop next week.
+I&rsquo;m wondering if anyone has taken the CRUSH algorithm and used it in other domains.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/09/28/ceph-v0-dot-52-released/">ceph v0 dot 52 released</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>28 Sep 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/ceph">ceph</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  The latest development branch of Ceph is out with some rather nice looking features, what&rsquo;s probably the most useful are the RPM builds for those that run RHEL6 like systems.
+Still no real sight of backported kernel modules :P Also some of the guys in work here just deployed a ~200tb Ceph installation which I&rsquo;ve access to a 10tb RBD for doing backups on.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/09/23/a-poor-mans-nas-device-with-ceph/">a poor mans nas device with ceph</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>23 Sep 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/ceph">ceph</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  Given that I have a number of old 64bit capable desktop machines and a collection of hard drives at home, I could have run Tahoe-LAFS like I do in work for backup purposes. In fact Tahoe works quite well for the technically capable user.
+Recently I&rsquo;ve decided that I need a more central location at home to store my photo collection (I love to take photos with my Canon DSLR and Panasonic LX5).
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/09/23/a-poor-mans-nas-device-with-ceph/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released/">ceph v0 dot 48 dot 2 argonaut released</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>21 Sep 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/ceph">ceph</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  There&rsquo;s a new stable release of Ceph Argonaut, I seem to be having better luck with playing with the development releases of Ceph.
+Oh how I wish that there was a backport of the kernel ceph and rbd drivers for RHEL6, I have a dodgy repo and some reverted commits that one of the guys in work told me about. It seems to run but it isn&rsquo;t great, it can be found at https://github.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/09/21/ceph-v0-dot-48-dot-2-argonaut-released/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster/">going from replicating across osds to replicating across hosts in a ceph cluster</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>06 Sep 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/ceph">ceph</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  Having learnt how to remove and add monitor&rsquo;s, meta-data and data servers (mon&rsquo;s, mds&rsquo;s and osd&rsquo;s) for my small two node Ceph cluster. I want to say that it wasn&rsquo;t too hard to do, the ceph website does have documentation for this.
+As the default CRUSH map replicates across OSD&rsquo;s I wanted to try replicating data across hosts just to see what would happen. In a real world scenario I would probably treat individual hosts in a rack as a failure unit and if I had more than one rack of storage, I would want to treat each rack as the minimum unit.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/09/06/going-from-replicating-across-osds-to-replicating-across-hosts-in-a-ceph-cluster/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/09/02/scientific-linux-6-build-environment-for-ceph/">scientific linux 6 build environment for ceph</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>02 Sep 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/ceph">ceph</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  After my last failed attempt at Installing Ceph on SL6 or rather my attempt at configuring Ceph for a test failed miserably.
+It hasn&rsquo;t deterred me to test more. As a result I setup a number of Vagrant Virtual machines and got together a few puppet scripts to provision machines.
+Here&rsquo;s a sample manifest for puppet to automate the deployment of a machine to build Ceph. It requires that you SL6 environment to have at least the epel repository enabled.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/09/02/scientific-linux-6-build-environment-for-ceph/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/07/06/installing-ceph-on-sl6/">installing ceph on sl6</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>06 Jul 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/ceph">ceph</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  As an exercise of a Friday afternoon of not starting something big before heading off to a conference. I&rsquo;ve decided to spend an hour or two at seeing how ceph is installed and configured on an SL6 based machine (RHEL6 clone).
+The install target is just an old desktop running a 64bit install of SL6x, so it&rsquo;s nothing too fancy.
+Following the instructions at http://ceph.com/wiki/Installing_on_RedHat_or_CentOS, I ended up doing this
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/07/06/installing-ceph-on-sl6/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/07/05/ceph-v0-dot-48-argonaut-released/">ceph v0 dot 48 argonaut released</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>05 Jul 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/ceph">ceph</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  I&rsquo;ve been eyeing this Ceph storage system for a while for a number of potential uses, it looks like its finally ready for production usage.
+It is a pitty that the cephfs component isn&rsquo;t recommended for production usage yet. Still, Ceph is really going to shake up the distributed storage industry. Having used GPFS, Lustre and a few other systems in production in the past, Ceph certainly looks attractive.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/05/19/ceph-gets-a-refresh/">ceph gets a refresh</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>19 May 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/ceph">ceph</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  I&rsquo;ve been keeping an eye on ceph for quite sometime now. It looks like ceph is almost ready for production usage. There is now a support infrastructure and a commercial company backing the product. So far the OSD, MDS and MON components all run on Linux since most of the implementation appears to be in the user land I wonder if it will be ported to non-linux platforms. It&rsquo;s be quite nifty if one could have a heterogeneous network of servers providing storage.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/05/19/ceph-gets-a-refresh/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+</div>
+
+</div>
+</div>
+<script src="http://jcftang.github.io/js/ui.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-8597777-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>

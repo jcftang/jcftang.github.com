@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rails on Jimmy Tang</title>
+    <link>http://jcftang.github.io/tags/rails/</link>
+    <description>Recent content in Rails on Jimmy Tang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 27 Mar 2013 11:57:41 +0000</lastBuildDate>
+    
+	<atom:link href="http://jcftang.github.io/tags/rails/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>testing and developing rails applications in a near production like environment</title>
+      <link>http://jcftang.github.io/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/</link>
+      <pubDate>Wed, 27 Mar 2013 11:57:41 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/</guid>
+      <description>At work we like to do lots of testing and behaviour driven development since we have a number of stakeholders and institutions all working on the same application. To make sure everyone is getting what they want we&amp;rsquo;re using cucumber to write our specifications; that is we&amp;rsquo;re primarily doing outside in developement of our system.
+As such we like to test things in a near production like environment&amp;hellip; Having chosen to use capybara-webkit to test the interface (at a very functional and simplistic level) on our workstations.</description>
+    </item>
+    
+    <item>
+      <title>deploying our hydra head with jruby</title>
+      <link>http://jcftang.github.io/2013/01/22/deploying-our-hydra-head-with-jruby/</link>
+      <pubDate>Tue, 22 Jan 2013 19:49:02 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2013/01/22/deploying-our-hydra-head-with-jruby/</guid>
+      <description>We&amp;rsquo;ve been ramping up our development work on the project that I have been on in the last month or so. One of the issues that we&amp;rsquo;ve come across is the not so good XML validation and parsing libraries that are available in the ruby world compared to the java world.
+So as an exercise I decided to see if I could make our prototype work with jruby with the view of doing a test deployment on tomcat or some other application server.</description>
+    </item>
+    
+    <item>
+      <title>an excuse to learn ruby and ruby on rails</title>
+      <link>http://jcftang.github.io/2012/08/02/an-excuse-to-learn-ruby-and-ruby-on-rails/</link>
+      <pubDate>Thu, 02 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/08/02/an-excuse-to-learn-ruby-and-ruby-on-rails/</guid>
+      <description>I&amp;rsquo;ve been a long time consumer of ruby applications but never quite got around to learning the language and the frameworks that are available to developers. Within the team that I have been working with, we&amp;rsquo;ve been evaluating hydra as a possible framework for our project.
+I&amp;rsquo;ve been spending the last few days reading The RSpec Book, I&amp;rsquo;ve been able to pick up some of the basic syntax of the language from the BDD book.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.30" />
+
+  <title>Git Annex &middot; Jimmy Tang</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="http://jcftang.github.io/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="http://jcftang.github.io/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="http://jcftang.github.io/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="Jimmy Tang" href="http://jcftang.github.io/tags/git-annex/index.xml" />
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="http://jcftang.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://jcftang.github.io/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://jcftang.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://jcftang.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="http://jcftang.github.io/tags/git-annex/index.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+    </li>
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/jcftang" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://plus.google.com/+JimmyTang" target="_blank"><i class="fa fa-google-plus-square fa-fw"></i>Google+</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/jimmy-tang-1b54322" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/jcftang" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Git Annex</h1>
+</div>
+
+<div class="content">
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/">thoughts on using the likes of tahoe lafs and git annex as a backend storage system for digital preservation</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>05 Jul 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/git-annex">git-annex</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  Having happily running and using both git-annex and tahoe-lafs in the past year or so to manage my files and backups. I&rsquo;ve been thinking about plugging in tahoe-lafs as a backend driver for iRODS. I never quite got around to doing it properly, I had only gotten the universal mass storage driver to talk to tahoe-lafs. I was planning on writing an MSO driver for iRODS to talk to tahoe-lafs&rsquo;s web-api, but alas I never got around to it.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/06/26/git-annex-assistant-is-making-leaps-and-bounds/">git annex assistant is making leaps and bounds</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>26 Jun 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/git-annex">git-annex</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  I&rsquo;ve been following the development of the new git-annex assistant work that Joey Hess has been working on over the past few weeks. Even in this early state of development, it is slowly becoming more usable and accessible for less technical users.
+As soon as as the issues with the limitations of kqueue and OSX&rsquo;s silly limits are resolved (without the need for a user to do a sysctl -w WHATEVER) it will be pretty cool.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/06/26/git-annex-assistant-is-making-leaps-and-bounds/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/06/15/installing-git-annex-on-sl5/">installing git annex on sl5</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>15 Jun 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/git-annex">git-annex</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  I was waiting for my backups to be done hence this post, as I was using git-annex to manage my files and I decided I needed to have git-annex on a SL5 based machine. SL5 is just an opensource clone/recompile of RHEL5.
+I haven&rsquo;t tried to install the newer versions of Haskell Platform and GHC in a while on SL5 to instal git-annex. But the last time I checked when GHC7 was out, it was a pain to install GHC on SL5.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/06/15/installing-git-annex-on-sl5/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+</div>
+
+</div>
+</div>
+<script src="http://jcftang.github.io/js/ui.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-8597777-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>

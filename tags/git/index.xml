@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Jimmy Tang</title>
+    <link>http://jcftang.github.io/tags/git/</link>
+    <description>Recent content in Git on Jimmy Tang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 02 May 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://jcftang.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>git subtree is now in mainline git</title>
+      <link>http://jcftang.github.io/2012/05/02/git-subtree-is-now-in-mainline-git/</link>
+      <pubDate>Wed, 02 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/05/02/git-subtree-is-now-in-mainline-git/</guid>
+      <description>It seems that git-subtree has been merged into the mainline git project. git-subtree is one of those really useful wrappers for manipulating git repositories if you are an integrator or don&amp;rsquo;t really like git-submodule. It certainly is a nicer alternative to git-submodule. There is less chance of the person cloning a git-subtree repository messing up the checkout because they forgot to initialise the submodules. There is also the added advantage of not needing to fiddle around scripting up the git-archive commands for exporting the source tree for a release if you use git-subtree; actually git-subtree is just plain useful.</description>
+    </item>
+    
+    <item>
+      <title>git rerere for long lived feature branches</title>
+      <link>http://jcftang.github.io/2012/03/11/git-rerere-for-long-lived-feature-branches/</link>
+      <pubDate>Sun, 11 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/03/11/git-rerere-for-long-lived-feature-branches/</guid>
+      <description>I turned this feature on for a few of my git repos but I had completely forgotten about it. As far as I recall the feature has been around for a few years now. It can be turned on globally by doing
+git config --global rerere.enabled 1  It pretty much automates the resolution of conflicts in long lived branches. I&amp;rsquo;ve been lazy recently and I have just doing merges instead rebasing, which lead me to re-discover git rerere.</description>
+    </item>
+    
+  </channel>
+</rss>

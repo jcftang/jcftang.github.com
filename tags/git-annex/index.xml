@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git Annex on Jimmy Tang</title>
+    <link>http://jcftang.github.io/tags/git-annex/</link>
+    <description>Recent content in Git Annex on Jimmy Tang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Jul 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://jcftang.github.io/tags/git-annex/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>thoughts on using the likes of tahoe lafs and git annex as a backend storage system for digital preservation</title>
+      <link>http://jcftang.github.io/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/</link>
+      <pubDate>Thu, 05 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/07/05/thoughts-on-using-the-likes-of-tahoe-lafs-and-git-annex-as-a-backend-storage-system-for-digital-preservation/</guid>
+      <description>Having happily running and using both git-annex and tahoe-lafs in the past year or so to manage my files and backups. I&amp;rsquo;ve been thinking about plugging in tahoe-lafs as a backend driver for iRODS. I never quite got around to doing it properly, I had only gotten the universal mass storage driver to talk to tahoe-lafs. I was planning on writing an MSO driver for iRODS to talk to tahoe-lafs&amp;rsquo;s web-api, but alas I never got around to it.</description>
+    </item>
+    
+    <item>
+      <title>git annex assistant is making leaps and bounds</title>
+      <link>http://jcftang.github.io/2012/06/26/git-annex-assistant-is-making-leaps-and-bounds/</link>
+      <pubDate>Tue, 26 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/06/26/git-annex-assistant-is-making-leaps-and-bounds/</guid>
+      <description>I&amp;rsquo;ve been following the development of the new git-annex assistant work that Joey Hess has been working on over the past few weeks. Even in this early state of development, it is slowly becoming more usable and accessible for less technical users.
+As soon as as the issues with the limitations of kqueue and OSX&amp;rsquo;s silly limits are resolved (without the need for a user to do a sysctl -w WHATEVER) it will be pretty cool.</description>
+    </item>
+    
+    <item>
+      <title>installing git annex on sl5</title>
+      <link>http://jcftang.github.io/2012/06/15/installing-git-annex-on-sl5/</link>
+      <pubDate>Fri, 15 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/06/15/installing-git-annex-on-sl5/</guid>
+      <description>I was waiting for my backups to be done hence this post, as I was using git-annex to manage my files and I decided I needed to have git-annex on a SL5 based machine. SL5 is just an opensource clone/recompile of RHEL5.
+I haven&amp;rsquo;t tried to install the newer versions of Haskell Platform and GHC in a while on SL5 to instal git-annex. But the last time I checked when GHC7 was out, it was a pain to install GHC on SL5.</description>
+    </item>
+    
+  </channel>
+</rss>

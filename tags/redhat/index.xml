@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Redhat on Jimmy Tang</title>
+    <link>http://jcftang.github.io/tags/redhat/</link>
+    <description>Recent content in Redhat on Jimmy Tang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 09 Feb 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://jcftang.github.io/tags/redhat/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>red hat enterprise linux life cycle extended to ten years</title>
+      <link>http://jcftang.github.io/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years/</link>
+      <pubDate>Thu, 09 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years/</guid>
+      <description>It&amp;rsquo;s all over the internet that RHEL6 and newer releases will have a life cycle of 10yrs. This is pretty good news for projects that are deploying systems that have a lifetime of 5yrs or more. Namely Digital Preservation projects, not having to worry about migration between point releases of an operating system platform reduces time and costs.
+I&amp;rsquo;m now more likely to target the systems we develop in work towards a RHEL system (or a RHEL like clone).</description>
+    </item>
+    
+  </channel>
+</rss>

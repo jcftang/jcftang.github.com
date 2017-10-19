@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Saltstack on Jimmy Tang</title>
+    <link>http://jcftang.github.io/tags/saltstack/</link>
+    <description>Recent content in Saltstack on Jimmy Tang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 31 Dec 2013 12:55:26 +0000</lastBuildDate>
+    
+	<atom:link href="http://jcftang.github.io/tags/saltstack/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>building a private cloud with saltstack as the cloud controller</title>
+      <link>http://jcftang.github.io/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/</link>
+      <pubDate>Tue, 31 Dec 2013 12:55:26 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/</guid>
+      <description>After going to SC13 and being at a few BoF&amp;rsquo;s and hearing some people talk about their operations and potentially using Salt to replace the likes of puppet and chef, I decided to learn a little more about Salt.
+In particular since I have an old laptop lying around at home, I decided to setup a little private cloud. I followed this blog post.
+It mostly worked apart from some buggy behaviour in the seeding process.</description>
+    </item>
+    
+  </channel>
+</rss>

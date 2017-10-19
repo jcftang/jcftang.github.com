@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Slurm on Jimmy Tang</title>
+    <link>http://jcftang.github.io/tags/slurm/</link>
+    <description>Recent content in Slurm on Jimmy Tang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 29 Sep 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://jcftang.github.io/tags/slurm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>slurm bank that big script for banking in slurm</title>
+      <link>http://jcftang.github.io/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/</link>
+      <pubDate>Sat, 29 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/</guid>
+      <description>A co-worker of mine (Paddy Doyle) had originally hacked at a perl script for reporting balances from SLURM&amp;rsquo;s accounting system a year or two ago and he had figured out that it might be possible to do some minimalistic &amp;lsquo;configuration&amp;rsquo; and scripting to get a system that&amp;rsquo;s very basic but functional.
+It was just one of those things that funding agencies wanted to justify how the system was being used, GOLD was clunky and obtrusive and complicated for what we wanted.</description>
+    </item>
+    
+    <item>
+      <title>slurm user group meeting 2012</title>
+      <link>http://jcftang.github.io/2012/04/30/slurm-user-group-meeting-2012/</link>
+      <pubDate>Mon, 30 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/04/30/slurm-user-group-meeting-2012/</guid>
+      <description>This time the usergroup meeting is in BSC in Spain (this place is cool, I&amp;rsquo;ve been at BSC for a few conferences and meetings before). I wish I was doing some HPC right now, I&amp;rsquo;m very tempted to submit an abstract or two on the last two things with slurm that I was involved with.
+The php-slurm package needs some love, its somewhat in use at work. I just wish I had more time to fix the memory leaks.</description>
+    </item>
+    
+  </channel>
+</rss>

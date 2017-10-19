@@ -11,47 +11,11 @@
     
     
     <item>
-      <title>Linux</title>
-      <link>http://jcftang.github.io/categories/linux/</link>
-      <pubDate>Thu, 08 Mar 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://jcftang.github.io/categories/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Octopress</title>
-      <link>http://jcftang.github.io/categories/octopress/</link>
-      <pubDate>Thu, 08 Mar 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://jcftang.github.io/categories/octopress/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Python</title>
       <link>http://jcftang.github.io/categories/python/</link>
       <pubDate>Wed, 24 Sep 2014 17:40:46 +0100</pubDate>
       
       <guid>http://jcftang.github.io/categories/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Scm</title>
-      <link>http://jcftang.github.io/categories/scm/</link>
-      <pubDate>Mon, 09 Apr 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://jcftang.github.io/categories/scm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Team</title>
-      <link>http://jcftang.github.io/categories/team/</link>
-      <pubDate>Mon, 09 Apr 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://jcftang.github.io/categories/team/</guid>
       <description></description>
     </item>
     

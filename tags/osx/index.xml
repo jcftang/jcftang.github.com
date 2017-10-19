@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Osx on Jimmy Tang</title>
+    <link>http://jcftang.github.io/tags/osx/</link>
+    <description>Recent content in Osx on Jimmy Tang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Jul 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://jcftang.github.io/tags/osx/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>osx kernel panics and virtualbox</title>
+      <link>http://jcftang.github.io/2012/07/20/osx-kernel-panics-and-virtualbox/</link>
+      <pubDate>Fri, 20 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/07/20/osx-kernel-panics-and-virtualbox/</guid>
+      <description>Having discovered vagrant and veewee recently at OR2012 I&amp;rsquo;ve been building a few boxes for our site for testing purposes. I&amp;rsquo;ve had to relearn puppet to provision machines, but it&amp;rsquo;s paying off. I&amp;rsquo;ve been able to deploy 3-4 virtual machines with relative ease.
+The only disappointment is the seemingly frequent and semi-random kernel panics and crashes that I get on OSX (which is probably caused by VirtualBox when I do lots of IO).</description>
+    </item>
+    
+  </channel>
+</rss>

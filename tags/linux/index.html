@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.29" />
+  <meta name="generator" content="Hugo 0.30" />
 
   <title>Linux &middot; Jimmy Tang</title>
 
@@ -264,6 +264,235 @@ I proceeded to investigate installing a full linux distro onto my Chromebook and
   
     <article>
   <header>
+    <h2><a href="http://jcftang.github.io/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/">cobbler 2 dot 6 on ubuntu precise</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>23 Jan 2015, 19:28</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  I&rsquo;ve recently went and updated a bunch of things that I&rsquo;m working with, and one of the things I decided to refresh was an automated installer. In the past I&rsquo;ve relied on either hand rolled configurations or more recently Ubuntu MAAS. This time I decided to give Cobbler a try on my Ubuntu Precise installations.
+Given Cobbler is pretty (or was) RHEL specific, I was not too disappointed with the Debian packaging.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2014/09/24/developer-happiness-with-waf/">developer happiness with waf</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>24 Sep 2014, 17:40</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  Having recently changed jobs (after a very long stint at TCD - just short of 10yrs!) I’ve moved to a small startup. I’ve been working on a few small bits and pieces of code, infrastructure, etc&hellip; I had to make some stuff work and make it work well. So I decided to use autotools to configure and build the application that I’m working on.
+As great as it was on my nice fast intel based machine, it was dog slow on my target platform, especially when I had to regenerate the autoconf scripts.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2014/09/24/developer-happiness-with-waf/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2014/06/22/hashdist-for-repeatably-building-an-environment/">hashdist for repeatably building an environment</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>22 Jun 2014, 14:52</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/packaging">packaging</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  I&rsquo;ve been happily hacking at some packages for hashdist, it&rsquo;s pretty nice, there other build systems out there for dealing with building applications and libraries with different combinations of compilers and numerical libraries. Out of the lot I think hashdist has been the most satisfying to use so far. It&rsquo;s still missing some bits and pieces to allow users to use different compilers for key components (or everything).
+Without explaining too much, it&rsquo;s basically taking inputs which define a package and then generating an output hash to store the output of the build.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2014/06/22/hashdist-for-repeatably-building-an-environment/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/">building a private cloud with saltstack as the cloud controller</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>31 Dec 2013, 12:55</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/ansible">ansible</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/saltstack">saltstack</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  After going to SC13 and being at a few BoF&rsquo;s and hearing some people talk about their operations and potentially using Salt to replace the likes of puppet and chef, I decided to learn a little more about Salt.
+In particular since I have an old laptop lying around at home, I decided to setup a little private cloud. I followed this blog post.
+It mostly worked apart from some buggy behaviour in the seeding process.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2013/08/01/accelerating-development-and-deployments-with-ansible/">accelerating development and deployments with ansible</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Aug 2013, 21:38</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/ansible">ansible</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  It&rsquo;s probably no secret that we use Ansible at our work place for the project that I am working on. So far we&rsquo;ve used it to deploy and maintain state for our Open Nebula deployment, Jenkins CI system, Ceph&rsquo;s radosgw and our digital repository.
+In fact I currently have a Jenkins job which deploys our software stack using Ansible to a test system in our Open Nebula cluster. This has been hugely beneficial to myself so far to be able to teardown and bring up systems quickly to make sure our application is well tested and debugged.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2013/08/01/accelerating-development-and-deployments-with-ansible/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="http://jcftang.github.io/2013/03/31/zfs-on-linux-is-usable-and-safe/">zfs on linux is usable and safe</a></h2>
 
     <div class="post-meta">
@@ -310,6 +539,647 @@ If ZFS is trustable or not we will know over time.
   
     <article>
   <header>
+    <h2><a href="http://jcftang.github.io/2013/03/22/building-kelvin-supercomputer-time-lapse/">building kelvin supercomputer time lapse</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>22 Mar 2013, 07:46</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/hpc">hpc</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  I was cleaning up some files and I found this time lapse that I did when we were building Kelvin, it&rsquo;s a few years old now. Even by current standards it&rsquo;s still pretty respectable.
+The timelapse
+We had to unpack and install all the infiniband cards ourselves, cabled, racked, installed, configured and burnt it in for production usage. The cluster has 100 nodes, each node has 2 sockets, each socket has 6 cores and 24gb of ram.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2013/03/22/building-kelvin-supercomputer-time-lapse/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale/">supercomputing 2012 and the arms race to exascale</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>16 Nov 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/hpc">hpc</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  It was clear at this year&rsquo;s supercomputing conference that there wasn&rsquo;t as much excitement as previous years. There wasn&rsquo;t much surprise as nothing too revolutionary and radical was announced. In the past when Bluegene/L and P arrived after the earth simulator there was an arms race to being number 1 in the top500 list. Even things like GPGPU&rsquo;s aren&rsquo;t as cool anymore, everyone is selling effectively the same systems when it comes to clusters.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/11/16/supercomputing-2012-and-the-arms-race-to-exascale/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/10/27/crowbar-for-deploying-systems/">crowbar for deploying systems</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>27 Oct 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  I&rsquo;ve been eyeing crowbar recently, it looks pretty useful and interesting for deploying servers and applications. I haven&rsquo;t seen much if at all any documentation out there which suggests that people in the digital preservation and archiving fields are implementing systems at scale, I&rsquo;m under the impression that most systems/sites are building systems up one piece at a time without much automation.
+It seems to use chef in the backend for all the automation.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/10/27/crowbar-for-deploying-systems/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/">digital preservation and archiving is a hpc problem</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>07 Oct 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/hpc">hpc</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  I shall be going to SC2012 next month, I plan on hitting a few of the storage vendors for possible collaborations and flagging to them that we&rsquo;re on the look out for storage systems. One of the first observation that the reader will note is &ldquo;where is that link between HPC and Digital Preservation and Archiving&rdquo;. It&rsquo;s probably not obvious to most people, one of the big problems in the area of preservation and archiving is the the amount of data involved and the varied types of data.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/">slurm bank that big script for banking in slurm</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>29 Sep 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/slurm">slurm</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/hpc">hpc</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  A co-worker of mine (Paddy Doyle) had originally hacked at a perl script for reporting balances from SLURM&rsquo;s accounting system a year or two ago and he had figured out that it might be possible to do some minimalistic &lsquo;configuration&rsquo; and scripting to get a system that&rsquo;s very basic but functional.
+It was just one of those things that funding agencies wanted to justify how the system was being used, GOLD was clunky and obtrusive and complicated for what we wanted.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/09/29/slurm-bank-that-big-script-for-banking-in-slurm/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/09/23/a-poor-mans-nas-device-with-ceph/">a poor mans nas device with ceph</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>23 Sep 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/ceph">ceph</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  Given that I have a number of old 64bit capable desktop machines and a collection of hard drives at home, I could have run Tahoe-LAFS like I do in work for backup purposes. In fact Tahoe works quite well for the technically capable user.
+Recently I&rsquo;ve decided that I need a more central location at home to store my photo collection (I love to take photos with my Canon DSLR and Panasonic LX5).
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/09/23/a-poor-mans-nas-device-with-ceph/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/09/02/scientific-linux-6-build-environment-for-ceph/">scientific linux 6 build environment for ceph</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>02 Sep 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/ceph">ceph</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  After my last failed attempt at Installing Ceph on SL6 or rather my attempt at configuring Ceph for a test failed miserably.
+It hasn&rsquo;t deterred me to test more. As a result I setup a number of Vagrant Virtual machines and got together a few puppet scripts to provision machines.
+Here&rsquo;s a sample manifest for puppet to automate the deployment of a machine to build Ceph. It requires that you SL6 environment to have at least the epel repository enabled.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/09/02/scientific-linux-6-build-environment-for-ceph/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/07/06/installing-ceph-on-sl6/">installing ceph on sl6</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>06 Jul 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/ceph">ceph</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  As an exercise of a Friday afternoon of not starting something big before heading off to a conference. I&rsquo;ve decided to spend an hour or two at seeing how ceph is installed and configured on an SL6 based machine (RHEL6 clone).
+The install target is just an old desktop running a 64bit install of SL6x, so it&rsquo;s nothing too fancy.
+Following the instructions at http://ceph.com/wiki/Installing_on_RedHat_or_CentOS, I ended up doing this
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/07/06/installing-ceph-on-sl6/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/07/05/tahoe-lafs-1-dot-9-2-is-released/">tahoe lafs 1 dot 9 2 is released</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>05 Jul 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  I&rsquo;ve been happily using tahoe-lafs for my backup needs for a while now in work. It&rsquo;s not a huge cluster, but just a small hive cache from workstations dotted around the lab.
+The project recently did a release which fixes a number of bugs and issues which has made this software much more pleasant to use. I&rsquo;ve also been happily using git-annex to manage my files which reside in tahoe-lafs.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/07/05/tahoe-lafs-1-dot-9-2-is-released/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/06/26/git-annex-assistant-is-making-leaps-and-bounds/">git annex assistant is making leaps and bounds</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>26 Jun 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/git-annex">git-annex</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  I&rsquo;ve been following the development of the new git-annex assistant work that Joey Hess has been working on over the past few weeks. Even in this early state of development, it is slowly becoming more usable and accessible for less technical users.
+As soon as as the issues with the limitations of kqueue and OSX&rsquo;s silly limits are resolved (without the need for a user to do a sysctl -w WHATEVER) it will be pretty cool.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/06/26/git-annex-assistant-is-making-leaps-and-bounds/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/06/15/installing-git-annex-on-sl5/">installing git annex on sl5</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>15 Jun 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/git-annex">git-annex</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  I was waiting for my backups to be done hence this post, as I was using git-annex to manage my files and I decided I needed to have git-annex on a SL5 based machine. SL5 is just an opensource clone/recompile of RHEL5.
+I haven&rsquo;t tried to install the newer versions of Haskell Platform and GHC in a while on SL5 to instal git-annex. But the last time I checked when GHC7 was out, it was a pain to install GHC on SL5.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/06/15/installing-git-annex-on-sl5/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter/">git annex assistant is being crowd funded on kickstarter</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>04 Jun 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  It seems Joey Hess is in the process of getting git-annex assistant crowd funded. I had not been keeping up to date too much in the last year with git-annex partly because it met my needs and I never needed to upgrade to the latest tip.
+There are a number of really cool features now which is making git-annex more accessible. I particularly like how the merge and sync workflows have now been pretty much scripted so there is less to go wrong!
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/06/04/git-annex-assistant-is-being-crowd-funded-on-kickstarter/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/03/15/dogfooding-your-own-project-to-accelerate-development/">dogfooding your own project to accelerate development</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>15 Mar 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  Should you dogfood your own project that you are developing? The answer is probably yes, especially if you have no clear cut requirements from the stakeholder in a project with a greenfield for development. There is a lot to be said about having a working implementation that can be presented and refined.
+Sometimes the project that you are working on won&rsquo;t have clear requirements for implementation, so you should probably take basic assumed cases and run with it.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/03/15/dogfooding-your-own-project-to-accelerate-development/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/03/08/enabling-latent-semantic-indexing-for-octopress/">enabling latent semantic indexing for octopress</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>08 Mar 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/octopress">octopress</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  For those that care about having related posts on their [Octopress]() blog. It&rsquo;s actually quite easy to turn it on, it&rsquo;s nice to have and useful. But it&rsquo;s not enabled by default in Octopress.
+This feature already exists in jekyll, enabling this feature in Octopress is a trival task.
+Firstly add this to your _config.yml file
+lsi: true  Then create a file such as source/_includes/custom/asides/related.html with the following content, add it to one of your asides in _config.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/03/08/enabling-latent-semantic-indexing-for-octopress/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="http://jcftang.github.io/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">why linux isnt the only platform to target when building applications</a></h2>
 
     <div class="post-meta">
@@ -347,6 +1217,98 @@ This came out of a conversation with the ex-CTO of Creme software (he is also a 
   
   <footer>
     <a href="http://jcftang.github.io/2012/02/16/why-linux-isnt-the-only-platform-to-target-when-building-applications/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">cports for building applications and libraries for hpc systems</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>12 Feb 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/hpc">hpc</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  I&rsquo;ve talked about cports in the past, it&rsquo;s basically a collection of makefiles which mostly automates the process of downloading, configuring, building and installing applications and libraries for High Performance Computing systems that use environment-modules.
+One of the key-features that cports offers is the automated modulefile generation, and the fact that the makefiles acts as documentation to how software is configured, built and installed. It&rsquo;s currently being used on the clusters at my work place, it has been a boost to the productivity of the systems admin team.
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/02/12/cports-for-building-applications-and-libraries-for-hpc-systems/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="http://jcftang.github.io/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years/">red hat enterprise linux life cycle extended to ten years</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>09 Feb 2012, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/linux">linux</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://jcftang.github.io/tags/redhat">redhat</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  It&rsquo;s all over the internet that RHEL6 and newer releases will have a life cycle of 10yrs. This is pretty good news for projects that are deploying systems that have a lifetime of 5yrs or more. Namely Digital Preservation projects, not having to worry about migration between point releases of an operating system platform reduces time and costs.
+I&rsquo;m now more likely to target the systems we develop in work towards a RHEL system (or a RHEL like clone).
+  </p>
+
+  
+  <footer>
+    <a href="http://jcftang.github.io/2012/02/09/red-hat-enterprise-linux-life-cycle-extended-to-ten-years/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
   </footer>
   
 </article>

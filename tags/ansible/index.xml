@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ansible on Jimmy Tang</title>
+    <link>http://jcftang.github.io/tags/ansible/</link>
+    <description>Recent content in Ansible on Jimmy Tang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 31 Dec 2013 12:55:26 +0000</lastBuildDate>
+    
+	<atom:link href="http://jcftang.github.io/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>building a private cloud with saltstack as the cloud controller</title>
+      <link>http://jcftang.github.io/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/</link>
+      <pubDate>Tue, 31 Dec 2013 12:55:26 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/</guid>
+      <description>After going to SC13 and being at a few BoF&amp;rsquo;s and hearing some people talk about their operations and potentially using Salt to replace the likes of puppet and chef, I decided to learn a little more about Salt.
+In particular since I have an old laptop lying around at home, I decided to setup a little private cloud. I followed this blog post.
+It mostly worked apart from some buggy behaviour in the seeding process.</description>
+    </item>
+    
+    <item>
+      <title>accelerating development and deployments with ansible</title>
+      <link>http://jcftang.github.io/2013/08/01/accelerating-development-and-deployments-with-ansible/</link>
+      <pubDate>Thu, 01 Aug 2013 21:38:54 +0100</pubDate>
+      
+      <guid>http://jcftang.github.io/2013/08/01/accelerating-development-and-deployments-with-ansible/</guid>
+      <description>It&amp;rsquo;s probably no secret that we use Ansible at our work place for the project that I am working on. So far we&amp;rsquo;ve used it to deploy and maintain state for our Open Nebula deployment, Jenkins CI system, Ceph&amp;rsquo;s radosgw and our digital repository.
+In fact I currently have a Jenkins job which deploys our software stack using Ansible to a test system in our Open Nebula cluster. This has been hugely beneficial to myself so far to be able to teardown and bring up systems quickly to make sure our application is well tested and debugged.</description>
+    </item>
+    
+    <item>
+      <title>hydra and ansible</title>
+      <link>http://jcftang.github.io/2013/06/06/hydra-and-ansible/</link>
+      <pubDate>Thu, 06 Jun 2013 18:11:40 +0100</pubDate>
+      
+      <guid>http://jcftang.github.io/2013/06/06/hydra-and-ansible/</guid>
+      <description>The team that I am working with right are very much agile and we&amp;rsquo;re doing quite a bit of outside in development of the repository that we&amp;rsquo;re building. We&amp;rsquo;re mostly adopting a behaviour driven development with a touch of test driven development. As a result we&amp;rsquo;re very much in favour of testing things out as much as we can and using the same environments to develop against. As previously mentioned before I had originally been using puppet and vagrant to build up the development harness and experiment with tools/services that we might want to use for our system.</description>
+    </item>
+    
+    <item>
+      <title>there is light on the otherside</title>
+      <link>http://jcftang.github.io/2012/11/04/there-is-light-on-the-otherside/</link>
+      <pubDate>Sun, 04 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/2012/11/04/there-is-light-on-the-otherside/</guid>
+      <description>Having spent the best part of my Sunday afternoon playing with ansible just to learn and see what all the fuss is about, I was pleasantly surprised with it.
+I had installed ansible on my OSX laptop and vagrant-ansible for my vagrant test environment.
+The plan was to try and re-create my current ruby on rails development and test virtual machine with vagrant. A secondary goal was to get it to work with both Ubuntu Precise (LTS) and Scientific Linux 6.</description>
+    </item>
+    
+  </channel>
+</rss>

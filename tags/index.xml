@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Jimmy Tang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Aug 2016 10:26:34 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 31 Dec 2013 12:55:26 +0000</lastBuildDate>
     
 	<atom:link href="http://jcftang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ansible</title>
+      <link>http://jcftang.github.io/tags/ansible/</link>
+      <pubDate>Tue, 31 Dec 2013 12:55:26 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/tags/ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ceph</title>
+      <link>http://jcftang.github.io/tags/ceph/</link>
+      <pubDate>Tue, 23 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/tags/ceph/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Chromebook</title>
@@ -21,11 +39,128 @@
     </item>
     
     <item>
+      <title>Genetics</title>
+      <link>http://jcftang.github.io/tags/genetics/</link>
+      <pubDate>Sun, 26 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/tags/genetics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>http://jcftang.github.io/tags/git/</link>
+      <pubDate>Wed, 02 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git Annex</title>
+      <link>http://jcftang.github.io/tags/git-annex/</link>
+      <pubDate>Thu, 05 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/tags/git-annex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hpc</title>
+      <link>http://jcftang.github.io/tags/hpc/</link>
+      <pubDate>Fri, 22 Mar 2013 07:46:26 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/tags/hpc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Linux</title>
       <link>http://jcftang.github.io/tags/linux/</link>
       <pubDate>Mon, 01 Aug 2016 10:26:34 +0100</pubDate>
       
       <guid>http://jcftang.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Octopress</title>
+      <link>http://jcftang.github.io/tags/octopress/</link>
+      <pubDate>Thu, 08 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/tags/octopress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Osx</title>
+      <link>http://jcftang.github.io/tags/osx/</link>
+      <pubDate>Fri, 20 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/tags/osx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Packaging</title>
+      <link>http://jcftang.github.io/tags/packaging/</link>
+      <pubDate>Sun, 22 Jun 2014 14:52:42 +0100</pubDate>
+      
+      <guid>http://jcftang.github.io/tags/packaging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rails</title>
+      <link>http://jcftang.github.io/tags/rails/</link>
+      <pubDate>Wed, 27 Mar 2013 11:57:41 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/tags/rails/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Redhat</title>
+      <link>http://jcftang.github.io/tags/redhat/</link>
+      <pubDate>Thu, 09 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/tags/redhat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Saltstack</title>
+      <link>http://jcftang.github.io/tags/saltstack/</link>
+      <pubDate>Tue, 31 Dec 2013 12:55:26 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/tags/saltstack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scm</title>
+      <link>http://jcftang.github.io/tags/scm/</link>
+      <pubDate>Mon, 09 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/tags/scm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Slurm</title>
+      <link>http://jcftang.github.io/tags/slurm/</link>
+      <pubDate>Sat, 29 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/tags/slurm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Team</title>
+      <link>http://jcftang.github.io/tags/team/</link>
+      <pubDate>Mon, 09 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/tags/team/</guid>
       <description></description>
     </item>
     
