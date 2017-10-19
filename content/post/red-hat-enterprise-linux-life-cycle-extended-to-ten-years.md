@@ -1,6 +1,7 @@
 +++
 title = "red hat enterprise linux life cycle extended to ten years"
 date = "2012-02-09"
+tags = ["linux", "redhat"]
 
 categories = []
 +++

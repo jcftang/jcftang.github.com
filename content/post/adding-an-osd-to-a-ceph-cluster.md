@@ -1,6 +1,7 @@
 +++
 title = "adding an osd to a ceph cluster"
 date = "2012-09-04"
+tgs = ["ceph"]
 
 
 categories = []

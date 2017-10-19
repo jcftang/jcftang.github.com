@@ -1,6 +1,7 @@
 +++
 title = "digital preservation and archiving is a hpc problem"
 date = "2012-10-07"
+tags = ["linux", "hpc"]
 
 
 categories = []

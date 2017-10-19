@@ -1,6 +1,7 @@
 +++
 title = "git subtree is now in mainline git"
 date = "2012-05-02"
+tags = ["git"]
 
 
 categories = []

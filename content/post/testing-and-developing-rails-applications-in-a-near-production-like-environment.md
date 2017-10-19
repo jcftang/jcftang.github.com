@@ -1,6 +1,7 @@
 +++
 title = "testing and developing rails applications in a near production like environment"
 date = "2013-03-27T11:57:41+00:00"
+tags = ["rails"]
 
 
 categories = []

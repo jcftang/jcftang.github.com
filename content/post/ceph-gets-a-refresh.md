@@ -1,6 +1,7 @@
 +++
 title = "ceph gets a refresh"
 date = "2012-05-19"
+tags = ["ceph"]
 
 
 categories = []

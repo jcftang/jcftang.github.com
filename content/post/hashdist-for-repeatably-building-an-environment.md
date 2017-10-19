@@ -1,6 +1,7 @@
 +++
 title = "hashdist for repeatably building an environment"
 date = "2014-06-22T14:52:42+01:00"
+tags = ["linux", "packaging"]
 
 
 categories = []

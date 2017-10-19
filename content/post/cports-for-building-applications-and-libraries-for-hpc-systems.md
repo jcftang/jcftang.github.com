@@ -1,6 +1,7 @@
 +++
 title = "cports for building applications and libraries for hpc systems"
 date = "2012-02-12"
+tags = ["linux", "hpc"]
 
 categories = []
 +++

@@ -1,6 +1,7 @@
 +++
 title = "thoughts on using the likes of tahoe lafs and git annex as a backend storage system for digital preservation"
 date = "2012-07-05"
+tags = ["git-annex"]
 
 
 categories = []

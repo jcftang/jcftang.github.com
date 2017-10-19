@@ -1,6 +1,7 @@
 +++
 title = "genetic classification of populations using supervised learning"
 date = "2012-02-26"
+tags = ["genetics"]
 
 
 categories = []

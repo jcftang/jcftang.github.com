@@ -1,6 +1,7 @@
 +++
 title = "slurm bank that big script for banking in slurm"
 date = "2012-09-29"
+tags = ["linux", "slurm", "hpc"]
 
 
 categories = []

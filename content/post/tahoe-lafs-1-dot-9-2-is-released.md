@@ -1,6 +1,7 @@
 +++
 title = "tahoe lafs 1 dot 9 2 is released"
 date = "2012-07-05"
+tags = ["linux"]
 
 
 categories = []

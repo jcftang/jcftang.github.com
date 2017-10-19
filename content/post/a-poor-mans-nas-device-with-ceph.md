@@ -1,6 +1,7 @@
 +++
 title = "a poor mans nas device with ceph"
 date = "2012-09-23"
+tags = ["linux", "ceph"]
 
 
 categories = []

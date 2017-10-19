@@ -1,6 +1,7 @@
 +++
 title = "ceph v0 dot 52 released"
 date = "2012-09-28"
+tags = ["ceph"]
 
 
 categories = []

@@ -1,6 +1,7 @@
 +++
 title = "hydra and ansible"
 date = "2013-06-06T18:11:40+01:00"
+tags = ["ansible"]
 
 
 categories = []

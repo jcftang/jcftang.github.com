@@ -1,6 +1,7 @@
 +++
 title = "alternative to talend etl"
 date = "2012-09-21"
+tags = []
 
 
 categories = []

@@ -1,6 +1,7 @@
 +++
 title = "supercomputing 2012 and the arms race to exascale"
 date = "2012-11-16"
+tags = ["hpc", "linux"]
 
 
 categories = []

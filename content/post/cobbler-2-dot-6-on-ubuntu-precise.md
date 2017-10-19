@@ -1,6 +1,7 @@
 +++
 title = "cobbler 2 dot 6 on ubuntu precise"
 date = "2015-01-23T19:28:55+00:00"
+tags = ["linux"]
 
 
 categories = []

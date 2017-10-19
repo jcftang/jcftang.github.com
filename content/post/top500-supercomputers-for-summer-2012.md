@@ -1,6 +1,7 @@
 +++
 title = "top500 supercomputers for summer 2012"
 date = "2012-06-18"
+tags = ["hpc"]
 
 
 categories = []

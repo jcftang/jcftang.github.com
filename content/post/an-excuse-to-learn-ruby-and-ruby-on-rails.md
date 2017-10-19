@@ -1,7 +1,7 @@
 +++
 title = "an excuse to learn ruby and ruby on rails"
 date = "2012-08-02"
-
+tags = ["rails"]
 
 categories = []
 +++

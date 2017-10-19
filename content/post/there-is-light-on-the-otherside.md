@@ -1,6 +1,7 @@
 +++
 title = "there is light on the otherside"
 date = "2012-11-04"
+tags = ["ansible"]
 
 
 categories = []

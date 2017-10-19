@@ -1,6 +1,7 @@
 +++
 title = "waterfall or agile methods for delivering a project"
 date = "2012-01-18"
+tags = ["team"]
 
 categories = []
 +++

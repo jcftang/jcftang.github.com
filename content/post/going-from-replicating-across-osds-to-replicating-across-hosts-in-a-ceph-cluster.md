@@ -1,6 +1,7 @@
 +++
 title = "going from replicating across osds to replicating across hosts in a ceph cluster"
 date = "2012-09-06"
+tags = ["ceph"]
 
 
 categories = []

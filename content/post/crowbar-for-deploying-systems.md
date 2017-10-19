@@ -1,6 +1,7 @@
 +++
 title = "crowbar for deploying systems"
 date = "2012-10-27"
+tags = ["linux"]
 
 
 categories = []

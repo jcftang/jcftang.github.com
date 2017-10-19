@@ -1,6 +1,7 @@
 +++
 title = "git rerere for long lived feature branches"
 date = "2012-03-11"
+tags = ["git"]
 
 
 categories = []

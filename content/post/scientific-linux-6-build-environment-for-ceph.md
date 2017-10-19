@@ -1,6 +1,7 @@
 +++
 title = "scientific linux 6 build environment for ceph"
 date = "2012-09-02"
+tags = ["linux", "ceph"]
 
 
 categories = []

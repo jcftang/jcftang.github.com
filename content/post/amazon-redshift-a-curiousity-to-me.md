@@ -1,6 +1,7 @@
 +++
 title = "amazon redshift a curiousity to me"
 date = "2013-03-24T11:16:54+00:00"
+tags = []
 
 
 categories = []

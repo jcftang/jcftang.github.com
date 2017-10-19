@@ -1,6 +1,7 @@
 +++
 title = "osx kernel panics and virtualbox"
 date = "2012-07-20"
+tags = ["osx"]
 
 
 categories = []

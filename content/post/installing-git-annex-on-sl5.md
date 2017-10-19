@@ -1,6 +1,7 @@
 +++
 title = "installing git annex on sl5"
 date = "2012-06-15"
+tags = ["linux", "git-annex"]
 
 
 categories = []

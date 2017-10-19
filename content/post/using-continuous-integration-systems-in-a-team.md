@@ -2,7 +2,7 @@
 title = "using continuous integration systems in a team"
 date = "2011-12-13"
 
-categories = ["team", "scm"]
+tags = ["team", "scm"]
 +++
 
 Apart from the obvious unit testing code which could be fun trying to

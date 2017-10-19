@@ -1,6 +1,7 @@
 +++
 title = "git annex assistant is making leaps and bounds"
 date = "2012-06-26"
+tags = ["linux", "git-annex"]
 
 
 categories = []

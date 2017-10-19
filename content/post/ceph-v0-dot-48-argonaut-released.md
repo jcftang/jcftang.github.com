@@ -1,6 +1,7 @@
 +++
 title = "ceph v0 dot 48 argonaut released"
 date = "2012-07-05"
+tags = ["ceph"]
 
 
 categories = []

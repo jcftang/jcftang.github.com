@@ -1,6 +1,7 @@
 +++
 title = "slurm user group meeting 2012"
 date = "2012-04-30"
+tags = ["slurm", "hpc"]
 
 
 categories = []

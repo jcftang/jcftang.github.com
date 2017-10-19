@@ -1,6 +1,7 @@
 +++
 title = "installing ceph on sl6"
 date = "2012-07-06"
+tags = ["ceph", "linux"]
 
 
 categories = []

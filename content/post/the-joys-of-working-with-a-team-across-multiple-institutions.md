@@ -1,6 +1,7 @@
 +++
 title = "the joys of working with a team across multiple institutions"
 date = "2011-10-19"
+tags = ["team"]
 
 categories = []
 +++

@@ -3,7 +3,7 @@ title = "prototyping and testing systems"
 date = "2012-04-09"
 
 
-categories = ["scm", "team"]
+tags = ["scm", "team"]
 +++
 
 One of the issues with with dogfooding your own projects to accelerate

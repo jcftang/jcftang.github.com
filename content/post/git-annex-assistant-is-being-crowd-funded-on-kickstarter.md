@@ -1,7 +1,7 @@
 +++
 title = "git annex assistant is being crowd funded on kickstarter"
 date = "2012-06-04"
-
+tags = ["linux"]
 
 categories = []
 +++

@@ -1,6 +1,7 @@
 +++
 title = "building a private cloud with saltstack as the cloud controller"
 date = "2013-12-31T12:55:26+00:00"
+tags = ["linux", "ansible", "saltstack"]
 
 
 categories = []
