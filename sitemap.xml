@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -8,8 +8,38 @@
   </url>
   
   <url>
+    <loc>http://jcftang.github.io/tags/chromebook/</loc>
+    <lastmod>2016-08-01T10:26:34+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jcftang.github.io/</loc>
+    <lastmod>2016-08-01T10:26:34+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jcftang.github.io/tags/linux/</loc>
+    <lastmod>2016-08-01T10:26:34+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jcftang.github.io/post/</loc>
+    <lastmod>2016-08-01T10:26:34+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jcftang.github.io/tags/</loc>
+    <lastmod>2016-08-01T10:26:34+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jcftang.github.io/2015/01/23/cobbler-2-dot-6-on-ubuntu-precise/</loc>
     <lastmod>2015-01-23T19:28:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jcftang.github.io/categories/</loc>
+    <lastmod>2014-09-24T17:40:46+01:00</lastmod>
   </url>
   
   <url>
@@ -18,7 +48,17 @@
   </url>
   
   <url>
+    <loc>http://jcftang.github.io/categories/python/</loc>
+    <lastmod>2014-09-24T17:40:46+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jcftang.github.io/2014/06/22/hashdist-for-repeatably-building-an-environment/</loc>
+    <lastmod>2014-06-22T14:52:42+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jcftang.github.io/tags/packaging/</loc>
     <lastmod>2014-06-22T14:52:42+01:00</lastmod>
   </url>
   
@@ -33,7 +73,17 @@
   </url>
   
   <url>
+    <loc>http://jcftang.github.io/tags/ansible/</loc>
+    <lastmod>2013-12-31T12:55:26+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jcftang.github.io/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/</loc>
+    <lastmod>2013-12-31T12:55:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jcftang.github.io/tags/saltstack/</loc>
     <lastmod>2013-12-31T12:55:26+00:00</lastmod>
   </url>
   
@@ -58,8 +108,18 @@
   </url>
   
   <url>
+    <loc>http://jcftang.github.io/tags/zfs/</loc>
+    <lastmod>2013-03-31T11:05:56+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jcftang.github.io/2013/03/31/zfs-on-linux-is-usable-and-safe/</loc>
     <lastmod>2013-03-31T11:05:56+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jcftang.github.io/tags/rails/</loc>
+    <lastmod>2013-03-27T11:57:41+00:00</lastmod>
   </url>
   
   <url>
@@ -78,7 +138,12 @@
   </url>
   
   <url>
-    <loc>http://jcftang.github.io/2013/02/08/hydracamp-2013-trinity-college--dublin/</loc>
+    <loc>http://jcftang.github.io/tags/hpc/</loc>
+    <lastmod>2013-03-22T07:46:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jcftang.github.io/2013/02/08/hydracamp-2013-trinity-college-dublin/</loc>
     <lastmod>2013-02-08T10:02:12+00:00</lastmod>
   </url>
   
@@ -108,6 +173,11 @@
   </url>
   
   <url>
+    <loc>http://jcftang.github.io/tags/ceph/</loc>
+    <lastmod>2012-10-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jcftang.github.io/2012/10/23/ceph-v0-dot-53-released/</loc>
     <lastmod>2012-10-23T00:00:00+00:00</lastmod>
   </url>
@@ -120,6 +190,11 @@
   <url>
     <loc>http://jcftang.github.io/2012/10/07/digital-preservation-and-archiving-is-a-hpc-problem/</loc>
     <lastmod>2012-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jcftang.github.io/tags/slurm/</loc>
+    <lastmod>2012-09-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -178,6 +253,11 @@
   </url>
   
   <url>
+    <loc>http://jcftang.github.io/tags/osx/</loc>
+    <lastmod>2012-07-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jcftang.github.io/2012/07/20/osx-kernel-panics-and-virtualbox/</loc>
     <lastmod>2012-07-20T00:00:00+00:00</lastmod>
   </url>
@@ -204,6 +284,16 @@
   
   <url>
     <loc>http://jcftang.github.io/2012/07/05/ceph-v0-dot-48-argonaut-released/</loc>
+    <lastmod>2012-07-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jcftang.github.io/tags/git/</loc>
+    <lastmod>2012-07-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jcftang.github.io/tags/git-annex/</loc>
     <lastmod>2012-07-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -303,6 +393,16 @@
   </url>
   
   <url>
+    <loc>http://jcftang.github.io/tags/scm/</loc>
+    <lastmod>2012-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jcftang.github.io/tags/team/</loc>
+    <lastmod>2012-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jcftang.github.io/2012/04/01/gitbuilder-aggregator/</loc>
     <lastmod>2012-04-01T00:00:00+00:00</lastmod>
   </url>
@@ -323,12 +423,22 @@
   </url>
   
   <url>
+    <loc>http://jcftang.github.io/tags/octopress/</loc>
+    <lastmod>2012-03-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jcftang.github.io/2012/03/04/planet-dri-a-news-aggregator-for-digital-humanities-and-digital-preservation-projects-in-ireland/</loc>
     <lastmod>2012-03-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://jcftang.github.io/2012/02/26/genetic-classification-of-populations-using-supervised-learning/</loc>
+    <lastmod>2012-02-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jcftang.github.io/tags/genetics/</loc>
     <lastmod>2012-02-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -363,6 +473,11 @@
   </url>
   
   <url>
+    <loc>http://jcftang.github.io/tags/redhat/</loc>
+    <lastmod>2012-02-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jcftang.github.io/2012/01/18/waterfall-or-agile-methods-for-delivering-a-project/</loc>
     <lastmod>2012-01-18T00:00:00+00:00</lastmod>
   </url>
@@ -392,145 +507,7 @@
   </url>
   
   <url>
-    <loc>http://jcftang.github.io/tags/ansible/</loc>
-    <lastmod>2013-12-31T12:55:26+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jcftang.github.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jcftang.github.io/tags/ceph/</loc>
-    <lastmod>2012-10-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jcftang.github.io/tags/chromebook/</loc>
-    <lastmod>2016-08-01T10:26:34+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jcftang.github.io/tags/genetics/</loc>
-    <lastmod>2012-02-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jcftang.github.io/tags/git/</loc>
-    <lastmod>2012-05-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jcftang.github.io/tags/git-annex/</loc>
-    <lastmod>2012-07-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jcftang.github.io/tags/hpc/</loc>
-    <lastmod>2013-03-22T07:46:26+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jcftang.github.io/</loc>
-    <lastmod>2016-08-01T10:26:34+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jcftang.github.io/tags/linux/</loc>
-    <lastmod>2016-08-01T10:26:34+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jcftang.github.io/tags/octopress/</loc>
-    <lastmod>2012-03-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jcftang.github.io/tags/osx/</loc>
-    <lastmod>2012-07-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jcftang.github.io/tags/packaging/</loc>
-    <lastmod>2014-06-22T14:52:42+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jcftang.github.io/post/</loc>
-    <lastmod>2016-08-01T10:26:34+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jcftang.github.io/categories/python/</loc>
-    <lastmod>2014-09-24T17:40:46+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jcftang.github.io/tags/rails/</loc>
-    <lastmod>2013-03-27T11:57:41+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jcftang.github.io/tags/redhat/</loc>
-    <lastmod>2012-02-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jcftang.github.io/tags/saltstack/</loc>
-    <lastmod>2013-12-31T12:55:26+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jcftang.github.io/tags/scm/</loc>
-    <lastmod>2012-04-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jcftang.github.io/tags/slurm/</loc>
-    <lastmod>2012-09-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jcftang.github.io/tags/</loc>
-    <lastmod>2013-12-31T12:55:26+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jcftang.github.io/tags/team/</loc>
-    <lastmod>2012-04-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://jcftang.github.io/topics/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jcftang.github.io/tags/zfs/</loc>
-    <lastmod>2013-03-31T11:05:56+01:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>

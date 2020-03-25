@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.37.1" />
+  <meta name="generator" content="Hugo 0.68.1" />
 
   <title>digital preservation and archiving is a hpc problem &middot; Jimmy Tang</title>
 
@@ -243,12 +243,10 @@ to most people, one of the big problems in the area of preservation
 and archiving is the the amount of data involved and the varied types
 of data. This is not taking into account of the issues with data
 access patterns.</p>
-
 <p>Given that a preservation and archiving project will want to provide a
 trusted system, the system will want to read out every single byte
 that was put in to verify that the data is correct at somepoint
 (usually with some form of hashing).</p>
-
 <p>Reading data out and checking that it&rsquo;s correct serially probably
 isn&rsquo;t the smartest solution. Nor is copying the data into 2-3
 locations (where each site is maintaining 2-3 copies for backups and
@@ -260,14 +258,12 @@ from the other sites or from a backup. I need to delve deeper into the
 storage and data-distribution strategies that some of the bigger
 projects are taking. There has to be a smarter way of storing and
 preserving data without having to make copies of things.</p>
-
 <p>I&rsquo;ve often wondered how projects manage to copy/move data across
 storage providers in a reasonable amount of time without needing to
 wheel a few racks of disks around. It would also be interesting to see
 the error rates of these systems and how often errors are
 corrected. If they are corrected what is the computational cost of
 doing this.</p>
-
 <p>If you have a multi-terabyte archive the problem isn&rsquo;t too bad, the
 more typical case these days might be in the order of the low hundreds
 of terabytes. I could only imagine what lager scale sites must deal

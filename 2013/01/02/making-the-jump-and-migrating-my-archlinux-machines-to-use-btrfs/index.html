@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.37.1" />
+  <meta name="generator" content="Hugo 0.68.1" />
 
   <title>making the jump and migrating my archlinux machines to use btrfs &middot; Jimmy Tang</title>
 
@@ -226,11 +226,9 @@
 archlinux based laptops to using btrfs. I&rsquo;ve to date been just using
 ext4 and nilfs2 (on an SD card) on my eeepc and plain old ext4 on the
 bigger laptop.</p>
-
 <p>The main motivation was that the two devices were pretty outdated and
 I felt lucky with doing a major upgrade (replaced sysvinit with systemd
 as recommended by the archlinux people)</p>
-
 <p>I didn&rsquo;t want to reinstall my machines so I took the route of converting
 the existing ext4 partitions to btrfs. I left my <em>/boot</em> partition as
 ext2 for safety. Prior to converting to btrfs I had upgraded the two
@@ -239,24 +237,19 @@ first. I then proceeded to boot up my laptops with the
 archlinux installer image via a usb key. Then just followed the
 <a href="https://wiki.archlinux.org/index.php/Btrfs">btrfs</a> documentation at
 the archlinux wiki.</p>
-
 <p>The process went more smoothly than I had anticipated, I didn&rsquo;t run into
 any major stumbling blocks, that said I did have to free up some space
 for the migration to occur.</p>
-
 <p>Once the systems were back up and running I enabled compression on btrfs
 and defragged the systems</p>
-
 <pre><code>find / -xdev -type f -print -exec btrfs filesystem defrag '{}' \;
 </code></pre>
-
 <p>This compression feature made a huge difference on the space limited
 eeepc, the compression feature reclaimed about 10% of the space on the
 system. It&rsquo;s a shame that the RHEL based distros aren&rsquo;t quite supporting
 btrfs yet there are quite a few nice features there that are very
 attractive for pro-consumers and the enterprise. RHEL7 will have btrfs,
 hopefully there will be backports to RHEL6.</p>
-
 <p>Performance wise I haven&rsquo;t used the system in anger yet, so time will
 tell if I&rsquo;m happy with btrfs or not.</p>
 

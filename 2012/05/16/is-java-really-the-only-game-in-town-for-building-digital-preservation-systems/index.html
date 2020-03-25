@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.37.1" />
+  <meta name="generator" content="Hugo 0.68.1" />
 
   <title>is java really the only game in town for building digital preservation systems &middot; Jimmy Tang</title>
 
@@ -227,28 +227,24 @@ there is primarily fedora-commons, dspace, eprints and one or two
 other solutions out there for building up digital preservation
 systems. The one that really stands out as a framework and toolkit for
 building bigger and more complex systems is fedora-commons.</p>
-
 <p>It also happens to be written in JAVA and is a fairly big and complex
 system which implements best-practices for storing digital objects
 with the sole purpose of preservation. In one of the projects that I
 have been working with some interns at work; we have treated
 fedora-commons as just storage system where we interface to the
 preservation repository via the available REST api.</p>
-
 <p>By using the API it was possible to use node.js to implement the
 servers which contained all the business logic. Project Hydra does
 something similar or rather we are doing something similar to Project
 Hydra, by accident much to my suprise. Hydra uses Ruby on Rails for
 its middleware implementation, there doesn&rsquo;t seem to be much JAVA
 there either.</p>
-
 <p>I get the feeling that this decoupled approach with REST servers and
 clients to be pretty attractive to anyone who wishes to implement
 these types systems. It is interesting to see that the applications
 aren&rsquo;t being written in JAVA. At least that is what I can see with the
 projects that use Hydra (which is sort of the point). Maybe good
 enough practice is fine for most use cases.</p>
-
 <p>This makes me wonder how many digital preservation projects out there
 really use 100% JAVA up to delivery to the client? How many projects
 out there are really just mashups of different types of technology

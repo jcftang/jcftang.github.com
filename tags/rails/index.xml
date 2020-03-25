@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rails on Jimmy Tang</title>
+    <title>rails on Jimmy Tang</title>
     <link>http://jcftang.github.io/tags/rails/</link>
-    <description>Recent content in Rails on Jimmy Tang</description>
+    <description>Recent content in rails on Jimmy Tang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 27 Mar 2013 11:57:41 +0000</lastBuildDate>

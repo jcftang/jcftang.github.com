@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.37.1" />
+  <meta name="generator" content="Hugo 0.68.1" />
 
   <title>cobbler 2 dot 6 on ubuntu precise &middot; Jimmy Tang</title>
 
@@ -238,13 +238,11 @@ installer. In the past I&rsquo;ve relied on either hand rolled configurations
 or more recently Ubuntu <a href="https://maas.ubuntu.com/">MAAS</a>. This time
 I decided to give <a href="http://www.cobblerd.org/">Cobbler</a> a try on my
 Ubuntu Precise installations.</p>
-
 <p>Given Cobbler is pretty (or was) RHEL specific, I was not too
 disappointed with the Debian packaging. Most things worked, I did
 have to correct the dnsmasq and tftpd templates but it mostly worked.
 I&rsquo;ve a smallish salt formula for setting up said system at
 <a href="https://github.com/jcftang/cobbler-formula">https://github.com/jcftang/cobbler-formula</a></p>
-
 <p>It&rsquo;s pretty nice that Cobbler is able to provision KVM or XEN based
 virtual machines as well as the usual bare metal systems.</p>
 

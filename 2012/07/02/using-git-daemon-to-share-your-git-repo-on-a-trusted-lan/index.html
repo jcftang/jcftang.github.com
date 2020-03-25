@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.37.1" />
+  <meta name="generator" content="Hugo 0.68.1" />
 
   <title>using git daemon to share your git repo on a trusted lan &middot; Jimmy Tang</title>
 
@@ -226,27 +226,20 @@
 the interface at times can be too geared towards power users. One command
 that I particularly like in <a href="http://mercurial.selenic.com/">mercurial</a>
 is the <em>hg serve</em> command, which is incredibly easy to use.</p>
-
 <p>To do the equivalent of the <em>hg serve</em> in <em>git</em> you can do the following&hellip;</p>
-
 <pre><code>user$ cd my-repo
 user$ git daemon --export-all --base-path=$(pwd)
 </code></pre>
-
 <p>The above assumes you are on a trusted network and you want to share
 your repo with people on your LAN and you are in the toplevel directory
 of the repository that you want to temporarily share. If you&rsquo;re lazy
 you could do&hellip;</p>
-
 <pre><code>user$ git config --global alias.serve 'daemon --reuseaddr --verbose  --base-path=. --export-all ./.git'
 </code></pre>
-
 <p>Which would place the following (or similar) in your ~/.gitconfig file</p>
-
 <pre><code>[alias]
     serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
 </code></pre>
-
 <p>The above was taken from <a href="https://git.wiki.kernel.org/index.php/Aliases">https://git.wiki.kernel.org/index.php/Aliases</a></p>
 
 

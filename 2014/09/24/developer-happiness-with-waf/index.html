@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.37.1" />
+  <meta name="generator" content="Hugo 0.68.1" />
 
   <title>developer happiness with waf &middot; Jimmy Tang</title>
 
@@ -238,23 +238,19 @@ on a few small bits and pieces of code, infrastructure, etc&hellip; I
 had to make some stuff work and make it work well. So I decided to
 use autotools to configure and build the application that I’m working
 on.</p>
-
 <p>As great as it was on my nice fast intel based machine, it was dog
 slow on my target platform, especially when I had to regenerate the
 autoconf scripts.</p>
-
 <p>To get to the point, I ended up spending a day or two checking out
 alternatives (that wasn’t cmake) and came across
 <a href="https://code.google.com/p/waf/">waf</a>, the documentation isn’t all
 that great if you just look at the website, I had to spend a few
 hours digging around to get what I wanted.</p>
-
 <p>Once I ported my application over to using waf, the configure and
 build process was an order of magnitude faster than autotools. This
 made a huge difference on my target platform. I noticed that waf
 ships with some experimental plugins like the daemon plugin which
 runs a build when it notices that somefiles have changed.</p>
-
 <p>This daemon plugin is <em>great</em> it gives waf similar behaviour to
 what java developers have with junit and eclipse. I’m finding that
 waf is making me happy when I develop and fix stuff in the application

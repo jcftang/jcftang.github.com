@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Jimmy Tang</title>
@@ -149,7 +149,7 @@ As such we like to test things in a near production like environment&amp;hellip;
       <pubDate>Sun, 24 Mar 2013 11:16:54 +0000</pubDate>
       
       <guid>http://jcftang.github.io/2013/03/24/amazon-redshift-a-curiousity-to-me/</guid>
-      <description>I&amp;rsquo;ve been recently reading up on Amazon [Redshift](), at first I thought it was a parallel/distributed datastore like HDFS. At a second look in reality its more of a distributed relational database. This in itself is pretty cool for scaling applications with large data sets that happen to need to be in a database; which is quite a few things.
+      <description>I&amp;rsquo;ve been recently reading up on Amazon Redshift, at first I thought it was a parallel/distributed datastore like HDFS. At a second look in reality its more of a distributed relational database. This in itself is pretty cool for scaling applications with large data sets that happen to need to be in a database; which is quite a few things.
 From the initial reading of the architecture and docs, it looks like Amazon built a job queuing system around postgres to schedule queries out to its nodes in the cluster.</description>
     </item>
     
@@ -166,10 +166,10 @@ We had to unpack and install all the infiniband cards ourselves, cabled, racked,
     
     <item>
       <title>hydracamp 2013 trinity college  dublin</title>
-      <link>http://jcftang.github.io/2013/02/08/hydracamp-2013-trinity-college--dublin/</link>
+      <link>http://jcftang.github.io/2013/02/08/hydracamp-2013-trinity-college-dublin/</link>
       <pubDate>Fri, 08 Feb 2013 10:02:12 +0000</pubDate>
       
-      <guid>http://jcftang.github.io/2013/02/08/hydracamp-2013-trinity-college--dublin/</guid>
+      <guid>http://jcftang.github.io/2013/02/08/hydracamp-2013-trinity-college-dublin/</guid>
       <description>After a few months of budgeting, negotiations and finding venues we&amp;rsquo;ve at Trinity College Dublin have committed to hosting a HydraCamp for europe! So I&amp;rsquo;m shamelessly plugging it here.
 Trinity College Dublin as a part of Digital Repository of Ireland will be organising Hydra Camp in the week of April 8th till 12th, 2013. This will be a week long training course, which will be aimed at developers who are interested in the Hydra framework for developing repositories.</description>
     </item>
@@ -650,7 +650,7 @@ git config --global rerere.enabled 1  It pretty much automates the resolution of
       <pubDate>Thu, 08 Mar 2012 00:00:00 +0000</pubDate>
       
       <guid>http://jcftang.github.io/2012/03/08/enabling-latent-semantic-indexing-for-octopress/</guid>
-      <description>For those that care about having related posts on their [Octopress]() blog. It&amp;rsquo;s actually quite easy to turn it on, it&amp;rsquo;s nice to have and useful. But it&amp;rsquo;s not enabled by default in Octopress.
+      <description>For those that care about having related posts on their Octopress blog. It&amp;rsquo;s actually quite easy to turn it on, it&amp;rsquo;s nice to have and useful. But it&amp;rsquo;s not enabled by default in Octopress.
 This feature already exists in jekyll, enabling this feature in Octopress is a trival task.
 Firstly add this to your _config.yml file
 lsi: true  Then create a file such as source/_includes/custom/asides/related.html with the following content, add it to one of your asides in _config.</description>

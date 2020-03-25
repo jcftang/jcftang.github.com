@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.37.1" />
+  <meta name="generator" content="Hugo 0.68.1" />
 
   <title>cports for building applications and libraries for hpc systems &middot; Jimmy Tang</title>
 
@@ -238,7 +238,6 @@
 <em>makefiles</em> which mostly automates the process of downloading,
 configuring, building and installing applications and libraries for
 High Performance Computing systems that use environment-modules.</p>
-
 <p>One of the key-features that <em>cports</em> offers is the automated
 modulefile generation, and the fact that the <em>makefiles</em> acts as
 documentation to how software is configured, built and installed. It&rsquo;s
@@ -247,15 +246,12 @@ boost to the productivity of the systems admin team. It&rsquo;s a nice
 alternative to trying to create RPM&rsquo;s or DEB&rsquo;s (pick your custom
 package manager of choice here), as <em>makefiles</em> tend to be a little
 more flexible than traditional package managers.</p>
-
 <p>One main drawback of the <em>cports</em> system right now is the lack of good
 dependancy management and checking, it is all currently up to the
 packager to resolve these dependancy issues. It&rsquo;s also <em>cports</em>
 strongest point that there is no dependancy management, as the
 packager can build many unique trees of packages.</p>
-
 <p>For example, we have Tahoe-LAFS in the following sample makefile</p>
-
 <pre><code>include ../../../mk/gnu.pre.mk
 
 DISTNAME=	allmydata-tahoe
@@ -302,15 +298,12 @@ do-test:
 	python setup.py test
 
 include ../../../mk/gnu.post.mk
-</code></pre>
-
-<p>In this example, as Tahoe-LAFS (upstream project) gets updated, the
+</code></pre><p>In this example, as Tahoe-LAFS (upstream project) gets updated, the
 cports packager just needs to copy this makefile to a new directory,
 update the version numbers, then do a <em>make install</em>. This assumes
 that the dependancies haven&rsquo;t changed much, if they have it is trivial
 to update the dependancies. The above example generates a modulefile
 similar to like this,</p>
-
 <pre><code>#%Module1.0
 module-whatis &quot;allmydata-tahoe version 1.9.0-SUMO (compiled with a gnu compiler)&quot;
 conflict allmydata-tahoe
@@ -331,18 +324,14 @@ puts stderr {link depends: gmp/4.3.2-gnu openssl/0.9.8o-gnu}
 }
 prepend-path   PYTHONPATH /home/support/apps/cports/rhel-5.x86_64/gnu/allmydata-tahoe/1.9.0-SUMO/lib
 /python2.6/site-packages
-</code></pre>
-
-<p>Once the package has been built and tested on a development system, we
+</code></pre><p>Once the package has been built and tested on a development system, we
 can take the package and replicate the installation in fairly
 automated fashion. This type of scripting and automation means that
 the clusters that we run in work have consistent installations of
 applications.</p>
-
 <p>Having consistent installs means that the end-user needs to learn less
 about the naming conventions. This in turn reduces the confusion and
 documentation that is needed for the end user.</p>
-
 <p>Sadly, I don&rsquo;t get to play with <em>cports</em> as much as I used to, since I
 do not administrate High Performance Computing systems anymore in my
 new role at my current work place. It is just a hobby to develop this
@@ -350,7 +339,6 @@ build system, I plan on automating more testing of the <em>cports</em> system
 when I get a chance. We currently have <em>jenkins</em> and <em>gitbuilder</em>
 running on select machines in work to continually build and test
 specific packages to find regressions and broken download links.</p>
-
 <p><em>cports</em> isn&rsquo;t quite ready for general public usage, but if you are a
 clued in systems administrator at a High Performance Computing
 facility and use environment-module then <em>cports</em> is just about

@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.37.1" />
+  <meta name="generator" content="Hugo 0.68.1" />
 
   <title>amazon redshift a curiousity to me &middot; Jimmy Tang</title>
 
@@ -225,18 +225,16 @@
 
 </div>
 
-  <p>I&rsquo;ve been recently reading up on Amazon [Redshift](), at first I thought
+  <p>I&rsquo;ve been recently reading up on Amazon <a href="">Redshift</a>, at first I thought
 it was a parallel/distributed datastore like HDFS. At a second look in
 reality its more of a distributed relational database. This in itself
 is pretty cool for scaling applications with large data sets that happen
 to need to be in a database; which is quite a few things.</p>
-
 <p>From the initial reading of the architecture and docs, it looks like
 Amazon built a job queuing system around postgres to schedule queries
 out to its nodes in the cluster. What&rsquo;s curious to me is how do they
 deal with failed nodes in the system and how they provision the system,
 there must be an ordered set of operations to do so.</p>
-
 <p>Another oddity is the mesh network that the system has, I&rsquo;m under the
 impression that there is only 1x10gb network connection on the machine. I
 wonder if the mesh network is just a virtual mesh network or if it&rsquo;s

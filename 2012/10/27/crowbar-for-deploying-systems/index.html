@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.37.1" />
+  <meta name="generator" content="Hugo 0.68.1" />
 
   <title>crowbar for deploying systems &middot; Jimmy Tang</title>
 
@@ -239,23 +239,19 @@ there which suggests that people in the digital preservation and archiving
 fields are implementing systems at scale, I&rsquo;m under the impression that
 most systems/sites are building systems up one piece at a time without
 much automation.</p>
-
 <p>It seems to use <a href="http://www.opscode.com/chef/">chef</a> in the backend for
 all the automation. I&rsquo;ve been relearning <a href="http://puppetlabs.com/">puppet</a>
 recently so that I can have reproducible environments with
 <a href="http://vagrantup.com/">Vagrant</a>.</p>
-
 <p>There might be an advantage to learn and port all the existing modules
 that I have already created and configured to chef instead of puppet. If
 I did move to a chef automation in my vagrant environments then a few
 years from now when we go to full production we might be able to deploy
 the whole system from bare metal relatively quickly and repeatably.</p>
-
 <p>Automating the deployments will mean that we will have documentation
 on the infrastructure itself. Either which way there is still a need
 to automate the fedora-commons, SOLR, mysql and postgres deployments at
 some point.</p>
-
 <p>After all this thinking and pondering, I&rsquo;m still using puppet. There&rsquo;s
 still the likes of ansible, cfengine, bcfg2 and juju. There is a never
 ending supply of these tools.</p>

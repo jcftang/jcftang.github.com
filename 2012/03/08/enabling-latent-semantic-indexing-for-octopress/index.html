@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.37.1" />
+  <meta name="generator" content="Hugo 0.68.1" />
 
   <title>enabling latent semantic indexing for octopress &middot; Jimmy Tang</title>
 
@@ -234,41 +234,31 @@
 
 </div>
 
-  
-
-<p>For those that care about having related posts on their [Octopress]()
+  <p>For those that care about having related posts on their <a href="">Octopress</a>
 blog. It&rsquo;s actually quite easy to turn it on, it&rsquo;s nice to have and
 useful. But it&rsquo;s not enabled by default in Octopress.</p>
-
 <p>This feature already exists in jekyll, enabling this feature in
 Octopress is a trival task.</p>
-
 <p>Firstly add this to your <code>_config.yml</code> file</p>
-
 <pre><code>lsi: true
 </code></pre>
-
 <p>Then create a file such as <code>source/_includes/custom/asides/related.html</code> with the following
 content, add it to one of your asides in <code>_config.yml</code></p>
-
 <p>{% raw %}
-    <section>
-    <h1>Related Posts</h1>
-    <ul class="posts">
-        {% for post in site.related_posts limit:5 %}
-        <li class="related">
-            <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
-        </li>
-        {% endfor %}
-        </ul>
-    </section>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->Related Posts<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+{% for post in site.related_posts limit:5 %}
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->{{ post.title }}<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+{% endfor %}
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 {% endraw %}</p>
-
 <p>It is possible to style the list, but in the above I have chosen to
 keep the same style as the recent posts.</p>
-
 <h2 id="probable-issues-with-enabling-lsi">Probable issues with enabling LSI</h2>
-
 <p>There are some issues with enabling LSI in jekyll/octopress, the
 primary issue will be performance. The default implementation will be
 slow if you have lots of posts to classify. It would be recommended

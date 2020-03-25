@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.37.1" />
+  <meta name="generator" content="Hugo 0.68.1" />
 
   <title>hydra and ansible &middot; Jimmy Tang</title>
 
@@ -240,18 +240,15 @@ of testing things out as much as we can and using the same environments
 to develop against. As previously mentioned before I had originally
 been using puppet and vagrant to build up the development harness and
 experiment with tools/services that we might want to use for our system.</p>
-
 <p>At somepoint I came across <a href="http://www.ansible.cc">ansible</a> and not long
 after discovering it, I migrated a large chunk of the development and
 test systems to using ansible. I&rsquo;ve even cooked up one or two ansible
 modules as a result.</p>
-
 <p>As a result of adopting ansible for building up our test and development
 infrastructure, I&rsquo;ve collected the relevant playbooks and roles that a
 person might want for deploying all the bits and pieces needed to roll
 out a hydra-head. See <a href="https://github.com/jcftang/ansible-hydra">https://github.com/jcftang/ansible-hydra</a>, I have
 a set of roles and a few example playbooks on setting up at least</p>
-
 <ul>
 <li>Tomcat (from the base repositories of RHEL6/Centos6/ScientificLinux6)</li>
 <li>Fedora-Commons (the same version as is in the hydra-jetty repo)</li>
@@ -261,7 +258,6 @@ a set of roles and a few example playbooks on setting up at least</p>
 <li>MySQL (from the base repositories of RHEL6/Centos6/ScientificLinux6)</li>
 <li>Redis</li>
 </ul>
-
 <p>The configurations aren&rsquo;t quite production ready yet as they do require
 some more work in setting up Fedora-Commons and SOLR the way we want. The
 configurations are however fairly realistic and are daily use
@@ -269,7 +265,6 @@ for doing test deployments of our hydra-head (RoR application) or
 experimenting with additional tools, configurations and systems such as
 <a href="https://github.com/jcftang/ansible-ceph">ceph</a> - we&rsquo;re using the radosgw
 to provide a realistic and local S3 service.</p>
-
 <p>So far the configurations need polishing off and another playbook needs
 to be created for continuous deployment of our hydra-head.</p>
 

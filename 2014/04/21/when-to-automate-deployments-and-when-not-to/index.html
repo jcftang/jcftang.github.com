@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.37.1" />
+  <meta name="generator" content="Hugo 0.68.1" />
 
   <title>when to automate deployments and when not to &middot; Jimmy Tang</title>
 
@@ -225,20 +225,16 @@
   <p>We recently had Hydra Camp in Dublin in Trinity College Dublin which
 went pretty well. I even got to talk a little about what we&rsquo;re doing
 with Shibboleth and how we&rsquo;re deploying our systems.</p>
-
 <p>We&rsquo;re deploy with ansible either by someone running the playbook by hand
 or via buildbot which pushes out a build when tests pass successfully
 on the master branch.</p>
-
 <p>Someone in the camp asked at what complexity should you begin to automate
 at, which I thought was a strange question since at DRI/TCD we thought
 of deploying as automatically as possible from day 1.</p>
-
 <p>My response to the question of when to automate was to automate it if you
 know that you need documentation or know that there might be a second
 time in setting up the system. Which pretty meant that we automate as
 much as we can.</p>
-
 <p>Automating means you at least have a script as documentation and as people
 leave/join the project you have a chance of figuring out whats going
 on. This is especially useful when you have a CI or CD styled system.</p>

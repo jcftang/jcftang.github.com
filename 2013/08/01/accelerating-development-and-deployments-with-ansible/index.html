@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.37.1" />
+  <meta name="generator" content="Hugo 0.68.1" />
 
   <title>accelerating development and deployments with ansible &middot; Jimmy Tang</title>
 
@@ -238,16 +238,13 @@
 the project that I am working on. So far we&rsquo;ve used it to deploy and
 maintain state for our Open Nebula deployment, Jenkins CI system, Ceph&rsquo;s
 radosgw and our digital repository.</p>
-
 <p>In fact I currently have a Jenkins job which deploys our software stack
 using Ansible to a test system in our Open Nebula cluster. This has been
 hugely beneficial to myself so far to be able to teardown and bring up
 systems quickly to make sure our application is well tested and debugged.</p>
-
 <p>Without going into a huge amount of detail, we&rsquo;ve been able to deploy our
 systems with relative ease and repeatability. I&rsquo;ve got the configurations
 up at my github account for those that are interested.</p>
-
 <p>The best thing about these deployments is that the initial prototyping
 was done in a set of vagrant managed virtual machines, this allowed me
 to rapidly bring up and teardown systems to ensure we have everything
@@ -255,11 +252,9 @@ automated smoothly. On the flipside, the systems that get developed for
 production usage get backported to our vagrant setup. This means that
 we&rsquo;re able to provide a development environment for each developer which
 is identical or as close as possible to our production systems.</p>
-
 <p>Having the capability to develop and test on a local machine which is
 close to or identical to our production system has accelerated our bug
 finding and development process.</p>
-
 <p>I&rsquo;m not too sure what the team think, since we&rsquo;re moving quite fast and
 Ansible has allowed us to do so due to its ease of use, well it has at
 least let me do so anyway.</p>

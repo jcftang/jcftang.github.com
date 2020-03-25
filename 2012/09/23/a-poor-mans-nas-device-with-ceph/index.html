@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.37.1" />
+  <meta name="generator" content="Hugo 0.68.1" />
 
   <title>a poor mans nas device with ceph &middot; Jimmy Tang</title>
 
@@ -239,7 +239,6 @@ collection of hard drives at home, I could have run
 <a href="https://tahoe-lafs.org/trac/tahoe-lafs">Tahoe-LAFS</a> like I do in work
 for backup purposes. In fact Tahoe works quite well for the
 technically capable user.</p>
-
 <p>Recently I&rsquo;ve decided that I need a more central location at home to
 store my photo collection (I love to take photos with my Canon DSLR
 and Panasonic LX5). Traditionally I would have just fired up
@@ -247,7 +246,6 @@ and Panasonic LX5). Traditionally I would have just fired up
 then setup a number of remotes to store the data, where one of them
 might be Tahoe-LAFS and the rest might be portable hard drives, remote
 machines etc&hellip;</p>
-
 <p>I could have gone with any number of distributed storage solutions
 such as <a href="http://www.gluster.org/">GlusterFS</a>,
 <a href="http://www.irods.org">iRODS</a>,
@@ -256,7 +254,6 @@ such as <a href="http://www.gluster.org/">GlusterFS</a>,
 <a href="http://www.xtreemfs.org/">xtreemfs</a>. I&rsquo;ve worked with some of these
 systems in production and toyed with others. Since this is for a home
 system I can pick what I want and change it at will.</p>
-
 <p>I probably have 2-3tb&rsquo;s of data to archive and store, I also want easy
 access to my data so NFS or CIFS exports are required. It wouldn&rsquo;t be
 unfeasible to acquire a few 2 or 3 terabyte drives for my old desktop
@@ -267,16 +264,12 @@ with a pretty good &ldquo;backend&rdquo; system for storing my files and the
 option of &ldquo;migrating my data from one machine to another machine&rdquo; by
 adding and removing OSD&rsquo;s. The handiest feature for me will be the
 capability of expanding and shrinking the system as I need.</p>
-
 <p>There probably aren&rsquo;t many people who would want to setup something
 like this for a home system, but it is an alternative to the usual
 RAID or LVM setup.</p>
-
 <p>Here&rsquo;s my proposed setup which I&rsquo;m going to setup in the next few
 spare weekends that I will have.</p>
-
 <p>{% img /downloads/images/ceph-home.png %}</p>
-
 <p>It would be great if Ceph offered some of of parity/erasure coding
 instead of plain replication. I&rsquo;m greedy and I want to maximise my
 disks that I have, I wonder how low I can go on hardware with the Ceph

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Packaging on Jimmy Tang</title>
+    <title>packaging on Jimmy Tang</title>
     <link>http://jcftang.github.io/tags/packaging/</link>
-    <description>Recent content in Packaging on Jimmy Tang</description>
+    <description>Recent content in packaging on Jimmy Tang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 22 Jun 2014 14:52:42 +0100</lastBuildDate>

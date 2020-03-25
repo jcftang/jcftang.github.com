@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.37.1" />
+  <meta name="generator" content="Hugo 0.68.1" />
 
   <title>vagrant and veewee for managing virtual machines for development &middot; Jimmy Tang</title>
 
@@ -232,17 +232,14 @@ which provides some additional wrappers for building custom
 &lsquo;boxes&rsquo;. Veewee certainly saved me lots of time in setting up some
 updated <a href="http://www.scientificlinux.org/">Scientific Linux</a> boxes
 (it&rsquo;s my preferred distro for deployments).</p>
-
 <p>In summary Vagrant is a set of scripts to manage virtual machines and
 Veewee is a set of scripts for creating base images for use in
 Vagrant. If you&rsquo;re interested in the updated SL6.2 definitions they
 can be found at my
 <a href="https://github.com/jcftang/veewee/tree/scientificlinux-6.2">fork of veewee</a>.</p>
-
 <p>All that is left now is to setup <a href="http://puppetlabs.com/">puppet</a> and
 have it automatically provision my development/test environment. I&rsquo;m
 not a huge fan of puppet, but I guess it&rsquo;s better than rolling my own.</p>
-
 <p>I look forward to have the capability of having easy access to
 disposable VM&rsquo;s for prototyping and testing! I will need to at
 somepoint setup a test system for cports with this tool.</p>

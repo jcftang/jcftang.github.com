@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hpc on Jimmy Tang</title>
+    <title>hpc on Jimmy Tang</title>
     <link>http://jcftang.github.io/tags/hpc/</link>
-    <description>Recent content in Hpc on Jimmy Tang</description>
+    <description>Recent content in hpc on Jimmy Tang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 22 Mar 2013 07:46:26 +0000</lastBuildDate>

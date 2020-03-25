@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.37.1" />
+  <meta name="generator" content="Hugo 0.68.1" />
 
   <title>gitbuilder aggregator &middot; Jimmy Tang</title>
 
@@ -229,13 +229,11 @@ for gitbuilder at <a href="http://ceph.newdream.net/gitbuilder.cgi">ceph
 gitbuilders</a>, this seemed
 like a great idea (and it is) except the aggregator at the time didn&rsquo;t
 quite work very fast and needed some ajax magic.</p>
-
 <p>I had asked for a copy of the aggregator script from the ceph
 developers, this was really just a perl hack as they said, but it
 works. Since we had some students doing an internship here to learn
 new things, I got one of the interns to write an ajax&rsquo;d up version of
 the aggregator.</p>
-
 <p>After a few weeks worth of usage and minor changes, it&rsquo;s a bit more
 ready to share with everyone, the ajax&rsquo;d up version of the aggregator
 can be found at my
@@ -243,12 +241,10 @@ can be found at my
 account in the develop branch. For fun I updated the main gitbuilder
 cgi scripts to use twitter bootstrap and add a link to the errcache
 file that gitbuilder generates.</p>
-
 <p>We found that with large builds the logs would just swamp out the
 errors and warnings and having access to the errcache helped a lot in
 narrowing down where to look for problems, hence the linking to the
 errcache.</p>
-
 <p>At somepoint it might be worth re-implementing the gitbuilder scripts
 in a single language in a generic way such that it works with other
 DVCS&rsquo;s that have the bisect feature.</p>

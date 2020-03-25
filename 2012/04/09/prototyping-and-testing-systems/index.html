@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.37.1" />
+  <meta name="generator" content="Hugo 0.68.1" />
 
   <title>prototyping and testing systems &middot; Jimmy Tang</title>
 
@@ -244,7 +244,6 @@ owner and developer to understand what is being built and to write
 automated tests collectively to ensure that it is being
 delivered. This might be a narrow view of the whole area, but I&rsquo;m just
 taking what works for me and using it to deliver the project.</p>
-
 <p>There are <em>many</em> specification/feature/behavioural testing tools out
 there for almost language that you can think of, so use what works for
 you and your team. The testing process not only ensures that the
@@ -253,14 +252,12 @@ where documentation can also be written at the sametime. This
 documentation could be used as an initial proposal to the stakeholder
 to put forward what you think they want if there are no clear
 specifications or requirements in place.</p>
-
 <p>The interns and I have been working on a small prototype system
 for a bigger project and the benefits of writing tests are beginning
 to show. It has become apparent to the interns that have been working
 on this project that <em>testing is a good thing</em>, especially if it can
 be automated. We&rsquo;re not quite doing TDD or BDD, but it&rsquo;s something
 that is in between, we&rsquo;re getting there with a tiered set of tests.</p>
-
 <p>We&rsquo;re finding that (probably) about 50% of the time of the team is
 spent on refactoring, writing tests and documentation. Testing
 combined with the automated builder/tester, the team is writing code
@@ -269,7 +266,6 @@ isn&rsquo;t well tested or documented. Given the choice and based on
 experience I would prefer to have code that is tested and
 documentated, rather than lots of cool half-working and half-tested
 features.</p>
-
 <p>The testing process has been a fantastic way for me to steer the
 interns, given how little expertise I have with javascript. The tests
 let me learn how the interns have been putting the prototype together,
@@ -277,7 +273,6 @@ but it also lets me fuzz up the tests to make sure things are working
 and to also write new tests to communicate what I think is needed when
 appropriate. We&rsquo;ve somewhat combined minimal QA into the development
 and testing process.</p>
-
 <p>In the end we hope to have a functional prototype system which does
 one thing (one set of workflows) well, have lots of documentation,
 have tests to back it up and prove that it works. While having an
