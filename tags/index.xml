@@ -6,11 +6,7 @@
     <description>Recent content in Tags on Jimmy Tang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Aug 2016 10:26:34 +0100</lastBuildDate>
-    
-	<atom:link href="http://jcftang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 01 Aug 2016 10:26:34 +0100</lastBuildDate><atom:link href="http://jcftang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>chromebook</title>
       <link>http://jcftang.github.io/tags/chromebook/</link>
@@ -111,20 +107,20 @@
     </item>
     
     <item>
-      <title>git</title>
-      <link>http://jcftang.github.io/tags/git/</link>
-      <pubDate>Thu, 05 Jul 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://jcftang.github.io/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>git-annex</title>
       <link>http://jcftang.github.io/tags/git-annex/</link>
       <pubDate>Thu, 05 Jul 2012 00:00:00 +0000</pubDate>
       
       <guid>http://jcftang.github.io/tags/git-annex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>http://jcftang.github.io/tags/git/</link>
+      <pubDate>Wed, 02 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://jcftang.github.io/tags/git/</guid>
       <description></description>
     </item>
     

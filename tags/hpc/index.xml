@@ -6,11 +6,7 @@
     <description>Recent content in hpc on Jimmy Tang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Mar 2013 07:46:26 +0000</lastBuildDate>
-    
-	<atom:link href="http://jcftang.github.io/tags/hpc/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 22 Mar 2013 07:46:26 +0000</lastBuildDate><atom:link href="http://jcftang.github.io/tags/hpc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>building kelvin supercomputer time lapse</title>
       <link>http://jcftang.github.io/2013/03/22/building-kelvin-supercomputer-time-lapse/</link>

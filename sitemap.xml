@@ -288,11 +288,6 @@
   </url>
   
   <url>
-    <loc>http://jcftang.github.io/tags/git/</loc>
-    <lastmod>2012-07-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://jcftang.github.io/tags/git-annex/</loc>
     <lastmod>2012-07-05T00:00:00+00:00</lastmod>
   </url>
@@ -365,6 +360,11 @@
   <url>
     <loc>http://jcftang.github.io/2012/05/16/is-java-really-the-only-game-in-town-for-building-digital-preservation-systems/</loc>
     <lastmod>2012-05-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jcftang.github.io/tags/git/</loc>
+    <lastmod>2012-05-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>

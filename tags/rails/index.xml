@@ -6,11 +6,7 @@
     <description>Recent content in rails on Jimmy Tang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Mar 2013 11:57:41 +0000</lastBuildDate>
-    
-	<atom:link href="http://jcftang.github.io/tags/rails/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 27 Mar 2013 11:57:41 +0000</lastBuildDate><atom:link href="http://jcftang.github.io/tags/rails/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>testing and developing rails applications in a near production like environment</title>
       <link>http://jcftang.github.io/2013/03/27/testing-and-developing-rails-applications-in-a-near-production-like-environment/</link>

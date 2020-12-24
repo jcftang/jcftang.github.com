@@ -6,11 +6,7 @@
     <description>Recent content in ansible on Jimmy Tang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 31 Dec 2013 12:55:26 +0000</lastBuildDate>
-    
-	<atom:link href="http://jcftang.github.io/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 31 Dec 2013 12:55:26 +0000</lastBuildDate><atom:link href="http://jcftang.github.io/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>building a private cloud with saltstack as the cloud controller</title>
       <link>http://jcftang.github.io/2013/12/31/building-a-private-cloud-with-saltstack-as-the-cloud-controller/</link>

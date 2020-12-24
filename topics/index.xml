@@ -5,10 +5,6 @@
     <link>http://jcftang.github.io/topics/</link>
     <description>Recent content in Topics on Jimmy Tang</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="http://jcftang.github.io/topics/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="http://jcftang.github.io/topics/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

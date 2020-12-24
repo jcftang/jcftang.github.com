@@ -6,11 +6,7 @@
     <description>Recent content in ceph on Jimmy Tang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Oct 2012 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://jcftang.github.io/tags/ceph/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 23 Oct 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://jcftang.github.io/tags/ceph/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ceph v0 dot 53 released</title>
       <link>http://jcftang.github.io/2012/10/23/ceph-v0-dot-53-released/</link>
