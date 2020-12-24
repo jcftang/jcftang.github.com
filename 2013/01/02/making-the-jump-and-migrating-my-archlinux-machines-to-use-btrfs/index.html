@@ -9,15 +9,17 @@
 
   <title>making the jump and migrating my archlinux machines to use btrfs &middot; Jimmy Tang</title>
 
+    
+
   
   
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/pure-min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
 
   <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-old-ie-min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
 
   <!--[if lte IE 8]>
@@ -30,17 +32,21 @@
   <link rel="stylesheet" href="http://jcftang.github.io/css/blackburn.css">
 
   
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
 
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
 
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
   
 
   
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/androidstudio.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
   <script>hljs.initHighlightingOnLoad();</script>
   
 
@@ -97,7 +103,7 @@
 
     
     <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://twitter.com/jcftang" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+      <a class="pure-menu-link" href="https://twitter.com/jcftang" rel="me" target="_blank"><i class="fab fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
 
@@ -107,37 +113,7 @@
 
     
     <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://plus.google.com/+JimmyTang" target="_blank"><i class="fa fa-google-plus-square fa-fw"></i>Google+</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://linkedin.com/in/jimmy-tang-1b54322" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+      <a class="pure-menu-link" href="https://plus.google.com/+JimmyTang" rel="me" target="_blank"><i class="fab fa-google-plus-square fa-fw"></i>Google+</a>
     </li>
     
 
@@ -152,8 +128,38 @@
     
 
     
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
     <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://github.com/jcftang" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+      <a class="pure-menu-link" href="https://linkedin.com/in/jimmy-tang-1b54322" rel="me" target="_blank"><i class="fab fa-linkedin"></i></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/jcftang" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
 
@@ -253,6 +259,46 @@ hopefully there will be backports to RHEL6.</p>
 <p>Performance wise I haven&rsquo;t used the system in anger yet, so time will
 tell if I&rsquo;m happy with btrfs or not.</p>
 
+  
+  <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fjcftang.github.io%2f2013%2f01%2f02%2fmaking-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=http%3a%2f%2fjcftang.github.io%2f2013%2f01%2f02%2fmaking-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=http%3a%2f%2fjcftang.github.io%2f2013%2f01%2f02%2fmaking-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=http%3a%2f%2fjcftang.github.io%2f2013%2f01%2f02%2fmaking-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fjcftang.github.io%2f2013%2f01%2f02%2fmaking-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=http%3a%2f%2fjcftang.github.io%2f2013%2f01%2f02%2fmaking-the-jump-and-migrating-my-archlinux-machines-to-use-btrfs%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
 
   
 <div class="prev-next-post pure-g">
@@ -316,19 +362,29 @@ tell if I&rsquo;m happy with btrfs or not.</p>
 </div>
 </div>
 <script src="http://jcftang.github.io/js/ui.js"></script>
+<script src="http://jcftang.github.io/js/menus.js"></script>
 
 
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-8597777-2', 'auto');
-  ga('send', 'pageview');
-
+    ga('create', 'UA-8597777-2', 'auto');
+    ga('send', 'pageview');
+  }
 </script>
 
+
+
+
+
+<script src="http://jcftang.github.io/js/math-code.js"></script>
+  <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
 
 
 </body>
