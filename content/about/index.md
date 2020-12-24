@@ -3,8 +3,8 @@ title = "About"
 +++
 ## Summary
 
-Jimmy Tang is a HPC SRE at Voysis.  He has worked at
-Logentries within Rapid7, Quantum Biosystems, Digital Repository
+Jimmy Tang is an engineer at Apple.  He has worked at Voysis as an
+SRE, Logentries within Rapid7, Quantum Biosystems, Digital Repository
 of Ireland and a number of grid storage systems in the HPC Europa
 1 and 2 programs, developing management and storage solutions for
 numerical computing.  He has also participated in the development
@@ -34,10 +34,10 @@ computing, numerical computing.
 
 ## Profile
 
-Jimmy Tang is a senior high performance compute SRE at Voysis. He
-has worked as a Principal DevOps engineer at Logentries/Rapid7,
-Quantum Biosystems, Digital Repository of Ireland and a number of
-grid storage systems in the HPC Europa 1 and 2 programs, developing
+Jimmy Tang is an engineer at Apple. He has worked as an SRE at
+Voysis,  Principal DevOps engineer at Logentries/Rapid7, Quantum
+Biosystems, Digital Repository of Ireland and a number of grid
+storage systems in the HPC Europa 1 and 2 programs, developing
 management and storage solutions for numerical computing. He has
 also participated in the development and deployment of the
 infrastructure for the Irish African Partnership, 1641 Depositions,
@@ -97,13 +97,18 @@ High Performance Computing.
 
 ### Current Employment
 
-#### Senior High Performance Computing SRE
+#### Engineer at Apple
+
+* Engineering things in the AI/ML org with Siri.
+
+### Past Employment
+
+#### Senior High Performance Computing SRE at Voysis
 
 Responsiblities include
 
 * Deployment and maintenance of HPC cluster(s)
 
-### Past Employment
 
 #### Senior Software/Devops/Ops Engineer, Logentries at Rapid7
 
